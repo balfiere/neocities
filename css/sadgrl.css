@@ -28,6 +28,11 @@
     src: url(/fonts/pixelpoiiz.ttf);
   }
 
+  @font-face {
+    font-family: pixelsans;
+    src: url(/fonts/pixel-sans.ttf);
+  }
+
 body{
     background-color: var(--main-box-background);
     /*font-family: 'FortySeven Micro NBP', sans-serif;*/
@@ -35,6 +40,10 @@ body{
     font-weight:300;
     font-size: 14px;
     background-image: url(/images/background.png);
+    background-attachment: fixed;
+    background-position: center; 
+    font-smooth: never;
+    -moz-osx-font-smoothing: grayscale;
     }
 
     b {
@@ -43,15 +52,17 @@ body{
 
     p {
         margin:0;
-        padding:10px 0px;
+        padding:12px 0px;
+        line-height: 1.5;
     }
      
     #container{
         
      display: flex;
+     flex-wrap: wrap;
+     /*flex-direction: row;*/
     justify-content: center;
     align-items: center;
-    
     margin: 0;
     position: absolute;
     top: 50%;
@@ -96,7 +107,7 @@ body{
      
     #side{
     float: left;
-    width: 195px;
+    width: 190px;
     padding: 5px 0px 5px 13px;
     overflow-y: hidden;
     height: 668px;
@@ -166,7 +177,7 @@ body{
     float: right;
     width: 670px;
     height: 674px;
-    padding: 5px 10px 5px 0px;
+    padding: 5px 12px 5px 0px;
     overflow-y: scroll;
     }
      
@@ -191,10 +202,13 @@ body{
     }
      
     .mainboxescontent{
-    padding: 0px 15px 0px 15px;
+    padding: 10px 15px;
     color: var(--text);
     line-height: 1.5;
     /*font-size: 17px;*/
+    font-family: 'Prompt';
+    font-weight:300;
+    font-size: 14px;
     }
 
     .mainboxescontent h3{
@@ -208,16 +222,27 @@ body{
         font-weight: 500;
     }
 
+    .mainboxescontent p{
+        margin: 0px;
+        padding: 0px;
+        text-align:justify;
+    }
+
+    .mainboxescontent dl{
+        margin: 0px;
+    }
+
     .mainboxescontent dt{
         letter-spacing: 1px;
     }
 
     .mainboxescontent dd{
         line-height: 1.5;
-        margin: 5px 25px;
+        margin: 5px 0px 5px 17px;
+        padding-left: 3px;
         display: list-item;
-        list-style: square inside url("/images/arrow.gif");
-        text-indent: -18px;
+        list-style-image: url("/images/arrow.png");
+        text-align:justify;
     }
      
     #footer{
