@@ -5,7 +5,7 @@ window.onload = () => {
       return data.text()
     })
     .then( data => {
-      document.getElementById("side").innerHTML = data; // inserts to element id="blognav"
+      document.getElementById("side").innerHTML = data; // inserts to element id="side"
     })
     // copy end
 }

@@ -13,6 +13,8 @@
     --gradient-light: #f9dbff;
   }
 
+  /*
+
   @font-face {
     font-family: ian;
     src: url(/fonts/2005_iannnnnAMD.ttf);
@@ -28,6 +30,8 @@
     src: url(/fonts/pixelpoiiz.ttf);
   }
 
+  */
+
   @font-face {
     font-family: pixelsans;
     src: url(/fonts/pixel-sans.ttf);
@@ -41,7 +45,6 @@ body{
     font-size: 14px;
     background-image: url(/images/background.png);
     background-attachment: fixed;
-    background-position: center; 
     font-smooth: never;
     -moz-osx-font-smoothing: grayscale;
     }
@@ -57,20 +60,21 @@ body{
     }
      
     #container{
-        
+        /*
      display: flex;
      flex-wrap: wrap;
-     /*flex-direction: row;*/
+     flex-direction: row;
     justify-content: center;
-    align-items: center;
     margin: 0;
+    */
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 900px;
+    width: 902px;
     height: 802px;
+    
     /*
     width: 807px;
     height: 802px;
@@ -82,17 +86,20 @@ body{
     border: 1px solid var(--border);
     background-color: var(--main-box-background);
     padding: 3px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
     }
      
     #box{
-    width: 904px;
+        width: 900px;
     height: 800px;
     background-color: var(--main-box-background);
     border: 1px solid var(--border);
     }
      
     #header{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     padding: 10px;
     border-bottom: 1px solid var(--border);
     background-image: linear-gradient(to right, var(--gradient-dark), var(--gradient-light));
@@ -111,6 +118,7 @@ body{
     padding: 5px 0px 5px 13px;
     overflow-y: hidden;
     height: 668px;
+    margin-top: 10px;
     }
      
     .sidebox{
@@ -125,12 +133,27 @@ body{
     font-size: 17px;
     letter-spacing: 1px;*/
     }
+
+    .sidecontent p{
+        margin: 5px 0;
+        padding: 0;
+    }
+
+    .scrollside {
+        max-height: 140px;
+        overflow: scroll;
+    }
      
-    .sidecontent ul, li{
+    .sidecontent ul{
     margin: 0px;
     list-style-type: none;
     padding: 3px 0px;
     letter-spacing: 1px;
+    }
+     
+    .sidecontent li{
+    margin: 0px;
+    padding: 3px 0px;
     }
      
     a{
@@ -175,12 +198,66 @@ body{
      
     #main{
     float: right;
-    width: 670px;
+    width: 669px; 
     height: 674px;
-    padding: 5px 12px 5px 0px;
+    padding: 15px 12px 5px 0px;
     overflow-y: scroll;
+    margin-top: 0px;
+    scrollbar-width: none;
     }
-     
+
+    #main:hover {
+        scrollbar-width: thin;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+  
+  /* --- SCROLLBAR 
+       
+  ::-webkit-scrollbar {
+      background-color: transparent;
+      height: auto;
+      width:5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color:var(--scrollbar);
+      border: 1px solid transparent;
+      background-clip: content-box;
+      border-radius:25px;
+  }
+
+  ::-webkit-scrollbar-track{
+      display: none;
+      background-color:var(--scrollbar-track);
+      border: 2px solid transparent;
+      background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+      height: 3px;
+      width: auto;
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+      background-color:var(--scrollbar);
+      border: 1px solid transparent;
+      background-clip: content-box;
+      border-radius:25px;
+  }
+
+  ::-webkit-scrollbar-track:horizontal {
+      background-color:var(--scrollbar-track);
+      border: 2px solid transparent;
+      background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-button {
+      background-color:none;
+  }
+     ---*/
+
     .mainboxes{
     border: 1px solid var(--border);
     padding: 0px;
@@ -245,9 +322,23 @@ body{
         text-align:justify;
     }
      
+    .mainboxescontent li{
+        line-height: 1.5;
+        padding: 1px 0px 1px 3px;
+        margin: 0;
+        list-style-image: url("/images/arrow.png");
+        text-align:justify;
+        letter-spacing: 0px;
+    }
+     
+    .mainboxescontent ul{
+        padding: 0 0 0 10px;
+        margin: 0 0 0 8px;
+    }
+     
     #footer{
-    clear: both;
-    margin-top: 10px;
+        clear: both;
+        margin-top: 0px;
     padding: 10px;
     border-top: 1px solid var(--border);
     background-image: linear-gradient(to left, var(--gradient-dark), var(--gradient-light));
@@ -263,49 +354,6 @@ body{
     font-family: 'FortySeven Micro NBP', sans-serif;
     }
     
-    /* --- SCROLLBAR ---*/
-         
-    ::-webkit-scrollbar {
-        background-color: transparent;
-        height: auto;
-        width:5px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color:var(--scrollbar);
-        border: 1px solid transparent;
-        background-clip: content-box;
-        border-radius:25px;
-    }
-
-    ::-webkit-scrollbar-track{
-        display: none;
-        background-color:var(--scrollbar-track);
-        border: 2px solid transparent;
-        background-clip: content-box;
-    }
-
-    ::-webkit-scrollbar:horizontal {
-        height: 3px;
-        width: auto;
-    }
-
-    ::-webkit-scrollbar-thumb:horizontal {
-        background-color:var(--scrollbar);
-        border: 1px solid transparent;
-        background-clip: content-box;
-        border-radius:25px;
-    }
-
-    ::-webkit-scrollbar-track:horizontal {
-        background-color:var(--scrollbar-track);
-        border: 2px solid transparent;
-        background-clip: content-box;
-    }
-
-    ::-webkit-scrollbar-button {
-        background-color:none;
-    }
 
     #credit{
     font-size: 12px;
