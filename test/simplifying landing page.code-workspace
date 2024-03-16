@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "test",
+			"path": "."
+		},
+		{
+			"name": "public",
+			"path": "../public"
+		},
+		{
+			"name": "Draggable-Resizable-Dialog",
+			"path": "Draggable-Resizable-Dialog"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+<head>
+    <title>test</title>
+
+    <!--------------------JAVASCRIPTS-------------------->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.17/interact.min.js"></script>
+    <script src="/scripts/draggableboxes.js"></script>
+
+<style type="text/css">
+
+:root {
+    --main-box-background: white;
+    --box-shadow: #b5b5ff;
+    --text: #2b2b2b;
+    --header: white;
+    --h3: #b6e7db;
+    --h3-shadow: #b392b9;
+    --bold:#8adaff;
+    --italic:#FFB5E1;
+    --border: #968aff;
+    --link: #968aff;
+    --link-hover: #FFB5E1;
+    --scrollbar: #968aff;
+    --scrollbar-track: #968aff;
+    --gradient-dark: #b5b5ff;
+    --gradient-light: #f9dbff;
+  }
+    /*--------------------TEXT HIGHLIGHT--------------------*/
+::selection {
+background: #fff;
+color:#f8a096;
+}
+ 
+::-moz-selection {
+background: #fff;
+color:#f8a096;
+}
+
+/*-- draggable boxes --*/
+.window_container {
+    width: 200px;;
+    background-color:var(--main-box-background);
+    box-shadow:6px 6px var(--box-shadow);
+}
+
+.window_interior {
+    border:1px solid var(--border);
+    padding:5px 5px 0px 5px;
+}
+
+.window_top {
+    border:1px solid var(--border);
+    padding:5px;
+    overflow:auto;
+    margin-bottom:5px;
+}
+
+.window_title {
+    float:left;
+    width:calc(100% - 50px);
+    letter-spacing:-0.5px;
+    margin-top:2.5px;
+    font-size:16px;
+    color:#ec5a5a;
+    line-height:1em;
+    max-height:1em;
+    overflow:hidden;
+}
+
+.window_title:hover {color:#f8a096;}
+
+.window_control {
+    float:right;
+    display:flex;
+}
+
+.smallbox {
+    margin-right:3px;
+    padding:3px;
+    width:11px;
+    height:11px;
+    border:1px solid var(--border);
+    cursor:help;
+}
+
+.smallbox:last-of-type {margin-right:0px}
+
+.sm-min {
+    margin-top:5px;
+    width:11px;
+    height:1px;
+    background:var(--border);
+}
+
+.sm-max {
+    margin-top:0px;margin-left:0px;
+    width:9px;height:9px;
+    border:1px solid var(--border);
+}
+
+.window_description {
+    margin-bottom:5px;
+    border:1px solid var(--border);
+    padding:13px 15px;
+    font-size:16px;
+    color:#888;
+    line-height:1.5em;
+    text-align:center;
+}
+
+.window_description b, .window_description strong {color:var(--bold)}
+.window_description i, .window_description em {color:var(--italic)}
+
+.window_description a {
+    color:var(--link);
+    padding-bottom:3px;
+    border-bottom:1px solid rgba(251,137,126,0.4);
+}
+
+.window_description a:hover {
+    color:var(--link-hover);
+    border-bottom:0.5px solid rgba(,0.4);
+}
+
+</style>
+</head>
+<body>
+
+<div class="window_container draggable">
+    <div class="window_interior">
+        <div class="window_top">
+            <div class="window_title">C:\ welcome to my blog</div>
+            <div class="window_control">
+                
+                <div class="smallbox d-min">
+                <div class="sm-min"></div></div>
+                
+                <div class="smallbox d-max">
+                <div class="sm-max"></div></div>
+                
+                <!--<div class="smallbox d-x">
+                <div class="sm-x"></div></div>-->
+            </div><!--window_control-->
+        </div><!--window_top-->
+        
+        <div class="window_description">The <b>serene</b> sound of a distant music box...<br>It fills you with <i>determination.</i></div>
+    </div><!--window_interior-->
+    </div><!--window_container-->
+</body>
+    </html>

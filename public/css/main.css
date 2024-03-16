@@ -12,26 +12,7 @@
     --gradient-dark: #b5b5ff;
     --gradient-light: #f9dbff;
   }
-
-  /*
-
-  @font-face {
-    font-family: ian;
-    src: url(/fonts/2005_iannnnnAMD.ttf);
-  }
-
-  @font-face {
-    font-family: handy;
-    src: url(/fonts/handy00.ttf);
-  }
-
-  @font-face {
-    font-family: pixelpoiiz;
-    src: url(/fonts/pixelpoiiz.ttf);
-  }
-
-  */
-
+  
   @font-face {
     font-family: pixelsans;
     src: url(/fonts/pixel-sans.ttf);
