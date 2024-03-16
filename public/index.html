@@ -101,7 +101,7 @@ attribute:"title"
 body {
     background-image: url(/images/backgroundlanding.gif);    
     background-attachment:fixed;
-    background-size:auto;
+    background-size:auto 100%;
     background-repeat:repeat-x;
     background-position:bottom;
     font-family: 'Prompt';
@@ -192,7 +192,7 @@ i:not([class]), em {
 
 .quote {
     position:absolute;
-    top:8vh;
+    bottom:600px;
     width:80vw;
     max-width: 700px;
     margin:auto;
@@ -214,26 +214,27 @@ i:not([class]), em {
 
 #crosswalk {
   position:absolute;
-  bottom:80px; 
+  bottom:50px; 
   left:0;
   width:100vw;
+  overflow: clip;
 }
 
 .zebra_container{
     display: flex;
-  justify-content: center;
+    justify-content: center;
 }
 
 .paso {
   width:1024px;
   display: flex;
-  perspective:500px;
+  perspective:200px;
 }
 
 .paso .zebra {
   width:50px;
   height:200px;
-  transform:translateY(105px) rotateX(90deg);
+  transform:translateY(80px) rotateX(90deg);
   transition:transform 0 linear,
              background .1s ease;
 }
@@ -339,6 +340,7 @@ height: auto;
     max-height:var(--popup-width);
     overflow-y: scroll;
     width:var(--popup-width);
+    max-width: 90%;
     background-color:var(--main-box-background);
     box-shadow:inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
 }
@@ -413,8 +415,8 @@ height: auto;
             <div class="popup-title">about my resource site</div>
             <div class="popup-content">
                 <div class="information-container">
-                    links to free resources i've found helpful in my life. most links are related to language learning (primarily thai and japanese) and gaming (hacking consoles, emulation, piracy, etc), but also knitting, cross stitch, anime and manga, music, or whatever else catches my eye. includes links to my own backups and archives.
-                    <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;align-items: center;line-height: 72px;"><a href="/resources/index.html">>> enter <<</a></div>
+                    links to free resources i've found helpful in my life. most links are related to language learning (primarily thai and japanese) and gaming (hacking consoles, emulation, piracy, etc), but also knitting, cross stitch, anime and manga, music, or whatever else catches my eye. includes links to my own backups and archives.<br/><br />
+                    <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/resources/index.html">>> enter <<</a></div>
                 </div>
             </div>
         </div>
