@@ -130,11 +130,11 @@ body{
     list-style-type: none;
     padding: 3px 0px;
     letter-spacing: 1px;
+    line-height: 200%;
     }
      
     .sidecontent li{
     margin: 0px;
-    padding: 3px 0px;
     }
      
     a{
