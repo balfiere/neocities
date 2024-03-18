@@ -41,13 +41,6 @@ body{
     }
      
     #container{
-        /*
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-    justify-content: center;
-    margin: 0;
-    */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -55,15 +48,6 @@ body{
     transform: translate(-50%, -50%);
     width: 902px;
     height: 802px;
-    
-    /*
-    width: 807px;
-    height: 802px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    */
     border: 1px solid var(--border);
     background-color: var(--main-box-background);
     padding: 3px;
@@ -240,7 +224,9 @@ body{
      ---*/
 
     .mainboxes{
-    border: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
     padding: 0px;
     margin: 0px 0px 13px 0px;
     }
@@ -254,9 +240,10 @@ body{
     }
      
     .subheader h3{
-    margin: 0px 0px 0px 4px;
+    margin: 1px 0px 0px 4px;
     font-family: 'FortySeven Micro NBP', sans-serif;
     font-size: 18px;
+    display: inline-block;
     }
      
     .mainboxescontent{
@@ -267,6 +254,7 @@ body{
     font-family: 'Prompt';
     font-weight:300;
     font-size: 14px;
+    border-bottom: 1px solid var(--border);
     }
 
     .mainboxescontent h3{
@@ -281,9 +269,13 @@ body{
     }
 
     .mainboxescontent p{
-        margin: 0px;
         padding: 0px;
         text-align:justify;
+        margin-bottom: 5px;
+    }
+
+    .mainboxescontent p:last-child{
+        margin-bottom: 0;
     }
 
     .mainboxescontent dl{
@@ -342,3 +334,93 @@ body{
     bottom: 0;
     right: 0;
     }
+
+    /*-- mobile view
+    
+    @media only screen and (hover: none) and (pointer: coarse) {
+        html, body {
+       }
+
+    #container {
+        width:100vw;
+        height: 100vh;
+        margin:0;
+        padding: 0;
+        border: none;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -ms-transform: 0;
+        transform: 0;
+      }
+
+      #box{
+        width:100vw;
+        height: 100vh;
+        margin:0;
+        padding: 0;
+        border: none;
+        position: relative;
+        overflow: visible;
+      }
+
+      #header, #footer{
+        position: absolute;
+        width:100vw;
+        border: 1px solid var(--border);
+        height: auto;
+        z-index: 999;
+      }
+
+      #header h1, #footer h1{
+        font-size: 48px;
+        padding: 10px;
+      }
+
+      #header{
+        top: 0;
+    }
+
+      #footer{
+        bottom: 0;
+    }
+
+      #inside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+       #side{
+        width: 100%;
+        clear: both;
+        display: flex;
+        height: 200px;
+        margin:0;
+        padding: 0;
+       }
+
+       #main{
+        width: 100%;
+        height: auto;
+        padding: 0;
+        overflow: scroll;
+        position: relative;
+       }
+
+       .mainboxes .subheader h3{
+        font-size: 40px;
+       }
+
+       .mainboxescontent {
+        font-size: 30px;
+        line-height: 1.5;
+       }
+
+       #credit{
+        display: none;
+       }
+    }
+
+    --*/

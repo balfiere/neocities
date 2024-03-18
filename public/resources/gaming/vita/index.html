@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>ราวเหมือนดั่งความฝัน</title>
+  <title>vita resources</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <script src="/resources/scripts/jquery.min.js"></script><script src="/resources/scripts/load.js"></script>
@@ -21,6 +21,7 @@
 <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link rel="stylesheet" href="/resources/css/main.css">
+<link rel="stylesheet" href="/resources/css/collapsible.css">
 
 <!-- Favicon
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -34,6 +35,8 @@
        
       <div id="header"><h1>shouldering each other's dreams...</h1></div>
        
+        <div id="inside">
+
       <div id="side">
        
         <!--load.js inserts sidebox.html here-->
@@ -46,22 +49,70 @@
        
       <div class="mainboxes">
        
-      <div class="subheader"><h3>PAGE NAME HERE</h3></div>
+        <button class="collapsible subheader"><h3>hacking the vita</h3></button>
        
-      <div class="mainboxescontent">
+      <div class="mainboxescontent content">
        
       <!-- REPLACE CONTENT BELOW WITH YOUR OWN -->
        
-      <p>content here!</p>
+      <dl>
+        <dt><a href="https://vita.hacks.guide/">Vita Guide</a></dt>
+        <dd>comprehensive guide to installing custom firmware on the vita.</dd>
+      </dl>
        
       </div>
        
       </div>
 
       <!-- end box -->
+
+        <!-- start box -->
+       
+      <div class="mainboxes">
+       
+        <button class="collapsible subheader"><h3>emulating the vita</h3></button>
+         
+        <div class="mainboxescontent content">
+         
+        <!-- REPLACE CONTENT BELOW WITH YOUR OWN -->
+         
+        <dl>
+          <dt><a href="https://vita3k.org/index.html">Vita3k</a></dt>
+          <dd>vita emulator for windows, linux, mac, and android.</dd>
+          <dt><a href="https://www.reddit.com/r/VitaPiracy/comments/y0t0vx/how_to_play_psvita_games_on_pc_vita3k_guide_for/">Vita3k guide for Windows</a></dt>
+          <dd>guide that walks you through how to start playing games on vita3k using the (decrypted) .zip install method. also shows you how to install a patch for use with vita3k using the diabolik lovers english patch as an example. another guide for playing and patching games for vita3k, using the (encrypted) .pkg method with the hakuoki ssl english translation as an example, can be found <a href="https://stars-and-clouds.tumblr.com/post/706983563177951232/how-to-play-hakuoki-ssl-on-pc">here</a>.</dd>
+        </dl>
+         
+        </div>
+         
+        </div>
+  
+        <!-- end box -->
+
+        <!-- start box -->
+       
+      <div class="mainboxes">
+       
+        <button class="collapsible subheader"><h3>vita games</h3></button>
+         
+        <div class="mainboxescontent content">
+         
+        <!-- REPLACE CONTENT BELOW WITH YOUR OWN -->
+         
+        <dl>
+          <dt><a href="https://nopaystation.com/faq">NoPayStation</a></dt>
+          <dd>download vita games straight from the playstation server. a bit more complicated to set up than than just downloading from a rom site but safer and has a built in unpackager. follow the 'configuration and usage' section, following the areas that say 'PSV'. you can also download .pkg files straight from their site under the <a href="https://nopaystation.com/browse">browse</a> section, which also has zRIF codes/work.bin files (vita3k will ask you for one of these when you install a game through the .pkg method).</dd>
+        </dl>
+         
+        </div>
+         
+        </div>
+  
+        <!-- end box -->
        
       </div>
        
+    </div>
        
       <div id="footer"><h1>that's what friends are for, right?</h1></div>
        
@@ -71,4 +122,5 @@
        
       <div id="credit"><a href="https://repth.neocities.org/index.html">@Repth</a></div>
   </body>
+  <script src="/resources/scripts/collapsible.js"></script>
   </html>

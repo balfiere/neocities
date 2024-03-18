@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+
+
+
+<!--
+menu ix by andrewsthemes | shizukutsukishima [ shizukutsukishima.tumblr.com  ]
+final fantasy ix is my all time favorite video game on the playstation. it is also my favorie game in the series. i've been playing the game on my switch. it's making me so happy and giving me a lot of nostalgia. i always loved how this game's menu looked as well. so i was heavily inspired by the interface, so i wrote a code. soon it will be available for public use. this section should not be deleted at all. 
+-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+
+
+
+<meta name="color:sidebar links color" content="#ffffff" />
+
+<style type="text/css">
+
+:root {
+    --main-background-color: #222222;
+    --links-color: #ffffff;
+    --main-box-background: white;
+    --text: #ffffff;
+    --header: white;
+    --h3: #b6e7db;
+    --h3-shadow: #b392b9;
+    --border: #f5f5f5;
+    --link: #968aff;
+    --link-hover: #FFB5E1;
+    --scrollbar: #968aff;
+    --scrollbar-track: #968aff;
+    --gradient-dark: #b5b5ff;
+    --gradient-light: #f9dbff;
+  }
+  
+@font-face {
+    font-family: seed;
+    src: url(/fonts/seed-computer.ttf);
+}
+
+body { 
+background-color:var(--main-background-color);
+cursor:context-menu;
+font-family:Lucida Sans Unicode, Lucida Grande, Arial, sans serif;
+font-size:24px;
+color:var(--text);
+margin:0px;
+padding:0px;
+}
+
+a {
+color:var(--link);
+text-decoration:none;
+}
+
+a:hover { 
+color:var(--link-hover);
+}
+
+p{
+    margin:0;
+    padding:0px;
+}
+
+#container {
+width:860px;
+margin:0 auto;
+}
+
+#sidebar{
+position: fixed;
+width: 213px;
+font-family:seed;
+font-size:24px;
+line-height: 22px;
+text-align:left;
+text-shadow: 2px 2px #000000;
+}
+
+.stats, .links, .description, .atb{
+background: url('/images/ffixbg.png'); 
+border-radius:10px;
+border:4px ridge var(--border); 
+}
+
+.stats {
+margin-top:50px;
+}
+
+.stats img {
+width:76px;
+float: left;
+margin-right:10px;
+}
+
+.stats p{
+    padding: 0;
+    margin: -3px 0 5px 0;
+}
+
+.stats-title, .links-title, .description-title, .atb-title {
+color:#dcdcdc;
+letter-spacing:0.6px;
+margin:-22px 0 0 10px;
+position:relative;
+}
+
+.sidebar-title {
+margin-top:4px;
+display: none;
+}
+
+.sidebar-title a {
+color:#ffffff;
+}
+
+.links, .description, .atb {
+margin-top: 30px;
+}
+
+.links-content ul{
+    margin: -7px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.links-content img{
+    margin-right: 7px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.links a {
+color:var(--links-color);
+}
+
+.stats-content, .links-content, .description-content, .atb-content{
+    padding: 10px;
+}
+
+.atb img {
+}
+
+#main-container {
+float:right;
+margin-top:50px;
+width:620px;
+}
+
+.main {
+background: url('/images/ffixbg.png') repeat; 
+-moz-box-shadow:    2px 2px 2px 2px #000;
+-webkit-box-shadow: 2px 2px 2px 2px #000;
+border:4px ridge var(--border); 
+border-radius:10px;
+position:relative;
+font-family:seed;
+font-size:24px;
+line-height: 22px;
+text-align:left;
+text-shadow: 2px 2px #000000;
+}
+
+.main-title {
+color:#dcdcdc;
+letter-spacing:0.6px;
+margin:-22px 0 0 10px;
+position:relative;
+}
+
+.main-content{
+    padding: 10px;
+}
+ 
+
+/* extra goodies */
+
+blockquote{
+border-left:1px solid #e5e5e5;
+line-height:18px;
+padding-left:10px;
+margin:5px;
+margin-top:-10px;
+}
+ 
+blockquote img{
+max-width:100%!important;
+}
+
+#s-m-t-tooltip {
+background: url('/images/ffixbg.png') repeat;
+border-radius: 10px;
+border:4px ridge var(--border);
+color:#ffffff;
+font-family:seed;
+text-shadow: 2px 2px #000000;
+font-size:24px;
+letter-spacing:1px;
+margin:5px 0px 0px 5px;
+padding:3px 4px 3px 4px;
+max-width:300px;
+z-index:999999999999999999999999999999999999;
+}
+
+</style>
+
+<!-- start of script tooltip -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+ 
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+ 
+<script>
+ 
+(function($){
+ 
+$(document).ready(function(){
+ 
+$("a[title]").style_my_tooltips({
+ 
+tip_follows_cursor:true,
+ 
+tip_delay_time:90,
+ 
+tip_fade_speed:600,
+ 
+attribute:"title"
+ 
+});
+ 
+});
+ 
+})(jQuery);
+ 
+</script>
+ 
+<!-- end of script tooltip -->
+
+<!-- shythemes code -->
+<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+<!-- end -->
+
+</head>
+
+<body>
+<div id="container">
+
+<div id="sidebar">
+
+<div class="stats">
+<div class="stats-title">stats</div>
+<div class="stats-content">
+<img src="/images/nemissa.png" />
+<p>melissa<br />lv 25<br />hp 777/777<br />mp 284/284</p>
+</div>
+<div class="sidebar-title"><a href="/">about the webmaster</a></div>
+</div>
+
+<div class="links">
+<div class="links-title">links</div>
+<div class="links-content">
+    <ul>
+        <li><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/1/1d/FFIX_Potion_Icon.png/revision/latest/scale-to-width-down/20?cb=20130203180405"/>potion</li>
+        <li><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/b/bd/FFIX_Phoenix_Down_Icon.png/revision/latest/scale-to-width-down/20?cb=20130203180303"/>phoenix down</li>
+        <li><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/2/23/FFIX_Antidote_Icon.png/revision/latest?cb=20130203175810"/>antidote</li>
+        <li><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/b/b2/FFIX_Gysahl_Greens_Icon.png/revision/latest/scale-to-width-down/20?cb=20130203180134" />gysahl greens</li>
+        <li><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/1/10/FFIX_Echo_Screen_Icon.png/revision/latest?cb=20130203175934" />echo screen</li>
+        <li><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/2/2a/FFIX_Remedy_Icon.png/revision/latest?cb=20130203180441" />remedy</li>
+        <li><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/4/4d/FFIX_Ether_Icon.png/revision/latest/scale-to-width-down/20?cb=20130203180027" "/>ether</li>
+        <li><img src="https://vignette.wikia.nocookie.net/finalfantasy/images/3/3d/FFIX_Tent_Icon.png/revision/latest/scale-to-width-down/20?cb=20130203180543"/>tent</li>
+    </ul>
+</div>
+</div>
+
+<div class="description">
+<div class="description-title">description</div>
+<div class="description-content">hello</div>
+</div>
+
+<div class="atb">
+<div class="atb-title">atb</div>
+<div class="atb-content">
+<img src="https://vignette.wikia.nocookie.net/finalfantasy/images/2/28/FFIX_ATB_%26_Trance_Bars.PNG/revision/latest?cb=20121022062100" /></div>
+</div>
+
+</div>
+
+<div id="main-container">
+    
+<div class="main">
+    <div class="main-title">hi</div>
+    <div class="main-content">something</div>
+</div>
+
+</div>
+
+</body>
+</html>
+
