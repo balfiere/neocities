@@ -1,0 +1,151 @@
+:root {
+    --text: #2b2b2b;
+    --header: white;
+    --h3: #b6e7db;
+    --h3-shadow: #b392b9;
+    --bold:#8adaff;
+    --italic:#FFB5E1;
+    --border: #968aff;
+    --link: #968aff;
+    --link-hover: #FFB5E1;
+    --scrollbar: #968aff;
+    --scrollbar-track: #968aff;
+    --gradient-dark: #b5b5ff;
+    --gradient-light: #f9dbff;
+    
+    /*----- popup -----*/
+    --main-box-background: #cac6cb;
+    --popup-title-background: #ff8adc;
+    --popup-title-highlight: #dfddf1;
+    --popup-title-shadow: #8477f5;
+    --popup-button-background: #f7f7f7;
+    --popup-button-highlight: #ffffff;
+    --popup-button-shadow: #8477f5;
+    --popup-text-background: #f7f7f7;
+    --popup-inset-highlight:#dedcde;
+    --popup-inset-shadow:#9b999b;
+    --box-shadow: #b5b5ff;
+    --box-border: #968aff;
+  }
+
+/*----- general -----*/
+
+body {
+    
+}
+
+/*----- text highlight -----*/
+
+::selection {
+background: #fff;
+color:#f8a096;
+}
+ 
+::-moz-selection {
+background: #fff;
+color:#f8a096;
+}
+
+/*----- boxes -----*/
+
+.window_container {
+    background-color:var(--main-box-background);
+    box-shadow:inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
+}
+
+.window_interior {
+    padding: 5px;
+}
+
+.window_top {
+    overflow:auto;
+    padding: 6px 7px 8px 8px;
+    margin: 2px;
+    box-shadow: inset -2px -2px 0 0 var(--popup-title-highlight), inset 2px 2px 0 0 var(--popup-title-shadow);
+    background-color: var(--popup-title-background);
+	cursor: grab;
+	.is-pointer-down & {
+		cursor: grabbing;
+	}
+	&:hover, &:focus {
+	}
+}
+
+.window_title {
+    float:left;
+    width:calc(100% - 53px);
+    letter-spacing:-0.5px;
+    margin-top:4px;
+    font-size:16px;
+    line-height:1em;
+    max-height:1em;
+    overflow:hidden;
+}
+
+.window_title:hover {
+    color:#f8a096;
+}
+
+.window_control {
+    float:right;
+    display:flex;
+}
+
+.smallbox {
+    margin-right:6px;
+    padding:3px;
+    width:17px;
+    height:17px;
+    box-shadow: inset 2px 2px 0 0 var(--popup-button-highlight), 2px 2px 0 0 var(--popup-button-shadow);
+    background: var(--popup-button-background);
+    cursor:help;
+}
+
+.smallbox:last-of-type {margin-right:1px}
+
+.sm-min {
+    margin-top:14px;
+    width:17px;
+    height:2px;
+    background:var(--border);
+}
+
+.sm-max {
+    margin-top:1px;margin-left:1px;
+    width:11px;height:11px;
+    border:2px solid var(--popup-inset-shadow);
+}
+
+.popup-content{
+    /*padding: 0px 0px 4px 0px;*/
+    margin: 4px 0 4px 0;
+}
+
+.window_description {
+    margin: 2px;
+    box-shadow: inset -2px -2px 0 0 var(--popup-inset-highlight), inset 2px 2px 0 0 var(--popup-inset-shadow);
+    background: var(--popup-text-background);
+    padding: 10px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.window_description b, .window_description strong {color:var(--bold)}
+.window_description i, .window_description em {color:var(--italic)}
+
+.window_description a {
+    color:var(--link);
+    padding-bottom:3px;
+    border-bottom:1px solid rgba(251,137,126,0.4);
+}
+
+.window_description a:hover {
+    color:var(--link-hover);
+    border-bottom:0.5px solid rgba(,0.4);
+}
+
+/*----- section size and initial locations -----*/
+
+.welcome {
+    top:20vh;
+}

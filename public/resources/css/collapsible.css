@@ -2,20 +2,21 @@
     cursor: pointer;
     width: 100%;
     padding: 4px 0px 4px 4px;
+    font-size: 1.125em;
  }
  
  .active, .collapsible:hover {
  }
  
  .content {
-    /* uncomment when done adding content so starts collapsed*/
+    /* uncomment when done writing so starts collapsed*/
    display: none;
    overflow: hidden;
  }
 
  .collapsible:before {
     content: url("/resources/images/plus.png");
-    display: inline-block;
+    display: inline;
     margin-left: 3px;
     margin-right: 2px;
 }
@@ -48,4 +49,3 @@ button:focus {
 
 button:active {
 }
-

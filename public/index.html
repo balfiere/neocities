@@ -5,6 +5,7 @@
 <!-- Basic Page Needs
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
 <title>ราวเหมือนดั่งความฝัน</title>
 <meta name="description" content="">
 <meta name="author" content="">
@@ -17,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 <!------ scripts ------>     
-<script src="/landing/scripts/jquery.1.7.2.min.js"></script>
+<script src="/scripts/jquery.1.7.2.min.js"></script>
 
 <!--- popups -->
 <script>
@@ -33,7 +34,7 @@
 
 <!--- tooltips -->
 
-<script src="/landing/scripts/jquery.style-my-tooltips.js"></script>
+<script src="/scripts/jquery.style-my-tooltips.js"></script>
 <script>
 (function($){
 $(document).ready(function(){
@@ -51,7 +52,7 @@ attribute:"title"
  
 <style type="text/css">
 
-/*----- CUSTOM FONTS -----*/
+/*----- fonts -----*/
 
 @font-face { font-family: "press start"; src: url('/landing/fonts/prstart.ttf'); }
  
@@ -309,7 +310,7 @@ height: auto;
 
 /*----- popup -----*/
 
-.click, .click2 { cursor:help } /* for question mark cursor on hover */
+.click, .click2 { cursor:help }
 
 #pop, #pop2 {
     width:100%;
@@ -317,7 +318,7 @@ height: auto;
     top:0;left:0;
     position:fixed;
     z-index:999;
-    background:rgba(255,255,255,.3); /* background of popup. adjust the .9 for the opacity of the background (1 will be solid white, .5 will be semi transparent, etc.)  */
+    background:rgba(255,255,255,.3);
     display:none;
 }
 
@@ -350,21 +351,20 @@ height: auto;
 }
 
 .popup-title{
-    padding: 3px 8px;
-    margin: 2px;
     font-family:"press start";
     font-size:8px;
     text-transform:uppercase;
     letter-spacing:2px;
     line-height:300%;
     color: white;
+    padding: 3px 8px;
+    margin: 2px;
     box-shadow: inset -2px -2px 0 0 var(--popup-title-highlight), inset 2px 2px 0 0 var(--popup-title-shadow);
     background-color: var(--popup-title-background);
 
 }
 
 .popup-content{
-    /*padding: 0px 0px 4px 0px;*/
     margin: 7px 0 4px 0;
 }
 
@@ -415,7 +415,7 @@ height: auto;
             <div class="popup-title">about my resource site</div>
             <div class="popup-content">
                 <div class="information-container">
-                    links to free resources i've found helpful in my life. most links are related to language learning (primarily thai and japanese) and gaming (hacking consoles, emulation, piracy, etc), but also knitting, cross stitch, anime and manga, music, or whatever else catches my eye. includes links to my own backups and archives.<br/><br />
+                    free resources and pirated content i've found helpful in my life. most links are related to language learning (primarily thai and japanese) and gaming (hacking consoles, emulation, piracy, etc), but also knitting, cross stitch, anime and manga, music, or whatever else catches my eye. includes links to my own backups and archives. mobile friendly.<br/><br />
                     <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/resources/index.html">>> enter <<</a></div>
                 </div>
             </div>
