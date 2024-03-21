@@ -395,7 +395,7 @@ body{
         padding: 0;
         border: 0;
         outline: 0;
-        height: 100vh;
+        height: 100dvh;
         width:100vw;
         position: relative;
         background-color: var(--main-box-background);
@@ -454,7 +454,7 @@ body{
         float: none;
         margin-top:80px; /* メニューボタン分空ける */
         width:300px; /* (*1)同じにする */
-        height: 75vh;
+        height: 75dvh;
         transition:all .3s;
         transform:translate(400px); /* (*1)同じにする */
         -ms-transform:translate(400px); /* (*1)同じにする */
