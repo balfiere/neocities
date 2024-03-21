@@ -432,10 +432,12 @@ body{
         height: auto;
         z-index: 999;
         font-size: 1.125em;
+        position:fixed;
       }
 
       #header {
         border-top:none!important;
+        top:0;
       }
 
       #footer {
