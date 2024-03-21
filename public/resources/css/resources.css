@@ -48,15 +48,21 @@ section {
 
 :root {
     --main-box-background: white;
+    --main-box-background-darkmode: #2b2b2b;
     --text: #2b2b2b;
+    --text-darkmode: #e7e7e7;
     --header: white;
     --border: #968aff;
     --link: #968aff;
     --link-hover: #FFB5E1;
+    --link-darkmode: #b5b5ff;
+    --link-hover-darkmode: #f9dbff;
     --scrollbar: #968aff;
     --scrollbar-track: #968aff;
     --gradient-dark: #b5b5ff;
     --gradient-light: #f9dbff;
+    --gradient-dark-darkmode: #7272be;
+    --gradient-light-darkmode: #bf8dc9;
   }
   
   @font-face {
@@ -65,7 +71,7 @@ section {
   }
 
 body{
-    background-color: var(--main-box-background);
+    background-color: #dcd8ff;
     /*font-family: 'FortySeven Micro NBP', sans-serif;*/
     font-family: 'Prompt';
     font-weight:300;
@@ -177,10 +183,6 @@ body{
     -o-transition:all 0.3s ease-in-out;
     -ms-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    }
-     
-    a:visited{
-        color: var(--link);
     }
      
     a:hover{
@@ -549,4 +551,59 @@ body{
        #credit{
         display: none;
        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body, #container, #box, .sidecontent, .sidecontent p{
+            background-color: var(--main-box-background-darkmode);
+        }
+
+        a{
+            color: var(--link-darkmode);
+        }
+
+        a:hover{
+            color: var(--link-hover-darkmode);
+            text-shadow: 0px 0px 2px var(--link-hover-darkmode);
+        }
+
+        .mainboxescontent, .sidecontent{
+            color: var(--text-darkmode);
+        }
+
+        .mainboxescontent img{
+            opacity: .9;
+            filter: grayscale(10%);
+            -webkit-transition:all 0.3s ease-in-out;
+            -moz-transition:all 0.3s ease-in-out;
+            -o-transition:all 0.3s ease-in-out;
+            -ms-transition:all 0.3s ease-in-out;
+            transition:all 0.3s ease-in-out;
+        }
+
+        .mainboxescontent img:hover{
+            opacity: 1;
+            filter: grayscale(0);
+            -webkit-transition:all 0.3s ease-in-out;
+            -moz-transition:all 0.3s ease-in-out;
+            -o-transition:all 0.3s ease-in-out;
+            -ms-transition:all 0.3s ease-in-out;
+            transition:all 0.3s ease-in-out;
+        }
+     
+        #header{
+        background-image: linear-gradient(to right, var(--gradient-dark-darkmode), var(--gradient-light-darkmode));
+        }
+     
+        #footer{
+        background-image: linear-gradient(to right, var(--gradient-dark-darkmode), var(--gradient-light-darkmode));
+        }
+     
+        .subheader{
+        background-image: linear-gradient(to right, var(--gradient-dark-darkmode), var(--gradient-light-darkmode));
+        }
+     
+        #open{
+        background-image: linear-gradient(to right, var(--gradient-dark-darkmode), var(--gradient-light-darkmode));
+        }
     }
