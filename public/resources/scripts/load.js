@@ -9,6 +9,8 @@ window.onload = () => {
     })
     // copy end
 
+/*
+
 const header = document.getElementById("header");
 const footer = document.getElementById("footer");
 
@@ -40,6 +42,6 @@ myFunction(x);
 // Attach listener function on state changes
 x.addEventListener("change", function() {
   myFunction(x);
-}); 
+}); */
 
 }
