@@ -21,7 +21,9 @@ function myFunction(x) {
       $('#main').each(function(){ //loop through each element with the .dynamic-height class
           $(this).css({
               'padding-top' : header.offsetHeight + 10 +'px',
-              'padding-bottom' : footer.offsetHeight +'px'
+              'padding-bottom' : footer.offsetHeight +'px',
+              'padding-left' : '0px',
+              'padding-right' : '0px',
           });
       });
   } else {
