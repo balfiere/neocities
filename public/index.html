@@ -83,7 +83,7 @@ attribute:"title"
     --popup-inset-shadow:#9b999b;
     --box-shadow: #b5b5ff;
     --box-border: #968aff;
-    --popup-width: 410px;
+    --popup-width: 470px;
     
     /*----- crosswalk -----*/
     --crosswalk:white;
@@ -107,7 +107,7 @@ body {
     background-position:bottom;
     font-family: 'Prompt';
     font-weight:300;
-    font-size: 14px;
+    font-size: 1em;
     color:rgb(26, 26, 26);
     line-height:1.5em;
     text-align:justify;
@@ -193,8 +193,8 @@ i:not([class]), em {
 
 .quote {
     position:absolute;
-    bottom:600px;
-    width:80vw;
+    top:5dvh;
+    width:80dvw;
     max-width: 700px;
     margin:auto;
     left:0;right:0;
@@ -341,13 +341,13 @@ height: auto;
     max-height:var(--popup-width);
     overflow-y: scroll;
     width:var(--popup-width);
-    max-width: 90%;
     background-color:var(--main-box-background);
     box-shadow:inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
 }
 
 .popup-inside {
     margin: 1px;
+    height: 100%;
 }
 
 .popup-title{
@@ -366,6 +366,7 @@ height: auto;
 
 .popup-content{
     margin: 7px 0 4px 0;
+    height: 100%;
 }
 
 .information-container{
@@ -373,10 +374,15 @@ height: auto;
     box-shadow: inset -2px -2px 0 0 var(--popup-inset-highlight), inset 2px 2px 0 0 var(--popup-inset-shadow);
     background: var(--popup-text-background);
     padding: 10px;
-    height: 200px; 
     overflow-y: scroll;
-    position: relative;
+    height: 100%;
 }
+    @media only screen and (max-width: 700px) {
+        .popup{
+            width: 90dvw;
+            font-size: 1.2rem;
+        }
+    }
 
 </style>
  
