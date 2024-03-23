@@ -67,9 +67,14 @@ section {
   }
   
   @font-face {
-    font-family: pixelsans;
-    src: url(/resources/fonts/pixel-sans.ttf);
-  }
+    font-family: 'Pixel Sans';
+    src: url('/fonts/PixelSans.woff') format('woff'),
+    url('/fonts/PressStartReg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 body{
     background-color: var(--background-color);
