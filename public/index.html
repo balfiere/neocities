@@ -52,10 +52,18 @@ attribute:"title"
  
 <style type="text/css">
 
-/*----- fonts -----*/
+/*----- fonts ----
 
-@font-face { font-family: "press start"; src: url('/fonts/prstart.ttf'); }
- 
+@font-face { font-family: "press start"; src: url('/fonts/prstart.ttf'); }-*/
+@font-face {
+    font-family: 'Press Start';
+    src: url('/fonts/PressStartReg.woff2') format('woff2'),
+        url('/fonts/PressStartReg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
  
 /*----- variables -----*/
 
@@ -199,7 +207,7 @@ i:not([class]), em {
     margin:auto;
     left:0;right:0;
     display:inline-block;
-    font-family:"press start";
+    font-family:"Press Start";
     font-size:em;
     text-transform:uppercase;
     letter-spacing:2px;
