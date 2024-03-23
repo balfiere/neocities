@@ -1,1 +1,2 @@
-neocities.code-workspace
+*.code-workspace
+test/

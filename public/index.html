@@ -54,7 +54,7 @@ attribute:"title"
 
 /*----- fonts -----*/
 
-@font-face { font-family: "press start"; src: url('/landing/fonts/prstart.ttf'); }
+@font-face { font-family: "press start"; src: url('/fonts/prstart.ttf'); }
  
  
 /*----- variables -----*/
@@ -184,7 +184,7 @@ i:not([class]), em {
     box-shadow: inset -2px -2px 0 0 var(--popup-inset-shadow), inset 2px 2px 0 0 var(--popup-inset-highlight);
     background: var(--popup-text-background);
     font-family:Prompt;
-    font-size:12px;
+    font-size:1em;
     letter-spacing:2px;
     z-index:99999999999999999999;
 }
@@ -200,7 +200,7 @@ i:not([class]), em {
     left:0;right:0;
     display:inline-block;
     font-family:"press start";
-    font-size:16px;
+    font-size:em;
     text-transform:uppercase;
     letter-spacing:2px;
     color:white;
@@ -338,16 +338,21 @@ height: auto;
     position:fixed;
     padding:6px;
     z-index:10000;
-    max-height:var(--popup-width);
     overflow-y: scroll;
-    width:var(--popup-width);
+    width: 95dvw;
+    max-width:var(--popup-width);
+    height: 20%;
+    min-height:300px;
+    max-height:95dvh;
     background-color:var(--main-box-background);
     box-shadow:inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
 }
 
 .popup-inside {
-    margin: 1px;
+    margin: 2px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .popup-title{
@@ -358,31 +363,19 @@ height: auto;
     line-height:300%;
     color: white;
     padding: 3px 8px;
-    margin: 2px;
     box-shadow: inset -2px -2px 0 0 var(--popup-title-highlight), inset 2px 2px 0 0 var(--popup-title-shadow);
     background-color: var(--popup-title-background);
 
 }
 
-.popup-content{
-    margin: 7px 0 4px 0;
-    height: 100%;
-}
-
 .information-container{
-    margin: 2px;
     box-shadow: inset -2px -2px 0 0 var(--popup-inset-highlight), inset 2px 2px 0 0 var(--popup-inset-shadow);
     background: var(--popup-text-background);
-    padding: 10px;
     overflow-y: scroll;
+    padding: 10px;
     height: 100%;
+    margin: 6px 0;
 }
-    @media only screen and (max-width: 700px) {
-        .popup{
-            width: 90dvw;
-            font-size: 1.2rem;
-        }
-    }
 
 </style>
  
@@ -419,11 +412,9 @@ height: auto;
     <div class="popup">
         <div class="popup-inside">
             <div class="popup-title">about my resource site</div>
-            <div class="popup-content">
-                <div class="information-container">
-                    free resources and pirated content i've found helpful in my life. most links are related to language learning (primarily thai and japanese) and gaming (hacking consoles, emulation, piracy, etc), but also knitting, cross stitch, anime and manga, music, or whatever else catches my eye. includes links to my own backups and archives. mobile friendly.<br/><br />
-                    <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/resources/index.html">>> enter <<</a></div>
-                </div>
+            <div class="information-container">
+                free resources and pirated content i've found helpful in my life. most links are related to language learning (primarily thai and japanese) and gaming (hacking consoles, emulation, piracy, etc), but also knitting, cross stitch, anime and manga, music, or whatever else catches my eye. includes links to my own backups and archives. mobile friendly.<br/><br />
+                <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/resources/index.html">>> enter <<</a></div>
             </div>
         </div>
     </div>
@@ -433,11 +424,9 @@ height: auto;
 <div class="popup">
     <div class="popup-inside">
         <div class="popup-title">about my personal site</div>
-        <div class="popup-content">
             <div class="information-container">
                 currently under construction, check back again soon!
             </div>
-        </div>
     </div>
 </div>
 </div>
