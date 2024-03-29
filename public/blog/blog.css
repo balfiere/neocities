@@ -1,0 +1,24 @@
+body{
+    margin:0;
+    padding: 0;
+}
+
+#journal object{
+}
+
+#journal{
+    display: none;
+}
+
+.page{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.back{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 99999;
+}

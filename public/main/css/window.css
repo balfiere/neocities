@@ -1,0 +1,136 @@
+/*----- windows -----*/
+
+.window_container {
+    background-color:var(--window-container-background);
+    border: var(--window-border);
+    box-shadow: var(--window-shadow);
+    border-radius: var(--window-border-radius);
+    position: absolute;
+    z-index: 999;
+}
+
+.window_interior {
+    margin: var(--window-padding);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.window_top {
+    overflow:hidden;
+	cursor: grab;
+	.is-pointer-down & {
+		cursor: grabbing;
+	}
+}
+
+.window_title {
+    float:left;
+    width:calc(100% - 61px);
+    letter-spacing:0px;
+    font-size:9px;
+    font-family: nineteen93, maru;
+    text-rendering: optimizeLegibility;
+    line-height:1em;
+    overflow:hidden;
+    background-color: var(--window-title-background);
+    border-radius: calc(var(--window-border-radius) - 2px);
+    padding: 11px 7px 10px 10px;
+	&:hover{
+        background-color: var(--window-title-background-clicked);
+	}
+}
+
+.window_control {
+    display:flex;
+    float: right;
+    margin-right: -5px;
+}
+
+.smallbox {
+    margin-right:1px;
+    margin-top: 1px;
+    padding:0px;
+    width:29px;
+    height:29px;
+    cursor:help;
+}
+
+.smallbox:last-of-type {
+}
+
+.minimize_control {
+    margin-top:24px;
+    width:24px;
+    height:2px;
+    background:var(--window-title-background);
+    border-radius: 1px;
+}
+
+.smallbox:hover .minimize_control, .smallbox:hover .maximize_control{
+    opacity: 0.6;
+}
+
+.maximize_control {
+    margin-top:2px;margin-left:2px;
+    border-radius: 2px;
+    width:21px;height:21px;
+    border:2px solid var(--window-title-background);
+}
+
+.window_description {
+    background: var(--window-text-background);
+    border-radius: calc(var(--window-border-radius) - 2px);
+    overflow-y: scroll;
+    padding: 10px;
+    height: 100%;
+    margin-top:calc(var(--window-padding) + 1px);
+    margin-bottom: 1px;
+}
+
+.window_description img {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+/*----- window section size and initial locations -----*/
+
+.buttons {
+    top:33vh;
+    left:8vh;
+    width: 394px;
+}
+
+.buttons .window_description{
+    height: 400px;
+    line-height: 0;
+    font-size: 0;
+}
+
+.buttons .window_description img {
+    width: 88px;
+    object-fit: none;
+}
+
+.chatbox {
+    top:5vh;
+    right:5vh;
+    width: 390px;
+}
+
+.chatbox .window_description{
+    height: 480px;
+}
+
+.updates {
+    top:5vh;
+    left:5vh;
+    width: 270px;
+}
+
+.updates .window_description{
+    height: 128px;
+    font-family: nineteen93, maru; 
+    font-size: 9px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shrines</title>
+<link rel="shortcut icon" href="images/favicon.gif">
+
+<!-- styling -->
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/body.css" type="text/css">
+
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- scripts -->
+<script src="/scripts/jquery.1.7.2.min.js"></script>
+<script src="/scripts/jquery.style-my-tooltips.js"></script>
+ 
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:600,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+</head>
+
+<body>
+
+    <h1>shrines</h1>
+
+    <p><a target="_parent" title="under construction" style="all: revert"><img src="images/haruka.webp" width="200px"></a></p>
+
+<!-- back to top -->
+<a href="#" id="pagetop"><span class="arrow"></span></a>
+
+<!-- more scripts -->
+<script src="scripts/jquery.scroll.js"></script>
+</body>
+</html>
+

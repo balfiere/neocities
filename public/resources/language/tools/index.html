@@ -6,10 +6,11 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ราวเหมือนดั่งความฝัน</title>
+  <title>language learning tools</title>
   <meta name="description" content="">
   <meta name="author" content="">
-  <script src="/resources/scripts/jquery.min.js"></script><script src="/resources/scripts/load.js"></script>
+  <script src="/scripts/jquery.1.7.2.min.js"></script>
+  <script src="/resources/scripts/load.js"></script>
 
 <!-- FONT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -50,13 +51,55 @@
        
       <div class="mainboxes">
        
-        <button class="collapsible subheader"><h3>PAGE NAME HERE</h3></button>
+        <button class="collapsible subheader"><h3>anki</h3></button>
          
         <div class="mainboxescontent content">
        
       <!-- REPLACE CONTENT BELOW WITH YOUR OWN -->
        
-      <p>content here!</p>
+      <dt>
+        <dl><a target="_blank" href="https://apps.ankiweb.net/">Anki</a></dl>
+        <dd>flashcard app for windows, mac, linux, android, and ios. highly customizable, with access to a ton of different user made <a target="_blank" href="https://ankiweb.net/shared/addons">plug-ins</a> and <a target="_blank" href="https://ankiweb.net/shared/decks">decks</a>. i recommend using the FSRS algorithm for scheduling your cards instead of the default SM-2 scheduler, which you can learn about <a target="_blank" href="https://github.com/open-spaced-repetition/fsrs4anki">here</a>.</dd>
+        <dl><a target="_blank" href="https://ankiweb.net/shared/info/759844606">FSRS4Anki Helper</a></dl>
+        <dd>add-on to help customize your card schedule if you use the FSRS algorithm.</dd>
+        <dl><a target="_blank" href="https://ankiweb.net/shared/info/688199788">ReColor</a></dl>
+        <dd>lets you customize the color palette of anki.</dd>
+        <dl><a target="_blank" href="https://ankiweb.net/shared/info/876946123">Pass/Fail</a></dl>
+        <dd>removes the easy and hard buttons, so you only have to decide between passing or failing a card.</dd>
+        <dl><a target="_blank" href="https://ankiweb.net/shared/info/354407385">Opening the same window multiple time</a></dl>
+        <dd>lets you open multiple instances of the same window type (browse, add, edit, etc). personally i add <code>"AddCards": false,</code> to this add-on's default configuration so i don't open dozens of add card windows when i'm sentence mining.</dd>
+        <dl><a target="_blank" href="https://ankiweb.net/shared/info/1156270186">Generate Batch Audio</a></dl>
+        <dd>automatically pull audio from sources like forvo and add them to the selected cards.</dd>
+        <dl><a target="_blank" href="https://ankiweb.net/shared/info/580654285">Yomichan Forvo Server</a></dl>
+        <dd>adds forvo as a source for word audio in yomichan. compatible with yomichan forks like yomitan.</dd>
+        <dl><a target="_blank" href="https://ankiweb.net/shared/info/366960193">VOICEVOX Japanese Text To Speech Audio Generator</a></dl>
+        <dd>uses VOICEVOX speech synthesis software to generate audio for your anki cards. i'm generally against using TTS software too much when learning a language but VOICEVOX is pretty high quality for a free TTS so i'll use this when i really want a reading of a given sentence. only works with japanese.</dd>
+      </dt>
+       
+      </div>
+       
+      </div>
+
+      <!-- end box -->
+
+        <!-- start box -->
+       
+      <div class="mainboxes">
+       
+        <button class="collapsible subheader"><h3>browser extensions</h3></button>
+         
+        <div class="mainboxescontent content">
+       
+      <!-- REPLACE CONTENT BELOW WITH YOUR OWN -->
+       
+      <dt>
+        <dl><a target="_blank" href="https://github.com/themoeway/yomitan">Yomitan</a></dl>
+        <dd>interactive pop-up dictionary. built for japanese but support for other languages is being worked on. some non-japanese dictionaries that work with yomitan can be found <a target="_blank" href="https://github.com/MarvNC/yomichan-dictionaries">here</a>.</dd>
+        <dl><a target="_blank" href="https://www.languagereactor.com/">Language Reactor</a></dl>
+        <dd>chrome extension that allows you to view 2 subtitles simultaneously on sites like youtube and netflix as well as their own video viewer. has a built in pop up dictionary. you can track known and unknown words if you pay for a pro membership.</dd>
+        <dl><a target="_blank" href="https://github.com/killergerbah/asbplayer">asbplayer</a></dl>
+        <dd>media player and chrome extension that allows you to easily create anki cards with sentence audio and screenshots. the subtitles in the media player are also text selectable so you can use them with pop up dictionaries like yomitan.</dd>
+      </dt>
        
       </div>
        
@@ -76,8 +119,7 @@
       <div id="credit"><a href="https://repth.neocities.org/index.html">@Repth</a></div>
   </body>
 
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- more scripts-->
   <script src="/resources/scripts/jquery.toggle.js"></script>
   <script src="/resources/scripts/collapsible.js"></script>
   </html>
