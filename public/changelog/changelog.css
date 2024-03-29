@@ -1,0 +1,123 @@
+:root {
+  /*-- page background --*/
+	--unit: 80px;
+	--gridColor: #ddd;
+	--scanColor: #eee;
+
+  /*-- box --*/
+  --pixel: 2px;
+  --s: 6px; /* size of the cut */
+  --date-text: rgb(95, 59, 255);
+  --date-background: rgba(95, 59, 255, 0.2);
+  --box-background: white;
+}
+  
+@font-face {
+  font-family: "Nintendo_DS_BIOS";
+  src: url("https://cdn.glitch.global/597af664-d8c4-4d92-8dc9-d3bb9a8edd3a/Nintendo-DS-BIOS.ttf?v=1649628722542"); /*URL to font*/
+  font-weight: regular;
+}
+
+body {
+	text-align: left;
+	background-size: 
+		var(--unit) var(--unit),
+		var(--unit) var(--unit),
+		var(--unit) var(--unit),
+		var(--unit) calc(var(--unit) / 24);
+	background-image: 
+		linear-gradient(to right, var(--gridColor) calc(var(--unit)/48), transparent 1px), 
+		linear-gradient(to bottom, var(--gridColor) calc(var(--unit)/48), transparent 1px),
+		radial-gradient(var(--gridColor) calc(var(--unit)/24), transparent 0),
+		linear-gradient(to bottom, var(--scanColor) 50%, transparent 1px);
+	background-position:
+		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2),
+		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2),
+		calc(50% - var(--unit) * (1 - 1/48) - 1px) calc(var(--unit) * (1 + 1/48)),
+		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2);
+}
+
+#wrapper {
+  width: 90dvw;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  height: 90dvh;
+}
+  
+
+  .box {
+    font-family: "Nintendo_DS_BIOS", Arial, sans-serif;
+    font-size: calc(var(--pixel) * 16);
+    position:relative;
+    width: 100%;
+    margin-top: calc(var(--pixel) * 16);
+    background-color:var(--box-background);
+    clip-path: polygon(
+        var(--s) 0%, 
+        calc(100% - var(--s)) 0%, 
+        100% var(--s), 100% calc(100% - var(--s)), 
+        calc(100% - var(--s)) 100%, 
+        var(--s) 100%, 
+        0% calc(100% - var(--s)), 
+        0% var(--s));
+  }
+  
+  .box:before {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index: -1;
+    background: linear-gradient(45deg,rgb(0, 0, 0),rgb(0, 0, 0));
+    --g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+    --g2:#0000   calc(0.707*var(--s)), 
+         #000  0 calc(0.707*var(--s) + var(--pixel)),
+         #0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+         #000  0 calc(100% - 0.707*var(--s)),
+         #0000 0;
+    -webkit-mask:
+      linear-gradient(45deg ,var(--g2)),
+      linear-gradient(-45deg,var(--g2)),
+      linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+      linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+      
+  }
+  
+  .date {
+    float: left;
+    position: relative;
+    background: var(--date-background);
+    padding: var(--pixel) calc(var(--pixel) * 4);
+    color: var(--date-text);
+    clip-path: polygon(var(--s) 0, 100% 0, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 0 100%, 0 var(--s));
+    margin-right: calc(var(--pixel) * 3);
+    line-height: calc(var(--pixel) * 16);
+  }
+
+  .date:before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(45deg,rgb(0, 0, 0),rgb(0, 0, 0));
+    --g3:#0000 0 calc(100% - var(--pixel)),#000 0;
+    --g4:#0000   calc(0.707*var(--s)), 
+         #000  0 calc(0.707*var(--s) + var(--pixel)),
+         #0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+         #0000 0;
+    -webkit-mask:
+      linear-gradient(-45deg,var(--g4)),
+      linear-gradient(90deg ,var(--g3)) 100% calc(100% - var(--s)) no-repeat,
+      linear-gradient(180deg,var(--g3)) calc(100% - var(--s)) 100% no-repeat;
+      
+  }
+  
+  .message {
+    padding: 0 calc(var(--pixel) * 4) calc(var(--pixel) * 2) calc(var(--pixel) * 5);
+    margin-bottom: calc(var(--pixel) * -2.5);
+    line-height: calc(var(--pixel) * 18);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--date-text);
+  }
