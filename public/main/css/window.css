@@ -6,7 +6,7 @@
     box-shadow: var(--window-shadow);
     border-radius: var(--window-border-radius);
     position: absolute;
-    z-index: 999;
+    z-index: 5;
 }
 
 .window_interior {
@@ -54,9 +54,6 @@
     width:29px;
     height:29px;
     cursor:help;
-}
-
-.smallbox:last-of-type {
 }
 
 .minimize_control {
