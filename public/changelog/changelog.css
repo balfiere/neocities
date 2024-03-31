@@ -102,12 +102,13 @@ body {
     float: left;
     position: relative;
     z-index: -2;
-    padding: var(--pixel) calc(var(--pixel) * 4);
+    padding: calc(var(--pixel) * 0) calc(var(--pixel) * 4);
     color: var(--date-text);
     background: var(--date-background);
     clip-path: polygon(var(--s) 0, 100% 0, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 0 100%, 0 var(--s));
     margin-right: calc(var(--pixel) * 3);
-    line-height: calc(var(--pixel) * 16);
+    line-height: calc(var(--pixel) * 19);
+    margin-top: calc(var(--pixel) * -1);
   }
 
   .date:before {
@@ -128,8 +129,7 @@ body {
   }
   
   .message {
-    padding: 0 calc(var(--pixel) * 4) calc(var(--pixel) * 2) calc(var(--pixel) * 5);
-    margin-bottom: calc(var(--pixel) * -2.5);
+    padding: calc(var(--pixel) * 0) calc(var(--pixel) * 4) calc(var(--pixel) * 0) calc(var(--pixel) * 4);
     line-height: calc(var(--pixel) * 18);
   }
 
