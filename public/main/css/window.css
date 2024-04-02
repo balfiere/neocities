@@ -6,7 +6,7 @@
     box-shadow: var(--window-shadow);
     border-radius: var(--window-border-radius);
     position: absolute;
-    z-index: 5;
+    z-index: 999;
 }
 
 .window_interior {
@@ -120,14 +120,14 @@
     height: 480px;
 }
 
-.updates {
+.todo {
     top:5vh;
     left:5vh;
     width: 270px;
 }
 
-.updates .window_description{
-    height: 128px;
+.todo .window_description{
+    height: 158px;
     font-family: nineteen93, maru; 
     font-size: 9px;
 }

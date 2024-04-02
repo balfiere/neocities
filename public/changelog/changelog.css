@@ -7,7 +7,7 @@
 
   /*-- box --*/
   --pixel: 2px;
-  --s: 6px; /* size of the cut */
+  --s: calc(var(--pixel) * 3); /* size of the cut */
   --date-text: rgb(95, 59, 255);
   --date-background: rgba(95, 59, 255, 0.2);
   --box-text: black;
@@ -31,6 +31,17 @@
   font-weight: regular;
 }
 
+@font-face {
+  font-family: 'NDS true bios';
+  src: url('/fonts/NDStruebios.woff2') format('woff2'),
+      url('/fonts/NDStruebios.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 body {
 	text-align: left;
 	background-size: 
@@ -52,16 +63,27 @@ body {
 }
 
 #wrapper {
-  width: 90dvw;
-  max-width: 600px;
+  width: 90%;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
-  height: 90dvh;
 }
+
+.outer {
+  margin: 0 auto;
+  position: relative;
+}
+
+.inner {
+  position: absolute;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
+}
 
   .box {
-    font-family: "Nintendo_DS_BIOS", Arial, sans-serif;
+    font-family: "NDS true bios", Arial, sans-serif;
     font-size: calc(var(--pixel) * 16);
     position:relative;
     width: 100%;

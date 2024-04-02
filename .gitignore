@@ -1,3 +1,4 @@
 *.code-workspace
 test/
 public/.vscode
+public/main/images/pixels/scriptToExecute.cmd

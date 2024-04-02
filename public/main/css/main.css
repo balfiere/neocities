@@ -380,6 +380,7 @@ h2,
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: geometricPrecision;
+    padding-bottom: 0.3em;
 }
 
 h3,
