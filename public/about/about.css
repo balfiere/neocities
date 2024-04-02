@@ -25,6 +25,10 @@
   /*----- tooltip -----*/
   --scrollbar: #b5b5ff;
   --scrollbar-width: 0px;
+
+  /*----- dark mode -----*/
+  --text-dark: #f0f0f0;
+  --window-border-dark: #777777;
 }
 
 /*----- base formatting -----*/
@@ -342,7 +346,7 @@ figure {
 .blinkies,
 .main2,
 #s-m-t-tooltip {
-    background: url('images/boxbg.png'); 
+    background: url('images/boxbg.jpg'); 
     background-color: gray;
     border-radius: 20px;
     border: 4px ridge var(--window-border);
@@ -503,4 +507,25 @@ figure {
   position: relative;
   top: -2px;
   margin-right: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    color: var(--text-dark);
+  }
+
+  #page{
+      background-color: var(--page-background-color-dark);
+      background-image: url(images/bgdark.gif);
+  }
+
+  .stats,
+  .links,
+  .stamps,
+  .blinkies,
+  .main2,
+  #s-m-t-tooltip {
+      background: url('images/boxbgdark.jpg'); 
+      border: 4px ridge var(--window-border-dark);
+  }
 }

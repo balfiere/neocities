@@ -91,6 +91,13 @@ section {
 	/*----- tooltip -----*/
 	--scrollbar: #b5b5ff;
 	--scrollbar-width: 0px;
+  
+	/*----- dark mode -----*/
+	--container-background-dark:#56104f;
+	--text-dark: rgb(231, 231, 231);
+	--border-dark:#1b070a;
+    --h3-color-dark:rgb(223, 223, 223);
+    --h3-background-dark: #518625;
   }
   
   /*----- fonts -----*/
@@ -160,7 +167,7 @@ body {
 	font-size: 1em;
 	color: var(--text);
 	background-color: var(--page-background-color);
-	background-image: url('images/bg.png');
+	background-image: url('images/bg.jpg');
 }
 
 p {
@@ -388,9 +395,6 @@ input#tabToggle04:checked ~ tab-content:not(:nth-of-type(4)) {display: none;}
 		max-height: 94dvh;
 	}
 
-	.back{
-	}
-
 	.back a{
 		/*
 		color: black;
@@ -426,5 +430,36 @@ input#tabToggle04:checked ~ tab-content:not(:nth-of-type(4)) {display: none;}
 
 	tab-container {
 		height: 80%;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	html,
+	body {
+		color: var(--text-dark);
+		background-image: url('images/bgdark.jpg');
+	}
+
+	#container{
+		border: solid 1px var(--border-dark);
+		background-color: var(--container-background-dark);
+	}
+
+	h3,
+	.h3 {
+	  color: var(--h3-color-dark);
+	  background-color: var(--h3-background-dark);
+	}
+
+	.leftimg img{
+		opacity: 0.8;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		&:hover{
+			opacity: 1;
+		}
 	}
 }
