@@ -131,3 +131,33 @@
     font-family: nineteen93, maru; 
     font-size: 9px;
 }
+
+@media (prefers-color-scheme: dark) {
+
+    .window_container {
+        background-color:var(--window-container-background-dark);
+        border: var(--window-border-dark);
+        box-shadow: var(--window-shadow-dark);
+    }
+
+    .window_description {
+        background: var(--window-text-background-dark);
+    }
+
+    .window_title {
+        color: var(--window-title-color-dark);
+        background-color: var(--window-title-background-dark);
+        &:hover{
+            background-color: var(--window-title-background-clicked-dark);
+        }
+    }
+
+    .minimize_control {
+        background:var(--window-title-background-dark);
+    }
+    
+    .maximize_control {
+        border:2px solid var(--window-title-background-dark);
+    }
+
+}

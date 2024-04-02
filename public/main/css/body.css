@@ -58,3 +58,12 @@ a {
       padding: 0 0 0 9px;
       margin: 0 0 0 0px;
   }
+
+  @media (prefers-color-scheme: dark) {
+    a {
+      position: relative;
+      text-decoration: none;
+      color:var(--link-dark);
+      background-image: linear-gradient(var(--link-hover-background-dark), var(--link-hover-background-dark));
+    }
+  }

@@ -13,6 +13,7 @@
   --box-text: black;
   --box-background: white;
   --box-border: black;
+  --link-hover:rgb(59, 255, 108);
 
   /*-- dark mode --*/
   --page-background-dark:rgb(19, 19, 19);
@@ -23,6 +24,7 @@
   --box-text-dark: #ddd;
   --box-background-dark: rgb(34, 34, 34);
   --box-border-dark: #ddd;
+  --link-hover-dark:rgb(122, 255, 133);
 }
   
 @font-face {
@@ -117,6 +119,11 @@ body {
       linear-gradient(-45deg,var(--g2)),
       linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
       linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+      mask:
+        linear-gradient(45deg ,var(--g2)),
+        linear-gradient(-45deg,var(--g2)),
+        linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+        linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
       
   }
   
@@ -147,6 +154,10 @@ body {
       linear-gradient(-45deg,var(--g4)),
       linear-gradient(90deg ,var(--g3)) 100% calc(100% - var(--s)) no-repeat,
       linear-gradient(180deg,var(--g3)) calc(100% - var(--s)) 100% no-repeat;
+      mask:
+        linear-gradient(-45deg,var(--g4)),
+        linear-gradient(90deg ,var(--g3)) 100% calc(100% - var(--s)) no-repeat,
+        linear-gradient(180deg,var(--g3)) calc(100% - var(--s)) 100% no-repeat;
       
   }
   
@@ -158,6 +169,14 @@ body {
   a {
     text-decoration: none;
     color: var(--date-text);
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    -ms-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    &:hover{
+      color: var(--link-hover);
+    }
   }
 
   @media (prefers-color-scheme: dark) {
@@ -185,6 +204,9 @@ body {
 
     a {
       color: var(--date-text-dark);
+      &:hover{
+        color: var(--link-hover-dark);
+      }
     }
   }
  

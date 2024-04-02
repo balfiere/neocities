@@ -62,6 +62,23 @@ ul,li{list-style-type:none}
 	/*----- scrollbar -----*/
 	--scrollbar: #b5b5ff;
 	--scrollbar-width: 0px;
+
+    /*-- dark mode --*/
+    --page-background-color-dark:rgb(19, 19, 19);
+    --window-container-background-dark: #161616;
+    --window-text-background-dark: #1f1f1f;
+    --window-shadow-dark: 10px 10px 0px rgba(69, 48, 255, 0.6);
+    --window-border-dark: solid 1px rgb(69, 48, 255);
+    --window-title-color-dark:#ddd;
+    --window-title-background-dark:rgba(69, 48, 255, 0.7);
+    --window-title-background-clicked-dark:rgba(69, 48, 255, 0.5);
+    --link-dark: rgb(179, 166, 255);
+	--link-hover-background-dark: rgba(34, 126, 83, 0.521);
+    --text-dark: #ddd;
+    --sidebar-link-color-dark: #ddd;
+    --pagetop-background-dark: #242424;
+    --pagetop-border-dark:solid 1px rgb(69, 48, 255);
+    --pagetop-arrow-dark:solid 2px rgb(125, 110, 255);
   }
   
   /*----- fonts -----*/
@@ -621,4 +638,48 @@ z-index:1001
 #open .close:after{-ms-transform:rotate(-135deg);-webkit-transform:rotate(-135deg);transform:rotate(-135deg);background:#fff}/* 開いた時の線の色 */
 .mybutton{display: none;}
 .mobilewarning{display:block;}
+}
+
+@media (prefers-color-scheme: dark) {
+    body, input, textarea, #s-m-t-tooltip {
+        color: var(--text-dark);
+    }
+
+    a {
+        color: var(--link-dark);
+    }
+
+    h1 {
+        color: var(--sidebar-link-color-dark);
+    }
+
+    #page{
+        background-color: var(--page-background-color-dark);
+        background-image: url(/main/images/bgdark.png);
+    }
+
+    #rightcolumn, #leftcolumn, #s-m-t-tooltip {
+        background: var(--window-text-background-dark);
+        border: var(--window-border-dark);
+    }
+
+    #rightcolumn, #leftcolumn {
+        box-shadow: var(--window-shadow-dark);
+    }
+
+    nav li a,nav li span{
+        color:var(--sidebar-link-color-dark);
+    }
+    
+    #pagetop{
+        background:var(--pagetop-background-dark);
+        border:var(--pagetop-border-dark);
+        box-shadow:5px 5px 0px rgba(69, 48, 255, 0.6);
+        -webkit-box-shadow:5px 5px 0px rgba(69, 48, 255, 0.6);
+    }
+
+    .arrow{
+        border-left:var(--pagetop-arrow-dark);
+        border-top:var(--pagetop-arrow-dark);
+    }
 }
