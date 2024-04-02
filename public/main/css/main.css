@@ -683,6 +683,8 @@ z-index:1001
         border-top:var(--pagetop-arrow-dark);
     }
 
+    #open-icon,#open-icon:before,#open-icon:after{background:#fff}/* 線の色 */
+
     img {
         opacity: 0.8;
         -webkit-transition:all 0.3s ease-in-out;
