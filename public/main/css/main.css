@@ -641,7 +641,7 @@ z-index:1001
 }
 
 @media (prefers-color-scheme: dark) {
-    body, input, textarea, #s-m-t-tooltip {
+    body, input, textarea, #s-m-t-tooltip, h2, .h2 {
         color: var(--text-dark);
     }
 
