@@ -11,6 +11,7 @@
     content: url("/resources/images/plus.png");
     display: inline;
     margin-right: 5px;
+    filter: invert(1);
 }
 
 .active:before {
@@ -36,4 +37,10 @@
 
 .collapsible{
    display: inline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .collapsible:before {
+     filter: invert(0);
+ }
 }

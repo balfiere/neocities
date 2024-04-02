@@ -1,6 +1,6 @@
-
-$(window).on("load", function() {
+$(window).on("load resize", function () {
+    $("#wrapper").css("width", "90%");
     $('#wrapper').each(function (index, value) {
-        if($(this).width()%2==1) $(this).width( 2*Math.round($(this).width()/2 ) ) ;
+        if($(this).width()%4!=0) $(this).width( 4*Math.round($(this).width()/4 ) ) ;
     });
-});
+})
