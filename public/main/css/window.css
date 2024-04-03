@@ -91,46 +91,7 @@
     display: inline;
 }
 
-/*----- window section size and initial locations -----*/
-
-.buttons {
-    top:33vh;
-    left:8vh;
-    width: 394px;
-}
-
-.buttons .window_description{
-    height: 400px;
-    line-height: 0;
-    font-size: 0;
-}
-
-.buttons .window_description img {
-    width: 88px;
-    object-fit: none;
-}
-
-.chatbox {
-    top:5vh;
-    right:5vh;
-    width: 390px;
-}
-
-.chatbox .window_description{
-    height: 480px;
-}
-
-.todo {
-    top:5vh;
-    left:5vh;
-    width: 270px;
-}
-
-.todo .window_description{
-    height: 158px;
-    font-family: nineteen93, maru; 
-    font-size: 9px;
-}
+/*----- dark mode support -----*/
 
 @media (prefers-color-scheme: dark) {
 
@@ -160,4 +121,58 @@
         border:2px solid var(--window-title-background-dark);
     }
 
+}
+
+/*----- window section size and initial locations -----*/
+
+.buttons {
+    top:33vh;
+    left:8vh;
+    width: 394px;
+}
+
+.buttons .window_description{
+    height: 400px;
+    line-height: 0;
+    font-size: 0;
+}
+
+.buttons .window_description img {
+    width: 88px;
+    object-fit: none;
+}
+
+.chatbox {
+    top:5vh;
+    right:5vh;
+    width: 390px;
+}
+
+.chatbox .window_description{
+    height: 380px;
+}
+
+.todo {
+    top:5vh;
+    left:5vh;
+    width: 270px;
+}
+
+.todo .window_description{
+    height: 158px;
+    font-family: nineteen93, maru; 
+    font-size: 9px;
+}
+
+.webrings {
+    top:calc(5vh + 500px);
+    right:15vh;
+    width: 331px;
+}
+
+.webrings .window_description{
+    height: 250px;
+    font-family: nineteen93, maru; 
+    text-align: center;
+    font-size: 9px;
 }

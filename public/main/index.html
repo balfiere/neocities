@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/main.css" type="text/css">
 <link rel="stylesheet" href="css/window.css" type="text/css">
 <link rel="stylesheet" href="css/sakura.css" type="text/css">
+<link rel="stylesheet" href="https://ikaroll.neocities.org/dsring/onion/onionring.css">
 
 <!-- fonts -->
 <link rel="preconnect" href="https://api.fonts.coollabs.io" crossorigin />
@@ -26,7 +27,7 @@
 <script>
 (function($){
 $(document).ready(function(){
-$("a[title]").style_my_tooltips({
+$("a[title], img[title]").style_my_tooltips({
 tip_follows_cursor:true,
 tip_delay_time:90,
 tip_fade_speed:600,
@@ -164,6 +165,35 @@ attribute:"title"
     </div><!--window_interior-->
 </div><!--window_container-->
 
+<!-- webrings -->
+<div class="window_container draggable webrings">
+    <div class="window_interior">
+        <div class="window_top window-header">
+            <div class="window_title">@cliques_&_webrings</div>
+            <div class="window_control">
+                
+                <div class="smallbox minimize">
+                <div class="minimize_control"></div></div>
+                
+                <div class="smallbox maximize">
+                <div class="maximize_control"></div></div>
+                
+            </div><!--window_control-->
+        </div><!--window_top-->
+        <div class="window_description">
+          <div id='dsring'>
+            <script type="text/javascript" src="https://ikaroll.neocities.org/dsring/onion/onionring-variables.js"></script>
+            <script type="text/javascript" src="https://ikaroll.neocities.org/dsring/onion/onionring-widget.js"></script>
+            </div>    
+            <a href="http://cliqued.wings.nu/">OTF <img src="images/green.png"></a> yakuza<br />   
+            <a href="http://midnight-cloud.net/moogle" target="_blank"><img src="images/moogle02.gif" title="I ♥ moogles // Kupo, kupo! Moogle Adoption Clique"></a>
+            <a href="https://key.caelestis.nu" style="text-decoration: none; border: 0px;"><img src="images/twobecomeone.png" border="0" title="Keyblade // Two Become One"></a>
+            <!---- Final Fantasy Crystal Guardian Start ---->
+            <a href="http://exvius.aelysia.net" target="_blank" rel="noopener noreferrer" style="border: 0px none; background: transparent;"><img src="images/xii_fran.png" style="padding: 0px; margin: 0px; border: 0px none; background: transparent;" title="FRAN protects KWAAMFAN"></a>
+            <!---- Final Fantasy Crystal Guardian End ---->
+        </div>
+    </div><!--window_interior-->
+</div><!--window_container-->
 
 <!-- chatbox -->
 <div class="window_container draggable chatbox">
@@ -181,7 +211,7 @@ attribute:"title"
             </div><!--window_control-->
         </div><!--window_top-->
         <div class="window_description">
-            <iframe src='https://chattable.neocities.org/embed?chat=99474997' id='chattable' frameborder='none' style="width: 350px; height: 450px;"></iframe>
+            <iframe src='https://chattable.neocities.org/embed?chat=99474997' id='chattable' frameborder='none' style="width: 350px; height: 350px;"></iframe>
 <script>window.onload = function(){
 	document.getElementById('chattable').contentWindow.postMessage(`
 
