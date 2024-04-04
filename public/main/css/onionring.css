@@ -7,7 +7,7 @@
 
 :root {
   /*-- main --*/
-	--unit: 20px;
+	--unit: 60px;
   --page-background:white;
 	--grid-color: #ddd;
 	--scan-color: #eee;
@@ -57,7 +57,7 @@
 		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2),
 		calc(50% - var(--unit) * (1 - 1/48) - 1px) calc(var(--unit) * (1 + 1/48)),
 		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2);
-    width: 150px;
+    width: 120px;
 }
 
 #dsring table tr td {
