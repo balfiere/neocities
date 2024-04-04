@@ -14,7 +14,7 @@
     content: url("/resources/images/min.png");
 }
 
-.collapsible.h2:before {
+.collapsible:before {
      filter: invert(1);
  }
 
