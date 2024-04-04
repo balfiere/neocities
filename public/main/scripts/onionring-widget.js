@@ -60,7 +60,7 @@ else {
     <tr>
       <td class='webring-prev'><a href='${sites[previousIndex]}'>←</a></td>
       <td class='webring-info'>DSring</br>
-      <center><img src="https://ikaroll.neocities.org/assets/dsring/widget_icon.png" alt="ds icon" width="40%"></center>
+      <center><img src="https://ikaroll.neocities.org/assets/dsring/widget_icon.png" alt="ds icon" width="32px"></center>
       <a href="https://ikaroll.neocities.org/dsring/">index</a></span></td>
       <td class='webring-next'><a href='${sites[nextIndex]}'>→</a></td>
     </tr>

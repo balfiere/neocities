@@ -56,7 +56,6 @@
 
 #dsring .webring-prev {
   text-align:right;
-  font-size: 32px;
 }
 
 #dsring .webring-info {
@@ -65,9 +64,14 @@
 
 #dsring .webring-next {
   text-align:left;
-  font-size: 32px;
 }
 
 #dsring .webring-links {
   /*font-size:large;*/
+}
+
+#dsring img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
