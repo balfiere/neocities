@@ -5,16 +5,25 @@
 /* === ONIONRING.CSS === */
 /* this file affects the style of the widget. remember to replace all instances of #webringid with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
 
-#dsring {
-  margin: 0 auto;
-  padding: 5px; /* creates some space around the widget */
-  font-family: 'Nintendo-DS', sans-serif;
-  font-size: 16px;
-}
-
 @font-face {
   font-family:Nintendo-DS;
   src: url("https://ikaroll.neocities.org/assets/fonts/Nintendo-DS.ttf");
+}
+
+@font-face {
+  font-family: 'NDS true bios';
+  src: url('/fonts/NDStruebios.woff2') format('woff2'),
+      url('/fonts/NDStruebios.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+#dsring {
+  margin: 0 auto;
+  padding: 5px; /* creates some space around the widget */
+  font-family: 'NDS true bios', sans-serif;
+  font-size: 16px;
 }
 
 #dsring table {
@@ -30,6 +39,7 @@
 
 #dsring .webring-prev {
   text-align:right;
+  font-size: 32px;
 }
 
 #dsring .webring-info {
@@ -38,8 +48,9 @@
 
 #dsring .webring-next {
   text-align:left;
+  font-size: 32px;
 }
 
 #dsring .webring-links {
-  font-size:large;
+  /*font-size:large;*/
 }
