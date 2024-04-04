@@ -1,0 +1,56 @@
+body{
+    background-color: black;
+}
+
+#wrapper{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    margin: 0 auto;
+}
+
+/* credit: https://foollovers.com/mat/t-frame16.html */
+.box16{
+    margin:0 auto; /* 中央寄せは0をautoに変更 */
+    width: 100%; /* 幅 */
+    }
+    .u01{
+    background:url(images/border/f-ue.gif) repeat-x;
+    height:37px;
+    margin:0 21px
+    }
+    .s01{
+    background:url(images/border/f-sita.gif) repeat-x;
+    height:37px;
+    margin:0 21px
+    }
+    .box-top{
+    background-image:url(images/border/f-kado1.gif), url(images/border/f-kado2.gif);
+    background-position:top left, top right;
+    background-repeat:no-repeat, no-repeat;
+    height:37px
+    }
+    .box-center{
+    background-image:url(images/border/f-migi.gif), url(images/border/f-hidari.gif);
+    background-position:top right, top left;
+    background-repeat:repeat-y, repeat-y;
+    padding:0 21px
+    }
+    .box-bottom{
+    background-image:url(images/border/f-kado3.gif), url(images/border/f-kado4.gif);
+    background-position:top left, top right;
+    background-repeat:no-repeat, no-repeat;
+    height:37px
+    }
+    .box-inner{
+    background:#fff;
+    padding:10px;
+    text-align: center;
+    overflow-y: scroll;
+    }

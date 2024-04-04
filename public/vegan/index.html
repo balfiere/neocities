@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vegan page</title>
+<link rel="shortcut icon" href="images/favicon.gif">
+<link rel="stylesheet" href="vegan.css">
+
+<!-- adapted from https://codepen.io/fran-the-selector/pen/XWQejYj https://codepen.io/t_afif/pen/BawevLM and https://codepen.io/flaringk/pen/MWBmrQL-->
+
+<!-- fonts -->
+
+<!-- scripts -->
+<script src="/scripts/jquery.1.7.2.min.js"></script>
+<script src="/scripts/jquery.style-my-tooltips.js"></script>
+ 
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:600,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+  <div class="header"><img src="images/header.gif"></div>
+
+    <div class="box16">
+        <div class="box-top">
+        <div class="u01"></div>
+        </div>
+        <div class="box-center">
+        <div class="box-inner">
+          <img src="images/toybox/alpaca.gif" >  
+          <img src="images/toybox/cow1.gif" >  
+          <img src="images/toybox/cow10.gif" >  
+          <img src="images/toybox/cow11.gif" >  
+          <img src="images/toybox/cow12.gif" >  
+          <img src="images/toybox/cow13.gif" >  
+          <img src="images/toybox/cow14.gif" >  
+          <img src="images/toybox/cow3.gif" >  
+          <img src="images/toybox/cow4.gif" >  
+          <img src="images/toybox/cow5.gif" >  
+          <img src="images/toybox/cow6.gif" >  
+          <img src="images/toybox/cow7.gif" >  
+          <img src="images/toybox/Cow8.gif" >  
+          <img src="images/toybox/cow9.gif" >            
+        </div>
+        </div>
+        <div class="box-bottom">
+        <div class="s01"></div>
+        </div>
+    </div> 
+
+</div>
+
+  </body>
+</html>
