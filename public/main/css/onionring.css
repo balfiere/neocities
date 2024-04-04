@@ -6,11 +6,20 @@
 /* this file affects the style of the widget. remember to replace all instances of #webringid with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
 
 :root {
-  /*-- page background --*/
+  /*-- main --*/
 	--unit: 20px;
   --page-background:white;
 	--grid-color: #ddd;
 	--scan-color: #eee;
+  --box-border: #000000;
+
+  /*-- dark mode --*/
+  --page-background-dark:rgb(19, 19, 19);
+	--grid-color-dark: #161616;
+	--scan-color-dark: #3b3b3b;
+  --date-text-dark: rgb(147, 122, 255);
+  --box-border-dark: #ddd;
+  --link-hover-dark:rgb(122, 255, 133);
 }
 
 @font-face {
@@ -32,7 +41,7 @@
 #dsring table {
   background-color: var(--page-background); /* makes the background pure white */
   margin: 0 auto; /* centers the widget */
-  border: 1px solid #000000;
+  border: 1px solid var(--box-border);
 	background-size: 
 		var(--unit) var(--unit),
 		var(--unit) var(--unit),
@@ -48,6 +57,7 @@
 		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2),
 		calc(50% - var(--unit) * (1 - 1/48) - 1px) calc(var(--unit) * (1 + 1/48)),
 		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2);
+    width: 150px;
 }
 
 #dsring table tr td {
@@ -74,4 +84,24 @@
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  #dsring table {
+    border: 1px solid var(--box-border-dark);
+    background-color: var(--page-background-dark);
+    background-image: 
+      linear-gradient(to right, var(--grid-color-dark) calc(var(--unit)/48), transparent 1px), 
+      linear-gradient(to bottom, var(--grid-color-dark) calc(var(--unit)/48), transparent 1px),
+      radial-gradient(var(--grid-color-dark) calc(var(--unit)/24), transparent 0),
+      linear-gradient(to bottom, var(--scan-color-dark) 50%, transparent 1px);
+    }
+
+  a {
+    color: var(--date-text-dark);
+    &:hover{
+      color: var(--link-hover-dark);
+    }
+  }
 }
