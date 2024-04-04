@@ -1,0 +1,45 @@
+/* onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js and onionring.css (this one!)
+// it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+// it was originally made by joey + mord of allium (蒜) house, last updated 2020-10-24 */
+
+/* === ONIONRING.CSS === */
+/* this file affects the style of the widget. remember to replace all instances of #webringid with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
+
+#dsring {
+  margin: 0 auto;
+  padding: 5px; /* creates some space around the widget */
+  font-family: 'Nintendo-DS', sans-serif;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family:Nintendo-DS;
+  src: url("https://ikaroll.neocities.org/assets/fonts/Nintendo-DS.ttf");
+}
+
+#dsring table {
+  background-color: #ffffff; /* makes the background pure white */
+  margin: 0 auto; /* centers the widget */
+  border: 1px solid #000000;
+  background-image: url("https://ikaroll.neocities.org/assets/dsring/widget_bg.png");
+}
+
+#dsring table tr td {
+  padding: 1px; /* creates some space between the links and text inside the widget */
+}
+
+#dsring .webring-prev {
+  text-align:right;
+}
+
+#dsring .webring-info {
+   text-align:center;
+}
+
+#dsring .webring-next {
+  text-align:left;
+}
+
+#dsring .webring-links {
+  font-size:large;
+}
