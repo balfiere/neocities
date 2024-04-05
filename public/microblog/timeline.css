@@ -66,13 +66,14 @@ body {
     padding: 0;
     top: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .content{
-    margin: 0;
-    padding: 0;
-    top: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 a {
@@ -165,14 +166,16 @@ code {
 
 .row{
     display: flex;
-    column-gap: calc(var(--gutter) * 1);
+    column-gap: calc(var(--gutter));
     padding: 0 var(--gutter);
+    margin: 0;
+    top: 0;
 }
 
 .column {
     position: sticky;
     top: var(--gutter);
-    max-width: 450px;
+    max-width: 500px;
     height: 100%;
     width: 40%;
     margin-bottom: var(--gutter);
@@ -180,19 +183,6 @@ code {
 
 .timeline {
     flex: 1;
-}
-
-@media only screen and (max-width: 600px) {
-    .row{
-        flex-direction: column;
-        row-gap: calc(var(--gutter) * 1);
-    }
-
-    .column {
-        width: 100%;
-        max-width: 100%;
-        position: relative;
-    }
 }
 
 .postcell {
@@ -284,12 +274,11 @@ code {
     max-width: 100%;
     image-rendering: initial;
 }
-/* Clear floats after the columns
+/* Clear floats after the columns */
 .row:after {
-    content: "";
     display: table;
     clear: both;
-} */
+}
 
 header, footer{
 	background-image:var(--sunset-gradient-transparent);
@@ -306,7 +295,7 @@ header {
 }
 
 footer {
-    margin: 0 var(--gutter);
+    margin: 0 var(--gutter)var(--gutter)var(--gutter);
 	font-family: var(--font-heading);
 }
 
@@ -326,7 +315,6 @@ footer a{
 @media (prefers-color-scheme: dark) {
     html{
         color: var(--color-main-text-dark); 
-
     }
 
     .column .profile, .postcell {
@@ -376,4 +364,63 @@ footer a{
         background: -webkit-linear-gradient(transparent 60%, var(--color-marker-dark) 0%);
         background: linear-gradient(transparent 70%, var(--color-marker-dark) 0%)
       }
+}
+
+#mobilenav {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .row{
+        flex-direction: column;
+        row-gap: calc(var(--gutter) * 1);
+        padding: 0;
+    }
+
+    .column {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        top: 0;
+        margin-bottom: 0;
+    }
+
+    html {
+        font-size: calc(var(--body-text-font-size) * .8);
+    }
+
+    header, footer {
+        margin: 0;
+    }
+
+    .postcell, .column .profile, header, footer {
+        border-left: none;
+        border-right: none;
+    }
+
+    header {
+        margin: calc(var(--gutter) * 1.3) 0 calc(var(--gutter) / 1.5) 0;
+        clear: both;
+        position: relative;
+    }
+
+    footer {
+        border-bottom: none;
+    }
+
+    #mobilenav {
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        text-align: center;
+        width: 100%;
+        background-image:var(--sunset-gradient);
+        border: solid 1px var(--border);
+        padding: .2em;
+    }
+
+    #mobilenav a{
+    }
 }
