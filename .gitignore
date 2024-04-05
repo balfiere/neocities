@@ -3,3 +3,8 @@ test/
 public/.vscode
 *.cmd
 *.sh
+*.txt
+*.md
+*.toml
+*.py
+*.tpl
