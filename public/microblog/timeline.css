@@ -10,7 +10,7 @@
 
 	/*-- text colors --*/
 	--color-main-text: #222;
-	--color-link: #a6d4ff;
+	--color-link: #7cb8f0;
     --color-tag: #a1d16d;
 	--color-bold: #d478d4;
 	--color-italic: #877cdb;
@@ -90,7 +90,7 @@ a {
     transition: all 400ms;
   }
   
-  a:hover {
+  a:hover, a:active {
     background-size: 0 2px, 100% 2px;
   }
 
@@ -303,7 +303,7 @@ footer a{
     color: white;
     background: unset;
 	text-shadow: 0 0 3px var(--color-shadow);
-    &:hover{
+    &:hover, &:active{
         color:var(--color-footer-hover);
     }
 }
@@ -312,66 +312,30 @@ footer a{
     display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-    html{
-        color: var(--color-main-text-dark); 
-    }
-
-    .column .profile, .postcell {
-        border: 1px solid var(--border-dark); 
-        background-color: var(--color-container-background-dark);
-    }
-
-	h2::after{
-		background-color: var(--border-dark);
-	}
-
-    header, footer{
-        background-image:var(--dusk-gradient-transparent);
-        border: solid 1px var(--border-dark);
-    }
-
-    header, footer a {
-        color: black;
-	    text-shadow: 0 0 3px var(--color-shadow-dark);
-    }
-
-    footer a:hover{
-        color:var(--color-footer-hover-dark);
-    }
-
-    #bgfilter{
-        width: 100dvw;
-        height: 100dvh;
-        background-color: #0d1247ad;
-        position: fixed;
-        margin: 0;
-        padding: 0;
-        top: 0;
-        z-index: -10;
-    }
-
-    img {
-        opacity: 0.8;
-        transition: all 400ms;
-        &:hover{
-            opacity: 1;
-        }
-    }
-
-    .marker {
-        background: var(--color-marker-dark);
-        background: -webkit-linear-gradient(transparent 60%, var(--color-marker-dark) 0%);
-        background: linear-gradient(transparent 70%, var(--color-marker-dark) 0%)
-      }
-}
-
 #mobilenav {
     display: none;
 }
 
 
 @media only screen and (max-width: 600px) {
+
+    #mobilenav {
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        text-align: center;
+        width: 100%;
+        background-image:var(--sunset-gradient);
+        border: solid 1px var(--border);
+        padding: .2em;
+        & a {
+        color: white;
+        background: unset;
+        text-shadow: 0 0 3px var(--color-shadow);
+        }
+    }
+    
     .row{
         flex-direction: column;
         row-gap: calc(var(--gutter) * 1);
@@ -408,19 +372,82 @@ footer a{
     footer {
         border-bottom: none;
     }
+}
 
-    #mobilenav {
-        display: block;
-        position: fixed;
-        top: 0;
-        z-index: 3;
-        text-align: center;
-        width: 100%;
-        background-image:var(--sunset-gradient);
-        border: solid 1px var(--border);
-        padding: .2em;
+@media (prefers-color-scheme: dark) {
+    html{
+        color: var(--color-main-text-dark); 
     }
 
-    #mobilenav a{
+    .column .profile, .postcell {
+        border: 1px solid var(--border-dark); 
+        background-color: var(--color-container-background-dark);
+    }
+
+	h2::after{
+		background-color: var(--border-dark);
+	}
+
+    header, footer{
+        background-image:var(--dusk-gradient-transparent);
+        border: solid 1px var(--border-dark);
+    }
+
+    header, footer a {
+        color: black;
+	    text-shadow: 0 0 3px var(--color-shadow-dark);
+    }
+
+    footer a:hover, footer a:active{
+        color:var(--color-footer-hover-dark);
+    }
+
+    #bgfilter{
+        width: 100dvw;
+        height: 100dvh;
+        background-color: #0d1247ad;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        z-index: -10;
+    }
+
+    img {
+        opacity: 0.8;
+        transition: all 400ms;
+        &:hover, &:active{
+            opacity: 1;
+        }
+    }
+
+    .marker {
+        background: var(--color-marker-dark);
+        background: -webkit-linear-gradient(transparent 60%, var(--color-marker-dark) 0%);
+        background: linear-gradient(transparent 70%, var(--color-marker-dark) 0%)
+      }
+
+    @media only screen and (max-width: 600px) {
+
+        #mobilenav {
+            background-image: var(--dusk-gradient);
+            border-bottom: solid 1px var(--border-dark);
+            & a {
+                color: black;
+                text-shadow: 0 0 3px var(--color-shadow-dark);
+            }
+        }
+
+        .column .profile, .postcell, header {
+            border-left: none;
+            border-right: none;
+        }
+
+        footer {
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+        }
+
     }
 }
