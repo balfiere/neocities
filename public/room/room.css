@@ -1,0 +1,99 @@
+.sandbox {
+    width: 1763px;
+    height: 1286px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.doll {
+    position: absolute;
+    z-index: 3;
+}
+
+.shelf {
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.desk {
+    left: 587px;
+    top: 365px;
+    z-index: 2;
+}
+
+.computer {
+    left: 640px;
+    top: 151px;
+    display: inline-block;
+    width: 450px;
+    height: 270px;
+    background: url("images/computerscreensaver.png");
+    &:hover {
+        background: url("images/computerlogin.png");
+    }
+}
+
+.psx {
+    left: 42px;
+    top: 59px;
+    &:hover {
+        transform: rotate(10deg);
+    }
+}
+
+.ps2 {
+    left: 303px;
+    top: 110px;
+    &:hover {
+        transform: rotate(10deg);
+    }
+}
+
+.wii{
+    left: 73px;
+    top: 272px;
+    &:hover {
+        transform: rotate(-10deg);
+    }
+}
+
+.ds {
+    left: 303px;
+    top: 339px;
+    &:hover {
+        transform: rotate(10deg);
+    }
+}
+
+.ps4 {
+    left: 153px;
+    top: 590px;
+    &:hover {
+        transform: rotate(5deg);
+    }
+}
+
+.switch {
+    left: 69px;
+    top: 814px;
+    &:hover {
+        transform: rotate(-10deg);
+    }
+}
+
+.n3ds {
+    left: 323px;
+    top: 761px;
+    &:hover {
+        transform: rotate(5deg);
+    }
+}
+
+.chair {
+    left: 993px;
+    top: 412px;
+    &:hover {
+        transform: perspective(500px) translate3d(-25px, -25px, -25px);
+    }
+}
