@@ -8,3 +8,5 @@ public/.vscode
 *.toml
 *.py
 *.tpl
+*.ani
+*.cur
