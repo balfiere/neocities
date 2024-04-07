@@ -6,7 +6,7 @@
 
 	/*-- text size --*/
 	--body-text-line-height: 1.7;
-	--body-text-font-size: 1.5em;
+	--body-text-font-size: 1.3em;
 
 	/*-- text colors --*/
 	--color-main-text: #222;
@@ -21,7 +21,7 @@
 
 	/*-- page --*/
 	--color-page-background: #a4afdf;
-    --gutter:2em;
+    --gutter:3em;
 
 	/*-- boxes --*/
 	--border: rgb(51, 51, 51);
@@ -215,9 +215,10 @@ code {
     margin-top: 1em;
 }
 .message p {
-    text-indent: 1em;
-    margin: 0;
-    padding: 0;
+    text-indent: 2em;
+    padding: 0.5em 1em;
+    line-height: 1.9;
+    font-size: 1.1em;
 }
 .buttons {
     margin:0;
@@ -394,7 +395,7 @@ footer a{
     }
 
     header, footer a {
-        color: black;
+        color: rgb(219, 213, 213);
 	    text-shadow: 0 0 3px var(--color-shadow-dark);
     }
 
