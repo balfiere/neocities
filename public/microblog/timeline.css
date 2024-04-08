@@ -190,7 +190,7 @@ code {
     background-color: var(--color-container-background);
     text-align: left;
     margin-bottom: var(--gutter);
-    padding: 1em;
+    padding: 2em;
 }
 .post-header {
     font-size: 1.2em;
@@ -216,7 +216,7 @@ code {
 }
 .message p {
     text-indent: 2em;
-    padding: 0 1em;
+    padding: 0;
     line-height: 1.9;
     font-size: 1.1em;
 }
@@ -318,7 +318,7 @@ footer a{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 
     #mobilenav {
         display: block;
@@ -362,6 +362,10 @@ footer a{
     .postcell, .column .profile, header, footer {
         border-left: none;
         border-right: none;
+    }
+
+    .postcell {
+        padding: 1em;
     }
 
     header {
@@ -428,7 +432,7 @@ footer a{
         background: linear-gradient(transparent 70%, var(--color-marker-dark) 0%)
       }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 900px) {
 
         #mobilenav {
             background-image: var(--dusk-gradient);
