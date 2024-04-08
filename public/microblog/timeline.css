@@ -6,7 +6,7 @@
 
 	/*-- text size --*/
 	--body-text-line-height: 1.7;
-	--body-text-font-size: 1.5em;
+	--body-text-font-size: 1.25em;
 
 	/*-- text colors --*/
 	--color-main-text: #222;
@@ -18,6 +18,9 @@
     --color-marker: #ffffcc56;
     --color-shadow: #6200ff;
     --color-footer-hover: rgb(120, 255, 255);
+    --color-blockquote-background: rgba(128, 128, 128, 0.082);
+    --color-blockquote-border: rgb(178, 149, 213);
+
 
 	/*-- page --*/
 	--color-page-background: #a4afdf;
@@ -30,8 +33,8 @@
 	/*-- gradients --*/
     --sunset-gradient:linear-gradient(25deg, rgb(228, 140, 198) 0%,rgb(201, 125, 201) 42.86%,rgb(178, 149, 213) 100%);
     --sunset-gradient-transparent:linear-gradient(25deg, rgb(228, 140, 198, 0.5) 0%,rgb(201, 125, 201, 0.5) 42.86%,rgb(178, 149, 213, 0.5) 100%);
-    --dusk-gradient:linear-gradient(25deg, rgb(147, 133, 209) 0%,rgb(136, 145, 201) 42.86%, rgb(166, 212, 255) 100%);
-    --dusk-gradient-transparent:linear-gradient(25deg, rgb(147, 133, 209, 0.5) 0%,rgb(136, 145, 201, 0.5) 42.86%, rgb(166, 212, 255, 0.5) 100%);
+    --dusk-gradient:linear-gradient(25deg, rgb(147, 133, 209) 0%,rgb(136, 145, 201) 42.86%, rgb(126, 185, 240) 100%);
+    --dusk-gradient-transparent:linear-gradient(25deg, rgb(147, 133, 209, 0.5) 0%,rgb(136, 145, 201, 0.5) 42.86%, rgb(126, 185, 240, 0.5) 100%);
 
 	/*-- dark mode --*/
 	--color-container-background-dark: #3b3949;
@@ -145,6 +148,51 @@ h3 {
     background: linear-gradient(transparent 70%, var(--color-marker) 0%)
   }
 
+  blockquote{
+    font-size: 1.1em;
+    width:90%;
+    max-width: fit-content;
+    margin:1em auto;
+    padding:1em 1em 1em 2em;
+    border-left:8px solid var(--color-blockquote-border);
+    line-height:2;
+    position: relative;
+    background:var(--color-blockquote-background);
+  }
+  
+  blockquote::before{
+    font-family:Arial;
+    content: "\201C";
+    color:var(--color-blockquote-border);
+    font-size:4em;
+    position: absolute;
+    left: 0.2em;
+    top:-10px;
+  }
+  
+  blockquote::after{
+    content: '';
+  }
+
+  blockquote span {
+	font-family: var(--font-heading);
+    font-size: 1.2em;
+  }
+
+  blockquote q{
+    background-image: var(--sunset-gradient);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  blockquote cite{
+    background-image: var(--dusk-gradient);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
 kbd,
 code {
 	border-radius: 0.2em;
@@ -245,7 +293,7 @@ code {
     text-decoration:none;
 }
 .column .profile .bio {
-    font-size: 0.8em;
+    font-size: 0.9em;
     vertical-align: middle;
     margin: 1em
 }
