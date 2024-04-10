@@ -509,6 +509,24 @@ figure {
   margin-right: 10px;
 }
 
+.lying {
+  position: absolute; 
+  top: 0; 
+  left: 10px; 
+  height: 80%;
+  z-index: 0;
+}
+
+.rei {
+  position: absolute; 
+  bottom: 0; 
+  right: 0;
+  z-index: 3;
+  width: 30%;
+  max-width: 532px;
+  min-width: 300px;
+}
+
 @media (prefers-color-scheme: dark) {
   body{
     color: var(--text-dark);
@@ -527,5 +545,114 @@ figure {
   #s-m-t-tooltip {
       background: url('images/boxbgdark.jpg'); 
       border: 4px ridge var(--window-border-dark);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .lying{
+    height: 100%;
+  }
+
+  .rei {
+    display: none;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  .sidebar {
+    float: none;
+    position: fixed;
+    top:0;right:0;
+    max-height: 100%;
+    overflow-y: scroll;
+    transition:all .3s;
+    transform:translate(251px);
+    -ms-transform:translate(251px);
+    -webkit-transform:translate(251px);
+    z-index: 100;
+    background-image: url(images/bg.gif);
+    padding: 0 10px;
+  }
+
+  .sidebar.open{
+  transform:translate(0);
+  -ms-transform:translate(0);
+  -webkit-transform:translate(0);
+  }
+
+  .main {
+    width: 100%;
+    float: none;
+  }
+
+  #open{
+    display:inline-block;
+    margin:0 5px;
+    position:absolute;
+    text-align:center;
+    height:60px;width:60px;
+    top:0;right:0;
+    z-index:1001;
+  }
+
+  #open-icon,#open-icon:before,#open-icon:after{
+    background:var(--text-shadow);
+  }
+
+  #open-icon{
+    display:block;
+    margin:-1px 0 0 -10px;
+    position:absolute;
+    top:25px;
+    left: 40px;
+    height:2px;
+    width:20px;
+  }
+
+  #open-icon:before,#open-icon:after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:50%;
+    left:0;
+    height:2px;
+    width:20px;
+    transition:.3s
+  }
+
+  #open-icon:before{margin-top:-8px}
+
+  #open-icon:after{margin-top:6px}
+
+  #open .close{background:transparent}
+
+  #open .close:before,#open .close:after{margin-top:0}
+
+  #open .close:before{
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+  }
+    
+  #open .close:after{
+    -ms-transform:rotate(-135deg);
+    -webkit-transform:rotate(-135deg);
+    transform:rotate(-135deg);
+  }  
+
+  @media (prefers-color-scheme: dark) {
+    .sidebar {
+      background-color: var(--page-background-color-dark);
+      background-image: url(images/bgdark.gif);
+    }
+
+    #open-icon,#open-icon:before,#open-icon:after{
+      background:var(--text-dark);
+    }
   }
 }

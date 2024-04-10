@@ -181,6 +181,7 @@ h3 {
 
   blockquote q{
     background-image: var(--sunset-gradient);
+    font-weight: bold;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;

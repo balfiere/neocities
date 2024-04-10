@@ -9,13 +9,22 @@
 <!-- styling -->
 <link rel="stylesheet" href="about.css" type="text/css">
 
+<!-- scripts -->
+<script src="/scripts/jquery.1.7.2.min.js"></script>
+
 </head>
 
 <body>
 
-<img src="images/Rei_and_Nemissa transparent 2.png" style="position: absolute; bottom: 0; right: 0;z-index: 3;width: 30%;max-width: 532px;min-width: 300px;">
+    <img src="images/Rei_and_Nemissa transparent 2.png" class="rei">
+    
+    <img src="images/nemissalyingdown.png" class="lying">
 
-<img src="images/nemissalyingdown.png" style="position: absolute; top: 0; left: 10px; height: 80%;z-index: 0;">
+<!-- header -->
+<header>
+    <!-- mobile button -->
+    <div id="open"><span id="open-icon"></span></div>
+</header><!-- end header -->
 
 <div id="page">
 
@@ -170,6 +179,18 @@
 </div>
 <!-- end container -->
 
+<!-- more scripts -->
+<script>
+    $(function () { 
+     var text = $('.open-text');
+     $("#open").click(function () {
+         $('.sidebar').toggleClass('open');
+         $('#open-icon').toggleClass('close');
+         return false;
+     });
+      
+  });
+</script>
 </div>    
 </body>
 </html>
