@@ -64,11 +64,37 @@ ul {
   margin: 0 0 0 0px;
 }
 
+#statuscafe {
+  padding: .5em;
+  clear: both;
+}
+
+#statuscafe-username {
+  margin-bottom: .5em;
+  &::before {
+    content: 'latest status: ';
+  }
+}
+
+#statuscafe-content {
+}
+
+blockquote {
+  border-left: 10px solid var(--link-hover-background);
+  margin: 0em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
 @media (prefers-color-scheme: dark) {
   a {
     position: relative;
     text-decoration: none;
     color: var(--link-dark);
     background-image: linear-gradient(var(--link-hover-background-dark), var(--link-hover-background-dark));
+  }
+
+  blockquote {
+    border-left: 10px solid var(--link-hover-background-dark);
   }
 }

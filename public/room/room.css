@@ -1,3 +1,51 @@
+/*----- variables -----*/
+
+:root {
+    --text: #3b3b3b;
+    --background: #f8f8f8;
+    --pink-dark:rgb(250, 159, 250);
+    --purple-dark:rgb(175, 136, 255);
+    --green-dark:rgb(135, 216, 175);
+    --blue-dark:rgb(94, 175, 254);
+  
+    /*----- dark mode -----*/
+    --text-dark: #f0f0f0;
+    --background-dark: #0c0c0c;
+    --pink-light:rgb(254, 175, 255);
+    --purple-light:rgb(174, 175, 255);
+    --green-light:rgb(136, 255, 175);
+    --blue-light:rgb(96, 215, 255);
+  }
+
+/*----- fonts -----*/
+
+@font-face {
+    font-family: 'seed';
+    src: url('/fonts/SeeDComputer.woff2') format('woff2'),
+        url('/fonts/SeeDComputer.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+body{
+    margin: auto;
+    padding: auto;
+    font-family: seed;
+    font-size: 2em;
+    color: var(--text);
+    background-color: var(--background);
+}
+header{
+    padding: 1rem;
+}
+a {
+    text-decoration: none;
+    color: var(--purple-dark);
+    &:hover {
+      color: var(--pink-dark);
+    }
+  }
 .sandbox {
     width: 1763px;
     height: 1286px;
@@ -96,4 +144,18 @@
     &:hover {
         transform: perspective(500px) translate3d(-25px, -25px, -25px);
     }
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    color: var(--text-dark);
+    background-color: var(--background-dark);
+  }
+
+  a {
+    color: var(--purple-light);
+    &:hover {
+      color: var(--pink-light);
+    }
+  }
 }
