@@ -211,6 +211,30 @@ code {
 	font-family: var(--font-code);
 }
 
+figure {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  line-height: 1.3em;
+  border: none;
+  margin:0;
+  padding:0;
+  overflow: visible;
+}
+
+.right {
+  float: right;
+  margin-left: 1em;
+  max-width: 40%;
+}
+
+.left {
+  float: left;
+  margin-right: 1em;
+  max-width: 40%;
+}
+
 /* -- layout -- */
 
 .row{
