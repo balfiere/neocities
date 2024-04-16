@@ -34,7 +34,7 @@ var init = function(){
 		console.log(w);
 
         // on click
-		w.addEventListener("mousedown", function(e){
+		w.addEventListener("mouseover", function(e){
             // reset z-index of all windows to 10
 			activeWindow.style.zIndex = 10;
             // get the window being clicked
