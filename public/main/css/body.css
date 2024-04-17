@@ -64,34 +64,10 @@ ul {
   margin: 0 0 0 0px;
 }
 
-#statuscafe-username {
-  margin-bottom: .5em;
-  &::before {
-    content: 'latest status: ';
-  }
-}
-
-#statuscafe-content {
-}
-
 fieldset {
   clear: both;
   border: var(--window-border);
   margin-bottom: 1em;
-}
-
-#feed-reader {
-  clear: both;
-  padding: 0.5em;
-}
-
-#feed-reader p {
-  margin-bottom: 0.5em;
-}
-
-.statustitle {
-  font-weight: bold;
-  color: var(--link);
 }
 
 blockquote {

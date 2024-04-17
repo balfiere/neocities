@@ -44,8 +44,7 @@ attribute:"title"
 
     <fieldset>
       <legend><h2>my status.cafe</h2></legend>
-      <iframe src="https://status.cafe/users/kwaamfan" style="border: 0; width: 100%; max-height: 300px;" frameborder="0" scrolling="yes" id="statuscafe"></iframe> 
-      <div id='feed-reader' style="display: none;"></div>
+      <iframe src="https://status.cafe/users/kwaamfan" style="border: 0; width: 100%; height: 250px;" frameborder="0" scrolling="yes" id="statuscafe"></iframe>
     </fieldset>
     
 
@@ -54,41 +53,6 @@ attribute:"title"
 
 <!-- more scripts -->
 <script src="scripts/jquery.scroll.js"></script>
-<script>
-    const feedURL = '/kwaamfan.atom';
-
-fetch(feedURL)
-.then(response => response.text())
-.then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-.then(data => {
-const entries = data.querySelectorAll("entry")
-let html = ``;
-
-for (i = 0; i < 3; i++) {
-let title = entries[i].querySelector("title").innerHTML.slice(0, 11).trim();
-let content = entries[i].querySelector("content").textContent.trim();
-let dateString = entries[i].querySelector("published").innerHTML.slice(0,10);
-html += `
-<p><span class="statustitle">${title}</span> - ${dateString}</p>
-<p><blockquote>${content}</blockquote></p>
-`;
-}
-html += `<p><a target="_blank" href='https://status.cafe/users/kwaamfan'>See more at StatusCafe</a></p>`;
-document.getElementById("feed-reader").innerHTML = html;
-});
-</script>
-<script>
-    fetch("https://status.cafe/users/kwaamfan/status.json")
-      .then( r => r.json() )
-      .then( r => {
-        if (!r.content.length) {
-          document.getElementById("statuscafe-content").innerHTML = "No status yet."
-          return
-    }
-        document.getElementById("statuscafe-username").innerHTML = '<a href="https://status.cafe/users/kwaamfan" target="_blank">' + r.author + '</a> ' + r.face + ' ' + r.timeAgo
-        document.getElementById("statuscafe-content").innerHTML = r.content
-      })
-    </script>
 </body>
 </html> 
 
