@@ -64,11 +64,6 @@ ul {
   margin: 0 0 0 0px;
 }
 
-#statuscafe {
-  padding: .5em;
-  clear: both;
-}
-
 #statuscafe-username {
   margin-bottom: .5em;
   &::before {
