@@ -239,6 +239,7 @@ pre code {
     background-color: unset;
     border-radius: unset;
     padding: 2px 0 5px 5px;
+    color:var(--text);
 }
 
 #blue .window_top {
@@ -257,6 +258,7 @@ pre code {
     margin-bottom: 1px;
     font-family: nineteen93;
     font-size: 9px;
+    color:var(--text);
 }
 
 /*----- unique window styling: #mac -----*/
@@ -336,7 +338,7 @@ pre code {
 #original {
     top:5dvh;
     left:5dvh;
-    width: 900px;
+    width: 600px;
 }
 
 #original .window_description {
@@ -370,7 +372,7 @@ pre code {
 <!-- info window -->
 <div class="window_container draggable" id="original">
     <div class="window_interior">
-        <div class="window_top window-header">
+        <div class="window_top">
             <div class="window_title">put a creative title here</div>
             <div class="window_control">
                 
@@ -383,7 +385,7 @@ pre code {
             </div><!--end window_control-->
         </div><!--end window_top-->
         <div class="window_description">
-            <p>adding the class "draggable" to a div lets you move it around by the class "window-header".</p>
+            <p>adding the class "draggable" to a div lets you move it around by the class "window_top".</p>
             <p>add a unique div id to your window to control the width, height, and position of each window. search for <code>/*----- window section size and initial locations -----*/</code> in the css to see how i do this.</p>
             <p>you can let the height of the window automatically expand to its contents, or you can specify the height.</p>
             <p>in the <code>head</code> section of your code, remember to add</p>
@@ -401,7 +403,7 @@ pre code {
 <!-- blue window -->
 <div class="window_container draggable" id="blue">
     <div class="window_interior">
-        <div class="window_top window-header">
+        <div class="window_top">
             <div class="window_title">some super long ass title to show that it'll clip if it gets too long, so if you forget to keep it short it won't mess up the positioning of the controls on the upper right</div>
             <div class="window_control">
                 
@@ -412,7 +414,7 @@ pre code {
             </div><!--end window_control-->
         </div><!--end window_top-->
         <div class="window_description">
-            you can also give individual windows unique styles. this window shows you how you can replace the minimize and maximize buttons with images. search for <code>#blue</code> in the css to see how this window was styled.
+            this window shows you how you can replace the minimize and maximize buttons with images. search for <code>#blue</code> in the css to see how this window was styled.
         </div>
     </div><!--end window_interior-->
 </div><!--end window_container-->
@@ -420,7 +422,7 @@ pre code {
 <!-- mac terminal window -->
 <div class="window_container draggable" id="mac">
     <div class="window_interior">
-        <div class="window_top window-header">
+        <div class="window_top">
             <div class="window_control">
                 
                 <ul>
@@ -433,7 +435,7 @@ pre code {
             <div class="window_title">terminal</div>
         </div><!--end window_top-->
         <div class="window_description">
-            for this mac terminal style window, search for <code>#mac</code> in the css
+            > you can give individual windows unique styles. this one uses <code>&lt;li&gt;</code> elements to create the buttons and moves them to the left side. for this mac terminal style window, search for <code>#mac</code> in the css.
         </div>
     </div><!--end window_interior-->
 </div>
@@ -441,7 +443,7 @@ pre code {
 <!-- draggable and collapsible javascript -->
 <script>
     var $draggable = $('.draggable').draggabilly({
-      handle: ".window-header" // specifies what div inside a div with the class "draggable" can be clicked on to move the window
+      handle: ".window_top" // specifies what div inside a div with the class "draggable" can be clicked on to move the window
     })
     
     $(document).ready(function(){
