@@ -137,6 +137,9 @@ pre code {
     padding:0px;
     width:29px;
     height:29px;
+}
+
+.minimize, .maximize {
     cursor:help;
 }
 
@@ -213,22 +216,147 @@ pre code {
 
 }
 
-/*----- window section size and initial locations -----*/
+/*----- unique window styling: #blue -----*/
 
-#intro {
-    top:5dvh;
-    left:5dvh;
-    width: 530px;
+#blue.window_container {
+    background-color: #d0e9fd;
+    border: 2px outset #e4f3ff;
+    box-shadow: unset;
+    border-radius: unset;
 }
 
-#anotherone {
+#blue .smallbox {
+    width: 15px;
+    height: 15px;
+}
+
+#blue .window_interior {
+    margin: 4px;
+}
+
+#blue .window_title {
+    width:calc(100% - 40px);
+    background-color: unset;
+    border-radius: unset;
+    padding: 2px 0 5px 5px;
+}
+
+#blue .window_top {
+    background: #edf3f8;
+    border: 1px ridge #e4f3ff;
+    padding: 2px;
+}
+
+#blue .window_description {
+    background: unset;
+    border-radius:unset;
+    overflow-y: scroll;
+    padding: 5px;
+    height: 100%;
+    margin-top:calc(4px + 1px);
+    margin-bottom: 1px;
+    font-family: nineteen93;
+    font-size: 9px;
+}
+
+/*----- unique window styling: #mac -----*/
+
+#mac.window_container {
+    background-color: #2e2e2e;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#mac .window_interior {
+    margin: 0px;
+}
+
+#mac .window_top {
+  color: #e2e2e2;
+    background-color: #444;
+    height: 30px;
+    display: unset;
+    align-items: unset;
+}
+
+#mac .window_control {
+    display:inline;
+    float: left;
+  
+  ul, li {
+    display: inline-block;
+  }
+  ul {
+    margin: 6px 0 6px 0;
+    padding-left: 10px;
+  }
+  ul li {
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+    border-radius: 50%;
+    
+    &:first-child {
+      background-color: #ff6059;
+    }
+    &:nth-child(2) {
+      background-color: #ffbd2e;
+    }
+    &:last-child {
+      background-color: #29ca42;
+    }
+  }
+
+}
+
+#mac .window_title {
+    font-size: 9px;
+    font-family: var(--window-title-font);
+    background-color: unset;
+    padding: 0px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#mac .window_description {
+    font-family: monospace;
+    color: #00ff00;
+    overflow-y: scroll;
+    background-color: unset;
+}
+
+
+/*----- window section size and initial locations -----*/
+
+#original {
     top:5dvh;
-    right:5dvh;
+    left:5dvh;
     width: 900px;
 }
 
-#anotherone .window_description {
+#original .window_description {
     height: 500px;
+}
+
+#blue {
+    top:5dvh;
+    right:5dvh;
+    width: 230px;
+}
+
+#mac {
+    top: 10dvh;
+    right: 20dvw;
+    width: 301px;
+}
+
+#mac .window_description {
+    height: 200px;
 }
 
 </style>
@@ -239,15 +367,15 @@ pre code {
 
 <!-- windows -->
 
-<!-- introduction window -->
-<div class="window_container draggable" id="intro">
+<!-- info window -->
+<div class="window_container draggable" id="original">
     <div class="window_interior">
         <div class="window_top window-header">
-            <div class="window_title">some super long ass title to show that it'll clip if it gets too long, so if you forget to keep it short it won't mess up the positioning of the controls on the upper right</div>
+            <div class="window_title">put a creative title here</div>
             <div class="window_control">
                 
                 <div class="smallbox minimize">
-                <div class="minimize_control"></div></div>
+                    <div class="minimize_control"></div></div>
                 
                 <div class="smallbox maximize">
                 <div class="maximize_control"></div></div>
@@ -258,27 +386,6 @@ pre code {
             <p>adding the class "draggable" to a div lets you move it around by the class "window-header".</p>
             <p>add a unique div id to your window to control the width, height, and position of each window. search for <code>/*----- window section size and initial locations -----*/</code> in the css to see how i do this.</p>
             <p>you can let the height of the window automatically expand to its contents, or you can specify the height.</p>
-            <p></p>
-        </div>
-    </div><!--end window_interior-->
-</div><!--end window_container-->
-
-<!-- another window -->
-<div class="window_container draggable" id="anotherone">
-    <div class="window_interior">
-        <div class="window_top window-header">
-            <div class="window_title">put a creative title here</div>
-            <div class="window_control">
-                
-                <div class="smallbox minimize">
-                <div class="minimize_control"></div></div>
-                
-                <div class="smallbox maximize">
-                <div class="maximize_control"></div></div>
-                
-            </div><!--end window_control-->
-        </div><!--end window_top-->
-        <div class="window_description">
             <p>in the <code>head</code> section of your code, remember to add</p>
             <pre><code>
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
@@ -290,6 +397,46 @@ pre code {
         </div>
     </div><!--end window_interior-->
 </div><!--end window_container-->
+
+<!-- blue window -->
+<div class="window_container draggable" id="blue">
+    <div class="window_interior">
+        <div class="window_top window-header">
+            <div class="window_title">some super long ass title to show that it'll clip if it gets too long, so if you forget to keep it short it won't mess up the positioning of the controls on the upper right</div>
+            <div class="window_control">
+                
+                <div class="smallbox minimize"><img src="images/bluemin.png"></div>
+                
+                <div class="smallbox maximize"><img src="images/bluemax.png"></div>
+                
+            </div><!--end window_control-->
+        </div><!--end window_top-->
+        <div class="window_description">
+            you can also give individual windows unique styles. this window shows you how you can replace the minimize and maximize buttons with images. search for <code>#blue</code> in the css to see how this window was styled.
+        </div>
+    </div><!--end window_interior-->
+</div><!--end window_container-->
+
+<!-- mac terminal window -->
+<div class="window_container draggable" id="mac">
+    <div class="window_interior">
+        <div class="window_top window-header">
+            <div class="window_control">
+                
+                <ul>
+                    <li></li>
+                    <li class="minimize"></li>
+                    <li class="maximize"></li>
+                  </ul>
+                
+            </div><!--end window_control-->
+            <div class="window_title">terminal</div>
+        </div><!--end window_top-->
+        <div class="window_description">
+            for this mac terminal style window, search for <code>#mac</code> in the css
+        </div>
+    </div><!--end window_interior-->
+</div>
 
 <!-- draggable and collapsible javascript -->
 <script>
