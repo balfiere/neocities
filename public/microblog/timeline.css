@@ -37,9 +37,9 @@
     --dusk-gradient-transparent:linear-gradient(25deg, rgb(147, 133, 209, 0.5) 0%,rgb(136, 145, 201, 0.5) 42.86%, rgb(126, 185, 240, 0.5) 100%);
 
 	/*-- dark mode --*/
-	--color-container-background-dark: #3b3949;
-	--color-main-text-dark: rgb(221, 221, 221);
-	--border-dark: rgb(126, 185, 240, 0.5);
+	--color-container-background-dark: #242327;
+	--color-main-text-dark: rgb(190, 190, 190);
+	--border-dark: rgb(126, 185, 240, 0.8);
     --color-shadow-dark: #6268ac;
     --color-footer-hover-dark: #e4a2ce;
     --color-marker-dark: #a0a07133;
@@ -248,7 +248,7 @@ figure {
 .column {
     position: sticky;
     top: var(--gutter);
-    max-width: 500px;
+    max-width: 450px;
     height: 100%;
     width: 30%;
     margin-bottom: var(--gutter);
