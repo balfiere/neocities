@@ -38,8 +38,8 @@
 
 	/*-- dark mode --*/
 	--color-container-background-dark: #3b3949;
-	--color-main-text-dark: rgb(226, 226, 226);
-	--border-dark: rgb(226, 226, 226);
+	--color-main-text-dark: rgb(221, 221, 221);
+	--border-dark: rgb(126, 185, 240, 0.5);
     --color-shadow-dark: #6268ac;
     --color-footer-hover-dark: #e4a2ce;
     --color-marker-dark: #a0a07133;
