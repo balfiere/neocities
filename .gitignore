@@ -10,3 +10,4 @@ public/.vscode
 *.tpl
 *.ani
 *.cur
+*/.git
