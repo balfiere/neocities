@@ -1,6 +1,7 @@
 *.code-workspace
 test/
 public/.vscode
+public/codes
 *.cmd
 *.sh
 *.txt
