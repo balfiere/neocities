@@ -1,7 +1,9 @@
 *.code-workspace
 test/
 public/.vscode
-public/codes
+public/codes/stardewvalleytheme/.git/
+public/codes/wiimenu/.git/
+public/codes/wiimenu/.gitattributes
 *.cmd
 *.sh
 *.txt

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>windows OS css framework compatible draggable collapsible boxes</title>
+
+<!-- styling -->
+<link rel="stylesheet" href="https://unpkg.com/98.css"> <!--try swapping this link with https://unpkg.com/xp.css or https://unpkg.com/7.css for a different look!-->
+
+<!-- scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js"></script>
+
+<!-- more css -->
+<style>
+.draggable {
+  position: absolute;
+  z-index: 99;
+}
+
+.draggable.is-pointer-down {
+  z-index: 100;
+}
+
+.window-header {
+	cursor: grab;
+	.is-pointer-down & {
+		cursor: grabbing;
+  }
+}
+
+/*----- window section size and initial locations -----*/
+
+#information {
+    top:5dvh;
+    left:5dvh;
+    width: 250px;
+}
+
+#updates {
+    top:25dvh;
+    left:15dvh;
+    width: 390px;
+}
+
+#updates .window-body{
+    height: 180px; /* use this if you want to specify a fixed height for your window */
+}
+
+#todo {
+    top:10dvh;
+    right:15dvh;
+    width: 270px;
+}
+
+#todo .window-body{
+    height: 158px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- windows -->
+  <div class="window active draggable" id="information">
+    <div class="title-bar window-header">
+      <div class="title-bar-text">98.css</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize" class="minimize"></button>
+        <button aria-label="Maximize" class="maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body has-space">
+      <p>check out <a href="https://jdan.github.io/98.css/">https://jdan.github.io/98.css/</a> for more info on how to use this css framework. also compatible with <a target="_blank" href="https://botoxparty.github.io/XP.css/">https://botoxparty.github.io/XP.css/</a> and <a target="_blank" href="https://khang-nd.github.io/7.css/">https://khang-nd.github.io/7.css/</a>.</p>
+    </div>
+  </div>
+  
+  <div class="window active draggable" id="updates">
+    <div class="title-bar window-header">
+      <div class="title-bar-text">updates</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize" class="minimize"></button>
+        <button aria-label="Maximize" class="maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body has-space">
+      <ul>
+        <li>2009/10/22: windows 7 released</li>
+        <li>2001/10/25: windows xp released</li>
+        <li>1998/06/25: windows 98 released</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="window active draggable" id="todo">
+    <div class="title-bar window-header">
+      <div class="title-bar-text">to do list</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize" class="minimize"></button>
+        <button aria-label="Maximize" class="maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body has-space">
+  <div class="field-row">
+    <input type="checkbox">
+    <label>add a code snippets page</label>
+  </div>
+  <div class="field-row">
+    <input checked="" type="checkbox">
+    <label>add a site updates window</label>
+  </div>
+  <div class="field-row">
+    <input checked="" type="checkbox">
+    <label>add some windows</label>
+  </div>
+  <div class="field-row">
+    <input checked="" type="checkbox">
+    <label>write an about page</label>
+  </div>
+    </div>
+  </div>
+
+<!-- draggable and collapsible javascript -->
+<script>
+var $draggable = $('.draggable').draggabilly({
+  handle: ".window-header"
+})
+
+$(document).ready(function(){
+  //minimize windows
+  $(".minimize").click(function(){
+      $(this).closest(".window").find(".window-body").hide();
+  });
+
+  //maximize windows
+  $(".maximize").click(function(){
+      $(this).closest(".window").find(".window-body").show();
+  });
+    
+});
+</script>
+</body>
+</html>

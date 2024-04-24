@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>my draggable collapsible boxes</title>
+
+<!-- styling -->
+
+<!-- scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js"></script>
+
+<!-- more css -->
+<style>
+
+/*----- variables -----*/
+
+:root {
+
+	/*----- body -----*/
+    --page-background:rgb(238, 238, 238);
+	--text: #444444;
+    
+    /*----- windows -----*/
+    --window-border: solid 1px rgba(150, 138, 255, 0.4); /* replace with "none" (without quotes) if you don't want a border */
+    --window-container-background: #cac6cb;
+    --window-title-background: rgb(143, 142, 143);
+    --window-title-background-clicked: rgba(143, 142, 143, 0.5);
+    --window-title-font: nineteen93; 
+    --window-text-background: #f7f7f7;
+    --window-text-font: "Montserrat", "IBM Plex Sans Thai", "IBM Plex Sans JP", sans-serif; 
+    --window-shadow: 10px 10px 0px rgba(150, 138, 255, 0.4); /* replace with "none" (without quotes) if you don't want a box shadow */
+    --window-padding: 10px;
+    --window-border-radius: 5px;
+
+    /*----- dark mode -----*/
+    --page-background-dark:rgb(19, 19, 19);
+    --text-dark: #ddd;
+    --window-container-background-dark: #161616;
+    --window-text-background-dark: #1f1f1f;
+    --window-shadow-dark: 10px 10px 0px rgba(69, 48, 255, 0.6);
+    --window-border-dark: solid 1px rgb(69, 48, 255);
+    --window-title-color-dark:#ddd;
+    --window-title-background-dark:rgba(69, 48, 255, 0.7);
+    --window-title-background-clicked-dark:rgba(69, 48, 255, 0.5);
+  }
+
+/*----- body. added for demo purposes, you don't need to copy this part -----*/
+
+body{
+    background-color: var(--page-background);
+    color:var(--text);
+    font-style: normal;
+    text-align:left;
+}
+
+code {
+  background: rgba(186, 162, 206, 0.137); 
+}
+
+pre code {
+  display: block;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+@font-face {
+  font-family: 'nineteen93';
+  src: url('/fonts/Nineteen-Ninety-Three.woff2') format('woff2'),
+      url('/fonts/Nineteen-Ninety-Three.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*----- windows -----*/
+
+.window_container {
+    background-color:var(--window-container-background);
+    border: var(--window-border);
+    box-shadow: var(--window-shadow);
+    border-radius: var(--window-border-radius);
+    position: absolute;
+}
+
+.draggable {
+  position: absolute;
+  z-index: 99;
+} 
+
+.draggable.is-pointer-down {
+  z-index: 100;
+}
+
+.window_interior {
+    margin: var(--window-padding);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.window_top {
+    overflow:hidden;
+	cursor: grab;
+	.is-pointer-down & {
+		cursor: grabbing;
+	}
+}
+
+.window_title {
+    font-size: 9px;
+    font-family: var(--window-title-font);
+    height: 9px;
+    float:left;
+    width:calc(100% - 84px); /* if you change the size of the control buttons be sure to adjust this width too*/
+    letter-spacing:0px;
+    overflow:hidden;
+    background-color: var(--window-title-background);
+    border-radius: calc(var(--window-border-radius) - 2px);
+    padding: 11px 7px 10px 10px;
+	&:hover{
+        background-color: var(--window-title-background-clicked);
+	}
+}
+
+.window_control {
+    display:flex;
+    float: right;
+    margin-right: 0px;
+}
+
+.smallbox {
+    margin-right:1px;
+    margin-top: 1px;
+    padding:0px;
+    width:29px;
+    height:29px;
+}
+
+.minimize, .maximize {
+    cursor:help;
+}
+
+.minimize_control {
+    margin-top:24px;
+    width:24px;
+    height:2px;
+    background:var(--window-title-background);
+    border-radius: 1px;
+}
+
+.smallbox:hover .minimize_control, .smallbox:hover .maximize_control{
+    opacity: 0.6;
+}
+
+.maximize_control {
+    margin-top:2px;margin-left:2px;
+    border-radius: 2px;
+    width:21px;height:21px;
+    border:2px solid var(--window-title-background);
+}
+
+.window_description {
+    background: var(--window-text-background);
+    border-radius: calc(var(--window-border-radius) - 2px);
+    overflow-y: scroll;
+    padding: 10px;
+    height: 100%;
+    margin-top:calc(var(--window-padding) + 1px);
+    margin-bottom: 1px;
+    font-family: var(--window-text-font);
+}
+
+.window_description img {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+/*----- dark mode support -----*/
+
+@media (prefers-color-scheme: dark) {
+
+    body{
+        background-color: var(--page-background-dark);
+        color:var(--text-dark);
+    }
+
+    .window_container {
+        background-color:var(--window-container-background-dark);
+        border: var(--window-border-dark);
+        box-shadow: var(--window-shadow-dark);
+    }
+
+    .window_description {
+        background: var(--window-text-background-dark);
+    }
+
+    .window_title {
+        color: var(--window-title-color-dark);
+        background-color: var(--window-title-background-dark);
+        &:hover{
+            background-color: var(--window-title-background-clicked-dark);
+        }
+    }
+
+    .minimize_control {
+        background:var(--window-title-background-dark);
+    }
+    
+    .maximize_control {
+        border:2px solid var(--window-title-background-dark);
+    }
+
+}
+
+/*----- unique window styling: #blue -----*/
+
+#blue.window_container {
+    background-color: #d0e9fd;
+    border: 2px outset #e4f3ff;
+    box-shadow: unset;
+    border-radius: unset;
+}
+
+#blue .smallbox {
+    width: 15px;
+    height: 15px;
+}
+
+#blue .window_interior {
+    margin: 4px;
+}
+
+#blue .window_title {
+    width:calc(100% - 40px);
+    background-color: unset;
+    border-radius: unset;
+    padding: 2px 0 5px 5px;
+    color:var(--text);
+}
+
+#blue .window_top {
+    background: #edf3f8;
+    border: 1px ridge #e4f3ff;
+    padding: 2px;
+}
+
+#blue .window_description {
+    background: unset;
+    border-radius:unset;
+    overflow-y: scroll;
+    padding: 5px;
+    height: 100%;
+    margin-top:calc(4px + 1px);
+    margin-bottom: 1px;
+    font-family: nineteen93;
+    font-size: 9px;
+    color:var(--text);
+}
+
+/*----- unique window styling: #mac -----*/
+
+#mac.window_container {
+    background-color: #2e2e2e;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#mac .window_interior {
+    margin: 0px;
+}
+
+#mac .window_top {
+  color: #e2e2e2;
+    background-color: #444;
+    height: 30px;
+    display: unset;
+    align-items: unset;
+}
+
+#mac .window_control {
+    display:inline;
+    float: left;
+  
+  ul, li {
+    display: inline-block;
+  }
+  ul {
+    margin: 6px 0 6px 0;
+    padding-left: 10px;
+  }
+  ul li {
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+    border-radius: 50%;
+    
+    &:first-child {
+      background-color: #ff6059;
+    }
+    &:nth-child(2) {
+      background-color: #ffbd2e;
+    }
+    &:last-child {
+      background-color: #29ca42;
+    }
+  }
+
+}
+
+#mac .window_title {
+    font-size: 9px;
+    font-family: var(--window-title-font);
+    background-color: unset;
+    padding: 0px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#mac .window_description {
+    font-family: monospace;
+    color: #00ff00;
+    overflow-y: scroll;
+    background-color: unset;
+}
+
+
+/*----- window section size and initial locations -----*/
+
+#original {
+    top:5dvh;
+    left:5dvh;
+    width: 600px;
+}
+
+#original .window_description {
+    height: 500px;
+}
+
+#blue {
+    top:5dvh;
+    right:5dvh;
+    width: 230px;
+}
+
+#mac {
+    top: 10dvh;
+    right: 20dvw;
+    width: 301px;
+}
+
+#mac .window_description {
+    height: 200px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- windows -->
+
+<!-- info window -->
+<div class="window_container draggable" id="original">
+    <div class="window_interior">
+        <div class="window_top">
+            <div class="window_title">put a creative title here</div>
+            <div class="window_control">
+                
+                <div class="smallbox minimize">
+                    <div class="minimize_control"></div></div>
+                
+                <div class="smallbox maximize">
+                <div class="maximize_control"></div></div>
+                
+            </div><!--end window_control-->
+        </div><!--end window_top-->
+        <div class="window_description">
+            <p>adding the class "draggable" to a div lets you move it around by the class "window_top".</p>
+            <p>add a unique div id to your window to control the width, height, and position of each window. search for <code>/*----- window section size and initial locations -----*/</code> in the css to see how i do this.</p>
+            <p>you can let the height of the window automatically expand to its contents, or you can specify the height.</p>
+            <p>in the <code>head</code> section of your code, remember to add</p>
+            <pre><code>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js"&gt;&lt;/script&gt;
+            </code></pre>
+            <p>keep the script that adds the dragging and collapsing right above <code>&lt;/body&gt;</code>, don't move it to the <code>head</code> section.</p>
+            <p>i use variables to control the all the colors plus padding, border, shadow, and fonts. these appear at the top of the css so you should be able to customize the look of the windows without needing to dig too deep into the code. of course feel free to mess with the code as much as you want.</p>
+            <p>i prefer to keep the css for my windows in a separate <code>.css</code> file, although i've kept everything to one page to make downloading this demo easier. if you do too feel free to copy everything inside of <code>&lt;style&gt;...&lt;/style&gt;</code> to a new file, save it as something like <code>window.css</code>, then add <code>&lt;link rel="stylesheet" href="window.css" type="text/css"></code> inside of your <code>head</code> tag.</p>
+        </div>
+    </div><!--end window_interior-->
+</div><!--end window_container-->
+
+<!-- blue window -->
+<div class="window_container draggable" id="blue">
+    <div class="window_interior">
+        <div class="window_top">
+            <div class="window_title">some super long ass title to show that it'll clip if it gets too long, so if you forget to keep it short it won't mess up the positioning of the controls on the upper right</div>
+            <div class="window_control">
+                
+                <div class="smallbox minimize"><img src="images/bluemin.png"></div>
+                
+                <div class="smallbox maximize"><img src="images/bluemax.png"></div>
+                
+            </div><!--end window_control-->
+        </div><!--end window_top-->
+        <div class="window_description">
+            this window shows you how you can replace the minimize and maximize buttons with images. search for <code>#blue</code> in the css to see how this window was styled.
+        </div>
+    </div><!--end window_interior-->
+</div><!--end window_container-->
+
+<!-- mac terminal window -->
+<div class="window_container draggable" id="mac">
+    <div class="window_interior">
+        <div class="window_top">
+            <div class="window_control">
+                
+                <ul>
+                    <li></li>
+                    <li class="minimize"></li>
+                    <li class="maximize"></li>
+                  </ul>
+                
+            </div><!--end window_control-->
+            <div class="window_title">terminal</div>
+        </div><!--end window_top-->
+        <div class="window_description">
+            > you can give individual windows unique styles. this one uses <code>&lt;li&gt;</code> elements to create the buttons and moves them to the left side. for this mac terminal style window, search for <code>#mac</code> in the css.
+        </div>
+    </div><!--end window_interior-->
+</div>
+
+<!-- draggable and collapsible javascript -->
+<script>
+    var $draggable = $('.draggable').draggabilly({
+      handle: ".window_top" // specifies what div inside a div with the class "draggable" can be clicked on to move the window
+    })
+    
+    $(document).ready(function(){
+      //minimize windows
+      $(".minimize").click(function(){
+        $(this).closest(".window_interior").find(".window_description").hide();
+      });
+    
+      //maximize windows
+      $(".maximize").click(function(){
+        $(this).closest(".window_interior").find(".window_description").show();
+      });
+        
+    });
+</script>
+
+</body>
+</html>
