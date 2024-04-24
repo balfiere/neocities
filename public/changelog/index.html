@@ -111,16 +111,18 @@ function round(N,pre) {
 }
 
 var p = window.getComputedStyle(document.body).getPropertyValue('--p'); //get pixel multiplier
+var n = p * 2;
 
 const fn = () => {
   const wrapper = document.querySelector('#wrapper')
   wrapper.style.width = '90%';
   const wrapperWidth = wrapper.clientWidth;
-  round(wrapperWidth,p*2);
+  round(wrapperWidth,n);
 }
 
 fn()
 
+window.addEventListener('load', fn)
 window.addEventListener('resize', fn)
 </script>
 
