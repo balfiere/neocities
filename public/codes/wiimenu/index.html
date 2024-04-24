@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wii channel gallery</title>
+<link rel="shortcut icon" href="assets/favicon.png">
+
+<!-- styling -->
+<link rel="stylesheet" href="assets/venobox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<!-- scripts -->
+<script type="text/javascript" src="assets/venobox.min.js"></script>
+</head>
+<body>
+    <div id="menu">
+        <div class="container">
+            <!-- put your images here -->
+            <div class="channel">
+                <a class="my-links" 
+                data-vbtype="inline" 
+                data-maxwidth="900px"
+                data-gall="myGallery"
+                title="inline example"
+                href="#intro">
+                    <img src="images/thumbnail/wiishop.jpg" alt="wii shop channel"/>
+                </a>
+            </div>
+            <div class="channel">
+                <a class="my-links" 
+                data-gall="myGallery"
+                data-vbtype="video"
+                title="video example"
+                data-ratio="4x3"
+                href="https://youtu.be/_rhspIeh1Cg?si=96D-o0be4P241FoS" >
+                    <img src="images/thumbnail/miichannel.jpg" alt="mii channel"/>
+                </a>
+            </div>
+            <div class="channel">
+                <a class="my-links" 
+                data-gall="myGallery"
+                title="photo example. <a target='_blank' href='https://unsplash.com/photos/man-standing-beside-woman-on-street-at-night-1GNXvM18gjo'>credit</a>."
+                href="images/full/largeexample.jpg" >
+                    <img src="images/thumbnail/WiiNewsChannel-IconWhite.png" alt="news channel"/>
+                </a>
+            </div>
+            <div class="channel">
+                <a class="my-links" 
+                data-gall="myGallery"
+                data-fitview="true"
+                title="you can make images fit the viewport by adding the attribute <code>data-fitview='true'</code>"
+                href="images/full/largeexample.jpg" >
+                    <img src="images/thumbnail/photochannel.png" alt="photo channel"/>
+                </a>
+            </div>
+            <div class="channel">
+                <a class="my-links" 
+                data-gall="myGallery" 
+                data-vbtype="iframe"
+                title="iframe example"
+                href="https://wii.hacks.guide/" >
+                    <img src="images/thumbnail/homebrew.jpg" alt="the homebrew channel"/>
+                </a>
+            </div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+            <div class="channel"><img src="assets/empty.png"></div>
+        </div>
+    </div>
+
+    <div id="intro" style="display:none;">
+        <div class="inner">
+            <h1>wii channel media gallery</h1>
+            this is a media gallery inspired by the wii. you can download the code <a target="_blank" href="https://github.com/balfiere/wiimenu">here</a>.
+            <br /><br />the "channels" are located inside <code>&lt;div class="container">...&lt;/div></code>. simply add <code>&lt;div class="channel">&lt;img src="link to image">&lt;/div></code> to add more images. you can add as many as you want, but i suggest keeping the number of channels a multiple of 3 (you can copy paste as many of the "empty" channels as you want).
+            <br /><br />this page uses <a target="_blank" href="https://veno.es/venobox/">VenoBox</a> for the lightbox. i've set up examples of the main types of media it supports (images, videos, iframes, and inline elements) but if you need more help be sure to check out the VenoBox documentation.
+            <br /><br />cursors are by <a target="_blank" href="https://www.deviantart.com/allewun/art/Wii-Cursors-49355744">allewun</a> on deviantart. header font is <a target="_blank" href="https://www.deviantart.com/notsoartisty/art/Wii-Sans-v2-824335667">wii sans</a> and body font is <a target="_blank" href="https://github.com/amarillonmc/MSE201_w_ygos10/blob/master/font/ZENTemplate/FOT-Rodin%20Pro%20M.ttf">FOT-Rodin Pro M</a>.
+        </div>
+    </div>
+    
+    <div id="inline" style="display: none;">
+        <div class="messageText">
+            put a description of your gallery here. you can put up to four lines of text here, they align automatically.
+        </div>
+        <img src="assets/message.png">
+    </div>
+
+<div id="bottom">
+    <div class="left">
+        <a href="/main/index.html"><img src="assets/wii button.png"></a>
+    </div>
+    <div class="right">
+        <a class="message"
+        data-vbtype="inline"
+        href="#inline" >
+            <img src="assets/envelope button.png">
+        </a>
+        <a href="#"></a>
+    </div>
+    <div class="foot"><img src="assets/bottom.png"></div>
+</div>
+
+
+</html>
+<script>
+function channel() {
+    const channelOptions = {
+        //changes the settings of the main lightbox (when you click on the 'channels'). you can find more settings here: https://veno.es/venobox/#section_options
+        selector: '.my-links',
+        numeration: true,
+        infinigall: true,
+        spinner: 'wander',
+        bgcolor: 'rgba(234,234,234,1)',
+        titlePosition: 'bottom',
+        titleStyle: 'transparent',
+        fitView: false
+    }
+    const channelVenoBox = new VenoBox(channelOptions ); 
+}
+channel();
+
+function message() {
+    const messageOptions = {
+        //changes the settings of the lightbox when you click on the envelope button on the bottom right
+        selector: '.message',
+        numeration: false,
+        bgcolor: 'none',
+        overlayColor: 'none',
+        initialScale: 1,
+        spinner: 'wander',
+        titlePosition: 'bottom',
+        titleStyle: 'transparent',
+        maxWidth: '512px',
+        fitView: false
+    }
+    const messageVenoBox = new VenoBox(messageOptions ); 
+}
+message();
+</script>
+</body>
+</html>

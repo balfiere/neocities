@@ -1,0 +1,261 @@
+/*----- base formatting -----*/
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+p,
+pre,
+del,
+em,
+img,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+table,
+tbody,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box
+}
+
+/*----- fonts -----*/
+
+@font-face {
+  font-family: 'Wii Sans';
+  src: url('assets/WiiSansRegular.woff2') format('woff2'),
+      url('assets/WiiSansRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rodin';
+  src: url('assets/FOT-Rodin\ Pro\ M.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*----- body -----*/
+
+* {
+  cursor: url(assets/cursors/wii-cursor.png), auto;
+}
+  
+body {
+  width: 100dvw;
+  height: 100dvh;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rodin';
+  background: repeating-linear-gradient(
+    360deg,
+    #e5e5e5,
+    #e5e5e5 0.25vw,
+    #f5f5f5 0.5vw,
+    #f5f5f5 0.5vw
+  );
+  font-size: 20px;
+}
+
+a {
+  color:rgb(84, 183, 238);
+  transition: all 0.3s ease;
+  &:hover{
+    color:rgb(14, 134, 214)
+  }
+}
+
+h1 {
+  font-family: 'Wii Sans';
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+/*----- channels -----*/
+
+#menu {
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  margin-top: 50px;
+  padding-left: 5dvw;
+}
+
+#menu::-webkit-scrollbar {
+  width: 0;
+} 
+
+.container {
+  padding: 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.channel {
+  --height: 200px;
+  height: var(--height);
+  width: calc(var(--height) * 51 / 28);
+  background: #fff;
+  border-radius: 23% / 10% ;
+  border: 5px solid rgb(180,180,180);
+  display: inline-block;
+  background: repeating-linear-gradient(
+    360deg,
+    #e5e5e5,
+    #e5e5e5 0.25vw,
+    #f5f5f5 0.5vw,
+    #f5f5f5 0.5vw
+  );
+  overflow: hidden;
+  &:hover{
+      scale: 1.03;
+  }
+}
+
+.channel img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+    
+/*----- bottom -----*/
+
+#bottom{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.foot{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.foot img{
+    width: 100%;
+    height: calc(100vh - 720px);
+}
+
+.left {
+    position:absolute;
+    left: 0;
+    bottom: 1dvh;
+    z-index: 3;
+}
+
+.right {
+    position:absolute;
+    right: 0;
+    bottom: 1dvh;
+    z-index: 3;
+}
+
+.left img, .right img{
+    height: calc(100vh - 750px);
+    width: auto;
+}
+
+/*----- overwrite vbox settings -----*/
+
+.vbox-title {
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
+
+a, 
+a img, 
+.vbox-link-btn,
+button.vbox-link-btn,
+button.vbox-link-btn:active,
+button.vbox-link-btn:focus,
+button.vbox-link-btn:hover, 
+div.vbox-close, div.vbox-close img,
+.vbox-next,
+.vbox-prev {
+  cursor: url(assets/cursors/wii-help.png), pointer;
+}
+
+.vbox-left-corner {
+  cursor: unset;
+}
+
+.vbox-grab .vbox-child img{
+  cursor: url(assets/cursors/wii-cursor.png), auto;
+}
+
+.vbox-title {
+  font-size: 0.9em;
+  padding-bottom: 5px;
+}
+
+/*----- inline popup formatting -----*/
+
+.inner {
+  line-height: 2em;
+  padding:1em;
+}
+
+/*----- message (pops up when you click on the envelope on the bottom right -----*/
+
+#inline {
+  width: 512px;
+  height: 360px;
+  overflow: hidden;
+  position:relative
+}
+
+#inline img {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 0;
+}
+
+.messageText {
+  position: absolute;
+  top:41.6666667%;
+  left:5.859375%;
+  z-index: 1;
+  width: 84.9609375%;
+  max-height: 47.2222222%;
+  line-height: 43px;
+  vertical-align:sub;
+  display: inline-block;
+  overflow: hidden;
+}

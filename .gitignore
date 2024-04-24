@@ -1,8 +1,7 @@
 *.code-workspace
 test/
 public/.vscode
-public/codes/stardewvalleytheme/
-public/codes/wiimenu/
+/codes/
 *.cmd
 *.sh
 *.txt
