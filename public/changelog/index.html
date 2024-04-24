@@ -7,13 +7,6 @@
 <link rel="shortcut icon" href="images/favicon.gif">
 <link rel="stylesheet" href="changelog.css">
 
-<!-- adapted from https://codepen.io/fran-the-selector/pen/XWQejYj https://codepen.io/t_afif/pen/BawevLM and https://codepen.io/flaringk/pen/MWBmrQL-->
-
-<!-- fonts -->
-
-<!-- scripts -->
-<script src="/scripts/jquery.1.7.2.min.js"></script>
-
 </head>
 <body>
 
@@ -111,7 +104,25 @@
 </div>
 
 </div>
-<script src="evenwidth.js"></script>
+<script>
+function round(N,pre) {
+  const x = Math.ceil(N / pre) * pre;
+  wrapper.style.width = x + 'px';
+}
+
+var p = window.getComputedStyle(document.body).getPropertyValue('--p'); //get pixel multiplier
+
+const fn = () => {
+  const wrapper = document.querySelector('#wrapper')
+  wrapper.style.width = '90%';
+  const wrapperWidth = wrapper.clientWidth;
+  round(wrapperWidth,p*2);
+}
+
+fn()
+
+window.addEventListener('resize', fn)
+</script>
 
   </body>
 </html>

@@ -6,7 +6,8 @@
 	--scan-color: #eee;
 
   /*-- box --*/
-  --pixel: 2px;
+  --p: 2;
+  --pixel: calc(var(--p) * 1px);
   --s: calc(var(--pixel) * 3); /* size of the cut */
   --date-text: rgb(95, 59, 255);
   --date-background: rgba(95, 59, 255, 0.2);
@@ -42,7 +43,14 @@
   font-display: swap;
 }
 
-
+/* @font-face kit by Fonts2u (https://fonts2u.com) */ 
+@font-face {
+  font-family:"NDS BIOS";
+  src:
+  url("ndsbios_memesbruh03.woff") format("woff");
+  font-weight:normal;
+  font-style:normal;
+}
 
 body {
 	text-align: left;
@@ -85,7 +93,7 @@ body {
 }
 
   .box {
-    font-family: "NDS true bios", Arial, sans-serif;
+    font-family: "NDS BIOS", Arial, sans-serif;
     font-size: calc(var(--pixel) * 16);
     position:relative;
     width: 100%;
