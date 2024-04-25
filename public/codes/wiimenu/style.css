@@ -166,7 +166,7 @@ h1 {
 .clockwrapper{
   position: absolute;
   width: 100%;
-  bottom: 10vh;
+  bottom: 11.5vh;
   z-index: 4;
   display: flex;
   justify-content: center;
