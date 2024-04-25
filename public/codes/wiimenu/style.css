@@ -166,7 +166,7 @@ h1 {
 .clockwrapper{
   position: absolute;
   width: 100%;
-  top: calc(700px + 2.5vh);
+  bottom: 10vh;
   z-index: 4;
   display: flex;
   justify-content: center;
@@ -174,9 +174,6 @@ h1 {
   font-family: 'timer';
   font-size: 72px;
   letter-spacing: 3px;
-}
-
-.clock {
 }
 
 #bottom{
@@ -195,6 +192,7 @@ h1 {
 .foot img{
     width: 100%;
     height: calc(100vh - 720px);
+    max-height: 200px;
 }
 
 .left {
@@ -213,6 +211,7 @@ h1 {
 
 .left img, .right img{
     height: calc(100vh - 750px);
+    max-height: 170px;
     width: auto;
 }
 
@@ -283,4 +282,16 @@ div.vbox-close, div.vbox-close img,
   vertical-align:sub;
   display: inline-block;
   overflow: hidden;
+}
+
+/*-- mobile --*/
+
+@media (max-width: 700px) {
+  .clockwrapper {
+    display: none;
+  }
+
+  .left img, .right img{
+      width: 23vw;
+  }
 }
