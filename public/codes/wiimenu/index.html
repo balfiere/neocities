@@ -88,7 +88,7 @@
             this is a media gallery inspired by the wii. you can download the code <a target="_blank" href="https://github.com/balfiere/wiimenu">here</a>.
             <br /><br />the "channels" are located inside <code>&lt;div class="container">...&lt;/div></code>. simply add <code>&lt;div class="channel">&lt;img src="link to image">&lt;/div></code> to add more images. you can add as many as you want, but i suggest keeping the number of channels a multiple of 3 (you can copy paste as many of the "empty" channels as you want).
             <br /><br />this page uses <a target="_blank" href="https://veno.es/venobox/">VenoBox</a> for the lightbox. i've set up examples of the main types of media it supports (images, videos, iframes, and inline elements) but if you need more help be sure to check out the VenoBox documentation.
-            <br /><br />cursors are by <a target="_blank" href="https://www.deviantart.com/allewun/art/Wii-Cursors-49355744">allewun</a> on deviantart. header font is <a target="_blank" href="https://www.deviantart.com/notsoartisty/art/Wii-Sans-v2-824335667">wii sans</a> and body font is <a target="_blank" href="https://github.com/amarillonmc/MSE201_w_ygos10/blob/master/font/ZENTemplate/FOT-Rodin%20Pro%20M.ttf">FOT-Rodin Pro M</a>.
+            <br /><br />cursors are by <a target="_blank" href="https://www.deviantart.com/allewun/art/Wii-Cursors-49355744">allewun</a> on deviantart. header font is <a target="_blank" href="https://www.deviantart.com/notsoartisty/art/Wii-Sans-v2-824335667">wii sans</a>, body font is <a target="_blank" href="https://github.com/amarillonmc/MSE201_w_ygos10/blob/master/font/ZENTemplate/FOT-Rodin%20Pro%20M.ttf">FOT-Rodin Pro M</a>, and the clock font is <a target="_blank" href="https://www.fontspace.com/cursed-timer-ulil-font-f29411">Cursed Timer ULiL</a>.
         </div>
     </div>
     
@@ -98,6 +98,8 @@
         </div>
         <img src="assets/message.png">
     </div>
+
+<div class="clockwrapper"><div id="MyClockDisplay" class="clock" onload="showTime()"></div></div>
 
 <div id="bottom">
     <div class="left">
@@ -116,6 +118,8 @@
 
 
 </html>
+
+<!-- lightbox script -->
 <script>
 function channel() {
     const channelOptions = {
@@ -150,6 +154,37 @@ function message() {
     const messageVenoBox = new VenoBox(messageOptions ); 
 }
 message();
+</script>
+
+<!-- clock script -->
+<script>
+    function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    
+    var time = h + ":" + m + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
 </script>
 </body>
 </html>

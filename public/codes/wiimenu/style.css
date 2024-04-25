@@ -63,6 +63,15 @@ section {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'timer';
+  src: url('assets/CursedTimerULiL.woff') format('woff'),
+  url('assets/CursedTimerULiL.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+}
+
 /*----- body -----*/
 
 * {
@@ -153,6 +162,22 @@ h1 {
 }
     
 /*----- bottom -----*/
+
+.clockwrapper{
+  position: absolute;
+  width: 100%;
+  top: calc(700px + 2.5vh);
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  color: rgb(180,180,180);
+  font-family: 'timer';
+  font-size: 72px;
+  letter-spacing: 3px;
+}
+
+.clock {
+}
 
 #bottom{
     position: absolute;
