@@ -56,7 +56,7 @@ section {
   --pixel: calc(var(--p) * 1px);
   --s: calc(var(--pixel) * 3); /* size of the cut */
   --wrapper-width: 90%;
-  --wrapper-max-width: 68em;
+  --wrapper-max-width: 500px;
 
   /*-- colors --*/
   --date-text: rgb(95, 59, 255);
