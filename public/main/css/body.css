@@ -58,6 +58,7 @@ fieldset {
   clear: both;
   border: var(--window-border);
   margin-bottom: 1em;
+  padding: 10px;
 }
 
 blockquote {
@@ -84,6 +85,8 @@ blockquote {
   background:var(--pagetop-background);
   border:var(--pagetop-border);
   border-radius: var(--pagetop-border-radius);
+  box-shadow:5px 5px 0px rgba(150, 138, 255, 0.4);
+  -webkit-box-shadow:5px 5px 0px rgba(150, 138, 255, 0.4);
 }
 
 .top:before {

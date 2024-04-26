@@ -17,33 +17,29 @@
 <link href="https://api.fonts.coollabs.io/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://api.fonts.coollabs.io/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- scripts -->
-<script src="/scripts/jquery.1.7.2.min.js"></script>
-
 <body>
 
     <div>
 
     <h1>contact</h1>
 
-    <p>if you'd like to leave a quick note for me, feel free to comment on my <a target="_blank" href="https://neocities.org/site/kwaamfan">neocities profile</a> or say something in the chatbox to the right. if you want to discuss something more at length, you can also email me: <a class="hiddenMail" data-email="balfiereATprotonDOTme">click to show email</a>. i'm pretty shy and horrible at talking with strangers but i promise i'll get around to responding eventually <3
+    <p>if you'd like to leave a quick note for me, feel free to comment on my <a target="_blank" href="https://neocities.org/site/kwaamfan">neocities profile</a> or say something in the chatbox to the right. if you want to discuss something more at length, you can also email me: <a id="contact" onclick="showEmail(event)">click to show email</a>. i'm pretty shy and horrible at talking with strangers but i promise i'll get around to responding eventually <3
     </p>
 
     </div>
 
 <!-- more scripts -->
 <script>
-    $(window).load(function () {
-    $('.hiddenMail').on('click',function(event)
-    {
-        event.preventDefault();
-        $(this).off("click");
-        var email = $(this).attr("data-email").replace(/AT/,'@').replace(/DOT/,'.');
-        $(this).removeClass("hiddenMail");
-        $(this).html(email);
-        $(this).attr("href","mailto:"+email);
-    });
-});
+
+function showEmail(event) {
+    const form = document.getElementById("contact");
+    if (form.getAttribute("href") == undefined) {
+        event.preventDefault();        
+    }
+    var encEmail = "YmFsZmllcmVAcHJvdG9uLm1l";
+    form.setAttribute("href", "mailto:".concat(atob(encEmail)));
+    form.innerHTML = atob(encEmail);
+}
 
 </script>
 </body>
