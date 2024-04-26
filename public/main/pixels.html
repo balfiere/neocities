@@ -18,22 +18,6 @@
 <link href="https://api.fonts.coollabs.io/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://api.fonts.coollabs.io/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- scripts -->
-<script src="/scripts/jquery.1.7.2.min.js"></script>
-<script src="/scripts/jquery.style-my-tooltips.js"></script>
- 
-<script>
-(function($){
-$(document).ready(function(){
-$("a[title]").style_my_tooltips({
-tip_follows_cursor:true,
-tip_delay_time:90,
-tip_fade_speed:600,
-attribute:"title"
-});
-});
-})(jQuery);
-</script>
 </head>
 
 <style>
@@ -45,6 +29,8 @@ attribute:"title"
 </style>
 
 <body>
+
+    <div>
 
     <h1>toybox</h1>
 
@@ -600,11 +586,11 @@ attribute:"title"
     </p></div>
     </div>
 
-<!-- back to top -->
-<a href="#" id="pagetop"><span class="arrow"></span></a>
+</div>
+
+<a href="#" class="top"></a>
 
 <!-- more scripts -->
-<script src="scripts/jquery.scroll.js"></script>
 <script src="scripts/collapsible.js"></script>
 </body>
 </html>

@@ -40,10 +40,9 @@ ul,li{list-style-type:none}
     
     /*----- pagetop button-----*/
     --pagetop-background: #ececec;
-    --pagetop-border:solid 1px rgba(150, 138, 255, 0.4);
-    --pagetop-border-radius: 5px;
-    --pagetop-arrow:solid 2px rgba(150, 138, 255, 0.9);
-    --pagetop-hover-background: rgba(181, 255, 220, 0.3);
+    --pagetop-border:solid 1px rgba(150, 138, 255, 1);
+    --pagetop-border-radius: 10px;
+    --pagetop-arrow:solid 4px rgba(150, 138, 255, 0.9);
     
     /*----- sidebar -----*/
     --sidebar-link-color: #444444;
@@ -78,7 +77,7 @@ ul,li{list-style-type:none}
     --sidebar-link-color-dark: #ddd;
     --pagetop-background-dark: #242424;
     --pagetop-border-dark:solid 1px rgb(69, 48, 255);
-    --pagetop-arrow-dark:solid 2px rgb(125, 110, 255);
+    --pagetop-arrow-dark:solid 4px rgb(125, 110, 255);
   }
   
   /*----- fonts -----*/
@@ -250,37 +249,6 @@ footer{
     & a:hover{
         color: white;
     }
-}
-    
-/*----- return to top -----*/
-#pagetop{
-    background:var(--pagetop-background);
-    border:var(--pagetop-border);
-    border-radius: var(--pagetop-border-radius);
-    box-shadow:5px 5px 0px rgba(150, 138, 255, 0.4);
-    -webkit-box-shadow:5px 5px 0px rgba(150, 138, 255, 0.4);
-    display:block;
-    position:fixed;
-    height:40px;width:40px;
-    right:20px;bottom:-100px;
-    z-index:50;
-    -webkit-transition:all 0.5s ease-in-out;
-    -moz-transition:all 0.5s ease-in-out;
-    -o-transition:all 0.5s ease-in-out;
-    -ms-transition:all 0.5s ease-in-out;
-    transition:all 0.5s ease-in-out;
-    overflow: hidden;
-}
-
-.arrow{
-    border-left:var(--pagetop-arrow);
-    border-top:var(--pagetop-arrow);
-    position:absolute;
-    top:40%;left:30%;
-    height:16px;width:16px;
-    -ms-transform:rotate(45deg);
-    -webkit-transform:rotate(45deg);
-    transform:rotate(45deg)
 }
     
 /*----- sidebar -----*/
@@ -670,20 +638,8 @@ z-index:1001
     nav li a,nav li span{
         color:var(--sidebar-link-color-dark);
     }
-    
-    #pagetop{
-        background:var(--pagetop-background-dark);
-        border:var(--pagetop-border-dark);
-        box-shadow:5px 5px 0px rgba(69, 48, 255, 0.6);
-        -webkit-box-shadow:5px 5px 0px rgba(69, 48, 255, 0.6);
-    }
 
-    .arrow{
-        border-left:var(--pagetop-arrow-dark);
-        border-top:var(--pagetop-arrow-dark);
-    }
-
-    #open-icon,#open-icon:before,#open-icon:after{background:#fff}/* 線の色 */
+    #open-icon,#open-icon:before,#open-icon:after{background:#fff}
 
     img {
         opacity: 0.8;

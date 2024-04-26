@@ -51,10 +51,14 @@ section {
 	--grid-color: #ddd;
 	--scan-color: #eee;
 
-  /*-- box --*/
+  /*-- sizing stuff --*/
   --p: 2;
   --pixel: calc(var(--p) * 1px);
   --s: calc(var(--pixel) * 3); /* size of the cut */
+  --wrapper-width: 90%;
+  --wrapper-max-width: 68em;
+
+  /*-- colors --*/
   --date-text: rgb(95, 59, 255);
   --date-background: rgba(95, 59, 255, 0.2);
   --box-text: black;
@@ -66,11 +70,14 @@ section {
   --page-background-dark:rgb(19, 19, 19);
 	--grid-color-dark: #161616;
 	--scan-color-dark: #3b3b3b;
-  --date-text-dark: rgb(147, 122, 255);
-  --date-background-dark: rgba(160, 138, 255, 0.2);
+
   --box-text-dark: #ddd;
   --box-background-dark: rgb(34, 34, 34);
   --box-border-dark: #ddd;
+
+  --date-text-dark: rgb(147, 122, 255);
+  --date-background-dark: rgba(160, 138, 255, 0.2);
+
   --link-hover-dark:rgb(122, 255, 133);
 }
   
@@ -116,34 +123,27 @@ body {
 		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2),
 		calc(50% - var(--unit) * (1 - 1/48) - 1px) calc(var(--unit) * (1 + 1/48)),
 		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2);
+  background-attachment: fixed;
 }
+
+/*----- wrapper for the messages -----*/
 
 #wrapper {
-  width: 90%;
-  max-width: 800px;
+  width: var(--wrapper-width);
+  max-width: var(--wrapper-max-width);
   margin: 0 auto;
   position: relative;
 }
 
-.outer {
-  margin: 0 auto;
-  position: relative;
-}
-
-.inner {
-  position: absolute;  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
+/*----- styling for each box -----*/
 
   .box {
+    box-sizing: border-box;
     font-family: "NDS BIOS", Arial, sans-serif;
     font-size: calc(var(--pixel) * 16);
     position:relative;
     width: 100%;
-    margin-top: calc(var(--pixel) * 16);
+    margin: calc(var(--pixel) * 16) 0;
     background-color:var(--box-background);
     color: var(--box-text);
     clip-path: polygon(

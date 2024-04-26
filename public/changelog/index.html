@@ -10,7 +10,21 @@
 </head>
 <body>
 
-<div id="wrapper">
+<div id="wrapper"><div id="inner">
+
+  <div class="box">
+      <div class="content">
+        <div class="date">04.26.24</div>
+        <div class="message">modified back-to-top buttons to be pure css.</div>
+        </div>
+  </div>
+
+  <div class="box">
+      <div class="content">
+        <div class="date">04.25.24</div>
+        <div class="message">released this <a target="_top" href="/codes/pictochat/index.html">pictochat theme</a>.</div>
+        </div>
+  </div>
 
   <div class="box">
       <div class="content">
@@ -103,19 +117,41 @@
       </div>
 </div>
 
-</div>
+</div></div>
+
 <script>
+  // if your messages have a variable width (like 90% or 80vw) it'll probably be blurry if the viewport is an odd number. this is a hack i came up to help mitigate the issue
+
+  // Firefox 1.0+
+var isFirefox = typeof InstallTrigger !== 'undefined';
+
+// Chrome 1 - 79
+var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+  
 function round(N,pre) {
   const x = Math.ceil(N / pre) * pre;
   wrapper.style.width = x + 'px';
+  
+  if (window.innerWidth % 2 == 1){
+    if (isChrome == true) {
+      document.querySelector('#inner').style.width = round(document.querySelector('#inner').style.width)
+    } 
+    if (isFirefox == true) {
+      document.querySelector('#inner').style.marginLeft = "-0.5px"; 
+    }
+  } else {
+    document.querySelector('#inner').style.marginLeft = "0px";
+  }
 }
 
-var p = window.getComputedStyle(document.body).getPropertyValue('--p'); //get pixel multiplier
+var p = window.getComputedStyle(document.body).getPropertyValue('--p'); // get pixel multiplier
 var n = p * 2;
+
+var w = window.getComputedStyle(document.body).getPropertyValue('--wrapper-width'); // get wrapper responsive width
 
 const fn = () => {
   const wrapper = document.querySelector('#wrapper')
-  wrapper.style.width = '90%';
+  wrapper.style.width = w;
   const wrapperWidth = wrapper.clientWidth;
   round(wrapperWidth,n);
 }

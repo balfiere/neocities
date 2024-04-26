@@ -1,3 +1,15 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 0px; 
+  padding: 10px;
+  font-size: 0.9em;
+}
+
 a {
   position: relative;
   text-decoration: none;
@@ -20,28 +32,6 @@ a {
 
 a:has(img) {
   background-image: unset;
-}
-
-#pagetop::before {
-  content: '';
-  background-color: var(--pagetop-hover-background);
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  width: 100%;
-  height: 0px;
-  z-index: -1;
-  transition: all .3s ease-in-out;
-}
-
-#pagetop:hover::before {
-  bottom: 0;
-  height: 100%;
-}
-
-body {
-  padding: 10px;
-  font-size: 0.9em;
 }
 
 img {
@@ -76,6 +66,34 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
+    
+/*----- return to top -----*/
+
+.top {
+  --offset: 50px; 
+
+  position: sticky;
+  bottom: 20px;      
+  margin-right:10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  
+  /* visual styling */
+  width:45px;
+  aspect-ratio:1;
+  background:var(--pagetop-background);
+  border:var(--pagetop-border);
+  border-radius: var(--pagetop-border-radius);
+}
+
+.top:before {
+  content:"";
+  position:absolute;
+  inset:30%;
+  transform:translateY(20%) rotate(-45deg);
+  border-top:var(--pagetop-arrow);
+  border-right:var(--pagetop-arrow);
+}
 
 @media (prefers-color-scheme: dark) {
   a {
@@ -87,5 +105,17 @@ blockquote {
 
   blockquote {
     border-left: 10px solid var(--link-hover-background-dark);
+  }
+
+  .top {
+    background:var(--pagetop-background-dark);
+    border:var(--pagetop-border-dark);
+    box-shadow:5px 5px 0px rgba(69, 48, 255, 0.6);
+    -webkit-box-shadow:5px 5px 0px rgba(69, 48, 255, 0.6);
+  }
+
+  .top:before{
+    border-right:var(--pagetop-arrow-dark);
+    border-top:var(--pagetop-arrow-dark);
   }
 }
