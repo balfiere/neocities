@@ -1,6 +1,6 @@
-$(function () { 
+  /*
+  $(function () { 
 
-  //アコーディオンメニュー
    $('nav p,nav p a[href^=#]').on('click', function() {
      $(this).next('ul').slideToggle();
      $(this).children('span').toggleClass('open');
@@ -8,18 +8,15 @@ $(function () {
      $('nav p').children('span').not($(this).children('span')).removeClass('open');
    });
     
-   // 小画面時にスライド内リンクを押した場合、一度閉じる
    $("#leftcolumn a").on("click", function () {
        (window.innerWidth ? window.innerWidth : $(window).width()) <= 600 && $("#open").click()
    });
     
-   //小画面時にメニューを閉じてからリサイズするとメニューが表示されないのを防ぐ
    $(window).resize(function() {
        var menu = $('#leftcolumn');
        (window.innerWidth ? window.innerWidth : $(window).width()) > 600 && menu.is(":hidden") && menu.attr("style", "")
    });
    
-   // メニューを開くボタンの動作
    var text = $('.open-text');
    $("#open").click(function () {
        $('#leftcolumn').toggleClass('open');
@@ -33,3 +30,9 @@ $(function () {
    });
     
 });
+*/
+document.getElementById("open").addEventListener("click", function () {
+    document.getElementById('leftcolumn').classList.toggle('open')
+    document.getElementById('open-icon').classList.toggle('close')
+    return false;
+  })
