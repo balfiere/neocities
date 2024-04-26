@@ -9,9 +9,6 @@
 <!-- styling -->
 <link rel="stylesheet" href="about.css" type="text/css">
 
-<!-- scripts -->
-<script src="/scripts/jquery.1.7.2.min.js"></script>
-
 </head>
 
 <body>
@@ -32,7 +29,7 @@
 <div class="container">
 
 <!-- sidebar -->
-<div class="sidebar">
+<div id="sidebar">
     <div class="stats">
         <div class="stats-title">stats</div>
         <div class="stats-content">
@@ -194,15 +191,13 @@
 
 <!-- more scripts -->
 <script>
-    $(function () { 
-     var text = $('.open-text');
-     $("#open").click(function () {
-         $('.sidebar').toggleClass('open');
-         $('#open-icon').toggleClass('close');
-         return false;
-     });
-      
-  });
+
+  document.getElementById("open").addEventListener("click", function () {
+    document.getElementById('sidebar').classList.toggle('open')
+    document.getElementById('open-icon').classList.toggle('close')
+  return false;
+})
+
 </script>
 </div>    
 </body>

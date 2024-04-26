@@ -329,7 +329,7 @@ figure {
   position: relative;
 }
 
-.sidebar {
+#sidebar {
   z-index: 5!important;
 	float: left;
 	width: 231px;
@@ -564,7 +564,7 @@ figure {
     height: 100dvh;
   }
 
-  .sidebar {
+  #sidebar {
     float: none;
     position: fixed;
     top:0;right:0;
@@ -579,7 +579,7 @@ figure {
     padding: 0 10px;
   }
 
-  .sidebar.open{
+  #sidebar.open{
   transform:translate(0);
   -ms-transform:translate(0);
   -webkit-transform:translate(0);
@@ -646,7 +646,7 @@ figure {
   }  
 
   @media (prefers-color-scheme: dark) {
-    .sidebar {
+    #sidebar {
       background-color: var(--page-background-color-dark);
       background-image: url(images/bgdark.gif);
     }
