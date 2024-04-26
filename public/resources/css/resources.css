@@ -153,10 +153,7 @@ body{
     .sidecontent{
     padding: 0px 10px 0px 10px;
     color: var(--text);
-    font-size: 0.875em;
-    /*
-    font-size: 17px;
-    letter-spacing: 1px;*/
+    font-size: 1em;
     }
 
     .sidecontent p{
@@ -179,6 +176,15 @@ body{
      
     .sidecontent li{
     margin: 0px;
+    display: inline;
+    }
+
+    .sidecontent li:after{
+        content: ' /';
+    }
+
+    .sidecontent li:last-child:after{
+        content: none;
     }
      
     a{
@@ -195,27 +201,6 @@ body{
     text-shadow: 0px 0px 2px var(--link-hover);
     color: var(--link-hover)
     }
-
-    /*
-    #scrollcontainer{
-    padding: 5px;
-    }
-     
-    #scrolly{
-    overflow: scroll;
-    overflow-x: hidden;
-    width: 110px;
-    height:110px;
-    border: 1px solid var(--border);
-    margin: 0 auto;
-    text-align: center;
-    }
-     
-    #scrollyheader{
-    margin: 0px;
-    border-bottom: 1px dotted var(--border);
-    }
-    */
      
     #main{
     float: right;
@@ -233,51 +218,6 @@ body{
     ::-webkit-scrollbar {
         display: none;
     }
-  
-  /* --- SCROLLBAR 
-       
-  ::-webkit-scrollbar {
-      background-color: transparent;
-      height: auto;
-      width:5px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-      background-color:var(--scrollbar);
-      border: 1px solid transparent;
-      background-clip: content-box;
-      border-radius:25px;
-  }
-
-  ::-webkit-scrollbar-track{
-      display: none;
-      background-color:var(--scrollbar-track);
-      border: 2px solid transparent;
-      background-clip: content-box;
-  }
-
-  ::-webkit-scrollbar:horizontal {
-      height: 3px;
-      width: auto;
-  }
-
-  ::-webkit-scrollbar-thumb:horizontal {
-      background-color:var(--scrollbar);
-      border: 1px solid transparent;
-      background-clip: content-box;
-      border-radius:25px;
-  }
-
-  ::-webkit-scrollbar-track:horizontal {
-      background-color:var(--scrollbar-track);
-      border: 2px solid transparent;
-      background-clip: content-box;
-  }
-
-  ::-webkit-scrollbar-button {
-      background-color:none;
-  }
-     ---*/
 
     .mainboxes{
     border-left: 1px solid var(--border);
@@ -317,9 +257,6 @@ body{
 
     .mainboxescontent h3{
         color:var(--h3);
-        /*
-        text-shadow: 1px 1px 1px var(--h3-shadow);
-        */
         letter-spacing: 2px;
         margin: 15px 0px;
         font-size: 1.125em;
