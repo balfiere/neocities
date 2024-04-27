@@ -2,59 +2,17 @@
 <html lang="en">
 <head>
 
-<!-- Basic Page Needs
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.875">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ราวเหมือนดั่งความฝัน</title>
 <meta name="description" content="">
 <meta name="author" content="">
- 
-<!-- Favicon
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link rel="icon" href="/landing/images/faviconlanding.gif?v=2">
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css"/>
 
 <!------ fonts ------>
 <link href="https://api.fonts.coollabs.io/css2?family=Pixelify+Sans:wght@400..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="preload" href="/fonts/PressStartReg.woff2" as="font" type="font/woff2" crossorigin>
-
-<!------ scripts ------>     
-<script src="/scripts/jquery.1.7.2.min.js"></script>
-
-<!--- popups -->
-<script>
-
-    $(document).ready(function(){
-
-        $('.click,.fade').click(function() {
-            $('#pop').fadeToggle();
-        });
-
-        $('.click2,.fade2').click(function() {
-            $('#pop2').fadeToggle();
-        });
-        
-    });
-
-</script>
-
-<!--- tooltips -->
-
-<script src="/scripts/jquery.style-my-tooltips.js"></script>
-<script>
-(function($){
-$(document).ready(function(){
-$("[title],a[title],img[title]").style_my_tooltips({
-tip_follows_cursor:true,
-tip_delay_time:90,
-tip_fade_speed:600,
-attribute:"title"
-});
-});
-})(jQuery);
-</script>
- 
-<!--------------------------------------------------------->
  
 <style type="text/css">
 
@@ -68,12 +26,12 @@ attribute:"title"
     font-style: normal;
     font-display: swap;
 }
-
  
 /*----- variables -----*/
 
 :root {
     /*----- general -----*/
+    --text: black;
     --link:#968aff;
     --link-hover:#FFB5E1;
     --bold:#999;
@@ -104,26 +62,34 @@ attribute:"title"
     /*----- scrollbar -----*/
     --scrollbar:#b5b5ff;
     --scrollbar-width:0px;
-    
-    /*----- tooltip -----*/
-    --scrollbar:#b5b5ff;
-    --scrollbar-width:0px;
 }
 
 /*----- general -----*/
 
 body {
+    background-color: var(--link);
+    font-family: 'Prompt';
+    font-weight:300;
+    font-size: 1em;
+    line-height:1.5em;
+    text-align:justify;
+    color: var(--text);
+}
+
+main {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    right: 0;
+    top: 0;
     background-image: url(/landing/images/backgroundlanding.gif);    
     background-attachment:fixed;
     background-size:auto 100%;
     background-repeat:repeat-x;
     background-position:bottom;
-    font-family: 'Prompt';
-    font-weight:300;
-    font-size: 1em;
-    color:rgb(26, 26, 26);
-    line-height:1.5em;
-    text-align:justify;
+    transition: all .3s linear;
 }
 
 a{
@@ -134,16 +100,11 @@ a{
     -o-transition:all 0.3s ease-in-out;
     -ms-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    }
-     
-    a:visited{
-        color: var(--link);
-    }
-     
-    a:hover{
+    &:hover{
     text-shadow: 0px 0px 2px var(--link-hover);
     color: var(--link-hover)
     }
+}
 
 b, strong {
     color:var(--bold);
@@ -189,17 +150,20 @@ i:not([class]), em {
 
 /*----- tooltips -----*/
 
-#s-m-t-tooltip{
-    max-width:300px;
+.tippy-box[data-theme~='mine'] {
     border-radius: 0px;
-    padding:3px 8px 4px 8px;
-    margin:20px 7px -2px 20px;
-    box-shadow: inset -2px -2px 0 0 var(--popup-inset-shadow), inset 2px 2px 0 0 var(--popup-inset-highlight);
-    background: var(--popup-text-background);
+    margin-left: 5px;
+    color: var(--text);
     font-family:Prompt;
     font-size:1em;
     letter-spacing:2px;
-    z-index:99999999999999999999;
+    box-sizing: border-box;
+    background-color:var(--popup-text-background);
+    box-shadow:inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
+}
+
+.tippy-box[data-theme~='mine'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: var(--popup-inset-highlight);
 }
 
 /*----- top quote -----*/
@@ -264,38 +228,28 @@ i:not([class]), em {
 /*----- pagedolls -----*/
 
 #doll-container{
-position: absolute;
-bottom: 60px;
-z-index: 12;
-width: 420px;
-height: auto;
-  left: 50%;
-  margin-left: -200px;
-}
-
-.dolls {
+    position: absolute;
+    bottom: 60px;
+    z-index: 12;
+    height: auto;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
     display: flex;
+    flex-direction: row;
     flex-wrap:nowrap;
     justify-content: center;
+    align-items: end;
     z-index:9;
 }
 
-.nana{
-    align-self: flex-end;
-    margin-right: 100px;
-}
-
-.nana img {
+#nana img {
     width: 158px;
     height: auto;
+    margin-right: 5vw;
 }
 
-.hachi{
-    align-self: flex-end;
-
-}
-
-.hachi img {
+#hachi img {
     width: 150px;
     height: auto;
 }
@@ -305,7 +259,7 @@ height: auto;
     transition:all var(--nana-blur-speed) ease-in-out,margin 0s;
 }
 
-.dolls:hover [menu-character]{
+#doll-container:hover [menu-character]{
     opacity:0.8;
     -webkit-filter:blur(var(--nana-blur-amount));
     -moz-filter:blur(var(--nana-blur-amount));
@@ -313,7 +267,7 @@ height: auto;
     filter:blur(var(--nana-blur-amount));
 }
 
-.dolls:hover [menu-character]:hover {
+#doll-container:hover [menu-character]:hover {
     opacity:1;
     -webkit-filter:blur(0px);
     -moz-filter:blur(0px);
@@ -321,54 +275,128 @@ height: auto;
     filter:blur(0px);
 }
 
-/*----- popup -----*/
+/*----- modal -----*/
 
-.click, .click2 { cursor:help }
-
-#pop, #pop2 {
-    width:100%;
-    height:100%;
-    top:0;left:0;
-    position:fixed;
-    z-index:999;
-    background:rgba(255,255,255,.3);
-    display:none;
+/* don't select main content text when modal is opened */
+.modal-opened main {
+  user-select: none;
 }
 
-.fade, .fade2 {
-    top:0;
-    left:0;
-    position:fixed;
-    z-index:1000;
-    width:100%;
-    height:100%;
+/* make toggle invisible */
+.modal-toggle {
+  height: 0;
+  left: -9999rem;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+  width: 0;
 }
+
+/* modal */
+.modal {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -9999;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  padding: 2rem;
+  transition: opacity .3s ease, z-index 0s ease .3s;
+}
+
+/* modal is opened */
+.modal-toggle:checked + .modal {
+  z-index: 9999;
+}
+
+/* close on click on the overlay */
+.modal-close::before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* modal background is solved this way because of the overscroll */
+body::before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0s ease .2s;
+  z-index: -9999;
+}
+
+.modal-opened::before {
+  opacity: 1;
+  transition: none;
+}
+
+/* change main content when modal is opened */
+.modal-opened main {
+  opacity: 0.5;
+  filter: blur(5px);
+}
+
+/* animation */
+@keyframes open {
+  0% {
+    transform: scale(.8);
+  }
+
+  99% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.modal-toggle:checked + .modal {
+  opacity: 1;
+  transition: all .3s;
+}
+
+.modal-toggle:checked + .modal .popup {
+  animation: open .3s ease-out;
+}
+
+/*----- modal styling -----*/
 
 .popup {
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    width: 95dvw;
     position:fixed;
-    padding:6px;
     z-index:10000;
     overflow-y: scroll;
-    width: 95dvw;
     max-width:var(--popup-width);
-    height: 20%;
-    min-height:300px;
     max-height:95dvh;
+    padding:6px;
     background-color:var(--main-box-background);
     box-shadow:inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
+    box-sizing: border-box;
 }
 
 .popup-inside {
-    margin: 2px;
-    height: 100%;
+    margin: 0 2px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .popup-title{
+    margin-top: 3px;
     font-family:"press start";
     font-size:8px;
     text-transform:uppercase;
@@ -387,7 +415,8 @@ height: auto;
     overflow-y: scroll;
     padding: 10px;
     height: 100%;
-    margin: 6px 0;
+    margin: 6px 0 4px 0;
+    box-sizing: border-box;
 }
 
 </style>
@@ -395,6 +424,8 @@ height: auto;
 </head>
  
 <body>
+
+<main>
 
 <!-- quote -->
 
@@ -406,23 +437,61 @@ height: auto;
 <!-- nanas -->
 
 <div id="doll-container">
-<div class="dolls">
     
-    <div menu-character class="nana">
-        <a title="resource site" class="click"><img src="/landing/images/nana.png"></a>
+    <label menu-character id="nana" class="modal-open" for="modal-resource">
+        <a><img src="/landing/images/nana.png"></a>
+    </label>
+    
+    <label menu-character id="hachi" class="modal-open" for="modal-personal">
+        <a><img src="/landing/images/hachi.png"></a>
+    </label>
+    
+</div>
+
+<!-- crosswalk -->
+    
+<div id="crosswalk">
+<div class="zebra_container">
+<div class="paso">
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>
+    <div class="zebra b"></div>
+    <div class="zebra n"></div>      
     </div>
-    
-    <div menu-character class="hachi">
-        <a title="personal site" class="click2"><img src="/landing/images/hachi.png"></a>
-    </div>
-    
 </div>
 </div>
 
-<!-- popup boxes -->
+</main>
 
-<div id="pop"> <div class="fade"></div>
-    <div class="popup">
+<!-- modals -->
+
+<!-- resource site (nana) -->
+<input class="modal-toggle" id="modal-resource" type="checkbox" />
+<div class="modal">
+    <label class="modal-close" for="modal-resource"></label>
+    <article class="popup">
         <div class="popup-inside">
             <div class="popup-title">about my resource site</div>
             <div class="information-container">
@@ -433,52 +502,59 @@ height: auto;
     </div>
 </div>
 
-<div id="pop2"> <div class="fade2"></div>
-<div class="popup">
-    <div class="popup-inside">
-        <div class="popup-title">about my personal site</div>
-            <div class="information-container">
-                my personal page where i post about myself and my interests. requires javascript and iframe support. most pages are responsive, but looks best in firefox on a 1920x1080px display. some features are hidden on mobile. animations autoplay, but eye strain is kept to a minimum and there is no autoplaying audio<br/><br />
-                <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/main/index.html">>> enter <<</a></div>
-            </div>
+<!-- personal site (hachi) -->
+<input class="modal-toggle" id="modal-personal" type="checkbox" />
+<div class="modal">
+    <label class="modal-close" for="modal-personal"></label>
+    <article class="popup">
+        <div class="popup-inside">
+            <div class="popup-title">about my personal site</div>
+                <div class="information-container">
+                    my personal page where i post about myself and my interests. requires javascript and iframe support. most pages are responsive, but looks best in firefox on a 1920x1080px display. some features are hidden on mobile. animations autoplay, but eye strain is kept to a minimum and there is no autoplaying audio<br/><br />
+                    <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/main/index.html">>> enter <<</a></div>
+                </div>
+        </div>
     </div>
-</div>
 </div>
 
-<!-- crosswalk -->
-    
-    <div id="crosswalk">
-    <div class="zebra_container">
-    <div class="paso">
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>
-        <div class="zebra b"></div>
-        <div class="zebra n"></div>      
-      </div>
-    </div>
-    </div>
+<!--- tooltips -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    tippy('#nana',{
+        followCursor: true,
+        animateFill: false,
+        animation: 'scale-subtle',
+        content: 'resources site',
+        placement: 'right',
+        theme: 'mine'
+    } );
+    tippy('#hachi',{
+        followCursor: true,
+        animateFill: false,
+        animation: 'scale-subtle',
+        content: 'personal site',
+        placement: 'right',
+        theme: 'mine'
+    } );
+</script>
+
+<!--- modals -->
+<script>
+
+    // http://visecta.cz/
+
+// close on esc key
+document.onkeydown = function(e) { e.keyCode === 27 && document.querySelector('.modal-toggle:checked + .modal .modal-close').click() }
+
+// add event listener (on change) to all toggles
+Array.prototype.slice.call(document.querySelectorAll('.modal-toggle')).forEach(function(toggle) { toggle.addEventListener('change', function(event) {
+  // allow only one checked toggle
+  Array.prototype.slice.call(document.querySelectorAll('.modal-toggle:not(#' + event.target.id + ')')).forEach(function(diff) { diff.checked = false })
+  // when modal is opened, add class to the body
+  document.body.className = event.target.checked ? 'modal-opened' : '' }) })
+
+</script>
 
 </body>
 
