@@ -67,10 +67,6 @@ section {
   /*----- scrollbar -----*/
   --scrollbar: #b5b5ff;
   --scrollbar-width: 0px;
-
-  /*----- tooltip -----*/
-  --scrollbar: #b5b5ff;
-  --scrollbar-width: 0px;
 }
 
 /*----- fonts -----*/
@@ -116,20 +112,6 @@ section {
 
 ::-webkit-scrollbar-corner {
   background: var(--main-box-background);
-}
-
-/*----- tooltips -----*/
-
-#s-m-t-tooltip {
-  max-width: 300px;
-  border-radius: 0px;
-  padding: 3px 8px 4px 8px;
-  margin: 20px 7px -2px 20px;
-  background: black;
-  color: var(--text);
-  font-size: 12px;
-  letter-spacing: 2px;
-  z-index: 99999999999999999999;
 }
 
 /*----- body -----*/

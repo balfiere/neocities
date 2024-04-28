@@ -178,18 +178,6 @@ table {
   }
   
 /*----- tooltips -----*/
-#s-m-t-tooltip {
-    width: auto;
-    text-align: center;
-    border: var(--window-border);
-    border-radius: var(--window-border-radius);
-    padding: 3px 8px 4px 8px;
-    margin: 20px 7px -2px 20px;
-    background: var(--window-text-background);
-    color: white;
-    font-family: silkscreen;
-    z-index: 99999999999999999999;
-}
 
 .tippy-box[data-theme~='mine'] {
     border-radius: var(--window-border-radius);
