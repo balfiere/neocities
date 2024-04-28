@@ -106,11 +106,7 @@ button {
     }
 
     .window_title {
-        color: var(--window-title-color-dark);
-        background-color: var(--window-title-background-dark);
-        &:hover{
-            background-color: var(--window-title-background-clicked-dark);
-        }
+        color: var(--window-text-background-dark);
     }
 
     .minimize_control {
