@@ -9,7 +9,6 @@
 <!-- styling -->
 
 <!-- scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js"></script>
 
 <!-- more css -->
@@ -76,6 +75,21 @@ pre code {
 }
 
 /*----- windows -----*/
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+}
 
 .window_container {
     background-color:var(--window-container-background);
@@ -163,6 +177,7 @@ pre code {
 }
 
 .window_description {
+    display: block;
     background: var(--window-text-background);
     border-radius: calc(var(--window-border-radius) - 2px);
     overflow-y: scroll;
@@ -376,11 +391,11 @@ pre code {
             <div class="window_title">put a creative title here</div>
             <div class="window_control">
                 
-                <div class="smallbox minimize">
-                    <div class="minimize_control"></div></div>
+                <button class="smallbox minimize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'">
+                    <div class="minimize_control"></div></button>
                 
-                <div class="smallbox maximize">
-                <div class="maximize_control"></div></div>
+                <button class="smallbox maximize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'">
+                <div class="maximize_control"></div></button>
                 
             </div><!--end window_control-->
         </div><!--end window_top-->
@@ -390,7 +405,6 @@ pre code {
             <p>you can let the height of the window automatically expand to its contents, or you can specify the height.</p>
             <p>in the <code>head</code> section of your code, remember to add</p>
             <pre><code>
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js"&gt;&lt;/script&gt;
             </code></pre>
             <p>keep the script that adds the dragging and collapsing right above <code>&lt;/body&gt;</code>, don't move it to the <code>head</code> section.</p>
@@ -407,9 +421,9 @@ pre code {
             <div class="window_title">some super long ass title to show that it'll clip if it gets too long, so if you forget to keep it short it won't mess up the positioning of the controls on the upper right</div>
             <div class="window_control">
                 
-                <div class="smallbox minimize"><img src="images/bluemin.png"></div>
+                <button class="smallbox minimize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img src="images/bluemin.png"></button>
                 
-                <div class="smallbox maximize"><img src="images/bluemax.png"></div>
+                <button class="smallbox maximize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img src="images/bluemax.png"></button>
                 
             </div><!--end window_control-->
         </div><!--end window_top-->
@@ -427,8 +441,8 @@ pre code {
                 
                 <ul>
                     <li></li>
-                    <li class="minimize"></li>
-                    <li class="maximize"></li>
+                    <li class="minimize" onclick="this.parentNode.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"></li>
+                    <li class="maximize" onclick="this.parentNode.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"></li>
                   </ul>
                 
             </div><!--end window_control-->
@@ -442,22 +456,43 @@ pre code {
 
 <!-- draggable and collapsible javascript -->
 <script>
-    var $draggable = $('.draggable').draggabilly({
-      handle: ".window_top" // specifies what div inside a div with the class "draggable" can be clicked on to move the window
-    })
-    
-    $(document).ready(function(){
-      //minimize windows
-      $(".minimize").click(function(){
-        $(this).closest(".window_interior").find(".window_description").hide();
-      });
-    
-      //maximize windows
-      $(".maximize").click(function(){
-        $(this).closest(".window_interior").find(".window_description").show();
-      });
-        
-    });
+// if you have multiple .draggable elements
+// get all draggie elements
+var draggableElems = document.querySelectorAll(".draggable");
+// array of Draggabillies
+var draggies = [];
+// init Draggabillies
+for (var i = 0, len = draggableElems.length; i < len; i++) {
+	var draggableElem = draggableElems[i];
+	var draggie = new Draggabilly(draggableElem, {
+		handle: ".window_top"
+	});
+	draggies.push(draggie);
+}
+
+// get all windows
+var activeWindow = document.querySelector('.window_container');
+var windows = document.querySelectorAll(".window_container");
+
+var init = function(){
+	for (var i = 0; i < windows.length; i++){
+		var w = windows[i];
+		console.log(w);
+
+        // on click
+		w.addEventListener("mouseover", function(e){
+            // reset z-index of all windows to 10
+			activeWindow.style.zIndex = 10;
+            // get the window being clicked
+			activeWindow = e.target.closest('.window_container');
+            // bring to top (by setting z-index to 100)
+			activeWindow.style.zIndex = 100;
+		})
+		console.log(activeWindow)
+	}
+}
+
+init();
 </script>
 
 </body>

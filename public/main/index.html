@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/window.css" type="text/css">
 <link rel="stylesheet" href="css/sakura.css" type="text/css">
 <link rel="stylesheet" href="css/onionring.css">
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css"/>
 
 <!-- fonts -->
 <link rel="preconnect" href="https://api.fonts.coollabs.io" crossorigin />
@@ -20,22 +21,8 @@
 <link href="https://api.fonts.coollabs.io/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <!-- scripts -->
-<script src="/scripts/jquery.1.7.2.min.js"></script>
-<script src="/scripts/jquery.style-my-tooltips.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/2.1.1/draggabilly.pkgd.min.js"></script>
- 
-<script>
-(function($){
-$(document).ready(function(){
-$("a[title], img[title]").style_my_tooltips({
-tip_follows_cursor:true,
-tip_delay_time:90,
-tip_fade_speed:600,
-attribute:"title"
-});
-});
-})(jQuery);
-</script>
+
 </head>
 
 <body id="page">
@@ -56,13 +43,11 @@ attribute:"title"
             <div class="window_title">C:\images\buttons and sites i like\</div>
             <div class="window_control">
                 
-                <div class="smallbox minimize">
-                <div class="minimize_control"></div></div>
+                <button class="smallbox minimize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img src="images/min.png"></button>
                 
-                <div class="smallbox maximize">
-                <div class="maximize_control"></div></div>
+                <button class="smallbox maximize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img src="images/max.png"></button>
                 
-            </div><!--window_control-->
+            </div><!--end window_control-->
         </div><!--window_top-->
         <div class="window_description">
           <a target="_blank" href="https://pennylovespandas.neocities.org/"><img src="https://pennylovespandas.neocities.org/pennyspinkbutton.gif"/></a>
@@ -158,13 +143,11 @@ attribute:"title"
             <div class="window_title">todo.txt</div>
             <div class="window_control">
                 
-                <div class="smallbox minimize">
-                <div class="minimize_control"></div></div>
+                <button class="smallbox minimize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img src="images/min.png"></button>
                 
-                <div class="smallbox maximize">
-                <div class="maximize_control"></div></div>
+                <button class="smallbox maximize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img src="images/max.png"></button>
                 
-            </div><!--window_control-->
+            </div><!--end window_control-->
         </div><!--window_top-->
         <div class="window_description">
             <ul>
@@ -194,20 +177,18 @@ attribute:"title"
             <div class="window_title">@cliques_&_webrings</div>
             <div class="window_control">
                 
-                <div class="smallbox minimize">
-                <div class="minimize_control"></div></div>
+                <button class="smallbox minimize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img src="images/min.png"></button>
                 
-                <div class="smallbox maximize">
-                <div class="maximize_control"></div></div>
+                <button class="smallbox maximize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img src="images/max.png"></button>
                 
-            </div><!--window_control-->
+            </div><!--end window_control-->
         </div><!--window_top-->
         <div class="window_description">
           <a href="http://cliqued.wings.nu/">OTF <img src="images/green.png"></a> yakuza<br />   
-          <a href="http://midnight-cloud.net/moogle" target="_blank"><img src="images/moogle02.gif" title="I ♥ moogles // Kupo, kupo! Moogle Adoption Clique"></a>
-          <a href="https://key.caelestis.nu" style="text-decoration: none; border: 0px;"><img src="images/twobecomeone.png" border="0" title="Keyblade // Two Become One"></a>
+          <a href="http://midnight-cloud.net/moogle" target="_blank"><img src="images/moogle02.gif" data-tippy-content="I <3 moogles // Kupo, kupo! Moogle Adoption Clique"></a>
+          <a href="https://key.caelestis.nu" style="text-decoration: none; border: 0px;"><img src="images/twobecomeone.png" border="0" data-tippy-content="Keyblade // Two Become One"></a>
           <!---- Final Fantasy Crystal Guardian Start ---->
-          <a href="http://exvius.aelysia.net" target="_blank" rel="noopener noreferrer" style="border: 0px none; background: transparent;"><img src="images/xii_fran.png" style="padding: 0px; margin: 0px; border: 0px none; background: transparent;" title="FRAN protects KWAAMFAN"></a>
+          <a href="http://exvius.aelysia.net" target="_blank" rel="noopener noreferrer" style="border: 0px none; background: transparent;"><img src="images/xii_fran.png" style="padding: 0px; margin: 0px; border: 0px none; background: transparent;" data-tippy-content="FRAN protects KWAAMFAN"></a>
           <!---- Final Fantasy Crystal Guardian End ---->
           <div id='dsring'>
             <script type="text/javascript" src="https://ikaroll.neocities.org/dsring/onion/onionring-variables.js"></script>
@@ -224,17 +205,16 @@ attribute:"title"
             <div class="window_title">https://chat.box</div>
             <div class="window_control">
                 
-                <div class="smallbox minimize">
-                <div class="minimize_control"></div></div>
+                <button class="smallbox minimize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img src="images/min.png"></button>
                 
-                <div class="smallbox maximize">
-                <div class="maximize_control"></div></div>
+                <button class="smallbox maximize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img src="images/max.png"></button>
                 
-            </div><!--window_control-->
+            </div><!--end window_control-->
         </div><!--window_top-->
         <div class="window_description">
             <iframe src='https://chattable.neocities.org/embed?chat=99474997' id='chattable' frameborder='none' style="width: 350px; height: 350px;"></iframe>
-<script>window.onload = function(){
+<script>
+window.onload = function(){
 	document.getElementById('chattable').contentWindow.postMessage(`
 
   
@@ -412,7 +392,8 @@ attribute:"title"
             font-family: silkscreen, monospace;
           }
 `, '*')
-}</script>
+}
+</script>
         </div>
     </div><!--window_interior-->
 </div><!--window_container-->
@@ -458,15 +439,6 @@ attribute:"title"
 <li><p><a href="/index.html"><img src="images/landing.gif">back to landing</a></p></li>
 <li><p><a href="https://neocities.org/site/kwaamfan" target="_blank"><img src="images/neocities.gif">neocities profile</a></p></li>
 
-<!--
-<li><p><span>Illust</span></p>
-<ul class="sub-menu">
-<li><a href="#">サブメニュー1</a>
-<li><a href="#">サブメニュー2</a>
-<li><a href="#">サブメニュー3</a>
-</ul>
--->
-
 </ul>
 </nav>
 
@@ -494,6 +466,21 @@ attribute:"title"
 
 <!-- more scripts -->
 <script src="scripts/draggableboxes.js"></script>
-<script src="/scripts/toggle.js"></script>
+<script src="scripts/toggle.js"></script>
+
+<!--- tooltips -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    tippy('[data-tippy-content]',{
+        followCursor: true,
+        animateFill: false,
+        animation: 'scale-subtle',
+        placement: 'bottom',
+        theme: 'mine',
+        arrow: false,
+        offset: [0, 20],
+    } );
+</script>
 </body>
 </html>

@@ -10,6 +10,7 @@
 <!-- styling -->
 <link rel="stylesheet" href="css/main.css" type="text/css">
 <link rel="stylesheet" href="css/body.css" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css"/>
 
 <!-- fonts -->
 <link rel="preconnect" href="https://api.fonts.coollabs.io">
@@ -17,22 +18,6 @@
 <link href="https://api.fonts.coollabs.io/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://api.fonts.coollabs.io/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- scripts -->
-<script src="/scripts/jquery.1.7.2.min.js"></script>
-<script src="/scripts/jquery.style-my-tooltips.js"></script>
- 
-<script>
-(function($){
-$(document).ready(function(){
-$("a[title]").style_my_tooltips({
-tip_follows_cursor:true,
-tip_delay_time:90,
-tip_fade_speed:600,
-attribute:"title"
-});
-});
-})(jQuery);
-</script>
 </head>
 
 <body>
@@ -41,10 +26,25 @@ attribute:"title"
 
     <h1>shrines</h1>
 
-    <p><a target="_top" title="under construction" <!href="/yakuza/index.html"><img src="images/haruka.webp" width="200px"></a></p>
+    <p><a target="_top" data-tippy-content="under construction" <!href="/yakuza/index.html"><img src="images/haruka.webp" width="200px"></a></p>
     
     </div>
     
+
+<!--- tooltips -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    tippy('[data-tippy-content]',{
+        followCursor: true,
+        animateFill: false,
+        animation: 'scale-subtle',
+        placement: 'right',
+        arrow: true,
+        offset: [0, 20],
+        theme: 'mine'
+    } );
+</script>
 </body>
 </html>
 

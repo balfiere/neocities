@@ -240,7 +240,6 @@ i:not([class]), em {
     flex-wrap:nowrap;
     justify-content: center;
     align-items: end;
-    z-index:9;
 }
 
 #nana img {
@@ -523,18 +522,22 @@ body::before {
 <script>
     tippy('#nana',{
         followCursor: true,
+        touch: false,
         animateFill: false,
         animation: 'scale-subtle',
         content: 'resources site',
         placement: 'right',
+        zIndex: 999,
         theme: 'mine'
     } );
     tippy('#hachi',{
         followCursor: true,
+        touch: false,
         animateFill: false,
         animation: 'scale-subtle',
         content: 'personal site',
         placement: 'right',
+        zIndex: 999,
         theme: 'mine'
     } );
 </script>

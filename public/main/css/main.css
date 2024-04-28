@@ -56,10 +56,10 @@ table {
 
 	/*----- body -----*/
 	--text: #444444;
-	--link: rgba(150, 138, 255, 1);
+	--link: #968aff;
 	--link-hover: rgba(120, 197, 161, 1);
 	--link-hover-background: rgba(157, 230, 196, 0.3);
-	--bold: rgb(120, 197, 161);
+	--bold: #78c5a1;
 	--italic: rgba(150, 138, 255, 0.1);
 	--marker: rgba(150, 138, 255, 0.2);
 	--marker1: rgba(150, 138, 255, 0.2);
@@ -86,7 +86,7 @@ table {
     --window-border: solid 1px rgba(150, 138, 255, 0.4);
     --window-container-background: #cac6cb;
     --window-title-background: rgb(143, 142, 143);
-    --window-title-background-clicked: rgba(143, 142, 143, 0.5);
+    --window-title-background-clicked: rgba(143, 142, 143, 1);
     --window-text-background: #f7f7f7;
     --window-shadow: 10px 10px 0px rgba(150, 138, 255, 0.4);
     --window-padding: 10px;
@@ -104,9 +104,9 @@ table {
     --window-border-dark: solid 1px rgb(69, 48, 255);
     --window-title-color-dark:#ddd;
     --window-title-background-dark:rgba(69, 48, 255, 0.7);
-    --window-title-background-clicked-dark:rgba(69, 48, 255, 0.5);
+    --window-title-background-clicked-dark:rgba(69, 48, 255, 1);
     --link-dark: rgb(179, 166, 255);
-	--link-hover-background-dark: rgba(34, 126, 83, 0.521);
+	--link-hover-background-dark: rgba(34, 126, 83, 121);
     --text-dark: #ddd;
     --sidebar-link-color-dark: #ddd;
     --pagetop-background-dark: #242424;
@@ -186,9 +186,32 @@ table {
     padding: 3px 8px 4px 8px;
     margin: 20px 7px -2px 20px;
     background: var(--window-text-background);
-    color: var(--text);
+    color: white;
     font-family: silkscreen;
     z-index: 99999999999999999999;
+}
+
+.tippy-box[data-theme~='mine'] {
+    border-radius: var(--window-border-radius);
+    background: rgba(150,138,255,1);
+    background: -moz-linear-gradient(left, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(150,138,255,1)), color-stop(100%, rgba(103,250,179,1)));
+    background: -webkit-linear-gradient(left, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    background: -o-linear-gradient(left, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    background: -ms-linear-gradient(left, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    background: linear-gradient(to right, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#968aff', endColorstr='#67fab3', GradientType=1 );
+    color: white;
+    font-family: silkscreen;
+    font-size: 16px;
+}
+
+.tippy-box[data-theme~='mine'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: rgba(150,138,255,1);
+}
+
+.tippy-box[data-theme~='mine'][data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: rgba(103,250,179,1);
 }
   
 /*----- body -----*/
@@ -513,7 +536,7 @@ nav s, nav strike{
 
 .marker {
   background: var(--marker);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--marker2)), color-stop(0.49, var(--marker2)), color-stop(0.5, var(--marker1)), color-stop(1, var(--marker1)));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--marker2)), color-stop(0.49, var(--marker2)), color-stop(1, var(--marker1)), color-stop(1, var(--marker1)));
   background: -webkit-linear-gradient(transparent 50%, var(--marker1) 0%);
   background: linear-gradient(transparent 50%, var(--marker1) 0%)
 }

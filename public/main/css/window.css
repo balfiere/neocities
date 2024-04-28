@@ -1,3 +1,18 @@
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+}
+
 /*----- windows -----*/
 
 .window_container {
@@ -19,63 +34,48 @@
 .window_top {
     overflow:hidden;
 	cursor: grab;
+    background: rgba(150,138,255,1);
+    background: -moz-linear-gradient(left, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(150,138,255,1)), color-stop(100%, rgba(103,250,179,1)));
+    background: -webkit-linear-gradient(left, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    background: -o-linear-gradient(left, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    background: -ms-linear-gradient(left, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    background: linear-gradient(to right, rgba(150,138,255,1) 0%, rgba(103,250,179,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#968aff', endColorstr='#67fab3', GradientType=1 );
+    padding: 0 3px 6px 6px;
 	.is-pointer-down & {
 		cursor: grabbing;
 	}
 }
 
 .window_title {
+    color: white;
     float:left;
-    width:calc(100% - 61px);
+    width:calc(100% - 40px);
     letter-spacing:0px;
     font-size:9px;
     font-family: nineteen93, maru;
     text-rendering: optimizeLegibility;
     line-height:1em;
-    overflow:hidden;
-    background-color: var(--window-title-background);
-    border-radius: calc(var(--window-border-radius) - 2px);
-    padding: 11px 7px 10px 10px;
-	&:hover{
-        background-color: var(--window-title-background-clicked);
-	}
+    margin-top: 6px;
 }
 
 .window_control {
     display:flex;
     float: right;
-    margin-right: -5px;
 }
 
 .smallbox {
-    margin-right:1px;
-    margin-top: 1px;
-    padding:0px;
-    width:29px;
-    height:29px;
+    width: 15px;
+    height: 15px;
+}
+
+.minimize, .maximize {
     cursor:help;
 }
 
-.minimize_control {
-    margin-top:24px;
-    width:24px;
-    height:2px;
-    background:var(--window-title-background);
-    border-radius: 1px;
-}
-
-.smallbox:hover .minimize_control, .smallbox:hover .maximize_control{
-    opacity: 0.6;
-}
-
-.maximize_control {
-    margin-top:2px;margin-left:0px;
-    border-radius: 2px;
-    width:25px;height:25px;
-    border:2px solid var(--window-title-background);
-}
-
 .window_description {
+    display: block;
     background: var(--window-text-background);
     border-radius: calc(var(--window-border-radius) - 2px);
     overflow-y: scroll;
