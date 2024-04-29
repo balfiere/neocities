@@ -5,9 +5,6 @@
     font-size: 1.125em;
  }
  
- .active, .collapsible:hover {
- }
- 
  .content {
     /* uncomment when done writing so starts collapsed*/
    display: none;
@@ -38,14 +35,5 @@
                 transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
-}
-
-button:hover,
-button:focus {
-}
-
-button:focus {
-}
-
-button:active {
+    appearance: none;
 }
