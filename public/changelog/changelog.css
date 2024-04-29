@@ -80,29 +80,14 @@ section {
 
   --link-hover-dark:rgb(122, 255, 133);
 }
-  
-@font-face {
-  font-family: "Nintendo_DS_BIOS";
-  src: url("https://cdn.glitch.global/597af664-d8c4-4d92-8dc9-d3bb9a8edd3a/Nintendo-DS-BIOS.ttf?v=1649628722542"); /*URL to font*/
-  font-weight: regular;
-}
 
 @font-face {
-  font-family: 'NDS true bios';
+  font-family: 'NDS bios';
   src: url('/fonts/NDStruebios.woff2') format('woff2'),
       url('/fonts/NDStruebios.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-
-/* @font-face kit by Fonts2u (https://fonts2u.com) */ 
-@font-face {
-  font-family:"NDS BIOS";
-  src:
-  url("ndsbios_memesbruh03.woff") format("woff");
-  font-weight:normal;
-  font-style:normal;
 }
 
 body {
