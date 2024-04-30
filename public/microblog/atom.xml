@@ -3,9 +3,8 @@
 
 	<title>kwaamfan's diary</title>
 	<subtitle>kwaamfan's diary</subtitle>
-	<link href="https://kwaamfan.neocities.org/microblog/microblog.atom" rel="self"/>
+	<link href="https://kwaamfan.neocities.org/microblog/atom.xml" rel="self"/>
 	<link href="https://kwaamfan.neocities.org/microblog/" rel="alternate" type="text/html"/>
-	<link href="http://fetchrss.com/rss/663057206397693cff2175e3663056f7630aec192e2c72e2.xml" rel="alternate" type="application/rss+xml"/>
 	<id>https://kwaamfan.neocities.org/microblog/microblog.atom</id>
 	<updated>2024-04-21T00:00:00+00:00</updated>
 	<icon>https://www.google.com/s2/favicons?domain=https://kwaamfan.neocities.org</icon>
