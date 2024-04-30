@@ -2,8 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 
 	<title>kwaamfan's diary</title>
-	<link href="https://kwaamfan.neocities.org/microblog/microblog.atom" rel="self"/>
+	<subtitle>kwaamfan's diary</subtitle>
+	<link href="http://fetchrss.com/rss/663057206397693cff2175e3663056f7630aec192e2c72e2.atom" rel="self"/>
 	<link href="https://kwaamfan.neocities.org/microblog/" rel="alternate" type="text/html"/>
+	<link href="http://fetchrss.com/rss/663057206397693cff2175e3663056f7630aec192e2c72e2.xml" rel="alternate" type="application/rss+xml"/>
 	<updated>2024-04-21T00:00:00+00:00</updated>
 	<icon>https://www.google.com/s2/favicons?domain=https://kwaamfan.neocities.org</icon>
 
