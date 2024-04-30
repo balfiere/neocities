@@ -689,12 +689,9 @@ z-index:1001
         background-image: url(/main/images/bgdark.png);
     }
 
-    #rightcolumn, #leftcolumn, #s-m-t-tooltip {
+    #rightcolumn, #leftcolumn {
         background: var(--window-text-background-dark);
         border: var(--window-border-dark);
-    }
-
-    #rightcolumn, #leftcolumn {
         box-shadow: var(--window-shadow-dark);
     }
 

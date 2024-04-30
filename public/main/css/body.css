@@ -99,6 +99,10 @@ blockquote {
 }
 
 @media (prefers-color-scheme: dark) {
+  body {
+    background: var(--window-text-background-dark);
+  }
+  
   a {
     position: relative;
     text-decoration: none;
