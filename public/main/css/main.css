@@ -70,7 +70,7 @@ table {
     --h1-shadow:#78c5a167;
     --h2-underline:rgba(150, 138, 255, 0.3);
     --h3-color:rgb(37, 37, 37);
-    --h3-background: #b5ffdc99;
+    --h3-background: rgba(181, 255, 220, 0.6);
     
     /*----- pagetop button-----*/
     --pagetop-background: #f7f7f7;
