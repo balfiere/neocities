@@ -14,7 +14,7 @@
     --color-tag: #a1d16d;
 	--color-bold: #d478d4;
 	--color-italic: #877cdb;
-	--color-code: #bbb;
+	--color-code: rgba(187, 187, 187, 0.2);
     --color-marker: #ffffcc56;
     --color-shadow: #6200ff;
     --color-footer-hover: rgb(120, 255, 255);
@@ -82,9 +82,6 @@ body {
 a {
     color: var(--color-link);
     text-decoration: none;
-  }
-  
-  a {
     background: 
         var(--dusk-gradient), var(--sunset-gradient);
     background-size: 100% 2px, 0 2px;
@@ -197,12 +194,13 @@ h3 {
 kbd,
 code {
 	border-radius: 0.2em;
-	border-width: 0.2em;
+	border-width: 0.15em;
 	border-style: solid;
 	border-color: var(--color-code);
 	background-color: var(--color-code);
 	font-family: var(--font-code);
 }
+
 .code-block {
 	padding: 1em;
 	background-color: var(--color-code);
@@ -235,30 +233,8 @@ figure {
   max-width: 40%;
 }
 
-/* -- layout
+/* -- layout -- */
 
-.row{
-    display: flex;
-    column-gap: calc(var(--gutter));
-    padding: 0 var(--gutter);
-    margin: 0;
-    top: 0;
-}
-
-.sidebar {
-    position: sticky;
-    top: var(--gutter);
-    max-width: 450px;
-    height: 100%;
-    width: 30%;
-    margin-bottom: var(--gutter);
-}
-
-.timeline {
-    flex: 1;
-} -- */
-
-/* LAYOUT */
 .primary {
 	display: flex;
     column-gap: calc(var(--gutter));
@@ -346,13 +322,19 @@ time {
     vertical-align: middle;
     margin: 1em
 }
-article .avatar {
-    margin-left:3%;
-    margin-top:2%;
-    height: 4em;
-    width:auto;
-    vertical-align:top;
+
+.goback {
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: top;
 }
+
+.goback img{
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+}
+
 article .wrapper {
     margin-top:2%;
     display: inline-block;
