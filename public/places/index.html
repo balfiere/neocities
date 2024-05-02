@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>favorite places</title>
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- scripts -->
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<style>
+
+  /*----- fonts -----*/
+  
+  @font-face {
+    font-family: 'PressStartReg';
+    src: url('/fonts/PressStartReg.woff') format('woff2'),
+        url('/fonts/PressStartReg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'SeeD';
+    src: url('/fonts/SeeDComputer.woff') format('woff2'),
+        url('/fonts/SeeDComputer.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+body {
+  all: unset;
+  margin: 0;
+  padding: 0;
+  width: 100dvw;
+  min-height: 100dvh;
+  font-size: 32px;
+  line-height: 2;
+  color: #FFFFFF;
+}
+
+section {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video, img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+audio {
+    display: none;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+  font-family: SeeD;
+  text-shadow: 3px 3px 0 #000, 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
+}
+
+.content > span {
+  display: block;
+}
+
+.place {
+  font-family: PressStartReg;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 0 #000, 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
+}
+
+</style>
+
+</head>
+
+</head>
+<body>
+    
+  <main>
+    <section class="panel">
+      <img src="landing.jpg" />
+      <div class="content">a page dedicated to my favorite places and songs in video games. requires autoplay.</div>
+    </section>
+    <section class="panel">
+      <audio loop><source src="https://files.catbox.moe/f2ljlz.ogg" type="audio/ogg"></audio>
+      <img src="https://jegged.com/img/Games/Final-Fantasy-XII/TZA/FFXII-TZA-00695Z-Eruyt-Village-Road-Verdant-Praise-Entrance.png" />
+      <div class="content"><span class="place">eruyt village</span><span class="game">final fantasy xii (2006)</span></div>
+    </section>
+    <section class="panel">
+      <audio loop><source src="https://files.catbox.moe/sy2f1z.ogg" type="audio/ogg"></audio>
+      <!--<video muted loop autoplay><source src="jazzjin.mp4" type="video/mp4"></video>-->
+      <img src="jazzjin.avif" />
+      <div class="content"><span class="place">jazz jin</span><span class="game">persona 5 royal (2019)</span></div>
+    </section>
+    <section class="panel">
+      <audio loop><source src="https://files.catbox.moe/odlmvr.ogg" type="audio/ogg"></audio>
+      <img src="https://i0.wp.com/www.gamebleed.com/wp-content/uploads/2017/09/YAKUZA-0_20171004154454.png" />
+      <div class="content"><span class="place">serena</span><span class="game">yakuza series (2005)</span></div>
+    </section>
+    <section class="panel">
+      <audio loop><source src="https://files.catbox.moe/tptzao.ogg" type="audio/ogg"></audio>
+      <img src="fishermanshorizon.avif" />
+      <div class="content"><span class="place">fisherman's horizon</span><span class="game">final fantasy viii (1999)</span></div>
+    </section>
+    <section class="panel">
+      <audio loop><source src="https://files.catbox.moe/pugzo3.ogg" type="audio/ogg"></audio>
+      <img src="parabellum.avif" />
+      <div class="content"><span class="place">parabellum</span><span class="game">persona 2: eternal punishment (2000)</span></div>
+    </section>
+  </main>
+
+<script>
+
+console.clear();
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+const sections = document.querySelectorAll("section");
+const playlist = document.getElementsByTagName('audio');
+
+// this scrolling object just allows us to conveniently call scrolling.enable(), scrolling.disable(), and check if scrolling.enabled is true. 
+// some browsers (like iOS Safari) handle scrolling on a separate thread and can cause things to get out of sync (jitter/jumpy), so when we're animating the scroll position, force an update of GSAP tweens when there's a scroll event in order to maintain synchronization)
+const scrolling = {
+    enabled: true,
+    events: "scroll,wheel,touchmove,pointermove".split(","),
+    prevent: e => e.preventDefault(),
+    disable() {
+      if (scrolling.enabled) {
+        scrolling.enabled = false;
+        window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+        scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, scrolling.prevent, {passive: false}));
+      }
+    },
+    enable() {
+      if (!scrolling.enabled) {
+        scrolling.enabled = true;
+        window.removeEventListener("scroll", gsap.ticker.tick);
+        scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, scrolling.prevent));
+      }
+    }
+  };
+
+
+function goToSection(section, anim, i) {
+  if (scrolling.enabled) { // skip if a scroll tween is in progress
+    scrolling.disable();
+    gsap.to(window, {
+      scrollTo: {y: section, autoKill: false},
+      onComplete: scrolling.enable,
+      duration: 1
+    });
+
+    anim && anim.restart();
+  }
+}
+
+sections.forEach((section, i) => {
+  
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top bottom-=1",
+    end: "bottom top+=1",
+    onEnter: () => goToSection(section),
+    onEnterBack: () => goToSection(section)
+  });
+  
+  ScrollTrigger.create({
+      trigger: section,
+  
+      start: 'top center',
+      end: 'bottom center',
+      
+      onEnter() { playlist[i-1].play() },
+      onLeave() { playlist[i-1].pause() },
+      onEnterBack() { playlist[i-1].play() },
+      onLeaveBack() { playlist[i-1].pause() }
+  });
+ 
+});
+
+</script>
+</body>
+</html>
