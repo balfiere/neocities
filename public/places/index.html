@@ -38,7 +38,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100dvw;
-  min-height: 100vh;
+  min-height: 100dvh;
   font-size: 32px;
   line-height: 2;
   color: #FFFFFF;
@@ -46,7 +46,7 @@ body {
 
 section {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,6 +61,8 @@ video, img {
 }
 
 audio {
+  all: unset;
+  z-index: 5;
 }
 
 .content {
@@ -87,7 +89,7 @@ nav {
   position: fixed;
   text-align: center;
   width: 100vw;
-  height: 98vh;
+  height: 98dvh;
   display: flex;
   align-items:end;
   justify-content:center;
@@ -126,31 +128,31 @@ a{
     <section class="panel">
       <img src="https://jegged.com/img/Games/Final-Fantasy-XII/TZA/FFXII-TZA-00695Z-Eruyt-Village-Road-Verdant-Praise-Entrance.png" />
       <div class="content"><span class="place">eruyt village</span><span class="game">final fantasy xii (2006)</span>
-      <audio loop controls><source src="https://files.catbox.moe/f2ljlz.ogg" type="audio/ogg"></audio>
+      <audio loop controls src="https://files.catbox.moe/f2ljlz.ogg" type="audio/ogg"></audio>
       </div>
     </section>
     <section class="panel">
       <img src="jazzjin.avif" />
       <div class="content"><span class="place">jazz jin</span><span class="game">persona 5 royal (2019)</span>
-      <audio loop controls><source src="https://files.catbox.moe/sy2f1z.ogg" type="audio/ogg"></audio>
+      <audio loop controls src="https://files.catbox.moe/sy2f1z.ogg" type="audio/ogg"></audio>
       </div>
     </section>
     <section class="panel">
       <img src="https://i0.wp.com/www.gamebleed.com/wp-content/uploads/2017/09/YAKUZA-0_20171004154454.png" />
       <div class="content"><span class="place">serena</span><span class="game">yakuza series (2005)</span>
-      <audio loop controls><source src="https://files.catbox.moe/odlmvr.ogg" type="audio/ogg"></audio>
+      <audio loop controls src="https://files.catbox.moe/odlmvr.ogg" type="audio/ogg"></audio>
       </div>
     </section>
     <section class="panel">
       <img src="fishermanshorizon.avif" />
       <div class="content"><span class="place">fisherman's horizon</span><span class="game">final fantasy viii (1999)</span>
-      <audio loop controls><source src="https://files.catbox.moe/tptzao.ogg" type="audio/ogg"></audio>
+      <audio loop controls src="https://files.catbox.moe/tptzao.ogg" type="audio/ogg"></audio>
       </div>
     </section>
     <section class="panel">
       <img src="parabellum.avif" />
       <div class="content"><span class="place">parabellum</span><span class="game">persona 2: eternal punishment (2000)</span>
-      <audio loop controls><source src="https://files.catbox.moe/pugzo3.ogg" type="audio/ogg"></audio>
+      <audio loop controls src="https://files.catbox.moe/pugzo3.ogg" type="audio/ogg"></audio>
       </div>
     </section>
   </main>
