@@ -12,6 +12,12 @@
 </head>
 <body>
 
+<!-- header -->
+<header>
+    <!-- mobile button -->
+    <div id="open"><span id="open-icon"></span></div>
+</header><!-- end header -->
+
 <div id="container">
 
 <!-- sidebar -->
@@ -105,5 +111,14 @@ late 2022 since they look a little sad now haha.</p>
 
 </div>
 
+<script>
+
+  document.getElementById("open").addEventListener("click", function () {
+    document.getElementById('TOC').classList.toggle('open')
+    document.getElementById('open-icon').classList.toggle('close')
+  return false;
+})
+
+</script>
 </body>
 </html>

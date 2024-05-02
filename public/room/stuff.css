@@ -68,7 +68,6 @@ body {
 }
 
 #TOC {
-  float: left;
   position: sticky;
   top: 20%;
   height: 100%;
@@ -316,5 +315,105 @@ label, legend, fieldset {
 
   h1, h2, h3, h4, h5 {
     color: var(--background);
+  }
+}
+ 
+@media (max-width:800px) {
+  #TOC {
+    float: none;
+    position: fixed;
+    text-align: right;
+    top:80px;
+    right:0;
+    margin-right: 0;
+    height: auto;
+    max-height: 100%;
+    transition:all .3s;
+    transform:translate(270px);
+    -ms-transform:translate(270px);
+    -webkit-transform:translate(270px);
+    z-index: 100;
+    padding: 10px;
+    background: var(--background);
+  }
+
+  .content {
+    padding: 0 1em;
+  }
+
+  #TOC.open{
+  transform:translate(0);
+  -ms-transform:translate(0);
+  -webkit-transform:translate(0);
+  }
+
+  .main {
+    width: 100%;
+    float: none;
+  }
+
+  #open{
+    display:inline-block;
+    margin:0 5px;
+    position:fixed;
+    text-align:center;
+    height:60px;width:60px;
+    top:0;right:0;
+    z-index:1001;
+  }
+
+  #open-icon,#open-icon:before,#open-icon:after{
+    background:var(--text-shadow);
+  }
+
+  #open-icon{
+    display:block;
+    margin:-1px 0 0 -10px;
+    position:absolute;
+    top:25px;
+    left: 40px;
+    height:2px;
+    width:20px;
+  }
+
+  #open-icon:before,#open-icon:after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:50%;
+    left:0;
+    height:2px;
+    width:20px;
+    transition:.3s
+  }
+
+  #open-icon:before{margin-top:-8px}
+
+  #open-icon:after{margin-top:6px}
+
+  #open .close{background:transparent}
+
+  #open .close:before,#open .close:after{margin-top:0}
+
+  #open .close:before{
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+  }
+    
+  #open .close:after{
+    -ms-transform:rotate(-135deg);
+    -webkit-transform:rotate(-135deg);
+    transform:rotate(-135deg);
+  }  
+
+  @media (prefers-color-scheme: dark) {
+    #TOC {
+      background: rgba(29, 29, 29, 0.8);
+    }
+
+    #open-icon,#open-icon:before,#open-icon:after{
+      background:var(--text-dark);
+    }
   }
 }
