@@ -38,7 +38,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100dvw;
-  min-height: 100dvh;
+  min-height: 100vh;
   font-size: 32px;
   line-height: 2;
   color: #FFFFFF;
@@ -46,7 +46,7 @@ body {
 
 section {
   width: 100%;
-  height: 100dvh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +61,6 @@ video, img {
 }
 
 audio {
-    display: none;
 }
 
 .content {
@@ -84,11 +83,21 @@ audio {
 }
 
 nav {
+  z-index: 10;
   position: fixed;
-  bottom: 0.5em;
-  right: 1em;
+  text-align: center;
+  width: 100vw;
+  height: 98vh;
+  display: flex;
+  align-items:end;
+  justify-content:center;
+  line-height: 1;
   font-family: SeeD;
   text-shadow: 3px 3px 0 #000, 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
+}
+
+nav span {
+  padding: 0 1em;
 }
 
 a{
@@ -106,6 +115,8 @@ a{
 
 </head>
 <body>
+
+  <nav><span><a href="/about/index.html">back to about page</a> / <a href="/main/index.html">personal site homepage</a></span></nav>
     
   <main>
     <section class="panel">
@@ -139,8 +150,6 @@ a{
       <div class="content"><span class="place">parabellum</span><span class="game">persona 2: eternal punishment (2000)</span></div>
     </section>
   </main>
-
-  <nav><a href="/about/index.html">about page</a> / <a href="/main/index.html">personal site homepage</a></nav>
 
 <script>
 
