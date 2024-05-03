@@ -34,6 +34,8 @@
   font-display: swap;
 }
 
+/*----- body -----*/
+
 * {
   box-sizing: border-box;
 }
@@ -48,6 +50,17 @@ body {
   color: #FFFFFF;
   overflow-x: hidden;
 }
+
+a{
+  text-decoration: none;
+  color: rgb(191, 255, 246);
+  transition: all 0.3s ease;
+  &:hover{
+    color: rgb(119, 207, 196);
+  }
+}
+
+/*----- formatting layout -----*/
 
 section {
   margin: 0;
@@ -66,6 +79,8 @@ img {
   object-fit: cover;
   z-index: -1;
 }
+
+/*----- style text -----*/
 
 .content {
   position: relative;
@@ -86,6 +101,8 @@ img {
   text-shadow: 5px 5px 0 #000, 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
 }
 
+/*----- go back links -----*/
+
 nav {
   position: fixed;
   text-align: center;
@@ -102,15 +119,6 @@ nav {
 
 nav span {
   padding: 0 1em;
-}
-
-a{
-  text-decoration: none;
-  color: rgb(191, 255, 246);
-  transition: all 0.3s ease;
-  &:hover{
-    color: rgb(119, 207, 196);
-  }
 }
 
 </style>
