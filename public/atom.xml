@@ -13,6 +13,16 @@
   <id>https://kwaamfan.neocities.org/atom.xml</id>
   
   <entry>
+    <title>my favorite video game locations</title>
+    <link href="https://kwaamfan.neocities.org/places/"/>
+    <id>https://kwaamfan.neocities.org/?2024-05-03T01:41:35Z</id>
+    <updated>2024-05-03T01:41:49Z</updated>
+    <content type="html">
+		added a new page for &lt;a href=&quot;https://kwaamfan.neocities.org/places/&quot;&gt;my favorite video game locations&lt;/a&gt;! it works better if audio autoplay is enabled but you can manually toggle audio on and off too.
+	</content>
+  </entry>
+  
+  <entry>
     <title>new rss feed</title>
     <link href="https://kwaamfan.neocities.org/"/>
     <id>https://kwaamfan.neocities.org/?2024-04-30T07:03:01Z</id>
