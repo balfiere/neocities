@@ -1,5 +1,5 @@
 *.code-workspace
-test/
+eleventy/
 public/.vscode
 /codes/
 *.cmd
