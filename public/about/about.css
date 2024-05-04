@@ -139,20 +139,23 @@ section {
 /*----- body -----*/
 
 body{
-  font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-size: 0.9em;
-    line-height: 1.7em;
-    text-align: justify;
-    color: var(--text);
-    text-shadow: 1px 1px 1px var(--text-shadow);
+  font-family: "Epilogue", 'IBM Plex Sans Thai', 'IBM Plex Sans JP', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.9em;
+  line-height: 1.7em;
+  text-align: justify;
+  color: var(--text);
+  text-shadow: 1px 1px 1px var(--text-shadow);
   -webkit-font-smoothing: subpixel-antialiased;
--moz-osx-font-smoothing: grayscale;
-text-rendering: geometricPrecision;
-margin: 0px;
-padding: 0px;
-width: 100dvw;
-height: 100dvh;
-overflow-y: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  margin: 0px;
+  padding: 0px;
+  width: 100dvw;
+  height: 100dvh;
+  overflow-y: hidden;
 }
 
 #page{
@@ -160,8 +163,8 @@ overflow-y: hidden;
   padding: 0px;
   width: 100dvw;
   height: 100dvh;
-    background-image: url(images/bg.gif);
-    z-index: -10;
+  background-image: url(images/bg.gif);
+  z-index: -10;
 }
 
 a {
@@ -244,6 +247,7 @@ em, i {
 
 b, strong {
     color: var(--bold);
+    font-weight: 700;
 }
 
 hr {
