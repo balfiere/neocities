@@ -139,7 +139,7 @@ section {
 /*----- body -----*/
 
 body{
-  font-family: epilogue;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: 0.9em;
     line-height: 1.7em;
     text-align: justify;
@@ -364,6 +364,10 @@ figure {
     font-size: 32px;
 }
 
+.main-title h1 {
+  all: unset;
+}
+
 .stats-title {
   margin: -26px 0 0 11px;
 }
@@ -465,7 +469,7 @@ figure {
     margin: 0;
 }
 
-.main {
+main {
 	float: right;
 	width: 788px;
 	height: 100%;
@@ -568,7 +572,7 @@ figure {
   -webkit-transform:translate(0);
   }
 
-  .main {
+  main {
     width: 100%;
     float: none;
   }
