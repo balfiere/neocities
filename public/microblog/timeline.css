@@ -27,8 +27,12 @@
     --gutter:3em;
 
 	/*-- boxes --*/
-	--border: rgb(51, 51, 51);
+	--border: #877cdb;
 	--color-container-background: rgb(238, 238, 238);
+    --pink-box-shadow: rgba(241, 78, 182, 0.4) 5px 5px, rgba(241, 78, 182, 0.3) 10px 10px, rgba(241, 78, 182, 0.2) 15px 15px, rgba(241, 78, 182, 0.1) 20px 20px, rgba(241, 78, 182, 0.05) 25px 25px;
+    --purple-box-shadow: rgba(91, 85, 184, 0.4) 5px 5px, rgba(91, 85, 184, 0.3) 10px 10px, rgba(91, 85, 184, 0.2) 15px 15px, rgba(91, 85, 184, 0.1) 20px 20px, rgba(91, 85, 184, 0.05) 25px 25px;
+    --pink-box-shadow-mobile: rgba(241, 78, 182, 0.4) 0px 5px, rgba(241, 78, 182, 0.3) 0px 10px, rgba(241, 78, 182, 0.2) 0px 15px, rgba(241, 78, 182, 0.1) 0px 20px, rgba(241, 78, 182, 0.05) 0px 25px;
+    --purple-box-shadow-mobile: rgba(91, 85, 184, 0.4) 0px 5px, rgba(91, 85, 184, 0.3) 0px 10px, rgba(91, 85, 184, 0.2) 0px 15px, rgba(91, 85, 184, 0.1) 0px 20px, rgba(91, 85, 184, 0.05) 0px 25px;
 
 	/*-- gradients --*/
     --sunset-gradient:linear-gradient(25deg, rgb(228, 140, 198) 0%,rgb(201, 125, 201) 42.86%,rgb(178, 149, 213) 100%);
@@ -257,7 +261,7 @@ figure {
 }
 
 article {
-    border: 1px solid var(--border); 
+    box-shadow: var(--pink-box-shadow);
     background-color: var(--color-container-background);
     text-align: left;
     margin-bottom: var(--gutter);
@@ -305,8 +309,9 @@ time {
 }
 .sidebar aside {
     vertical-align: middle;
-    border: 1px solid var(--border); 
     background-color: var(--color-container-background);
+    box-shadow: var(--pink-box-shadow);
+    padding: 0.1em;
 }
 .sidebar aside .handle{
     font-size: 1.1em;
@@ -364,7 +369,6 @@ article img {
 
 header, footer{
 	background-image:var(--sunset-gradient-transparent);
-    border: solid 1px var(--border);
     padding: 0.8em;
 }
 
@@ -374,13 +378,14 @@ header {
     font-size: 1.5em;
     color: white;
 	text-shadow: 0 0 3px var(--color-shadow);
+    box-shadow: var(--pink-box-shadow);
 }
 
 footer {
     margin: 0 var(--gutter)var(--gutter)var(--gutter);
 	font-family: var(--font-heading);
+    box-shadow: var(--purple-box-shadow);
 }
-
 footer a{
     color: white;
     background: unset;
@@ -408,13 +413,13 @@ footer a{
         z-index: 33;
         text-align: center;
         width: 100%;
+        box-sizing: border-box;
         background-image:var(--sunset-gradient);
-        border: solid 1px var(--border);
         padding: .2em;
         & a {
-        color: white;
-        background: unset;
-        text-shadow: 0 0 3px var(--color-shadow);
+            color: white;
+            background: unset;
+            text-shadow: 0 0 3px var(--color-shadow);
         }
     }
     
@@ -440,9 +445,8 @@ footer a{
         margin: 0;
     }
 
-    article, .sidebar aside, header, footer {
-        border-left: none;
-        border-right: none;
+    article, .sidebar aside, header, #mobilenav {
+        box-shadow: var(--pink-box-shadow-mobile);
     }
 
     article {
@@ -466,8 +470,8 @@ footer a{
     }
 
     .sidebar aside, article {
-        border: 1px solid var(--border-dark); 
         background-color: var(--color-container-background-dark);
+        box-shadow: var(--purple-box-shadow);
     }
 
 	h2::after{
@@ -476,7 +480,7 @@ footer a{
 
     header, footer{
         background-image:var(--dusk-gradient-transparent);
-        border: solid 1px var(--border-dark);
+        box-shadow: var(--purple-box-shadow);
     }
 
     header, footer a {
@@ -517,22 +521,14 @@ footer a{
 
         #mobilenav {
             background-image: var(--dusk-gradient);
-            border-bottom: solid 1px var(--border-dark);
             & a {
                 color: black;
                 text-shadow: 0 0 3px var(--color-shadow-dark);
             }
         }
 
-        .sidebar aside, article, header {
-            border-left: none;
-            border-right: none;
-        }
-
-        footer {
-            border-left: none;
-            border-right: none;
-            border-bottom: none;
+        .sidebar aside, article, header, #mobilenav {
+            box-shadow: var(--purple-box-shadow-mobile);
         }
 
     }
