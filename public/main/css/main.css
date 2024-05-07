@@ -223,9 +223,10 @@ body{
     top: 0;
     left: 0;
     color:var(--text);
-    font-family: "Montserrat", "IBM Plex Sans Thai", "IBM Plex Sans JP", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    font-weight: 400;
     font-size:1em;
     line-height:1.5;
     text-align:left;
@@ -248,7 +249,7 @@ body{
 #wrapper{
     margin:0 auto;
     text-align:left;
-    width:820px; /* 大きさはここで変更 変更した場合は下の方のmax-width: 1040pxの値も変更 */
+    width:820px;
 }
 
 header{
@@ -383,9 +384,9 @@ nav li span:hover:after {
 }
 
 nav li span.open:after{
--ms-transform:rotate(135deg);
--webkit-transform:rotate(135deg);
-transform:rotate(135deg);
+    -ms-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    transform:rotate(135deg);
 }
 
 #open{display:none}
@@ -490,8 +491,9 @@ a {
     }
 }
 
-b {
+b, strong {
     color: var(--bold);
+    font-weight: 700;
 }
 
 input,textarea{
