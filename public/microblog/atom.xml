@@ -12,6 +12,21 @@
   <id>https://kwaamfan.neocities.org/microblog/atom.xml</id>
   
   <entry>
+    <title>Monday, May 06 2024</title>
+    <link href="https://kwaamfan.neocities.org/microblog/#7"/>
+    <id>https://kwaamfan.neocities.org/microblog/#7</id>
+    <updated>2024-05-07T00:24:59Z</updated>
+    <content type="html">
+      &lt;figure style=&quot;float:right;max-width: 400px;margin-left: 1em;&quot;&gt;
+        &lt;img src=&quot;https://kwaamfan.neocities.org/microblog/images/20240506peach.jpg&quot; alt=&quot;pink flowers on a peach tree&quot; /&gt;
+        &lt;figcaption&gt;the peach tree in my backyard bloomed like two weeks ago but they're still hanging on... proud of her&lt;/figcaption&gt;
+      &lt;/figure&gt;
+      &lt;p&gt;i added a new &lt;a href=&quot;https://kwaamfan.neocities.org/places/index.html&quot;&gt;page&lt;/a&gt; on my site last week for my favorite video game locations. i've had this idea for awhile now, and i knew i wanted animated backgrounds, but i didn't know how to best implement them. after fiddling with turning my recordings into gif, webp, and mp4 files i learned about the avif format and omg the file size... it's like a tenth of the size of the gif versions i made and the quality is way better too. i was able to make the gif on my languages page 5mb (it was originally... 50mb....... 🙈) and the haruka gif on my resources site homepage only 552 kb! makes me wonder what the hell i was doing spending all that time on tumblr making gifsets while fighting for my life to make each gif less than 10mb 😭 i still have more places i want to add, but i need to find more free cam/no hud mods for some games.&lt;/p&gt;
+      &lt;p&gt;i also overhauled my &lt;a href=&quot;https://kwaamfan.neocities.org/resources/index.html&quot;&gt;resources site&lt;/a&gt; to be generated with &lt;a target=&quot;_blank&quot; href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt;. it's now completely navigable without javascript enabled, even on mobile 🥳 i'm gonna keep tweaking my personal site to be functional without javascript. i saw some examples of pure css sidebar toggle on codepen that i want to try to implement. i doubt anyone who might view this site on mobile would also not have javascript enabled (tbh it's hard to think that anyone views this site at all), but i think it's a fun challenge. i feel like i learn more about what's possible with just html and css, and it gives me new ideas for my site.&lt;/p&gt;
+    </content>
+  </entry>
+  
+  <entry>
     <title>Tuesday, April 30 2024</title>
     <link href="https://kwaamfan.neocities.org/microblog/#6"/>
     <id>https://kwaamfan.neocities.org/microblog/#6</id>
