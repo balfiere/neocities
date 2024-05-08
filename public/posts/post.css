@@ -350,30 +350,46 @@ template {
 
 body {
   width: 100vw;
-  height: 100vh;
-  font-size: 16px;
+  height: 100dvh;
+	font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans JP';
   line-height: 1.6;
-  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
-header{
+
+footer{
   position: fixed;
   width: 100%;
   z-index: 10;
-  top: 0;
+  bottom: 0;
+  font-size: 1.5em;
+  background-color: #8080ff;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  & a {
+    color: white;
+  }
+  & a:nth-child(2) {
+    text-align: right;
+  }
 }
+
+/* --- wrapper --- */
 
 .wrapper {
   display: grid;
-  width: 100%;
+  width: 95vw;
   max-width: 1500px;
   margin: 0 auto;
   grid-auto-rows: 300px 300px 300px; 
   grid-template-columns: 1fr 2fr; 
   grid-template-rows: 1fr; 
-  column-gap: 1em;
   grid-template-areas: 
     "toc contents"; 
 }
+
+/* --- sidebar --- */
 
 .toc {
   position: sticky;
@@ -385,6 +401,9 @@ header{
   grid-area: toc;
   overflow-x: hidden;
   white-space:normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .toc ul {
@@ -424,33 +443,97 @@ header{
   transition: all 0.3s ease;
 }
 
+/* --- main contents ---*/
+
 .contents {
   font-size: 1.2em;
-  font-family: 'Frank Ruhl Libre', sans-serif; 
   grid-area: contents;
+  padding: 1em;
+  margin-bottom: 5em;
 }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  vertical-align:middle;
+}
+
+h1 img {
+  height: 1em;
+  margin-bottom: 9px;
+}
+
+h2 img {
+  height: 0.93em;
+  margin-bottom: 6px;
+}
+
+h3 img {
+  height: 0.88em;
+  margin-bottom: 5px;
+}
+
+a {
+  color: #8080ff;
+}
+
+a[href*="//"]:not([href*="kwaamfan.neocities.org"])::after{
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  content: "";
+  background: url(/posts/external-link.svg) no-repeat 0 0;
+  background-size: 100%;
+ }
+
 .contents img {
   max-width: 100%;
 }
+
 .contents .code-block {
   white-space: pre;
   overflow: auto;
   max-width: 100%;
 }
+
 .contents .code-block code {
   display: block;
   background-color: #f9f9f9;
   padding: 10px;
 }
+
 .contents .code-inline {
   background-color: #f9f9f9;
   padding: 4px;
 }
+
 .contents h2, .contents h3 {
   padding-top: 1em;
 }
+
 @media screen and (max-width: 1200px) {
   body {
     font-size: 14px;
  }
+}
+
+@media screen and (max-width: 840px){
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+  }
+  .toc{
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+    font-size: 1.2em;
+    & li a {
+      color: unset;
+    }
+  }
+  .contents {
+    margin-top: 0;
+  }
 }
