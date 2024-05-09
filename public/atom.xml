@@ -13,6 +13,18 @@
   <id>https://kwaamfan.neocities.org/atom.xml</id>
   
   <entry>
+    <title>website building resources page released</title>
+    <link href="https://kwaamfan.neocities.org/resources/other/sitebuilding/"/>
+    <id>https://kwaamfan.neocities.org/?2024-05-09T07:05:51Z</id>
+    <updated>2024-05-09T07:05:51Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        finally released my <a href="https://kwaamfan.neocities.org/resources/other/sitebuilding/">website building</a> page on my resources site to the public! i still want to add sections for graphics and accessibility in the future though. i did some behind-the-scenes updates to the code on my resources site last week to make it functional without javascript, so if something looks broken please hard refresh (ctrl+f5)
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
     <title>my favorite video game locations</title>
     <link href="https://kwaamfan.neocities.org/places/"/>
     <id>https://kwaamfan.neocities.org/?2024-05-03T01:41:35Z</id>
