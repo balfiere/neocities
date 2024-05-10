@@ -75,6 +75,22 @@ section {
 /*----- fonts -----*/
 
 @font-face {
+  font-family: 'Rodin';
+  src: url('/fonts/FOT-Rodin\ Pro\ M.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rodin';
+  src: url('/fonts/FOT-RodinProN-EB.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'seed';
   src: url('/fonts/SeeDComputer.woff2') format('woff2'),
       url('/fonts/SeeDComputer.woff') format('woff');
@@ -139,11 +155,11 @@ section {
 /*----- body -----*/
 
 body{
-  font-family: "Epilogue", 'IBM Plex Sans Thai', 'IBM Plex Sans JP', sans-serif;
+  font-family: "Rodin", 'IBM Plex Sans Thai', 'IBM Plex Sans JP', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1.7em;
   text-align: justify;
   color: var(--text);

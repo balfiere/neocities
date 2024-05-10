@@ -452,6 +452,10 @@ footer{
   margin-bottom: 5em;
 }
 
+.contents p {
+  text-indent: 2em;
+}
+
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
   margin: 0;
   padding: 0;

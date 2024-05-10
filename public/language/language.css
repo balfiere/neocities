@@ -173,7 +173,7 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-a:hover {
+a:hover, a:focus {
     color: var(--link-hover);
   background: var(--link-hover-background);
   border-radius: 5px;
@@ -304,7 +304,7 @@ hr {
 	text-shadow: 0px 0px 1px var(--container-background);
 }
 
-.back a:hover {
+.back a:hover, .back a:focus {
     color: var(--text);
 	text-shadow: 0px 0px 2px var(--text);
   background: none;
@@ -326,12 +326,22 @@ tab-container {
 /*
 TAB CONTROLS
 Hide radios */
-input {display: none;}
+input {
+	height: 0;
+	left: -9999rem;
+	overflow: hidden;
+	pointer-events: none;
+	position: absolute;
+	user-select: none;
+	width: 0;
+}
+
 input:checked + label {
 	color: var(--label-hover);
 	background-color: rgba(255,255,255,0.0);
 	transition: all 250ms;
 }
+
 label {
 	cursor: pointer;
 	transition: color 250ms;
@@ -341,7 +351,9 @@ label {
 	text-align: center;
 	transition: all 250ms;
 }
+
 label:last-of-type {border: none; }
+
 label:hover {
 	color: var(--label-hover);
 	background-color: rgba(255,255,255,0.05);
@@ -379,21 +391,12 @@ input#tabToggle04:checked ~ tab-content:not(:nth-of-type(4)) {display: none;}
 	}
 
 	.back a{
-		/*
-		color: black;
-		font-style: bold!important;
-		text-shadow: 0px 0px 0px 2px black;
-		*/
 		background-color: #95c5f9b7;
 		box-shadow: 0 0 4px 4px #95c5f9b7;
 		border-radius: 10px;
 	}
 
-	.back a:hover {
-		/*
-		color: var(--link-hover);
-		text-shadow: 0px 0px 2px var(--link);
-		*/
+	.back a:hover, .back a:focus {
 		background-color: #95c5f9a9;
 		border-radius: 10px;
 	}
@@ -441,7 +444,7 @@ input#tabToggle04:checked ~ tab-content:not(:nth-of-type(4)) {display: none;}
 		-o-transition: all 0.3s ease-in-out;
 		-ms-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
-		&:hover{
+		&:hover, :focus{
 			opacity: 1;
 		}
 	}

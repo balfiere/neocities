@@ -80,6 +80,22 @@ section {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Rodin';
+  src: url('/fonts/FOT-Rodin\ Pro\ M.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rodin';
+  src: url('/fonts/FOT-RodinProN-EB.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*----- text highlight -----*/
 
 ::selection {
@@ -119,7 +135,7 @@ section {
 body {
   color: var(--text);
   font-size: 1em;
-  font-family: "Zen Maru Gothic", serif;
+  font-family: "Rodin", serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
@@ -178,9 +194,9 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-b {
+b, strong {
     color: var(--bold);
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h1 {

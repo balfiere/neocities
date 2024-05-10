@@ -23,11 +23,11 @@ a {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
 
-  &:hover {
-    color: var(--link-hover);
-    background-size: 100% 100%;
-  }
+a:hover, a:focus {
+  color: var(--link-hover);
+  background-size: 100% 100%;
 }
 
 a:has(img) {
@@ -82,7 +82,16 @@ blockquote {
   /* visual styling */
   width:45px;
   aspect-ratio:1;
-  background:var(--pagetop-background);
+  background-color: var(--pagetop-background);
+  background-image:linear-gradient(var(--pagetop-hover),var(--pagetop-hover));
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border:var(--pagetop-border);
   border-radius: var(--pagetop-border-radius);
   box-shadow:5px 5px 0px rgba(150, 138, 255, 0.4);
@@ -96,6 +105,10 @@ blockquote {
   transform:translateY(20%) rotate(-45deg);
   border-top:var(--pagetop-arrow);
   border-right:var(--pagetop-arrow);
+}
+
+.top:hover, .top:focus-visible {
+  background-size: 100% 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -115,7 +128,7 @@ blockquote {
   }
 
   .top {
-    background:var(--pagetop-background-dark);
+    background-color: var(--pagetop-background-dark);
     border:var(--pagetop-border-dark);
     box-shadow:5px 5px 0px rgba(69, 48, 255, 0.6);
     -webkit-box-shadow:5px 5px 0px rgba(69, 48, 255, 0.6);

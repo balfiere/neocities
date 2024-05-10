@@ -74,7 +74,8 @@ table {
     
     /*----- pagetop button-----*/
     --pagetop-background: #f7f7f7;
-    --pagetop-border:solid 1px rgba(150, 138, 255, 0.6);
+    --pagetop-hover:rgba(150, 138, 255, 0.4);
+    --pagetop-border:solid 1px rgba(150, 138, 255, 0.9);
     --pagetop-border-radius: 10px;
     --pagetop-arrow:solid 4px rgba(150, 138, 255, 0.9);
     
@@ -109,7 +110,7 @@ table {
 	--link-hover-background-dark: rgba(34, 126, 83, 121);
     --text-dark: #ddd;
     --sidebar-link-color-dark: #ddd;
-    --pagetop-background-dark: #242424;
+    --pagetop-background-dark: rgb(19, 19, 19);
     --pagetop-border-dark:solid 1px rgb(69, 48, 255);
     --pagetop-arrow-dark:solid 4px rgb(125, 110, 255);
   }
@@ -216,6 +217,11 @@ img {
     image-rendering: -webkit-optimize-contrast;
 }
 */
+
+a:focus *, a:focus {
+    outline: 2px solid var(--link);
+}
+
 body{
     position: absolute;
     width: 100dvw;
@@ -308,7 +314,7 @@ footer{
     clear: both;
     float:inline-end;
     margin-top: 10px;
-    & a:hover{
+    & a:hover, a:focus{
         color: white;
     }
 }
@@ -343,7 +349,7 @@ nav img {
     vertical-align: middle!important;
 }
 
-nav li a:hover,nav li span:hover{
+nav li a:hover, nav li a:focus,nav li span:hover, nav li span:focus{
     background:var(--sidebar-hover-bg-color);
     border-radius:5px;
     color:var(--window-text-background);
@@ -378,7 +384,7 @@ nav li span:after{
     transition:.3s
 }
 
-nav li span:hover:after {
+nav li span:hover:after, nav li span:focus:after {
     border-top:solid 2px var(--window-text-background);
     border-right:solid 2px var(--window-text-background);
 }
@@ -486,7 +492,7 @@ a {
     -o-transition:all 0.3s ease-in-out;
     -ms-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    &:hover{
+    &:hover,:focus{
         color: var(--link-hover);
     }
 }
