@@ -361,11 +361,10 @@ article .short-bio{
     font-style: italic;
     word-wrap: break-word;
 }
-article img {
+article img, p img {
     max-width: 100%;
+    height: auto;
     image-rendering: initial;
-    z-index: 10;
-    position:relative;
 }
 
 .primary:after {
