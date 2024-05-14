@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sitemap</title>
+<link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
+<link rel="shortcut icon" href="favicon.gif">
+
+<!-- styling -->
+<link rel="stylesheet" href="https://unpkg.com/98.css">
+
+</head>
+
+<style>
+  body {
+    background-image: url(background.gif);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+  }
+
+main {
+  max-width: 40em;
+  display: flex;
+  padding: 76px 40px 30px 90px;
+  position: relative;
+}
+
+.window {
+  margin: 0 auto;
+}
+
+.doll {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.kero {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
+
+<body>
+
+<main>
+<div class="window glass active">
+  <div class="title-bar">
+    <div class="title-bar-text">My Site Map</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body has-space" style="max-height: 70vh; overflow-y: scroll;">
+    <ul class="tree-view has-collapse-button has-connector has-container"><!---->
+      <ul>
+      <li><a href="/index.html"><folder>/landing.html</folder></a></li>
+      <li><folder><icon/>/personal-site</folder>
+          <ul>
+              <li><folder><icon/>/about</folder>
+                  <ul>
+                  <li><a href="/about/index.html">/index.html</a></li>
+                  <li><a href="/room/index.html">/my-room.html</a></li>
+                  <li><a href="/places/index.html">/favorite-locations.html</a></li>
+                  </ul>
+              </li>
+              <li><folder><icon/>Mammals</folder>
+              <ul>
+              <li><folder class="selected"><icon/>Elephant</folder></li>
+              <li>
+                  <a href="#"><folder><icon/>Mouse</folder></a>
+                  <ul><li>hello</li></ul>
+              </li>
+              </ul>
+          </li>
+          <li><folder><icon/>Reptiles</folder></li>
+          </ul>
+      </li>
+      <li><folder><icon/>resources site</folder>
+          <ul>
+              <li><a href="/index.html"><folder>/index.html</folder></a></li>
+              <li><folder><icon/>about</folder></li>
+              <li><folder><icon/>Mammals</folder>
+              <ul>
+              <li><folder class="selected"><icon/>Elephant</folder></li>
+              <li>
+                  <a href="#"><folder><icon/>Mouse</folder></a>
+                  <ul><li>hello</li></ul>
+              </li>
+              </ul>
+          </li>
+          <li><folder><icon/>Reptiles</folder></li>
+          </ul>
+      </li>
+      </ul>
+  </ul>
+  </div>
+  <div class="status-bar">
+    <p class="status-bar-field">Press F1 for help</p>
+    <p class="status-bar-field">Slide 1</p>
+    <p class="status-bar-field">CPU Usage: 14%</p>
+  </div>
+</div>
+<div class="doll"><img src="ccs1.gif"></div>
+<div class="kero"><img src="kero.gif"></div>
+</main>
+
+<script>
+  // if your messages have a variable width (like 90% or 80vw) it'll probably be blurry if the viewport is an odd number. this is a hack i came up to help mitigate the issue
+
+  // Firefox 1.0+
+var isFirefox = typeof InstallTrigger !== 'undefined';
+
+// Chrome 1 - 79
+var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+  
+function round(N,pre) {
+  const x = Math.ceil(N.clientWidth / pre) * pre;
+  N.style.width = x + 'px';
+
+  if (document.querySelector('body').clientWidth % 2 == 1 ){
+    document.querySelector('main').style.marginLeft = "-1px"; 
+  }
+  
+  if (N.style.width % 2 == 0){
+    if (isChrome == true) {
+      N.style.width = round(N.style.width);
+    } 
+    if (isFirefox == true) {
+      N.style.marginLeft = "-0.5px"; 
+    }
+  } else {
+    N.style.marginLeft = "0px";
+  }
+}
+
+const fn = () => {
+  const wrapper = document.querySelector('.window');
+  wrapper.style.width = 'unset';
+  round(wrapper,2);
+}
+
+fn()
+
+window.addEventListener('load', fn)
+window.addEventListener('resize', fn)
+</script>
+
+  </body>
+</html>
