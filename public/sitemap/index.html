@@ -23,6 +23,14 @@
     justify-content: center;
   }
 
+  a {
+    color: #9dd124!important;
+    transition: all 0.3s;
+    &:hover,&:focus {
+      color: #fbb7c5!important;
+    }
+  }
+
 main {
   max-width: 40em;
   display: flex;
@@ -32,6 +40,10 @@ main {
 
 .window {
   margin: 0 auto;
+}
+
+.title-bar {
+  background:linear-gradient(90deg,#fbb7c5,#f6dfd7);
 }
 
 .doll {
@@ -44,6 +56,19 @@ main {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .has-container {
+    background-color: rgb(39, 39, 39)!important;
+    color: white!important;
+  }
+
+  ul.tree-view ul > li::after {
+    background: rgb(39, 39, 39)!important;
+
+  }
+  
 }
 </style>
 
@@ -62,44 +87,24 @@ main {
   <div class="window-body has-space" style="max-height: 70vh; overflow-y: scroll;">
     <ul class="tree-view has-collapse-button has-connector has-container"><!---->
       <ul>
-      <li><a href="/index.html"><folder>/landing.html</folder></a></li>
-      <li><folder><icon/>/personal-site</folder>
+        <li></li><a href="/index.html"><li>/landing.html</li></a>
+        <li>/personal-site</li>
           <ul>
-              <li><folder><icon/>/about</folder>
-                  <ul>
-                  <li><a href="/about/index.html">/index.html</a></li>
-                  <li><a href="/room/index.html">/my-room.html</a></li>
-                  <li><a href="/places/index.html">/favorite-locations.html</a></li>
-                  </ul>
-              </li>
-              <li><folder><icon/>Mammals</folder>
-              <ul>
-              <li><folder class="selected"><icon/>Elephant</folder></li>
-              <li>
-                  <a href="#"><folder><icon/>Mouse</folder></a>
-                  <ul><li>hello</li></ul>
-              </li>
-              </ul>
-          </li>
-          <li><folder><icon/>Reptiles</folder></li>
+            <li>/about</li>
+            <ul>
+              <li></li><a href="/about/index.html"><li>/index.html</li></a>
+                <ul><li>get to know a bit more about me, my history on the internet, and favorite media</li></ul>
+              <li></li><a href="/room/index.html"><li>/my-room.html</li></a>
+                <ul><li>my console collection and history with gaming, plus some fiber arts projects</li></ul>
+              <li></li><a href="/places/index.html"><li>/places.html</li></a>
+                <ul><li>a page for my favorite video game locations and songs</li></ul>
+            </ul>
+            <li>/main</li>
+            <ul>
+              <li></li><a href="/main/index.html"><li>/index.html</li></a>
+            </ul>
           </ul>
-      </li>
-      <li><folder><icon/>resources site</folder>
-          <ul>
-              <li><a href="/index.html"><folder>/index.html</folder></a></li>
-              <li><folder><icon/>about</folder></li>
-              <li><folder><icon/>Mammals</folder>
-              <ul>
-              <li><folder class="selected"><icon/>Elephant</folder></li>
-              <li>
-                  <a href="#"><folder><icon/>Mouse</folder></a>
-                  <ul><li>hello</li></ul>
-              </li>
-              </ul>
-          </li>
-          <li><folder><icon/>Reptiles</folder></li>
-          </ul>
-      </li>
+        <li>/resources-site</li>
       </ul>
   </ul>
   </div>

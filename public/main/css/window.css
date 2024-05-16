@@ -12,6 +12,11 @@ button {
     -moz-osx-font-smoothing: inherit;
     -webkit-appearance: none;
     appearance: none;
+    &:focus {
+        outline: 4px solid var(--link);
+        z-index: 99;
+        position: relative;
+    }
 }
 
 /*----- windows -----*/
@@ -148,6 +153,20 @@ button {
     object-fit: none;
 }
 
+.buttons a:has(img) {
+    outline: none!important;
+  } 
+
+.buttons a:has(img):focus img {
+    outline: 4px solid var(--link);
+    z-index: 99;
+    position: relative;
+  }  
+
+  * {
+    box-sizing: border-box;
+    }
+
 .chatbox {
     top:2vh;
     right:2vh;
@@ -182,3 +201,11 @@ button {
     text-align: center;
     font-size: 9px;
 }
+
+.webrings a:has(img) {
+    outline: none!important;
+  } 
+
+.webrings a:has(img):focus img {
+    outline: 4px solid var(--link);
+  }  

@@ -1,8 +1,8 @@
 /*----- base formatting -----*/
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+h1, h3, h2, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, 
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -68,9 +68,10 @@ table {
 	--highlight-background: #b5ffdc46;
     --h1-text:#444444;
     --h1-shadow:#78c5a167;
-    --h2-underline:rgba(150, 138, 255, 0.3);
-    --h3-color:rgb(37, 37, 37);
-    --h3-background: rgba(181, 255, 220, 0.6);
+    --h3-underline:rgba(150, 138, 255, 0.3);
+    --h2-color:rgb(37, 37, 37);
+    --h2-background: rgba(181, 255, 220, 0.6);
+	--color-code: rgba(187, 187, 187, 0.2);
     
     /*----- pagetop button-----*/
     --pagetop-background: #f7f7f7;
@@ -204,22 +205,17 @@ table {
 }
   
 /*----- body -----*/
+
 html{
     font-size:100%;
     height:100dvh;
     width: 100dvw;
 }
-/*
-img {
-    image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-    image-rendering: -webkit-optimize-contrast;
-}
-*/
 
-a:focus *, a:focus {
-    outline: 2px solid var(--link);
+a:focus, iframe:focus, #leftcolumn-inner a:focus, summary:focus {
+    outline: 4px solid var(--link);
+    z-index: 99;
+    position: relative;
 }
 
 body{
@@ -265,6 +261,7 @@ header{
 .if-container{
     display:inline-block;
     margin:0 auto;
+    padding: 0 0 0.6em 0;
     height:100%;
     width:100%;
     overflow:auto;
@@ -426,20 +423,20 @@ h1{
     text-rendering: geometricPrecision;
 }
 
-h2,
-.h2 {
+h3,
+.h3 {
     font-family: silkscreen, nineteen93, maru;
     font-weight:700;
     font-size: 16px;
-    text-decoration: underline solid var(--h2-underline) 3px;
+    text-decoration: underline solid var(--h3-underline) 3px;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: geometricPrecision;
     padding-bottom: 0.3em;
 }
 
-h3,
-.h3 {
+h2,
+.h2 {
     font-family: nineteen93, maru;
     font-weight:normal;
     font-size: 18px;
@@ -447,8 +444,8 @@ h3,
     text-align: right;
     vertical-align: middle;
     padding: 2px 10px;
-    color: var(--h3-color);
-    background-color: var(--h3-background);
+    color: var(--h2-color);
+    background-color: var(--h2-background);
     margin: 4px 0;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -538,7 +535,7 @@ nav s, nav strike{
 }
 
 .ln01{
-    border-left:8px solid var(--h3-background);
+    border-left:8px solid var(--h2-background);
     margin:8px 0;
     padding:3px
 }
@@ -633,7 +630,7 @@ position:fixed;
 top:0;right:0;
 z-index:1000
 }
-#leftcolumn h3{
+#leftcolumn h2{
     text-align: left;
 }
 #leftcolumn a{
@@ -680,7 +677,7 @@ z-index:1001
 }
 
 @media (prefers-color-scheme: dark) {
-    body, input, textarea, #s-m-t-tooltip, h2, .h2 {
+    body, input, textarea, #s-m-t-tooltip, h3, .h3 {
         color: var(--text-dark);
     }
 

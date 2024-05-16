@@ -6,47 +6,175 @@
 <title>vegan page</title>
 <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
 <link rel="shortcut icon" href="images/favicon.gif">
-<link rel="stylesheet" href="vegan.css">
 
-<!-- fonts -->
+<!-- styling -->
+<link rel="stylesheet" href="https://unpkg.com/7.css">
+<style>
+body{
+  background-image: url(images/background.gif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-<!-- scripts -->
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  width: 90vw;
+  max-width: 70em;
+  position: relative;
+}
+
+.window {
+  width: 100%;
+}
+
+.inside {
+  padding: 1em;
+}
+
+article {
+  height: 65vh;
+  overflow-y: scroll;
+}
+
+</style>
 
 </head>
 <body>
 
-<div id="wrapper">
+<main>
+  <div class="window active glass active">
+    <div class="title-bar">
+      <div class="title-bar-text">kwaamfan's vegan page</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close" title="go back to homepage" onclick="location.href='/main/';"></button>
+      </div>
+    </div>
+    
+    <div class="window-body">
+      <ul role="menubar" class="can-hover">
+        <li role="menuitem" tabindex="0" aria-haspopup="true">
+          File
+          <ul role="menu">
+            <li role="menuitem">
+              <a href="#menubar">
+                Open <span>Ctrl+O</span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="#menubar">
+                Save <span>Ctrl+S</span>
+              </a>
+            </li>
+            <li role="menuitem" class="has-divider">
+              <a href="#menubar">
+                Save As... <span>Ctrl+Shift+S</span>
+              </a>
+            </li>
+            <li role="menuitem"><a href="#menubar">Exit</a></li>
+          </ul>
+        </li>
+        <li role="menuitem" tabindex="0" aria-haspopup="true">
+          Edit
+          <ul role="menu">
+            <li role="menuitem"><a href="#menubar">Undo</a></li>
+            <li role="menuitem"><a href="#menubar">Copy</a></li>
+            <li role="menuitem"><a href="#menubar">Cut</a></li>
+            <li role="menuitem" class="has-divider"><a href="#menubar">Paste</a></li>
+            <li role="menuitem"><a href="#menubar">Delete</a></li>
+            <li role="menuitem"><a href="#menubar">Find...</a></li>
+            <li role="menuitem"><a href="#menubar">Replace...</a></li>
+            <li role="menuitem"><a href="#menubar">Go to...</a></li>
+          </ul>
+        </li>
+        <li role="menuitem" tabindex="0" aria-haspopup="true">
+          View
+          <ul role="menu">
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              Zoom
+              <ul role="menu">
+                <li role="menuitem"><button>Zoom In</button></li>
+                <li role="menuitem"><button>Zoom Out</button></li>
+              </ul>
+            </li>
+            <li role="menuitem"><a href="#menubar">Status Bar</a></li>
+          </ul>
+        </li>
+        <li role="menuitem" tabindex="0" aria-haspopup="true">
+          Help
+          <ul role="menu">
+            <li role="menuitem"><a href="#menubar">View Help</a></li>
+            <li role="menuitem"><a href="#menubar">About</a></li>
+          </ul>
+        </li>
+      </ul>
 
-  <div class="header"><img src="images/header.gif"></div>
+      <div class="inside">
+      <menu role="tablist" aria-label="Window with Tabs">
+        <button role="tab" aria-controls="one" aria-selected="true">home</button>
+        <button role="tab" aria-controls="two">toybox</button>
+        <button role="tab" aria-controls="three">recipes</button>
+        <button role="tab" aria-controls="four">resources</button>
+      </menu>
+      <article role="tabpanel" id="one">
+        <center><img src="images/header.gif"></center>
+        <p><a target="_blank" href="https://www.tumblr.com/lcwpclybunny/746824933832785920">background credit</a> / <a target="_blank" href="https://foollovers.com/mat/line55.html">sunflower graphics credit</a></p>
+      </article>
+  
+      <article role="tabpanel" hidden id="two">
+        <p>blah</p>
+      </article>
+  
+      <article role="tabpanel" hidden id="three">
+        <p>
+          You create the content for each tab by using an <code>article</code> tag.
+        </p>
+      </article>
+  
+      <article role="tabpanel" hidden id="four">
+        <p>
+          You create the content for each tab by using an <code>article</code> tag.
+        </p>
+      </article>
 
-    <div class="box16">
-        <div class="box-top">
-        <div class="u01"></div>
-        </div>
-        <div class="box-center">
-        <div class="box-inner">
-          <img src="images/toybox/alpaca.gif" >  
-          <img src="images/toybox/cow1.gif" >  
-          <img src="images/toybox/cow10.gif" >  
-          <img src="images/toybox/cow11.gif" >  
-          <img src="images/toybox/cow12.gif" >  
-          <img src="images/toybox/cow13.gif" >  
-          <img src="images/toybox/cow14.gif" >  
-          <img src="images/toybox/cow3.gif" >  
-          <img src="images/toybox/cow4.gif" >  
-          <img src="images/toybox/cow5.gif" >  
-          <img src="images/toybox/cow6.gif" >  
-          <img src="images/toybox/cow7.gif" >  
-          <img src="images/toybox/Cow8.gif" >  
-          <img src="images/toybox/cow9.gif" >            
-        </div>
-        </div>
-        <div class="box-bottom">
-        <div class="s01"></div>
-        </div>
-    </div> 
+      <section class="field-row" style="justify-content: flex-end">
+        <button class="default">OK</button>
+        <button>Cancel</button>
+      </section>
+      </div>
+    </div>
+  </div>
+</main>
 
-</div>
+<script>
+  const tabButtons = document.querySelectorAll("[role=tab]");
+tabButtons.forEach((tabButton) => {
+  tabButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const tabContainer = e.target.parentElement.parentElement;
+    const targetId = e.target.getAttribute("aria-controls");
+    tabButtons.forEach((_tabButton) =>
+      _tabButton.setAttribute("aria-selected", false)
+    );
+    tabButton.setAttribute("aria-selected", true);
+    tabContainer
+      .querySelectorAll("[role=tabpanel]")
+      .forEach((tabPanel) => tabPanel.setAttribute("hidden", true));
+    tabContainer
+      .querySelector(`[role=tabpanel]#${targetId}`)
+      .removeAttribute("hidden");
+  });
+});
+</script>
 
-  </body>
+</body>
 </html>

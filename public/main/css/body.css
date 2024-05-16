@@ -10,6 +10,34 @@ body {
   font-size: 0.9em;
 }
 
+p {
+  text-indent: 1em;
+  &:first-of-type {
+    margin-top: 0.5em;
+  }
+  &:last-of-type {
+    margin-bottom: 0.5em;
+  }
+}
+
+p > code {
+	border-radius: 0.2em;
+	border-width: 0.15em;
+	border-style: solid;
+	border-color: var(--color-code);
+	background-color: var(--color-code);
+}
+
+pre:has(code) {
+	border-radius: 0.2em;
+	border-width: 0.15em;
+	border-style: solid;
+  padding: 0.5em;
+  margin: 0.5em 0;
+	border-color: var(--color-code);
+	background-color: var(--color-code);
+}
+
 a {
   position: relative;
   text-decoration: none;
@@ -67,17 +95,58 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
+
+summary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 4px 0px 4px 4px;
+    font-size: 1.125em;
+    cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
+}
+
+summary::before {
+  content: '';
+  width: 9px;
+  height: 10px;
+  background: url('/resources/images/plus.png') no-repeat;
+  filter: invert(1);
+  display: inline;
+}
+
+details[open] > summary::before {
+  background: url('/resources/images/min.png') no-repeat;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:is(.h2) {
+  justify-content: flex-end;
+  &::before {
+    margin-right: 6px;
+  }
+}
+
+summary:is(.h3)::before {
+  margin-right: 4px;
+}
     
 /*----- return to top -----*/
 
 .top {
   --offset: 50px; 
-
+  position: -webkit-sticky;
   position: sticky;
   bottom: 20px;      
   margin-right:10px; 
   place-self: end;
-  margin-top: calc(100vh + var(--offset));
+  margin-top: calc(100% + var(--offset));
   
   /* visual styling */
   width:45px;
@@ -137,5 +206,13 @@ blockquote {
   .top:before{
     border-right:var(--pagetop-arrow-dark);
     border-top:var(--pagetop-arrow-dark);
+  }
+
+  summary:is(.h3)::before {
+    filter: invert(0);
+  }
+
+  summary:is(.h2)::before {
+    filter: invert(1);
   }
 }
