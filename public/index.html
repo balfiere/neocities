@@ -93,7 +93,7 @@ main {
     transition: all .3s linear;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--link);
     -webkit-transition:all 0.3s ease-in-out;
@@ -102,8 +102,16 @@ a{
     -ms-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
     &:hover{
-    text-shadow: 0px 0px 2px var(--link-hover);
-    color: var(--link-hover)
+        text-shadow: 0px 0px 2px var(--link-hover);
+        color: var(--link-hover)
+    }
+}
+
+.quote a {
+    color: var(--link-hover);
+    &:hover {
+        color: black;
+        text-shadow: none;
     }
 }
 
@@ -431,7 +439,7 @@ body::before {
 
 <div class="quote">
 “Nana... How come being happy and making your dreams come true are two different things? Even now, I still don't know why...” 
-<div style="font-size: 8px;">click on a nana to see my sites</div>
+<div style="font-size: 8px;">click on a nana to see my sites or go to <a href="/sitemap/index.html">the sitemap</a></div>
 </div>
 
 <!-- nanas -->

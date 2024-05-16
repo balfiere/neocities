@@ -58,6 +58,23 @@ main {
   left: 0;
 }
 
+.window-body{
+  display: block;
+}
+
+ul {
+  display: block;
+  width:auto;
+}
+
+li {
+  width: 100%!important;
+}
+
+li a {
+  display:grid;
+}
+
 @media (prefers-color-scheme: dark) {
   .has-container {
     background-color: rgb(39, 39, 39)!important;
@@ -85,28 +102,78 @@ main {
     </div>
   </div>
   <div class="window-body has-space" style="max-height: 70vh; overflow-y: scroll;">
-    <ul class="tree-view has-collapse-button has-connector has-container"><!---->
+    <ul class="tree-view has-collapse-button has-connector has-container">
       <ul>
-        <li></li><a href="/index.html"><li>/landing.html</li></a>
+        <li><a href="/index.html">/landing.html</a></li>
         <li>/personal-site</li>
+        <ul>
+          <li>/main</li>
           <ul>
-            <li>/about</li>
-            <ul>
-              <li></li><a href="/about/index.html"><li>/index.html</li></a>
-                <ul><li>get to know a bit more about me, my history on the internet, and favorite media</li></ul>
-              <li></li><a href="/room/index.html"><li>/my-room.html</li></a>
-                <ul><li>my console collection and history with gaming, plus some fiber arts projects</li></ul>
-              <li></li><a href="/places/index.html"><li>/places.html</li></a>
-                <ul><li>a page for my favorite video game locations and songs</li></ul>
-            </ul>
-            <li>/main</li>
-            <ul>
-              <li></li><a href="/main/index.html"><li>/index.html</li></a>
-            </ul>
+            <li><a href="/main/index.html">/index.html</a></li>
+              <ul><li>the homepage of my personal site.</li></ul>
+            <li><a href="/main/index.html?z=/changelog/index.html">/changelog.html</a></li>
+              <ul><li>catalogue of the major changes to this site.</li></ul>
+            <li><a href="/main/index.html?z=/main/pixels.html">/toybox.html</a></li>
+              <ul><li>place for me to dump pixels i found in the old web or ripped from games. mostly anime and video game related.</li></ul>
+            <li><a href="/main/index.html?z=/main/codes.html">/code.html</a></li>
+              <ul><li>my premade themes and code snippets.</li></ul>
+              <li><a href="/main/index.html?z=/main/credit.html">/credit.html</a></li>
+                <ul><li>links to the resources i used to build my site.</li></ul>
+              <li><a href="/main/index.html?z=/main/contact.html">/contact.html</a>
+                <ul><li>how to contact me.</li></ul></li>
           </ul>
-        <li>/resources-site</li>
-      </ul>
-  </ul>
+          <li>/about</li>
+          <ul>
+            <li><a href="/about/index.html">/index.html</a></li>
+              <ul><li>get to know a bit more about me, my history on the internet, and favorite media</li></ul>
+            <li><a href="/room/index.html">/my-room.html</a></li>
+              <ul><li>my console collection and history with gaming, plus some fiber arts projects</li></ul>
+            <li><a href="/places/index.html">/places.html</a>
+              <ul><li>a page for my favorite video game locations and songs</li></ul></li>
+          </ul>
+          <li>/diary
+            <ul><li><a href="/microblog/index.html">/index.html</a><ul><li>my microblog. mostly updates on what i've been reading, watching, playing, etc with some journaling about about my life.</li></ul></li></ul>
+          </li>
+          <li>/interests
+            <ul>
+              <li><a href="/language/index.html">/languages.html</a>
+              <ul>
+                <li>a chronicle of my language learning journey of thai and japanese.</li>
+              </ul></li>
+            </ul>
+          </li>
+        </ul>
+        <li>/resources-site
+          <ul>
+            <li><a href="/resources/index.html">/index.html</a></li>
+            <li>/languages</li>
+            <ul>
+              <li><a href="/resources/language/thai/">/thai.html</a></li>
+              <li><a href="/resources/language/japanese/">/japanese.html</a></li>
+              <li><a href="/resources/language/tools/">/tools.html</a></li>
+            </ul>
+            <li>/gaming</li>
+            <ul>
+              <li><a href="/resources/gaming/3ds/">/3ds.html</a></li>
+              <li><a href="/resources/gaming/switch/">/switch.html</a></li>
+              <li><a href="/resources/gaming/ps2/">/ps2.html</a></li>
+              <li><a href="/resources/gaming/psp/">/psp.html</a></li>
+              <li><a href="/resources/gaming/vita/">/vita.html</a></li>
+              <li><a href="/resources/gaming/pc/">/pc.html</a></li>
+              <li><a href="/resources/gaming/other/">/other.html</a></li>
+            </ul>
+            <li>/other
+              <ul>
+                <li><a href="/resources/other/sitebuilding/">/site-building.html</a></li>
+                <li><a href="/resources/other/more/">/more-links.html</a></li>
+                <li><a href="/resources/other/updates/">/updates.html</a></li>
+                <li><a href="/resources/other/about/">/about.html</a></li>
+                <li><a href="/resources/other/credit/">/credit.html</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+    </ul>
   </div>
   <div class="status-bar">
     <p class="status-bar-field">Press F1 for help</p>
