@@ -83,9 +83,31 @@
 </div><!-- end links -->
 
 <!-- my button -->
-<div class="mybutton"><center><br /><h3>my button</h3>
-<img src="https://files.catbox.moe/egpfu7.gif" style="margin-top: 10px;">
-<textarea rows="3" cols="60" style="width: calc(100% - 8px);" readonly><a target="_blank" href="https://kwaamfan.neocities.org/"><img src="https://files.catbox.moe/egpfu7.gif" alt="kwaamfan"></a></textarea></center></div>
+<div class="mybutton"><center><br /><h3>my buttons</h3>
+<img src="https://files.catbox.moe/egpfu7.gif" onclick="document.getElementById('button88').value = '&lt;a target=&quot;_blank&quot; href=&quot;https://kwaamfan.neocities.org/&quot;&gt;&lt;img src=&quot;https://files.catbox.moe/egpfu7.gif&quot; alt=&quot;kwaamfan&quot;&gt;&lt;/a&gt;'">
+<img src="images/88 x 31/kwaamfan_haruka.gif" onclick="document.getElementById('button88').value = '&lt;a target=&quot;_blank&quot; href=&quot;https://kwaamfan.neocities.org/&quot;&gt;&lt;img src=&quot;https://files.catbox.moe/lma6m1.gif&quot; alt=&quot;kwaamfan&quot;&gt;&lt;/a&gt;'"><br />
+<textarea id="button88" rows="3" cols="60" style="width: calc(100% - 8px);" readonly onclick="copyText()">click a button above to get the code!</textarea></center></div>
+
+<script>
+  function copyText() {
+  // Get the text field
+  var buttonLink = document.getElementById("button88");
+  var buttonLinkValue = buttonLink.value;
+
+    // Select the text field
+    buttonLink.select();
+    buttonLink.setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text inside the text field
+    navigator.clipboard.writeText(buttonLink.value);
+
+    // Alert the copied text
+    buttonLink.value = "Copied!";
+    setTimeout(function(){
+      buttonLink.value = buttonLinkValue;
+    }, 2000);
+  } 
+</script>
 
 <!-- mobile warning -->
 <div class="mobilewarning"><center><br /><h3>notice</h3>
@@ -480,6 +502,27 @@ window.onload = function(){
 <!-- more scripts -->
 <script src="scripts/draggableboxes.js"></script>
 <script src="scripts/toggle.js"></script>
+
+<script>
+  function copyText() {
+  // Get the text field
+  var buttonLink = document.getElementById("button88");
+  var buttonLinkValue = buttonLink.value;
+
+    // Select the text field
+    buttonLink.select();
+    buttonLink.setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text inside the text field
+    navigator.clipboard.writeText(buttonLink.value);
+
+    // Alert the copied text
+    buttonLink.value = "Copied!";
+    setTimeout(function(){
+      buttonLink.value = buttonLinkValue;
+    }, 2000);
+  } 
+</script>
 
 <!--- tooltips -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>
