@@ -10,6 +10,9 @@
 <!-- styling -->
 <link rel="stylesheet" href="https://unpkg.com/98.css">
 
+<!-- scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js"></script>
+
 </head>
 
 <style>
@@ -21,6 +24,13 @@
     background-position: center;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+  }
+
+  button:focus{
+    outline: 2px solid navy!important;
+    outline-offset: 0px;
+    z-index: 99;
   }
 
   a {
@@ -75,6 +85,13 @@ li a {
   display:grid;
 }
 
+.window-header {
+	cursor: grab;
+	.is-pointer-down & {
+		cursor: grabbing;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .has-container {
     background-color: rgb(39, 39, 39)!important;
@@ -91,14 +108,14 @@ li a {
 
 <body>
 
-<main>
+<main class="draggable">
 <div class="window glass active">
-  <div class="title-bar">
+  <div class="title-bar window-header">
     <div class="title-bar-text">My Site Map</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
       <button aria-label="Maximize"></button>
-      <button aria-label="Close"></button>
+      <a href="/index.html"><button aria-label="Close" style="cursor: pointer;"></button></a>
     </div>
   </div>
   <div class="window-body has-space" style="max-height: 70vh; overflow-y: scroll;">
@@ -224,6 +241,43 @@ fn()
 
 window.addEventListener('load', fn)
 window.addEventListener('resize', fn)
+// if you have multiple .draggable elements
+// get all draggie elements
+var draggableElems = document.querySelectorAll(".draggable");
+// array of Draggabillies
+var draggies = [];
+// init Draggabillies
+for (var i = 0, len = draggableElems.length; i < len; i++) {
+	var draggableElem = draggableElems[i];
+	var draggie = new Draggabilly(draggableElem, {
+		handle: ".window-header"
+	});
+	draggies.push(draggie);
+}
+
+// get all windows
+var activeWindow = document.querySelector('.window_container');
+var windows = document.querySelectorAll(".window_container");
+
+var init = function(){
+	for (var i = 0; i < windows.length; i++){
+		var w = windows[i];
+		console.log(w);
+
+        // on click
+		w.addEventListener("mouseover", function(e){
+            // reset z-index of all windows to 10
+			activeWindow.style.zIndex = 10;
+            // get the window being clicked
+			activeWindow = e.target.closest('.window_container');
+            // bring to top (by setting z-index to 100)
+			activeWindow.style.zIndex = 100;
+		})
+		console.log(activeWindow)
+	}
+}
+
+init();
 </script>
 
   </body>
