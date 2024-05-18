@@ -2,6 +2,7 @@
 
 :root {
   --text: #f0f0f0;
+  --text-dark: #dddddd;
   --text-shadow: black;
   --link: #ff92c1;
   --link-hover: #97ffff;
@@ -630,4 +631,32 @@ main {
     -webkit-transform:rotate(-135deg);
     transform:rotate(-135deg);
   }  
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--text-dark);
+  }
+  
+  #page {
+    background-color: rgb(10, 27, 47, 0.7);
+    background-blend-mode:multiply;
+  }
+
+.stats,
+.links,
+.stamps,
+.blinkies,
+.main2 {
+    background-color: rgba(128, 128, 128, 0.671);
+    background-blend-mode:multiply;
+}
+
+  img {
+    opacity: 0.8;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
