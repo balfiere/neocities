@@ -286,6 +286,7 @@ body {
 		calc(50% - var(--unit) * (1 - 1/48) - 1px) calc(var(--unit) * (1 + 1/48)),
 		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2);
   background-attachment: fixed;
+  overflow: auto;
 }
               
  .allMessages {
@@ -340,8 +341,6 @@ body {
     background: var(--send-background);
     clip-path: polygon(var(--s) 0, 100% 0, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 0 100%, 0 var(--s));
     line-height: calc(var(--pixel) * 19);
-    top: calc(var(--pixel) * 1);
-    left: calc(var(--pixel) * 1);
 }
 
 .senderInfo:before {
@@ -375,6 +374,9 @@ body {
 }
 
 #input {
+  overflow: auto;
+  height: auto;
+  bottom: 0;
   box-sizing: border-box;
   font-family: 'NDS bios';
   font-size:16px;
@@ -382,7 +384,7 @@ body {
   font-weight: 300;
   margin: 0 auto;
   width: 300px;
-  border-radius: 0;
+  border-radius: 4px;
   color: var(--box-text);
   border: solid 1px var(--box-border);
   &:focus {
@@ -409,6 +411,16 @@ a {
   &:hover{
     color: var(--link-hover);
   }
+}
+
+blockquote {
+  border: 1px solid rgb(208, 208, 191);
+  color: var(--box-text);
+  font-family: 'NDS bios';
+  font-size:16px;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+  position: relative;
 }
 
 .owner, .mod {
