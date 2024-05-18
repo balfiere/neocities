@@ -3,18 +3,18 @@
 :root {
   --text: #f0f0f0;
   --text-shadow: black;
-  --link: #c1f0ff;
-  --link-hover: #ffffff;
-  --link-hover-background: #5ebade;
-  --bold: #ffcafc;
-  --italic: rgba(193, 240, 255, 0.8);
-  --marker: rgba(255, 255, 132, 0.5);
+  --link: #ff92c1;
+  --link-hover: #97ffff;
+  --link-hover-background: none;
+  --bold: #5fe4f8;
+  --italic: rgba(128, 66, 155, 0.8);
+  --marker: rgba(110, 110, 110, 0.5);
   --links-color: #ffffff;
   --window-title:rgb(255, 255, 255);
   --window-border: #777777;
   --highlight-text: #c1f0ff;
   --highlight-background: #00000000;
-  --h2-underline:rgb(255, 253, 134);
+  --h2-underline:#5fe4f8;
   --h3-color:rgb(37, 37, 37);
   --h3-background: #c5ffae;
 
