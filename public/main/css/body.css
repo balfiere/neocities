@@ -110,13 +110,6 @@ summary {
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 4px 0px 4px 4px;
-    font-size: 1.125em;
-    cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
 }
 
 summary::before {
@@ -125,7 +118,6 @@ summary::before {
   height: 10px;
   background: url('/resources/images/plus.png') no-repeat;
   filter: invert(1);
-  display: inline;
 }
 
 details[open] > summary::before {

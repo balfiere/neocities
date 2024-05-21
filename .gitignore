@@ -1,5 +1,6 @@
 *.code-workspace
 eleventy/
+quartz/
 public/.vscode
 /codes/
 *.cmd
