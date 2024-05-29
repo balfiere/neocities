@@ -13,6 +13,18 @@
   <id>https://kwaamfan.neocities.org/atom.xml</id>
   
   <entry>
+    <title>more stuff added to the resources site</title>
+    <link href="https://kwaamfan.neocities.org/resources/"/>
+    <id>https://kwaamfan.neocities.org/?2024-05-29T19:53:11Z</id>
+    <updated>2024-05-29T19:53:11Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        i added more links to <a href="https://kwaamfan.neocities.org/resources/">my resources site</a>. specifically i added some more online tools and references to the <a href="https://kwaamfan.neocities.org/resources/other/sitebuilding">website building</a> page, added goldendict to the <a href="https://kwaamfan.neocities.org/resources/language/tools">language learning tools</a> page, and added a browser tools and extensions section to the <a href="https://kwaamfan.neocities.org/resources/other/more">more links</a> page.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
     <title>sitemap added</title>
     <link href="https://kwaamfan.neocities.org/sitemap/"/>
     <id>https://kwaamfan.neocities.org/?2024-05-17T04:13:24Z</id>
