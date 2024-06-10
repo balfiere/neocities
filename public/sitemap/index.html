@@ -27,6 +27,12 @@
     overflow: hidden;
   }
 
+  @media (prefers-reduced-motion) {
+  body{
+    background-image: url(background.png);
+  }
+}
+
   button:focus{
     outline: 2px solid navy!important;
     outline-offset: 0px;
@@ -198,8 +204,18 @@ li a {
     <p class="status-bar-field">CPU Usage: 14%</p>
   </div>
 </div>
-<div class="doll"><img src="ccs1.gif"></div>
-<div class="kero"><img src="kero.gif"></div>
+<div class="doll">
+  <picture>
+    <source srcset="ccs1.png" media="(prefers-reduced-motion)" />
+    <img src="ccs1.gif">
+  </picture>
+</div>
+<div class="kero">
+  <picture>
+    <source srcset="kero.png" media="(prefers-reduced-motion)" />
+    <img src="kero.gif">
+  </picture>
+</div>
 </main>
 
 <script>

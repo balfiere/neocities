@@ -34,7 +34,10 @@ var Sakura = function Sakura(selector, options) {
     // Gradient color start (rgba).
     gradientColorEnd: 'rgba(120, 197, 161, 0.7)',
     // Gradient color end (rgba).
-    gradientColorDegree: 120 // Gradient degree angle.
+    gradientColorDegree: 120, 
+    // Gradient degree angle.
+    lifeTime: 700,
+    // The life time of the petals (0 is infinity).
 
   }; // Merge defaults with user options.
 

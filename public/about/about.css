@@ -39,6 +39,8 @@ pre,
 del,
 em,
 img,
+picture,
+source,
 b,
 i,
 dl,
@@ -314,7 +316,7 @@ iframe {
 	width: 100%;
 }
 
-img {
+img, picture, source {
 	max-width: 100%;
 }
 
@@ -493,7 +495,7 @@ figure {
     font-size:0;
 }
 
-.stamps img{
+.stamps img, .stamps picture, .stamps source{
     display: inline;
     padding: 0;
     margin: 0;
@@ -501,7 +503,7 @@ figure {
     object-fit: none;
 }
 
-.blinkies img {
+.blinkies picture, .blinkies img, .blinkies source{
     display: inline;
     width: 150px;
     padding: 0;
@@ -673,8 +675,14 @@ main {
   img {
     opacity: 0.8;
     transition: all 0.3s;
-    &:hover {
-      opacity: 1;
-    }
+  }
+  img:hover {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .main2 li:before{
+    content: url(images/heartblue.png);
   }
 }

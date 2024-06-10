@@ -42,10 +42,12 @@ header{
 a {
     text-decoration: none;
     color: var(--purple-dark);
-    &:hover {
-      color: var(--pink-dark);
-    }
   }
+
+a:hover {
+    color: var(--pink-dark);
+  }
+
 .sandbox {
     width: 1763px;
     height: 1286px;
@@ -77,73 +79,66 @@ a {
     width: 450px;
     height: 270px;
     background: url("images/computerscreensaver.png");
-    &:hover {
-        background: url("images/computerlogin.png");
-    }
+}
+
+.computer:hover {
+    background: url("images/computerlogin.png");
 }
 
 .psx {
     left: 42px;
     top: 59px;
-    &:hover {
-        transform: rotate(10deg);
-    }
 }
 
 .ps2 {
     left: 303px;
     top: 110px;
-    &:hover {
-        transform: rotate(10deg);
-    }
 }
 
 .wii{
     left: 73px;
     top: 272px;
-    &:hover {
-        transform: rotate(-10deg);
-    }
 }
 
 .ds {
     left: 303px;
     top: 339px;
-    &:hover {
-        transform: rotate(10deg);
-    }
 }
 
 .ps4 {
     left: 153px;
     top: 590px;
-    &:hover {
-        transform: rotate(5deg);
-    }
 }
 
 .switch {
     left: 69px;
     top: 814px;
-    &:hover {
-        transform: rotate(-10deg);
-    }
 }
 
 .n3ds {
     left: 323px;
     top: 761px;
-    &:hover {
-        transform: rotate(5deg);
-    }
 }
 
 .chair {
     left: 993px;
     top: 412px;
-    &:hover {
-        transform: perspective(500px) translate3d(-25px, -25px, -25px);
-    }
+}
+
+.wii:hover, .switch:hover {
+    transform: rotate(-10deg);
+}
+
+.psx:hover, .ps2:hover, .ds:hover {
+    transform: rotate(10deg);
+}
+
+.ps4:hover, .n3ds:hover {
+    transform: rotate(5deg);
+}
+
+.chair:hover {
+    transform: perspective(500px) translate3d(-25px, -25px, -25px);
 }
 
 @media (prefers-color-scheme: dark) {

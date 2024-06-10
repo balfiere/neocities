@@ -11,8 +11,9 @@
   --background: #f8f8f8;
   --pink-dark:rgb(250, 159, 250);
   --purple-dark:rgb(175, 136, 255);
-  --green-dark:rgb(135, 216, 175);
+  --green-dark:rgb(97, 184, 140);
   --blue-dark:rgb(94, 175, 254);
+  --toc-link:rgb(97, 223, 160);
   --toc-shadow:rgba(0, 0, 0, 0.8);
 
   /*----- dark mode -----*/
@@ -44,10 +45,57 @@
     font-display: swap;
 }
 
+  /*----- fonts -----*/
+
+  /* ibm-plex-sans-thai-300 - latin_latin-ext_thai */
+  @font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Sans Thai';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-300.woff2') format('woff2');
+    }
+    
+    /* ibm-plex-sans-thai-regular - latin_latin-ext_thai */
+    @font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Sans Thai';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-regular.woff2') format('woff2');
+    }
+    
+    /* ibm-plex-sans-thai-500 - latin_latin-ext_thai */
+    @font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Sans Thai';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-500.woff2') format('woff2');
+    }
+    
+    /* ibm-plex-sans-thai-600 - latin_latin-ext_thai */
+    @font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Sans Thai';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-600.woff2') format('woff2');
+    }
+    
+    /* ibm-plex-sans-thai-700 - latin_latin-ext_thai */
+    @font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Sans Thai';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-700.woff2') format('woff2');
+    }
+
 /* Body */
 html {
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: 'IBM Plex Sans Thai';
 }
 
 body {
@@ -90,9 +138,14 @@ body {
 #TOC a{
     text-decoration: none;
     text-shadow: 1px 1px var(--toc-shadow);
+    color: var(--toc-link);
 }
 
-#TOC li:hover::before{
+#TOC a:hover, #TOC a:focus{
+    color: var(--purple-light);
+}
+
+#TOC li:hover::before, #TOC li:focus::before{
     content: url("images/pointer.png");
     display: inline-block;
     vertical-align: middle;
@@ -153,9 +206,15 @@ hr {
 a {
   text-decoration: none;
   color: var(--green-dark);
-  &:hover {
-    color: var(--pink-dark);
-  }
+  -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -o-transition:all 0.3s ease-in-out;
+  -ms-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+}
+
+a:hover, a:focus, a:active {
+  color: var(--blue-dark);
 }
 
 b, strong {
@@ -271,31 +330,6 @@ textarea {
   outline-width: 2px;
 }
 
-textarea, select, input {
-  color: #4a4a4a;
-  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  margin-bottom: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #f1f1f1;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box;
-}
-textarea:focus, select:focus, input:focus {
-  border: 1px solid #1d7484;
-  outline: 0;
-}
-
-input[type=checkbox]:focus {
-  outline: 1px dotted #1d7484;
-}
-
-label, legend, fieldset {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
 @media (prefers-color-scheme: dark) {
   body{
     color: var(--text-dark);
@@ -304,9 +338,10 @@ label, legend, fieldset {
 
   a {
     color: var(--green-light);
-    &:hover {
-      color: var(--pink-light);
-    }
+  }
+
+  a:hover, a:focus{
+    color: var(--blue-light);
   }
 
   b, strong {

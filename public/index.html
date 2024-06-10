@@ -101,18 +101,20 @@ a {
     -o-transition:all 0.3s ease-in-out;
     -ms-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    &:hover{
-        text-shadow: 0px 0px 2px var(--link-hover);
-        color: var(--link-hover)
-    }
+}
+
+a:hover{
+    text-shadow: 0px 0px 2px var(--link-hover);
+    color: var(--link-hover)
 }
 
 .quote a {
     color: var(--link-hover);
-    &:hover {
-        color: black;
-        text-shadow: none;
-    }
+}
+
+.quote a:hover {
+    color: black;
+    text-shadow: none;
 }
 
 b, strong {
@@ -518,7 +520,7 @@ body::before {
         <div class="popup-inside">
             <div class="popup-title">about my personal site</div>
                 <div class="information-container">
-                    my personal page where i post about myself and my interests. requires javascript and iframe support. most pages are responsive, but looks best in firefox on a 1920x1080px display. some features are hidden on mobile. animations autoplay, but eye strain is kept to a minimum.<br/><br />
+                    my personal page where i post about myself and my interests. requires javascript and iframe support. most pages are responsive, but looks best in firefox on a 1920x1080px display. some features are hidden on mobile. gifs and animations do not autoplay if the user has reduced motion enabled in their operating system.<br/><br />
                     <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/main/index.html">>> enter <<</a></div>
                 </div>
         </div>

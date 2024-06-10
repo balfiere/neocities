@@ -680,6 +680,7 @@ z-index:1001
 }
 
 @media (prefers-reduced-motion) {
+    /*
   * {
     animation-delay: -1s !important;
     animation-duration: 1s !important;
@@ -691,4 +692,5 @@ z-index:1001
     #page {
         background-image: none !important;
     }
+        */
 }
