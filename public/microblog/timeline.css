@@ -409,6 +409,26 @@ figure {
   max-width: 40%;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.gallery li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.gallery img {
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
 /* -- layout -- */
 
 .primary {
@@ -691,6 +711,10 @@ footer a{
 
     article {
         padding: 1em;
+    }
+
+    .gallery li {
+      width: 100%!important;
     }
 
     header {
