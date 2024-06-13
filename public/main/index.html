@@ -36,8 +36,20 @@
 <!-- header -->
 <header>
 <!-- mobile button -->
-<div id="open"><span id="open-icon"></span></div>
-</header><!-- end header -->
+<div id="open" tabindex="0">
+  <svg class="ham hamRotate" id="ham4" viewBox="0 0 100 100" width="80">
+    <path
+          class="line top"
+          d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+    <path
+          class="line middle"
+          d="m 70,50 h -40" />
+    <path
+          class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+  </svg>
+</div>
+</header><!-- end header -->  
 
 <!-- main contents -->
 <div id="contents" class="cf">
@@ -340,6 +352,8 @@
   --send-background-dark: rgba(160, 138, 255, 0.2);
 
   --link-hover-dark:rgb(122, 255, 133);
+
+  --mod-text-dark: rgb(156, 233, 163);
 }
 
 body {
@@ -362,12 +376,12 @@ body {
 		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2);
   background-attachment: fixed;
   overflow: auto;
+  font-family: "NDS BIOS", Arial, sans-serif;
+  font-size: calc(var(--pixel) * 16);
 }
               
  .allMessages {
   box-sizing: border-box;
-  font-family: "NDS BIOS", Arial, sans-serif;
-  font-size: calc(var(--pixel) * 16);
   position:relative;
   width: 300px;
   margin: calc(var(--pixel) * 16) auto;
@@ -595,9 +609,25 @@ display:none;
   background: var(--send-background-dark);}
 }
 
-.owner{
-  color: var(--link-hover-dark);
+.senderInfo:has(.owner), .senderInfo:has(.mod) {
+  color: var(--mod-text-dark);
+  background: var(--mod-background);
 }
+
+ #input:empty::before {
+   content: "Type a message...";
+   color: #747474;
+}
+
+b, strong {
+  color: var(--box-text-dark);
+}
+
+code {
+color: var(--box-text-dark);
+  background-color: var(--scan-color-dark);
+}
+
 .msgBody a {
       color: var(--send-text-dark)!important;
     }
@@ -638,12 +668,6 @@ display:none;
           <a target="_blank" href="https://angeleyesprings.neocities.org/">
             <img src="images/88x31/angeleyebutton.png" alt="angel eye springs">
           </a>
-          <a target="_blank" href="https://grlrot.neocities.org/" target="_blank">
-            <picture>
-              <source srcset="images/88x31/grlbutton.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/grlbutton.gif" alt="grl rot">
-            </picture>
-          </a> 
           <img src="images/88x31/3ds.png">
           <a target="_blank" href="https://foollovers.com/">
             <picture>
@@ -657,6 +681,7 @@ display:none;
               <img src="images/88x31/miela_button.gif" alt="miela">
             </picture>
           </a>
+          <img src="images/88x31/js-warning.gif" alt="warning: this page contains javascript">
           <a target="_blank" href="https://humanityisnotbeautiful.neocities.org"><img src="images/88x31/velvetblue.png" alt="Velvet Blue"></a>
           <a target="_blank" href="https://lazer-bunny.neocities.org/">
             <picture>
@@ -671,13 +696,10 @@ display:none;
             </picture>
           </a>
           <a href="https://lovesick.cafe" target="_blank"><img src="https://lovesick.cafe/files/lovesick-button1.png" alt="lovesick cafe"></a>
-          <img src="images/88x31/js-warning.gif">
-          <a target="_blank" href="https://warmfeelings.neocities.org">
-            <picture>
-              <source srcset="images/88x31/warmfeelings.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/warmfeelings.gif" alt="warm feelings">
-            </picture>
-          </a>
+          <picture>
+            <source srcset="images/88x31/linux.png" media="(prefers-reduced-motion)" />
+            <img src="images/88x31/linux.gif" alt="linux powered">
+          </picture>
           <a target="_blank" href="https://daughterofbilitis.neocities.org/"><img src="images/88x31/daughterofbilitis.png" alt="daughter of bilitis"></a>
           <a href="https://strawberry-gashes.neocities.org" title="strawberry gashes ♥" target="0">
             <picture>
@@ -703,7 +725,6 @@ display:none;
               <img src="images/88x31/lazybones.gif" alt="lazy bones">
             </picture>
           </a>
-          <a target="_blank" href="https://tsunderoid.neocities.org"><img src="https://files.catbox.moe/gq4dok.gif"></a>
           <a target="_blank" href="https://frajola.neocities.org/">
             <picture>
               <source srcset="images/88x31/frajola.png" media="(prefers-reduced-motion)" />
@@ -727,20 +748,20 @@ display:none;
             </picture>
           </a>
           <a href="https://starlost.neocities.org" target="_blank"><img src="images/88x31/starlost.png" alt="starlost"></a>
-          <a href="http://validator.w3.org/feed/check.cgi?url=https%3A//kwaamfan.neocities.org/atom.xml"><img src="images/88x31/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" /></a>
-          <a target="_blank" href="https://pixel-dreams.neocities.org/">
+          <a target="_blank" href="https://kubikill.neocities.org/">
             <picture>
-              <source srcset="images/88x31/pixeldreams.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/pixeldreams.gif" alt="pixel dreams">
+              <source srcset="images/88x31/kubikill.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/kubikill.gif" alt="kubikill">
             </picture>
           </a>
+          <a href="http://validator.w3.org/feed/check.cgi?url=https%3A//kwaamfan.neocities.org/atom.xml"><img src="images/88x31/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" /></a>
           <a target="_blank" href="https://vencake.neocities.org/"><img src="images/88x31/vencake.png" alt="VenCake"></a>
           <img src="images/88x31/apple_fatal_error.gif">
-          <a target="_blank" href="https://sakuramori.neocities.org/"><img src="images/88x31/sakuramori.png"></a>
-          <a target="_blank" href='https://4disease.neocities.org'>
+          <a target="_blank" href="https://sakuramori.neocities.org/"><img src="images/88x31/sakuramori.png" alt="sakuramori"></a>
+          <a href="https://jaggiescrapper.neocities.org/" target="_blank">
             <picture>
-              <source srcset="images/88x31/4disease.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/4disease.gif" alt="4disease">
+              <source srcset="images/88x31/jaggiescrapper.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/jaggiescrapper.gif" alt="Jaggie Scrapper" title="Digital archive of retro fighting games">
             </picture>
           </a>
           <a target="_blank" href="https://angelscake.neocities.org/">
@@ -756,21 +777,14 @@ display:none;
               <img src="images/88x31/softteddypaws.gif" alt="soft teddy paws">
             </picture>
           </a>
-          <a target="_blank" href="https://repth.neocities.org/"><img src="images/88x31/repth.png"></a>
-          <a href="https://jaggiescrapper.neocities.org/" target="_blank">
-            <picture>
-              <source srcset="images/88x31/jaggiescrapper.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/jaggiescrapper.gif" alt="Jaggie Scrapper" title="Digital archive of retro fighting games">
-            </picture>
-          </a>
           <a target="_blank" href="https://cloveratelier.neocities.org"><img src="images/88x31/cloveratelier.png"></a>
-          <a target="_blank" href="https://ublockorigin.com/"><img src="images/88x31/ublock_now.png"></a>
-          <a target="_blank" href="https://cinni.net/">
+          <a target="_blank" href="https://ublockorigin.com/"><img src="images/88x31/ublock_now.png" alt="uBlock Origin now!"></a>
+          <a target="_blank" href='https://loleah.neocities.org/'>
             <picture>
-              <source srcset="images/88x31/cinni.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/cinni.gif" alt="cinni">
+              <source srcset="images/88x31/loleahbutton.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/loleahbutton.gif" alt="loleah">
             </picture>
-          </a>
+          </a>  
           <picture>
             <source srcset="images/88x31/deletetiktok.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/deletetiktok.gif" alt="delete tiktok">
@@ -780,29 +794,11 @@ display:none;
               <source srcset="images/88x31/cutearchive-88x31.png" media="(prefers-reduced-motion)" />
               <img src="images/88x31/cutearchive-88x31.gif" alt="cutie archive">
             </picture>
-          </a>
-          <a target="_blank" href='https://loleah.neocities.org/'>
-            <picture>
-              <source srcset="images/88x31/loleahbutton.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/loleahbutton.gif" alt="loleah">
-            </picture>
-          </a>            
+          </a>          
           <picture>
             <source srcset="images/88x31/button262.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/button262.gif" alt="forever online">
           </picture>
-          <a target="_blank" href="https://nyaa.neocities.org/">
-            <picture>
-              <source srcset="images/88x31/nyaabanner.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/nyaabanner.gif" alt="nyaa">
-            </picture>
-          </a>
-          <a target="_blank" href="https://irony-machine.neocities.org/">
-            <picture>
-              <source srcset="images/88x31/irony-machine2.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/irony-machine2.gif" alt="irony machine">
-            </picture>
-          </a>
           <img src="images/88x31/bestlandscape.png">
           <a href="https://lavenderblues.neocities.org/" target="_blank">
             <picture>
@@ -823,8 +819,11 @@ display:none;
               <img src="images/88x31/pameluft.gif" alt="pameluft">
             </picture>
           </a>
-          <a target="_blank" href="https://kalechips.net/"><img src="images/88x31/kalechips.png" alt="kale chips"></a>
           <a target="_blank" href="https://cabbagesorter.neocities.org/"><img src="images/88x31/cabbagesorter2.gif" alt="cabbage sorter"></a>
+          <picture>
+            <source srcset="images/88x31/ravelry.png" media="(prefers-reduced-motion)" />
+            <img src="images/88x31/ravelry.gif" alt="ravelry">
+          </picture>
           <a target="_blank" href="https://mikegrindle.com/"><img src="images/88x31/itmbutton.jpg" alt="in the margins"></a>
           <a target="_blank" href="https://philia995.neocities.org/"><img src="images/88x31/philia95.png" alt="philia95"></a>
           <a target="_blank" href="http://lu.tiny-universes.net/index2.html">
@@ -835,12 +834,6 @@ display:none;
           </a>
           <a target="_blank" href="https://archive.org/"><img src="images/88x31/ia_preserve.png" alt="preserve internet archive now!"></a>
           <a target="_blank" href="https://dykeism.neocities.org/"><img src="images/88x31/dykeism.png" alt="dykeism"></a>
-          <a target="_blank" href="https://cloverbell.neocities.org/" target=blank>
-            <picture>
-              <source srcset="images/88x31/cloverbell.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/cloverbell.gif" alt="cloverbell">
-            </picture>
-          </a> 
           <picture>
             <source srcset="images/88x31/firefox4.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/firefox4.gif" alt="tested on firefox">
@@ -851,25 +844,13 @@ display:none;
               <img src="images/88x31/nekonokuni.gif" alt="neko no kuni">
             </picture>
           </a>
-          <a target="_blank" href="http://jasminnie.weebly.com/"><img src="images/88x31/jasminefeng.png" alt="jasmine feng"></a>
-          <a target="_blank" href="https://meixins.neocities.org/">
-            <picture>
-              <source srcset="images/88x31/meixins.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/meixins.gif" alt="meixins">
-            </picture>
-          </a>
-          <a target="_blank" href="https://noodledesk.net/">
-            <picture>
-              <source srcset="images/88x31/noodlebutton.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/noodlebutton.gif" alt="noodle desk">
-            </picture>
-          </a>
           <a target="_blank" href="https://shishka.neocities.org/">
             <picture>
               <source srcset="images/88x31/shishka-welcome.png" media="(prefers-reduced-motion)" />
               <img src="images/88x31/shishka-welcome.gif" alt="shishka">
             </picture>
           </a>
+          <img src="images/88x31/emulatenow.png" alt="emulate now!">
           <a target="_blank" href="https://goblin-heart.net/sadgrl/">
             <picture>
               <source srcset="images/88x31/learn-sadgrl-online.png" media="(prefers-reduced-motion)" />
@@ -884,12 +865,6 @@ display:none;
             </picture>
           </a>
           <img src="images/88x31/falcom.gif" alt="nihon falcom">
-          <a target="_blank" href="https://ribo.zone/">
-            <picture>
-              <source srcset="images/88x31/ribozone.png" media="(prefers-reduced-motion)" />
-              <img src="images/88x31/ribozone.gif" alt="ribozone">
-            </picture>
-          </a>
           <a href="https://jeansgurl98.neocities.org/">
             <picture>
               <source srcset="images/88x31/jeansNOW.png" media="(prefers-reduced-motion)" />
@@ -903,6 +878,12 @@ display:none;
             </picture>
           </a>
           <img src="images/88x31/gaywomen.png" alt="gay women">
+          <a target="_blank" href='https://4disease.neocities.org'>
+            <picture>
+              <source srcset="images/88x31/4disease.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/4disease.gif" alt="4disease">
+            </picture>
+          </a>
           <a href='https://www.opensubtitles.org/search/sublanguageid-auto' target='_blank' title='Subtitles download - OpenSubtitles.org'>
             <picture>
               <source srcset='images/88x31/opensubtitles.png' media="(prefers-reduced-motion)" />
@@ -910,58 +891,116 @@ display:none;
             </picture>
           </a>
           <img src="images/88x31/playstation.png" alt="playstation">
-          <picture>
-            <source srcset="images/88x31/poweredbybob.png" media="(prefers-reduced-motion)" />
-            <img src="images/88x31/poweredbybob.gif" alt="powered by bob">
-          </picture>
           <img src="images/88x31/probe.png" alt="anal probe now!">
           <img src="images/88x31/tumblr2018.png" alt="i survived the 2018 tumblr apocalypse">
-          <img src="images/88x31/emulatenow.png" alt="emulate now!">
+          <a target="_blank" href="https://cinni.net/">
+            <picture>
+              <source srcset="images/88x31/cinni.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/cinni.gif" alt="cinni">
+            </picture>
+          </a>
           <picture>
             <source srcset="images/88x31/steam.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/steam.gif" alt="play with steam">
           </picture>
+          <a target="_blank" href="https://irony-machine.neocities.org/">
+            <picture>
+              <source srcset="images/88x31/irony-machine2.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/irony-machine2.gif" alt="irony machine">
+            </picture>
+          </a>
           <picture>
             <source srcset="images/88x31/sega_online.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/sega_online.gif" alt="sega online">
           </picture>
           <img src="images/88x31/diagnosedwgay.png" alt="you were diagnosed with gay">
+          <a target="_blank" href="https://meixins.neocities.org/">
+            <picture>
+              <source srcset="images/88x31/meixins.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/meixins.gif" alt="meixins">
+            </picture>
+          </a>
           <picture>
             <source srcset="images/88x31/catgirlobsession.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/catgirlobsession.gif" alt="cat girl obsession">
           </picture>
+          <a target="_blank" href="https://repth.neocities.org/"><img src="images/88x31/repth.png" alt="repth"></a>
+          <a target="_blank" href="https://cloverbell.neocities.org/">
+            <picture>
+              <source srcset="images/88x31/cloverbell.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/cloverbell.gif" alt="cloverbell">
+            </picture>
+          </a> 
           <picture>
             <source srcset="images/88x31/sharingiscaring.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/sharingiscaring.gif" alt="sharing is caring... seed your torrents!">
           </picture>
+          <a target="_blank" href="https://ribo.zone/">
+            <picture>
+              <source srcset="images/88x31/ribozone.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/ribozone.gif" alt="ribozone">
+            </picture>
+          </a>
           <picture>
             <source srcset="images/88x31/pictochat.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/pictochat.gif" alt="i miss using pictochat">
           </picture>
+          <a target="_blank" href="https://kalechips.net/"><img src="images/88x31/kalechips.png" alt="kale chips"></a>
           <img src="images/88x31/brothings.png" alt="it's okay to give your bros some love">
           <picture>
             <source srcset="images/88x31/virus.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/virus.gif" alt="kuromi virus!!!">
           </picture>
+          <a target="_blank" href="https://noodledesk.net/">
+            <picture>
+              <source srcset="images/88x31/noodlebutton.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/noodlebutton.gif" alt="noodle desk">
+            </picture>
+          </a>
           <a target="_blank" href="https://vscodium.com/"><img src="images/88x31/vscodium.png" alt="made with vscodium"></a>
           <img src="images/88x31/go2hell.png" alt="go to hell now!">
+          <a target="_blank" href="https://pixel-dreams.neocities.org/">
+            <picture>
+              <source srcset="images/88x31/pixeldreams.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/pixeldreams.gif" alt="pixel dreams">
+            </picture>
+          </a>
           <a target="_blank" href="https://imagemagick.org/"><img src="images/88x31/magick88x31.png" alt="Made using ImageMagick"></a>
           <picture>
             <source srcset="images/88x31/segagendevring.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/segagendevring.gif" alt="sega genesis dev ring">
           </picture>
-          <img src="images/88x31/new-tab.png" alt="please do not force this img to be lonely">
           <img src="images/88x31/rss.png" alt="implement rss now!">
+          <img src="images/88x31/new-tab.png" alt="please do not force this img to be lonely">
+          <a target="_blank" href="https://nyaa.neocities.org/">
+            <picture>
+              <source srcset="images/88x31/nyaabanner.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/nyaabanner.gif" alt="nyaa">
+            </picture>
+          </a>
+          <a target="_blank" href="https://tsunderoid.neocities.org"><img src="https://files.catbox.moe/gq4dok.gif" alt="tsunderoid"></a>
           <picture>
             <source srcset="images/88x31/ffwarpzone.png" media="(prefers-reduced-motion)" />
             <img src="images/88x31/ffwarpzone.gif" alt="final fantasy warp zone">
           </picture>
+          <a target="_blank" href="https://warmfeelings.neocities.org">
+            <picture>
+              <source srcset="images/88x31/warmfeelings.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/warmfeelings.gif" alt="warm feelings">
+            </picture>
+          </a>
           <a target="_blank" href="https://ezgif.com/">
             <picture>
               <source srcset="images/88x31/ezgif_now.png" media="(prefers-reduced-motion)" />
               <img src="images/88x31/ezgif_now.gif" alt="ezgif.com now!">
             </picture>
           </a>
+          <a target="_blank" href="https://grlrot.neocities.org/" target="_blank">
+            <picture>
+              <source srcset="images/88x31/grlbutton.png" media="(prefers-reduced-motion)" />
+              <img src="images/88x31/grlbutton.gif" alt="grl rot">
+            </picture>
+          </a> 
         </div>
     </div><!--window_interior-->
 </div><!--window_container-->
