@@ -362,10 +362,11 @@ h3 {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    &::after {
+  }
+
+  blockquote cite::after {
         content: " ";
     }
-  }
 
 kbd,
 code {
@@ -660,12 +661,12 @@ footer a{
     color: white;
     background: unset;
 	text-shadow: 0 0 3px var(--color-shadow);
-    &:hover, &:active{
-        color:var(--color-footer-hover);
-        text-shadow: 0 0 3px white;
-    }
 }
 
+footer a:hover, footer a:active{
+  color:var(--color-footer-hover);
+  text-shadow: 0 0 3px white;
+}
 
 @media only screen and (max-width: 900px) {
 
@@ -679,11 +680,12 @@ footer a{
         box-sizing: border-box;
         background-image:var(--sunset-gradient);
         padding: .2em;
-        & a {
-            color: white;
-            background: unset;
-            text-shadow: 0 0 3px var(--color-shadow);
-        }
+    }
+
+    #mobilenav a {
+        color: white;
+        background: unset;
+        text-shadow: 0 0 3px var(--color-shadow);
     }
     
     .primary{
@@ -752,10 +754,11 @@ footer a{
     footer{
         background-image:var(--dusk-gradient-transparent);
         box-shadow: var(--purple-box-shadow);
-        & a {
-        color: black;
-	    text-shadow: 0 0 3px var(--color-shadow-dark);
-        }
+    }
+
+    footer a{
+      color: black;
+      text-shadow: 0 0 3px var(--color-shadow-dark);
     }
 
     footer a:hover, footer a:active{
@@ -776,9 +779,10 @@ footer a{
     img {
         opacity: 0.8;
         transition: all 400ms;
-        &:hover, &:active{
-            opacity: 1;
-        }
+    }
+
+    img:hover, img:active{
+        opacity: 1;
     }
 
     .marker {
@@ -791,10 +795,11 @@ footer a{
 
         #mobilenav {
             background-image: var(--dusk-gradient);
-            & a {
-                color: black;
-                text-shadow: 0 0 3px var(--color-shadow-dark);
-            }
+        }
+
+        #mobilenav a {
+            color: black;
+            text-shadow: 0 0 3px var(--color-shadow-dark);
         }
 
         .sidebar, article, #mobilenav {
