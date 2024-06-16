@@ -243,9 +243,10 @@ body {
 
     a {
       color: var(--date-text-dark);
-      &:hover{
-        color: var(--link-hover-dark);
-      }
+    }
+    
+    a:hover{
+      color: var(--link-hover-dark);
     }
   }
  

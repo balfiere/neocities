@@ -10,12 +10,14 @@
 
 a {
     color:deeppink;
-    &:hover{
-        color: aquamarine;
-    }
+}
+
+a:hover{
+    color: aquamarine;
 }
 
 @media (prefers-color-scheme: dark) {
     body, .back{
         background-color: black;
     }
+}

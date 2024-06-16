@@ -76,9 +76,10 @@ body {
 a {
 	color: var(--link);
 	transition: all 0.3s ease;
-	&:hover {
-		color: var(--link-hover);
-	}
+}
+
+a:hover {
+	color: var(--link-hover);
 }
 
 b, strong {
@@ -288,9 +289,6 @@ h3 {
 
 	 .menu__tabs__container .menu__tab--active {
 		 width: 54px;
-	}
-
-	.menu__tabs__container .menu__tab--active img {
 	}
 
 	 .menu__tabs__container .menu__tab .menu__img {

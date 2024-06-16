@@ -20,12 +20,14 @@ article {
 
 p {
   text-indent: 1em;
-  &:first-of-type {
-    margin-top: 0.5em;
-  }
-  &:last-of-type {
-    margin-bottom: 0.5em;
-  }
+}
+
+p:first-of-type {
+  margin-top: 0.5em;
+}
+
+p:last-of-type {
+  margin-bottom: 0.5em;
 }
 
 p > code {
@@ -130,9 +132,10 @@ summary::-webkit-details-marker {
 
 summary:is(.h2) {
   justify-content: flex-end;
-  &::before {
-    margin-right: 6px;
-  }
+}
+
+summary:is(.h2)::before {
+  margin-right: 6px;
 }
 
 summary:is(.h3)::before {

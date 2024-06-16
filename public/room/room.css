@@ -149,8 +149,9 @@ a:hover {
 
   a {
     color: var(--purple-light);
-    &:hover {
-      color: var(--pink-light);
-    }
+  }
+  
+  a:hover {
+    color: var(--pink-light);
   }
 }

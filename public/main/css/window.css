@@ -12,11 +12,12 @@ button {
     -moz-osx-font-smoothing: inherit;
     -webkit-appearance: none;
     appearance: none;
-    &:focus {
-        outline: 4px solid var(--link);
-        z-index: 99;
-        position: relative;
-    }
+}
+
+button:focus {
+    outline: 4px solid var(--link);
+    z-index: 99;
+    position: relative;
 }
 
 /*----- windows -----*/

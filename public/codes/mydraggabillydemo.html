@@ -89,6 +89,7 @@ button {
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .window_container {
@@ -134,9 +135,10 @@ button {
     background-color: var(--window-title-background);
     border-radius: calc(var(--window-border-radius) - 2px);
     padding: 11px 7px 10px 10px;
-	&:hover{
-        background-color: var(--window-title-background-clicked);
-	}
+}
+
+.window_title:hover{
+    background-color: var(--window-title-background-clicked);
 }
 
 .window_control {
@@ -216,9 +218,10 @@ button {
     .window_title {
         color: var(--window-title-color-dark);
         background-color: var(--window-title-background-dark);
-        &:hover{
-            background-color: var(--window-title-background-clicked-dark);
-        }
+    }
+    
+    .window_title:hover{
+        background-color: var(--window-title-background-clicked-dark);
     }
 
     .minimize_control {
@@ -314,17 +317,17 @@ button {
     height: 12px;
     margin-right: 2px;
     border-radius: 50%;
-    
-    &:first-child {
-      background-color: #ff6059;
-    }
-    &:nth-child(2) {
-      background-color: #ffbd2e;
-    }
-    &:last-child {
-      background-color: #29ca42;
-    }
   }
+    
+ul li:first-child {
+    background-color: #ff6059;
+}
+ul li:nth-child(2) {
+    background-color: #ffbd2e;
+}
+ul li:last-child {
+    background-color: #29ca42;
+}
 
 }
 

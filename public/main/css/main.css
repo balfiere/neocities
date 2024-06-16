@@ -311,9 +311,10 @@ footer{
     clear: both;
     float:inline-end;
     margin-top: 10px;
-    & a:hover, a:focus{
-        color: white;
-    }
+}
+
+footer a:hover, footer a:focus{
+    color: white;
 }
     
 /*----- sidebar -----*/
@@ -435,9 +436,10 @@ a {
     -o-transition:all 0.3s ease-in-out;
     -ms-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    &:hover,:focus{
-        color: var(--link-hover);
-    }
+}
+
+a:hover, a:focus{
+    color: var(--link-hover);
 }
 
 b, strong {
@@ -702,9 +704,10 @@ transform:translate(0);
         -o-transition:all 0.3s ease-in-out;
         -ms-transition:all 0.3s ease-in-out;
         transition:all 0.3s ease-in-out;
-        &:hover{
-            opacity: 1;
-        }
+    }
+    
+    img:hover{
+        opacity: 1;
     }
 }
 

@@ -510,9 +510,10 @@ article ul{
         display: inline-block;
         padding: 0.2em;
         line-height: 1.5;
-        &::after {
-            content: '\00a0 \00a0 /';
-        }
+    }
+    
+    nav li::after {
+        content: '\00a0 \00a0 /';
     }
 
     main{

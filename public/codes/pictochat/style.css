@@ -85,9 +85,10 @@ a {
   -o-transition:all 0.3s ease-in-out;
   -ms-transition:all 0.3s ease-in-out;
   transition:all 0.3s ease-in-out;
-  &:hover{
-    color: var(--link-hover);
-  }
+}
+
+a:hover{
+  color: var(--link-hover);
 }
 
 code {
@@ -242,8 +243,9 @@ code {
 
   a {
     color: var(--link-dark);
-    &:hover{
-      color: var(--link-hover-dark);
-    }
+  }
+  
+  a:hover{
+    color: var(--link-hover-dark);
   }
 }

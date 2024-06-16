@@ -98,9 +98,10 @@ body {
 a {
   color:rgb(84, 183, 238);
   transition: all 0.3s ease;
-  &:hover{
-    color:rgb(14, 134, 214)
-  }
+}
+
+a:hover{
+  color:rgb(14, 134, 214)
 }
 
 h1 {
@@ -149,9 +150,10 @@ h1 {
     #f5f5f5 0.5vw
   );
   overflow: hidden;
-  &:hover{
-      scale: 1.03;
-  }
+}
+
+.channel:hover{
+    scale: 1.03;
 }
 
 .channel img {
