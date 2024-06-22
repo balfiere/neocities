@@ -12,6 +12,31 @@
   <id>https://kwaamfan.neocities.org/microblog/atom.xml</id>
   
   <entry>
+    <title>friday, june 21 2024</title>
+    <link href="https://kwaamfan.neocities.org/microblog/#13"/>
+    <id>https://kwaamfan.neocities.org/microblog/#13</id>
+    <updated>2024-06-22T03:46:38Z</updated>
+    <content type="xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+<p style="clear:both;display: flex;justify-content: center;align-items: center; flex-flow: row wrap;">
+<img src="https://kwaamfan.neocities.org/microblog/images/20240621macbooks.webp" style="max-width:100%;" alt="two laptops open on a desk. the left is a 13 inch macbook air and the right is a 15 inch macbook pro." />
+</p>
+<p>#tech</p>
+<p>my mom bought a new laptop recently and gave me her old ones. they've been slow af and prone to crashes for years so she's been using her phone to watch youtube (so much that it's caused screen burn in -_-). i installed new operating systems on both of them and they seem to function better now (ubuntu server on the 2010 macbook pro and archcraft on the 2012 macbook air). i don't really have much of a use for them but it was fun trying to get them running again. i might mess around with them in the future... they both have surprisingly nice screens for decade old laptops and i feel kinda bad for turning the pro into a server ^^;</p>
+<p>i'm not much of an apple fan; my current phone is an iphone xr and the only apple product i've ever bought new. throughout high school and most of college i had this one friend who would tease me, my brother, and another friend of ours for being the only people in our friend group who used android, therefore messing up imessage group chats. now that the three of us are on iphones.... honestly he had a point, imessage is really convenient when literally all your friends also have iphones. the battery on my phone is still good despite being almost five years old so i hope i can still get a couple years out of it before needing to replace it. probably with a used iphone... these days i really only use my phone to call, text, and listen to audiobooks so i don't see the benefits of buying new, and while i really dislike how much less access to FOSS software and easy control over my files the iphone has, ultimately a phone is a tool to communicate and currently an iphone provides me the least amount of friction to keeping in touch with my friends.</p>
+<p style="clear:both;display: flex;justify-content: center;align-items: center; flex-flow: row wrap;">
+<img src="https://kwaamfan.neocities.org/microblog/images/20240621com.webp" style="max-width:100%;" alt="a 17 inch 2007 macbook pro open on a desk." />
+</p>
+<p>my current daily driver laptop is a thinkpad p52, but when i was in high school i had a couple different apple laptops. i still have the one above, a 17" 2007 macbook pro. about six months ago i ripped out the 1tb hard drive i had left languishing in there for nearly 10 years and put it in my current laptop's 2.5" drive bay when i started messing with dualbooting linux and needed more space on my ssds, so this laptop doesn't turn on anymore. i actually had another laptop that was a similar model that i harvested parts from to fix up the one pictured, including replacing the screen. when i was in high school my mom loved browsing craiglist to try to find good deals on used tech (especially macbooks... i still don't understand why she insists on paying a premium for apple computers when all she does is watch youtube), except she doesn't actually understand anything about technology so i was always the one who had to fix things and get them in working order. i guess it was good to learn how to do basic computer upgrades and repair, and even now i still use craiglist to buy used tech instead of buying new (i scored my current laptop for only $200!), but i could've done without the being forced on my mother's whim to spend the occasional evening setting up meetings with strangers who sometimes live an hour away just to come back and have to spend hours googling how to fix some random thing i didn't notice when inspecting it -_- the laptop i remember most fondly though that i don't have anymore was an apple ibook g3. it's THE quintessential frutiger aero piece of tech and every day i rue the fact that tech doesn't look like this anymore. the case on the macbook air i have now is translucent and the same shade of teal as the ibook i use to have (like the ad pictured below), so i guess it can be my old ibook's spiritual successor. honestly why does everything only come in like matte black or brushed aluminum these days... i was particularly fond of the charger, which is like a yo-yo since you wrap the wire around a disk.</p>
+<p style="clear:both;display: flex;justify-content: center;align-items: center; flex-flow: row wrap;">
+  <img src="https://kwaamfan.neocities.org/microblog/images/20240621ibook.jpg" alt="an ad for the apple ibook 3. a picture on the left shows the laptop closed with a hand holding it by a built-in handle in the hinge. a picture on the right shows the laptop open. the ad says 'Is it possible to fall in love with a computer? Oh yes. Introducing iBook. Think different.'" style="max-width: 100%;" />
+  <img src="https://kwaamfan.neocities.org/microblog/images/20240621charger.webp" alt="a picture of a charger used for the apple ibook. the power supply is circular and features the apple logo in the middle." style="max-width: 100%;" />
+</p>
+		</div>
+	</content>
+  </entry>
+  
+  <entry>
     <title>saturday, june 15 2024</title>
     <link href="https://kwaamfan.neocities.org/microblog/#12"/>
     <id>https://kwaamfan.neocities.org/microblog/#12</id>
