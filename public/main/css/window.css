@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 button {
     border: none;
     margin: 0;
@@ -163,10 +167,6 @@ button:focus {
     z-index: 99;
     position: relative;
   }  
-
-  * {
-    box-sizing: border-box;
-    }
 
 .chatbox {
     top:2vh;
