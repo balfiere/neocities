@@ -13,6 +13,18 @@
   <id>https://kwaamfan.neocities.org/atom.xml</id>
   
   <entry>
+    <title>about page redesigned</title>
+    <link href="https://kwaamfan.neocities.org/about/"/>
+    <id>https://kwaamfan.neocities.org/?2024-07-25T22:13:35Z</id>
+    <updated>2024-07-25T22:13:44Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        redesigned my <a href="https://kwaamfan.neocities.org/about/">about page</a> to be more soul hackers themed. i also removed the chatbox on my main page since the service i was using, chattable, is no longer active :( once i've decided on a new service it'll be replaced tho!
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
     <title>more stuff added to the resources site</title>
     <link href="https://kwaamfan.neocities.org/resources/"/>
     <id>https://kwaamfan.neocities.org/?2024-05-29T19:53:11Z</id>
