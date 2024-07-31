@@ -638,8 +638,11 @@ transform:translate(0);
     outline: 4px solid var(--link);
 }
 
-.mybutton{display: none;}
 .mobilewarning{display:block;}
+
+textarea, #leavesButton {
+    color: var(--text-dark);
+}
 
 /* --- hambuger menu svg styling --- */
 
