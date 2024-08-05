@@ -68,18 +68,42 @@ section {
   padding: 0;
   width: 100lvw;
   height: 100lvh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+	overflow-x: hidden;
+	clip: rect(0, auto, auto, 0);
 }
 
+/*
 img, picture {
+  display: none;
   position: absolute;
   width: 100lvw;
   height: 100lvh;
   object-fit: cover;
   z-index: -1;
 }
+  */
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+  }
+
+  section:nth-of-type(1) > .bg { background-image: url('places.avif'); }
+  section:nth-of-type(2) > .bg { background-image: url('eruyt.avif'); }
+  section:nth-of-type(3) > .bg { background-image: url('jazzjin.avif'); }
+  section:nth-of-type(4) > .bg { background-image: url('serena.avif'); }
+  section:nth-of-type(5) > .bg { background-image: url('fishermanshorizon.avif'); }
+  section:nth-of-type(6) > .bg { background-image: url('parabellum.avif'); }
 
 /*----- style text -----*/
 
@@ -135,19 +159,11 @@ nav span {
     
   <main>
     <section class="panel">
-      <picture>
-        <source srcset="places.jpg" media="(prefers-reduced-motion)">
-        <source srcset="places.avif">
-        <img src="places.jpg">
-      </picture>
+      <div class="bg"></div>
       <div class="content">a page dedicated to my favorite locations and songs in video games. works best with autoplay enabled.</div>
     </section>
     <section class="panel">
-      <picture>
-        <source srcset="eruyt.jpg" media="(prefers-reduced-motion)">
-        <source srcset="eruyt.avif" />
-        <img src="eruyt.jpg" loading="lazy">
-      </picture>
+      <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">eruyt village</span>
@@ -160,10 +176,7 @@ nav span {
       </div>
     </section>
     <section class="panel">
-      <picture>
-        <source srcset="jazzjin.avif" />
-        <img src="jazzjin.jpg" loading="lazy">
-      </picture>
+      <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">jazz jin</span>
@@ -176,11 +189,7 @@ nav span {
       </div>
     </section>
     <section class="panel">
-      <picture>
-        <source srcset="serena.jpg" media="(prefers-reduced-motion)">
-        <source srcset="serena.avif" />
-        <img src="serena.jpg" loading="lazy">
-      </picture>
+      <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">serena</span>
@@ -193,11 +202,7 @@ nav span {
       </div>
     </section>
     <section class="panel">
-      <picture>
-        <source srcset="fishermanshorizon.jpg" media="(prefers-reduced-motion)">
-        <source srcset="fishermanshorizon.avif" />
-        <img src="fishermanshorizon.jpg" loading="lazy">
-      </picture>
+      <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">fisherman's horizon</span>
@@ -210,11 +215,7 @@ nav span {
       </div>
     </section>
     <section class="panel">
-      <picture>
-        <source srcset="parabellum.jpg" media="(prefers-reduced-motion)">
-        <source srcset="parabellum.avif" />
-        <img src="parabellum.jpg" loading="lazy">
-      </picture>
+      <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">parabellum</span>
