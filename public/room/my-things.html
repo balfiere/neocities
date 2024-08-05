@@ -16,8 +16,20 @@
 
 <!-- header -->
 <header>
-  <!-- mobile button -->
-  <div id="open"><span id="open-icon"></span></div>
+<!-- mobile button -->
+<div id="open" tabindex="0">
+  <svg class="ham hamRotate" id="ham4" viewBox="0 0 100 100" width="65">
+    <path
+          class="line top"
+          d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+    <path
+          class="line middle"
+          d="m 70,50 h -40" />
+    <path
+          class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+  </svg>
+</div>
 </header><!-- end header -->
 
 <div id="container">
@@ -115,11 +127,28 @@ late 2022 since they look a little sad now haha.</p>
 
 <script>
 
-  document.getElementById("open").addEventListener("click", function () {
+///////////////////////////////////////////////
+//
+// mobile sidebar
+//
+///////////////////////////////////////////////
+
+let burger = document.getElementById("open");
+
+// Setup our function to run on various events
+var toggleSidebar = function (event) {
+  // Do something...
     document.getElementById('TOC').classList.toggle('open')
-    document.getElementById('open-icon').classList.toggle('close')
-  return false;
-})
+    document.getElementById('ham4').classList.toggle('active')
+};
+
+burger.addEventListener('click', toggleSidebar, false);
+burger.addEventListener('keydown', (event) => {
+  let key = event.code;
+  if (key == "Escape" || key == "Enter") {
+      toggleSidebar(event);
+  }
+});
 
 </script>
 </body>

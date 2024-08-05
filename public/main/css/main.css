@@ -625,6 +625,14 @@ transform:translate(0);
 -webkit-transform:translate(0)
 }
 
+.mobilewarning{display:block;}
+
+textarea, #leavesButton {
+    color: var(--text-dark);
+}
+
+/* --- hambuger menu svg styling --- */
+
 #open{
     display:inline-block;
     position:absolute;
@@ -633,18 +641,6 @@ transform:translate(0);
     z-index:1001;
     cursor:pointer;
 }
-
-#open:focus{
-    outline: 4px solid var(--link);
-}
-
-.mobilewarning{display:block;}
-
-textarea, #leavesButton {
-    color: var(--text-dark);
-}
-
-/* --- hambuger menu svg styling --- */
 
 .ham {
     cursor: pointer;
@@ -661,7 +657,9 @@ textarea, #leavesButton {
     stroke:var(--link);
     stroke-width:4;
     stroke-linecap:round;
+    transition: all 0.3s ease-in-out;
   }
+
   #ham4 .top {
     stroke-dasharray: 40 121;
   }
@@ -680,7 +678,9 @@ textarea, #leavesButton {
   #ham4.active .bottom {
     stroke-dashoffset: -68px;
   }
-
+  #ham4.active .line {
+    stroke:white;
+}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -731,20 +731,4 @@ textarea, #leavesButton {
     img:hover{
         opacity: 1;
     }
-}
-
-@media (prefers-reduced-motion) {
-    /*
-  * {
-    animation-delay: -1s !important;
-    animation-duration: 1s !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0s !important;
-  }
-
-    #page {
-        background-image: none !important;
-    }
-        */
 }
