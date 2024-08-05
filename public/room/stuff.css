@@ -7,20 +7,17 @@
 /*----- variables -----*/
 
 :root {
-  --text: #3b3b3b;
+  --text: #ffffff;
   --background: #f8f8f8;
-  --pink-dark:rgb(250, 159, 250);
-  --purple-dark:rgb(175, 136, 255);
-  --green-dark:rgb(97, 184, 140);
+  --pink-dark:rgb(247, 116, 247);
+  --green-dark:rgb(115, 240, 125);
   --blue-dark:rgb(94, 175, 254);
-  --toc-link:rgb(97, 223, 160);
-  --toc-shadow:rgba(0, 0, 0, 0.8);
 
   /*----- dark mode -----*/
   --text-dark: #a8a8a8;
   --background-dark: #1d1d1d;
   --pink-light:rgb(254, 175, 255);
-  --purple-light:rgb(174, 175, 255);
+  --purple-light:rgb(234, 149, 255);
   --green-light:rgb(136, 255, 175);
   --blue-light:rgb(96, 215, 255);
 }
@@ -93,6 +90,11 @@
     }
 
 /* Body */
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
   font-family: 'IBM Plex Sans Thai';
@@ -104,41 +106,61 @@ body {
   margin: auto;
   color: var(--text);
   background-color: var(--background);
-  padding: 13px;
+  background-image: url('images/mythings.avif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 
 #container{
   display: flex;
+  flex-direction: row;
+  align-content:center;
+  justify-content: space-between;
+  position: relative;
   padding: 0;
   margin: 0 auto;
   top: 0;
   max-width: 1200px;
 }
 
+/* sidebar */
+
 #TOC {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  width: 27%;
+  min-width: 290px;
   position: sticky;
-  top: 20%;
-  height: 100%;
-  margin-right: 3em;
-  width: 250px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   font-family: seed;
   font-size: 32px;
 }
 
-#TOC ul {
-    margin: -6px 0 0 3px;
-    padding: 0;
-    list-style-type: none;
-    line-height: 32px;
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
+#TOC > ul {
+  padding: 0.5em;
+  list-style-type: none;
+  line-height: 32px;
+	background: radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+     background: -moz-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+	 background: -webkit-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+	 background: -o-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+  border-radius: 20px;
+	border: 8px ridge #B6BABD;
+	box-shadow: 5px 5px 5px rgba(10, 10, 0, 0.2);
 }
 
 #TOC a{
     text-decoration: none;
-    text-shadow: 1px 1px var(--toc-shadow);
-    color: var(--toc-link);
+    text-shadow: 2px 2px black;
+    color: white;
 }
 
 #TOC a:hover, #TOC a:focus{
@@ -153,9 +175,22 @@ body {
     line-height: 1px;
 }
 
+/* main content */
+
 .content {
-  flex: 1;
-  max-width: 800px;
+  justify-self: flex-end;
+  flex: 0 0 auto;
+  padding: 0 1em;
+  width: 70%;
+	background: radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+     background: -moz-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+	 background: -webkit-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+	 background: -o-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+  background-size: 1px 100vh;
+  background-attachment: fixed;
+	border-left: 8px ridge #B6BABD;
+	border-right: 8px ridge #B6BABD;
+	box-shadow: 5px 5px 5px rgba(10, 10, 0, 0.2);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -163,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family:"Press Start";
   text-transform:uppercase;
   font-weight: 700;
-  padding-top: 1em;
+  margin: 1em 0;
   clear: both;
 }
 
@@ -218,7 +253,7 @@ a:hover, a:focus, a:active {
 }
 
 b, strong {
-  color: var(--purple-dark);
+  color: var(--pink-dark);
 }
 
 ul {
@@ -329,29 +364,6 @@ textarea {
   outline-style: solid;
   outline-width: 2px;
 }
-
-@media (prefers-color-scheme: dark) {
-  body{
-    color: var(--text-dark);
-    background-color: var(--background-dark);
-  }
-
-  a {
-    color: var(--green-light);
-  }
-
-  a:hover, a:focus{
-    color: var(--blue-light);
-  }
-
-  b, strong {
-    color: var(--purple-light);
-  }
-
-  h1, h2, h3, h4, h5 {
-    color: var(--background);
-  }
-}
  
 @media (max-width:1100px) {
   #TOC {
@@ -456,5 +468,11 @@ textarea {
     #open-icon,#open-icon:before,#open-icon:after{
       background:var(--text-dark);
     }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  body {
+    background-image: url(images/mythings.jpg);
   }
 }
