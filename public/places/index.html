@@ -86,20 +86,22 @@ img, picture {
 .content {
   position: relative;
   text-align: center;
-  padding: 1em;
-  margin: 1em;
   font-family: SeeD;
   text-shadow: 3px 3px 0 #000, 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
 }
 
-.content > span {
+.content > div > span {
   display: block;
+}
+
+.content > div {
+  padding: 0.8em 1em;
+  overflow-y: hidden;
 }
 
 .place {
   font-family: PressStartReg;
   text-transform: uppercase;
-  text-shadow: 5px 5px 0 #000, 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
 }
 
 /*----- go back links -----*/
@@ -146,11 +148,15 @@ nav span {
         <source srcset="eruyt.avif" />
         <img src="eruyt.jpg" loading="lazy">
       </picture>
-      <div class="content"><span class="place">eruyt village</span><span class="game">final fantasy xii (2006)</span>
-      <audio loop controls  preload="metadata">
-        <source src="https://files.catbox.moe/f2ljlz.ogg" type="audio/ogg">
-        <source src="https://files.catbox.moe/powczl.mp3" type="audio/mp3">
-      </audio>
+      <div class="content">
+        <div>
+          <span class="place">eruyt village</span>
+          <span class="game">final fantasy xii (2006)</span>
+        </div>
+        <audio loop controls  preload="metadata">
+          <source src="https://files.catbox.moe/f2ljlz.ogg" type="audio/ogg">
+          <source src="https://files.catbox.moe/powczl.mp3" type="audio/mp3">
+        </audio>
       </div>
     </section>
     <section class="panel">
@@ -158,11 +164,15 @@ nav span {
         <source srcset="jazzjin.avif" />
         <img src="jazzjin.jpg" loading="lazy">
       </picture>
-      <div class="content"><span class="place">jazz jin</span><span class="game">persona 5 royal (2019)</span>
-      <audio loop controls  preload="metadata">
-        <source src="https://files.catbox.moe/sy2f1z.ogg" type="audio/ogg">
-        <source src="https://files.catbox.moe/6fg97c.mp3" type="audio/mp3">
-      </audio>
+      <div class="content">
+        <div>
+          <span class="place">jazz jin</span>
+          <span class="game">persona 5 royal (2019)</span>
+        </div>
+        <audio loop controls  preload="metadata">
+          <source src="https://files.catbox.moe/sy2f1z.ogg" type="audio/ogg">
+          <source src="https://files.catbox.moe/6fg97c.mp3" type="audio/mp3">
+        </audio>
       </div>
     </section>
     <section class="panel">
@@ -171,11 +181,15 @@ nav span {
         <source srcset="serena.avif" />
         <img src="serena.jpg" loading="lazy">
       </picture>
-      <div class="content"><span class="place">serena</span><span class="game">yakuza series (2005)</span>
-      <audio loop controls  preload="metadata">
-        <source src="https://files.catbox.moe/odlmvr.ogg" type="audio/ogg">
-        <source src="https://files.catbox.moe/wvx4ef.mp3" type="audio/mp3">
-      </audio>
+      <div class="content">
+        <div>
+          <span class="place">serena</span>
+          <span class="game">yakuza series (2005)</span>
+        </div>
+        <audio loop controls  preload="metadata">
+          <source src="https://files.catbox.moe/odlmvr.ogg" type="audio/ogg">
+          <source src="https://files.catbox.moe/wvx4ef.mp3" type="audio/mp3">
+        </audio>
       </div>
     </section>
     <section class="panel">
@@ -184,11 +198,15 @@ nav span {
         <source srcset="fishermanshorizon.avif" />
         <img src="fishermanshorizon.jpg" loading="lazy">
       </picture>
-      <div class="content"><span class="place">fisherman's horizon</span><span class="game">final fantasy viii (1999)</span>
-      <audio loop controls  preload="metadata">
-        <source src="https://files.catbox.moe/tptzao.ogg" type="audio/ogg">
-        <source src="https://files.catbox.moe/cc3vm2.mp3" type="audio/mp3">
-      </audio>
+      <div class="content">
+        <div>
+          <span class="place">fisherman's horizon</span>
+          <span class="game">final fantasy viii (1999)</span>
+        </div>
+        <audio loop controls  preload="metadata">
+          <source src="https://files.catbox.moe/tptzao.ogg" type="audio/ogg">
+          <source src="https://files.catbox.moe/cc3vm2.mp3" type="audio/mp3">
+        </audio>
       </div>
     </section>
     <section class="panel">
@@ -197,19 +215,21 @@ nav span {
         <source srcset="parabellum.avif" />
         <img src="parabellum.jpg" loading="lazy">
       </picture>
-      <div class="content"><span class="place">parabellum</span><span class="game">persona 2: eternal punishment (2000)</span>
-      <audio loop controls  preload="metadata">
-        <source src="https://files.catbox.moe/pugzo3.ogg" type="audio/ogg">
-        <source src="https://files.catbox.moe/5oy6bf.mp3" type="audio/mp3">
-      </audio>
+      <div class="content">
+        <div>
+          <span class="place">parabellum</span>
+          <span class="game">persona 2: eternal punishment (2000)</span>
+        </div>
+        <audio loop controls  preload="metadata">
+          <source src="https://files.catbox.moe/pugzo3.ogg" type="audio/ogg">
+          <source src="https://files.catbox.moe/5oy6bf.mp3" type="audio/mp3">
+        </audio>
       </div>
     </section>
   </main>
 
 <!-- controls the snap scrolling and audio autoplay -->
 <script>
-
-console.clear();
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -253,6 +273,21 @@ function goToSection(section, anim, i) {
 }
 
 sections.forEach((section, i) => {
+
+  const lines = section.querySelectorAll("span");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      toggleActions: "restart none none reset"
+    }
+  });
+  tl.from(lines, 2, {
+    yPercent: 250,
+    ease: Power1.out,
+    stagger: 1,
+    delay: 1,
+  });
   
   ScrollTrigger.create({
     trigger: section,
