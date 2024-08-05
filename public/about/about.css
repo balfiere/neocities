@@ -131,7 +131,7 @@
     color: var(--pink);
     text-shadow: 0 0 5px var(--pink);
     transition: all 0.4s ease;
-    &:hover {
+    &:hover, &:focus {
       color: var(--green);
       text-shadow: 0 0 5px var(--green);
     }
@@ -355,6 +355,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: geometricPrecision;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
@@ -393,7 +394,7 @@
     &:last-child {
       color: var(--pink);
     }
-    &:hover {
+    &:hover, &:focus {
       color: var(--blue);
     }
   }
@@ -402,7 +403,7 @@
     padding: 10px 20px;
   }
 
-  .links a:hover li {
+  .links a:hover li, .links a:focus li {
     background-color: #43d0ff4d;
   }
 
@@ -720,7 +721,7 @@
   display: none;
 }
 
-.content .list label:hover, .content .list a:hover{
+.content .list label:hover, .content .list a:hover, .content .list label:focus, .content .list a:focus{
   color: #43d0ff;
 }
 
@@ -800,11 +801,11 @@
 
 .image-container:hover .image, .image-container:active .image {
   opacity: 0.3;
-  webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+  webkit-filter: blur(4px);
   filter: blur(4px);
 }
 
-.image-container:hover .middle,  .image-container:active .middle{
+.image-container:hover .middle,  .image-container:active .middle, .image-container:focus .middle {
   opacity: 1;
 }
 
