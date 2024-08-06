@@ -44,13 +44,43 @@ article {
   overflow-y: scroll;
 }
 
+.popup {
+  width: 94vw;
+  max-width: 90em;
+}
+
+.popup > .window-body {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.inside ul {
+  padding: 0 0 0 1em;
+}
+
+.inside ul > li {
+  list-style: none;
+  &::before {
+    content: url(images/tiny-bee.webp);
+    position: relative;
+    top: 0px;
+    margin-right: 10px;
+  }
+}
+
+.divider {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>
 
 </head>
 <body>
 
 <main>
-  <div class="window active glass active">
+  <div class="window active glass">
     <div class="title-bar">
       <div class="title-bar-text">kwaamfan's vegan page</div>
       <div class="title-bar-controls">
@@ -120,27 +150,30 @@ article {
 
       <div class="inside">
       <menu role="tablist" aria-label="Window with Tabs">
-        <button role="tab" aria-controls="one" aria-selected="true">home</button>
-        <button role="tab" aria-controls="two">toybox</button>
-        <button role="tab" aria-controls="three">recipes</button>
-        <button role="tab" aria-controls="four">resources</button>
+        <button role="tab" aria-controls="home" aria-selected="true">home</button>
+        <button role="tab" aria-controls="toybox">toybox</button>
+        <button role="tab" aria-controls="recipes">recipes</button>
+        <button role="tab" aria-controls="resources">resources</button>
       </menu>
-      <article role="tabpanel" id="one">
+      <article role="tabpanel" id="home">
         <center><img src="images/header.gif"></center>
         <p><a target="_blank" href="https://www.tumblr.com/lcwpclybunny/746824933832785920">background credit</a> / <a target="_blank" href="https://foollovers.com/mat/line55.html">sunflower graphics credit</a></p>
       </article>
   
-      <article role="tabpanel" hidden id="two">
+      <article role="tabpanel" hidden id="toybox">
         <p>blah</p>
       </article>
   
-      <article role="tabpanel" hidden id="three">
-        <p>
-          You create the content for each tab by using an <code>article</code> tag.
-        </p>
+      <article role="tabpanel" hidden id="recipes">
+        <h2 class="instruction instruction-primary">my recipes</h2>
+        <ul>
+          <li><a href="#cardamom-basil-cookies">cardamom basil cookies</a></li>
+          <li><a href="#bourbon-caramel">bourbon caramel</a></li>
+        </ul>
+        <img src="images/medium-divider.gif" class="divider">
       </article>
   
-      <article role="tabpanel" hidden id="four">
+      <article role="tabpanel" hidden id="resources">
         <p>
           You create the content for each tab by using an <code>article</code> tag.
         </p>
@@ -154,6 +187,83 @@ article {
     </div>
   </div>
 </main>
+
+<div class="window active is-bright glass popup" id="cardamom-basil-cookies" role="dialog" aria-labelledby="dialog-title">
+  <div class="title-bar">
+    <div class="title-bar-text" id="dialog-title">cardamom basil cookies</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close" onclick="history.back()"></button>
+    </div>
+  </div>
+  <div class="window-body has-space">
+    <div class="inside">
+    <h2 class="instruction instruction-primary">description</h2>
+    <p>These cookies combine the buttery flavor of shortbread with the herbal flavor of Thai basil. Thai basil, called โหระพา in Thai, has a licorice like taste, which gets further enhanced by the addition of cardamom. Be sure not to confuse this type of basil with กะเพรา or Holy basil, which is more commonly used in Thai cooking than Thai basil, as it has a spicier flavor. This recipe is a variation of Savory Moment's <a target="_blank" href="https://www.savorymomentsblog.com/2018/08/cinnamon-basil-shortbread-cookies.html">Cinnamon Basil Shortbread Cookies</a>.</p>
+    <h2 class="instruction instruction-primary">ingredients</h2>
+    <ul>
+      <li>1/2 cup vegan stick butter (I use Country Crock Plant Butter with olive oil)</li>
+      <li>2/3 cup granulated sugar</li>
+      <li>3/4 cup lightly packed Thai basil, minced</li>
+      <li>1/4 tsp salt</li>
+      <li>1/4 tsp ground cardamom</li>
+      <li>1/4 tsp ground cloves</li>
+      <li>1/2 tsp vanilla extract</li>
+      <li>1 1/4 cup all-purpose flour</li>
+    </ul>
+    <h2 class="instruction instruction-primary">instructions</h2>
+    <ol>
+      <li>Cream butter and sugar until fluffy.</li>
+      <li>Stir in basil, cardamom, cloves, salt, and vanilla until evenly mixed.</li>
+      <li>Gradually fold in flour until just combined.</li>
+      <li>Turn the dough onto a couple large sheets of plastic wrap. Try to bring the dough together (it will be crumbly) and use the plastic wrap to form it into a log about 2.5-3 inches in diameter. Wrap the dough tightly and refrigerate overnight.</li>
+      <li>Preheat oven to 350°F and line a baking sheet with parchment paper.</li>
+      <li>Slice the log into 1/4 inch wide cookies.</li>
+      <li>Bake 10-12 minutes or until the bottom begins to brown.</li>
+      <li>Remove from the oven. Leave the cookies for a few minutes before moving to a wire rack to finish cooling.</li>
+    </ol>      
+  </div>
+  </div>
+  <footer style="text-align: right">
+    <button onclick="history.back()">Cancel</button>
+  </footer>
+</div>
+
+<div class="window active is-bright glass popup" id="bourbon-caramel" role="dialog" aria-labelledby="dialog-title">
+  <div class="title-bar">
+    <div class="title-bar-text" id="dialog-title">bourbon caramel</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close" onclick="history.back()"></button>
+    </div>
+  </div>
+  <div class="window-body has-space">
+    <div class="inside">
+    <h2 class="instruction instruction-primary">description</h2>
+    <p>A simple vegan version of caramel sauce with a touch of bourbon. Modified from Minimalist Baker's <a target="_blank" href="https://minimalistbaker.com/4-ingredient-bourbon-caramel-sauce/">Four Ingredient Bourbon Caramel Sauce</a>.</p>
+    <h2 class="instruction instruction-primary">ingredients</h2>
+    <ul>
+      <li>1/2 cup brown sugar</li>
+      <li>1/4 cup full fat vegan cream*</li>
+      <li>1 tbsp bourbon</li>
+      <li>1 pinch of salt</li>
+      <li>2 tbsp vegan butter (preferably from a stick)</li>
+    </ul>
+    <h2 class="instruction instruction-primary">instructions</h2>
+    <ol>
+      <li>Add sugar to a small saucepan over low to medium heat. Stir constantly, cooking until dissolved.</li>
+      <li>Turn down the heat to the lowest setting. Wait for a minute for the caramel to cool a little bit, then slowly whisk in the milk until fully incorporated.</li>
+      <li>Turn off the heat and stir in the bourbon, salt, and butter.</li>
+      <li>Set aside until it cools to room temperature before transferring to a glass container.</li>
+    </ol> 
+    <h2 class="instruction instruction-primary">notes</h2>
+    <ol>
+      <li>For best results you can either use the cream from the top of a container of coconut milk that's been refrigerated overnight, or a vegan heavy cream alternative (either commercial or homemade). If you don't have access to any heavy cream alternative, you can substitute with vegan milk (preferably a thicker kind like cashew, macadamia, or oat milk) and use some more butter.</li>
+    </ol>          
+  </div>
+  </div>
+  <footer style="text-align: right">
+    <button onclick="history.back()">Cancel</button>
+  </footer>
+</div>
 
 <script>
   const tabButtons = document.querySelectorAll("[role=tab]");
