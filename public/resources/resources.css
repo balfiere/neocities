@@ -133,11 +133,11 @@ p {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 902px;
-    height: 808px;
-    border: 1px solid var(--border);
+    /* width: 902px; */
+    /* height: 808px; */
+    /* border: 1px solid var(--border); */
     background-color: var(--main-box-background);
-    padding: 3px;
+    /* padding: 3px; */
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -145,32 +145,42 @@ p {
     
 #box{
     width: 900px;
-    height: 806px;
+    /* height: 806px; */
     background-color: var(--main-box-background);
     border: 1px solid var(--border);
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+    grid-template-columns: 190px auto;
+  grid-template-rows: 60px 668px 60px;
+    /* gap: 12px; */
 }
 
+/* header, footer { */
 header, footer {
     color: var(--header);
     font-size: 2em;
+    line-height: 60px;
     font-family: 'FortySeven Micro NBP', sans-serif;
     letter-spacing: 3px;
-    padding: 10px;
+    padding: 0 10px;
     margin: 0px;
-    font-weight: 700;
+    font-weight: 700; 
 }
     
 header{
+  grid-area: header;
     border-bottom: 1px solid var(--border);
     background-image: linear-gradient(to right, var(--gradient-dark), var(--gradient-light));
 }
     
 footer{
-    clear: both;
+  grid-area: footer;
     border-top: 1px solid var(--border);
     background-image: linear-gradient(to left, var(--gradient-dark), var(--gradient-light));
     text-align: right;
-    height: 32px;
 }
 
 /*----- clickable headers -----*/
@@ -179,7 +189,7 @@ nav {
     border-left: 1px solid var(--border);
     border-top: 1px solid var(--border);
     border-right: 1px solid var(--border);
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 12px 0px;
 }
 
 nav:last-child {
@@ -198,18 +208,20 @@ summary {
 /*----- sidebar navigation -----*/
   
 #side{
-    float: left;
-    width: 190px;
-    padding: 5px 0px 5px 13px;
+    /* float: left; */
+    /* width: 190px; */
+    /* padding: 5px 0px 5px 13px; */
     overflow-y: hidden;
-    height: 668px;
-    margin-top: 10px;
+    /* height: 668px; */
+    /* margin-top: 10px; */
+    margin: 12px 0 0 12px;
 }
     
 aside .subheader h3{
     margin: 1px 0px 0px 4px;
     font-family: 'FortySeven Micro NBP', sans-serif;
     font-size: 1em;
+    line-height: 1.25em;
 }
     
 .sidecontent{
@@ -257,13 +269,10 @@ input[type=checkbox] {
 /*----- main contents -----*/
    
 main {
-    float: right;
-    width: 669px; 
-    height: 674px;
     overflow-y: scroll;
-    margin-top: 0px;
     scrollbar-width: none;
-    padding: 15px 12px 5px 0px;
+    grid-area: content;
+    margin: 12px 12px 0 12px;
 }
 
 main:hover {
@@ -280,7 +289,7 @@ article{
     border-top: 1px solid var(--border);
     border-right: 1px solid var(--border);
     padding: 0px;
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 12px 0px;
 }
 
 article:last-child {
@@ -309,11 +318,12 @@ article .subheader h3{
     margin: 1px 0px 0px 4px;
     font-family: 'FortySeven Micro NBP', sans-serif;
     font-size: 1.125em;
+    line-height: 1.25em;
     display: inline;
 }
     
 .mainboxescontent{
-    padding: 10px 15px;
+    padding: 10px 12px;
     color: var(--text);
     line-height: 1.5;
     font-family: 'Prompt';
@@ -416,6 +426,7 @@ article ul{
         height: auto;
         z-index: 999;
         font-size: 1.5em;
+        line-height: 1.5em;
     }
 
     header {
@@ -438,10 +449,11 @@ article ul{
         height: auto;
         overflow: auto;
         padding: 0px 0px 0px 0px;
+        margin: 12px 0px 0px 0px;
     }
 
     #sidebarMenu {
-        margin-top: 15px;
+        margin-top: 12px;
         display: none;
     }
 
@@ -450,7 +462,6 @@ article ul{
     }
 
     .mobileNavToggle {
-        margin-top: 5px;
         display: block;
         cursor: pointer;
     }
@@ -520,7 +531,7 @@ article ul{
         width: 100%;
         flex: 1;
         overflow: auto;
-        padding: 15px 0px 0px 0px;
+        padding: 0;
     }
 
     article {
@@ -544,7 +555,7 @@ article ul{
     }
 
     article:last-child {
-        margin: 0px 0px 15px 0px;
+        margin: 0px 0px 12px 0px;
     }
 
     #credit{
