@@ -11,12 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v2.0.2
+      uses: bcomnes/deploy-to-neocities@v3
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
         protected_files: 'codes/*'
+        neocities_supporter: false
+        preview_before_deploy: true
         dist_dir: public
