@@ -6,47 +6,35 @@
       <description>last 10 notes on kwaamfan&#039;s notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>normalizing audio</title>
+    <link>https://kwaamfan.neocities.org/notes/normalizing-audio</link>
+    <guid>https://kwaamfan.neocities.org/notes/normalizing-audio</guid>
+    <description><![CDATA[ normalizing audio i use ffmpeg to normalize the audio of my media files, particularly anything i want to sentence mine. ]]></description>
+    <pubDate>Fri, 18 Jul 2025 23:13:14 GMT</pubDate>
+  </item><item>
+    <title>updating ffmpeg</title>
+    <link>https://kwaamfan.neocities.org/notes/updating-ffmpeg</link>
+    <guid>https://kwaamfan.neocities.org/notes/updating-ffmpeg</guid>
+    <description><![CDATA[ updating ffmpeg the version of ffmpeg that comes installed on pop os 22.04 is version 4.4.2, which doesn’t come with libsvtav1 to make avif files and doesn’t work well with ffmpeg-normalize. ]]></description>
+    <pubDate>Fri, 18 Jul 2025 23:03:37 GMT</pubDate>
+  </item><item>
+    <title>video to avif</title>
+    <link>https://kwaamfan.neocities.org/notes/video-to-avif</link>
+    <guid>https://kwaamfan.neocities.org/notes/video-to-avif</guid>
+    <description><![CDATA[ video to avif i use avif files on my site wherever i want to convert a video to an animated image. ]]></description>
+    <pubDate>Fri, 18 Jul 2025 23:00:54 GMT</pubDate>
+  </item><item>
+    <title>hiding hard subtitles</title>
+    <link>https://kwaamfan.neocities.org/notes/hiding-hard-subtitles</link>
+    <guid>https://kwaamfan.neocities.org/notes/hiding-hard-subtitles</guid>
+    <description><![CDATA[ hiding hard subtitles i use subtitle hider to blur english subtitles hardcoded into videos i want to watch in a language i’m learning. ]]></description>
+    <pubDate>Fri, 18 Jul 2025 22:57:14 GMT</pubDate>
+  </item><item>
     <title>welcome to my notebook</title>
     <link>https://kwaamfan.neocities.org/notes/</link>
     <guid>https://kwaamfan.neocities.org/notes/</guid>
-    <description>this section of my site is a repository of notes i created while learning how to code my site. i’m pretty bad at remember how i did things or the exact names of commands, so i end up documenting everything i do so i can replicate things later.</description>
-    <pubDate>Wed, 22 May 2024 16:08:23 GMT</pubDate>
-  </item><item>
-    <title>Layout</title>
-    <link>https://kwaamfan.neocities.org/notes/layout</link>
-    <guid>https://kwaamfan.neocities.org/notes/layout</guid>
-    <description>Certain emitters may also output HTML files. To enable easy customization, these emitters allow you to fully rearrange the layout of the page. The default page layouts can be found in quartz.layout.ts.</description>
-    <pubDate>Wed, 22 May 2024 16:08:23 GMT</pubDate>
-  </item><item>
-    <title>Migrating from Quartz 3</title>
-    <link>https://kwaamfan.neocities.org/notes/migrating-from-Quartz-3</link>
-    <guid>https://kwaamfan.neocities.org/notes/migrating-from-Quartz-3</guid>
-    <description>As you already have Quartz locally, you don’t need to fork or clone it again. Simply just checkout the alpha branch, install the dependencies, and import your old vault.</description>
-    <pubDate>Wed, 22 May 2024 16:08:23 GMT</pubDate>
-  </item><item>
-    <title>Philosophy of Quartz</title>
-    <link>https://kwaamfan.neocities.org/notes/philosophy</link>
-    <guid>https://kwaamfan.neocities.org/notes/philosophy</guid>
-    <description>A garden should be a true hypertext The garden is the web as topology. Every walk through the garden creates new paths, new meanings, and when we add things to the garden we add them in a way that allows many future, unpredicted relationships.</description>
-    <pubDate>Wed, 22 May 2024 16:08:23 GMT</pubDate>
-  </item><item>
-    <title>Setting up your GitHub repository</title>
-    <link>https://kwaamfan.neocities.org/notes/setting-up-your-GitHub-repository</link>
-    <guid>https://kwaamfan.neocities.org/notes/setting-up-your-GitHub-repository</guid>
-    <description>First, make sure you have Quartz cloned and setup locally. Then, create a new repository on GitHub.com. Do not initialize the new repository with README, license, or gitignore files.</description>
-    <pubDate>Wed, 22 May 2024 16:08:23 GMT</pubDate>
-  </item><item>
-    <title>Quartz Showcase</title>
-    <link>https://kwaamfan.neocities.org/notes/showcase</link>
-    <guid>https://kwaamfan.neocities.org/notes/showcase</guid>
-    <description>Want to see what Quartz can do? Here are some cool community gardens: Quartz Documentation (this site!) Jacky Zhao’s Garden Socratica Toolbox oldwinter の数字花园 Aaron Pham’s Garden ...</description>
-    <pubDate>Wed, 22 May 2024 16:08:23 GMT</pubDate>
-  </item><item>
-    <title>Upgrading Quartz</title>
-    <link>https://kwaamfan.neocities.org/notes/upgrading</link>
-    <guid>https://kwaamfan.neocities.org/notes/upgrading</guid>
-    <description> Note This is specifically a guide for upgrading Quartz 4 version to a more recent update. If you are coming from Quartz 3, check out the migration guide for more info.</description>
-    <pubDate>Wed, 22 May 2024 16:08:23 GMT</pubDate>
+    <description><![CDATA[ this section of my site is a repository of random notes mostly related to language learning, coding, and linux. ]]></description>
+    <pubDate>Fri, 18 Jul 2025 03:27:59 GMT</pubDate>
   </item>
     </channel>
   </rss>

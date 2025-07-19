@@ -58,7 +58,7 @@ article {
   padding: 0 0 0 1em;
 }
 
-.inside ul > li {
+ul:not([role="menubar"], [role="menu"], .tree-view, details > ul, ul > ul) > li {
   list-style: none;
   &::before {
     content: url(images/tiny-bee.webp);
@@ -153,7 +153,7 @@ article {
         <button role="tab" aria-controls="home" aria-selected="true">home</button>
         <button role="tab" aria-controls="toybox">toybox</button>
         <button role="tab" aria-controls="recipes">recipes</button>
-        <button role="tab" aria-controls="resources">resources</button>
+        <button role="tab" aria-controls="resources" disabled>resources</button>
       </menu>
       <article role="tabpanel" id="home">
         <img src="images/header.gif" class="divider">
@@ -172,6 +172,45 @@ article {
           <li><a href="#bourbon-caramel">bourbon caramel</a></li>
         </ul>
         <img src="images/medium-divider.gif" class="divider">
+        <h2 class="instruction instruction-primary">other recipes</h2>
+        <ul class="tree-view has-collapse-button has-connector">
+          <details open="">
+            <summary>savory</summary>
+            <ul>
+              <li>Avoid at all costs</li>
+              <ul>
+                <li>Avoid</li>
+              </ul>
+            </ul>
+          </details>
+          <details open="">
+            <summary>desserts</summary>
+            <ul>
+              <li>Avoid at all costs</li>
+              <li>
+                <details>
+                  <summary>Unless</summary>
+                  <ul>
+                    <li>Avoid</li>
+                    <li>
+                      <details>
+                        <summary>At</summary>
+                        <ul>
+                          <li>Avoid</li>
+                          <li>At</li>
+                          <li>All</li>
+                          <li>Cost</li>
+                        </ul>
+                      </details>
+                    </li>
+                    <li>All</li>
+                    <li>Cost</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </ul>
       </article>
   
       <article role="tabpanel" hidden id="resources">
