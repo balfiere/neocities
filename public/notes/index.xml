@@ -6,34 +6,40 @@
       <description>last 10 notes on kwaamfan&#039;s notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Templater</title>
+    <link>https://kwaamfan.neocities.org/notes/Templater</link>
+    <guid>https://kwaamfan.neocities.org/notes/Templater</guid>
+    <description><![CDATA[ Templater is an Obsidian extension that can be used to automate the creation of notes and automatically sort them based on prompts]. ]]></description>
+    <pubDate>Sat, 19 Jul 2025 04:29:50 GMT</pubDate>
+  </item><item>
     <title>hiding hard subtitles</title>
     <link>https://kwaamfan.neocities.org/notes/hiding-hard-subtitles</link>
     <guid>https://kwaamfan.neocities.org/notes/hiding-hard-subtitles</guid>
-    <description><![CDATA[ hiding hard subtitles i use subtitle hider to blur english subtitles hardcoded into videos i want to watch in a language i’m learning. ]]></description>
+    <description><![CDATA[ i use subtitle hider to blur english subtitles hardcoded into videos i want to watch in a language i’m learning. ]]></description>
     <pubDate>Sat, 19 Jul 2025 02:34:57 GMT</pubDate>
   </item><item>
     <title>welcome to my notebook</title>
     <link>https://kwaamfan.neocities.org/notes/</link>
     <guid>https://kwaamfan.neocities.org/notes/</guid>
-    <description><![CDATA[ this section of my site is a repository of random notes mostly related to language learning, coding, and linux. ]]></description>
+    <description><![CDATA[ this section of my site is a repository of random notes mostly related to language_learning , site_building , and linux . ]]></description>
     <pubDate>Sat, 19 Jul 2025 02:34:57 GMT</pubDate>
   </item><item>
     <title>normalizing audio</title>
     <link>https://kwaamfan.neocities.org/notes/normalizing-audio</link>
     <guid>https://kwaamfan.neocities.org/notes/normalizing-audio</guid>
-    <description><![CDATA[ normalizing audio i use ffmpeg to normalize the audio of my media files, particularly anything i want to sentence mine. ]]></description>
+    <description><![CDATA[ i use ffmpeg to normalize the audio of my media files, particularly anything i want to sentence mine. ]]></description>
     <pubDate>Sat, 19 Jul 2025 02:34:57 GMT</pubDate>
   </item><item>
     <title>updating ffmpeg</title>
     <link>https://kwaamfan.neocities.org/notes/updating-ffmpeg</link>
     <guid>https://kwaamfan.neocities.org/notes/updating-ffmpeg</guid>
-    <description><![CDATA[ updating ffmpeg the version of ffmpeg that comes installed on pop os 22.04 is version 4.4.2, which doesn’t come with libsvtav1 to make avif files and doesn’t work well with ffmpeg-normalize. ]]></description>
+    <description><![CDATA[ the version of ffmpeg that comes installed on pop os 22.04 is version 4.4.2, which doesn’t come with libsvtav1 to make avif files and doesn’t work well with ffmpeg-normalize. ]]></description>
     <pubDate>Sat, 19 Jul 2025 02:34:57 GMT</pubDate>
   </item><item>
     <title>video to avif</title>
     <link>https://kwaamfan.neocities.org/notes/video-to-avif</link>
     <guid>https://kwaamfan.neocities.org/notes/video-to-avif</guid>
-    <description><![CDATA[ video to avif i use avif files on my site wherever i want to convert a video to an animated image. ]]></description>
+    <description><![CDATA[ i use avif files on my site wherever i want to convert a video to an animated image. ]]></description>
     <pubDate>Sat, 19 Jul 2025 02:34:57 GMT</pubDate>
   </item>
     </channel>
