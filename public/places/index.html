@@ -101,23 +101,29 @@ img, picture {
   z-index: -1;
   }
 
-  section:nth-of-type(1) > .bg { 
+  section[data-section="landing"] > .bg { 
     background-image: url('places.avif'),url('places.jpg');
   }
-  section:nth-of-type(2) > .bg { 
+  section[data-section="eruyt"] > .bg { 
     background-image: url('eruyt.avif'), url('eruyt.jpg');
   }
-  section:nth-of-type(3) > .bg { 
+  section[data-section="jazzjin"] > .bg { 
     background-image: url('jazzjin.avif'), url('jazzjin.jpg');
   }
-  section:nth-of-type(4) > .bg { 
+  section[data-section="serena"] > .bg { 
     background-image: url('serena.avif'), url('serena.jpg');
   }
-  section:nth-of-type(5) > .bg { 
+  section[data-section="fishermanshorizon"] > .bg { 
     background-image: url('fishermanshorizon.avif'), url('fishermanshorizon.jpg');
   }
-  section:nth-of-type(6) > .bg { 
+  section[data-section="parabellum"] > .bg { 
     background-image: url('parabellum.avif'), url('parabellum.jpg');
+  }
+  section[data-section="paulowniamall"] > .bg { 
+    background-image: url('paulowniamall.avif'), url('paulowniamall.jpg');
+  }
+  section[data-section="taito"] > .bg { 
+    background-image: url('taito.avif'), url('taito.jpg');
   }
 
 /*----- style text -----*/
@@ -170,6 +176,11 @@ nav span {
   padding: 0 1em;
 }
 
+audio {
+    border-radius: 50px;
+}
+
+
 </style>
 
 </head>
@@ -180,70 +191,98 @@ nav span {
   <nav><span><a href="/about/index.html">back to about page</a> / <a href="/main/index.html">personal site homepage</a></span></nav>
     
   <main>
-    <section class="panel">
+    <section class="panel" data-section="landing">
       <div class="bg"></div>
-      <div class="content">a page dedicated to my favorite locations and songs in video games. works best with autoplay enabled.</div>
+      <div class="content">a page dedicated to my favorite locations and songs in video games. works best with javascript and autoplay enabled.
+      </div>
     </section>
-    <section class="panel">
+    <section class="panel" data-section="eruyt">
       <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">eruyt village</span>
           <span class="game">final fantasy xii (2006)</span>
         </div>
-        <audio loop controls  preload="metadata">
+        <audio loop controls preload="metadata" class="song">
           <source src="https://files.catbox.moe/f2ljlz.ogg" type="audio/ogg">
           <source src="https://files.catbox.moe/powczl.mp3" type="audio/mp3">
         </audio>
       </div>
     </section>
-    <section class="panel">
+    <section class="panel" data-section="jazzjin">
       <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">jazz jin</span>
           <span class="game">persona 5 royal (2019)</span>
         </div>
-        <audio loop controls  preload="metadata">
+        <audio loop controls preload="metadata" class="song">
           <source src="https://files.catbox.moe/sy2f1z.ogg" type="audio/ogg">
           <source src="https://files.catbox.moe/6fg97c.mp3" type="audio/mp3">
         </audio>
       </div>
     </section>
-    <section class="panel">
+    <section class="panel" data-section="taito">
+      <div class="bg"></div>
+      <div class="content">
+        <div>
+          <span class="place">taito, da'at</span>
+          <span class="game">shin megami tensei v (2021)</span>
+        </div>
+        <audio controls preload="metadata" class="song" data-custom-loop="true" data-start="1393972" data-sample-rate="44100">
+          <source src="https://files.catbox.moe/hzbckf.ogg" type="audio/ogg">
+          <source src="https://files.catbox.moe/30nhzi.mp3" type="audio/mp3">
+        <audio>
+      </div>
+    </section>
+    <section class="panel" data-section="serena">
       <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">serena</span>
           <span class="game">yakuza series (2005)</span>
         </div>
-        <audio loop controls  preload="metadata">
+        <audio loop controls  preload="metadata" class="song">
           <source src="https://files.catbox.moe/odlmvr.ogg" type="audio/ogg">
           <source src="https://files.catbox.moe/wvx4ef.mp3" type="audio/mp3">
         </audio>
       </div>
     </section>
-    <section class="panel">
+    <section class="panel" data-section="paulowniamall">
+      <div class="bg"></div>
+      <div class="content">
+        <div>
+          <span class="place">paulownia mall</span>
+          <span class="game">persona 3 (2006)</span>
+        </div>
+        
+        <audio controls preload="metadata" class="song" data-custom-loop="true" data-start="860160" data-sample-rate="44100">
+          <source src="https://files.catbox.moe/kw75m3.ogg" type="audio/ogg">
+          <source src="https://files.catbox.moe/tnoio1.mp3" type="audio/mp3">
+        <audio>
+      </div>
+    </section>
+    <section class="panel" data-section="fishermanshorizon">
       <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">fisherman's horizon</span>
           <span class="game">final fantasy viii (1999)</span>
         </div>
-        <audio loop controls  preload="metadata">
+        <audio loop controls  preload="metadata" class="song">
           <source src="https://files.catbox.moe/tptzao.ogg" type="audio/ogg">
           <source src="https://files.catbox.moe/cc3vm2.mp3" type="audio/mp3">
         </audio>
       </div>
     </section>
-    <section class="panel">
+    <section class="panel" data-section="parabellum">
       <div class="bg"></div>
       <div class="content">
         <div>
           <span class="place">parabellum</span>
           <span class="game">persona 2: eternal punishment (2000)</span>
         </div>
-        <audio loop controls  preload="metadata">
+        <audio loop controls  preload="metadata" class="song">
           <source src="https://files.catbox.moe/pugzo3.ogg" type="audio/ogg">
           <source src="https://files.catbox.moe/5oy6bf.mp3" type="audio/mp3">
         </audio>
@@ -257,7 +296,18 @@ nav span {
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const sections = document.querySelectorAll("section");
-const playlist = document.getElementsByTagName('audio');
+
+const playlist = document.getElementsByClassName('song');
+
+const customLoopPlaylist = document.querySelectorAll('[data-custom-loop="true"]');
+customLoopPlaylist.forEach((song) => {
+  song.addEventListener('timeupdate', () => {
+    if (song.currentTime >= song.duration) {
+      song.currentTime = (song.dataset.start / song.dataset.sampleRate) - 0.05;
+      song.play();
+    }
+  })
+});
 
 // this scrolling object just allows us to conveniently call scrolling.enable(), scrolling.disable(), and check if scrolling.enabled is true. 
 // some browsers (like iOS Safari) handle scrolling on a separate thread and can cause things to get out of sync (jitter/jumpy), so when we're animating the scroll position, force an update of GSAP tweens when there's a scroll event in order to maintain synchronization)
@@ -319,8 +369,9 @@ sections.forEach((section, i) => {
     onEnter: () => goToSection(section),
     onEnterBack: () => goToSection(section)
   });
-  
-  ScrollTrigger.create({
+
+  if (i > 0) {
+    ScrollTrigger.create({
       trigger: section,
   
       start: 'top center',
@@ -330,7 +381,9 @@ sections.forEach((section, i) => {
       onLeave() { playlist[i-1].pause() },
       onEnterBack() { playlist[i-1].play() },
       onLeaveBack() { playlist[i-1].pause() }
-  });
+    });
+  }
+  
  
 });
 
