@@ -1,0 +1,291 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+    --grid-size: 1.2em;
+    --gap: 50px;
+    --highlighter: 144, 113, 228;
+    --highlighter-dark: 71, 41, 154;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    color: black;
+}
+
+body {
+    background: white;
+    background-image: radial-gradient(rgba(128, 128, 128, 0.5) 1px, transparent 0);
+    background-size: var(--grid-size) var(--grid-size);
+  }
+
+mark {
+    font-size: unset;
+    margin: 0 -0.4em;
+    padding: 0 0.4em;
+    border-radius: 10px 0/100px 20px;
+    background: transparent;
+    background-image: linear-gradient(
+        to right,
+		rgba(var(--highlighter), 0.1) 0%,
+		rgba(var(--highlighter), 0.3) 10%,
+		rgba(var(--highlighter), 0.5) 40%,
+		rgba(var(--highlighter), 0.7) 90%,
+		rgba(var(--highlighter), 0.8) 97%,
+		rgba(var(--highlighter), 0.7) 99%,
+		rgba(var(--highlighter), 0.3) 100%
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+main {
+    padding: var(--gap);
+    max-width: 66rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: calc(var(--gap) / 2) 0;
+  }
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width:100vw;
+    overflow-x: hidden;
+    /* margin: var(--gap) 0; */
+    margin: calc(var(--gap) / 2) 0;
+}
+
+.divider img{
+    margin: 0;
+    padding: 0;
+}
+
+.back {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* text styling */
+
+h1, h2 {
+    font-family: "Beth Ellen", cursive;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 2.5em;
+}
+
+
+.picture {
+    /* margin: 0.5em; */
+    max-width: 500px;
+}
+
+.picture img {
+    max-width: 100%;
+}
+
+article:first-of-type .description {
+    text-align: center;
+}
+
+article:nth-of-type(odd) {
+    & .picture {
+        float: left;
+        padding: 0 3em 0.5em 0;
+    }
+}
+
+article:nth-of-type(even) { 
+    & .picture {
+        float: right;
+        padding: 0 0 0.5em 3em;
+    }
+    & ul {
+        padding-left: 0em;
+    }
+
+}
+
+.description {
+    font-family: "Reenie Beanie", cursive;
+    font-weight: 400;
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+.description ul {
+    list-style-type:circle;
+    font-size: unset;
+    margin: calc(var(--gap)/2) 0;
+}
+
+.description li {
+    font-size: unset;
+}
+
+.description a {
+    font-size: unset;
+}
+
+p {
+    font-size: unset;
+    line-height: unset;
+    text-indent: 1.25em;
+}
+
+/* mobile */
+
+@media screen and (max-width: 900px) {
+
+    body {
+        /* font-size: 14px; */
+    }
+
+    main {
+        padding: calc(var(--gap) / 3);
+        -moz-column-count: 1;
+        -moz-column-gap: var(--gap);
+        -moz-column-width: 100%;
+        -webkit-column-count: 1;
+        -webkit-column-gap: var(--gap);
+        -webkit-column-width: 100%;
+        column-count: 1;
+        column-gap: var(--gap);
+        column-width: 100%;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        margin: calc(var(--gap) / 2) 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        /* order: 1; */
+        margin: var(--gap) 0 calc(var(--gap)/2) 0;
+    }
+
+    .picture {
+        /* order: 2; */
+        padding: 0!important;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .description {
+        /* order: 3; */
+    }
+
+    ul {
+        margin: calc(var(--gap)/2);
+        list-style-position: inside;
+        padding-left: 0em;
+    }
+}
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: white;
+    }
+
+    body {
+        background: rgb(17, 17, 17);
+        background-image: radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 0);
+        background-size: var(--grid-size) var(--grid-size);
+    }
+
+    header {
+        background: rgb(17, 17, 17);
+    }
+
+    mark {
+        background-image: linear-gradient(
+            to right,
+            rgba(var(--highlighter-dark), 0.1) 0%,
+            rgba(var(--highlighter-dark), 0.3) 10%,
+            rgba(var(--highlighter-dark), 0.5) 40%,
+            rgba(var(--highlighter-dark), 0.7) 90%,
+            rgba(var(--highlighter-dark), 0.8) 97%,
+            rgba(var(--highlighter-dark), 0.7) 99%,
+            rgba(var(--highlighter-dark), 0.3) 100%
+        );
+    }
+}
