@@ -30,6 +30,7 @@ font-weight:600;
 
 .item > :nth-child(1) {
   order: 1;
+  margin-right: 10px;
 }
 
 .item > :nth-child(3) {
