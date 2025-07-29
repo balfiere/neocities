@@ -5,52 +5,27 @@ font-family: "IBM Plex Sans Thai";
 src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
 }
 
-body {
-    display: flex;
-    flex-direction: column-reverse;
-  background:none;
+* {
 font-family: "IBM Plex Sans Thai", sans-serif;
-color: #444444;
   }
 
-.status-username {
+.title {
 font-weight:600;
   padding: 0.5em 0 0 0;
     position: relative;
     text-shadow: 2px 2px 1px rgba(150, 138, 255, 0.3);
 }
 
-.status-username a{
+.title a{
 display:none;
 }
 
-.status-username:before {
-content:'feeling ';
-font-weight:normal;
-}
-
-.status-content {
+.description {
   border-left: 10px solid rgba(157, 230, 196, 0.3);
   margin: 0em 10px;
   padding: 0.5em 10px;
 }
 
-  div.cols {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-dl, header, h2, footer {
-display:none;
-}
-
-[href="/users/kwaamfan.atom"] { display: none; }
-
-.status, article, div, section, main, body, html {
-padding:0;
-margin:0;
-}
-
 @media (prefers-color-scheme: dark) {
-body {color:#ddd;}
+* {color:#ddd;}
 }
