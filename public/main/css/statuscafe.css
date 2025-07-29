@@ -13,11 +13,12 @@ font-family: "IBM Plex Sans Thai", sans-serif;
 font-weight:600;
   padding: 0.5em 0 0 0;
     position: relative;
+    color: #968aff!important;
     /* text-shadow: 2px 2px 1px rgba(150, 138, 255, 0.3); */
 }
 
 .title a{
-    color: #968aff;
+    color: #968aff!important;
     text-decoration: none;
 }
 
@@ -33,4 +34,5 @@ font-weight:600;
 
 @media (prefers-color-scheme: dark) {
 * {color:#ddd;}
+.title {color: #968aff!important;}
 }
