@@ -22,14 +22,14 @@ font-weight:600;
     text-decoration: none;
 }
 
-.description {
+.description:first-of-type {
   border-left: 10px solid rgba(157, 230, 196, 0.3);
   margin: 0em 10px;
   padding: 0.5em 10px;
 }
 
 .item {
-    padding: 1em 0;
+    padding: 0.5em 0;
 }
 
 @media (prefers-color-scheme: dark) {
