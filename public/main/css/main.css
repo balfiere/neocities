@@ -560,7 +560,7 @@ nav s, nav strike{
     align-items: center;
     justify-content: center;
     width: 100%;
-    display: flex;
+    display: none;
     position: fixed;
     height: 100vh;
     left: 0;

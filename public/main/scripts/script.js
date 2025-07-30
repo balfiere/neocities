@@ -1,3 +1,41 @@
+
+
+
+///////////////////////////////////////////////
+//
+// preloader
+// https://nenrikido.neocities.org/blog/post/making-a-preloader/
+// + show windows if javascript enabled
+//
+///////////////////////////////////////////////
+
+var loader = document.getElementById("preloader");
+var windows = document.querySelectorAll(".window_container");
+loader.style.display = "flex";
+
+
+function toggleWindowsDisplay() {
+    var displayStyle = window.innerWidth > 840 ? "unset" : "none";
+    for (var i = 0; i < windows.length; i++) {
+        windows[i].style.display = displayStyle;
+    }
+}
+
+window.addEventListener("load", function () {
+    loader.style.display = "none";
+	toggleWindowsDisplay();
+});
+
+//Fade out, optional
+var s = document.getElementById("preloader").style;
+s.opacity = 1;
+(function fade() {
+(s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 40);
+})();
+
+window.addEventListener("resize", toggleWindowsDisplay);
+
+
 ///////////////////////////////////////////////
 //
 // draggable windows
@@ -136,26 +174,6 @@ fetch('./scripts/currently.json')
   });
 
 
-
-
-///////////////////////////////////////////////
-//
-// preloader
-// https://nenrikido.neocities.org/blog/post/making-a-preloader/
-//
-///////////////////////////////////////////////
-
-var loader = document.getElementById("preloader");
-window.addEventListener("load", function () {
-loader.style.display = "none";
-});
-
-//Fade out, optional
-var s = document.getElementById("preloader").style;
-s.opacity = 1;
-(function fade() {
-(s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 40);
-})();
 
 ///////////////////////////////////////////////
 //

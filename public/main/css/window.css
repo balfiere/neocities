@@ -33,6 +33,7 @@ button:focus {
     border-radius: var(--window-border-radius);
     position: absolute;
     z-index: 999;
+    display: none;
 }
 
 .window_interior {

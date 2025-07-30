@@ -60,7 +60,6 @@
 
     <fieldset>
       <legend><h3>my status.cafe</h3></legend>
-      <!-- <iframe src="https://status.cafe/users/kwaamfan" style="border: 0; width: 100%; height: 250px;padding: 0;margin: 0;" frameborder="0" scrolling="yes" id="statuscafe"></iframe> -->
 <!-- start sw-rss-feed code --> 
 <script type="text/javascript"> 
 <!-- 
@@ -102,14 +101,18 @@ rssfeed_no_items="12";
 rssfeed_cache = "d1ea23f1afdaef4a68e3eb57f4ff8ae8"; 
 //--> 
 </script> 
-<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
-<!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
-<div style="color:#ccc;font-size:10px; text-align:right;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div> 
-<!-- end sw-rss-feed code -->
+<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+
+<div id="surfing-waves" style="color:#ccc;font-size:10px; text-align:right;display: none;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div>
+
+ <noscript>javascript currently disabled, some things are currently hidden</noscript> 
     </fieldset>
 
   </article>
-  
+  <script>
+var credit = document.getElementById("surfing-waves");
+credit.style.display = "block";
+</script>
 </body>
 </html> 
 
