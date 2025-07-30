@@ -111,6 +111,10 @@ button:focus {
     display: inline;
 }
 
+.window_description ul {
+    margin: 7px 16px;
+}
+
 /*----- dark mode support -----*/
 
 @media (prefers-color-scheme: dark) {
@@ -178,14 +182,26 @@ button:focus {
     height: 380px;
 }
 
+.currently {
+    top:3vh;
+    right:2vh;
+    width: 250px;
+}
+
+.currently .window_description{
+    height: 180px;
+    font-family: nineteen93, maru; 
+    font-size: 9px;
+}
+
 .todo {
     top:2vh;
     left:2vh;
-    width: 270px;
+    width: 210px;
 }
 
 .todo .window_description{
-    height: 158px;
+    height: 138px;
     font-family: nineteen93, maru; 
     font-size: 9px;
 }

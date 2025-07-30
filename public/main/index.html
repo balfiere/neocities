@@ -169,7 +169,7 @@
   </div>
 <textarea id="button88" rows="3" cols="60" style="width: calc(100% - 8px);" readonly onclick="copyText()">click a button above to get the code!</textarea></div>
 
-<script>
+<!-- <script>
   function copyText() {
   // Get the text field
   var buttonLink = document.getElementById("button88");
@@ -188,7 +188,7 @@
       buttonLink.value = buttonLinkValue;
     }, 2000);
   } 
-</script>
+</script> -->
 
 <!-- mobile warning -->
 <div class="mobilewarning"><center><br /><h3>notice</h3>
@@ -239,6 +239,32 @@
               <li><s>add dark mode support</s></li>
               <li><s>add diary section</s></li>
             </ul>
+        </div>
+    </div><!--window_interior-->
+</div><!--window_container-->
+
+<!-- todo -->
+<div class="window_container draggable currently">
+    <div class="window_interior">
+        <div class="window_top window-header">
+            <div class="window_title">currently.txt</div>
+            <div class="window_control">
+                
+                <button class="smallbox minimize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img src="images/min.png"></button>
+                
+                <button class="smallbox maximize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img src="images/max.png"></button>
+                
+            </div><!--end window_control-->
+        </div><!--window_top-->
+        <div class="window_description">
+          playing:
+          <ul id="currentlyplaying"></ul>
+          reading:
+          <ul id="currentlyreading"></ul>
+          watching:
+          <ul id="currentlywatching"></ul>
+          listening:
+          <ul id="currentlylistening"></ul>
         </div>
     </div><!--window_interior-->
 </div><!--window_container-->

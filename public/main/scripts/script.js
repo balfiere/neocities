@@ -71,11 +71,10 @@ burger.addEventListener('keydown', (event) => {
 //
 ///////////////////////////////////////////////
 
-// Get the text field initial value
+function copyText() {
+// Get the text field
 var buttonLink = document.getElementById("button88");
 var buttonLinkValue = buttonLink.value;
-
-function copyText() {
 
 // Select the text field
 buttonLink.select();
@@ -90,6 +89,54 @@ setTimeout(function(){
 	buttonLink.value = buttonLinkValue;
 }, 2000);
 } 
+
+///////////////////////////////////////////////
+//
+// currently.txt
+//
+///////////////////////////////////////////////
+
+function appendCurrent(current, container) {
+	if (current.length == 0) {
+		const item = document.createElement('li');
+		item.textContent = "nothing!";
+		container.appendChild(item);
+	} else {
+		current.forEach(game => {
+		const item = document.createElement('li');
+		item.textContent = game;
+		container.appendChild(item);
+    });
+	}
+}
+
+fetch('./scripts/currently.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(currently => {
+    const playing = document.getElementById('currentlyplaying');
+	appendCurrent(currently.playing, playing);
+
+    const reading = document.getElementById('currentlyreading');
+	appendCurrent(currently.reading, reading);
+
+    const watching = document.getElementById('currentlywatching');
+	appendCurrent(currently.watching, watching);
+
+    const listening = document.getElementById('currentlylistening');
+	appendCurrent(currently.listening, listening);
+
+  })
+  .catch(error => {
+    console.error('Failed to load JSON:', error);
+  });
+
+
+
 
 ///////////////////////////////////////////////
 //
