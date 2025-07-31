@@ -2,11 +2,11 @@
   "todo": [
     "load button wall with json + javascript",
     "add more site building mini tutorials to notes",
-    "replace old chatbox with new service",
     "create yakuza shrine",
     "create vegan page"
   ],
   "done": [
+    "replace old chatbox with new service",
     "make main site useable with javascript disabled",
     "add crafts page",
     "add toggle button for falling leaves animation",

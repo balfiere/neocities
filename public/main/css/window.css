@@ -174,9 +174,9 @@ button:focus {
   }  
 
 .chatbox {
-    top:2vh;
+    top:3vh;
     right:2vh;
-    width: 390px;
+    width: 393px;
 }
 
 .chatbox .window_description{
@@ -184,8 +184,8 @@ button:focus {
 }
 
 .currently {
-    top:3vh;
-    right:2vh;
+    bottom: 24vh;
+    right:13vw;
     width: 250px;
 }
 
@@ -208,13 +208,14 @@ button:focus {
 }
 
 .webrings {
-    top:calc(5vh + 500px);
+    /* top:calc(5vh + 500px); */
+    bottom: 2vh;
     right:5vh;
-    width: 331px;
+    width: 240px;
 }
 
 .webrings .window_description{
-    height: 270px;
+    height: 200px;
     font-family: nineteen93, maru; 
     text-align: center;
     font-size: 9px;

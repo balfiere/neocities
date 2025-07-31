@@ -669,6 +669,405 @@
     </div><!--window_interior-->
 </div><!--window_container-->
 
+<!-- chatbox -->
+<div class="window_container draggable chatbox">
+    <div class="window_interior">
+        <div class="window_top window-header">
+            <div class="window_title">https://chat.box</div>
+            <div class="window_control">
+                
+                <button class="smallbox minimize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img src="images/min.png"></button>
+                
+                <button class="smallbox maximize" onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img src="images/max.png"></button>
+                
+            </div><!--end window_control-->
+        </div><!--window_top-->
+        <div class="window_description">
+            <iframe src='https://chattable.neocities.org/embed?chat=kwaamfan' id='chattable' frameborder='none' style="width: 350px; height: 350px;"></iframe>
+            <script>
+              window.onload = function(){
+                document.getElementById('chattable').contentWindow.postMessage(`
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box
+}
+
+@font-face {
+  font-family: 'NDS bios';
+  src: url('https://files.catbox.moe/n3oj18.woff') format('woff'),
+  url('https://files.catbox.moe/t7vezr.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /*-- page background --*/
+	--unit: 80px;
+  --page-background:white;
+	--grid-color: #ddd;
+	--scan-color: #eee;
+
+  /*-- sizing stuff --*/
+  --p: 1;
+  --pixel: calc(var(--p) * 1px);
+  --s: calc(var(--pixel) * 3); /* size of the cut */
+
+  /*-- colors --*/
+  --send-text: rgb(95, 59, 255);
+  --send-background: rgba(95, 59, 255, 0.2);
+  --mod-text: rgb(0, 163, 41);
+  --mod-background: rgba(59, 255, 108, 0.2);
+  --box-text: black;
+  --italic-text: rgb(129, 129, 129);
+  --bold-text: black;
+  --box-background: white;
+  --box-border: black;
+  --link-hover:rgb(59, 255, 108);
+
+  /*-- dark mode --*/
+  --page-background-dark:rgb(19, 19, 19);
+	--grid-color-dark: #161616;
+	--scan-color-dark: #3b3b3b;
+
+  --box-text-dark: #ddd;
+  --box-background-dark: rgb(34, 34, 34);
+  --box-border-dark: #ddd;
+
+  --send-text-dark: rgb(147, 122, 255);
+  --send-background-dark: rgba(160, 138, 255, 0.2);
+
+  --link-hover-dark:rgb(122, 255, 133);
+
+  --mod-text-dark: rgb(156, 233, 163);
+}
+
+body {
+	text-align: left;
+	background-size: 
+		var(--unit) var(--unit),
+		var(--unit) var(--unit),
+		var(--unit) var(--unit),
+		var(--unit) calc(var(--unit) / 24);
+  background-color: var(--page-background);
+	background-image: 
+		linear-gradient(to right, var(--grid-color) calc(var(--unit)/48), transparent 1px), 
+		linear-gradient(to bottom, var(--grid-color) calc(var(--unit)/48), transparent 1px),
+		radial-gradient(var(--grid-color) calc(var(--unit)/24), transparent 0),
+		linear-gradient(to bottom, var(--scan-color) 50%, transparent 1px);
+	background-position:
+		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2),
+		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2),
+		calc(50% - var(--unit) * (1 - 1/48) - 1px) calc(var(--unit) * (1 + 1/48)),
+		calc(50% - var(--unit)/2 - 1px) calc(var(--unit)/2);
+  background-attachment: fixed;
+  overflow: auto;
+  font-family: "NDS BIOS", Arial, sans-serif;
+  font-size: calc(var(--pixel) * 16);
+}
+
+#settingsMenu {
+padding: 10px;
+text-align: left;
+}
+
+#footer {
+padding: 0;
+text-align: left;
+font-size: 16px;
+}
+              
+ .allMessages {
+  box-sizing: border-box;
+  position:relative;
+  width: 300px;
+  margin: calc(var(--pixel) * 16) auto;
+  padding:1px;
+  background-color:var(--box-background);
+  color: var(--box-text);
+  clip-path: polygon(
+      var(--s) 0%, 
+      calc(100% - var(--s)) 0%, 
+      100% var(--s), 100% calc(100% - var(--s)), 
+      calc(100% - var(--s)) 100%, 
+      var(--s) 100%, 
+      0% calc(100% - var(--s)), 
+      0% var(--s));
+}
+  
+.allMessages:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: -1;
+  background: linear-gradient(45deg,var(--box-border),var(--box-border));
+  --g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+  --g2:#0000   calc(0.707*var(--s)), 
+        #000  0 calc(0.707*var(--s) + var(--pixel)),
+        #0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+        #000  0 calc(100% - 0.707*var(--s)),
+        #0000 0;
+  -webkit-mask:
+    linear-gradient(45deg ,var(--g2)),
+    linear-gradient(-45deg,var(--g2)),
+    linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+    linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+    mask:
+      linear-gradient(45deg ,var(--g2)),
+      linear-gradient(-45deg,var(--g2)),
+      linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+      linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+}
+
+.senderInfo {
+    position: relative;
+    padding:0 calc(var(--pixel) * 4)!important;
+    display: inline-block;
+    color: var(--send-text);
+    background: var(--send-background);
+    clip-path: polygon(var(--s) 0, 100% 0, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 0 100%, 0 var(--s));
+    line-height: calc(var(--pixel) * 19);
+    font-weight: 300;
+}
+
+.senderInfo:before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(45deg,var(--box-border),var(--box-border));
+    --g3:#0000 0 calc(100% - var(--pixel)),#000 0;
+    --g4:#0000   calc(0.707*var(--s)), 
+         #000  0 calc(0.707*var(--s) + var(--pixel)),
+         #0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+         #0000 0;
+    -webkit-mask:
+      linear-gradient(-45deg,var(--g4)),
+      linear-gradient(90deg ,var(--g3)) 100% calc(100% - var(--s)) no-repeat,
+      linear-gradient(180deg,var(--g3)) calc(100% - var(--s)) 100% no-repeat;
+      mask:
+        linear-gradient(-45deg,var(--g4)),
+        linear-gradient(90deg ,var(--g3)) 100% calc(100% - var(--s)) no-repeat,
+        linear-gradient(180deg,var(--g3)) calc(100% - var(--s)) 100% no-repeat;
+}
+
+
+.msgBody{
+    padding: calc(var(--pixel) * 2) calc(var(--pixel) * 4) calc(var(--pixel) * 2) calc(var(--pixel) * 4)!important;
+    line-height: calc(var(--pixel) * 18);
+}
+
+#background {
+  background-color: none;
+}
+
+#input {
+  overflow: auto;
+  height: auto;
+  bottom: 0;
+  box-sizing: border-box;
+  font-family: 'NDS bios';
+  font-size:16px;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;  
+  margin: 0 auto 0 28px;
+  width: 260px;
+  border-radius: 4px;
+  color: var(--box-text);
+  border: solid 1px var(--box-border);
+}
+
+#emojiTrayToggle {
+right:25px;
+}
+
+#input:focus {
+    border: solid 1px var(--send-text);
+  }
+
+#textInput {
+  margin: 0;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+#timestamp {
+  color: var(--box-text);
+  font-family: 'NDS bios';
+  font-size:16px;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+  text-align: right;
+  margin: calc(var(--pixel) * 16) auto;
+  width: 300px;
+}
+
+.msgBody a {
+  text-decoration: none;
+  color: var(--send-text)!important;
+  -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -o-transition:all 0.3s ease-in-out;
+  -ms-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+}
+  .msgBody a:hover{
+    color: var(--link-hover)!important;
+  }
+
+blockquote, q{
+  margin:0;
+  padding:0 0 0 8px;
+  border:0;
+  outline:0;
+border-left:1px solid var(--grid-color);
+  font-size:100%;
+  background:transparent;
+  quotes:none;
+  font-style: normal;
+  display: inline-flex;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+code {
+  font-family: 'NDS bios';
+  font-size:16px;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+  color: var(--box-text);
+  background-color: var(--grid-color);
+  margin:0; padding:0;
+  display:inline;
+}
+
+em, i {
+  font-family: 'NDS bios';
+  font-size:16px;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+  color: var(--italic-text);
+  font-style: normal;
+}
+
+b, strong {
+  font-family: 'NDS bios';
+  font-size:16px;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+  color: var(--bold-text);
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.senderInfo:has(.owner), .senderInfo:has(.mod) {
+  color: var(--mod-text);
+  background: var(--mod-background);
+}
+
+.badge {
+display:none;
+}
+
+#top_banner {
+  display: none;
+}
+
+#settings {
+  filter: invert(50%);
+  opacity: 0.75;
+}
+
+#settings:hover {
+  filter: invert(10%);
+}
+              
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color: var(--page-background-dark);
+    background-image: 
+      linear-gradient(to right, var(--grid-color-dark) calc(var(--unit)/48), transparent 1px), 
+      linear-gradient(to bottom, var(--grid-color-dark) calc(var(--unit)/48), transparent 1px),
+      radial-gradient(var(--grid-color-dark) calc(var(--unit)/24), transparent 0),
+      linear-gradient(to bottom, var(--scan-color-dark) 50%, transparent 1px);
+    }
+
+  .allMessages, #input {
+    background-color:var(--box-background-dark);
+    color: var(--box-text-dark);
+  }
+
+  #input {
+    border: solid 1px var(--box-border-dark);
+  }
+  #input:focus {
+      border: solid 1px var(--send-text-dark);
+    }
+
+  #timestamp {
+    color: var(--box-text-dark);
+  }
+
+  #settingsMenu, #settingsMenu a {
+    color: var(--box-text-dark);
+  }
+
+  .allMessages:before, .senderInfo:before {
+    background: linear-gradient(45deg,var(--box-border-dark),var(--box-border-dark));
+  }
+
+.senderInfo:not(.owner){
+  color: var(--send-text-dark);
+  background: var(--send-background-dark);}
+}
+
+.senderInfo:has(.owner), .senderInfo:has(.mod) {
+  color: var(--mod-text-dark);
+  background: var(--mod-background);
+}
+
+ #input:empty::before {
+   content: "Type a message...";
+   color: #747474;
+}
+
+#emojiTrayToggle{
+filter: invert(100%);
+    -webkit-filter: invert(100%);
+    }
+
+b, strong {
+  color: var(--box-text-dark);
+}
+
+code {
+color: var(--box-text-dark);
+  background-color: var(--scan-color-dark);
+}
+
+.msgBody a {
+      color: var(--send-text-dark)!important;
+    }
+    .msgBody a:hover{
+        color: var(--link-hover-dark)!important;
+      }
+              `, '*')
+              }
+              </script>
+        </div>
+    </div><!--window_interior-->
+</div><!--window_container-->
+
+
+
 <!-- more scripts -->
 <script src="scripts/sakura.js"></script>
 <script src="scripts/script.js"></script>
