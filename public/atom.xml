@@ -5,15 +5,35 @@
   <subtitle>it's like a dream...</subtitle>
   <link rel="alternate" type="text/html" href="https://kwaamfan.neocities.org/"/>
   <link rel="self" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
-  <updated>2024-04-30T04:48:55Z</updated>
+  <updated>2025-07-31T17:52:30-05:00</updated>
   <link href="https://kwaamfan.neocities.org/"/>
   <author>
     <name>kwaamfan</name>
   </author>
   <id>https://kwaamfan.neocities.org/atom.xml</id>
-  
+
   <entry>
-    <title>aarticle page added</title>
+    <title>crafts and notebook pages added</title>
+    <link href="https://kwaamfan.neocities.org/articles/"/>
+    <id>https://kwaamfan.neocities.org/?2025-07-31T17:52:30-05:00</id>
+    <updated>2025-07-31T17:52:30-05:00</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        long time no update... ^^; here's the changes i made to my site the last week or two:
+        <ul>
+          <li>published a <a href="https://kwaamfan.neocities.org/crafts/">crafts</a> page for sharing my fiber arts projects</li>
+          <li>published a <a href="https://kwaamfan.neocities.org/notes/">notebook</a> section for random notes and tutorials that might be helpful to others. mostly related to language learning, site building, and linux</li>
+          <li>updated my <a href="https://kwaamfan.neocities.org/language/">language learning</a> page with a few updates on how my routine has changed, plus i added a media log of things i've watched or read in my target languages</li>
+          <li>re-added a chattable box to the <a href="https://kwaamfan.neocities.org/main/">main</a> page, plus added a new window for things i'm currently playing, reading, making, etc</li>
+          <li>two new places to <a href="https://kwaamfan.neocities.org/places/">my favorite video game locations</a></li>
+          <li>various bug fixes and optimizations</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+
+  <entry>
+    <title>article page added</title>
     <link href="https://kwaamfan.neocities.org/articles/"/>
     <id>https://kwaamfan.neocities.org/?2024-07-31T21:33:49Z</id>
     <updated>2024-07-31T21:33:55Z</updated>
