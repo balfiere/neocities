@@ -1,0 +1,26 @@
+{
+  "todo": [
+    "load button wall with json + javascript",
+    "add more site building mini tutorials to notes",
+    "replace old chatbox with new service",
+    "create yakuza shrine",
+    "create vegan page"
+  ],
+  "done": [
+    "make main site useable with javascript disabled",
+    "add crafts page",
+    "add toggle button for falling leaves animation",
+    "prevent gif/animation autoplay when user prefers reduced motion",
+    "create site building page for my resources site",
+    "make an rss feed",
+    "work on optimizing the site to be more accessible and load faster (maybe minimize javascript/jquery use, compress some images)",
+    "create code snippets page; share snippets for draggable and collapsible windows and ds pictochat-like changelog/microblog",
+    "add mobile support for about page",
+    "write about gaming history and console collection",
+    "get microblog ready for public release",
+    "add image gallery for my favorite video games, other media, and characters",
+    "join some webrings and figure out where to put them",
+    "add dark mode support",
+    "add diary section"
+  ]
+}

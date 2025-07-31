@@ -130,7 +130,7 @@ setTimeout(function(){
 
 ///////////////////////////////////////////////
 //
-// currently.txt
+// load json data
 //
 ///////////////////////////////////////////////
 
@@ -168,12 +168,34 @@ fetch('./scripts/currently.json')
     const listening = document.getElementById('currentlylistening');
 	appendCurrent(currently.listening, listening);
 
+    const making = document.getElementById('currentlymaking');
+	appendCurrent(currently.making, making);
+
   })
   .catch(error => {
     console.error('Failed to load JSON:', error);
   });
 
-
+fetch('./scripts/todo.json')
+  .then(response => {
+	return response.json();
+  })
+  .then(todo => {
+	const todoList = document.getElementById('todo');
+	todo.todo.forEach(item => {
+		const todoItem = document.createElement('li');
+		todoItem.textContent = item;
+		todoList.appendChild(todoItem);
+	})
+	todo.done.forEach(item => {
+		const todoItem = document.createElement('li');
+		todoItem.innerHTML = item.strike();
+		todoList.appendChild(todoItem);
+	})
+  })
+  .catch(error => {
+	console.error('Failed to load JSON:', error);
+  });
 
 ///////////////////////////////////////////////
 //
