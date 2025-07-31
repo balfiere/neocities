@@ -184,7 +184,7 @@ button:focus {
 }
 
 .currently {
-    bottom: 24vh;
+    top: 54vh;
     right:13vw;
     width: 250px;
 }
@@ -197,7 +197,7 @@ button:focus {
 
 .todo {
     top:2vh;
-    left:2vh;
+    left:2vw;
     width: 210px;
 }
 
@@ -209,7 +209,7 @@ button:focus {
 
 .webrings {
     /* top:calc(5vh + 500px); */
-    bottom: 2vh;
+    top: 68vh;
     right:5vh;
     width: 240px;
 }
