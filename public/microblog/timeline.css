@@ -309,6 +309,15 @@ h3 {
     padding: 0;
 }
 
+ul {
+  list-style:circle;
+}
+
+li {
+  font-size: 1.1em;
+  line-height: unset;
+}
+
 .marker {
     background: var(--color-marker);
     background: -webkit-linear-gradient(transparent 60%, var(--color-marker) 0%);
@@ -388,14 +397,20 @@ code {
 
 figure {
   text-align: center;
-  font-style: italic;
-  font-size: smaller;
   text-indent: 0;
-  line-height: 1.3em;
   border: none;
   margin:0;
   padding:0;
   overflow: visible;
+  &:not(.large) {
+    font-style: italic;
+    font-size: smaller;
+    line-height: 1.3em;
+  }
+}
+
+audio {
+  border-radius: 60px;
 }
 
 .right {
