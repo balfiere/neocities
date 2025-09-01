@@ -23,6 +23,7 @@
 <!-- scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/2.1.1/draggabilly.pkgd.min.js"></script>
 <script src="https://melonking.net/scripts/frame-link.js"></script>
+<script src="https://iframe.chat/scripts/main.min.js"></script>
 
 </head>
 
@@ -683,8 +684,8 @@
             </div><!--end window_control-->
         </div><!--window_top-->
         <div class="window_description">
-            <iframe src='https://chattable.neocities.org/embed?chat=kwaamfan' id='chattable' frameborder='none' style="width: 350px; height: 350px;"></iframe>
-            <script>
+            <iframe src='https://iframe.chat/embed/?chat=kwaamfan' id='chattable' frameborder='none' style="width: 350px; height: 350px;"></iframe>
+            <!-- <script>
               window.onload = function(){
                 document.getElementById('chattable').contentWindow.postMessage(`
 * {
@@ -858,7 +859,12 @@ font-size: 16px;
 
 .msgBody{
     padding: calc(var(--pixel) * 2) calc(var(--pixel) * 4) calc(var(--pixel) * 2) calc(var(--pixel) * 4)!important;
-    line-height: calc(var(--pixel) * 18);
+    line-height: calc(var(--pixel) * 20);
+}
+
+.msgBody img{
+  height: 100%;
+  width: auto;
 }
 
 #background {
@@ -874,8 +880,8 @@ font-size: 16px;
   font-size:16px;
   text-rendering: optimizeLegibility;
   font-weight: 300;  
-  margin: 0 auto 0 28px;
-  width: 260px;
+  margin: 0 auto 0 24px;
+  width: 270px;
   border-radius: 4px;
   color: var(--box-text);
   border: solid 1px var(--box-border);
@@ -883,6 +889,55 @@ font-size: 16px;
 
 #emojiTrayToggle {
 right:25px;
+}
+
+.emojiInGrid {
+  height: 15pt;
+}
+
+#emojiTray {
+  box-sizing: border-box;
+margin: calc(var(--pixel) * 16) 25px; 
+border-top:none;
+  width: 300px;
+  background-color:var(--box-background);
+  color: var(--box-text);
+  clip-path: polygon(
+      var(--s) 0%, 
+      calc(100% - var(--s)) 0%, 
+      100% var(--s), 100% calc(100% - var(--s)), 
+      calc(100% - var(--s)) 100%, 
+      var(--s) 100%, 
+      0% calc(100% - var(--s)), 
+      0% var(--s));
+}
+  
+#emojiTray:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: -1;
+  background: linear-gradient(45deg,var(--box-border),var(--box-border));
+  --g1:#000 var(--pixel),#0000 0 calc(100% - var(--pixel)),#000 0;
+  --g2:#0000   calc(0.707*var(--s)), 
+        #000  0 calc(0.707*var(--s) + var(--pixel)),
+        #0000 0 calc(100% - 0.707*var(--s) - var(--pixel)),
+        #000  0 calc(100% - 0.707*var(--s)),
+        #0000 0;
+  -webkit-mask:
+    linear-gradient(45deg ,var(--g2)),
+    linear-gradient(-45deg,var(--g2)),
+    linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+    linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+    mask:
+      linear-gradient(45deg ,var(--g2)),
+      linear-gradient(-45deg,var(--g2)),
+      linear-gradient(90deg ,var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+      linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+}
+
+#emojiTray > h3 {
+font-weight:unset;
 }
 
 #input:focus {
@@ -1000,7 +1055,7 @@ display:none;
       linear-gradient(to bottom, var(--scan-color-dark) 50%, transparent 1px);
     }
 
-  .allMessages, #input {
+  .allMessages, #input, #emojiTray {
     background-color:var(--box-background-dark);
     color: var(--box-text-dark);
   }
@@ -1020,14 +1075,13 @@ display:none;
     color: var(--box-text-dark);
   }
 
-  .allMessages:before, .senderInfo:before {
+  .allMessages:before, .senderInfo:before, #emojiTray::before {
     background: linear-gradient(45deg,var(--box-border-dark),var(--box-border-dark));
   }
 
 .senderInfo:not(.owner){
   color: var(--send-text-dark);
   background: var(--send-background-dark);}
-}
 
 .senderInfo:has(.owner), .senderInfo:has(.mod) {
   color: var(--mod-text-dark);
@@ -1038,11 +1092,6 @@ display:none;
    content: "Type a message...";
    color: #747474;
 }
-
-#emojiTrayToggle{
-filter: invert(100%);
-    -webkit-filter: invert(100%);
-    }
 
 b, strong {
   color: var(--box-text-dark);
@@ -1059,10 +1108,21 @@ color: var(--box-text-dark);
     .msgBody a:hover{
         color: var(--link-hover-dark)!important;
       }
+
+#emojiTrayToggle {
+filter: invert(100%);
+--webkit-filter: invert(100%);
+}
+}
               `, '*')
               }
-              </script>
-        </div>
+              </script> -->
+<script>
+    chattable.initialize({
+        stylesheet: "/main/css/chattable.css"
+    });
+</script>
+            </div>
     </div><!--window_interior-->
 </div><!--window_container-->
 
