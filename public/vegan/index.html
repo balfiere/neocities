@@ -8,7 +8,7 @@
 <link rel="shortcut icon" href="images/favicon.gif">
 
 <!-- styling -->
-<link rel="stylesheet" href="https://unpkg.com/7.css">
+<link rel="stylesheet" href="https://unpkg.com/7.css@0.21.1/dist/7.css">
 <style>
 body{
   background-image: url(images/background.gif);
@@ -65,6 +65,13 @@ ul:not([role="menubar"], [role="menu"], .tree-view, details > ul, ul > ul) > li 
     position: relative;
     top: 0px;
     margin-right: 10px;
+  }
+}
+
+ul.tree-view a{
+  color: var(--w7-link-c);
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -162,7 +169,22 @@ ul:not([role="menubar"], [role="menu"], .tree-view, details > ul, ul > ul) > li 
       </article>
   
       <article role="tabpanel" hidden id="toybox">
-        <p>blah</p>
+        <h2 class="instruction instruction-primary">cows</h2>
+<picture><source srcSet="images/toybox/cow01.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow01.gif" /></picture>
+<picture><source srcSet="images/toybox/cow03.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow03.gif" /></picture>
+<picture><source srcSet="images/toybox/cow04.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow04.gif" /></picture>
+<picture><source srcSet="images/toybox/cow05.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow05.gif" /></picture>
+<picture><source srcSet="images/toybox/cow06.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow06.gif" /></picture>
+<picture><source srcSet="images/toybox/cow07.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow07.gif" /></picture>
+<picture><source srcSet="images/toybox/cow08.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow08.gif" /></picture>
+<picture><source srcSet="images/toybox/cow09.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow09.gif" /></picture>
+<picture><source srcSet="images/toybox/cow10.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow10.gif" /></picture>
+<picture><source srcSet="images/toybox/cow11.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow11.gif" /></picture>
+<picture><source srcSet="images/toybox/cow12.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow12.gif" /></picture>
+<picture><source srcSet="images/toybox/cow13.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow13.gif" /></picture>
+<picture><source srcSet="images/toybox/cow14.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow14.gif" /></picture>
+        <h2 class="instruction instruction-primary">other</h2>
+<picture><source srcSet="images/toybox/alpaca01.png" media="(prefers-reduced-motion)" /><img src="images/toybox/alpaca01.gif" /></picture>
       </article>
   
       <article role="tabpanel" hidden id="recipes">
@@ -171,45 +193,63 @@ ul:not([role="menubar"], [role="menu"], .tree-view, details > ul, ul > ul) > li 
           <li><a href="#cardamom-basil-cookies">cardamom basil cookies</a></li>
           <li><a href="#bourbon-caramel">bourbon caramel</a></li>
         </ul>
+
         <img src="images/medium-divider.gif" class="divider">
+
         <h2 class="instruction instruction-primary">other recipes</h2>
         <ul class="tree-view has-collapse-button has-connector">
-          <details open="">
+          <details>
             <summary>savory</summary>
             <ul>
-              <li>Avoid at all costs</li>
-              <ul>
-                <li>Avoid</li>
-              </ul>
+              <li><a target="_blank" href="https://youtu.be/RkRfbeX7GNE">chashu</a></li>
+              <li><a target="_blank" href="https://seitansociety.com/recipes/shredded-vegan-chicken-potatoes/">shredded chicken</a></li>
+              <li><a target="_blank" href="https://www.reddit.com/r/VeganRamen/comments/14594b9/vegan_bone_broth_recipe/">bone broth</a></li>
+              <li><a target="_blank" href="https://veganhuggs.com/vegan-pepperoni-recipe/">pepperoni</a></li>
+              <li><a target="_blank" href="https://thebananadiaries.com/vegan-mozzarella-recipe/">mozzarella</a></li>
+              <li><a target="_blank" href="https://www.youtube.com/watch?v=wDsit1oiv0A">tempeh</a> 🠔 if ur serious about making ur own tempeh i highly recommend this guy's whole youtube channel</li>
             </ul>
           </details>
-          <details open="">
-            <summary>desserts</summary>
+          <details>
+            <summary>sweet</summary>
             <ul>
-              <li>Avoid at all costs</li>
-              <li>
-                <details>
-                  <summary>Unless</summary>
-                  <ul>
-                    <li>Avoid</li>
-                    <li>
-                      <details>
-                        <summary>At</summary>
-                        <ul>
-                          <li>Avoid</li>
-                          <li>At</li>
-                          <li>All</li>
-                          <li>Cost</li>
-                        </ul>
-                      </details>
-                    </li>
-                    <li>All</li>
-                    <li>Cost</li>
-                  </ul>
-                </details>
-              </li>
+              <li><a target="_blank" href="https://www.spabettie.com/new-york-cheesecake/">new york cheesecake</a></li>
+              <li><a target="_blank" href="https://aegeandelight.com/vegan-boston-cream-donuts/">boston cream donuts</a></li>
+              <li><a target="_blank" href="https://minibatchbaker.com/single-serving-chocolate-roll/">single serving chocolate roll</a></li>
+              <li><a target="_blank" href="https://www.noracooks.com/lemon-blueberry-bread/">lemon blueberry bread</a></li>
             </ul>
           </details>
+          <details>
+            <summary>drinks</summary>
+            <ul>
+              <li><a target="_blank" href="https://www.liquor.com/recipes/ponche-navideno/">ponche navideño</a></li>
+              <li><a target="_blank" href="https://nerdswithknives.com/butterfly-pea-flower-cocktail-social-butterfly/">butterfly pea flower cocktail</a> 🠔 for the bisexuals</li>
+              <li><a target="_blank" href="https://thevietvegan.com/vegan-thai-iced-tea-with-cheese-foam/">thai iced tea with cheese foam</a> but i recommend pantai brand thai tea over chatramue</li>
+            </ul>
+          </details>
+          <details>
+            <summary>simple and cheap meal ideas</summary>
+            <ul>
+              <li>soft tofu topped with a sauce (i prefer vegan mushroom oyster sauce) microwaved for 5 minutes. top w fried garlic, ginger, and/or green onions if ur feeling extra fancy</li>
+              <li>pasta + canned chickpeas, drained + vegan mayo or pesto</li>
+              <li>add tvp crumbles to vegan ramen. make sure it's the small kind so it can cook thoroughly</li>
+            </ul>
+          </details>
+          <details>
+            <summary>other random tips</summary>
+            <ul>
+              <li>carmelize onions and fry garlic in big batches and keep for later. they can be added to roasted veggies, stir fry, pan fried tofu, soups, even plain canned beans or microwave vegetables</li>
+              <li>tofu keeps its shape better in soups and stews if it's either frozen or deep fried first</li>
+              <li>add a dash of baking soda when soaking dried beans so they cook faster</li>
+              <li>canned jackfruit can be shredded and added to seitan recipes for a hacky way of adding some flaky texture if ur like me and too lazy to knead it as long as most recipes suggest</li>
+            </ul>
+          </details>
+        </ul>
+
+        <img src="images/medium-divider.gif" class="divider">
+
+        <h2 class="instruction instruction-primary">favorite cookbooks and bloggers</h2>
+        <ul>
+          <li></li>
         </ul>
       </article>
   
