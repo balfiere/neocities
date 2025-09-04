@@ -312,8 +312,8 @@ hr {
 #page {
   background: black;
   padding: 0;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100svw;
+  height: 100svh;
   overflow-y: hidden;
 }
 

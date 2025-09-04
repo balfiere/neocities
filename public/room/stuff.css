@@ -106,7 +106,7 @@ body {
   margin: auto;
   color: var(--text);
   background-color: var(--background);
-  background-image: url('images/mythings.avif');
+  background-image: url('images/mythings.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -388,8 +388,8 @@ img, video {
   }
 }
 
-@media (prefers-reduced-motion) {
+@media (prefers-color-scheme: dark) {
   body {
-    background-image: url(images/mythings.jpg);
+    background-image: url(images/mythingsdark.jpg);
   }
 }
