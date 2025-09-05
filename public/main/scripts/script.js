@@ -171,6 +171,9 @@ fetch('./scripts/currently.json')
     const making = document.getElementById('currentlymaking');
 	appendCurrent(currently.making, making);
 
+    const other = document.getElementById('currentlyother');
+	appendCurrent(currently.other, other);
+
   })
   .catch(error => {
     console.error('Failed to load JSON:', error);
@@ -191,6 +194,55 @@ fetch('./scripts/todo.json')
 		const todoItem = document.createElement('li');
 		todoItem.innerHTML = item.strike();
 		todoList.appendChild(todoItem);
+	})
+  })
+  .catch(error => {
+	console.error('Failed to load JSON:', error);
+  });
+
+fetch('./scripts/buttons.json')
+  .then(response => {
+	return response.json();
+  })
+  .then(buttonlist => {
+	const buttonwall = document.getElementById('buttonwall');
+	const buttonArray = buttonlist.buttons;
+	buttonArray.forEach(button => {
+		// if the button is animated (value 3 is 1)
+		const picture = document.createElement('picture');
+		const source = document.createElement('source');
+		const img = document.createElement('img');
+		if (button[2] == 1) {
+			source.srcset = "images/88x31/" + button[0] + ".png";
+			source.media = "(prefers-reduced-motion)";
+			img.src = "images/88x31/" + button[0] + ".gif";
+			img.alt = button[1];
+			picture.appendChild(source);
+			picture.appendChild(img);
+		} else {
+			img.src = "images/88x31/" + button[0] + ".png";
+			img.alt = button[1];
+		}
+		// if has a link (there are 4 values in the array)
+		if (button.length == 4) {
+			const link = document.createElement('a');
+			link.href = button[3];
+			link.target = "_blank";
+			// if the button is animated (value 3 is 1)
+			if (button[2] == 1) {
+				link.appendChild(picture);
+			} else {
+				link.appendChild(img);
+			}
+			buttonwall.appendChild(link);
+		} else {
+			// if the button is animated (value 3 is 1)
+			if (button[2] == 1) {
+				buttonwall.appendChild(picture);
+			} else {
+				buttonwall.appendChild(img);
+			}
+		}
 	})
   })
   .catch(error => {

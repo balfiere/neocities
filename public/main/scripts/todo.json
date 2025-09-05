@@ -1,11 +1,14 @@
 {
   "todo": [
-    "load button wall with json + javascript",
-    "add more site building mini tutorials to notes",
-    "create yakuza shrine",
-    "create vegan page"
+    "auto detect dark mode on notebook section",
+    "write a mini tutorial on using json with javascript",
+    "add resources to vegan page",
+    "update dead links on switch resources page",
+    "create yakuza shrine"
   ],
   "done": [
+    "load button wall with json + javascript",
+    "create vegan page",
     "replace old chatbox with new service",
     "make main site useable with javascript disabled",
     "add crafts page",
