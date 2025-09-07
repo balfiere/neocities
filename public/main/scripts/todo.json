@@ -1,12 +1,15 @@
 {
   "todo": [
-    "auto detect dark mode on notebook section",
     "write a mini tutorial on using json with javascript",
+    "share javascript-less modal popup code snippet",
+    "update japanese language learning resources",
     "add resources to vegan page",
-    "update dead links on switch resources page",
+    "remove javascript dependencies from vegan page",
     "create yakuza shrine"
   ],
   "done": [
+    "auto detect dark mode on notebook section",
+    "update dead links on switch resources page",
     "load button wall with json + javascript",
     "create vegan page",
     "replace old chatbox with new service",
