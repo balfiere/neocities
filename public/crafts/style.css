@@ -4,7 +4,6 @@
   --grid-size: 1.2em;
   --gap: 50px;
   --highlighter: 219, 138, 138;
-  --highlighter-dark: 71, 41, 154;
 }
 
 * {
@@ -26,7 +25,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: minmax(25%, 300px) 60px 1fr;
+  grid-template-columns: minmax(20%, 300px) 60px 1fr;
   grid-template-rows: 100vh;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -42,6 +41,10 @@ header{
 
 header::selection {
   color: white!important;
+}
+
+header a {
+  white-space: nowrap
 }
 
 .frill {
@@ -141,9 +144,13 @@ p, .popup li {
 a {
     font-size: unset;
   transition: .3s ease;
-    &:hover {
-        color:rgb(219, 138, 138);
-    }
+  &:hover, &:focus{
+    color:rgb(219, 138, 138);
+  }
+}
+
+header a:hover, header a:focus {
+    color: white;
 }
 
 ul {
@@ -273,7 +280,7 @@ body::before {
     padding:1em;
     background-color:white;
     box-sizing: border-box;
-	box-shadow: 8px 8px 0 #fda6a660;
+	box-shadow: 8px 8px 0 rgba(253, 166, 166, 0.376);
     border-radius: 0 0 125px 3px/3px 85px 5px 55px;
     border: 4px solid #37353f;
 }
@@ -289,19 +296,6 @@ body::before {
     background: #333;
   background-image: linear-gradient(rgba(79, 79, 79, 0.4) 2px, transparent 1px), linear-gradient(90deg, rgba(79, 79, 79, 0.4) 2px, transparent 2px);
   background-size: 12px 12px;
-    }
-
-    mark {
-        background-image: linear-gradient(
-            to right,
-            rgba(var(--highlighter-dark), 0.1) 0%,
-            rgba(var(--highlighter-dark), 0.3) 10%,
-            rgba(var(--highlighter-dark), 0.5) 40%,
-            rgba(var(--highlighter-dark), 0.7) 90%,
-            rgba(var(--highlighter-dark), 0.8) 97%,
-            rgba(var(--highlighter-dark), 0.7) 99%,
-            rgba(var(--highlighter-dark), 0.3) 100%
-        );
     }
 
     .popup {

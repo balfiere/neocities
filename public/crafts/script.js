@@ -1,23 +1,26 @@
 import { annotate } from './rough-notation.js';
 
+function annotateOnFocus(element, i) {
+    for (const event of ["mouseover", "focus"]) {
+        element.addEventListener(event, () => {
+            i.show();
+        });
+    }
+    for (const event of ["mouseout", "blur"]) {
+        element.addEventListener(event, () => {
+            i.hide();
+        });
+    }
+}
+
 // hightlight effect on link hover
 const links = document.querySelectorAll("a");
 const linkAnnotateArray = [];
 links.forEach((link, i) => {
-    // if link is inside <header>
-        if (link.closest("header")) {
-            linkAnnotateArray.push(annotate(link, { type: "highlight", color: "rgba(255, 231, 233, 0.7)", padding: 15 }));
-        } else {
-            linkAnnotateArray.push(annotate(link, { type: "highlight", color: "rgba(255, 231, 233, 0.2)", padding: 15 }));
-        }
-    link.addEventListener("mouseover", () => {
-        linkAnnotateArray[i].show();
-    });
-    link.addEventListener("mouseout", () => {
-        linkAnnotateArray[i].hide();
-    });
+    linkAnnotateArray.push(annotate(link, { type: "highlight", color: "rgba(253, 166, 166, 0.3)", padding: 15 }));
+    annotateOnFocus(link, linkAnnotateArray[i]);
 })
-
+ 
 // bracket effect on picture hover
 const pictures = document.querySelectorAll(".img-box");
 const captionAnnotateArray = [];
@@ -29,12 +32,7 @@ pictures.forEach((picture, i) => {
     } else {
         captionAnnotateArray.push(annotate(caption, { type: 'bracket', color: '#000', strokeWidth: 4, padding: [10, 10], brackets: ['left', 'right'] }));
     }
-    picture.addEventListener("mouseover", () => {
-        captionAnnotateArray[i].show();
-    });
-    picture.addEventListener("mouseout", () => {
-        captionAnnotateArray[i].hide();
-    });
+    annotateOnFocus(picture, captionAnnotateArray[i]);
 })
 
 // close modal on esc key
