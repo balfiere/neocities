@@ -5,7 +5,7 @@
   <subtitle>it's like a dream...</subtitle>
   <link rel="alternate" type="text/html" href="https://kwaamfan.neocities.org/"/>
   <link rel="self" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
-  <updated>2025-07-31T17:52:30-05:00</updated>
+  <updated>2025-09-07T18:10:02-05:00</updated>
   <link href="https://kwaamfan.neocities.org/"/>
   <author>
     <name>kwaamfan</name>
@@ -13,8 +13,26 @@
   <id>https://kwaamfan.neocities.org/atom.xml</id>
 
   <entry>
+    <title>vegan page added, notes on how to prevent gif autoplay</title>
+    <link href="https://kwaamfan.neocities.org/vegan/"/>
+    <id>https://kwaamfan.neocities.org/?2025-09-07T18:10:02-05:00</id>
+    <updated>2025-09-07T18:10:02-05:00</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        i added the following changes to my site this past week:
+        <ul>
+          <li>published a <a href="https://kwaamfan.neocities.org/vegan/">vegan</a> page. currently has a toybox for farm animals, and links to my favorite recipes and cookbooks</li>
+          <li>added four new notes to the <a href="https://kwaamfan.neocities.org/notes/">notebook</a> section: <a href="https://kwaamfan.neocities.org/notes/preventing-gif-autoplay.html">preventing gif autoplay</a>, <a href="https://kwaamfan.neocities.org/notes/batch-print-images-in-a-folder-to-html.html">batch printing images in a folder to html</a>, <a href="https://kwaamfan.neocities.org/notes/most-used-imageMagick-commands.html">my most used imagemagick commands</a>, and how i use <a href="https://kwaamfan.neocities.org/notes/details-tag.html">the details html tag</a>. i also updated the css, so if something looks weird or broken please hard refresh</li>
+          <li>on my <a href="https://kwaamfan.neocities.org/resources">resources site</a>, dead links were updated on the <a href="https://kwaamfan.neocities.org/resources/gaming/switch/">switch</a> page and more links were added to the <a href="https://kwaamfan.neocities.org/resources/other/sitebuilding/">site building</a> page, including the creation of a javascript libraries section</li>
+          <li>updated the button wall on my <a href="https://kwaamfan.neocities.org/main/">main</a> page. please contact me if your site is missing or you'd like your button removed/changed!</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+
+  <entry>
     <title>crafts and notebook pages added</title>
-    <link href="https://kwaamfan.neocities.org/articles/"/>
+    <link href="https://kwaamfan.neocities.org/crafts/"/>
     <id>https://kwaamfan.neocities.org/?2025-07-31T17:52:30-05:00</id>
     <updated>2025-07-31T17:52:30-05:00</updated>
     <content type="xhtml">
