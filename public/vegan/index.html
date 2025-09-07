@@ -77,8 +77,25 @@ ul.tree-view a{
 
 .divider {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1em auto;
+
+}
+
+a[label="Close"] {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACUSURBVHgBlZFNCoQwDIVbmRvOMHOAAd0K/uDGlYKiCG4VPICi9yu0oCSQoFUXFtKEl6+voZXvr7sKay1TL690FOexY+Hz87i2decOuDKQsNGVe8AGYTRJIh0Y+orBvxszCPllOymlxN06jNE26Qnwg4zdHQLrMhFaawwAqAadDPE1ijwUxhiMKCmxCZk06OMYTz5lAx3xWDeXkLNAAAAAAElFTkSuQmCC") no-repeat 50%,var(--w7-wct-bg),var(--w7-wct_close-bg);
+  box-shadow: var(--w7-wct-sd);
+  min-width: 48px;
+  border-color: var(--w7-w-bd);
+  border-bottom-right-radius: var(--w7-wct-bdr);
+}
+
+a[label="Close"]::before {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACUSURBVHgBlZFNCoQwDIVbmRvOMHOAAd0K/uDGlYKiCG4VPICi9yu0oCSQoFUXFtKEl6+voZXvr7sKay1TL690FOexY+Hz87i2decOuDKQsNGVe8AGYTRJIh0Y+orBvxszCPllOymlxN06jNE26Qnwg4zdHQLrMhFaawwAqAadDPE1ijwUxhiMKCmxCZk06OMYTz5lAx3xWDeXkLNAAAAAAElFTkSuQmCC") no-repeat 50%,var(--w7-wct-bg),radial-gradient(circle at 50% 170%,#f4e676 10% 20%,#0000 60%),radial-gradient(circle at -60% 50%,#000a 5% 10%,#0000 50%),radial-gradient(circle at 160% 50%,#000a 5% 10%,#0000 50%),linear-gradient(#fb9d8b,#ee6d56 25% 50%,#d42809 50%);
+  border-bottom-right-radius: var(--w7-wct-bdr);
+  box-shadow: 0 0 7px 3px #e68e75,var(--w7-wct-sd);
+  content: "";
+  opacity: 0;
+  transition: opacity .3s linear;
 }
 
 </style>
@@ -93,7 +110,8 @@ ul.tree-view a{
       <div class="title-bar-controls">
         <button aria-label="Minimize"></button>
         <button aria-label="Maximize"></button>
-        <button aria-label="Close" title="go back to homepage" onclick="location.href='/main/';"></button>
+        <a label="Close" title="go back to homepage" href="/main/"></a>
+        <!-- <button aria-label="Close"></button> -->
       </div>
     </div>
     
@@ -162,12 +180,15 @@ ul.tree-view a{
         <button role="tab" aria-controls="recipes">recipes</button>
         <button role="tab" aria-controls="resources" disabled>resources</button>
       </menu>
+
+      <!-- landing -->
       <article role="tabpanel" id="home">
         <img src="images/header.gif" class="divider">
         <p>welcome to my vegan page! i've been vegan since august 2016 and feel very passionately that it's one of the best things you can do to help animals, the environment, and your health. here you can find recipes, resources on going vegan, a toybox for pixels of farm animals, and more.</p>
         <p><a target="_blank" href="https://www.tumblr.com/lcwpclybunny/746824933832785920">background credit</a> / <a target="_blank" href="https://foollovers.com/mat/line55.html">sunflower graphics credit</a> / <a target="_blank" href="https://makipooh.chu.jp/apupu/material.html">bee bullet point credit</a></p>
       </article>
   
+      <!-- toybox -->
       <article role="tabpanel" hidden id="toybox">
         <h2 class="instruction instruction-primary">cows</h2>
 <picture><source srcSet="images/toybox/cow01.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow01.gif" /></picture>
@@ -187,6 +208,7 @@ ul.tree-view a{
 <picture><source srcSet="images/toybox/alpaca01.png" media="(prefers-reduced-motion)" /><img src="images/toybox/alpaca01.gif" /></picture>
       </article>
   
+      <!-- recipes -->
       <article role="tabpanel" hidden id="recipes">
         <h2 class="instruction instruction-primary">my recipes</h2>
         <ul>
@@ -247,9 +269,21 @@ ul.tree-view a{
 
         <img src="images/medium-divider.gif" class="divider">
 
-        <h2 class="instruction instruction-primary">favorite cookbooks and bloggers</h2>
+        <h2 class="instruction instruction-primary">favorite cookbooks</h2>
         <ul>
-          <li></li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/971512344">Veganomicon : the ultimate vegan cookbook</a> by Isa Chandra Moskowitz and Terry Hope Romero</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/1412171008">Big vegan flavor : techniques and 150 recipes to master vegan cooking</a> by Nisha Vora</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/436045797">Vegan soul kitchen : fresh, healthy, and creative African American cuisine</a> by Bryant Terry</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/1104916169">Sushi modoki : the Japanese art of crafting vegan sushi</a> by Iina Sawabatake</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/891609193">The homemade vegan pantry : the art of making your own staples</a> by Miyoko Nishimoto Schinner</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/192027764">Vegan cupcakes take over the world : 75 dairy-free recipes for cupcakes that rule</a> by Isa Chandra Moskowitz, Terry Hope Romero, and Rebecca Bent</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/1228190108">The Korean vegan cookbook : reflections and recipes from Omma's kitchen</a> by Joanne Lee Molinaro</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/1112793511">Vegetable kingdom : the abundant world of vegan recipes</a> by Bryant Terry</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/1345614526">La vida verde : plant-based Mexican cooking with authentic flavor</a> by Jocelyn Ramirez</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/791680246">Artisan vegan cheese : from everyday to gourmet</a> by Miyoko Nishimoto Schinner</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/1280405751">The vegan Chinese kitchen : recipes and modern stories from a thousand-year-old tradition</a> by Hannah Che</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/1351566706">Fermenter : DIY fermentation for vegan fare</a> by Aaron Adams and Liz Crain</li>
+          <li><a target="_blank" href="https://search.worldcat.org/title/826294092">Vegan chocolate : unapologetically luscious and decadent dairy-free desserts</a> by Fran Costigan</li>
         </ul>
       </article>
   
@@ -260,8 +294,8 @@ ul.tree-view a{
       </article>
 
       <section class="field-row" style="justify-content: flex-end">
-        <button class="default">OK</button>
-        <button>Cancel</button>
+        <a href="/main/" title="go back to homepage"><button class="default">OK</button></a>
+        <a href="/main/" title="go back to homepage"><button>Cancel</button></a>
       </section>
       </div>
     </div>
