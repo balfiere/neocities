@@ -143,6 +143,10 @@ header {
 
 /* sidebar */
 
+input {
+    display: none;
+}
+
 #TOC {
   display: flex;
   flex-direction: column;
@@ -330,8 +334,15 @@ img, video {
     transition:all .5s ease;
   }
 
-  #TOC.open {
+  /* #TOC.open {
     transform:translate(0);
+  } */
+
+  #menu-toggle:checked ~ #TOC {
+      transition: all .3s;
+      transform: translate(0);
+      -ms-transform: translate(0);
+      -webkit-transform: translate(0)
   }
 
   .content {

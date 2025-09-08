@@ -37,7 +37,9 @@
 
 <!-- header -->
 <header>
+
 <!-- mobile button -->
+<label for="menu-toggle">
 <div id="open" tabindex="0">
   <svg class="ham hamRotate" id="ham4" viewBox="0 0 100 100" width="65">
     <path
@@ -51,13 +53,15 @@
           d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
   </svg>
 </div>
+</label>
 </header><!-- end header -->  
 
 <!-- main contents -->
 <div id="contents" class="cf">
 
 <!-- left column -->
-<div id="leftcolumn"><div id="leftcolumn-inner">
+<input id="menu-toggle" type="checkbox" />
+<aside id="leftcolumn"><div id="leftcolumn-inner">
 
 <!-- links -->
 <h2>links</h2>
@@ -170,7 +174,7 @@
 <div class="mobilewarning"><center><br /><h3>notice</h3>
 <span style="font-size: .8em;line-height: .8em;">you are currently viewing the mobile version of my site, where some features are hidden. please view on desktop for the full experience!</span></center></div>
 
-</div></div><!-- end left column -->
+</div></aside><!-- end left column -->
 
 <!-- right column -->
 <div id="rightcolumn">

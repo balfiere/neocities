@@ -801,7 +801,6 @@
 
 .image-container:hover .image, .image-container:active .image {
   opacity: 0.3;
-  webkit-filter: blur(4px);
   filter: blur(4px);
 }
 

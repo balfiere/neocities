@@ -12,22 +12,22 @@ loader.style.display = "flex";
 
 
 function toggleWindowsDisplay() {
-    var displayStyle = window.innerWidth > 840 ? "unset" : "none";
-    for (var i = 0; i < windows.length; i++) {
-        windows[i].style.display = displayStyle;
-    }
+  var displayStyle = window.innerWidth > 840 ? "unset" : "none";
+  for (var i = 0; i < windows.length; i++) {
+    windows[i].style.display = displayStyle;
+  }
 }
 
 window.addEventListener("load", function () {
-    loader.style.display = "none";
-	toggleWindowsDisplay();
+  loader.style.display = "none";
+  toggleWindowsDisplay();
 });
 
 //Fade out, optional
 var s = document.getElementById("preloader").style;
 s.opacity = 1;
 (function fade() {
-(s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 40);
+  (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 40);
 })();
 
 window.addEventListener("resize", toggleWindowsDisplay);
@@ -46,33 +46,33 @@ var draggableElems = document.querySelectorAll(".draggable");
 var draggies = [];
 // init Draggabillies
 for (var i = 0, len = draggableElems.length; i < len; i++) {
-	var draggableElem = draggableElems[i];
-	var draggie = new Draggabilly(draggableElem, {
-		handle: ".window-header"
-	});
-	draggies.push(draggie);
+  var draggableElem = draggableElems[i];
+  var draggie = new Draggabilly(draggableElem, {
+    handle: ".window-header"
+  });
+  draggies.push(draggie);
 }
 
 // get all windows
 var activeWindow = document.querySelector('.window_container');
 var windows = document.querySelectorAll(".window_container");
 
-var init = function(){
-	for (var i = 0; i < windows.length; i++){
-		var w = windows[i];
-		console.log(w);
+var init = function () {
+  for (var i = 0; i < windows.length; i++) {
+    var w = windows[i];
+    console.log(w);
 
-        // on click
-		w.addEventListener("mouseover", function(e){
-            // reset z-index of all windows to 10
-			activeWindow.style.zIndex = 10;
-            // get the window being clicked
-			activeWindow = e.target.closest('.window_container');
-            // bring to top (by setting z-index to 100)
-			activeWindow.style.zIndex = 100;
-		})
-		console.log(activeWindow)
-	}
+    // on click
+    w.addEventListener("mouseover", function (e) {
+      // reset z-index of all windows to 10
+      activeWindow.style.zIndex = 10;
+      // get the window being clicked
+      activeWindow = e.target.closest('.window_container');
+      // bring to top (by setting z-index to 100)
+      activeWindow.style.zIndex = 100;
+    })
+    console.log(activeWindow)
+  }
 }
 
 init();
@@ -85,18 +85,16 @@ init();
 
 let burger = document.getElementById("open");
 
-// Setup our function to run on various events
 var toggleSidebar = function (event) {
-  // Do something...
-    document.getElementById('leftcolumn').classList.toggle('open')
-    document.getElementById('ham4').classList.toggle('active')
+  document.getElementById('ham4').classList.toggle('active')
 };
 
 burger.addEventListener('click', toggleSidebar, false);
 burger.addEventListener('keydown', (event) => {
   let key = event.code;
   if (key == "Escape" || key == "Enter") {
-      toggleSidebar(event);
+    toggleSidebar(event);
+    document.getElementById('menu-toggle').checked = !document.getElementById('menu-toggle').checked
   }
 });
 
@@ -107,23 +105,23 @@ burger.addEventListener('keydown', (event) => {
 ///////////////////////////////////////////////
 
 function copyText() {
-// Get the text field
-var buttonLink = document.getElementById("button88");
-var buttonLinkValue = buttonLink.value;
+  // Get the text field
+  var buttonLink = document.getElementById("button88");
+  var buttonLinkValue = buttonLink.value;
 
-// Select the text field
-buttonLink.select();
-buttonLink.setSelectionRange(0, 99999); // For mobile devices
+  // Select the text field
+  buttonLink.select();
+  buttonLink.setSelectionRange(0, 99999); // For mobile devices
 
-	// Copy the text inside the text field
-navigator.clipboard.writeText(buttonLink.value);
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(buttonLink.value);
 
-// Alert the copied text
-buttonLink.value = "Copied!";
-setTimeout(function(){
-	buttonLink.value = buttonLinkValue;
-}, 2000);
-} 
+  // Alert the copied text
+  buttonLink.value = "Copied!";
+  setTimeout(function () {
+    buttonLink.value = buttonLinkValue;
+  }, 2000);
+}
 
 ///////////////////////////////////////////////
 //
@@ -132,118 +130,101 @@ setTimeout(function(){
 ///////////////////////////////////////////////
 
 function appendCurrent(current, container) {
-	if (current.length == 0) {
-		const item = document.createElement('li');
-		item.textContent = "nothing!";
-		container.appendChild(item);
-	} else {
-		current.forEach(game => {
-		const item = document.createElement('li');
-		item.textContent = game;
-		container.appendChild(item);
+  if (current.length == 0) {
+    const item = document.createElement('li');
+    item.textContent = "nothing!";
+    container.appendChild(item);
+  } else {
+    current.forEach(game => {
+      const item = document.createElement('li');
+      item.textContent = game;
+      container.appendChild(item);
     });
-	}
+  }
 }
 
-fetch('./scripts/currently.json')
+fetch('./scripts/windows.json')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     return response.json();
   })
-  .then(currently => {
-    const playing = document.getElementById('currentlyplaying');
-	appendCurrent(currently.playing, playing);
+  .then(
+    json => {
+      const playing = document.getElementById('currentlyplaying');
+      appendCurrent(json.playing, playing);
 
-    const reading = document.getElementById('currentlyreading');
-	appendCurrent(currently.reading, reading);
+      const reading = document.getElementById('currentlyreading');
+      appendCurrent(json.reading, reading);
 
-    const watching = document.getElementById('currentlywatching');
-	appendCurrent(currently.watching, watching);
+      const watching = document.getElementById('currentlywatching');
+      appendCurrent(json.watching, watching);
 
-    const listening = document.getElementById('currentlylistening');
-	appendCurrent(currently.listening, listening);
+      const listening = document.getElementById('currentlylistening');
+      appendCurrent(json.listening, listening);
 
-    const making = document.getElementById('currentlymaking');
-	appendCurrent(currently.making, making);
+      const making = document.getElementById('currentlymaking');
+      appendCurrent(json.making, making);
 
-    const other = document.getElementById('currentlyother');
-	appendCurrent(currently.other, other);
+      const other = document.getElementById('currentlyother');
+      appendCurrent(json.other, other);
 
-  })
+      const todoList = document.getElementById('todo');
+      json.todo.forEach(item => {
+        const todoItem = document.createElement('li');
+        todoItem.textContent = item;
+        todoList.appendChild(todoItem);
+      })
+      json.done.forEach(item => {
+        const todoItem = document.createElement('li');
+        todoItem.innerHTML = item.strike();
+        todoList.appendChild(todoItem);
+      })
+
+      const buttonwall = document.getElementById('buttonwall');
+      const buttonArray = json.buttons;
+      buttonArray.forEach(button => {
+        // if the button is animated (value 3 is 1)
+        const picture = document.createElement('picture');
+        const source = document.createElement('source');
+        const img = document.createElement('img');
+        if (button[2] == 1) {
+          source.srcset = "images/88x31/" + button[0] + ".png";
+          source.media = "(prefers-reduced-motion)";
+          img.src = "images/88x31/" + button[0] + ".gif";
+          img.alt = button[1];
+          picture.appendChild(source);
+          picture.appendChild(img);
+        } else {
+          img.src = "images/88x31/" + button[0] + ".png";
+          img.alt = button[1];
+        }
+        // if has a link (there are 4 values in the array)
+        if (button.length == 4) {
+          const link = document.createElement('a');
+          link.href = button[3];
+          link.target = "_blank";
+          // if the button is animated (value 3 is 1)
+          if (button[2] == 1) {
+            link.appendChild(picture);
+          } else {
+            link.appendChild(img);
+          }
+          buttonwall.appendChild(link);
+        } else {
+          // if the button is animated (value 3 is 1)
+          if (button[2] == 1) {
+            buttonwall.appendChild(picture);
+          } else {
+            buttonwall.appendChild(img);
+          }
+        }
+      })
+    }
+  )
   .catch(error => {
     console.error('Failed to load JSON:', error);
-  });
-
-fetch('./scripts/todo.json')
-  .then(response => {
-	return response.json();
-  })
-  .then(todo => {
-	const todoList = document.getElementById('todo');
-	todo.todo.forEach(item => {
-		const todoItem = document.createElement('li');
-		todoItem.textContent = item;
-		todoList.appendChild(todoItem);
-	})
-	todo.done.forEach(item => {
-		const todoItem = document.createElement('li');
-		todoItem.innerHTML = item.strike();
-		todoList.appendChild(todoItem);
-	})
-  })
-  .catch(error => {
-	console.error('Failed to load JSON:', error);
-  });
-
-fetch('./scripts/buttons.json')
-  .then(response => {
-	return response.json();
-  })
-  .then(buttonlist => {
-	const buttonwall = document.getElementById('buttonwall');
-	const buttonArray = buttonlist.buttons;
-	buttonArray.forEach(button => {
-		// if the button is animated (value 3 is 1)
-		const picture = document.createElement('picture');
-		const source = document.createElement('source');
-		const img = document.createElement('img');
-		if (button[2] == 1) {
-			source.srcset = "images/88x31/" + button[0] + ".png";
-			source.media = "(prefers-reduced-motion)";
-			img.src = "images/88x31/" + button[0] + ".gif";
-			img.alt = button[1];
-			picture.appendChild(source);
-			picture.appendChild(img);
-		} else {
-			img.src = "images/88x31/" + button[0] + ".png";
-			img.alt = button[1];
-		}
-		// if has a link (there are 4 values in the array)
-		if (button.length == 4) {
-			const link = document.createElement('a');
-			link.href = button[3];
-			link.target = "_blank";
-			// if the button is animated (value 3 is 1)
-			if (button[2] == 1) {
-				link.appendChild(picture);
-			} else {
-				link.appendChild(img);
-			}
-			buttonwall.appendChild(link);
-		} else {
-			// if the button is animated (value 3 is 1)
-			if (button[2] == 1) {
-				buttonwall.appendChild(picture);
-			} else {
-				buttonwall.appendChild(img);
-			}
-		}
-	})
-  })
-  .catch(error => {
-	console.error('Failed to load JSON:', error);
   });
 
 ///////////////////////////////////////////////
@@ -289,7 +270,7 @@ var Sakura = function Sakura(selector, options) {
     // Gradient color start (rgba).
     gradientColorEnd: 'rgba(120, 197, 161, 0.7)',
     // Gradient color end (rgba).
-    gradientColorDegree: 120, 
+    gradientColorDegree: 120,
     // Gradient degree angle.
     lifeTime: 700,
     // The life time of the petals (0 is infinity).
@@ -433,14 +414,14 @@ const isReducedMotionEnabled = window.matchMedia('(prefers-reduced-motion: reduc
 let sakura;
 
 if (!isReducedMotionEnabled) {
-	sakura = new Sakura('body', {});
+  sakura = new Sakura('body', {});
 }
 
 leavesButton = document.querySelector('#leavesButton');
 leavesButton.addEventListener('click', () => {
-	if (sakura.el.getAttribute('data-sakura-anim-id') === "") {
-		sakura.start();
-	} else {
-		sakura.stop();
-	}
+  if (sakura.el.getAttribute('data-sakura-anim-id') === "") {
+    sakura.start();
+  } else {
+    sakura.stop();
+  }
 })

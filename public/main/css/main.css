@@ -386,7 +386,11 @@ header {
     height: 100%;
 }
 
-#leftcolumn {
+input {
+    display: none;
+}
+
+aside {
     background: var(--window-text-background);
     border: var(--window-border);
     box-shadow: var(--window-shadow);
@@ -684,12 +688,12 @@ nav strike {
         width: 65%
     }
 
-    #leftcolumn {
+    aside {
         width: 32%;
     }
 
-    #leftcolumn input,
-    #leftcolumn textarea {
+    aside input,
+    aside textarea {
         width: 80%
     }
 
@@ -717,7 +721,7 @@ nav strike {
         position: static
     }
 
-    #leftcolumn {
+    aside {
         border: 0
     }
 
@@ -752,7 +756,7 @@ nav strike {
         height: auto
     }
 
-    #leftcolumn {
+    aside {
         color: #fff;
         max-height: 100dvh;
         overflow-y: scroll;
@@ -769,15 +773,23 @@ nav strike {
         z-index: 1000
     }
 
-    #leftcolumn h2 {
+    aside h2 {
         text-align: left;
     }
 
-    #leftcolumn a {
-        color: #fff
+    aside a {
+        color: #fff!important;
     }
 
-    #leftcolumn.open {
+    /* #leftcolumn.open {
+        transition: all .3s;
+        transform: translate(0);
+        -ms-transform: translate(0);
+        -webkit-transform: translate(0)
+    } */
+
+    #menu-toggle:checked ~ aside {
+        transition: all .3s;
         transform: translate(0);
         -ms-transform: translate(0);
         -webkit-transform: translate(0)
@@ -881,7 +893,7 @@ nav strike {
     }
 
     #rightcolumn,
-    #leftcolumn {
+    aside {
         background: var(--window-text-background-dark);
         border: var(--window-border-dark);
         box-shadow: var(--window-shadow-dark);

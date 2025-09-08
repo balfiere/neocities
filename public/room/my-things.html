@@ -9,14 +9,16 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   
   <!-- styling -->
-  <link rel="stylesheet" href="stuff.css" type="text/css">
+  <link rel="stylesheet" href="stuff.min.css" type="text/css">
 
 </head>
 <body>
 
 <!-- header -->
 <header>
+
 <!-- mobile button -->
+<label for="menu-toggle">
 <div id="open" tabindex="0">
   <svg class="ham hamRotate" id="ham4" viewBox="0 0 100 100" width="65">
     <path
@@ -30,11 +32,15 @@
           d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
   </svg>
 </div>
+</label>
+</header><!-- end header -->  
+
 </header><!-- end header -->
 
 <div id="container">
 
 <!-- sidebar -->
+<input id="menu-toggle" type="checkbox" />
 <nav id="TOC" role="doc-toc">
 <ul>
   <a href="#computer-games" id="toc-computer-games"><li>computer games</li></a>
@@ -135,10 +141,7 @@ late 2022 since they look a little sad now haha.</p>
 
 let burger = document.getElementById("open");
 
-// Setup our function to run on various events
 var toggleSidebar = function (event) {
-  // Do something...
-    document.getElementById('TOC').classList.toggle('open')
     document.getElementById('ham4').classList.toggle('active')
 };
 
@@ -147,6 +150,7 @@ burger.addEventListener('keydown', (event) => {
   let key = event.code;
   if (key == "Escape" || key == "Enter") {
       toggleSidebar(event);
+      document.getElementById('menu-toggle').checked = !document.getElementById('menu-toggle').checked
   }
 });
 
