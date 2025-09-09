@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/posts/post.css">
+<title>{{ title }}</title>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+    <nav class="toc">
+      {{ content | toc | safe }}
+      <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="#8080ff" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+      </svg>
+    </nav>
+    
+    <article class="contents">
+        {{ content | safe }}
+    </article>
+
+    </div>
+
+    <footer><a href="#">{{ title }}</a> <a href="/main/">personal site home</a></footer>
+
+<script src="/posts/snake.js"></script>
+</body>
+</html>

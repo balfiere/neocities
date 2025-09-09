@@ -1,5 +1,4 @@
 *.code-workspace
-eleventy/
 quartz/
 old/
 public/.vscode
