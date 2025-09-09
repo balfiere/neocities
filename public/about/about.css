@@ -2,8 +2,8 @@
 
 :root{
     /* grid */
-    --gird-width:40px;
-    --gird-height:40px;
+    --grid-width:40px;
+    --grid-height:40px;
     --line-color:#0a30ad75;
 
     /* colors */
@@ -267,8 +267,8 @@
       linear-gradient(to right, var(--line-color), transparent 2px);
     background-attachment:fixed;
     background-size:
-      100% var(--gird-height),
-      var(--gird-width) 100%;
+      100% var(--grid-height),
+      var(--grid-width) 100%;
   }
 
   /* container that mimics soul hacker's textbox */
