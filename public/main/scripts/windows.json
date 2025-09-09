@@ -21,11 +21,13 @@
     "write a mini tutorial on using json with javascript",
     "share javascript-less modal popup code snippet",
     "share javascript-less tabs code snippet",
-    "update japanese language learning resources",
+    "write a tutorial on using eleventy to generate a page from a json file",
+    "write a tutorial on using eleventy to generate a page from multiple markdown files",
     "add resources to vegan page",
     "create yakuza shrine"
   ],
   "done": [
+    "update japanese language learning resources",
     "remove javascript dependencies from vegan page",
     "auto detect dark mode on notebook section",
     "update dead links on switch resources page",
