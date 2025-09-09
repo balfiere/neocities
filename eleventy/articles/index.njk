@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articles</title>
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="shortcut icon" href="favicon.gif">
+    <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
+</head>
+<body>
+    <header>links to some of my favorite articles, blog posts, and essays. <a href="/main/index.html">go back</a>.</header>
+    <main>
+    {% for article in articles %}
+        <article>
+            <div class="inner">
+                <a target="_blank" href="{{ article[3] }}">
+                    <div class="title">{{ article[0] }}</div>
+                    <div class="author">{{ article[1] }}</div>
+                    <div class="description">{{ article[2] }}</div>
+                </a>
+            </div>
+        </article>
+    {% endfor %}
+    </main>
+</body>
+</html>
