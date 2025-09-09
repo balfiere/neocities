@@ -1,572 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ราวเหมือนดั่งความฝัน</title>
-<meta name="description" content="">
-<meta name="author" content="kwaamfan">
-<link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
-<link rel="icon" href="/landing/images/faviconlanding.gif?v=2">
-<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ราวเหมือนดั่งความฝัน</title>
+    <meta name="description" content="">
+    <meta name="author" content="kwaamfan">
+    <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml"
+        href="https://kwaamfan.neocities.org/atom.xml" />
+    <link rel="icon" href="/landing/images/faviconlanding.gif?v=2">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" />
 
-<!------ fonts ------>
-<link href="https://api.fonts.coollabs.io/css2?family=Pixelify+Sans:wght@400..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="preload" href="/fonts/PressStartReg.woff2" as="font" type="font/woff2" crossorigin>
- 
-<style type="text/css">
+    <!------ fonts ------>
+    <link
+        href="https://api.fonts.coollabs.io/css2?family=Pixelify+Sans:wght@400..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="/fonts/PressStartReg.woff2" as="font" type="font/woff2" crossorigin>
 
-/*----- fonts ----*/
+    <style type="text/css">
+        /*----- fonts ----*/
 
-@font-face {
-    font-family: 'Press Start';
-    src: url('/fonts/PressStartReg.woff2') format('woff2'),
-        url('/fonts/PressStartReg.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
- 
-/*----- variables -----*/
+        @font-face {
+            font-family: 'Press Start';
+            src: url('/fonts/PressStartReg.woff2') format('woff2'),
+                url('/fonts/PressStartReg.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
 
-:root {
-    /*----- general -----*/
-    --text: black;
-    --link:#968aff;
-    --link-hover:#FFB5E1;
-    --bold:#999;
-    --italic:#999;
-    --highlight-text:#000000;
-    --highlight-background:#968aff33;
-    
-    /*----- nana -----*/
-    --nana-blur-amount:5px;
-    --nana-blur-speed:500ms;
-    --nana-spacing:80px;
-    
-    /*----- popup -----*/
-    --main-box-background: #cac6cb;
-    --popup-title-background: #968aff;
-    --popup-title-highlight: #dfddf1;
-    --popup-title-shadow: #8477f5;
-    --popup-text-background: #f7f7f7;
-    --popup-inset-highlight:#dedcde;
-    --popup-inset-shadow:#9b999b;
-    --box-shadow: #b5b5ff;
-    --box-border: #968aff;
-    --popup-width: 470px;
-    
-    /*----- crosswalk -----*/
-    --crosswalk:white;
-    
-    /*----- scrollbar -----*/
-    --scrollbar:#b5b5ff;
-    --scrollbar-width:0px;
-}
+        /*----- variables -----*/
 
-/*----- general -----*/
+        :root {
+            /*----- general -----*/
+            --text: black;
+            --link: #968aff;
+            --link-hover: #FFB5E1;
+            --bold: #999;
+            --italic: #999;
+            --highlight-text: #000000;
+            --highlight-background: #968aff33;
 
-body {
-    background-color: var(--link);
-    font-family: 'Prompt';
-    font-weight:300;
-    font-size: 1em;
-    line-height:1.5em;
-    text-align:justify;
-    color: var(--text);
-}
+            /*----- nana -----*/
+            --nana-blur-amount: 5px;
+            --nana-blur-speed: 500ms;
+            --nana-spacing: 80px;
 
-main {
-    bottom: 0;
-    left: 0;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-image: url(/landing/images/backgroundlanding.gif);    
-    background-attachment:fixed;
-    background-size:auto 100%;
-    background-repeat:repeat-x;
-    background-position:bottom;
-    transition: all .3s linear;
-}
+            /*----- popup -----*/
+            --main-box-background: #cac6cb;
+            --popup-title-background: #968aff;
+            --popup-title-highlight: #dfddf1;
+            --popup-title-shadow: #8477f5;
+            --popup-text-background: #f7f7f7;
+            --popup-inset-highlight: #dedcde;
+            --popup-inset-shadow: #9b999b;
+            --box-shadow: #b5b5ff;
+            --box-border: #968aff;
+            --popup-width: 470px;
 
-a {
-    text-decoration: none;
-    color: var(--link);
-    -webkit-transition:all 0.3s ease-in-out;
-    -moz-transition:all 0.3s ease-in-out;
-    -o-transition:all 0.3s ease-in-out;
-    -ms-transition:all 0.3s ease-in-out;
-    transition:all 0.3s ease-in-out;
-}
+            /*----- crosswalk -----*/
+            --crosswalk: white;
 
-a:hover{
-    text-shadow: 0px 0px 2px var(--link-hover);
-    color: var(--link-hover)
-}
+            /*----- scrollbar -----*/
+            --scrollbar: #b5b5ff;
+            --scrollbar-width: 0px;
+        }
 
-.quote a {
-    color: var(--link-hover);
-}
+        /*----- general -----*/
 
-.quote a:hover {
-    color: black;
-    text-shadow: none;
-}
+        body {
+            background-color: var(--link);
+            font-family: 'Prompt';
+            font-weight: 300;
+            font-size: 1em;
+            line-height: 1.5em;
+            text-align: justify;
+            color: var(--text);
+        }
 
-b, strong {
-    color:var(--bold);
-}
+        main {
+            bottom: 0;
+            left: 0;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-image: url(/landing/images/backgroundlanding.gif);
+            background-attachment: fixed;
+            background-size: auto 100%;
+            background-repeat: repeat-x;
+            background-position: bottom;
+            transition: all .3s linear;
+        }
 
-i:not([class]), em {
-    color:var(--italic);
-}
+        a {
+            text-decoration: none;
+            color: var(--link);
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
 
-/*----- text highlight -----*/
+        a:hover {
+            text-shadow: 0px 0px 2px var(--link-hover);
+            color: var(--link-hover)
+        }
 
-::selection {
-    color:var(--highlight-text);
-    background:var(--highlight-background);
-}
- 
-::-moz-selection {
-    color:var(--highlight-text);
-    background:var(--highlight-background);
-}
+        .quote a {
+            color: var(--link-hover);
+        }
 
-/*----- webkit scrollbar -----*/
+        .quote a:hover {
+            color: black;
+            text-shadow: none;
+        }
 
-::-webkit-scrollbar {
-    width:var(--scrollbar-width);
-    height:0;
-    background-color:var(--main-box-background);
-}
- 
-::-webkit-scrollbar-thumb {
-    background-color:var(--scrollbar);
-    border-radius:var(--scrollbar-width);
-}
- 
-::-webkit-scrollbar-track {
-    background-color:var(--main-box-background);
-    border-radius:var(--scrollbar-width);
-}
+        b,
+        strong {
+            color: var(--bold);
+        }
 
-::-webkit-scrollbar-corner {
-    background:var(--main-box-background);
-}
+        i:not([class]),
+        em {
+            color: var(--italic);
+        }
 
-/*----- tooltips -----*/
+        /*----- text highlight -----*/
 
-.tippy-box[data-theme~='mine'] {
-    border-radius: 0px;
-    margin-left: 5px;
-    color: var(--text);
-    font-family:Prompt;
-    font-size:1em;
-    letter-spacing:2px;
-    box-sizing: border-box;
-    background-color:var(--popup-text-background);
-    box-shadow:inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
-}
+        ::selection {
+            color: var(--highlight-text);
+            background: var(--highlight-background);
+        }
 
-.tippy-box[data-theme~='mine'][data-placement^='right'] > .tippy-arrow::before {
-  border-right-color: var(--popup-inset-highlight);
-}
+        ::-moz-selection {
+            color: var(--highlight-text);
+            background: var(--highlight-background);
+        }
 
-/*----- top quote -----*/
+        /*----- webkit scrollbar -----*/
 
-.quote {
-    position:absolute;
-    top:5dvh;
-    width:80dvw;
-    max-width: 700px;
-    margin:auto;
-    left:0;right:0;
-    display:inline-block;
-    font-family:"Press Start";
-    font-size:em;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    color:white;
-    line-height:200%;
-    text-align:center;
-    transition:opacity 0.4s ease-in-out;
-    white-space:pre-line;
-}
+        ::-webkit-scrollbar {
+            width: var(--scrollbar-width);
+            height: 0;
+            background-color: var(--main-box-background);
+        }
 
-/*----- zebra crosswalk -----*/
-/**** adapted from https://codepen.io/manz/pen/LOyrMp?editors=1100 ***/
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar);
+            border-radius: var(--scrollbar-width);
+        }
 
-#crosswalk {
-  position:absolute;
-  bottom:50px; 
-  left:0;
-  width:100vw;
-  overflow: clip;
-}
+        ::-webkit-scrollbar-track {
+            background-color: var(--main-box-background);
+            border-radius: var(--scrollbar-width);
+        }
 
-.zebra_container{
-    display: flex;
-    justify-content: center;
-}
+        ::-webkit-scrollbar-corner {
+            background: var(--main-box-background);
+        }
 
-.paso {
-  width:1024px;
-  display: flex;
-  perspective:200px;
-}
+        /*----- tooltips -----*/
 
-.paso .zebra {
-  width:50px;
-  height:200px;
-  transform:translateY(80px) rotateX(90deg);
-  transition:transform 0 linear,
-             background .1s ease;
-}
+        .tippy-box[data-theme~='mine'] {
+            border-radius: 0px;
+            margin-left: 5px;
+            color: var(--text);
+            font-family: Prompt;
+            font-size: 1em;
+            letter-spacing: 2px;
+            box-sizing: border-box;
+            background-color: var(--popup-text-background);
+            box-shadow: inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
+        }
 
-.paso .zebra.b {
-  background:var(--crosswalk);
-}
+        .tippy-box[data-theme~='mine'][data-placement^='right']>.tippy-arrow::before {
+            border-right-color: var(--popup-inset-highlight);
+        }
 
-.paso .zebra.n {
-  background:transparent;
-}
+        /*----- top quote -----*/
 
-/*----- pagedolls -----*/
+        .quote {
+            position: absolute;
+            top: 5dvh;
+            width: 80dvw;
+            max-width: 700px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            display: inline-block;
+            font-family: "Press Start";
+            font-size: em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            line-height: 200%;
+            text-align: center;
+            transition: opacity 0.4s ease-in-out;
+            white-space: pre-line;
+        }
 
-#doll-container{
-    position: absolute;
-    bottom: 60px;
-    z-index: 12;
-    height: auto;
-    width: 400px;
-    left: 50%;
-    margin-left: -200px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
-    justify-content: center;
-    align-items: end;
-}
+        /*----- zebra crosswalk -----*/
+        /**** adapted from https://codepen.io/manz/pen/LOyrMp?editors=1100 ***/
 
-#nana img {
-    width: 158px;
-    height: auto;
-    margin-right: 5vw;
-}
+        #crosswalk {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            width: 100vw;
+            overflow: clip;
+        }
 
-#hachi img {
-    width: 150px;
-    height: auto;
-}
+        .zebra_container {
+            display: flex;
+            justify-content: center;
+        }
 
-[menu-character]{
-    position:relative;
-    transition:all var(--nana-blur-speed) ease-in-out,margin 0s;
-}
+        .paso {
+            width: 1024px;
+            display: flex;
+            perspective: 200px;
+        }
 
-#doll-container:hover [menu-character]{
-    opacity:0.8;
-    -webkit-filter:blur(var(--nana-blur-amount));
-    -moz-filter:blur(var(--nana-blur-amount));
-    -o-filter:blur(var(--nana-blur-amount));
-    filter:blur(var(--nana-blur-amount));
-}
+        .paso .zebra {
+            width: 50px;
+            height: 200px;
+            transform: translateY(80px) rotateX(90deg);
+            transition: transform 0 linear,
+                background .1s ease;
+        }
 
-#doll-container:hover [menu-character]:hover {
-    opacity:1;
-    -webkit-filter:blur(0px);
-    -moz-filter:blur(0px);
-    -o-filter:blur(0px);
-    filter:blur(0px);
-}
+        .paso .zebra.b {
+            background: var(--crosswalk);
+        }
 
-/*----- modal -----*/
+        .paso .zebra.n {
+            background: transparent;
+        }
 
-/* don't select main content text when modal is opened */
-.modal-opened main {
-  user-select: none;
-}
+        /*----- pagedolls -----*/
 
-/* make toggle invisible */
-.modal-toggle {
-  height: 0;
-  left: -9999rem;
-  overflow: hidden;
-  pointer-events: none;
-  position: absolute;
-  user-select: none;
-  width: 0;
-}
+        #doll-container {
+            position: absolute;
+            bottom: 60px;
+            z-index: 12;
+            height: auto;
+            width: 400px;
+            left: 50%;
+            margin-left: -200px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: end;
+        }
 
-/* modal */
-.modal {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: -9999;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  padding: 2rem;
-  transition: opacity .3s ease, z-index 0s ease .3s;
-}
+        #nana img {
+            width: 158px;
+            height: auto;
+            margin-right: 5vw;
+        }
 
-/* modal is opened */
-.modal-toggle:checked + .modal {
-  z-index: 9999;
-}
+        #hachi img {
+            width: 150px;
+            height: auto;
+        }
 
-/* close on click on the overlay */
-.modal-close::before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
+        [menu-character] {
+            position: relative;
+            transition: all var(--nana-blur-speed) ease-in-out, margin 0s;
+        }
 
-/* modal background is solved this way because of the overscroll */
-body::before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity 0s ease .2s;
-  z-index: -9999;
-}
+        #doll-container:hover [menu-character] {
+            opacity: 0.8;
+            -webkit-filter: blur(var(--nana-blur-amount));
+            -moz-filter: blur(var(--nana-blur-amount));
+            -o-filter: blur(var(--nana-blur-amount));
+            filter: blur(var(--nana-blur-amount));
+        }
 
-.modal-opened::before {
-  opacity: 1;
-  transition: none;
-}
+        #doll-container:hover [menu-character]:hover {
+            opacity: 1;
+            -webkit-filter: blur(0px);
+            -moz-filter: blur(0px);
+            -o-filter: blur(0px);
+            filter: blur(0px);
+        }
 
-/* change main content when modal is opened */
-.modal-opened main {
-  opacity: 0.5;
-  filter: blur(5px);
-}
+        /*----- modal -----*/
 
-/* animation */
-@keyframes open {
-  0% {
-    transform: scale(.8);
-  }
+        /* don't select main content text when modal is opened */
+        .modal-opened main {
+            user-select: none;
+        }
 
-  99% {
-    transform: scale(1);
-  }
+        /* make toggle invisible */
+        .modal-toggle {
+            height: 0;
+            left: -9999rem;
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            user-select: none;
+            width: 0;
+        }
 
-  100% {
-    transform: none;
-  }
-}
+        /* modal */
+        .modal {
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: -9999;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            padding: 2rem;
+            transition: opacity .3s ease, z-index 0s ease .3s;
+        }
 
-.modal-toggle:checked + .modal {
-  opacity: 1;
-  transition: all .3s;
-}
+        /* modal is opened */
+        .modal-toggle:checked+.modal {
+            z-index: 9999;
+        }
 
-.modal-toggle:checked + .modal .popup {
-  animation: open .3s ease-out;
-}
+        /* close on click on the overlay */
+        .modal-close::before {
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
 
-/*----- modal styling -----*/
+        /* modal background is solved this way because of the overscroll */
+        body::before {
+            bottom: 0;
+            content: '';
+            left: 0;
+            opacity: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            transition: opacity 0s ease .2s;
+            z-index: -9999;
+        }
 
-.popup {
-    width: 95dvw;
-    position:fixed;
-    z-index:10000;
-    overflow-y: scroll;
-    max-width:var(--popup-width);
-    max-height:95dvh;
-    padding:6px;
-    background-color:var(--main-box-background);
-    box-shadow:inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
-    box-sizing: border-box;
-}
+        .modal-opened::before {
+            opacity: 1;
+            transition: none;
+        }
 
-.popup-inside {
-    margin: 0 2px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
+        /* change main content when modal is opened */
+        .modal-opened main {
+            opacity: 0.5;
+            filter: blur(5px);
+        }
 
-.popup-title{
-    margin-top: 3px;
-    font-family:"press start";
-    font-size:8px;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    line-height:300%;
-    color: white;
-    padding: 3px 8px;
-    box-shadow: inset -2px -2px 0 0 var(--popup-title-highlight), inset 2px 2px 0 0 var(--popup-title-shadow);
-    background-color: var(--popup-title-background);
+        /* animation */
+        @keyframes open {
+            0% {
+                transform: scale(.8);
+            }
 
-}
+            99% {
+                transform: scale(1);
+            }
 
-.information-container{
-    box-shadow: inset -2px -2px 0 0 var(--popup-inset-highlight), inset 2px 2px 0 0 var(--popup-inset-shadow);
-    background: var(--popup-text-background);
-    overflow-y: scroll;
-    padding: 10px;
-    height: 100%;
-    margin: 6px 0 4px 0;
-    box-sizing: border-box;
-}
+            100% {
+                transform: none;
+            }
+        }
 
-</style>
- 
+        .modal-toggle:checked+.modal {
+            opacity: 1;
+            transition: all .3s;
+        }
+
+        .modal-toggle:checked+.modal .popup {
+            animation: open .3s ease-out;
+        }
+
+        /*----- modal styling -----*/
+
+        .popup {
+            width: 95dvw;
+            position: fixed;
+            z-index: 10000;
+            overflow-y: scroll;
+            max-width: var(--popup-width);
+            max-height: 95dvh;
+            padding: 6px;
+            background-color: var(--main-box-background);
+            box-shadow: inset -2px -2px 0 0 #263238, inset 2px 2px 0 0 #dedcde, inset -4px -4px 0 0 #a099a1, inset 3px 3px 0 0 #fcfcfc;
+            box-sizing: border-box;
+        }
+
+        .popup-inside {
+            margin: 0 2px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .popup-title {
+            margin-top: 3px;
+            font-family: "press start";
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 300%;
+            color: white;
+            padding: 3px 8px;
+            box-shadow: inset -2px -2px 0 0 var(--popup-title-highlight), inset 2px 2px 0 0 var(--popup-title-shadow);
+            background-color: var(--popup-title-background);
+
+        }
+
+        .information-container {
+            box-shadow: inset -2px -2px 0 0 var(--popup-inset-highlight), inset 2px 2px 0 0 var(--popup-inset-shadow);
+            background: var(--popup-text-background);
+            overflow-y: scroll;
+            padding: 10px;
+            height: 100%;
+            margin: 6px 0 4px 0;
+            box-sizing: border-box;
+        }
+    </style>
+
 </head>
- 
+
 <body>
 
-<main>
+    <main>
 
-<!-- quote -->
+        <!-- quote -->
 
-<div class="quote">
-“Nana... How come being happy and making your dreams come true are two different things? Even now, I still don't know why...” 
-<div style="font-size: 8px;">click on a nana to see my sites or go to <a href="/sitemap/index.html">the sitemap</a></div>
-</div>
+        <div class="quote">
+            “Nana... How come being happy and making your dreams come true are two different things? Even now, I still
+            don't know why...”
+            <div style="font-size: 8px;">click on a nana to see my sites or go to <a href="/sitemap/index.html">the
+                    sitemap</a></div>
+        </div>
 
-<!-- nanas -->
+        <!-- nanas -->
 
-<div id="doll-container">
-    
-    <label menu-character id="nana" class="modal-open" for="modal-resource">
-        <a><img src="/landing/images/nana.png"></a>
-    </label>
-    
-    <label menu-character id="hachi" class="modal-open" for="modal-personal">
-        <a><img src="/landing/images/hachi.png"></a>
-    </label>
-    
-</div>
+        <div id="doll-container">
 
-<!-- crosswalk -->
-    
-<div id="crosswalk">
-<div class="zebra_container">
-<div class="paso">
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>
-    <div class="zebra b"></div>
-    <div class="zebra n"></div>      
-    </div>
-</div>
-</div>
+            <label menu-character id="nana" class="modal-open" for="modal-resource">
+                <a><img src="/landing/images/nana.png"></a>
+            </label>
 
-</main>
+            <label menu-character id="hachi" class="modal-open" for="modal-personal">
+                <a><img src="/landing/images/hachi.png"></a>
+            </label>
 
-<!-- modals -->
+        </div>
 
-<!-- resource site (nana) -->
-<input class="modal-toggle" id="modal-resource" type="checkbox" />
-<div class="modal">
-    <label class="modal-close" for="modal-resource"></label>
-    <article class="popup">
-        <div class="popup-inside">
-            <div class="popup-title">about my resource site</div>
-            <div class="information-container">
-                free resources and pirated content i've found helpful in my life. most links are related to language learning (primarily thai and japanese) and gaming (hacking consoles, emulation, piracy, etc), but also knitting, cross stitch, anime and manga, site building, or whatever else catches my eye. includes links to my own backups and archives. mobile friendly.<br/><br />
-                <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/resources/index.html">>> enter <<</a></div>
+        <!-- crosswalk -->
+
+        <div id="crosswalk">
+            <div class="zebra_container">
+                <div class="paso">
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                    <div class="zebra b"></div>
+                    <div class="zebra n"></div>
+                </div>
             </div>
         </div>
-    </div>
 
-<!-- personal site (hachi) -->
-<input class="modal-toggle" id="modal-personal" type="checkbox" />
-<div class="modal">
-    <label class="modal-close" for="modal-personal"></label>
-    <article class="popup">
-        <div class="popup-inside">
-            <div class="popup-title">about my personal site</div>
+    </main>
+
+    <!-- modals -->
+
+    <!-- resource site (nana) -->
+    <input class="modal-toggle" id="modal-resource" type="checkbox" />
+    <div class="modal">
+        <label class="modal-close" for="modal-resource"></label>
+        <article class="popup">
+            <div class="popup-inside">
+                <div class="popup-title">about my resource site</div>
                 <div class="information-container">
-                    my personal page where i post about myself and my interests. requires iframe support and works best with javascript enabled. most pages are responsive, but looks best in firefox on a 1920x1080px display. some features are hidden on mobile. gifs and animations do not autoplay if the user has reduced motion enabled in their operating system.<br/><br />
-                    <div style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;"><a href="/main/index.html">>> enter <<</a></div>
+                    free resources and pirated content i've found helpful in my life. most links are related to language
+                    learning (primarily thai and japanese) and gaming (hacking consoles, emulation, piracy, etc), but
+                    also knitting, cross stitch, anime and manga, site building, or whatever else catches my eye.
+                    includes links to my own backups and archives. mobile friendly.<br /><br />
+                    <div
+                        style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;">
+                        <a href="/resources/index.html">>> enter <<</a>
+                    </div>
                 </div>
-        </div>
+            </div>
     </div>
 
-<!--- tooltips -->
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="https://unpkg.com/tippy.js@6"></script>
-<script>
-    tippy('#nana',{
-        followCursor: true,
-        touch: false,
-        animateFill: false,
-        animation: 'scale-subtle',
-        content: 'resources site',
-        placement: 'right',
-        zIndex: 999,
-        theme: 'mine'
-    } );
-    tippy('#hachi',{
-        followCursor: true,
-        touch: false,
-        animateFill: false,
-        animation: 'scale-subtle',
-        content: 'personal site',
-        placement: 'right',
-        zIndex: 999,
-        theme: 'mine'
-    } );
-</script>
+    <!-- personal site (hachi) -->
+    <input class="modal-toggle" id="modal-personal" type="checkbox" />
+    <div class="modal">
+        <label class="modal-close" for="modal-personal"></label>
+        <article class="popup">
+            <div class="popup-inside">
+                <div class="popup-title">about my personal site</div>
+                <div class="information-container">
+                    my personal page where i post about myself and my interests. requires iframe support and works best
+                    with javascript enabled. most pages are responsive, but looks best in firefox on a 1920x1080px
+                    display. some features are hidden on mobile. gifs and animations do not autoplay if the user has
+                    reduced motion enabled in their operating system.<br /><br />
+                    <div
+                        style="font-family: 'press start';font-size: 16px;text-align: center;text-transform: uppercase;letter-spacing: 2px;">
+                        <a href="/main/index.html">>> enter <<</a>
+                    </div>
+                </div>
+            </div>
+    </div>
 
-<!--- modals -->
-<script>
+    <!--- tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+        tippy('#nana', {
+            followCursor: true,
+            touch: false,
+            animateFill: false,
+            animation: 'scale-subtle',
+            content: 'resources site',
+            placement: 'right',
+            zIndex: 999,
+            theme: 'mine'
+        });
+        tippy('#hachi', {
+            followCursor: true,
+            touch: false,
+            animateFill: false,
+            animation: 'scale-subtle',
+            content: 'personal site',
+            placement: 'right',
+            zIndex: 999,
+            theme: 'mine'
+        });
+    </script>
 
-    // http://visecta.cz/
+    <!--- modals -->
+    <script>
 
-// close on esc key
-document.onkeydown = function(e) { e.keyCode === 27 && document.querySelector('.modal-toggle:checked + .modal .modal-close').click() }
+        // http://visecta.cz/
 
-// add event listener (on change) to all toggles
-Array.prototype.slice.call(document.querySelectorAll('.modal-toggle')).forEach(function(toggle) { toggle.addEventListener('change', function(event) {
-  // allow only one checked toggle
-  Array.prototype.slice.call(document.querySelectorAll('.modal-toggle:not(#' + event.target.id + ')')).forEach(function(diff) { diff.checked = false })
-  // when modal is opened, add class to the body
-  document.body.className = event.target.checked ? 'modal-opened' : '' }) })
+        // close on esc key
+        document.onkeydown = function (e) { e.keyCode === 27 && document.querySelector('.modal-toggle:checked + .modal .modal-close').click() }
 
-</script>
+        // add event listener (on change) to all toggles
+        Array.prototype.slice.call(document.querySelectorAll('.modal-toggle')).forEach(function (toggle) {
+            toggle.addEventListener('change', function (event) {
+                // allow only one checked toggle
+                Array.prototype.slice.call(document.querySelectorAll('.modal-toggle:not(#' + event.target.id + ')')).forEach(function (diff) { diff.checked = false })
+                // when modal is opened, add class to the body
+                document.body.className = event.target.checked ? 'modal-opened' : ''
+            })
+        })
+
+    </script>
 
 </body>
 

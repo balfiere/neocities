@@ -36,11 +36,15 @@ pictures.forEach((picture, i) => {
 })
 
 // close modal on esc key
-document.onkeydown = function(e) { e.keyCode === 27 && document.querySelector('.modal-toggle:checked + .modal .modal-close').click() }
+document.onkeydown = function(event) { 
+  if (event.key === "Escape" && document.querySelector('.modal-toggle:checked ~ .modal .modal-close')) {
+    document.querySelector('.modal-toggle:checked ~ .modal .modal-close').click()
+  }
+}
 
 // add event listener (on change) to all toggles
-Array.prototype.slice.call(document.querySelectorAll('.modal-toggle')).forEach(function(toggle) { toggle.addEventListener('change', function(event) {
+// Array.prototype.slice.call(document.querySelectorAll('.modal-toggle')).forEach(function(toggle) { toggle.addEventListener('change', function(event) {
   // allow only one checked toggle
-  Array.prototype.slice.call(document.querySelectorAll('.modal-toggle:not(#' + event.target.id + ')')).forEach(function(diff) { diff.checked = false })
+//   Array.prototype.slice.call(document.querySelectorAll('.modal-toggle:not(#' + event.target.id + ')')).forEach(function(diff) { diff.checked = false })
   // when modal is opened, add class to the body
-  document.body.className = event.target.checked ? 'modal-opened' : '' }) })
+//   document.body.className = event.target.checked ? 'modal-opened' : '' }) })

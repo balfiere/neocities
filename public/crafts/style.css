@@ -176,11 +176,6 @@ li:before {
 
 /*----- modal -----*/
 
-/* don't select main content text when modal is opened */
-.modal-opened main {
-  user-select: none;
-}
-
 /* make toggle invisible */
 .modal-toggle {
   height: 0;
@@ -194,23 +189,33 @@ li:before {
 
 /* modal */
 .modal {
-  bottom: 0;
-  left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: -9999;
+  /* display: none; */
+  /* overflow: hidden; */
+  /* width: 0;
+  height: 0; */
+  z-index: 2;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  padding: 2rem;
-  transition: opacity .3s ease, z-index 0s ease .3s;
+  padding: 1rem;
+  transition: opacity .3s ease;
 }
 
 /* modal is opened */
-.modal-toggle:checked + .modal {
-  z-index: 9999;
+.modal-toggle:checked ~ .modal {
+  /* z-index: 1; */
+  opacity: 1;
+  pointer-events: all;
+  transition: all .3s ease;
+  user-select: all;
 }
 
 /* close on click on the overlay */
@@ -221,7 +226,6 @@ li:before {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: -1;
 }
 
 /* modal background is solved this way because of the overscroll */
@@ -237,26 +241,14 @@ body::before {
   z-index: -9999;
 }
 
-.modal-opened::before {
-  opacity: 1;
-  transition: none;
-}
-
-/* change main content when modal is opened */
-.modal-opened main {
-  /* opacity: 0.5; */
-  filter: blur(5px);
-  transition: 0.4s ease;
-}
-
 /* animation */
 @keyframes open {
   0% {
     transform: scale(.8);
   }
 
-  99% {
-    transform: scale(1);
+  80% {
+    transform: scale(1.01);
   }
 
   100% {
@@ -264,13 +256,8 @@ body::before {
   }
 }
 
-.modal-toggle:checked + .modal {
-  opacity: 1;
-  transition: all .3s;
-}
-
-.modal-toggle:checked + .modal .popup {
-  animation: open .3s ease-out;
+.modal-toggle:checked ~ .modal .popup {
+  animation: open .5s ease-out;
 }
 
 /*----- modal styling -----*/
@@ -278,14 +265,13 @@ body::before {
 .popup {
     width: 95dvw;
     position:fixed;
-    z-index:10000;
     overflow-y:scroll;
     max-width:68rem;
     max-height:90svh;
     padding:1em;
     background-color:white;
     box-sizing: border-box;
-	box-shadow: 8px 8px 0 rgba(253, 166, 166, 0.376);
+    box-shadow: 8px 8px 0 rgba(253, 166, 166, 0.376);
     border-radius: 0 0 125px 3px/3px 85px 5px 55px;
     border: 4px solid #37353f;
 }
@@ -337,11 +323,13 @@ body::before {
       overflow-y: auto;
     }
 
-    .popup {
-        max-height:80svh;
-    }
+    /* give some more space for mobile users to close the modal */
 
     .modal {
         align-items:start;
+    }
+
+    .popup {
+        max-height:85svh;
     }
 }
