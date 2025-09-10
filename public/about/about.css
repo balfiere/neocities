@@ -596,9 +596,9 @@
   overflow-y: scroll;
  }
 
- /* container for favorites */
+ /* container for lists */
 
- #favorites {
+ #lists {
   display: grid;
   grid-template-columns: 1fr 0;
   grid-template-rows: repeat(2, auto);
@@ -607,13 +607,13 @@
   position: relative;
 }
   
- #favorites > .div1 { grid-area: 1 / 1 / 2 / 2; }
- #favorites > .div2 { grid-area: 2 / 1 / 3 / 2; }
- #favorites > .div3 { grid-area: 1 / 2 / 3 / 3; }
+ #lists > .div1 { grid-area: 1 / 1 / 2 / 2; }
+ #lists > .div2 { grid-area: 2 / 1 / 3 / 2; }
+ #lists > .div3 { grid-area: 1 / 2 / 3 / 3; }
 
- /* favorites */
+ /* lists */
 
-.favoritesContainer{
+.listsContainer{
   width: 100%;
   border-radius: 12px;
 }
@@ -651,6 +651,7 @@
 }
 
 #general:checked ~ .list label.general,
+#uses:checked ~ .list label.uses,
 #games:checked ~ .list label.games,
 #other:checked ~ .list label.other,
 #characters:checked ~ .list label.characters{
@@ -671,16 +672,20 @@
   top: 0;
 }
 
-#games:checked ~ .list .slider{
+#uses:checked ~ .list .slider{
   top: 60px;
 }
 
-#other:checked ~ .list .slider{
+#games:checked ~ .list .slider{
   top: 120px;
 }
 
-#characters:checked ~ .list .slider{
+#other:checked ~ .list .slider{
   top: 180px;
+}
+
+#characters:checked ~ .list .slider{
+  top: 240px;
 }
 
 .content .text-content{
@@ -699,31 +704,49 @@
 }
 
 #general:checked ~ .text-content .general,
+#uses:checked ~ .text-content .uses,
 #games:checked ~ .text-content .games,
 #other:checked ~ .text-content .other,
 #characters:checked ~ .text-content .characters{
   display: block;
 }
 
-.general div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  justify-content: space-evenly;
-  align-items: center;
+.general > div , .uses > div {
+  /* -moz-column-count:3;
+  -moz-column-gap: 8px;
+  -moz-column-width: 30%;
+  -webkit-column-count:3;
+  -webkit-column-gap: 8px;
+  -webkit-column-width: 30%; */
+  /* column-count: 3;
+  column-gap: 8px;
+  column-width: 30%; */
+  /* margin: 0; */
+  padding: 1em;
+  columns: 12em;
+  column-gap: 2em;
+  
   & dl {
+    
+    & div {
+    break-inside: avoid;
+  }
+  }
+
+  /* & dl {
     max-width: 50%;
   }
   @media screen and (max-width: 691px) {
     justify-content:flex-start;
+    align-items: flex-start;
+    height: max-content;
     & dl {
       max-width: 100%;
     }
-  }
+  } */
 }
 
+#uses:checked ~ .text-content .general,
 #games:checked ~ .text-content .general,
 #other:checked ~ .text-content .general,
 #characters:checked ~ .text-content .general{
@@ -734,7 +757,7 @@
   color: #43d0ff;
 }
 
-/* image gallery for favorites */
+/* image gallery for lists */
 
 .gallery-columns {
   width: 100%;
@@ -824,14 +847,14 @@
 
  /* footer */
 
- #favorites .div2 {
+ #lists .div2 {
   margin-bottom: 32px;
   padding: 0.5em 1em;
  }
 
  /* nemissa standing */
 
- #favorites .div3 {
+ #lists .div3 {
   font-size: 0;
  }
 
@@ -913,7 +936,7 @@
     height: auto;
   }
 
-  /* favorites */
+  /* lists */
 
   .content .list label, .content .list a{
     height: 45px;
@@ -925,17 +948,21 @@
   .content .slider {
     height: 45px;
   }
-
-  #games:checked ~ .list .slider{
+  
+  #uses:checked ~ .list .slider{
     top: 45px;
   }
-  
-  #other:checked ~ .list .slider{
+
+  #games:checked ~ .list .slider{
     top: 90px;
   }
   
-  #characters:checked ~ .list .slider{
+  #other:checked ~ .list .slider{
     top: 135px;
+  }
+  
+  #characters:checked ~ .list .slider{
+    top: 180px;
   }
 
   .nemissastanding {
@@ -980,24 +1007,45 @@
     max-height: 50dvh;
   }
 
-  /* favorites */
+  /* lists */
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
 
   .content .list{
-    flex: 0 0 12%;
+    /* flex: 0 0 12%; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 1 min-content;
+    position: relative;
+    justify-content: center;
   }
 
   .content .list label, .content .list a{
     height: 30px;
     line-height: 30px;
-    font-size: 12px;
-    padding-left: 5px;
+    font-size: 16px;
+    padding: 0 10px;
+    /* padding-left: 5px; */
   }
 
   .content .slider {
-    height: 30px;
+    /* height: 30px; */
+    display: none;
   }
 
-  #games:checked ~ .list .slider{
+  #general:checked ~ .list label.general,
+#uses:checked ~ .list label.uses,
+#games:checked ~ .list label.games,
+#other:checked ~ .list label.other,
+#characters:checked ~ .list label.characters{
+  color: #22272C;
+  background: #43d0ffc0;
+}
+
+  /* #games:checked ~ .list .slider{
     top: 30px;
   }
   
@@ -1007,5 +1055,5 @@
   
   #characters:checked ~ .list .slider{
     top: 90px;
-  }
+  } */
 }
