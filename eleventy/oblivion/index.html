@@ -8,12 +8,12 @@
 </head>
 <body>
 
-{{content | safe}}
+{{content}}
 
 {%- for mod in collections['mod review'] -%}
 <details>
     <summary>{{ mod.data.title }}</summary>
-    {{ mod.content | safe }}
+    {{ mod.content }}
 </details>
 {%- endfor -%}
 

@@ -2,7 +2,7 @@ const markdownIt = require('markdown-it');
 // const markdownItAnchor = require('markdown-it-anchor')
 // const pluginTOC = require('eleventy-plugin-toc')
 const markdownItAttrs = require('markdown-it-attrs');
-const markdownItContainer = require('markdown-it-container');
+// const markdownItContainer = require('markdown-it-container');
 
 const mdOptions = {
     html: true,
@@ -17,21 +17,21 @@ const mdAttr = {
     allowedAttributes: []  // empty array = all attributes are allowed
   }
 
-const articleCont = {
-        validate(params) {
-          return params.trim().match(/article/)
-        },
-        render(tokens, idx) {  
-          if (tokens[idx].nesting === 1) {
-            // opening tag
-            return '<article>\n';
+// const articleCont = {
+//         validate(params) {
+//           return params.trim().match(/article/)
+//         },
+//         render(tokens, idx) {  
+//           if (tokens[idx].nesting === 1) {
+//             // opening tag
+//             return '<article>\n';
   
-          } else {
-            // closing tag
-            return '</article>\n';
-          }
-        }
-      }
+//           } else {
+//             // closing tag
+//             return '</article>\n';
+//           }
+//         }
+//       }
 
 // const article = (children) => {
 //   const content = markdownIt.render(children);
@@ -43,8 +43,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.setLibrary(
     'md',
     markdownIt(mdOptions)
-    //   .use(markdownItAnchor, mdAnchorOpts)
       .use(markdownItAttrs, mdAttr)
+    //   .use(markdownItAnchor, mdAnchorOpts)
       // .use(markdownItContainer, 'article', articleCont)
       // .use(markdownItContainer, 'description')
   );
@@ -63,8 +63,8 @@ module.exports = eleventyConfig => {
 	  return markdownIt.renderInline(data);
   });
   return {
-    markdownTemplateEngine: 'njk',
-    dataTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk'
+    markdownTemplateEngine: 'liquid',
+    dataTemplateEngine: 'liquid',
+    htmlTemplateEngine: 'liquid'
   };
 }

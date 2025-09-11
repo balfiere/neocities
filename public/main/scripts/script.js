@@ -132,7 +132,7 @@ function copyText() {
 function appendCurrent(current, container) {
   if (current.length == 0) {
     const item = document.createElement('li');
-    item.textContent = "nothing!";
+    item.textContent = "nothing </3";
     container.appendChild(item);
   } else {
     current.forEach(game => {
