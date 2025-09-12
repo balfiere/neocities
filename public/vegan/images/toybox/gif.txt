@@ -1,0 +1,14 @@
+<picture><source srcSet="images/pixels/toybox/alpaca.png" media="(prefers-reduced-motion)" /><img src="images/toybox/alpaca.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow01.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow01.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow03.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow03.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow04.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow04.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow05.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow05.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow06.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow06.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow07.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow07.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow08.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow08.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow09.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow09.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow10.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow10.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow11.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow11.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow12.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow12.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow13.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow13.gif" /></picture>
+<picture><source srcSet="images/pixels/toybox/cow14.png" media="(prefers-reduced-motion)" /><img src="images/toybox/cow14.gif" /></picture>
