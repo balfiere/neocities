@@ -1,0 +1,625 @@
+{
+  "general": {
+    "drink": "thai tea",
+    "fruit": "dragon fruit",
+    "color": "lavender",
+    "animal": "koi fish",
+    "flower": "gladiolus",
+    "mushroom": "oyster",
+    "ink": "sailor shikiori fuji-sugata",
+    "perfume": "floraiku one umbrella for two",
+    "season": "autumn",
+    "game": "final fantasy xii",
+    "manga": "nana",
+    "book": "journey under the midnight sun by keigo higashino",
+    "band": "tricot"
+  },
+  "uses": {
+    "computer": "thinkpad p52",
+    "operating system": "nobara 42",
+    "window manager": "hyprland",
+    "shell": "zsh",
+    "web browser": [
+      "zen",
+      "thorium"
+    ],
+    "note taking/knowledge management": [
+      "obsidian",
+      "anytype"
+    ],
+    "editor": [
+      "vscodium",
+      "rstudio",
+      "neovim"
+    ],
+    "image editor": [
+      "gimp",
+      "aseprite",
+      "photoshop cc 2017"
+    ],
+    "video editor": "avidemux",
+    "music player": "fooyin",
+    "video player": [
+      "mpv",
+      "asbplayer"
+    ],
+    "audiobook player": "bookplayer",
+    "ereader": "kindle keyboard 3",
+    "ink": "platinum carbon black"
+  },
+  "games": [
+    [
+      "final fantasy xii",
+      "ffxii.jpg",
+      "my favorite game of all time!! amazingly rich world building and the best implementation of the atb system in the series. the world is fun to explore, there's lots of side content to do that's actually enjoyable, the english dub is phenomenal, and i loved the more subtle, politically driven story."
+    ],
+    [
+      "yakuza 7",
+      "y7.jpg",
+      "amazing narrative and cast of characters more than makes up for its less than stellar combat system. ichiban i would die for you"
+    ],
+    [
+      "persona 2: eternal punishment",
+      "p2ep.jpg",
+      "by far my favorite persona game and its not even close. my favorite cast of characters in any video game. this game + yakuza 7 made me wish there were way more jrpgs with adult main characters where adulthood was a major theme in the game"
+    ],
+    [
+      "final fantasy viii",
+      "ffviii.jpg",
+      "my very first jrpg! i related way too much to squall as a kid and this game did irreversible psychological damage to me because of it. even now i still wear a griever Necklace like the one squall has. has my favorite video game soundtrack."
+    ],
+    [
+      "the great ace attorney",
+      "tgaa.jpg",
+      "i love og aa and don't really like historical fiction so i didn't know how to feel about this game going in but kazuma and barok van zieks immediately stole my heart "
+    ],
+    [
+      "judgment",
+      "judgment.jpg",
+      "i love japanese crime fiction and i love yakuza so this game was like tailor made for me. i loved getting to see kamurocho from a civilian's perspective too."
+    ],
+    [
+      "yakuza 4",
+      "y4.jpg",
+      "my favorite yakuza game. has my favorite version of kamurocho, i loved the verticality to it and it has a vibe to it that reminds me of the ps2. i know the plot gets a lot of flak but i just loved saejima's and taniumura's personal journey in this game, especially as someone who started with 0 and had to play through three other games to finally meet saejima."
+    ],
+    [
+      "trails in the sky the 3rd",
+      "trails3rd.jpg",
+      "another game where i loved the first few games in the series so was unsure about the protagonist+setting shift, but i actually ended up loving the dungeon crawler, townless structure of this game. also KEVIN GRAHAM"
+    ],
+    [
+      "jack jeanne",
+      "jackjeanne.jpg",
+      "i cried A LOT playing this game, it's not even sad i was just so touched by everyone's relationship with each other and how they all learned to rely on one another. i loved the true ending, even if it was a massive pain in the ass to unlock."
+    ],
+    [
+      "devil summoner: soul hackers",
+      "soulhackers.jpg",
+      "vibes of this game are unmatched and video game design peaked with dual screen megaten games. play this game if you love the late 90s cyber aesthetic."
+    ],
+    [
+      "final fantasy xv",
+      "ffxv.jpg",
+      "i know everyone hates this game but the cast of characters and just being able to chill and go camping makes the ending really hit for me. also i think the combat system is more fun than most old school final fantasy's but i am an atb hater. so."
+    ],
+    [
+      "the legend of heroes: Trails from zero",
+      "trailszero.jpg",
+      "i was sooooo hesitant to move on from the trails in the sky cast but damn if the SSS didn't deliver. also i think the hub style layout with crossbell at the center helped to establish a strong connection to the world earlier on than in the sky trilogy."
+    ],
+    [
+      "kingdom hearts 358/2 days",
+      "kh3582.jpg",
+      "i actually started kingdom hearts as a kid with a copy of kingdom hearts 2 that i checked out at the library randomly one day, and i think i've had a bit of a roxas bias because of it ever since. so playing this game and seeing his backstory really destroyed me when i was 12 lol"
+    ],
+    [
+      "yakuza 0",
+      "y0v2.jpg",
+      "if i could erase my memories of any one game to replay it anew it would hands down be this one. i started playing the series with this game, going in without knowing anything at all and was absolutely blindsided by how much i fell in love with the setting and the plot. best $5 i have ever spent"
+    ]
+  ],
+  "other": [
+    [
+      "perfect blue",
+      "perfectblue.webp",
+      "satoshi kon"
+    ],
+    [
+      "girl from nowhere",
+      "dekmai.jpg",
+      "SOUR Bangkok"
+    ],
+    [
+      "cowboy bebop",
+      "cowboybebop.jpg",
+      "shinichiro watanabe"
+    ],
+    [
+      "tricot",
+      "tricot.jpg",
+      ""
+    ],
+    [
+      "princess mononoke",
+      "princessmononoke.jpg",
+      "studio ghibli"
+    ],
+    [
+      "nana",
+      "nana.jpg",
+      "ai yazawa"
+    ],
+    [
+      "noragami",
+      "noragami.jpg",
+      "adachitoka"
+    ],
+    [
+      "tomie",
+      "tomie.jpg",
+      "junji ito"
+    ],
+    [
+      "happy old year",
+      "happyoldyear.jpg",
+      "nawapol thamrongrattanarit"
+    ],
+    [
+      "revolutionary girl utena",
+      "rgu.jpg",
+      "kunihiko ikuhara"
+    ],
+    [
+      "chinese football",
+      "chinesefootball.jpg",
+      ""
+    ],
+    [
+      "how to make millions before grandma dies",
+      "lahnma.jpg",
+      "pat boonnitipat"
+    ]
+  ],
+  "characters": [
+    [
+      "dojima daigo",
+      "daigo.jpg",
+      "yakuza series"
+    ],
+    [
+      "fran",
+      "fran.jpg",
+      "final fantasy xii"
+    ],
+    [
+      "tio plato",
+      "tioplato.webp",
+      "trails series"
+    ],
+    [
+      "nana + haichi",
+      "nanahaichi.jpg",
+      "nana"
+    ],
+    [
+      "baofu",
+      "baofu.webp",
+      "persona 2"
+    ],
+    [
+      "yoru + asa mitaka",
+      "yoruasa.jpg",
+      "chainsaw man"
+    ],
+    [
+      "kevin graham",
+      "kevingraham.webp",
+      "trails series"
+    ],
+    [
+      "sawamura haruka",
+      "haruka.jpg",
+      "yakuza series"
+    ],
+    [
+      "orimaki suzu",
+      "suzu.jpg",
+      "jack jeanne"
+    ],
+    [
+      "nanno",
+      "nanno.jpg",
+      "girl from nowhere"
+    ],
+    [
+      "nishikiyama akira",
+      "nishiki.jpg",
+      "yakuza series"
+    ],
+    [
+      "nemissa",
+      "nemissa.jpg",
+      "devil summoner: soul hackers"
+    ],
+    [
+      "randy orlando",
+      "randyorlando.webp",
+      "trails series"
+    ],
+    [
+      "tomie",
+      "tomie.jpg",
+      "tomie"
+    ],
+    [
+      "tanimura masayoshi",
+      "tanimura.jpg",
+      "yakuza 4"
+    ],
+    [
+      "estelle bright",
+      "estellebright.webp",
+      "trails series"
+    ]
+  ],
+  "blinkies": [
+    "cybercriminal.gif",
+    "curves.gif",
+    "reality.gif",
+    "ilovecomputercrafts.webp",
+    "nightblogger.gif",
+    "insane.gif",
+    "ilovedata.gif",
+    "3ds.gif",
+    "anotherinternetloser.gif",
+    "cardcaptor.gif",
+    "dreamwithme.gif",
+    "sailormoon.gif",
+    "weirdowomen.gif",
+    "getoveryourself.gif",
+    "rat.gif",
+    "womanincontrol.gif",
+    "stopinternetcensorship.gif",
+    "thriftstores.gif",
+    "dontlikeit.gif",
+    "dontlabelme.gif",
+    "installublockorigin.webp",
+    "makingtea.gif",
+    "lovexstitch.gif",
+    "diebythesword.gif",
+    "iloveplants.gif",
+    "cleanhouse.gif",
+    "imtryingmyhardest.gif",
+    "rightclickviewsource.gif",
+    "futureisfemale.webp",
+    "igazeatstars.gif",
+    "yourbuttismine.gif",
+    "printerinkblinkies.gif",
+    "alifewhatsthat.gif",
+    "caffeinedreams-fpp.gif",
+    "goldfish.gif",
+    "cannotbekilled.gif",
+    "dollarstorejunkie.gif",
+    "gamer.gif",
+    "cleverlydisguised.gif",
+    "blinkie-my-website-sucks.gif",
+    "alonebutnotlonely.gif",
+    "ifeelviolated.gif",
+    "dablinkie.gif",
+    "fakeboyfriend.gif",
+    "clicktoexplodeinstantly.gif",
+    "savetheearth.gif",
+    "deletetiktok.webp",
+    "pornisantiwoman.gif",
+    "dontrushme.gif",
+    "hugacow.gif",
+    "mymelody.webp",
+    "blogsweetblog.gif",
+    "vegandemon.gif",
+    "authenticself.webp",
+    "dumbasswork.gif",
+    "BLINKIE-sometimesIwannascream.gif",
+    "high.gif",
+    "photoshop.gif",
+    "manipulatedata.gif",
+    "misandrist.gif",
+    "justsaymoo.gif",
+    "poetry.gif",
+    "bekindtoanimals.gif",
+    "cringe.gif",
+    "evilwomen.gif",
+    "lazy.gif",
+    "dokidoki.gif",
+    "idc.gif",
+    "psgirl.gif",
+    "knit.gif",
+    "iemulategames.gif",
+    "ineedpatience.gif",
+    "stopanimalcruelty.gif",
+    "bi.gif",
+    "tookawaiitolive.gif",
+    "lovewillfindaway.gif",
+    "bed.gif",
+    "neko_go.gif"
+  ],
+  "stamps": [
+    [
+      "24hrcinderella.gif",
+      1,
+      "https://www.deviantart.com/moonxviii/art/24-Hour-Cinderella-773053869"
+    ],
+    [
+      "hikikomori.png",
+      0
+    ],
+    [
+      "idratherbeplayingvideogames.png",
+      0,
+      "https://www.deviantart.com/sadforest/art/Pink-Video-Game-Stamp-691753532"
+    ],
+    [
+      "smeating.gif",
+      1
+    ],
+    [
+      "power.png",
+      0
+    ],
+    [
+      "wakeupkeepdreaming.gif",
+      1,
+      "https://www.deviantart.com/justyoungheroes/art/you-decide-678316882"
+    ],
+    [
+      "waves.gif",
+      1,
+      "https://www.deviantart.com/thecandycoating/art/Roaring-Waters-stamp-663790714"
+    ],
+    [
+      "dontbesohardonurself.png",
+      0,
+      "https://www.deviantart.com/sjwmiku/art/Dont-Be-So-Hard-On-Yourself-691390252"
+    ],
+    [
+      "tomie.png",
+      0
+    ],
+    [
+      "nintendods.gif",
+      1
+    ],
+    [
+      "ccs.gif",
+      1,
+      "https://www.deviantart.com/cutebunny666/art/040-656752364"
+    ],
+    [
+      "water.gif",
+      1,
+      "https://www.deviantart.com/laraleel/art/Water-Stamp-483695767"
+    ],
+    [
+      "femalenotfeminine.png",
+      0,
+      "https://www.deviantart.com/foxlee/art/Stamp-Not-Feminine-53457823"
+    ],
+    [
+      "areyouokay.png",
+      0,
+      "https://www.deviantart.com/kouenli/art/Are-you-okay-Stamp-697587684"
+    ],
+    [
+      "itcouldbeworse.png",
+      0
+    ],
+    [
+      "ngaw.png",
+      0,
+      "https://www.deviantart.com/ufocatchers/art/026-682709854"
+    ],
+    [
+      "persona2.gif",
+      1,
+      "https://www.deviantart.com/stamp-attorney/art/Persona-2-Stamp-Eikichi-Mishina-Maya-Amano-Yukino-904257430"
+    ],
+    [
+      "computer.gif",
+      1,
+      "https://www.deviantart.com/puniplush/art/Aesthetic-Arizona-Tea-Stamp-644935375"
+    ],
+    [
+      "nevertoosmall.gif",
+      1,
+      "https://www.deviantart.com/southrobin/art/Stamp-Never-too-small-414971643"
+    ],
+    [
+      "wednesdaysacrifices.gif",
+      0,
+      "https://www.deviantart.com/sugary-stardust/art/Sacrificial-Wednesdays-Stamp-520683442"
+    ],
+    [
+      "certifiedcringe.png",
+      0
+    ],
+    [
+      "wii.gif",
+      0,
+      "https://www.deviantart.com/pillze69/art/Wii-Stamp-43605641"
+    ],
+    [
+      "magicalgirlintraining.gif",
+      1,
+      "https://www.deviantart.com/acquacchi/art/Magical-Girl-in-training-796331382"
+    ],
+    [
+      "kiryu.gif",
+      1,
+      "https://www.deviantart.com/moonxviii/art/Kazuma-Kiryu-I-774043686"
+    ],
+    [
+      "gun.gif",
+      1,
+      "https://www.deviantart.com/cutebunny666/art/059-657135307"
+    ],
+    [
+      "ipissglitter.png",
+      0,
+      "https://www.deviantart.com/nyan-berri/art/Glitter-Stamp-801970359"
+    ],
+    [
+      "showmehappiness.gif",
+      1,
+      "https://www.deviantart.com/profiledecor/art/F2U-Show-Me-Happiness-Stamp-720528789"
+    ],
+    [
+      "sakura.gif",
+      1,
+      "https://www.deviantart.com/thecandycoating/art/Vintage-Sakura-Stamp-659690758"
+    ],
+    [
+      "ownwebsitestamp.png",
+      0
+    ],
+    [
+      "vulva.png",
+      0,
+      "https://www.deviantart.com/dametora/art/say-NO-to-labiaplasty-215844293"
+    ],
+    [
+      "rain.gif",
+      1
+    ],
+    [
+      "yato.gif",
+      1
+    ],
+    [
+      "totallyrad.gif",
+      1
+    ],
+    [
+      "sunset.gif",
+      1
+    ],
+    [
+      "isuckatvideogames.gif",
+      1
+    ],
+    [
+      "ffstamp.gif",
+      0
+    ],
+    [
+      "skull.gif",
+      1,
+      "https://www.deviantart.com/thecandycoating/art/Rainbow-Skull-Stamp-636611381"
+    ],
+    [
+      "twinkle.gif",
+      1
+    ],
+    [
+      "handmade.png",
+      0,
+      "https://www.deviantart.com/firstfear/art/Stamp-Heart-Handmade-314122752"
+    ],
+    [
+      "take-off-your-corset.png",
+      0
+    ],
+    [
+      "wotw3.gif",
+      1
+    ],
+    [
+      "internet.gif",
+      1,
+      "https://www.deviantart.com/thecandycoating/art/internet-surfing-Stamp-621536293"
+    ],
+    [
+      "vagina.gif",
+      1,
+      "https://www.deviantart.com/sugary-stardust/art/Vagina-Is-Feminist-750315915"
+    ],
+    [
+      "antiddlg.png",
+      0
+    ],
+    [
+      "konata.gif",
+      1,
+      "https://www.deviantart.com/chrno-chan/art/Konata-Poke-81291276"
+    ],
+    [
+      "okami.gif",
+      1,
+      "https://www.deviantart.com/stamp221/art/OP-Amaterasu-Stamp-253291456"
+    ],
+    [
+      "flower.gif",
+      1
+    ],
+    [
+      "ds.png",
+      0,
+      "https://web.archive.org/web/20150905222357/http://rrrai.deviantart.com/art/i-love-my-DS-stamp-296598924"
+    ],
+    [
+      "tanimura.gif",
+      1,
+      "https://www.deviantart.com/marylander97/art/Masayoshi-Tanimura-from-Yakuza-4-stamp-request-784722961"
+    ],
+    [
+      "pastelnight.gif",
+      1
+    ],
+    [
+      "uglyman.png",
+      0
+    ],
+    [
+      "toxicyuri.png",
+      0
+    ],
+    [
+      "savemotherearthgovegan.gif",
+      1,
+      "https://www.deviantart.com/walaoeeee/art/vegan-Earth-Stamp-537195006"
+    ],
+    [
+      "ps1.gif",
+      1,
+      "https://www.deviantart.com/cutebunny666/art/039-656752272"
+    ],
+    [
+      "clouds.gif",
+      1,
+      "https://www.deviantart.com/profiledecor/art/F2U-Pink-Clouds-Stamp-720531765"
+    ],
+    [
+      "smoking.gif",
+      1,
+      "https://www.deviantart.com/thecandycoating/art/Smoke-Clouds-stamp-649054965"
+    ],
+    [
+      "adachi.png",
+      0,
+      "https://www.deviantart.com/8bitbadguy/art/Bitches-and-Whores-125418329"
+    ],
+    [
+      "sailormoon.png",
+      0
+    ],
+    [
+      "ps2.jpg",
+      0,
+      "https://www.deviantart.com/darthspikeinator/art/PS2-Stamp-74180734"
+    ],
+    [
+      "dreamer.gif",
+      1,
+      "https://www.deviantart.com/cutesight/art/Stamp-Dreamer-492924549"
+    ]
+  ]
+}
