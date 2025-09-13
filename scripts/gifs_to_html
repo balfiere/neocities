@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# get the current folder name
+current_folder=$(basename "$PWD")
+echo "processing gifs in $current_folder"
+
+# remove old gif.txt
+if [ -f gif.txt ]; then
+  rm gif.txt
+fi
+
+# loop through all gif files in the current directory
+for file in *.gif; do
+
+  # get the file name
+  file_name="${file##*/}"
+
+  # get the file name without the extension
+  file_name_without_extension="${file_name%.*}"
+
+  # if there isn't a png with the same name, convert the gif
+  if [ ! -f "$file_name_without_extension.png" ]; then
+    mogrify -format png "$file"[0]
+  fi
+
+  # print in html format
+  echo "<picture><source srcSet=\"images/pixels/${current_folder}/$file_name_without_extension.png\" media=\"(prefers-reduced-motion)\" /><img src=\"images/${current_folder}/$file_name\" /></picture>" >> gif.txt
+
+  # copy to clipboard
+  wl-copy < gif.txt
+done

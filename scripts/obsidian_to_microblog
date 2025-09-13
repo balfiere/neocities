@@ -1,0 +1,80 @@
+#!/bin/zsh
+
+date="${1:-$(date +%Y-%m-%d)}" # set the date to the first argument. if not provided, use today's date in yyyy-mm-dd format
+input="~/Documents/Obsidian/040 projects/neocities/microblog/$date.md"
+
+microblog="~/Documents/neocities/public/microblog/content.txt"
+microblogTemplate="~/.pandoc/templates/microblog.html"
+
+atom="~/Documents/neocities/public/microblog/atom.xml"
+atomTemplate="~/.pandoc/templates/atom.html"
+title=$(date --date="$date" "+%A, %B %e %Y" | tr "[:upper:]" "[:lower:]")
+lastPost=$(sed -n '16p' "$atom" | sed 's/.*#\([0-9]\+\)".*/\1/')
+newPost=$(expr $lastPost + 1)
+
+# if the input file does not exist, see if there is a file for yesterday
+if [ ! -f "$input" ]; then
+    input="~/Documents/Obsidian/040 projects/neocities/microblog/$(date --date="yesterday" +%Y-%m-%d).md"
+
+    # if there is no file for yesterday, exit
+    if [ ! -f "$input" ]; then
+        echo "no input file found"
+        exit 1
+    fi
+
+fi
+
+# function to check if the output file already contains the new post, and ask the user to remove it if it does
+remove_old_post() {
+    out="$2"
+    compare="$3"
+    compareLine="$4"
+    linesToRemove="$5"
+
+    # if the output file contains the date of the new post
+    if [[ $(sed -n "$compareLine" "$out" | grep "$compare") ]]; then
+        echo "post already added to $1. remove old entry? (y/n)"
+        read -r
+        
+        # if the user wants to remove the old entry
+        if [ "$REPLY" = "y" ]; then
+            echo "removing old $1 post"
+
+            # remove number of lines specified by linesToRemove
+            tail -n "$linesToRemove" "$out" > "$out".tmp
+            
+            # while the first line is not empty, remove the first line
+            perl -0777 -i -pe '
+            @lines = split /\n/, $_, -1;
+            while (@lines > 1 && $lines[0] =~ /\S/) {
+                shift @lines;
+            }
+            $_ = join "\n", @lines;
+            ' "$out".tmp
+
+            # move the temporary file to the original file
+            mv "$out".tmp "$out"
+        else
+            echo "keeping old entry"
+
+            # if the output file is the atom feed, we still need to remove the header
+            if [ "$1" = "atom" ]; then
+                # remove the first 12 lines of out
+                tail -n +13 "$out" > "$out".tmp
+                mv "$out".tmp "$out"
+            fi
+        fi
+    fi
+}
+
+remove_old_post "microblog" "$microblog" "$date" "2p" "+2"
+
+# convert markdown to html, removing microblog/ prefix from tags and adding target="_blank" to links
+cat "$input" | sed 's/microblog\///g' | pandoc --template="$microblogTemplate" --wrap=none | sed 's/a href/a target="_blank" href/g' | cat - "$microblog" | sponge "$microblog"
+
+remove_old_post "atom" "$atom" "$title" "15p" "+21"
+
+echo "new post number: $newPost"
+
+# update the atom feed
+pandoc --template="$atomTemplate" -V "title:$title" --wrap=none "$input" | sed 's/a href/a target="_blank" href/g' | sed "16,17s/#/#$newPost/g" | cat - "$atom" | sponge "$atom"
