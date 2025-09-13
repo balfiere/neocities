@@ -39,5 +39,7 @@ while read -r line; do
     fi
 done < "/tmp/stamps.txt"
 
+# to do: add the missing stamps to aboutJson.stamps array
+
 # remove temporary stamp list
 rm "/tmp/stamps.txt"
