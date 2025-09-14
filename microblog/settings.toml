@@ -1,0 +1,74 @@
+latestpages="result.html"
+# latestpages=["meta.json", "result.html"]
+
+[page]
+postsperpage = 6
+relative_css=["./timeline.min.css"]
+# this would be "latest.html" in earlier versions
+# I.E user.domain.tld/microblog/tags/tagname/latest.html
+# naming it as index enables paths like so
+# user.domain.tld/microblog/tags/tagname
+nonpaginated_page="index.html"
+
+[post]
+accepted_images= ["jpg", "JPG", "png", "PNG", "gif", "GIF"]
+# true = add <p></p> tags to each line.
+tag_paragraphs=false
+# apply <p> tags even if a line contains the following
+inline_tags = ["i", "em", "b", "strong","u", "s", "a", "span"]
+# adds <br> or user defined string between each line
+# line_separator="<br>"
+date_format="%A, %B %d %Y"
+format="""
+<article id="{__num__}">
+    <div class="post-header">
+        <time>{__timestamp__}</time>
+        <div class="post-number"><a href=#{__num__}>#{__num__}</a></div>
+    </div>
+    <div class="message">{__msg__}</div>
+    {__btn__}
+</article>
+"""
+
+[post.buttons]
+# reply = "mailto:user@host.tld"
+# test  = "https://toml.io/en/v1.0.0#array-of-tables"
+# interact = "https://yoursite.tld/cgi?postid="
+
+[post.gallery]
+path_to_thumb="./thumbs"
+path_to_fullsize="./images"
+
+[webring]
+enabled=false
+file_output="meta.json"
+
+[webring.profile]
+username="Your name here"
+url="https://yourdomain.tld/microblog/"
+avatar="https://yourdomain.tld/microblog/images/avatar.jpg"
+short-bio= "Your self-description. Anything longer than 150 characters is truncated."
+
+[webring.following]
+list= ["https://likho.neocities.org/microblog/meta.json"]
+date_format = "%Y %b %d"
+format="""
+<div class="postcell">
+    <img src="{__avatar__}" alt="Avatar" class="avatar">
+    <span class="wrapper"">
+        <div class="handle">
+            <a href="{__url__}">{__handle__}</a>
+        </div>
+        <div class="last-updated">Last Update: {__lastupdated__}</div>
+        <span class="post-count">Posts: {__post_count__}</span>
+    </span>
+    <p class="short-bio">{__shortbio__}</p>
+</div>
+"""
+
+# internally link avatars - avoids hotlinks
+[webring.following.internal-avatars]
+enabled=false
+path_to_avatars="/microblog/avatars" # link rendered on page
+local_path_to_avatars="./avatars" # destination folder on pc
+
