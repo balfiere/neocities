@@ -290,7 +290,7 @@ em {
 	background: linear-gradient(transparent 90%, var(--italic1) 0%);
 }
 
-b {
+b, strong {
 	color: var(--bold);
 }
 

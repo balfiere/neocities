@@ -1,20 +1,20 @@
-#!/bin/zsh
+#!/bin/bash
 
 date="${1:-$(date +%Y-%m-%d)}" # set the date to the first argument. if not provided, use today's date in yyyy-mm-dd format
-input="~/Documents/Obsidian/040 projects/neocities/microblog/$date.md"
+input="$HOME/Documents/Obsidian/040 projects/neocities/microblog/$date.md"
 
-microblog="~/Documents/neocities/public/microblog/content.txt"
-microblogTemplate="~/.pandoc/templates/microblog.html"
+microblog="$HOME/Documents/neocities/public/microblog/content.txt"
+microblogTemplate="$HOME/.pandoc/templates/microblog.html"
 
-atom="~/Documents/neocities/public/microblog/atom.xml"
-atomTemplate="~/.pandoc/templates/atom.html"
+atom="$HOME/Documents/neocities/public/microblog/atom.xml"
+atomTemplate="$HOME/.pandoc/templates/atom.html"
 title=$(date --date="$date" "+%A, %B %e %Y" | tr "[:upper:]" "[:lower:]")
 lastPost=$(sed -n '16p' "$atom" | sed 's/.*#\([0-9]\+\)".*/\1/')
 newPost=$(expr $lastPost + 1)
 
 # if the input file does not exist, see if there is a file for yesterday
 if [ ! -f "$input" ]; then
-    input="~/Documents/Obsidian/040 projects/neocities/microblog/$(date --date="yesterday" +%Y-%m-%d).md"
+    input="$HOME/Documents/Obsidian/040 projects/neocities/microblog/$(date --date="yesterday" +%Y-%m-%d).md"
 
     # if there is no file for yesterday, exit
     if [ ! -f "$input" ]; then
@@ -46,7 +46,7 @@ remove_old_post() {
             # while the first line is not empty, remove the first line
             perl -0777 -i -pe '
             @lines = split /\n/, $_, -1;
-            while (@lines > 1 && $lines[0] =~ /\S/) {
+            while (@lines > 1 && $lines[0] =$HOME /\S/) {
                 shift @lines;
             }
             $_ = join "\n", @lines;

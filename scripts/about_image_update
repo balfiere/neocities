@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # set the working directory to blinkies image folder
-cd "~/Documents/neocities/public/about/images/blinkies"
+cd "$HOME/Documents/neocities/public/about/images/blinkies/"
 
 # get the json file with the names of the blinkies
-aboutJson="~/Documents/neocities/eleventy/about/about.json"
+aboutJson="$HOME/Documents/neocities/eleventy/about/about.json"
 
 # loop through the animated blinkies
 shopt -s nocaseglob
@@ -25,7 +25,7 @@ done
 jq --argjson arr "$(find . -maxdepth 1 -type f ! -iname '*.png' -printf '%f\n' | jq -R . | jq -s .)" '.blinkies = $arr' "$aboutJson" > "$aboutJson.tmp" && mv "$aboutJson.tmp" "$aboutJson"
 
 # set the working directory to stamps image folder
-cd "~/Documents/neocities/public/about/images/stamps"
+cd "$HOME/Documents/neocities/public/about/images/stamps"
 
 # get the names of the stamps without the extension
 find . -maxdepth 1 -type f -printf '%f\n' | sed 's/\(.*\)\..*/\1/g' | sort > /tmp/stamps.txt

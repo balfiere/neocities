@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# build eleventy folder and copy to relevant public folder
+eleventy_to_neocities() {
+    page=$1
+    index=$2
+    cd $HOME/Documents/neocities/eleventy
+    npx @11ty/eleventy --input=$page --output=_site/$page
+    # if index, copy index.html, else copy everything
+    if [ $index == "true" ]; then
+        cp -a _site/$page/index.html ../public/$page/
+    else
+        cp -a _site/$page/. ../public/$page
+    fi
+}
+
+
+# case based on first argument
+case "$1" in
+    "about")
+        echo "building about page"
+        $HOME/Documents/neocities/scripts/about_image_update
+        eleventy_to_neocities "about" "true"
+        ;;
+    "articles")
+        echo "building articles page"
+        eleventy_to_neocities "articles" "true"
+        ;;
+    "changelog")
+        echo "building changelog"
+        eleventy_to_neocities "changelog" "true"
+        ;;
+    "crafts")
+        echo "building craft page"
+        eleventy_to_neocities "crafts" "true"
+        ;;
+    "language")
+        echo "building language page"
+        eleventy_to_neocities "language" "true"
+        ;;
+    "resources")
+        echo "building resources site"
+        eleventy_to_neocities "resources" "false"
+        ;;
+    "notebook")
+        echo "building notebook"
+        cd $HOME/Documents/neocities/quartz/
+        npx quartz build
+        cp -a public/. ../public/notes/
+        ;;
+    "microblog")
+        # ask user if they want to build today's post from obsidian
+        echo "do you want to build today's post from obsidian? (y/n)"
+        read answer
+        if [ $answer == "y" ]; then
+            echo "building $(date '+%Y-%m-%d').md"
+            $HOME/Documents/neocities/scripts/obsidian_to_microblog
+        fi
+        echo "do you want to build the microblog? (y/n)"
+        read answer
+        if [ $answer == "y" ]; then
+            echo "running microblog.py"
+            cd $HOME/Documents/neocities/microblog
+            pipenv run python microblog.py ./template.tpl ./content.txt > $HOME/Documents/neocities/public/microblog/index.html
+            mv tags ../public/microblog
+            mv pages ../public/microblog
+        fi
+        ;;
+    *)
+        echo "not a page"
+        ;;
+esac
+
+# ask user if they want to serve site
+echo "do you want to preview the site? (y/n)"
+read answer
+if [ $answer == "y" ]; then
+    npx http-server $HOME/Documents/neocities/public
+fi
