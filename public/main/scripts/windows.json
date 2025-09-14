@@ -1,55 +1,59 @@
 {
-  "playing": [
-    "oblivion",
-    "xenogears",
-    "ayakashi gohan",
-    "re:fragment ~absolute ambition~"
-  ],
-  "reading": [
-    "diary of a lonely girl, or the battle against free love by miriam karpilove",
-    "of all things, i became a crow",
-    "the apothecary diaries manga"
-  ],
-  "watching": ["the empress of ayodhaya"],
-  "listening": ["the rising sun: the decline of and fall of the japanese empire, 1936 - 1945 by john toland"],
-  "making": [ ],
-  "other": [
-    "trying to play a fully modded oblivion without crashing every 30 minutes",
-    "figuring out why my kindle 3 keeps randomly freezing"
-  ],
-  "todo": [
-    "write a mini tutorial on using json with javascript",
-    "share javascript-less modal popup code snippet",
-    "share javascript-less tabs code snippet",
-    "write a tutorial on using eleventy to generate a page from a json file",
-    "write a tutorial on using eleventy to generate a page from multiple markdown files",
-    "add resources to vegan page",
-    "create yakuza shrine"
-  ],
-  "done": [
-    "update japanese language learning resources",
-    "remove javascript dependencies from vegan page",
-    "auto detect dark mode on notebook section",
-    "update dead links on switch resources page",
-    "load button wall with json + javascript",
-    "create vegan page",
-    "replace old chatbox with new service",
-    "make main site useable with javascript disabled",
-    "add crafts page",
-    "add toggle button for falling leaves animation",
-    "prevent gif/animation autoplay when user prefers reduced motion",
-    "create site building page for my resources site",
-    "make an rss feed",
-    "work on optimizing the site to be more accessible and load faster (maybe minimize javascript/jquery use, compress some images)",
-    "create code snippets page; share snippets for draggable and collapsible windows and ds pictochat-like changelog/microblog",
-    "add mobile support for about page",
-    "write about gaming history and console collection",
-    "get microblog ready for public release",
-    "add image gallery for my favorite video games, other media, and characters",
-    "join some webrings and figure out where to put them",
-    "add dark mode support",
-    "add diary section"
-  ],
+  "currently": {
+    "playing": [
+      "oblivion",
+      "xenogears",
+      "ayakashi gohan",
+      "re:fragment ~absolute ambition~"
+    ],
+    "reading": [
+      "diary of a lonely girl, or the battle against free love by miriam karpilove",
+      "of all things, i became a crow",
+      "the apothecary diaries manga"
+    ],
+    "watching": ["the empress of ayodhaya"],
+    "listening": ["the rising sun: the decline of and fall of the japanese empire, 1936 - 1945 by john toland"],
+    "making": [ ],
+    "other": [
+      "trying to play a fully modded oblivion without crashing every 30 minutes",
+      "figuring out why my kindle 3 keeps randomly freezing"
+    ]
+  },
+  "tasks": {
+    "todo": [
+      "write a mini tutorial on using json with javascript",
+      "share javascript-less modal popup code snippet",
+      "share javascript-less tabs code snippet",
+      "write a tutorial on using eleventy to generate a page from a json file",
+      "write a tutorial on using eleventy to generate a page from multiple markdown files",
+      "add resources to vegan page",
+      "create yakuza shrine"
+    ],
+    "done": [
+      "update japanese language learning resources",
+      "remove javascript dependencies from vegan page",
+      "auto detect dark mode on notebook section",
+      "update dead links on switch resources page",
+      "load button wall with json + javascript",
+      "create vegan page",
+      "replace old chatbox with new service",
+      "make main site useable with javascript disabled",
+      "add crafts page",
+      "add toggle button for falling leaves animation",
+      "prevent gif/animation autoplay when user prefers reduced motion",
+      "create site building page for my resources site",
+      "make an rss feed",
+      "work on optimizing the site to be more accessible and load faster (maybe minimize javascript/jquery use, compress some images)",
+      "create code snippets page; share snippets for draggable and collapsible windows and ds pictochat-like changelog/microblog",
+      "add mobile support for about page",
+      "write about gaming history and console collection",
+      "get microblog ready for public release",
+      "add image gallery for my favorite video games, other media, and characters",
+      "join some webrings and figure out where to put them",
+      "add dark mode support",
+      "add diary section"
+    ]
+  },
   "buttons": [ 
       ["pennyspinkbutton","penny loves pandas", 1, "https://pennylovespandas.neocities.org/"],
       ["angeleyebutton", "angel eye springs", 0, "https://angeleyesprings.neocities.org/"],

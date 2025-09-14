@@ -129,103 +129,87 @@ function copyText() {
 //
 ///////////////////////////////////////////////
 
-function appendCurrent(current, container) {
-  if (current.length == 0) {
-    const item = document.createElement('li');
-    item.textContent = "nothing </3";
-    container.appendChild(item);
-  } else {
-    current.forEach(game => {
-      const item = document.createElement('li');
-      item.textContent = game;
-      container.appendChild(item);
-    });
-  }
-}
-
-fetch('./scripts/windows.json')
-  .then(response => {
+async function fetchJsonData() {
+  try {
+    const response = await fetch('./scripts/windows.json'); 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.json();
-  })
-  .then(
-    json => {
-      const playing = document.getElementById('currentlyplaying');
-      appendCurrent(json.playing, playing);
+    const json = await response.json();
 
-      const reading = document.getElementById('currentlyreading');
-      appendCurrent(json.reading, reading);
-
-      const watching = document.getElementById('currentlywatching');
-      appendCurrent(json.watching, watching);
-
-      const listening = document.getElementById('currentlylistening');
-      appendCurrent(json.listening, listening);
-
-      const making = document.getElementById('currentlymaking');
-      appendCurrent(json.making, making);
-
-      const other = document.getElementById('currentlyother');
-      appendCurrent(json.other, other);
-
-      const todoList = document.getElementById('todo');
-      json.todo.forEach(item => {
+    // to do list
+    const todoList = document.getElementById('todo');
+    for (const [key, value] of Object.entries(json.tasks)) {
+      value.forEach(item => {
         const todoItem = document.createElement('li');
-        todoItem.textContent = item;
+        if (key == "done") {
+          const strikedItem = document.createElement('del');
+          strikedItem.textContent = item;
+          todoItem.appendChild(strikedItem);
+        } else {
+          todoItem.textContent = item;
+        }
         todoList.appendChild(todoItem);
       })
-      json.done.forEach(item => {
-        const todoItem = document.createElement('li');
-        todoItem.innerHTML = item.strike();
-        todoList.appendChild(todoItem);
-      })
+    }
 
-      const buttonwall = document.getElementById('buttonwall');
-      const buttonArray = json.buttons;
-      buttonArray.forEach(button => {
-        // if the button is animated (value 3 is 1)
-        const picture = document.createElement('picture');
-        const source = document.createElement('source');
-        const img = document.createElement('img');
-        if (button[2] == 1) {
-          source.srcset = "images/88x31/" + button[0] + ".png";
+    // currently
+    for (const [key, value] of Object.entries(json.currently)) {
+      const currentlyList = document.getElementById(key);
+      if (value.length == 0) {
+        const currentlyItem = document.createElement('li');
+        currentlyItem.textContent = "nothing </3";
+        currentlyList.appendChild(currentlyItem);
+      } else {
+        value.forEach(item => {
+          const currentlyItem = document.createElement('li');
+          currentlyItem.textContent = item;
+          currentlyList.appendChild(currentlyItem);
+        });
+      }
+    }
+
+    // button wall
+    function pictureOrImg(container, array, picture, img) {
+        if (array[2] == 1) {
+            container.appendChild(picture);
+        } else {
+            container.appendChild(img);
+        }
+    }
+    const buttonwall = document.getElementById('buttonwall');
+    json.buttons.forEach(button => {
+      const img = document.createElement('img');
+      img.alt = button[1];
+      // if the button is animated (value 3 is 1)
+      if (button[2] == 1) {
+          var picture = document.createElement('picture');
+          var source = document.createElement('source');
+          source.srcset = `images/88x31/${button[0]}.png`;
           source.media = "(prefers-reduced-motion)";
-          img.src = "images/88x31/" + button[0] + ".gif";
-          img.alt = button[1];
+          img.src = `images/88x31/${button[0]}.gif`;
           picture.appendChild(source);
           picture.appendChild(img);
-        } else {
-          img.src = "images/88x31/" + button[0] + ".png";
-          img.alt = button[1];
-        }
-        // if has a link (there are 4 values in the array)
-        if (button.length == 4) {
+      } else {
+          img.src = `images/88x31/${button[0]}.png`;
+      }
+      // if has a link
+      if (button[3]) {
           const link = document.createElement('a');
           link.href = button[3];
           link.target = "_blank";
-          // if the button is animated (value 3 is 1)
-          if (button[2] == 1) {
-            link.appendChild(picture);
-          } else {
-            link.appendChild(img);
-          }
+          pictureOrImg(link, button, picture, img);
           buttonwall.appendChild(link);
-        } else {
-          // if the button is animated (value 3 is 1)
-          if (button[2] == 1) {
-            buttonwall.appendChild(picture);
-          } else {
-            buttonwall.appendChild(img);
-          }
-        }
-      })
-    }
-  )
-  .catch(error => {
+      } else {
+          pictureOrImg(buttonwall, button, picture, img);
+      }
+  })
+  } catch (error) {
     console.error('Failed to load JSON:', error);
-  });
+  }
+}
+
+fetchJsonData();
 
 ///////////////////////////////////////////////
 //
