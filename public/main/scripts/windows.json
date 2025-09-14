@@ -21,15 +21,15 @@
   },
   "tasks": {
     "todo": [
-      "write a mini tutorial on using json with javascript",
       "share javascript-less modal popup code snippet",
       "share javascript-less tabs code snippet",
-      "write a tutorial on using eleventy to generate a page from a json file",
       "write a tutorial on using eleventy to generate a page from multiple markdown files",
       "add resources to vegan page",
       "create yakuza shrine"
     ],
     "done": [
+      "write a tutorial on using eleventy to generate a page from a json file",
+      "write a mini tutorial on using json with javascript",
       "update japanese language learning resources",
       "remove javascript dependencies from vegan page",
       "auto detect dark mode on notebook section",

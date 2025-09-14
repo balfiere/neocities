@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>changelog</title>
+    <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml"
+        href="https://kwaamfan.neocities.org/atom.xml" />
+    <link rel="shortcut icon" href="images/favicon.gif">
+    <link rel="stylesheet" href="changelog.min.css">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="inner">
+
+            <article class="box">
+                <div class="content">
+                    <div class="date">rss/atom feed</div>
+                    <div class="message">in addition to this changelog, you can view updates to my site as an atom feed
+                        <a target="_top" href="/atom.xml">here</a>. my <a target="_top" href="/microblog/">blog</a> has
+                        a seperate atom feed which you can find <a target="_top" href="/microblog/atom.xml">here</a>.
+                    </div>
+                </div>
+            </article>
+
+            {% for log in logs %}
+            <article class="box">
+                <div class="content">
+                    <div class="date">{{ log[0] }}</div>
+                    <div class="message">{{ log[1] }}</div>
+                </div>
+            </article>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <script>
+        // if your messages have a variable width (like 90% or 80vw) it'll probably be blurry if the viewport is an odd number. this is a hack i came up to help mitigate the issue
+
+        // Firefox 1.0+
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+
+        // Chrome 1 - 79
+        var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+        function round(N, pre) {
+            const x = Math.ceil(N / pre) * pre;
+            wrapper.style.width = x + 'px';
+
+            if (window.innerWidth % 2 == 1) {
+                if (isChrome == true) {
+                    document.querySelector('#inner').style.width = round(document.querySelector('#inner').style.width)
+                }
+                if (isFirefox == true) {
+                    document.querySelector('#inner').style.marginLeft = "-0.5px";
+                }
+            } else {
+                document.querySelector('#inner').style.marginLeft = "0px";
+            }
+        }
+
+        var p = window.getComputedStyle(document.body).getPropertyValue('--p'); // get pixel multiplier
+        var n = p * 2;
+
+        var w = window.getComputedStyle(document.body).getPropertyValue('--wrapper-width'); // get wrapper responsive width
+
+        const fn = () => {
+            const wrapper = document.querySelector('#wrapper')
+            wrapper.style.width = w;
+            const wrapperWidth = wrapper.clientWidth;
+            round(wrapperWidth, n);
+        }
+
+        fn()
+
+        window.addEventListener('load', fn)
+        window.addEventListener('resize', fn)
+    </script>
+
+</body>
+
+</html>
