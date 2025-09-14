@@ -6,65 +6,65 @@
       <description>last 10 notes on kwaamfan&#039;s notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>generating a webpage from json data with 11ty</title>
-    <link>https://kwaamfan.neocities.org/notes/building-a-web-page-with-json-data-using-11ty</link>
-    <guid>https://kwaamfan.neocities.org/notes/building-a-web-page-with-json-data-using-11ty</guid>
-    <description><![CDATA[ building a web page with json data using 11ty this is a tutorial on how i generate my articles page from a json file using eleventy. ]]></description>
-    <pubDate>Sun, 14 Sep 2025 04:24:15 GMT</pubDate>
-  </item><item>
-    <title>json</title>
-    <link>https://kwaamfan.neocities.org/notes/json</link>
-    <guid>https://kwaamfan.neocities.org/notes/json</guid>
-    <description><![CDATA[ json json is a text format for organizing data. ]]></description>
-    <pubDate>Sun, 14 Sep 2025 04:19:53 GMT</pubDate>
-  </item><item>
     <title>using javascript to load data from a json file</title>
-    <link>https://kwaamfan.neocities.org/notes/using-javascript-to-load-data-from-a-json-file</link>
-    <guid>https://kwaamfan.neocities.org/notes/using-javascript-to-load-data-from-a-json-file</guid>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/using-javascript-to-load-data-from-a-json-file</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/using-javascript-to-load-data-from-a-json-file</guid>
     <description><![CDATA[ using javascript to load data from a json file this is a tutorial on how i load data stored in a json file to my site&#039;s main page using javascript. ]]></description>
-    <pubDate>Sun, 14 Sep 2025 04:18:39 GMT</pubDate>
+    <pubDate>Wed, 10 Sep 2025 06:59:00 GMT</pubDate>
   </item><item>
-    <title>details tag</title>
-    <link>https://kwaamfan.neocities.org/notes/details-tag</link>
-    <guid>https://kwaamfan.neocities.org/notes/details-tag</guid>
-    <description><![CDATA[ details tag you can create collapsible sections in html without javascript by using the details tag. ]]></description>
-    <pubDate>Wed, 03 Sep 2025 05:15:50 GMT</pubDate>
+    <title>building a web page with json data using 11ty</title>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/building-a-web-page-with-json-data-using-11ty</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/building-a-web-page-with-json-data-using-11ty</guid>
+    <description><![CDATA[ building a web page with json data using 11ty this is a tutorial on how i generate my articles page from a json file using eleventy. ]]></description>
+    <pubDate>Tue, 09 Sep 2025 22:50:00 GMT</pubDate>
   </item><item>
-    <title>most used imageMagick commands</title>
-    <link>https://kwaamfan.neocities.org/notes/most-used-imageMagick-commands</link>
-    <guid>https://kwaamfan.neocities.org/notes/most-used-imageMagick-commands</guid>
-    <description><![CDATA[ most used imageMagick commands the following commands are the most common ImageMagick commands i use. ]]></description>
-    <pubDate>Wed, 03 Sep 2025 04:51:07 GMT</pubDate>
+    <title>hiding hard subtitles</title>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/hiding-hard-subtitles</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/hiding-hard-subtitles</guid>
+    <description><![CDATA[ hiding hard subtitles i use subtitle hider to blur english subtitles hardcoded into videos i want to watch in a language i&#039;m learning. ]]></description>
+    <pubDate>Fri, 18 Jul 2025 19:04:00 GMT</pubDate>
   </item><item>
-    <title>batch print images in a folder to html</title>
-    <link>https://kwaamfan.neocities.org/notes/batch-print-images-in-a-folder-to-html</link>
-    <guid>https://kwaamfan.neocities.org/notes/batch-print-images-in-a-folder-to-html</guid>
-    <description><![CDATA[ batch print images in a folder to html i use a script to batch write all gifs in a folder to html, using the &lt;picture&gt; tag and media=&quot;(prefers-reduced-motion)&quot; to load a png if the user prefers reduced motion. ]]></description>
-    <pubDate>Wed, 03 Sep 2025 04:47:12 GMT</pubDate>
-  </item><item>
-    <title>preventing gif autoplay</title>
-    <link>https://kwaamfan.neocities.org/notes/preventing-gif-autoplay</link>
-    <guid>https://kwaamfan.neocities.org/notes/preventing-gif-autoplay</guid>
-    <description><![CDATA[ preventing gif autoplay there are multiple ways to stop gifs from autoplaying on a webpage. ]]></description>
-    <pubDate>Wed, 03 Sep 2025 04:46:18 GMT</pubDate>
+    <title>welcome to my notebook</title>
+    <link>https://kwaamfan.neocities.org/notes/</link>
+    <guid>https://kwaamfan.neocities.org/notes/</guid>
+    <description><![CDATA[ welcome to my notebook this section of my site is a repository of random notes mostly related to language_learning , site_building , and linux . ]]></description>
+    <pubDate>Fri, 18 Jul 2025 03:32:06 GMT</pubDate>
   </item><item>
     <title>texthooking games in linux</title>
-    <link>https://kwaamfan.neocities.org/notes/texthooking-games-in-linux</link>
-    <guid>https://kwaamfan.neocities.org/notes/texthooking-games-in-linux</guid>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/texthooking-games-in-linux</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/texthooking-games-in-linux</guid>
     <description><![CDATA[ texthooking games in linux installing games where to download cs rin ru (if on steam) RuTracker.org (lots of old, hard to find games on here. ]]></description>
-    <pubDate>Sun, 20 Jul 2025 03:23:15 GMT</pubDate>
+    <pubDate>Wed, 28 May 2025 01:01:00 GMT</pubDate>
   </item><item>
-    <title>goldendict</title>
-    <link>https://kwaamfan.neocities.org/notes/goldendict</link>
-    <guid>https://kwaamfan.neocities.org/notes/goldendict</guid>
-    <description><![CDATA[ goldendict goldendict-ng is a program for windows, mac, and linux that allows the user to install their own dictionaries to look up words instantly. ]]></description>
-    <pubDate>Sun, 20 Jul 2025 01:27:54 GMT</pubDate>
+    <title>configuring yomitan for thai</title>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/configuring-yomitan-for-thai</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/configuring-yomitan-for-thai</guid>
+    <description><![CDATA[ configuring yomitan for thai dictionaries the dictionaries i use are: kaikki th-th and th-en apple th-en JTDIC th-jp Lexitron th-en volubilis th-en royal institute dictionary th-th Isan-Thai-English dictionary th-th-en plant names th-en pleang na nakoen th-th jones th-en abbreviations th-th the unli... ]]></description>
+    <pubDate>Tue, 11 Jun 2024 00:30:00 GMT</pubDate>
   </item><item>
-    <title>ocr for language learning</title>
-    <link>https://kwaamfan.neocities.org/notes/ocr-for-language-learning</link>
-    <guid>https://kwaamfan.neocities.org/notes/ocr-for-language-learning</guid>
-    <description><![CDATA[ ocr for language learning the following are the programs and scripts i use to make looking up words easier when reading manga, webtoons, or books in pdf format. ]]></description>
-    <pubDate>Sun, 20 Jul 2025 01:26:46 GMT</pubDate>
+    <title>video to avif</title>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/video-to-avif</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/video-to-avif</guid>
+    <description><![CDATA[ video to avif i use avif files on my site wherever i want to convert a video to an animated image. ]]></description>
+    <pubDate>Mon, 03 Jun 2024 06:21:00 GMT</pubDate>
+  </item><item>
+    <title>updating ffmpeg</title>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/updating-ffmpeg</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/updating-ffmpeg</guid>
+    <description><![CDATA[ updating ffmpeg the version of ffmpeg that comes installed on pop os 22.04 is version 4.4.2, which doesn&#039;t come with libsvtav1 to make avif files and doesn&#039;t work well with ffmpeg-normalize. ]]></description>
+    <pubDate>Fri, 31 May 2024 19:20:00 GMT</pubDate>
+  </item><item>
+    <title>preventing gif autoplay</title>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/preventing-gif-autoplay</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/preventing-gif-autoplay</guid>
+    <description><![CDATA[ preventing gif autoplay there are multiple ways to stop gifs from autoplaying on a webpage. ]]></description>
+    <pubDate>Thu, 30 May 2024 20:41:00 GMT</pubDate>
+  </item><item>
+    <title>batch print images in a folder to html</title>
+    <link>https://kwaamfan.neocities.org/notes/030-my-notes/batch-print-images-in-a-folder-to-html</link>
+    <guid>https://kwaamfan.neocities.org/notes/030-my-notes/batch-print-images-in-a-folder-to-html</guid>
+    <description><![CDATA[ batch print images in a folder to html i use a script to batch write all gifs in a folder to html, using the &lt;picture&gt; tag and media=&quot;(prefers-reduced-motion)&quot; to load a png if the user prefers reduced motion. ]]></description>
+    <pubDate>Thu, 30 May 2024 17:07:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
