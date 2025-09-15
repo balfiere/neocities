@@ -31,7 +31,7 @@
             <article class="box">
                 <div class="content">
                     <div class="date">{{ log[0] }}</div>
-                    <div class="message">{{ log[1] }}</div>
+                    <div class="message">{{ log[1] | markdownify-inline }}</div>
                 </div>
             </article>
             {% endfor %}
