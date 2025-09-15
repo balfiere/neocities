@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>language blog</title>
+    <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml"
+        href="https://kwaamfan.neocities.org/atom.xml" />
+    <link rel="shortcut icon" href="images/favicon.gif">
+    <link rel="stylesheet" href="language.min.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://api.fonts.coollabs.io" crossorigin />
+    <link
+        href="https://api.fonts.coollabs.io/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+</head>
+
+<body>
+    <div id="container">
+        <aside>
+            <picture>
+                <source srcset="images/sakura2.jpg" media="(prefers-reduced-motion)" />
+                <img src="images/sakura.avif">
+            </picture>
+            <span class="back"><a href="/main/index.html">click to go back</a></span>
+        </aside>
+
+        <nav>
+            <a href="#home" class="tab" tab="home">home</a>
+            <a href="#thai" class="tab" tab="thai">thai</a>
+            <a href="#japanese" class="tab" tab="japanese">japanese</a>
+            <a href="#media-log" class="tab" tab="media-log">media log</a>
+        </nav>
+
+        <tab-container>
+            <tab-content id="thai">
+                <div class="content">
+{% for post in collections.language %}{% if post.data.title == "thai" %}{{ post.content }}{% endif %}{% endfor %}
+                </div>
+            </tab-content>
+            <tab-content id="japanese">
+                <div class="content">
+{% for post in collections.language %}{% if post.data.title == "japanese" %}{{ post.content }}{% endif %}{% endfor %}
+                </div>
+            </tab-content>
+            <tab-content id="media-log">
+                <div class="content">
+                    <p>like 80% of my language learning time consists of watching youtube but on the rare occasion i
+                        feel up to tackling something longer, here's what i've watched or read:</p>
+                    <h3>currently working on</h3>
+                    <p>
+                    <ul>
+                        {% for media in currently %}
+                        <li>{{ media[2] }} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em></li>
+                        {% endfor %}
+                    </ul>
+                    </p>
+
+                    <h3>finished</h3>
+                    <p>
+                    <ul>
+                        {% for media in done %}
+                        <li>{{ media[2] }} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em></li>
+                        {% endfor %}
+                    </ul>
+                    </p>
+
+                    <h3>paused</h3>
+                    <p>
+                    <ul>
+                        {% for media in paused %}
+                        <li>{{ media[2] }} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em>
+                            <ul><li>{{ media[4] }}</li></ul>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    </p>
+
+                </div>
+            </tab-content>
+            <tab-content id="home">
+                <div class="content">
+{% for post in collections.language %}{% if post.data.title == "home" %}{{ post.content }}{% endif %}{% endfor %}
+                </div>
+            </tab-content>
+        </tab-container>
+
+    </div>
+</body>
+
+<script>
+    // get hash of current page
+    const hash = window.location.hash;
+
+    // get current tab
+    // if hash is empty, default to home
+    const currentTab = hash === "" ? document.querySelector('a.tab[tab="home"]') : document.querySelector(`a.tab[tab="${hash.slice(1)}"]`);
+
+    // add class active to current tab
+    currentTab.classList.add('active');
+
+    const tabs = document.querySelectorAll('a.tab');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            tab.classList.add('active');
+        });
+
+    });
+</script>
+
+</html>
