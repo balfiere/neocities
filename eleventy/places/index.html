@@ -93,35 +93,11 @@ section {
   section[data-section="landing"] > .bg { 
     background-image: url('landing.avif'), url('landing.jpg');
   }
-
-  section[data-section="eruyt"] > .bg {
-    background-image: url('eruyt.avif'), url('eruyt.jpg');
+{% for place in places %}
+  section[data-section="{{place[0]}}"] > .bg {
+    background-image: url('{{place[0]}}.avif'), url('{{place[0]}}.jpg');
   }
-
-  section[data-section="jazzjin"] > .bg {
-    background-image: url('jazzjin.avif'), url('jazzjin.jpg');
-  }
-
-  section[data-section="taito"] > .bg {
-    background-image: url('taito.avif'), url('taito.jpg');
-  }
-
-  section[data-section="serena"] > .bg {
-    background-image: url('serena.avif'), url('serena.jpg');
-  }
-
-  section[data-section="paulowniamall"] > .bg {
-    background-image: url('paulowniamall.avif'), url('paulowniamall.jpg');
-  }
-
-  section[data-section="fishermanshorizon"] > .bg {
-    background-image: url('fishermanshorizon.avif'), url('fishermanshorizon.jpg');
-  }
-
-  section[data-section="parabellum"] > .bg {
-    background-image: url('parabellum.avif'), url('parabellum.jpg');
-  }
-
+{% endfor %}
 
 /*----- style text -----*/
 
@@ -193,105 +169,21 @@ audio {
       <div class="content">a page dedicated to my favorite locations and songs in video games. works best with javascript and autoplay enabled.
       </div>
     </section>
-    
-    <section class="panel" data-section="eruyt">
+    {% for place in places %}
+    <section class="panel" data-section="{{ place[0] }}">
       <div class="bg"></div>
       <div class="content">
         <div>
-          <span class="place">eruyt village</span>
-          <span class="game">final fantasy xii (2006)</span>
+          <span class="place">{{ place[1] }}</span>
+          <span class="game">{{ place[2] }}</span>
         </div>
-        <audio controls preload="metadata" class="song" loop>
-          <source src="https://files.catbox.moe/f2ljlz.ogg" type="audio/ogg">
-          <source src="https://files.catbox.moe/powczl.mp3" type="audio/mp3">
+        <audio controls preload="metadata" class="song"{% if place[5] %} data-custom-loop="true" data-start="{{ place[6] }}" data-sample-rate="{{ place[7] }}"{% else %} loop{% endif %}>
+          <source src="{{ place[3] }}" type="audio/ogg">
+          <source src="{{ place[4] }}" type="audio/mp3">
         </audio>
       </div>
     </section>
-    
-    <section class="panel" data-section="jazzjin">
-      <div class="bg"></div>
-      <div class="content">
-        <div>
-          <span class="place">jazz jin</span>
-          <span class="game">persona 5 royal (2019)</span>
-        </div>
-        <audio controls preload="metadata" class="song" loop>
-          <source src="https://files.catbox.moe/sy2f1z.ogg" type="audio/ogg">
-          <source src="https://files.catbox.moe/6fg97c.mp3" type="audio/mp3">
-        </audio>
-      </div>
-    </section>
-    
-    <section class="panel" data-section="taito">
-      <div class="bg"></div>
-      <div class="content">
-        <div>
-          <span class="place">taito, da'at</span>
-          <span class="game">shin megami tensei v (2021)</span>
-        </div>
-        <audio controls preload="metadata" class="song" data-custom-loop="true" data-start="1393972" data-sample-rate="44100">
-          <source src="https://files.catbox.moe/hzbckf.ogg" type="audio/ogg">
-          <source src="https://files.catbox.moe/30nhzi.mp3" type="audio/mp3">
-        </audio>
-      </div>
-    </section>
-    
-    <section class="panel" data-section="serena">
-      <div class="bg"></div>
-      <div class="content">
-        <div>
-          <span class="place">serena</span>
-          <span class="game">yakuza series (2005)</span>
-        </div>
-        <audio controls preload="metadata" class="song" loop>
-          <source src="https://files.catbox.moe/odlmvr.ogg" type="audio/ogg">
-          <source src="https://files.catbox.moe/wvx4ef.mp3" type="audio/mp3">
-        </audio>
-      </div>
-    </section>
-    
-    <section class="panel" data-section="paulowniamall">
-      <div class="bg"></div>
-      <div class="content">
-        <div>
-          <span class="place">paulownia mall</span>
-          <span class="game">persona 3 (2006)</span>
-        </div>
-        <audio controls preload="metadata" class="song" data-custom-loop="true" data-start="860160" data-sample-rate="44100">
-          <source src="https://files.catbox.moe/kw75m3.ogg" type="audio/ogg">
-          <source src="https://files.catbox.moe/tnoio1.mp3" type="audio/mp3">
-        </audio>
-      </div>
-    </section>
-    
-    <section class="panel" data-section="fishermanshorizon">
-      <div class="bg"></div>
-      <div class="content">
-        <div>
-          <span class="place">fisherman's horizon</span>
-          <span class="game">final fantasy viii (1999)</span>
-        </div>
-        <audio controls preload="metadata" class="song" loop>
-          <source src="https://files.catbox.moe/tptzao.ogg" type="audio/ogg">
-          <source src="https://files.catbox.moe/cc3vm2.mp3" type="audio/mp3">
-        </audio>
-      </div>
-    </section>
-    
-    <section class="panel" data-section="parabellum">
-      <div class="bg"></div>
-      <div class="content">
-        <div>
-          <span class="place">parabellum</span>
-          <span class="game">persona 2: eternal punishment (2000)</span>
-        </div>
-        <audio controls preload="metadata" class="song" loop>
-          <source src="https://files.catbox.moe/pugzo3.ogg" type="audio/ogg">
-          <source src="https://files.catbox.moe/5oy6bf.mp3" type="audio/mp3">
-        </audio>
-      </div>
-    </section>
-    
+    {% endfor %}
   </main>
 
 <!-- controls the snap scrolling and audio autoplay -->

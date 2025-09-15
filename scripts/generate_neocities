@@ -38,6 +38,10 @@ case "$1" in
         echo "building language page"
         eleventy_to_neocities "language" "true"
         ;;
+    "places")
+        echo "building places page"
+        eleventy_to_neocities "places" "true"
+        ;;
     "resources")
         echo "building resources site"
         eleventy_to_neocities "resources" "false"

@@ -1,21 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>oblivion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>oblivion blog</title>
+    <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml"
+        href="https://kwaamfan.neocities.org/atom.xml" />
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="oblivion.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://api.fonts.coollabs.io" crossorigin />
+    <link
+        href="https://api.fonts.coollabs.io/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
 
-{{content}}
+    <!-- chromatic abberation -->
+    <!-- lifted from https://codepen.io/fand/pen/EgGwjg -->
+    <svg width="0" height="0">
+        <filter id="kill">
+            <feColorMatrix type="matrix" result="red_" values="4 0 0 0 0
+              0 0 0 0 0 
+              0 0 0 0 0 
+              0 0 0 1 0" />
+            <feOffset in="red_" dx="2" dy="3" result="red" />
+            <feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="0 0 0 0 0
+              0 2 0 0 0 
+              0 0 10 0 0 
+              0 0 0 1 0" />
+            <feOffset in="blue_" dx="-4" dy="-4" result="blue" />
+            <feBlend mode="screen" in="red" in2="blue" />
 
-{%- for mod in collections['mod review'] -%}
-<details>
-    <summary>{{ mod.data.title }}</summary>
-    {{ mod.content }}
-</details>
-{%- endfor -%}
+        </filter>
+    </svg>
 
+    <div id="container">
+
+        <div class="doll left"><a href="/main/"><img src="images/martinreading.png">
+                <div class="popup">go back</div>
+            </a></div>
+        <div class="doll right"><img src="images/playerstanding.png"></div>
+
+        <main>
+            <nav>
+                <a href="#home" class="tab" tab="home">home</a>
+                <a href="#mod-reviews" class="tab" tab="mod-reviews">mod reviews</a>
+                <a href="#linux" class="tab" tab="linux">linux</a>
+                <a href="#screenshots" class="tab" tab="screenshots">screenshots</a>
+            </nav>
+
+
+            <tab-container>
+                <!-- TAB CONTROLS -->
+                <!-- <input type="radio" id="tabToggle01" name="tabs" value="1" checked />
+	<label for="tabToggle01" checked="checked">home</label>
+	<input type="radio" id="tabToggle02" name="tabs" value="2" />
+	<label for="tabToggle02">mod reviews</label>
+	<input type="radio" id="tabToggle03" name="tabs" value="3" />
+	<label for="tabToggle03">linux</label>
+	<input type="radio" id="tabToggle04" name="tabs" value="4" />
+	<label for="tabToggle04">screenshots</label> -->
+                <tab-content id="mod-reviews">
+
+                    <!-- mod reviews tab -->
+
+                    <div class="content">
+
+                        {%- for mod in collections['mod review'] -%}
+                        <details>
+                            <summary>{{ mod.data.title }}</summary>
+                            {{ mod.content }}
+                        </details>
+                        {%- endfor -%}
+
+                    </div>
+
+                </tab-content>
+                <tab-content id="linux">
+
+                    <!-- linux tab -->
+
+                    <div class="content">
+
+                        linux
+
+                    </div>
+
+                </tab-content>
+                <tab-content id="screenshots">
+
+                    <!-- screenshots tab -->
+
+                    <div class="content">
+
+                        screenshots
+
+                    </div>
+
+                </tab-content>
+                <tab-content id="home">
+
+                    <!-- home tab -->
+
+                    <div class="content">
+
+                        home
+
+                    </div>
+
+                </tab-content>
+            </tab-container>
+        </main>
+    </div>
 </body>
+
+<script>
+    // get hash of current page
+    const hash = window.location.hash;
+
+    // get current tab
+    // if hash is empty, default to home
+    const currentTab = hash === "" ? document.querySelector('a.tab[tab="home"]') : document.querySelector(`a.tab[tab="${hash.slice(1)}"]`);
+
+    // add class active to current tab
+    currentTab.classList.add('active');
+
+    const tabs = document.querySelectorAll('a.tab');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            tab.classList.add('active');
+        });
+
+    });
+</script>
+
 </html>

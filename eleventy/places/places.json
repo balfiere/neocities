@@ -1,0 +1,59 @@
+{
+    "places": [
+        [
+            "eruyt",
+            "eruyt village",
+            "final fantasy xii (2006)",
+            "https://files.catbox.moe/f2ljlz.ogg",
+            "https://files.catbox.moe/powczl.mp3"
+        ],
+        [
+            "jazzjin",
+            "jazz jin",
+            "persona 5 royal (2019)",
+            "https://files.catbox.moe/sy2f1z.ogg",
+            "https://files.catbox.moe/6fg97c.mp3"
+        ],
+        [
+            "taito",
+            "taito, da'at",
+            "shin megami tensei v (2021)",
+            "https://files.catbox.moe/hzbckf.ogg",
+            "https://files.catbox.moe/30nhzi.mp3",
+            1,
+            1393972,
+            44100
+        ],
+        [
+            "serena",
+            "serena",
+            "yakuza series (2005)",
+            "https://files.catbox.moe/odlmvr.ogg",
+            "https://files.catbox.moe/wvx4ef.mp3"
+        ],
+        [
+            "paulowniamall",
+            "paulownia mall",
+            "persona 3 (2006)",
+            "https://files.catbox.moe/kw75m3.ogg",
+            "https://files.catbox.moe/tnoio1.mp3",
+            1,
+            860160,
+            44100
+        ],
+        [
+            "fishermanshorizon",
+            "fisherman's horizon",
+            "final fantasy viii (1999)",
+            "https://files.catbox.moe/tptzao.ogg",
+            "https://files.catbox.moe/cc3vm2.mp3"
+        ],
+        [
+            "parabellum",
+            "parabellum",
+            "persona 2: eternal punishment (2000)",
+            "https://files.catbox.moe/pugzo3.ogg",
+            "https://files.catbox.moe/5oy6bf.mp3"
+        ]
+    ]
+}
