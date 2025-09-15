@@ -70,3 +70,112 @@ module.exports = async function (eleventyConfig) {
     htmlTemplateEngine: 'liquid'
   };
 }
+
+// const markdownIt = require('markdown-it');
+// const markdownItAttrs = require('markdown-it-attrs');
+// const markdownItDeflist = require("markdown-it-deflist");
+// const markdownItDetails = require("markdown-it-expandable");
+
+// const mdOptions = {
+//   html: true,
+//   breaks: true,
+//   linkify: true,
+//   typographer: true
+// }
+
+// const mdAttr = {
+//   leftDelimiter: '{',
+//   rightDelimiter: '}',
+//   allowedAttributes: []  // empty array = all attributes are allowed
+// }
+
+// module.exports = async function (eleventyConfig) {
+//   const { RenderPlugin } = await import("@11ty/eleventy");
+
+//   eleventyConfig.addPlugin(RenderPlugin);
+//   eleventyConfig.setLibrary(
+//     'md',
+//     markdownIt(mdOptions)
+//       .use(markdownItAttrs, mdAttr)
+//       .use(markdownItDeflist)
+//       .use(markdownItDetails)
+//   );
+//   eleventyConfig.addPairedShortcode(
+//     'article', (children) => {
+//       return `<article>${children}</article>`
+//     });
+//   eleventyConfig.addFilter("markdown", function (data) {
+//     return markdownIt.renderInline(data);
+//   });
+//   eleventyConfig.addFilter("markdownify", function (data) {
+//     return markdownIt.render(data);
+//   });
+
+//   eleventyConfig.addPairedShortcode("resourcesContainer", function (content, title) {
+//     return `<article>
+//   <details>
+//     <summary class="subheader"><h3>${title}</h3></summary>
+//     <div class="mainboxescontent">${content}</div>
+//   </details>
+// </article>`;
+//   });
+
+//   eleventyConfig.addPairedShortcode("resourcesContainerOpen", function (content, title) {
+//     return `<article>
+//     <div class="subheader"><h3>${title}</h3></div>
+//     <div class="mainboxescontent">${content}</div>
+// </article>`;
+//   });
+
+//   module.exports = function(eleventyConfig) {
+//   // shortcode to include rendered content of a specific input file
+//   eleventyConfig.addShortcode("includeFile", function(path) {
+//     const collections = this.ctx.collections.all;
+//     const file = collections.find(item => item.inputPath.endsWith(path));
+//     return file ? file.templateContent : "";
+//   });
+// };
+
+
+//   return {
+//     dataTemplateEngine: 'liquid',
+//     htmlTemplateEngine: 'liquid'
+//   };
+// }
+
+// const markdownIt = require("markdown-it");
+// const markdownItAttrs = require("markdown-it-attrs");
+// const { EleventyRenderPlugin } = require("@11ty/eleventy");
+
+
+// module.exports = function(eleventyConfig) { 
+//   eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+//   const md = markdownIt({
+//     html: true,
+//     breaks: true,
+//     linkify: true
+//   }).use(markdownItAttrs);
+
+//   eleventyConfig.setLibrary("md", md);
+
+//   eleventyConfig.addFilter("markdownify", (content) => {
+//     return md.render(content); // block rendering (multi-line safe)
+//   });
+// };
+
+// const { EleventyRenderPlugin } = require("@11ty/eleventy");
+// const fs = require("fs");
+// const matter = require("gray-matter");
+
+// module.exports = function (eleventyConfig) {
+//   eleventyConfig.addPlugin(EleventyRenderPlugin);
+//   eleventyConfig.addShortcode("renderExternalMarkdown", function (filePath) {
+//     // Read the file and parse with gray-matter
+//     const fileContent = fs.readFileSync(filePath, "utf8");
+//     const parsedFile = matter(fileContent);
+
+//     // Return the content without the front matter
+//     return parsedFile.content;
+//   });
+// };

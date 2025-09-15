@@ -40,12 +40,12 @@
         <tab-container>
             <tab-content id="thai">
                 <div class="content">
-{% for post in collections.language %}{% if post.data.title == "thai" %}{{ post.content }}{% endif %}{% endfor %}
+{% capture thai %}{% renderExternalMarkdown "language/_includes/thai.md" %}{% endcapture %}{{ thai | markdownify }}
                 </div>
             </tab-content>
             <tab-content id="japanese">
                 <div class="content">
-{% for post in collections.language %}{% if post.data.title == "japanese" %}{{ post.content }}{% endif %}{% endfor %}
+{% capture japanese %}{% renderExternalMarkdown "language/_includes/japanese.md" %}{% endcapture %}{{ japanese | markdownify }}
                 </div>
             </tab-content>
             <tab-content id="media-log">
@@ -85,7 +85,7 @@
             </tab-content>
             <tab-content id="home">
                 <div class="content">
-{% for post in collections.language %}{% if post.data.title == "home" %}{{ post.content }}{% endif %}{% endfor %}
+{% capture home %}{% renderExternalMarkdown "language/_includes/home.md" %}{% endcapture %}{{ home | markdownify }}
                 </div>
             </tab-content>
         </tab-container>
