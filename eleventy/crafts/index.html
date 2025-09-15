@@ -29,8 +29,8 @@
 
             {% for fo in collections.crafts %}
             <section>
-                <input class="modal-toggle" id="modal-{{ fo.page.fileSlug }}" type="checkbox" />
-                <label class="modal-open" for="modal-{{ fo.page.fileSlug }}">
+                <input class="modal-toggle" id="modal-{{ fo.page.fileSlug | slugify }}" type="checkbox" />
+                <label class="modal-open" for="modal-{{ fo.page.fileSlug | slugify }}">
                     <div class="img-box">
                     <img src="{{ fo.data.image }}" alt="{{ fo.data.title }}" />
                     <div class="transparent-box">
@@ -39,7 +39,7 @@
                     </div>
                 </label>
                 <div class="modal">
-                    <label class="modal-close" for="modal-{{ fo.page.fileSlug }}"></label>
+                    <label class="modal-close" for="modal-{{ fo.page.fileSlug | slugify }}"></label>
                     <div class="popup">
                         {{ fo.content }}
                     </div>
