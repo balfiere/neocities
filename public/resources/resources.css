@@ -107,15 +107,15 @@ nav a {
     text-decoration: none;
 }
 
-b {
+b, strong {
     font-weight: 600;
 }
 
-p {
+/* p {
     margin:0;
     padding:12px 0px;
     line-height: 1.5;
-}
+} */
     
 .subheader{
     background-image: linear-gradient(to right, #a1a1ff, #a8a4fe, #aea7fd, #b3aafd, #b9adfc, #c2b1fc, #cbb5fc, #d3b9fc, #e0c0fc, #ebc7fd, #f6cefe, #ffd6ff);
@@ -333,9 +333,12 @@ article .subheader h3{
 }
 
 article p{
-    padding: 0px;
+    /* padding: 0px; */
     text-align:justify;
     margin-bottom: 5px;
+    & > img{
+        margin: 0 auto;
+    }
 }
 
 article p:last-child{

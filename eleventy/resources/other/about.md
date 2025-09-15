@@ -1,0 +1,14 @@
+---
+title: about the website
+layout: resources.liquid
+staus: valid
+---
+{% resourcesContainerOpen "about the website" %}{% renderTemplate "md" %}
+
+this website is dedicated to sharing various resources i've used and found helpful in my life for free. while there are plenty of places on the internet to discuss game piracy, i couldn't find a satisfactory place to discuss and share media freely for my more niche interests like learning thai and cross stitch.
+
+i started a similar project over two years ago in the early days of my thai language learning journey. inspired by the language learning masterposts popular on tumblr in the mid-2010s and the utter lack of anything similar for learning thai, i decided to compile every free resource for learning thai i could find, cataloging them in a [notion database](https://balfiere.notion.site/0aa069f3a8be4f2fb6c527adf4b21a21?v=8d3ffe13285341dab51504742976f40b){target='_blank'}, and sharing it on tumblr in my own masterpost [here](https://kwaamfan.tumblr.com/post/679467377086398464/under-the-read-more-is-a-huuuuuuuge-70-list-of){target='_blank'}. over time however, i realized many of the links i shared i barely if ever ended up using; when i started studying japanese six months ago, i felt overwhelmed by the sheer amount of resources available for beginners. it made me want to revist my old thai masterpost, see if i could distill it into something more useful for those new to learning thai. this time i drew inspiration from websites dedicated to learning japanese such as [TheMoeWay](https://learnjapanese.moe/){target='_blank'}, [Jo-Mako's Japanese Guide](https://sites.google.com/view/jo-mako/home){target='_blank'}, and [DJT Guide](https://djtguide.neocities.org/guide){target='_blank'} that combines providing links to resources with sharing their own learning philosophy, thoughts on how best to use those resources, how to study, etc. i decided creating my own static website would be more conducive to organizing and sharing that sort of knowledge compared to making a new tumblr post.
+
+while my initial reason for creating this site was to share resources for learning thai, i also wanted to share resources for my other interests in the same fashion – providing links to my favorite sites, tutorials, and downloads while giving my own commentary in hopes it makes emulation, piracy, language learning, etc more accessible to those who may be new to these things. to be honest though i think making this website and organizing things in this way is more about helping my future self find things i like and have used more easily when i need them again, like when i need to update my hacked switch and can't remember which guide i need to follow to update it safely. i guess i just can't be bothered to organize my hundreds of bookmarks in a more normal way ^^;
+
+{% endrenderTemplate %}{% endresourcesContainerOpen %}
