@@ -56,7 +56,7 @@
                     <p>
                     <ul>
                         {% for media in currently %}
-                        <li>{{ media[2] }} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em></li>
+                        <li>{% if media[2] == "th" %}🇹🇭{% elsif media[2] =="jp" %}🇯🇵{% endif %} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em></li>
                         {% endfor %}
                     </ul>
                     </p>
@@ -65,7 +65,7 @@
                     <p>
                     <ul>
                         {% for media in done %}
-                        <li>{{ media[2] }} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em></li>
+                        <li>{% if media[2] == "th" %}🇹🇭{% elsif media[2] =="jp" %}🇯🇵{% endif %} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em></li>
                         {% endfor %}
                     </ul>
                     </p>
@@ -74,7 +74,7 @@
                     <p>
                     <ul>
                         {% for media in paused %}
-                        <li>{{ media[2] }} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em>
+                        <li>{% if media[2] == "th" %}🇹🇭{% elsif media[2] =="jp" %}🇯🇵{% endif %} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em>
                             <ul><li>{{ media[4] }}</li></ul>
                         </li>
                         {% endfor %}
