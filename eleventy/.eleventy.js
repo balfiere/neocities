@@ -12,7 +12,8 @@ module.exports = function (eleventyConfig) {
   const md = markdownIt({
     html: true,
     breaks: true,
-    linkify: true
+    linkify: true,
+    typographer: true
   }).use(markdownItAttrs)
     .use(markdownItDeflist);
 
