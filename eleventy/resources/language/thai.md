@@ -3,7 +3,7 @@ title: learn thai resources
 layout: resources.liquid
 staus: valid
 ---
-{% resourcesContainer "orthography + phonology" %}{% renderTemplate "md" %}
+{% resourcesContainer "orthography + phonology" %}
 
 [Read Thai in 10 Days](https://libgen.is/book/index.php?md5=CC2F799F3B0FD5CAD8003DAB25FA07E9){target='_blank'}
 : book that teaches you how to read the thai script. i love the way it organizes and teaches you consonants, vowels, class, tone rules, exceptions, etc – i tried and failed learning to read thai a number of times but this book made it all 'click' for me. [epub](https://drive.google.com/file/d/1uSlxdPc9Y1J2bTWKUYseiqjnd4BjmS2_/view?usp=drive_link){target='_blank'}, [azw3](https://drive.google.com/file/d/1SUgCkb58jaKs5ORrp99P_K0keYXX3CnK/view?usp=sharing){target='_blank'}; also on z-lib. find the audio for this book [here](https://readthailanguage.com/getaudio/){target='_blank'}.
@@ -11,8 +11,8 @@ staus: valid
 [Slice of Life](https://slice-of-thai.com/language/){target='_blank'}
 : website made by an expat living in thailand. the section linked above is the best resource i've seen for learning the phonology (sounds) of thai. explains sounds unfamiliar to english speakers such as ป, ต, and −ือ clearly and in language accessible to those unfamiliar with linguistics. i found the spectrograms to illustrate the five tones as well as the difference between ป and บ to be particularly helpful.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "courses + textbooks" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "courses + textbooks" %}
 
 honestly i don't think the textbooks available for thai are all that great since they're typically aimed at tourists, rely on romanization, and don't get that advanced especially compared to what's available for more popular languages. here are the ones that i used when i was just starting out, but i don't recommend you treat them like college textbooks and spend like sixth months going through it – just pick one and get some basic vocab and grammar down.
 
@@ -28,14 +28,14 @@ honestly i don't think the textbooks available for thai are all that great since
 [FSI Thai Language Course](https://thai-notes.com/FSITLC/index.html){target='_blank'}
 : website that has taken the Foreign Service Institute's thai language course and converted it to text to make it more accessible to modern learners. there's a lot of audio and it's embedded right where it's needed, you can toggle IPA transcription on or off, and is much more thorough than other courses i've seen. however it was made in 1970 and is definitely showing its age, plus it was designed for 8 hours a day of in-person drilling and instruction so there's not much in the way of self study exercises.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "grammar" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "grammar" %}
 
 [Thai: An Essential Grammar](https://libgen.is/book/index.php?md5=EA868AA376F3AD1B799E67A833C3F402){target='_blank'}
 : a reference book of the most common grammatical structures in thai. very clear, concise, and to the point, with lots of example sentences. has thai script and romanization.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "listening" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "listening" %}
 
 [Comprehensible Thai](https://www.youtube.com/@ComprehensibleThai){target='_blank'}
 : youtube channel of with thousands of hours of ALG style videos. designed to be used without any other traditional study methods, just watch the videos and acquire the language naturally. you can read a simpler explanation of the method [here](https://www.dreamingspanish.com/method){target='_blank'} or watch more in depth videos discussing ALG [here](https://www.youtube.com/playlist?list=PLgdZTyVWfUhlcP3Wj__xgqWpLHV0bL_JA){target='_blank'}. i personally use this channel as listening practice alongside sentence mining for the bulk of my thai language learning.
@@ -52,8 +52,8 @@ honestly i don't think the textbooks available for thai are all that great since
 [Pimsleur](https://mega.nz/folder/cI8zhApB#boEePuz6712LJ5-ggAZTtw){target='_blank'}
 : audio only course covering basic thai. there are 30 lessons that are 30 minutes each. could be used as an introductory course but i used it as supplementary audio practice. link above takes you to a mega.nz folder where you can stream or download their complete course.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "reading" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "reading" %}
 
 [Mary Haas Thai Reader](https://thai-notes.com/reading/thaireader.html){target='_blank'}
 : a series of short graded readers, first published in 1945. the link above is to an online version with interactive features such as an integrated pop up dictionary and the ability to choose between a looped or loopless font.
@@ -73,8 +73,8 @@ honestly i don't think the textbooks available for thai are all that great since
 [Aakanee: Thai Recordings](https://web.archive.org/web/20231110010435/http://www.aakanee.com/thai-recordings.html){target='_blank'}
 : over 100 5 minute monologues of thai speakers recalling experiences they've had in their life. comes with audio and transcript. i will add a link to an archive of these recordings and transcripts soon as well ^^
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "other" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "other" %}
 
 [thai-language](http://www.thai-language.com/){target='_blank'}
 : best thai-english dictionary on the net imo. you can choose your romanization system or turn it off completely, there are a ton of example sentences, and most words have native audio. i like that you can browse words by categories, and they have a good amount of thai slang although nothing super modern. definitely check out their reference section too, they have some interesting pages on more obscure and advanced features of the language.
@@ -91,4 +91,4 @@ honestly i don't think the textbooks available for thai are all that great since
 [Thai OCR Processor](https://github.com/nanonymoussu/python_thai_ocr){target='_blank'}
 : a python application for converting images or pdfs of thai to text. for some reason i've gotten more accurate results with this than [ocrmypdf](https://ocrmypdf.readthedocs.io/en/latest/){target='_blank'} even though they both use the thai tesseract model... sometimes crashes when processing pdfs though so i wrote [a script](https://gist.github.com/balfiere/c39feb84f9626fb895f2e921a3b9f552){target='_blank'} that applies the program to a folder of images and outputs a single text file. i use this with books i want to read with ttsu reader but can't buy a epub of, although it makes mistakes so definitely keep the original pdf nearby when reading.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}

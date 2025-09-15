@@ -3,7 +3,7 @@ title: ps2 resources
 layout: resources.liquid
 staus: valid
 ---
-{% resourcesContainer "hacking the ps2" %}{% renderTemplate "md" %}
+{% resourcesContainer "hacking the ps2" %}
 
 [FreeMCBoot](https://consolemods.org/wiki/PS2:FMCB){target='_blank'}
 : softmod of a playstation 2 memory card to run homebrew applications. link above has info on different methods of getting fmcb on a memory card and their compatibility with different models. i personally recommend just purchasing a memory card preconfigured with fmcb off amazon or aliexpress or something since i'm lazy and it's pretty cheap. follow [this guide](https://www.ps2-home.com/forum/viewtopic.php?t=5719){target='_blank'} to update fmbc if your card isn't on 1.966.
@@ -14,8 +14,8 @@ staus: valid
 [MX4SIO](https://www.psx-place.com/threads/mx4sio-sio2sd-sd-card-adapter-and-sd-driver-for-the-ps2-sio2-interface.29210/){target='_blank'}
 : this is the method i use for playing games on my ps2. you basically put your games on a microSD card, insert it into the MX4SIO card, then plug it into one of the memory card slots. it's faster than using a usb device (quicker load times and less cutscene stutter), much simpler to set up than SMB, and compatible with my slim model. you can buy the card alone for like $10 on amazon, aliexpress, etc as well as bundled with a freemcboot card for the simplest plug and play option. information on sd card compatibility can be found [here](https://docs.google.com/spreadsheets/d/1dPFl6ZWSILpKTATMS5iG7KVnUnHl2sWuZZtG_586NPc/edit#gid=1668706932){target='_blank'}. game compatibility can be found [here](https://docs.google.com/spreadsheets/d/1zHxhwT4nSkrCCAqJNlSndw1Yeh_9g3eL/edit#gid=2095482473){target='_blank'}.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "emulating the ps2" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "emulating the ps2" %}
 
 [PCSX2](https://pcsx2.net/){target='_blank'}
 : ps2 emulator for windows, mac, and linux. i recommend using the nightly build. you can find the wiki [here](https://wiki.pcsx2.net/Main_Page){target='_blank'}, which has more info on how to set it up plus
@@ -26,10 +26,10 @@ staus: valid
 [BIOS Images](https://myrient.erista.me/files/Redump/Sony%20-%20PlayStation%202%20-%20BIOS%20Images/){target='_blank'}
 : huge repository of ps2 BIOS images.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "ps2 games" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "ps2 games" %}
 
 [Myrient](https://myrient.erista.me/files/Redump/Sony%20-%20PlayStation%202/){target='_blank'}
 : huge collection of ps2 games from every region, downloads are fast too
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}

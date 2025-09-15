@@ -3,7 +3,7 @@ title: updates
 layout: resources.liquid
 staus: valid
 ---
-{% resourcesContainerOpen "updates" %}{% renderTemplate "md" %}
+{% resourcesContainerOpen "updates" %}
 
 **9/9/2025:** added more links to the [japanese](/resources/language/japanese) language learning pages, particularly in the grammar section and recommended youtubers in the listening section. audio files, workbooks, and answer keys for tobira ii beginning japanese have been added.
 
@@ -33,4 +33,4 @@ staus: valid
 
 **3/9/2024:** created this site today! i've been thinking about making a site like this for awhile now, to organize my favorite bookmarks related to language learning and game emulation, roms, etc and sharing it with others. after the recent loss of citra, yuzu, and tachiyomi, i decided it was finally time to make this site and share links to my own archives and backups of my favorite programs at risk of being taken down. eventually i want to add a personal page and maybe a yakuza shrine? if i can get better at coding...
           
-{% endrenderTemplate %}{% endresourcesContainerOpen %}
+{% endresourcesContainerOpen %}

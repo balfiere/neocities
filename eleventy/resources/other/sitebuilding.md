@@ -4,7 +4,7 @@ layout: resources.liquid
 staus: valid
 ---
 
-{% resourcesContainer "premade themes and layouts" %}{% renderTemplate "md" %}
+{% resourcesContainer "premade themes and layouts" %}
 
 - [cepheus's themes](https://cepheus.neocities.org/content/layouts){target='_blank'}
 - [cinni's themes](https://cinni.net/?z=/theme/layouts){target='_blank'}
@@ -24,9 +24,9 @@ staus: valid
 - [5493's themes](https://5493.neocities.org/themes){target='_blank'}
 - [Almost Sweet's themes](https://almostsweet.neocities.org/design){target='_blank'}
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}
 
-{% resourcesContainer "static site generators" %}{% renderTemplate "md" %}
+{% resourcesContainer "static site generators" %}
 
 static site generators are applications that can create full html files by inserting text into preconfigured templates. useful if you use the same html format across multiple pages.
 
@@ -48,8 +48,8 @@ static site generators are applications that can create full html files by inser
 [Obsidian Digital Garden Plugin](https://dg-docs.ole.dev/){target='_blank'}
 : another static site generator built for obsidian. has instructions for deploying to vercel and netlify, providers that also offer free static site hosting.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "css frameworks" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "css frameworks" %}
 
 css frameworks are premade, ready to use stylesheets that can speed up the development of your website by doing a lot of the styling for you. you can sometimes download them to host on your website, but many will have a link that you can put right into the head of your html file without needing to download them.
               
@@ -86,8 +86,8 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 [Pico CSS](https://picocss.com/){target='_blank'}
 : somewhere between a css reset and lightweight framework, emphasizes responsiveness and semantic html.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "code snippets" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "code snippets" %}
 
 [PetraPixel's Widgets](https://petrapixel.neocities.org/coding/widgets){target='_blank'}
 : a variety of widgets that don't rely on external scripts so they can be used by free accounts. includes widgets for status.cafe, last.fm, and pollcode.
@@ -116,8 +116,8 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 [my code snippets](https://kwaamfan.neocities.org/main/?z=/main/codes){target='_blank'}
 : i have some of my own code snippets on my personal site. includes a wii menu style media gallery, pictochat style microblog/changelog, draggable and collapsible windows, and more.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "javascript libraries" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "javascript libraries" %}
 
 [Rough Notation](https://roughnotation.com/){target='_blank'}
 : a small javascript library for creating animations with a handdrawn look.
@@ -134,8 +134,8 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 [Freezeframe.js](https://github.com/ctrl-freaks/freezeframe.js){target='_blank'}
 : control playing and pausing of animated gifs with mouse hover or click events.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "online tools" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "online tools" %}
             
 [ezgif](https://ezgif.com/){target='_blank'}
 : create, crop, resize, reverse, split and convert between animated image files like gifs, webp, apng, avif, and mp4 online.
@@ -176,8 +176,8 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 [Flexbox Playground](https://flexbox.tech/){target='_blank'}
 : interactive way to see how different flexbox settings work.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "learn" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "learn" %}
 
 [Interneting Is Hard](https://internetingishard.netlify.app/){target='_blank'}
 : straightforward, easy to read guide to web development suitable for beginners.
@@ -194,9 +194,9 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 [PetraPixel's tutorials](https://petrapixel.neocities.org/coding/how-to-make-a-website){target='_blank'}
 : beginner webdev tutorials aimed at indie web users looking to code websites from scratch.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "other" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "other" %}
 
 - [scripted](https://scripted.neocities.org/){target='_blank'}
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}

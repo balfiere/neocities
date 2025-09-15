@@ -3,13 +3,13 @@ title: learn japanese resources
 layout: resources.liquid
 staus: valid
 ---
-{% resourcesContainer "textbooks" %}{% renderTemplate "md" %}
+{% resourcesContainer "textbooks" %}
 
 [Tobira: Beginning Japanese](https://tobirabeginning.9640.jp/){target='_blank'}
 : a newish beginning japanese textbook series. i've gone through both books and really like the presentation as well as the lecture videos on the accompanying website linked above, and i prefer this book to genki for its more modern presentation. download the textbook, workbooks, and audio files for the first book [here](https://drive.google.com/drive/folders/1HKpiHOTAdgavnvXEBqGs5jZBdr3q8-Xe?usp=sharing){target='_blank'} and the second book [here](https://drive.google.com/drive/folders/1kZfYRo5GVcN9cMMDcNXry_Z07eoTJC2A?usp=sharing){target='_blank'}.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "kana" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "kana" %}
 
 [Learn Hiragana: The Ultimate Guide](https://www.tofugu.com/japanese/learn-hiragana/){target='_blank'}
 : guide by tofugu to learning hiragana. i love their mnemonics system, it made it really easy to pick up hiragana in a few days.
@@ -17,8 +17,8 @@ staus: valid
 [Learn Katakana: The Ultimate Guide](https://www.tofugu.com/japanese/learn-katakana/){target='_blank'}
 : a katakana version of the guide above. i personally learned hiragana and katakana simultaneously (so for 'a' i learned あ and ア at the same time) but you can go through this after getting comfortable with hiragana too.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "kanji" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "kanji" %}
 
 [The Kodansha Kanji Learner's Course](https://libgen.is/book/index.php?md5=C94CE9595294A24DD1140C99E45583B4){target='_blank'}
 : guide to learning kanji. i feel like the keywords are more accurate and the mnemonics more useful than heiseig's remembering the kanji. i like the way it groups visually similar kanji and points out the differences so you can distinguish them more easily.
@@ -26,8 +26,8 @@ staus: valid
 [Ringotan](https://www.ringotan.com/){target='_blank'}
 : android and ios app for learning how to write kana and kanji. you can pick the order of kanji to match a bunch of different textbooks as well as wanikani. i like it for its SRS system and ability to control how many kanji you review.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "grammar" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "grammar" %}
 
 [Cure Dolly](https://kellenok.github.io/cure-script/about.html){target='_blank'}
 : youtube channel with a unique approach to teaching grammar. the above link takes you to a github site the converts Cure Dolly's entire grammar series into a website. it's organized like a textbook, with each 'chapter' linking to a video. cure dolly takes a visual approach to teaching the structure of japanese, which i found very helpful when i was starting out and trying to wrap my brain around how japanese is organized. i highly recommend checking out her channel if you're struggling to understand grammar explanations from other sources.
@@ -56,8 +56,8 @@ staus: valid
 [ichi.moe](https://ichi.moe/){target='_blank'}
 : paste a japanese sentence and this website will separate it into its components, giving readings and definitions. while not really a grammar resource, it can be helpful when you can't figure out all the parts of a conjugation and need help breaking it down.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "listening" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "listening" %}
 
 [Comprehensible Japanese](https://www.youtube.com/@cijapanese/featured){target='_blank'}
 : youtube channel and [website](https://cijapanese.com/){target='_blank'} with ALG/'comprehensible input' style videos – just watch the videos and acquire the language naturally. the youtube channel has free videos; way more can be found at their website if you subscribe to their patreon for $5 a month. i've downloaded a lot of their paid videos in 480p plus subtitles which you can stream or download through mega.nz [here](https://mega.nz/folder/cBNyUQhS#87qXpBmzyT3ai-VC8l-PAg){target='_blank'}.
@@ -99,9 +99,9 @@ and at ~N3 level:
 - [Onomappu](https://www.youtube.com/@Onomappu){target='_blank'}
 - [Ryusei Poddo Casto](https://www.youtube.com/@poddocasto){target='_blank'}
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}
 
-{% resourcesContainer "reading" %}{% renderTemplate "md" %}
+{% resourcesContainer "reading" %}
 
 [Tadoku](https://tadoku.org/japanese/en/free-books-en/){target='_blank'}
 : free graded readers you can read in browser or download. many come with illustrations, audio, and furigana.
@@ -121,4 +121,4 @@ and at ~N3 level:
 [hirogaru](https://hirogaru-nihongo.jp/en/){target='_blank'}
 : articles and videos about japan designed for beginner japanese learners. subtitles and furigana are toggable. articles come with audio and quiz questions to check comprehension.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}

@@ -2,12 +2,12 @@
 title: more links
 layout: resources.liquid
 ---
-{% resourcesContainer "general" %}{% renderTemplate "md" %}
+{% resourcesContainer "general" %}
 [freemediaheckyeah](https://fmhy.net/){target='_blank'}
 : website with links to just about any free or pirated material you could think of. if you're looking for something not on this site i recommend starting here.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "knitting, crochet, and cross stitch" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "knitting, crochet, and cross stitch" %}
 
 [PinDIY](https://www.pindiy.com/){target='_blank'}
 : download knitting, crochet, and cross stitch patterns for free. downloading requires coins, which u can earn by doing "tasks" after signing up (hover on "my center" on the top right and click on "tasks") which mainly consists of clicking on a button every hour and watching a video once a week. read more about earning coins [here](https://www.pindiy.com/thread-482705-1-1.html){target='_blank'}. has a huge collection of older, hard to find cross stitch patterns. usually as .pdfs but has "repaints" in .xsd or .pcs file formats too, which i prefer for backstitch patterns for use in cross stitch saga. has a good selection of knitting and crochet patterns as well. all patterns are user uploaded, so you can share patterns you've purchased too.
@@ -19,8 +19,8 @@ layout: resources.liquid
 : another android app that helps keep track of cross stitch patterns. i find it much harder to get used to after using pattern keeper but supports special stitch types like backstitching and french knots. if ur cross stitch pattern comes in .xsp, .xsd, or .pat, i recommend using this. link is unlocked version. [my mirror.](https://drive.google.com/file/d/1abiMhDCNb-1sy431V4hQJ1MCJIcwn26u/view?usp=sharing){target='_blank'}
 
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "media" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "media" %}
 
 [AniWave](https://aniwave.to/){target='_blank'}
 : my favorite website for watching anime, good selection and nice interface.
@@ -61,8 +61,8 @@ layout: resources.liquid
 [The Value of Knowledge: A Miniature Library of Philosophy](https://www.marxists.org/reference/subject/philosophy/index.htm){target='_blank'}
 : a curated collection of texts on philosophy from the last 400 years.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "chill" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "chill" %}
 
 [KittyCat Cafe](https://www.kittycat.cafe/){target='_blank'}
 : virtual cat cafe.
@@ -79,8 +79,8 @@ layout: resources.liquid
 [Zen](https://zen.unit.ms/){target='_blank'}
 : another minimal browser-based writing editor.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "applications" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "applications" %}
 
 [Obsidian](https://obsidian.md/){target='_blank'}
 : a flexible and private note taking app with a ton of user plugins to make it highly customizable. notes are stored as markdown files so you're not locked to the app. i like it for its ability to easily create connections to other notes and view those connections as a graph.
@@ -100,8 +100,8 @@ layout: resources.liquid
 [Nicotine+](https://nicotine-plus.org/){target='_blank'}
 : GUI application for downloading from the soulseek network. mostly used for sharing music files, but some users share videos, games, and other media.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "browser tools and extensions" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "browser tools and extensions" %}
 
 [uBlock Origin](https://github.com/gorhill/uBlock#ublock-origin){target='_blank'}
 : a wide spectrum content blocker which is able to block youtube ads.
@@ -133,4 +133,4 @@ layout: resources.liquid
 [Bypass All Shortlinks](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated){target='_blank'}
 : shortens the waiting time of shortlinks, and automatically progresses to the next page. indespensible if you download a lot from direct download sites.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}

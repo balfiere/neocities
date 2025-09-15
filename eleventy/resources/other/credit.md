@@ -3,7 +3,7 @@ title: credit
 layout: resources.liquid
 staus: valid
 ---
-{% resourcesContainerOpen "credit" %}{% renderTemplate "md" %}
+{% resourcesContainerOpen "credit" %}
 
 [Eleventy](https://www.11ty.dev/){target='_blank'}
 : i use eleventy to generate this site. i followed [this tutorial](https://whiona.weblog.lol/2023/10/my-neocities-workflow:-using-eleventy-and-the-cli-to-speed-up-development){target='_blank'} by [whiona](https://whiona.me/){target='_blank'} to learn how to set eleventy up but i use the following tutorial to update my site instead of Neocities CLI.
@@ -16,4 +16,4 @@ staus: valid
 
 the arrow pixel and favicon were downloaded from [pixel-soup](https://pixel-soup.tumblr.com/){target='_blank'}, and the background was downloaded from [eggnored](https://eggnored.tumblr.com/pattern){target='_blank'}; all were recolored by me. the haruka gif on the home page was made by me and is free to use, no credit necessary! you can view the source code for this website [here](https://github.com/balfiere/neocities){target='_blank'} under the public folder.
 
-{% endrenderTemplate %}{% endresourcesContainerOpen %}
+{% endresourcesContainerOpen %}

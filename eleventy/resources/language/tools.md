@@ -3,7 +3,7 @@ title: language learning tools
 layout: resources.liquid
 staus: valid
 ---
-{% resourcesContainer "anki" %}{% renderTemplate "md" %}
+{% resourcesContainer "anki" %}
 
 [Anki](https://apps.ankiweb.net/){target='_blank'}
 : android, and ios. highly customizable, with access to a ton of different user made [plug-ins](https://ankiweb.net/shared/addons){target='_blank'} and [decks](https://ankiweb.net/shared/decks){target='_blank'}. i recommend using the FSRS algorithm for scheduling your cards instead of the default SM-2 scheduler, which you can learn about [here](https://github.com/open-spaced-repetition/fsrs4anki){target='_blank'}.
@@ -47,8 +47,8 @@ staus: valid
 [ames](https://github.com/eshrh/ames){target='_blank'}
 : a script for linux that lets you add screenshots, audio recordings, or text to your last created anki card with a single keystroke. currently only works on X11 but has suggestions on adjusting it for wayland. i have a [fork](https://github.com/balfiere/amesHyprland){target='_blank'} designed specifically for hyprland. i haven't tested it but the animecards site has [a guide](https://animecards.site/media/#windows){target='_blank'} describing how to use sharex to achieve a similar set up on windows. i mainly use this for sentence mining from video games.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "browser tools and extensions" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "browser tools and extensions" %}
 
 [Yomitan](https://github.com/themoeway/yomitan){target='_blank'}
 : interactive pop-up dictionary. built for japanese but support for other languages is being worked on. some non-japanese dictionaries that work with yomitan can be found [here](https://github.com/MarvNC/yomichan-dictionaries){target='_blank'}.
@@ -74,8 +74,8 @@ staus: valid
 [Vocal Remover and Isolation](https://vocalremover.org/){target='_blank'}
 :  removes background music and noise from audio files. i use this with audio clips i've mined that i want to use for shadowing practice.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "applications" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "applications" %}
 
 [Mokuro](https://mokuro.moe/){target='_blank'}
 : tool that processes manga, creating html files with selectable text so you can easily look words up and create anki flashcards using a browser-based popup dictionary like yomitan. you can find a collection of preprocessed manga [here](https://www.mokuro.moe/manga/){target='_blank'}.
@@ -92,8 +92,8 @@ staus: valid
 [Thorium](https://thorium.rocks/){target='_blank'}
 : a chromium fork with support for extra codecs. i use it with asbplayer to watch mkv files and other videos that can't be opened in other browsers.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
-{% resourcesContainer "texthooking" %}{% renderTemplate "md" %}
+{% endresourcesContainer %}
+{% resourcesContainer "texthooking" %}
 
 [agent](https://github.com/0xDC00/agent){target='_blank'}
 : uses javascript to extract text from games. works with non visual novel games as well as emulators. games with scripts already written for agent can be found at their [script repository](https://github.com/0xDC00/scripts){target='_blank'}. specific builds of emulators compatible with agent can be found [here](https://github.com/koukdw/emulators/releases/tag/working){target='_blank'}.
@@ -107,4 +107,4 @@ staus: valid
 [exSTATic](https://github.com/KamWithK/exSTATic){target='_blank'}
 : pulls text from texthookers over a websocket connection and into the browser so browser extensions like yomitan can be used. keeps track of stats like reading time and speed per game. also supports tracking stats from mokuro and ttsu reader.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}

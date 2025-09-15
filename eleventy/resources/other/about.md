@@ -3,7 +3,7 @@ title: about the website
 layout: resources.liquid
 staus: valid
 ---
-{% resourcesContainerOpen "about the website" %}{% renderTemplate "md" %}
+{% resourcesContainerOpen "about the website" %}
 
 this website is dedicated to sharing various resources i've used and found helpful in my life for free. while there are plenty of places on the internet to discuss game piracy, i couldn't find a satisfactory place to discuss and share media freely for my more niche interests like learning thai and cross stitch.
 
@@ -11,4 +11,4 @@ i started a similar project over two years ago in the early days of my thai lang
 
 while my initial reason for creating this site was to share resources for learning thai, i also wanted to share resources for my other interests in the same fashion – providing links to my favorite sites, tutorials, and downloads while giving my own commentary in hopes it makes emulation, piracy, language learning, etc more accessible to those who may be new to these things. to be honest though i think making this website and organizing things in this way is more about helping my future self find things i like and have used more easily when i need them again, like when i need to update my hacked switch and can't remember which guide i need to follow to update it safely. i guess i just can't be bothered to organize my hundreds of bookmarks in a more normal way ^^;
 
-{% endrenderTemplate %}{% endresourcesContainerOpen %}
+{% endresourcesContainerOpen %}

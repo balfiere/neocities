@@ -3,7 +3,7 @@ title: switch resources
 layout: resources.liquid
 staus: valid
 ---
-{% resourcesContainer "hacking the switch" %}{% renderTemplate "md" %}
+{% resourcesContainer "hacking the switch" %}
 
 [Is My Switch Patched?](https://ismyswitchpatched.com/){target='_blank'}
 : tool that lets you check if your switch is unpatched and thus vulnerable to the fusee-gelee exploit that lets you soft mod your switch.
@@ -35,9 +35,9 @@ staus: valid
 [Online Payload Injector](https://ineo6.github.io/web-cfw-loader/){target='_blank'}
 : an online alternative to [TegraRcmGUI](https://github.com/eliboa/TegraRcmGUI){target='_blank'} that i use to boot into hekate from linux or android.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}
 
-{% resourcesContainer "emulating the switch" %}{% renderTemplate "md" %}
+{% resourcesContainer "emulating the switch" %}
 
 [Yuzu](https://github.com/yuzu-mirror){target='_blank'}
 : switch emulator for windows and linux. while the original project has been taken down, the above link takes you to a github repository with an archive of builds before they were taken down. once installed follow [this guide](https://github.com/Abd-007/Switch-Emulators-Guide/blob/main/Yuzu.md){target='_blank'} to get it set up.
@@ -45,12 +45,12 @@ staus: valid
 [Ryujinx](https://rentry.co/ryujinx){target='_blank'}
 : switch emulator for windows, mac, and linux. you can read a setup guide [here](https://github.com/Abd-007/Switch-Emulators-Guide/blob/main/Ryujinx.md){target='_blank'}.
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}
 
-{% resourcesContainer "switch games" %}{% renderTemplate "md" %}
+{% resourcesContainer "switch games" %}
 
 - [Nxbrew](https://nxbrew.net/){target='_blank'}
 - [nswgame](https://nswgame.com/category/switch/){target='_blank'}
 - [ziperto](https://www.ziperto.com/){target='_blank'}
 
-{% endrenderTemplate %}{% endresourcesContainer %}
+{% endresourcesContainer %}
