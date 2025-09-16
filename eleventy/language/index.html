@@ -40,12 +40,12 @@
         <tab-container>
             <tab-content id="thai">
                 <div class="content">
-{% capture thai %}{% renderExternalMarkdown "language/_includes/thai.md" %}{% endcapture %}{{ thai | markdownify }}
+{% renderExternalMarkdown "language/_includes/thai.md" %}
                 </div>
             </tab-content>
             <tab-content id="japanese">
                 <div class="content">
-{% capture japanese %}{% renderExternalMarkdown "language/_includes/japanese.md" %}{% endcapture %}{{ japanese | markdownify }}
+{% renderExternalMarkdown "language/_includes/japanese.md" %}
                 </div>
             </tab-content>
             <tab-content id="media-log">
@@ -85,7 +85,7 @@
             </tab-content>
             <tab-content id="home">
                 <div class="content">
-{% capture home %}{% renderExternalMarkdown "language/_includes/home.md" %}{% endcapture %}{{ home | markdownify }}
+{% renderExternalMarkdown "language/_includes/home.md" %}
                 </div>
             </tab-content>
         </tab-container>

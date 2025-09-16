@@ -7,6 +7,11 @@ const markdownItDeflist = require("markdown-it-deflist");
 
 module.exports = function (eleventyConfig) {
 
+  	eleventyConfig.setLiquidOptions({
+		dynamicPartials: true,
+		strictFilters: false, // renamed from `strict_filters` in Eleventy 1.0
+	});
+
   // basic markdown setup
 
   const md = markdownIt({
@@ -46,16 +51,17 @@ module.exports = function (eleventyConfig) {
 </article>`;
   });
 
-  // shortcode to include rendered content of a specific input file
-
   eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+  // shortcode to render to body of an external markdown file
   eleventyConfig.addShortcode("renderExternalMarkdown", function (filePath) {
-    // Read the file and parse with gray-matter
+    
+    // read the file and parse with gray-matter
     const fileContent = fs.readFileSync(filePath, "utf8");
     const parsedFile = matter(fileContent);
 
-    // Return the content without the front matter
-    return parsedFile.content;
+    // return the content without the front matter as html
+    return md.render(parsedFile.content);
   });
   return {
     htmlTemplateEngine: 'liquid'
