@@ -15,4 +15,4 @@ or a gallery of your photography, with your memories of the time you took it in 
 
 etc, etc, etc.
 
-Photo by [Cikal Armatyar](https://unsplash.com/@armatyar?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-group-of-people-riding-motorcycles-down-a-street-mtfHvjmbXTU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+Photo by [Cikal Armatyar](https://unsplash.com/@armatyar?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'} on [Unsplash](https://unsplash.com/photos/a-group-of-people-riding-motorcycles-down-a-street-mtfHvjmbXTU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'}

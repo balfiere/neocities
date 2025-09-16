@@ -16,4 +16,4 @@ this `modal-entry-{entry}` is used in three places for every `<section>`:
 *   the `for` attribute of the `<label>` that wraps the image
 *   the `for` attribute of the `<label>` that wraps the page behind the popup when it is open
 
-Photo by [Karwin Luo](https://unsplash.com/@karw1n?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/old-building-with-wires-against-modern-city-skyline-Zb27OdkMxsI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+Photo by [Karwin Luo](https://unsplash.com/@karw1n?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'} on [Unsplash](https://unsplash.com/photos/old-building-with-wires-against-modern-city-skyline-Zb27OdkMxsI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'}

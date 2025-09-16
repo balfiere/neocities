@@ -10,6 +10,6 @@ even though i said that this gallery is javascript free, it's more like it doesn
 
 the page is still useable even if javascript is disabled however. you can try this by opening up dev tools and disabling javascript.
 
-eventually i plan to see if i can implement [command and commandfor](https://developer.chrome.com/blog/command-and-commandfor) with the `<dialog>` element to simplify the html and css even more and remove the javascript entirely.
+eventually i plan to see if i can implement [command and commandfor](https://developer.chrome.com/blog/command-and-commandfor){target='_blank'} with the `<dialog>` element to simplify the html and css even more and remove the javascript entirely.
 
-Photo by [billow926](https://unsplash.com/@billow926?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-man-riding-a-motorcycle-down-a-street-UcOnON2i1pE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+Photo by [billow926](https://unsplash.com/@billow926?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'} on [Unsplash](https://unsplash.com/photos/a-man-riding-a-motorcycle-down-a-street-UcOnON2i1pE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'}

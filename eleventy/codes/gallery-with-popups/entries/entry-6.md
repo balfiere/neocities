@@ -12,4 +12,4 @@ you don't need to use images of the same size or aspect ratio, `object-fit: cove
 
 weird things may happen if `--image-height` is set to auto and manually tweaking the rest of the code may be necessary.
 
-Photo by [Fabian Bächli](https://unsplash.com/@fabianbaechli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-dark-alley-with-a-few-shops-on-the-side-of-it-BdfhE2ST1tE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+Photo by [Fabian Bächli](https://unsplash.com/@fabianbaechli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'} on [Unsplash](https://unsplash.com/photos/a-dark-alley-with-a-few-shops-on-the-side-of-it-BdfhE2ST1tE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'}

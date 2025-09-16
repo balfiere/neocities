@@ -12,4 +12,4 @@ or just set `--image-justify` to center. then images will be centered on the pag
 
 even if you leave it how it is however it should still be responsive and mobile friendly.
 
-Photo by [Duc Van](https://unsplash.com/@duke91?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-narrow-alley-way-with-a-clock-on-the-wall-P4WsoMMa4yM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+Photo by [Duc Van](https://unsplash.com/@duke91?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'} on [Unsplash](https://unsplash.com/photos/a-narrow-alley-way-with-a-clock-on-the-wall-P4WsoMMa4yM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'}
