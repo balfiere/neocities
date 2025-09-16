@@ -75,7 +75,7 @@ main {
     column-width: 45%;
 }
 
-article {
+section {
     position: relative;
     top: calc(var(--gap) / 4);
     left: calc(var(--gap) / 4);
@@ -86,7 +86,7 @@ article {
     display: inline-block;
   }
 
-article .inner {
+section .inner {
     padding: calc(var(--gap) / 3);
     transform: translate(calc(var(--gap) / -4), calc(var(--gap) / -4));
     width: 100%;
@@ -95,21 +95,21 @@ article .inner {
     transition: all 0.3s ease;
 }
 
-article:nth-child(7n) .inner {background-color: rgb(222, 255, 244);} 
-article:nth-child(7n + 1) .inner {background-color: rgb(238, 224, 255);} 
-article:nth-child(7n + 2) .inner {background-color: rgb(223, 255, 222);} 
-article:nth-child(7n + 3) .inner {background-color: rgb(255, 223, 230);}
-article:nth-child(7n + 4) .inner {background-color: rgb(223, 228, 255);}
-article:nth-child(7n + 5) .inner {background-color: rgb(255, 253, 225);}
-article:nth-child(7n + 6) .inner {background-color: rgb(255, 224, 253);}
+section:nth-child(7n) .inner {background-color: rgb(222, 255, 244);} 
+section:nth-child(7n + 1) .inner {background-color: rgb(238, 224, 255);} 
+section:nth-child(7n + 2) .inner {background-color: rgb(223, 255, 222);} 
+section:nth-child(7n + 3) .inner {background-color: rgb(255, 223, 230);}
+section:nth-child(7n + 4) .inner {background-color: rgb(223, 228, 255);}
+section:nth-child(7n + 5) .inner {background-color: rgb(255, 253, 225);}
+section:nth-child(7n + 6) .inner {background-color: rgb(255, 224, 253);}
 
-article .inner a {
+section .inner a {
     text-decoration: none;
     color: unset;
     display: block;
 }
 
-article::before {
+section::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -127,7 +127,7 @@ article::before {
     );
   }
 
-article:hover  .inner{
+section:hover  .inner{
     transition: all 0.3s ease;
     transform:translate(0, 0);
 }
@@ -193,20 +193,20 @@ article:hover  .inner{
         background: rgb(17, 17, 17);
     }
 
-    article .inner, article::before, header {
+    section .inner, section::before, header {
         border-color: rgb(128, 128, 128);
         color: white;
     }
 
-    article:nth-child(7n) .inner {background-color: #5a3b72;} 
-    article:nth-child(7n + 1) .inner {background-color: #065c6c;} 
-    article:nth-child(7n + 2) .inner {background-color: #3f2d76;} 
-    article:nth-child(7n + 3) .inner {background-color: #066c5b;}
-    article:nth-child(7n + 4) .inner {background-color: #081664;}
-    article:nth-child(7n + 5) .inner {background-color: #36066c;}
-    article:nth-child(7n + 6) .inner {background-color: #04447b;}
+    section:nth-child(7n) .inner {background-color: #5a3b72;} 
+    section:nth-child(7n + 1) .inner {background-color: #065c6c;} 
+    section:nth-child(7n + 2) .inner {background-color: #3f2d76;} 
+    section:nth-child(7n + 3) .inner {background-color: #066c5b;}
+    section:nth-child(7n + 4) .inner {background-color: #081664;}
+    section:nth-child(7n + 5) .inner {background-color: #36066c;}
+    section:nth-child(7n + 6) .inner {background-color: #04447b;}
 
-    article::before {
+    section::before {
         background: repeating-linear-gradient(
           45deg,
           rgb(0, 0, 0),

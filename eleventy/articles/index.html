@@ -14,7 +14,7 @@
         </header>
         <main>
             {% for article in articles %}
-            <article>
+            <section>
                 <div class="inner">
                     <a target="_blank" href="{{ article[3] }}">
                         <div class="title">{{ article[0] }}</div>
@@ -22,7 +22,7 @@
                         <div class="description">{{ article[2] }}</div>
                     </a>
                 </div>
-            </article>
+            </section>
             {% endfor %}
         </main>
     </body>
