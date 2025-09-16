@@ -452,310 +452,32 @@
 
         <div id="gallery-container">
 
+            {% for entry in collections.gallery %}
+
             <section>
-                <input class="modal-toggle" id="modal-entry-1" type="checkbox" />
-                <label class="modal-open" for="modal-entry-1">
+                <input class="modal-toggle" id="modal-{{ entry.page.fileSlug | slugify }}" type="checkbox" />
+                <label class="modal-open" for="modal-{{ entry.page.fileSlug | slugify }}">
                     <div class="img-box">
-                        <img src="images/image-1.jpg" alt="image 1" />
+                        <img src="images/{{ entry.data.image }}" alt="{{ entry.data.alt }}" />
                         <div class="transparent-box">
                             <span class="caption">
-                                <h3>title 1</h3>
+                                <h3>{{ entry.data.title }}</h3>
                             </span>
                         </div>
                     </div>
                 </label>
                 <dialog class="modal">
-                    <label class="modal-close" for="modal-entry-1"></label>
+                    <label class="modal-close" for="modal-{{ entry.page.fileSlug | slugify }}"></label>
                     <div class="modal-content">
                         <p>
-                            entry for image one. yap about something here.
-                        </p>
-                        <p>
-                            this page is more a less a stripped down version of my <a href="/crafts/">crafts</a> page, redesigned to be used as a media log. so each image could be a book,
-                            game, movie, etc. and the popup could have a review.
-                        </p>
-                        <p>
-                            or you could have the gallery be thumbnails of your art and the popup could have a bigger
-                            version with a description.
-                        </p>
-                        <p>
-                            or a gallery of your photography, with your memories of the time you took it in the popup.
-                        </p>
-                        <p>
-                            etc, etc, etc.
-                        </p>
-                        <p>Photo by <a
-                                href="https://unsplash.com/@armatyar?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Cikal
-                                Armatyar</a> on <a
-                                href="https://unsplash.com/photos/a-group-of-people-riding-motorcycles-down-a-street-mtfHvjmbXTU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                            {{ entry.content }}
                         </p>
                     </div>
                 </dialog>
             </section>
 
-            <section>
-                <input class="modal-toggle" id="modal-entry-2" type="checkbox" />
-                <label class="modal-open" for="modal-entry-2">
-                    <div class="img-box">
-                        <img src="images/image-2.jpg" alt="image 2" />
-                        <div class="transparent-box">
-                            <span class="caption">
-                                <h3>title 2</h3>
-                            </span>
-                        </div>
-                    </div>
-                </label>
-                <dialog class="modal">
-                    <label class="modal-close" for="modal-entry-2"></label>
-                    <div class="modal-content">
-                        <p>
-                            entry for image two goes here.
-                        </p>
-                        <p>
-                            each image and its popup are inside of a <code>&lt;section&gt;</code> in the <code>&lt;div id="gallery-container"&gt;</code> element. you can put this element inside an existing page then copy the css into that page's css file. you can also just edit this page directly if you want the whole page to be the gallery.
-                        </p>
-                        <p>Photo by <a
-                                href="https://unsplash.com/@goldenantelope?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Golden
-                                Antelope</a> on <a
-                                href="https://unsplash.com/photos/a-couple-of-motorcycles-parked-outside-a-building-8kdDgQvHUz8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                        </p>
+            {% endfor %}
 
-                    </div>
-                </dialog>
-            </section>
-
-            <section>
-                <input class="modal-toggle" id="modal-entry-3" type="checkbox" />
-                <label class="modal-open" for="modal-entry-3">
-                    <div class="img-box">
-                        <img src="images/image-3.jpg" alt="image 3" />
-                        <div class="transparent-box">
-                            <span class="caption">
-                                <h3>title 3</h3>
-                            </span>
-                        </div>
-                    </div>
-                </label>
-                <dialog class="modal">
-                    <label class="modal-close" for="modal-entry-3"></label>
-                    <div class="modal-content">
-                        <p>
-                            entry for image three goes here.
-                        </p>
-                        <p>
-                            each <code>&lt;section&gt;</code> <strong>must</strong> have a unique
-                            <code>modal-entry-{entry}</code>
-                        </p>
-                        <p>
-                            this is how the page knows which popup to open when you click on a given image.
-                        </p>
-                        <p>
-                            this <code>modal-entry-{entry}</code> is used in three places for every
-                            <code>&lt;section&gt;</code>:
-                        </p>
-                        <ul>
-                            <li>the <code>id</code> of the <code>&lt;input&gt;</code></li>
-                            <li>the <code>for</code> attribute of the <code>&lt;label&gt;</code> that wraps the image</li>
-                            <li>the <code>for</code> attribute of the <code>&lt;label&gt;</code> that wraps the page behind the popup
-                                when it is open</li>
-                        </ul>
-                        <p>Photo by <a
-                                href="https://unsplash.com/@karw1n?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Karwin
-                                Luo</a> on <a
-                                href="https://unsplash.com/photos/old-building-with-wires-against-modern-city-skyline-Zb27OdkMxsI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                        </p>
-                    </div>
-                </dialog>
-            </section>
-
-            <section>
-                <input class="modal-toggle" id="modal-entry-4" type="checkbox" />
-                <label class="modal-open" for="modal-entry-4">
-                    <div class="img-box">
-                        <img src="images/image-4.jpg" alt="image 4" />
-                        <div class="transparent-box">
-                            <span class="caption">
-                                <h3>title 4</h3>
-                            </span>
-                        </div>
-                    </div>
-                </label>
-                <dialog class="modal">
-                    <label class="modal-close" for="modal-entry-4"></label>
-                    <div class="modal-content">
-                        <p>
-                            entry for image four goes here.
-                        </p>
-                        <p>
-                            if you're a lazy person like me and don't want to copy and paste new <code>&lt;section&gt;</code> elements for each image then manually updating every <code>modal-entry-{entry}</code>, you can use a static site generator like <a target="_blank" href="https://www.11ty.dev/">11ty</a> to automatically generate the page from a json file or folder of markdown files. i have a tutorial explaining how to do so from a json file <a href="/notes/030-my-notes/building-a-web-page-from-json-data-using-11ty">here</a>, it should be easy enough to follow even if you have no idea what json is.
-                        </p>
-                        <p>
-                            this page was generated from markdown files. i don't currently have a tutorial on that, but you can take a look at this page's source code to see how it works. i also have a note explaining how one can work with external markdown files in 11ty <a href="/notes/030-my-notes/methods-of-using-markdown-with-11ty">here</a>.
-                        </p>
-                        <p>Photo by <a
-                                href="https://unsplash.com/@theotopolevsky?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Theo
-                                Topolevsky</a> on <a
-                                href="https://unsplash.com/photos/a-shopping-cart-is-parked-on-the-side-of-the-street-zgP8AbxBO8c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                        </p>
-
-                    </div>
-                </dialog>
-            </section>
-
-            <section>
-                <input class="modal-toggle" id="modal-entry-5" type="checkbox" />
-                <label class="modal-open" for="modal-entry-5">
-                    <div class="img-box">
-                        <img src="images/image-5.jpg" alt="image 5" />
-                        <div class="transparent-box">
-                            <span class="caption">
-                                <h3>title 5</h3>
-                            </span>
-                        </div>
-                    </div>
-                </label>
-                <dialog class="modal">
-                    <label class="modal-close" for="modal-entry-5"></label>
-                    <div class="modal-content">
-                        <p>
-                            entry for image five goes here.
-                        </p>
-                        <p>
-                            even though i said that this gallery is javascript free, it's more like it doesn't rely on javascript to work. a small bit of javascript is used to allow one to select an image and open its modal with the enter key, and to close the modals by hitting the escape key.
-                        </p>
-                        <p>
-                            the page is still useable even if javascript is disabled however. you can try this by opening up dev tools and disabling javascript.
-                        </p>
-                        <p>
-                            eventually i plan to see if i can implement <a target="_blank" href="https://developer.chrome.com/blog/command-and-commandfor">command and commandfor</a> with the <code>&lt;dialog&gt;</code> element to simplify the html and css even more and remove the javascript entirely.
-                        </p>
-                        <p>Photo by <a
-                                href="https://unsplash.com/@billow926?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">billow926</a>
-                            on <a
-                                href="https://unsplash.com/photos/a-man-riding-a-motorcycle-down-a-street-UcOnON2i1pE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                        </p>
-
-                    </div>
-                </dialog>
-            </section>
-
-            <section>
-                <input class="modal-toggle" id="modal-entry-6" type="checkbox" />
-                <label class="modal-open" for="modal-entry-6">
-                    <div class="img-box">
-                        <img src="images/image-6.jpg" alt="image 6" />
-                        <div class="transparent-box">
-                            <span class="caption">
-                                <h3>title 6</h3>
-                            </span>
-                        </div>
-                    </div>
-                </label>
-                <dialog class="modal">
-                    <label class="modal-close" for="modal-entry-6"></label>
-                    <div class="modal-content">
-                        <p>
-                            entry for image six goes here.
-                        </p>
-                        <p>
-                            the gallery is designed to display images in a grid, where the width and height of each
-                            image is the same and set by the css variables <code>--image-width</code> and
-                            <code>--image-height</code>.
-                        </p>
-                        <p>
-                            you don't need to use images of the same size or aspect ratio,
-                            <code>object-fit: cover</code> will take care of that.
-                        </p>
-                        <p>
-                            weird things may happen if <code>--image-height</code> is set to auto and manually tweaking
-                            the rest of the code may be necessary.
-                        </p>
-                        <p>Photo by <a
-                                href="https://unsplash.com/@fabianbaechli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fabian
-                                Bächli</a> on <a
-                                href="https://unsplash.com/photos/a-dark-alley-with-a-few-shops-on-the-side-of-it-BdfhE2ST1tE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                        </p>
-
-                    </div>
-                </dialog>
-            </section>
-
-            <section>
-                <input class="modal-toggle" id="modal-entry-7" type="checkbox" />
-                <label class="modal-open" for="modal-entry-7">
-                    <div class="img-box">
-                        <img src="images/image-7.jpg" alt="image 7" />
-                        <div class="transparent-box">
-                            <span class="caption">
-                                <h3>title 7</h3>
-                            </span>
-                        </div>
-                    </div>
-                </label>
-                <dialog class="modal">
-                    <label class="modal-close" for="modal-entry-7"></label>
-                    <div class="modal-content">
-                        <p>
-                            entry for image seven goes here.
-                        </p>
-                        <p>
-                            if you change the width of the images, the page padding, the gap, or the max number of images per row, search for
-                            <code>@media screen</code> and adjust the max-widths. this section controls break points to make your images center on the screen. i have notes
-                            explaining what this section does in the code comments in more detail and how to calculate breakpoints precisely.
-                        </p>
-                        <p>
-                            or just set <code>--image-justify</code> to center. then images will be centered on the page no matter what. or if you don't care about the getting the images to center, you can delete these media queries (although i recommend keeping the last one for the case of a single column).
-                        </p>
-                        <p>
-                            even if you leave it how it is however it should still be responsive and mobile friendly.
-                        </p>
-                        <p>Photo by <a
-                                href="https://unsplash.com/@duke91?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Duc
-                                Van</a> on <a
-                                href="https://unsplash.com/photos/a-narrow-alley-way-with-a-clock-on-the-wall-P4WsoMMa4yM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                        </p>
-
-                    </div>
-                </dialog>
-            </section>
-
-            <section>
-                <input class="modal-toggle" id="modal-entry-8" type="checkbox" />
-                <label class="modal-open" for="modal-entry-8">
-                    <div class="img-box">
-                        <img src="images/image-8.jpg" alt="image 8" />
-                        <div class="transparent-box">
-                            <span class="caption">
-                                <h3>title 8</h3>
-                            </span>
-                        </div>
-                    </div>
-                </label>
-                <dialog class="modal">
-                    <label class="modal-close" for="modal-entry-8"></label>
-                    <div class="modal-content">
-                        <p>
-                            entry for image eight goes here.
-                        </p>
-                        <p>
-                            i've tried to leave helpful comments in the code to explain what's going on, so you can make
-                            your own adjustments if you want. i also use css variables to make it easier to adjust
-                            things out of the box.
-                        </p>
-                        <p>
-                            i have only added styling related specifically to the gallery and modals to make it easier
-                            to copy and paste <code>&lt;div id="gallery-container"&gt;</code> on an existing page of
-                            yours, or to import your own site's styling css to the top of the page.
-                        </p>
-                        <p>Photo by <a
-                                href="https://unsplash.com/@ktfrancis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">K.T.
-                                Francis</a> on <a
-                                href="https://unsplash.com/photos/a-row-of-buildings-N8zv7KyjjXQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                        </p>
-
-                    </div>
-                </dialog>
-            </section>
         </div>
     </main>
     <footer>
@@ -776,29 +498,6 @@
         element.setAttribute('tabindex', 0)
         console.log(element)
     })
-
-    // document.querySelectorAll('.modal-content').forEach(element => {
-    //     // make links inside of .modal-content unable to be selected
-    //     element.querySelectorAll('a').forEach(link => {
-    //         link.setAttribute('tabindex', -1)
-    //     })
-    // })
-
-    // when a modal is opened, make the links inside of it focusable
-    // .modal-toggle:checked~.modal .modal-content
-    // document.querySelectorAll('.modal-toggle').forEach(element => {
-    //     addEventListener('toggle', () => {
-    //         // if the element is checked
-    //         if (element.checked) {
-    //             // make the links inside of the modal focusable
-    //             document.querySelectorAll('.modal-toggle:checked~.modal .modal-content').forEach(element => {
-    //                 element.querySelectorAll('a').forEach(link => {
-    //                     link.setAttribute('tabindex', 0)
-    //                 })
-    //             })
-    //         }
-    //     })
-    // })
 
     document.onkeydown = function (event) {
         if (event.key === "Escape" && document.querySelector('.modal-toggle:checked ~ .modal .modal-close')) {
