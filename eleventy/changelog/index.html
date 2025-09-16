@@ -17,7 +17,7 @@
     <div id="wrapper">
         <div id="inner">
 
-            <article class="box">
+            <section class="box">
                 <div class="content">
                     <div class="date">rss/atom feed</div>
                     <div class="message">in addition to this changelog, you can view updates to my site as an atom feed
@@ -25,15 +25,15 @@
                         a seperate atom feed which you can find <a target="_top" href="/microblog/atom.xml">here</a>.
                     </div>
                 </div>
-            </article>
+            </section>
 
             {% for log in logs %}
-            <article class="box">
+            <section class="box">
                 <div class="content">
                     <div class="date">{{ log[0] }}</div>
                     <div class="message">{{ log[1] | markdownify-inline }}</div>
                 </div>
-            </article>
+            </section>
             {% endfor %}
 
         </div>
