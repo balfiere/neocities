@@ -37,7 +37,7 @@ main {
   transition: 0.4s ease;
 }
 
-header{
+header {
   background: rgba(255, 214, 218, 1);
   /* background: rgb(255, 231, 233); */
   padding: 1em;
@@ -45,7 +45,7 @@ header{
 }
 
 header::selection {
-  color: white!important;
+  color: white !important;
 }
 
 header a {
@@ -91,9 +91,9 @@ header a {
 }
 
 .img-box:hover img {
-    transform: scale(1.1);
-    opacity: 0.3;
-  }
+  transform: scale(1.1);
+  opacity: 0.3;
+}
 
 .transparent-box {
   transition: .5s ease;
@@ -106,10 +106,11 @@ header a {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   max-height: 100%;
-  overflow-y:visible;
+  overflow-y: visible;
 }
 
-.img-box:hover .transparent-box, .img-box:active .transparent-box {
+.img-box:hover .transparent-box,
+.img-box:active .transparent-box {
   opacity: 1.0;
 }
 
@@ -120,51 +121,56 @@ header a {
 
 /* text styling */
 
-h1, h2 {
-    font-family: "Beth Ellen", cursive;
-    font-weight: 400;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    padding: 0;
-    margin: 0;
+h1,
+h2 {
+  font-family: "Beth Ellen", cursive;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-    font-size: 1.75em;
-    line-height: 2.5em;
+  font-size: 1.75em;
+  line-height: 2.5em;
 }
 
-p, .popup li {
-    font-family: "Reenie Beanie", cursive;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin-top: 0.5rem;
+p,
+.popup li {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 0.5rem;
 }
 
 .popup p {
-    text-indent: 1rem;
+  text-indent: 1rem;
 }
 
 a {
-    font-size: unset;
+  font-size: unset;
   transition: .3s ease;
-  &:hover, &:focus{
-    color:rgb(219, 138, 138);
+
+  &:hover,
+  &:focus {
+    color: rgb(219, 138, 138);
   }
 }
 
-header a:hover, header a:focus {
-    color: white;
+header a:hover,
+header a:focus {
+  color: white;
 }
 
 ul {
-	margin: 0.8rem 0;
+  margin: 0.8rem 0;
 }
 
 li {
-    list-style: none;
-    margin: 0.8rem 1rem;
+  list-style: none;
+  margin: 0.8rem 1rem;
 }
 
 li:before {
@@ -210,12 +216,12 @@ li:before {
 }
 
 /* modal is opened */
-.modal-toggle:checked ~ .modal {
+.modal-toggle:checked~.modal {
   /* z-index: 1; */
   opacity: 1;
   pointer-events: all;
   transition: all .3s ease;
-  user-select: all;
+  user-select: auto;
 }
 
 /* close on click on the overlay */
@@ -226,6 +232,7 @@ li:before {
   position: absolute;
   right: 0;
   top: 0;
+  cursor: pointer;
 }
 
 /* modal background is solved this way because of the overscroll */
@@ -256,80 +263,82 @@ body::before {
   }
 }
 
-.modal-toggle:checked ~ .modal .popup {
+.modal-toggle:checked~.modal .popup {
   animation: open .5s ease-out;
 }
 
 /*----- modal styling -----*/
 
 .popup {
-    width: 95dvw;
-    position:fixed;
-    overflow-y:scroll;
-    max-width:68rem;
-    max-height:90svh;
-    padding:1em;
-    background-color:white;
-    box-sizing: border-box;
-    box-shadow: 8px 8px 0 rgba(253, 166, 166, 0.376);
-    border-radius: 0 0 125px 3px/3px 85px 5px 55px;
-    border: 4px solid #37353f;
+  width: 95dvw;
+  position: fixed;
+  overflow-y: scroll;
+  max-width: 68rem;
+  max-height: 90svh;
+  padding: 1em;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 0 rgba(253, 166, 166, 0.376);
+  border-radius: 0 0 125px 3px/3px 85px 5px 55px;
+  border: 4px solid #37353f;
 }
 
 /* dark mode */
 
 @media (prefers-color-scheme: dark) {
-    * {
-        color: white;
-    }
+  * {
+    color: white;
+  }
 
-    body {
+  body {
     background: #333;
-  background-image: linear-gradient(rgba(79, 79, 79, 0.4) 2px, transparent 1px), linear-gradient(90deg, rgba(79, 79, 79, 0.4) 2px, transparent 2px);
-  background-size: 12px 12px;
-    }
+    background-image: linear-gradient(rgba(79, 79, 79, 0.4) 2px, transparent 1px), linear-gradient(90deg, rgba(79, 79, 79, 0.4) 2px, transparent 2px);
+    background-size: 12px 12px;
+  }
 
-    .popup {
-        background: rgb(17, 17, 17);
-        border: rgba(79, 79, 79, 1) 4px solid;
-    }
+  .popup {
+    background: rgb(17, 17, 17);
+    border: rgba(79, 79, 79, 1) 4px solid;
+  }
 
-    header h1, header p, header a{
-      color: rgb(17, 17, 17);
-    }
+  header h1,
+  header p,
+  header a {
+    color: rgb(17, 17, 17);
+  }
 
 }
 
 /* mobile */
 
 @media screen and (max-width: 900px) {
-    main {
-        display:flex;
-        flex-direction: column;
-    }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 
-    header {
-      background: #f2bdbd;
-    }
+  header {
+    background: #f2bdbd;
+  }
 
-    .frill {
-        /* display:none; */
-      background: url("frillmobile.gif") repeat-x;
-      width: 100%;
-      height: 70px;
-    }
+  .frill {
+    /* display:none; */
+    background: url("frillmobile.gif") repeat-x;
+    width: 100%;
+    height: 70px;
+  }
 
-    .gallery-image {
-      overflow-y: auto;
-    }
+  .gallery-image {
+    overflow-y: auto;
+  }
 
-    /* give some more space for mobile users to close the modal */
+  /* give some more space for mobile users to close the modal */
 
-    .modal {
-        align-items:start;
-    }
+  .modal {
+    align-items: start;
+  }
 
-    .popup {
-        max-height:85svh;
-    }
+  .popup {
+    max-height: 85svh;
+  }
 }
