@@ -5,6 +5,8 @@ staus: valid
 ---
 {% resourcesContainerOpen "updates" %}
 
+**9/17/2025:** redesigned the layout a bit to make it easier to read longer pages.
+
 **9/9/2025:** added more links to the [japanese](/resources/language/japanese) language learning pages, particularly in the grammar section and recommended youtubers in the listening section. audio files, workbooks, and answer keys for tobira ii beginning japanese have been added.
 
 **9/5/2025:** added more links to the [site building](/resources/other/sitebuilding) page, including the creation of a javascript libraries section. updated dead links on the [switch](/resources/gaming/switch) page.
