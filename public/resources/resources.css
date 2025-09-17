@@ -47,23 +47,34 @@ section {
 /*----- variables -----*/
 
 :root {
+
+    /* body */
     --background-color:#dcd8ff;
-    --main-box-background: white;
-    --main-box-background-darkmode: #2b2b2b;
-    --text: #2b2b2b;
-    --text-darkmode: #e7e7e7;
-    --header: white;
-    --border: #7676ee;
-    --link: #5d4edd;
-    --link-hover: #fd89cf;
-    --link-darkmode: #b5b5ff;
-    --link-hover-darkmode: #f9dbff;
     --scrollbar: #968aff;
     --scrollbar-track: #968aff;
-    --gradient-dark: #a1a1ff;
+    
+    /* boxes */
+    --main-box-background: white;
+    --border: #7676ee;
     --gradient-light: #ffd6ff;
-    --gradient-dark-darkmode: #7272be;
+    --gradient-dark: #a1a1ff;
+
+    /* text */
+    --text: #2b2b2b;
+    --header: white;
+    --link: #5d4edd;
+    --link-hover: #fd89cf;
+    
+    /* dark mode */
+    --background-color-darkmode: #302f39;
+    --main-box-background-darkmode: #2b2b2b;
+    
     --gradient-light-darkmode: #bf8dc9;
+    --gradient-dark-darkmode: #7272be;
+    
+    --text-darkmode: #e7e7e7;
+    --link-darkmode: #b5b5ff;
+    --link-hover-darkmode: #f9dbff;
   }
  
 /*----- fonts -----*/
@@ -119,11 +130,23 @@ b, strong {
     font-weight: 600;
 }
 
-/* p {
-    margin:0;
-    padding:12px 0px;
-    line-height: 1.5;
-} */
+p {
+    &:has(+ p) {
+        text-indent: 2em;
+    }
+    +p {
+        text-indent: 2em;
+        margin-top: 1em;
+    }
+    &:has(img){
+        display: flex;
+        justify-content: center;
+    }
+    &:has(+ ul){
+        margin: 1em 0;
+    }
+
+}
     
 .subheader{
     background-image: linear-gradient(to right, #a1a1ff, #a8a4fe, #aea7fd, #b3aafd, #b9adfc, #c2b1fc, #cbb5fc, #d3b9fc, #e0c0fc, #ebc7fd, #f6cefe, #ffd6ff);
@@ -166,7 +189,7 @@ b, strong {
         "menu content"
         "footer footer";
     grid-template-columns: 190px auto;
-    grid-template-rows: 60px minmax(100svh, auto) 60px;
+    grid-template-rows: 60px minmax(calc(100svh - 120px),auto) 60px;
     /* gap: 12px; */
 }
 
@@ -347,19 +370,6 @@ section .subheader h3{
     font-weight:300;
     font-size: 1em;
     border-bottom: 1px solid var(--border);
-}
-
-section p{
-    /* padding: 0px; */
-    text-align:justify;
-    margin-bottom: 5px;
-    & > img{
-        margin: 0 auto;
-    }
-}
-
-section p:last-child{
-    margin-bottom: 0;
 }
 
 section dl{
@@ -586,8 +596,16 @@ section ul{
 /*----- dark mode -----*/
 
 @media (prefers-color-scheme: dark) {
-    body, #container, #box, .sidecontent, nav p{
+    body {
+        background-color: var(--background-color-darkmode);
+    }
+
+    .sidecontent, section {
         background-color: var(--main-box-background-darkmode);
+    }
+
+    #box{
+        background-color: color-mix(in srgb, var(--main-box-background-darkmode) 20%, var(--background-color-darkmode) 80%);
     }
 
     a {
