@@ -405,6 +405,7 @@
     h1 {
         margin: 1rem 0;
         font-weight: 700;
+        line-height: 2.5rem;
     }
 
     p+p {
@@ -469,9 +470,7 @@
                 <dialog class="modal">
                     <label class="modal-close" for="modal-{{ entry.page.fileSlug | slugify }}"></label>
                     <div class="modal-content">
-                        <p>
-                            {{ entry.content }}
-                        </p>
+                        {{ entry.content }}
                     </div>
                 </dialog>
             </section>
