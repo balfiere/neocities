@@ -1,6 +1,6 @@
 ---
 title: image 7
-tags: book
+tags: image-gallery
 categories: 
 - vietnam
 - day

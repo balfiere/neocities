@@ -1,6 +1,6 @@
 ---
 title: image 5
-tags: book
+tags: image-gallery
 categories: 
 - china
 - day

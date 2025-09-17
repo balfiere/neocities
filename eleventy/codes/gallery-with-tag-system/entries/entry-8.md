@@ -1,6 +1,6 @@
 ---
 title: image 8
-tags: book
+tags: image-gallery
 categories: 
 - taiwan
 - night

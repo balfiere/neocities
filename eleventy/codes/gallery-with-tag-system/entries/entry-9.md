@@ -1,6 +1,6 @@
 ---
 title: image 9
-tags: book
+tags: image-gallery
 categories: 
 - thailand
 - day

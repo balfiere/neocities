@@ -1,6 +1,6 @@
 ---
 title: image 2
-tags: book
+tags: image-gallery
 categories: 
 - thailand
 - night

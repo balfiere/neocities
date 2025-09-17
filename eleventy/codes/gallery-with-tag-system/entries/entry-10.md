@@ -1,6 +1,6 @@
 ---
 title: image 10
-tags: book
+tags: image-gallery
 categories: 
 - vietnam
 - night

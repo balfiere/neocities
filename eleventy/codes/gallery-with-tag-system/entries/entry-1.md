@@ -1,6 +1,6 @@
 ---
 title: image 1
-tags: book
+tags: image-gallery
 categories: 
 - indonesia
 - day
@@ -10,7 +10,7 @@ alt: image 1 alt text
 
 entry for image one. yap about something here.
 
-i made this page while test driving adding a filter system to my [crafts](/crafts/) page, which i thought with a little tweaking could be shared as a media log template. so each image could be a book, game, movie, etc. and the popup could have a review. then the tags could be the genre and/or the year you finished it.
+i made this page while test driving adding a filter system to my [crafts](/crafts/) page, which i thought with a little tweaking could be shared as a media log template. so each image could be a image-gallery, game, movie, etc. and the popup could have a review. then the tags could be the genre and/or the year you finished it.
 
 or you could have the gallery be thumbnails of your art and the popup could have a bigger version with a description, tagged with the character, medium, or theme. 
 

@@ -515,7 +515,7 @@
 
         <div id="image-grid-container">
 
-            {% for entry in collections.book %}
+            {% for entry in collections.image-gallery %}
 
             <section category="{% for category in entry.data.categories %}{{ category }} {% endfor %}">
                 <input class="modal-toggle" id="modal-{{ entry.page.fileSlug | slugify }}" type="checkbox" />
