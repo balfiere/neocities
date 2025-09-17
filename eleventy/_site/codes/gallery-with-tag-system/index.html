@@ -12,7 +12,7 @@
         /* gap between images */
         --image-width: 300px;
         /* width of the images */
-        --image-height: 350px;
+        --image-height: 300px;
         /* height of the images. can be set to auto if you want images to be shown in full, but will no longer be a grid */
         --image-justify: flex-end;
         /* flex-start to float images in the last row to the left of the container and center to center */
@@ -26,11 +26,11 @@
         /* when hovering images, overlay with this color */
         --page-overlay: rgba(0, 0, 0, 0.7);
         /* when the popup is opened, overlay with this color */
-        --padding: var(--gap); 
+        --padding: var(--gap);
         /* padding for both the caption and the popup */
-        --popup-width: 30rem;
+        --popup-width: 50rem;
         /* max width of the popup */
-        --popup-height: 50rem;
+        --popup-height: 70svh;
         /* max height of the popup */
         --popup-background-color: #fff;
         /* background color for the popup */
@@ -60,9 +60,64 @@
         border-image-width: 0;
     }
 
-    /* container for the gallery */
+    /* filter system */
 
-    #gallery-container {
+    form {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+        justify-content: center;
+        margin-bottom: var(--gap);
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* styling for the buttons */
+
+        & label {
+            display: inline-block;
+            min-width: 7ch;
+            text-align: center;
+            user-select: none;
+            cursor: pointer;
+            padding: var(--padding);
+            border: var(--popup-border);
+            border-radius: var(--popup-border-radius);
+            background-color: var(--popup-background-color);
+            color: var(--popup-text);
+
+            &:hover {
+                background: color-mix(in lab, var(--popup-background-color) 90%, var(--popup-background-color-dark));
+            }
+
+            &:has(:checked) {
+                background: color-mix(in lab, var(--popup-background-color-dark) 30%, var(--popup-background-color));
+                color: var(--popup-background-color);
+                &:hover {
+                    background: color-mix(in lab, var(--popup-background-color-dark) 10%, var(--popup-background-color));
+                }
+            }
+        }
+    }
+
+    /* the buttons for the filter system. you must add a new one for each category you use! */
+
+        form:has([name="day"]:checked)~#image-grid-container section:not([category~="day"]),
+    form:has([name="night"]:checked)~#image-grid-container section:not([category~="night"]),
+    form:has([name="indonesia"]:checked)~#image-grid-container section:not([category~="indonesia"]),
+    form:has([name="thailand"]:checked)~#image-grid-container section:not([category~="thailand"]),
+    form:has([name="vietnam"]:checked)~#image-grid-container section:not([category~="vietnam"]),
+    form:has([name="china"]:checked)~#image-grid-container section:not([category~="china"]),
+    form:has([name="japan"]:checked)~#image-grid-container section:not([category~="japan"]),
+    form:has([name="taiwan"]:checked)~#image-grid-container section:not([category~="taiwan"]) {
+        display: none;
+    }
+
+    /* container for the image gallery */
+
+    #image-grid-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -76,7 +131,7 @@
 
     /* container for each image */
 
-    #gallery-container section {
+    #image-grid-container section {
         flex: 0 1 var(--image-width);
 
         /* seemingly fixes an issue when --image-height is set to auto */
@@ -154,7 +209,7 @@
 
     .caption {
         position: absolute;
-        padding: var(--padding); /* changes how far from the edge the caption is */
+        padding: var(--padding);
         bottom: 0rem;
         left: 0rem;
         opacity: 1;
@@ -166,23 +221,16 @@
         -ms-transform: translate(-50%, -50%); */
     }
 
-    /* hover effect on caption. tweak to your tastes
-    or turn off entirely. */
+    /* hover effect on caption. tweak to your tastes or turn off entirely. */
 
     .img-box:hover .caption,
     section label:focus .caption {
-        transform:skewX(-15deg);
+        transform: skewX(-15deg);
     }
 
     /* modal */
 
-    /* instead of using display: none then display: block when the checkbox 
-    is checked like usual, i've instead used opacity to hide and show the 
-    modal. this way the animation is smooth. this requires setting 
-    pointer-events: none and user-select: none so that the user can't 
-    interact with the invisible modal before it's shown. z-index also needs 
-    to be increased to make sure the modal is on top of the following 
-    <section> elements  */
+    /* instead of using display: none then display: block when the checkbox is checked like usual, i've instead used opacity to hide and show the modal. this way the animation is smooth. this requires setting pointer-events: none and user-select: none so that the user can't interact with the invisible modal before it's shown. z-index also needs to be increased to make sure the modal is on top of the following <section> elements  */
 
     .modal {
         position: fixed;
@@ -211,8 +259,7 @@
         user-select: auto;
     }
 
-    /* animate the opening of the popup. tweak to your tastes
-    or turn off entirely */
+    /* animate the opening of the popup. tweak to your tastes or turn off entirely */
 
     @keyframes open {
         0% {
@@ -232,9 +279,7 @@
         animation: open var(--animation-length) ease-out;
     }
 
-    /* when the modal is opened, the <label> that closes the modal
-    covers the entire screen behind the modal, allowing the user
-    to click on the background to close it */
+    /* when the modal is opened, the <label> that closes the modal covers the entire screen behind the modal, allowing the user to click on the background to close it */
 
     .modal-close::before {
         bottom: 0;
@@ -252,8 +297,8 @@
         width: 95svw;
         position: fixed;
         overflow-y: scroll;
-        padding: var(--padding);
         box-sizing: border-box;
+        padding: var(--padding);
         max-width: var(--popup-width);
         max-height: var(--popup-height);
         box-shadow: var(--popup-box-shadow);
@@ -266,6 +311,25 @@
     /* dark mode */
 
     @media (prefers-color-scheme: dark) {
+        
+        form label {
+            color: var(--popup-text-dark);
+            background-color: var(--popup-background-color-dark);
+            border: var(--popup-border-dark);
+
+            &:hover {
+                background: color-mix(in lab, var(--popup-background-color-dark) 80%, var(--popup-background-color));
+            }
+
+            &:has(:checked) {
+                background: color-mix(in lab, var(--popup-background-color) 50%, var(--popup-background-color-dark));
+                color: var(--popup-background-color-dark);
+                &:hover {
+                    background: color-mix(in lab, var(--popup-background-color) 30%, var(--popup-background-color-dark));
+                }
+            }
+        }
+
         .modal-content {
             color: var(--popup-text-dark);
             background-color: var(--popup-background-color-dark);
@@ -274,30 +338,22 @@
         }
     }
 
-    /* optional. if you set var(--image-justify) to flex-start or flex-end, 
-    this section will make sure the images are centered on the page when 
-    the viewport is smaller than the --container-width.
+    /* if you set var(--image-justify) to flex-start or flex-end, this section will make sure the image gallery is centered on the page when the viewport is smaller than the --container-width + page padding. this means that justify-content basically only applies to the last row of images.
 
-    when the the viewport is smaller than the --container-width, the number 
-    of columns decreases. so we want to update the container width, but 
-    instead of using the --maximum-images, we need to use the number of 
-    columns currently being displayed.
+    if you do NOT want your image gallery to be centered, comment out or delete the following three media queries.
 
-    all we have to do is replace the var(--maximum-images) with the number 
-    of columns, then call the --container-width calculation again.
+    when the the viewport is smaller than the --container-width + page padding, the number of columns decreases. when this happens, the --container-width is 100% of its container. but then the images are not centered because justify-content is set to flex-start or flex-end. if you only want the flex-start or flex-end behavior to apply to the last row, we need to update the container width. 
+    
+    to do so, use the calculation i gave above but instead of using the --maximum-images, we need to use the number of columns currently being displayed. all we have to do is replace the var(--maximum-images) with the number of columns, then call the --container-width calculation again.
 
-    however, we need to manually set the breakpoint. in standard css, media 
-    queries cannot accept variables, so i can't calculate this width 
-    dynamically for you. the idea is that we want the minimum value the container 
-    width can be for a given number of columns, plus the space between the 
-    left and right edge of the screen.
+    however, we need to manually set the breakpoint, the viewport width at which the number of columns changes. in standard css, media queries cannot accept variables, so i can't calculate this width dynamically for you. the idea is that we want the minimum value the container width can be for a given number of columns, plus the space between the left and right edge of the screen.
 
     (var(--image-width) * (number of columns + 1)) + (var(--gap) * (number of columns)) 
     + (the space between your image gallery and the left and right edge of the screen)
 
-    for this demo page i have the page padding at 2rem on the left and right, so 
-    that adds 4rem. 1rem = 16px. if you put <div id="image-gallery"></div> inside 
-    of another container with it's own padding, you'll need to take that into account.
+    for this demo page i have the page padding at 2rem on the left and right, so that adds 4rem. 1rem = 16px. if you put <div id="image-gallery"></div> inside of another container with it's own padding, you'll need to take that into account.
+
+    my calculations for this demo page are:
 
     in the case of four columns, it would be 
         (300px * 5) + (16px * 4) + (4 * 16px) 
@@ -319,15 +375,9 @@
         = 600px + 16px + 64px 
         = 680px.
 
-    if this all sounds like wayyyyyyyyyy too much math, you can just use your 
-    browser's developer tools to adjust the width of your viewport, then 
-    record the width of the viewport when the number of columns changes. 
-    on firefox the viewport is displayed on the upper right corner of the 
-    page when dev tools are open and you change its width.
+    if this all sounds like wayyyyyyyyyy too much math, you can just use your browser's developer tools to adjust the width of your viewport, then record the width of the viewport when the number of columns changes. on firefox the viewport is displayed on the upper right corner of the page when dev tools are open and you change its width.
 
-    you could also use a css preprocessor like sass that allows you to 
-    use variables, but if you know how to do that, you probably don't 
-    need me to explain all this to you. */
+    you could also use a css preprocessor like sass that allows you to use variables, but if you know how to do that, you probably don't need me to explain all this to you. */
 
     @media screen and (max-width: 1628px) {
         :root {
@@ -350,41 +400,37 @@
         }
     }
 
-    /* once the images are in a single column, i prefer to have the images 
-    expand to the width of the viewport, then let the full height of the 
-    image show. personally i think this looks nicer on mobile.
+    /* once the images are in a single column, i prefer to have the images expand to the width of the viewport, then let the full height of the image show. personally i think this looks nicer on mobile.
     
     even if var(--image-justify) is set to center, i recommend keeping this. */
 
     @media screen and (max-width: 680px) {
 
-        #gallery-container section {
-            flex: 1 1 100%;
+        #image-grid-container section {
+            /* let the images expand to the width of the container */
+            flex: 1 1 100%; 
         }
 
         .img-box {
+            /* let the image height be automatically determined so that the full image is displayed */
             height: auto;
         }
 
-        /* if your popups have a lot of text, uncomment this. setting align-items: start
-        moves the popup to the top of the screen, which gives some more space at the bottom
-        for mobile users to close the modal. setting the popup to max-height: 85svh also helps
-        to 1) make the popup long enough for mobile users to actually read what's inside if 
-        you've set var(--popup-height) shorter, and 2) makes sure there's enough space at the 
-        bottom to close out of it if you've set it higher. 
-        you could also add a button inside the popup to close it. */
+        /* if your popups have a lot of text, leave this enabled. setting align-items: start moves the popup to the top of the screen, which gives some more space at the bottom for mobile users to close the modal. setting the popup to max-height: 85svh also helps to 1) make the popup long enough for mobile users to actually read what's inside if you've set var(--popup-height) shorter, and 2) makes sure there's enough space at the bottom to close out of it if you've set it higher. 
+        
+        if you don't like the way this looks, you could also add a button inside the popup to close it. */
 
-        /* .modal {
+        .modal {
             align-items: start;
         }
 
         .modal-content {
             max-height: 85svh;
-        } */
+        }
     }
 
     /* this stuff is for styling the demo. you don't need to keep this. 
-       styling based on tiny brutalism css:
+       styling cribbed from tiny brutalism css:
        https://github.com/pruger/tiny-brutalism-css */
 
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
@@ -446,16 +492,32 @@
             color: white;
         }
     }
+
 </style>
 
 <body>
     <main>
 
-        <div id="gallery-container">
+        <!-- for every category you use, you must add a new checkbox -->
+
+        <form>
+            <label><input type="checkbox" name="day">#day</label>
+            <label><input type="checkbox" name="night">#night</label>
+            <label><input type="checkbox" name="indonesia">#indonesia</label>
+            <label><input type="checkbox" name="thailand">#thailand</label>
+            <label><input type="checkbox" name="vietnam">#vietnam</label>
+            <label><input type="checkbox" name="china">#china</label>
+            <label><input type="checkbox" name="japan">#japan</label>
+            <label><input type="checkbox" name="taiwan">#taiwan</label>
+        </form>
+
+        <!-- image gallery starts here -->
+
+        <div id="image-grid-container">
 
             
 
-            <section>
+            <section category="indonesia day ">
                 <input class="modal-toggle" id="modal-entry-1" type="checkbox" />
                 <label class="modal-open" for="modal-entry-1">
                     <div class="img-box">
@@ -471,9 +533,9 @@
                     <label class="modal-close" for="modal-entry-1"></label>
                     <div class="modal-content">
                         <p>entry for image one. yap about something here.</p>
-<p>this page is more a less a stripped down version of my <a href="/crafts/">crafts</a> page, redesigned to be used as a media log. so each image could be a book, game, movie, etc. and the popup could have a review.</p>
-<p>or you could have the gallery be thumbnails of your art and the popup could have a bigger version with a description.</p>
-<p>or a gallery of your photography, with your memories of the time you took it in the popup.</p>
+<p>i made this page while test driving adding a filter system to my <a href="/crafts/">crafts</a> page, which i thought with a little tweaking could be shared as a media log template. so each image could be a book, game, movie, etc. and the popup could have a review. then the tags could be the genre and/or the year you finished it.</p>
+<p>or you could have the gallery be thumbnails of your art and the popup could have a bigger version with a description, tagged with the character, medium, or theme.</p>
+<p>or a gallery of your photography, with your memories of the time you took it in the popup, tagged by location.</p>
 <p>etc, etc, etc.</p>
 <p>Photo by <a href="https://unsplash.com/@armatyar?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Cikal Armatyar</a> on <a href="https://unsplash.com/photos/a-group-of-people-riding-motorcycles-down-a-street-mtfHvjmbXTU?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
 
@@ -483,7 +545,7 @@
 
             
 
-            <section>
+            <section category="thailand night ">
                 <input class="modal-toggle" id="modal-entry-2" type="checkbox" />
                 <label class="modal-open" for="modal-entry-2">
                     <div class="img-box">
@@ -499,7 +561,9 @@
                     <label class="modal-close" for="modal-entry-2"></label>
                     <div class="modal-content">
                         <p>entry for image two goes here.</p>
-<p>each image and its popup are inside of a <code>&lt;section&gt;</code> in the <code>&lt;div id=&quot;gallery-container&quot;&gt;</code> element. you can put this element inside an existing page then copy the css into that page’s css file. you can also just edit this page directly if you want the whole page to be the gallery.</p>
+<p>the gallery is designed to display images in a grid, where the width and height of each image is the same and set by the css variables <code>--image-width</code> and <code>--image-height</code>.</p>
+<p>you don’t need to use images of the same size or aspect ratio, <code>object-fit: cover</code> will take care of that.</p>
+<p>weird things may happen if <code>--image-height</code> is set to auto and manually tweaking the rest of the code may be necessary.</p>
 <p>Photo by <a href="https://unsplash.com/@goldenantelope?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Golden Antelope</a> on <a href="https://unsplash.com/photos/a-couple-of-motorcycles-parked-outside-a-building-8kdDgQvHUz8?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
 
                     </div>
@@ -508,7 +572,7 @@
 
             
 
-            <section>
+            <section category="vietnam day ">
                 <input class="modal-toggle" id="modal-entry-3" type="checkbox" />
                 <label class="modal-open" for="modal-entry-3">
                     <div class="img-box">
@@ -524,15 +588,26 @@
                     <label class="modal-close" for="modal-entry-3"></label>
                     <div class="modal-content">
                         <p>entry for image three goes here.</p>
-<p>each <code>&lt;section&gt;</code> <strong>must</strong> have a unique <code>modal-entry-{entry}</code></p>
-<p>this is how the page knows which popup to open when you click on a given image.</p>
-<p>this <code>modal-entry-{entry}</code> is used in three places for every <code>&lt;section&gt;</code>:</p>
+<p>the buttons to filter the gallery are inside <code>&lt;form&gt;</code>. if you don’t want the tagging system, simply</p>
 <ul>
-<li>the <code>id</code> of the <code>&lt;input&gt;</code></li>
-<li>the <code>for</code> attribute of the <code>&lt;label&gt;</code> that wraps the image</li>
-<li>the <code>for</code> attribute of the <code>&lt;label&gt;</code> that wraps the page behind the popup when it is open</li>
+<li>delete the <code>&lt;form&gt;</code> element</li>
+<li>delete the css styling for <code>form</code>
+<ul>
+<li>this includes the area with <code>form:has([name=...</code></li>
+<li>remember to delete the bit inside of <code>@media (prefers-color-scheme: dark) {}</code> too</li>
 </ul>
-<p>Photo by <a href="https://unsplash.com/@karw1n?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Karwin Luo</a> on <a href="https://unsplash.com/photos/old-building-with-wires-against-modern-city-skyline-Zb27OdkMxsI?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
+</li>
+<li>remove the <code>category</code> attributes from the <code>&lt;section&gt;</code> elements</li>
+</ul>
+<p>to remove the popups</p>
+<ul>
+<li>delete the line that starts with <code>&lt;input class=&quot;modal-toggle&quot;</code></li>
+<li>delete the line that starts with <code>&lt;label class=&quot;modal-open&quot;</code>, then delete its closing tag (before <code>&lt;dialog&gt;</code>)</li>
+<li>delete the entire <code>&lt;dialog&gt;</code> element inside of <code>&lt;section&gt;</code></li>
+<li>delete css that starts with <code>.modal</code></li>
+<li>delete the javascript</li>
+</ul>
+<p>Photo by <a href="https://unsplash.com/@potokvarte?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Hanna Lazar</a> on <a href="https://unsplash.com/photos/cityscape-with-construction-and-diverse-building-styles-33hJ58BqH6I?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
 
                     </div>
                 </dialog>
@@ -540,7 +615,7 @@
 
             
 
-            <section>
+            <section category="thailand night ">
                 <input class="modal-toggle" id="modal-entry-4" type="checkbox" />
                 <label class="modal-open" for="modal-entry-4">
                     <div class="img-box">
@@ -556,8 +631,13 @@
                     <label class="modal-close" for="modal-entry-4"></label>
                     <div class="modal-content">
                         <p>entry for image four goes here.</p>
-<p>if you’re a lazy person like me and don’t want to copy and paste new <code>&lt;section&gt;</code> elements for each image then manually updating every <code>modal-entry-{entry}</code>, you can use a static site generator like <a href="https://www.11ty.dev/" target="'_blank'">11ty</a> to automatically generate the page from a json file or folder of markdown files. i have a tutorial explaining how to do so from a json file <a href="/notes/030-my-notes/building-a-web-page-from-json-data-using-11ty">here</a>, it should be easy enough to follow even if you have no idea what json is.</p>
-<p>this page was generated from markdown files. i don’t currently have a tutorial on that, but you can take a look at <a href="https://github.com/balfiere/neocities/tree/main/eleventy/codes/gallery-with-popups" target="'_blank'">this page’s source code</a> to see how it works. i also have a note explaining how one can work with external markdown files in 11ty <a href="/notes/030-my-notes/methods-of-using-markdown-with-11ty">here</a>.</p>
+<p>each image and its popup are inside of a <code>&lt;section&gt;</code> in the <code>&lt;div id=&quot;image-grid-container&quot;&gt;</code> element. each <code>&lt;section&gt;</code> <strong>must</strong> have a unique <code>modal-entry-{entry}</code>. this is how the page knows which popup to open when you click on a given image.</p>
+<p>this <code>modal-entry-{entry}</code> is used in three places for every <code>&lt;section&gt;</code>:</p>
+<ul>
+<li>the <code>id</code> of the <code>&lt;input&gt;</code></li>
+<li>the <code>for</code> attribute of the <code>&lt;label&gt;</code> that wraps the image</li>
+<li>the <code>for</code> attribute of the <code>&lt;label&gt;</code> that wraps the page behind the popup when it is open</li>
+</ul>
 <p>Photo by <a href="https://unsplash.com/@theotopolevsky?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Theo Topolevsky</a> on <a href="https://unsplash.com/photos/a-shopping-cart-is-parked-on-the-side-of-the-street-zgP8AbxBO8c?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
 
                     </div>
@@ -566,7 +646,7 @@
 
             
 
-            <section>
+            <section category="china day ">
                 <input class="modal-toggle" id="modal-entry-5" type="checkbox" />
                 <label class="modal-open" for="modal-entry-5">
                     <div class="img-box">
@@ -582,10 +662,14 @@
                     <label class="modal-close" for="modal-entry-5"></label>
                     <div class="modal-content">
                         <p>entry for image five goes here.</p>
-<p>even though i said that this gallery is javascript free, it’s more like it doesn’t rely on javascript to work. a small bit of javascript is used to allow one to select an image and open its modal with the enter key, and to close the modals by hitting the escape key.</p>
-<p>the page is still useable even if javascript is disabled however. you can try this by opening up dev tools and disabling javascript.</p>
-<p>eventually i plan to see if i can implement <a href="https://developer.chrome.com/blog/command-and-commandfor" target="'_blank'">command and commandfor</a> with the <code>&lt;dialog&gt;</code> element to simplify the html and css even more and remove the javascript entirely.</p>
-<p>Photo by <a href="https://unsplash.com/@billow926?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">billow926</a> on <a href="https://unsplash.com/photos/a-man-riding-a-motorcycle-down-a-street-UcOnON2i1pE?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
+<p>furthermore, each <code>&lt;section&gt;</code> should have a <code>category</code> attribute. this is the tagging system. the gallery will still work even if a <code>&lt;section&gt;</code> is missing it, that photo just won’t be selected by any tag.</p>
+<p>the <code>category</code> attribute can take as many values as you want it to, just put a space between each tag. obviously this means your tags can’t have a space in them, but you can always put a space in the <code>&lt;label&gt;</code> element that shows your tag name.</p>
+<p>every time you use a new tag in your gallery, you must do the following:</p>
+<ul>
+<li>in the html, search for <code>&lt;form&gt;</code> and add a new <code>&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;tag&quot;&gt;#tag&lt;/label&gt;</code> inside of it, replacing <code>tag</code> with your new tag. this is adds a new button at the top of your page.</li>
+<li>in the css, search for <code>form:has([name</code>. add a new <code>form:has([name=&quot;tag&quot;]:checked)~#image-grid-container section:not([category~=&quot;tag&quot;])</code> but replace <code>tag</code> with your new tag. this is how clicking a button closes <code>&lt;section&gt;</code>s that don’t have the corresponding tag.</li>
+</ul>
+<p>Photo by <a href="https://unsplash.com/@billow926?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">billow926</a> on <a href="https://unsplash.com/photos/man-in-white-t-shirt-riding-on-black-motorcycle-during-daytime-YTJDGgCTREc?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
 
                     </div>
                 </dialog>
@@ -593,7 +677,7 @@
 
             
 
-            <section>
+            <section category="japan night ">
                 <input class="modal-toggle" id="modal-entry-6" type="checkbox" />
                 <label class="modal-open" for="modal-entry-6">
                     <div class="img-box">
@@ -609,9 +693,8 @@
                     <label class="modal-close" for="modal-entry-6"></label>
                     <div class="modal-content">
                         <p>entry for image six goes here.</p>
-<p>the gallery is designed to display images in a grid, where the width and height of each image is the same and set by the css variables <code>--image-width</code> and <code>--image-height</code>.</p>
-<p>you don’t need to use images of the same size or aspect ratio, <code>object-fit: cover</code> will take care of that.</p>
-<p>weird things may happen if <code>--image-height</code> is set to auto and manually tweaking the rest of the code may be necessary.</p>
+<p>if you’re a lazy person like me and don’t want to copy and paste new <code>&lt;section&gt;</code> elements for each image then manually update every <code>modal-entry-{entry}</code>, you can use a static site generator like <a href="https://www.11ty.dev/" target="'_blank'">11ty</a> to automatically generate the page from a json file or folder of markdown files. i have a tutorial explaining how to do so from a json file <a href="/notes/030-my-notes/building-a-web-page-from-json-data-using-11ty">here</a>, it should be easy enough to follow even if you have no idea what json is.</p>
+<p>this page was generated from markdown files. i don’t currently have a tutorial on that, but you can take a look at <a href="https://github.com/balfiere/neocities/tree/main/eleventy/codes/gallery-with-popups" target="'_blank'">this page’s source code</a> to see how it works. i also have a note explaining how one can work with external markdown files in 11ty <a href="/notes/030-my-notes/methods-of-using-markdown-with-11ty">here</a>.</p>
 <p>Photo by <a href="https://unsplash.com/@fabianbaechli?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Fabian Bächli</a> on <a href="https://unsplash.com/photos/a-dark-alley-with-a-few-shops-on-the-side-of-it-BdfhE2ST1tE?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
 
                     </div>
@@ -620,7 +703,7 @@
 
             
 
-            <section>
+            <section category="vietnam day ">
                 <input class="modal-toggle" id="modal-entry-7" type="checkbox" />
                 <label class="modal-open" for="modal-entry-7">
                     <div class="img-box">
@@ -636,7 +719,7 @@
                     <label class="modal-close" for="modal-entry-7"></label>
                     <div class="modal-content">
                         <p>entry for image seven goes here.</p>
-<p>if you change the width of the images, the page padding, the gap, or the max number of images per row, search for <code>@media screen</code> and adjust the max-widths. this section controls break points to make your images center on the screen. i have notes explaining what this section does in the code comments in more detail and how to calculate breakpoints precisely.</p>
+<p>if you change the width of the images, the page padding, the gap, or the max number of images per row, search for <code>@media screen</code> and adjust the max-widths. this section controls break points to make your gallery center on the screen. i have notes explaining what this section does in the code comments in more detail and how to calculate breakpoints precisely.</p>
 <p>or just set <code>--image-justify</code> to center. then images will be centered on the page no matter what. or if you don’t care about the getting the images to center, you can delete these media queries (although i recommend keeping the last one for the case of a single column).</p>
 <p>even if you leave it how it is however it should still be responsive and mobile friendly.</p>
 <p>Photo by <a href="https://unsplash.com/@duke91?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Duc Van</a> on <a href="https://unsplash.com/photos/a-narrow-alley-way-with-a-clock-on-the-wall-P4WsoMMa4yM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
@@ -647,7 +730,7 @@
 
             
 
-            <section>
+            <section category="taiwan night ">
                 <input class="modal-toggle" id="modal-entry-8" type="checkbox" />
                 <label class="modal-open" for="modal-entry-8">
                     <div class="img-box">
@@ -663,9 +746,62 @@
                     <label class="modal-close" for="modal-entry-8"></label>
                     <div class="modal-content">
                         <p>entry for image eight goes here.</p>
-<p>i’ve tried to leave helpful comments in the code to explain what’s going on, so you can make your own adjustments if you want. i also use css variables to make it easier to adjust things out of the box.</p>
-<p>i have only added styling related specifically to the gallery and modals to make it easier to copy and paste <code>&lt;div id=&quot;gallery-container&quot;&gt;</code> on an existing page of yours, or to import your own site’s styling css to the top of the page.</p>
+<p>even though i said that this gallery is javascript free, it’s more like it doesn’t rely on javascript to work. a small bit of javascript is used to allow one to select an image and open its modal with the enter key, and to close the modals by hitting the escape key.</p>
+<p>the page is still useable even if javascript is disabled however. you can try this by opening up dev tools and disabling javascript.</p>
+<p>eventually i plan to see if i can implement <a href="https://developer.chrome.com/blog/command-and-commandfor" target="'_blank'">command and commandfor</a> with the <code>&lt;dialog&gt;</code> element to simplify the html/css and remove the javascript entirely while increasing keyboard accessibility once firefox supports it.</p>
 <p>Photo by <a href="https://unsplash.com/@ktfrancis?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">K.T. Francis</a> on <a href="https://unsplash.com/photos/a-row-of-buildings-N8zv7KyjjXQ?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
+
+                    </div>
+                </dialog>
+            </section>
+
+            
+
+            <section category="thailand day ">
+                <input class="modal-toggle" id="modal-entry-9" type="checkbox" />
+                <label class="modal-open" for="modal-entry-9">
+                    <div class="img-box">
+                        <img src="images/image-9.jpg" alt="image 9 alt text" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h3>image 9</h3>
+                            </span>
+                        </div>
+                    </div>
+                </label>
+                <dialog class="modal">
+                    <label class="modal-close" for="modal-entry-9"></label>
+                    <div class="modal-content">
+                        <p>entry for image nine goes here.</p>
+<p>i’ve left comments in the code to explain what’s going on, what needs to be changed and what you’d be most likely to want to tweak, so you can edit the code more easily. i also use css variables to make it easier to adjust things out of the box.</p>
+<p>i have only added styling related specifically to the gallery and modals to make it easier to copy and paste the code onto an existing page of yours, or to import your own site’s styling.</p>
+<p>if you want to copy this into an existing page of yours, i highly recommend copying the <code>&lt;main&gt;</code> element in its entirety, renaming it to <code>&lt;div id=&quot;gallery&quot;&gt;</code> or something if you already have a <code>&lt;main&gt;</code> element. this is because the code that filters the images relies on the sibling selector; <code>&lt;form&gt;</code> and <code>&lt;div id=&quot;image-grid-container&quot;&gt;</code> <strong>must</strong> be siblings with <code>&lt;form&gt;</code> coming first. if you don’t know what that means keeping them in the same container then not adding new elements to it would be the simplest way of keeping everything working.</p>
+<p>Photo by <a href="https://unsplash.com/@markuswinkler?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Markus Winkler</a> on <a href="https://unsplash.com/photos/a-street-with-cars-and-buildings-5NAJr_RjCuI?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
+
+                    </div>
+                </dialog>
+            </section>
+
+            
+
+            <section category="vietnam night ">
+                <input class="modal-toggle" id="modal-entry-10" type="checkbox" />
+                <label class="modal-open" for="modal-entry-10">
+                    <div class="img-box">
+                        <img src="images/image-10.jpg" alt="image 10 alt text" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h3>image 10</h3>
+                            </span>
+                        </div>
+                    </div>
+                </label>
+                <dialog class="modal">
+                    <label class="modal-close" for="modal-entry-10"></label>
+                    <div class="modal-content">
+                        <p>this theme is shared under the <a href="https://unlicense.org/" target="'_blank'">unlicense</a>.</p>
+<p>i love to share what resources i’ve found helpful here on my site. if you feel the same way, consider crediting me or linking back to my site so it might help someone else too.</p>
+<p>Photo by <a href="https://unsplash.com/@seoling?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Hưng Phạm</a> on <a href="https://unsplash.com/photos/a-dark-alley-with-many-lights-hanging-from-the-ceiling-l6eXsqQ4jx0?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
 
                     </div>
                 </dialog>
@@ -676,9 +812,10 @@
         </div>
     </main>
     <footer>
-        <h1>responsive gallery with javascript free popup modals</h1>
+        <h1>responsive gallery with javascript free popup modals and filtering system</h1>
         <p>close modals by clicking outside the popup or pressing esc on your keyboard. all the necessary code is
-            included in the html file, just view page source and save. <a href="/main/">go back?</a></p>
+            included in the html file, just view page source and save. just want the gallery? click on image 3 for instructions to
+            remove the tag system and/or popups. <a href="/main/">go back?</a></p>
     </footer>
 </body>
 
@@ -704,5 +841,7 @@
         }
     }
 </script>
+
+<!-- gallery coded with love by kwaamfan: https://kwaamfan.neocities.org/ -->
 
 </html>

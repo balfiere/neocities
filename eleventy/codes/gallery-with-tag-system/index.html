@@ -12,7 +12,7 @@
         /* gap between images */
         --image-width: 300px;
         /* width of the images */
-        --image-height: 350px;
+        --image-height: 300px;
         /* height of the images. can be set to auto if you want images to be shown in full, but will no longer be a grid */
         --image-justify: flex-end;
         /* flex-start to float images in the last row to the left of the container and center to center */
@@ -26,11 +26,11 @@
         /* when hovering images, overlay with this color */
         --page-overlay: rgba(0, 0, 0, 0.7);
         /* when the popup is opened, overlay with this color */
-        --padding: var(--gap); 
+        --padding: var(--gap);
         /* padding for both the caption and the popup */
-        --popup-width: 30rem;
+        --popup-width: 50rem;
         /* max width of the popup */
-        --popup-height: 50rem;
+        --popup-height: 70svh;
         /* max height of the popup */
         --popup-background-color: #fff;
         /* background color for the popup */
@@ -60,7 +60,62 @@
         border-image-width: 0;
     }
 
-    /* container for the gallery */
+    /* filter system */
+
+    form {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+        justify-content: center;
+        margin-bottom: var(--gap);
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* styling for the buttons */
+
+        & label {
+            display: inline-block;
+            min-width: 7ch;
+            text-align: center;
+            user-select: none;
+            cursor: pointer;
+            padding: var(--padding);
+            border: var(--popup-border);
+            border-radius: var(--popup-border-radius);
+            background-color: var(--popup-background-color);
+            color: var(--popup-text);
+
+            &:hover {
+                background: color-mix(in lab, var(--popup-background-color) 90%, var(--popup-background-color-dark));
+            }
+
+            &:has(:checked) {
+                background: color-mix(in lab, var(--popup-background-color-dark) 30%, var(--popup-background-color));
+                color: var(--popup-background-color);
+                &:hover {
+                    background: color-mix(in lab, var(--popup-background-color-dark) 10%, var(--popup-background-color));
+                }
+            }
+        }
+    }
+
+    /* the buttons for the filter system. you must add a new one for each category you use! */
+
+        form:has([name="day"]:checked)~#image-grid-container section:not([category~="day"]),
+    form:has([name="night"]:checked)~#image-grid-container section:not([category~="night"]),
+    form:has([name="indonesia"]:checked)~#image-grid-container section:not([category~="indonesia"]),
+    form:has([name="thailand"]:checked)~#image-grid-container section:not([category~="thailand"]),
+    form:has([name="vietnam"]:checked)~#image-grid-container section:not([category~="vietnam"]),
+    form:has([name="china"]:checked)~#image-grid-container section:not([category~="china"]),
+    form:has([name="japan"]:checked)~#image-grid-container section:not([category~="japan"]),
+    form:has([name="taiwan"]:checked)~#image-grid-container section:not([category~="taiwan"]) {
+        display: none;
+    }
+
+    /* container for the image gallery */
 
     #image-grid-container {
         display: flex;
@@ -154,7 +209,7 @@
 
     .caption {
         position: absolute;
-        padding: var(--padding); /* changes how far from the edge the caption is */
+        padding: var(--padding);
         bottom: 0rem;
         left: 0rem;
         opacity: 1;
@@ -166,23 +221,16 @@
         -ms-transform: translate(-50%, -50%); */
     }
 
-    /* hover effect on caption. tweak to your tastes
-    or turn off entirely. */
+    /* hover effect on caption. tweak to your tastes or turn off entirely. */
 
     .img-box:hover .caption,
     section label:focus .caption {
-        transform:skewX(-15deg);
+        transform: skewX(-15deg);
     }
 
     /* modal */
 
-    /* instead of using display: none then display: block when the checkbox 
-    is checked like usual, i've instead used opacity to hide and show the 
-    modal. this way the animation is smooth. this requires setting 
-    pointer-events: none and user-select: none so that the user can't 
-    interact with the invisible modal before it's shown. z-index also needs 
-    to be increased to make sure the modal is on top of the following 
-    <section> elements  */
+    /* instead of using display: none then display: block when the checkbox is checked like usual, i've instead used opacity to hide and show the modal. this way the animation is smooth. this requires setting pointer-events: none and user-select: none so that the user can't interact with the invisible modal before it's shown. z-index also needs to be increased to make sure the modal is on top of the following <section> elements  */
 
     .modal {
         position: fixed;
@@ -211,8 +259,7 @@
         user-select: auto;
     }
 
-    /* animate the opening of the popup. tweak to your tastes
-    or turn off entirely */
+    /* animate the opening of the popup. tweak to your tastes or turn off entirely */
 
     @keyframes open {
         0% {
@@ -232,9 +279,7 @@
         animation: open var(--animation-length) ease-out;
     }
 
-    /* when the modal is opened, the <label> that closes the modal
-    covers the entire screen behind the modal, allowing the user
-    to click on the background to close it */
+    /* when the modal is opened, the <label> that closes the modal covers the entire screen behind the modal, allowing the user to click on the background to close it */
 
     .modal-close::before {
         bottom: 0;
@@ -252,8 +297,8 @@
         width: 95svw;
         position: fixed;
         overflow-y: scroll;
-        padding: var(--padding);
         box-sizing: border-box;
+        padding: var(--padding);
         max-width: var(--popup-width);
         max-height: var(--popup-height);
         box-shadow: var(--popup-box-shadow);
@@ -266,6 +311,25 @@
     /* dark mode */
 
     @media (prefers-color-scheme: dark) {
+        
+        form label {
+            color: var(--popup-text-dark);
+            background-color: var(--popup-background-color-dark);
+            border: var(--popup-border-dark);
+
+            &:hover {
+                background: color-mix(in lab, var(--popup-background-color-dark) 80%, var(--popup-background-color));
+            }
+
+            &:has(:checked) {
+                background: color-mix(in lab, var(--popup-background-color) 50%, var(--popup-background-color-dark));
+                color: var(--popup-background-color-dark);
+                &:hover {
+                    background: color-mix(in lab, var(--popup-background-color) 30%, var(--popup-background-color-dark));
+                }
+            }
+        }
+
         .modal-content {
             color: var(--popup-text-dark);
             background-color: var(--popup-background-color-dark);
@@ -274,30 +338,20 @@
         }
     }
 
-    /* optional. if you set var(--image-justify) to flex-start or flex-end, 
-    this section will make sure the images are centered on the page when 
-    the viewport is smaller than the --container-width.
+    /* if you set var(--image-justify) to flex-start or flex-end, this section will make sure the image gallery is centered on the page when the viewport is smaller than the --container-width + page padding. this means that justify-content basically only applies to the last row of images.
 
-    when the the viewport is smaller than the --container-width, the number 
-    of columns decreases. so we want to update the container width, but 
-    instead of using the --maximum-images, we need to use the number of 
-    columns currently being displayed.
+    if you do NOT want your image gallery to be centered, comment out or delete the following three media queries.
 
-    all we have to do is replace the var(--maximum-images) with the number 
-    of columns, then call the --container-width calculation again.
+    when the the viewport is smaller than the --container-width + page padding, the number of columns decreases. when this happens, the --container-width is 100% of its container. but then the images are not centered because justify-content is set to flex-start or flex-end. if you only want the flex-start or flex-end behavior to apply to the last row, we need to update the container width. 
+    
+    to do so, use the calculation i gave above but instead of using the --maximum-images, we need to use the number of columns currently being displayed. all we have to do is replace the var(--maximum-images) with the number of columns, then call the --container-width calculation again.
 
-    however, we need to manually set the breakpoint. in standard css, media 
-    queries cannot accept variables, so i can't calculate this width 
-    dynamically for you. the idea is that we want the minimum value the container 
-    width can be for a given number of columns, plus the space between the 
-    left and right edge of the screen.
+    however, we need to manually set the breakpoint, the viewport width at which the number of columns changes. in standard css, media queries cannot accept variables, so i can't calculate this width dynamically for you. the idea is that we want the minimum value the container width can be for a given number of columns, plus the space between the left and right edge of the screen.
 
     (var(--image-width) * (number of columns + 1)) + (var(--gap) * (number of columns)) 
     + (the space between your image gallery and the left and right edge of the screen)
 
-    for this demo page i have the page padding at 2rem on the left and right, so 
-    that adds 4rem. 1rem = 16px. if you put <div id="image-gallery"></div> inside 
-    of another container with it's own padding, you'll need to take that into account.
+    for this demo page i have the page padding at 2rem on the left and right, so that adds 4rem. 1rem = 16px. if you put <div id="image-gallery"></div> inside of another container with it's own padding, you'll need to take that into account.
 
     my calculations for this demo page are:
 
@@ -321,15 +375,9 @@
         = 600px + 16px + 64px 
         = 680px.
 
-    if this all sounds like wayyyyyyyyyy too much math, you can just use your 
-    browser's developer tools to adjust the width of your viewport, then 
-    record the width of the viewport when the number of columns changes. 
-    on firefox the viewport is displayed on the upper right corner of the 
-    page when dev tools are open and you change its width.
+    if this all sounds like wayyyyyyyyyy too much math, you can just use your browser's developer tools to adjust the width of your viewport, then record the width of the viewport when the number of columns changes. on firefox the viewport is displayed on the upper right corner of the page when dev tools are open and you change its width.
 
-    you could also use a css preprocessor like sass that allows you to 
-    use variables, but if you know how to do that, you probably don't 
-    need me to explain all this to you. */
+    you could also use a css preprocessor like sass that allows you to use variables, but if you know how to do that, you probably don't need me to explain all this to you. */
 
     @media screen and (max-width: 1628px) {
         :root {
@@ -352,41 +400,37 @@
         }
     }
 
-    /* once the images are in a single column, i prefer to have the images 
-    expand to the width of the viewport, then let the full height of the 
-    image show. personally i think this looks nicer on mobile.
+    /* once the images are in a single column, i prefer to have the images expand to the width of the viewport, then let the full height of the image show. personally i think this looks nicer on mobile.
     
     even if var(--image-justify) is set to center, i recommend keeping this. */
 
     @media screen and (max-width: 680px) {
 
         #image-grid-container section {
-            flex: 1 1 100%;
+            /* let the images expand to the width of the container */
+            flex: 1 1 100%; 
         }
 
         .img-box {
+            /* let the image height be automatically determined so that the full image is displayed */
             height: auto;
         }
 
-        /* if your popups have a lot of text, uncomment this. setting align-items: start
-        moves the popup to the top of the screen, which gives some more space at the bottom
-        for mobile users to close the modal. setting the popup to max-height: 85svh also helps
-        to 1) make the popup long enough for mobile users to actually read what's inside if 
-        you've set var(--popup-height) shorter, and 2) makes sure there's enough space at the 
-        bottom to close out of it if you've set it higher. 
-        you could also add a button inside the popup to close it. */
+        /* if your popups have a lot of text, leave this enabled. setting align-items: start moves the popup to the top of the screen, which gives some more space at the bottom for mobile users to close the modal. setting the popup to max-height: 85svh also helps to 1) make the popup long enough for mobile users to actually read what's inside if you've set var(--popup-height) shorter, and 2) makes sure there's enough space at the bottom to close out of it if you've set it higher. 
+        
+        if you don't like the way this looks, you could also add a button inside the popup to close it. */
 
-        /* .modal {
+        .modal {
             align-items: start;
         }
 
         .modal-content {
             max-height: 85svh;
-        } */
+        }
     }
 
     /* this stuff is for styling the demo. you don't need to keep this. 
-       styling based on tiny brutalism css:
+       styling cribbed from tiny brutalism css:
        https://github.com/pruger/tiny-brutalism-css */
 
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
@@ -448,16 +492,32 @@
             color: white;
         }
     }
+
 </style>
 
 <body>
     <main>
 
+        <!-- for every category you use, you must add a new checkbox -->
+
+        <form>
+            <label><input type="checkbox" name="day">#day</label>
+            <label><input type="checkbox" name="night">#night</label>
+            <label><input type="checkbox" name="indonesia">#indonesia</label>
+            <label><input type="checkbox" name="thailand">#thailand</label>
+            <label><input type="checkbox" name="vietnam">#vietnam</label>
+            <label><input type="checkbox" name="china">#china</label>
+            <label><input type="checkbox" name="japan">#japan</label>
+            <label><input type="checkbox" name="taiwan">#taiwan</label>
+        </form>
+
+        <!-- image gallery starts here -->
+
         <div id="image-grid-container">
 
-            {% for entry in collections.gallery %}
+            {% for entry in collections.book %}
 
-            <section>
+            <section category="{% for category in entry.data.categories %}{{ category }} {% endfor %}">
                 <input class="modal-toggle" id="modal-{{ entry.page.fileSlug | slugify }}" type="checkbox" />
                 <label class="modal-open" for="modal-{{ entry.page.fileSlug | slugify }}">
                     <div class="img-box">
@@ -482,9 +542,10 @@
         </div>
     </main>
     <footer>
-        <h1>responsive gallery with javascript free popup modals</h1>
+        <h1>responsive gallery with javascript free popup modals and filtering system</h1>
         <p>close modals by clicking outside the popup or pressing esc on your keyboard. all the necessary code is
-            included in the html file, just view page source and save. <a href="/main/">go back?</a></p>
+            included in the html file, just view page source and save. just want the gallery? click on image 3 for instructions to
+            remove the tag system and/or popups. <a href="/main/">go back?</a></p>
     </footer>
 </body>
 
@@ -510,5 +571,7 @@
         }
     }
 </script>
+
+<!-- gallery coded with love by kwaamfan: https://kwaamfan.neocities.org/ -->
 
 </html>
