@@ -1,6 +1,10 @@
 {
     "logs": [
         [
+            "09.17.25",
+            "published a new theme for a [responsive image gallery with popups and tag filtering](/codes/gallery-with-tag-system){target=_top}."
+        ],
+        [
             "09.14.25",
             "published tutorials for two methods of adding data to a webpage from a [json file](/notes/030-my-notes/json){target=_top}: using [eleventy](/notes/030-my-notes/building-a-web-page-from-json-data-using-11ty){target=_top} and [javascript](/notes/030-my-notes/using-javascript-to-load-data-from-a-json-file){target=_top}."
         ],

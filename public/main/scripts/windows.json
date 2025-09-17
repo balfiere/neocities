@@ -21,7 +21,6 @@
   },
   "tasks": {
     "todo": [
-      "share javascript-less modal popup code snippet",
       "share javascript-less tabs code snippet",
       "write a tutorial on using eleventy to generate a page from multiple markdown files",
       "add methodology section to language learning tools page of resources site",
@@ -29,6 +28,7 @@
       "create yakuza shrine"
     ],
     "done": [
+      "share javascript-less modal popup code snippet",
       "write a tutorial on using eleventy to generate a page from a json file",
       "write a mini tutorial on using json with javascript",
       "update japanese language learning resources",
