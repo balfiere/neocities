@@ -62,7 +62,7 @@ section {
     --gradient-dark: #a1a1ff;
 
     --container-width: 80rem;
-    --sidebar-width: 250px;
+    --sidebar-width: 120px;
     --gap: 1rem;
     --header-height: calc(var(--gap) * 4);
     --blur: 3px;
@@ -191,7 +191,7 @@ p {
         "header header"
         "menu content"
         "footer footer";
-    grid-template-columns: minmax(17%, 160px) auto;
+    grid-template-columns: minmax(17%, var(--sidebar-width)) auto;
     grid-template-rows: var(--header-height) minmax(calc(100vh - (calc(2 * var(--header-height)))), auto) var(--header-height);
 }
 
@@ -250,7 +250,7 @@ summary {
     height: min-content;
     position: sticky;
     top: var(--gap);
-    margin-bottom: calc(var(--header-height) + var(--gap));
+    padding-bottom: calc(var(--header-height) + var(--gap));
 }
 
 aside .subheader h3 {
