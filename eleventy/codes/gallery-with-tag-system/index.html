@@ -8,46 +8,110 @@
 </head>
 <style>
     :root {
-        --gap: 1rem;
+        /* ----------------- gallery variables ----------------- */
+        
         /* gap between images */
-        --image-width: 300px;
+        --gap: 1rem;
+        
         /* width of the images */
-        --image-height: 300px;
+        --image-width: 300px;
+        
         /* height of the images. can be set to auto if you want images to be shown in full, but will no longer be a grid */
-        --image-justify: flex-end;
+        --image-height: 300px;
+        
         /* flex-start to float images in the last row to the left of the container and center to center */
-        --maximum-images: 5;
+        --image-justify: flex-end;
+        
         /* maximum number of images per row. only used in the following calculation */
-        --container-width: calc(calc(var(--image-width) * var(--maximum-images)) + (var(--gap) * (var(--maximum-images) - 1)));
+        --maximum-images: 5;
+        
         /* max width of the gallery container. you can change this to whatever you want, this calculation is here so that if --image-justify is set to flex-start or flex-end, then your images still look centered on the page when the viewport is wider than --container-width */
-        --animation-length: 0.5s;
+        --container-width: calc(calc(var(--image-width) * var(--maximum-images)) + (var(--gap) * (var(--maximum-images) - 1)));
+        
         /* length of the various transitions */
-        --image-overlay: rgba(0, 0, 0, 0.5);
+        --animation-length: 0.5s;
+
+        /* ----------------- image variables ----------------- */
+        
         /* when hovering images, overlay with this color */
-        --page-overlay: rgba(0, 0, 0, 0.7);
+        --image-overlay: rgba(0, 0, 0, 0.5);
+        
+        /* border of the images */
+        --image-border: 2px solid #000;
+
+        /* border radius of the images */
+        --image-border-radius: 0px;
+
+        /* border of the images for dark mode */
+        --image-border-dark: 2px solid #fff;
+
+        /* ----------------- caption variables ----------------- */
+        
+        /* color for the caption */
+        --caption-color: #fff;
+        
+        /* font size for the caption */
+        --caption-font-size: 1rem;
+        
+        /* padding for the caption, the popup, and the tag buttons */
+        --caption-padding: var(--gap);
+        
+        /* ----------------- popup variables ----------------- */
+
         /* when the popup is opened, overlay with this color */
-        --padding: var(--gap);
-        /* padding for both the caption and the popup */
-        --popup-width: 50rem;
+        --page-overlay: rgba(0, 0, 0, 0.7);
+        
         /* max width of the popup */
-        --popup-height: 70svh;
+        --popup-width: 50rem;
+        
         /* max height of the popup */
-        --popup-background-color: #fff;
+        --popup-height: 80svh;
+
+        /*  padding for the popup */
+        --popup-padding: var(--gap);
+        
         /* background color for the popup */
+        --popup-background-color: #fff;
+        
+        /* color of the popup's text */
         --popup-text: #000;
-        /* color for the popup */
-        --popup-box-shadow: 4px 4px 0 rgb(0, 0, 0, 0.5);
+
         /* box shadow for the popup */
-        --popup-border: 2px solid #000;
+        --popup-box-shadow: 4px 4px 0 rgb(0, 0, 0, 0.5);
+        
         /* border for the popup */
-        --popup-border-radius: 0px;
+        --popup-border: var(--image-border);
+        
         /* border radius for the popup */
+        --popup-border-radius: var(--image-border-radius);
 
         /* popup colors for dark mode */
         --popup-background-color-dark: #333;
         --popup-text-dark: #fff;
         --popup-box-shadow-dark: 4px 4px 0 #000;
-        --popup-border-dark: 2px solid #fff;
+        --popup-border-dark: var(--image-border-dark);
+
+        /* ----------------- tag system variables ----------------- */
+
+        /* padding for the tag buttons */
+        --tag-padding: var(--gap);
+
+        /* background color for the tag buttons */
+        --tag-background-color: var(--popup-background-color);
+
+        /* color for the tag buttons */
+        --tag-text: var(--popup-text);
+
+        /* border for the tag buttons */
+        --tag-border: var(--popup-border);
+
+        /* border radius for the tag buttons */
+        --tag-border-radius: var(--popup-border-radius);
+
+        /* tag button colors for dark mode */
+        --tag-background-color-dark: var(--popup-background-color-dark);
+        --tag-text-dark: var(--popup-text-dark);
+        --tag-border-dark: var(--popup-border-dark);
     }
 
     * {
@@ -82,21 +146,21 @@
             text-align: center;
             user-select: none;
             cursor: pointer;
-            padding: var(--padding);
-            border: var(--popup-border);
-            border-radius: var(--popup-border-radius);
-            background-color: var(--popup-background-color);
-            color: var(--popup-text);
+            padding: var(--tag-padding);
+            border: var(--tag-border);
+            border-radius: var(--tag-border-radius);
+            background-color: var(--tag-background-color);
+            color: var(--tag-text);
 
             &:hover {
-                background: color-mix(in lab, var(--popup-background-color) 90%, var(--popup-background-color-dark));
+                background: color-mix(in lab, var(--tag-background-color) 90%, var(--tag-background-color-dark));
             }
 
             &:has(:checked) {
-                background: color-mix(in lab, var(--popup-background-color-dark) 30%, var(--popup-background-color));
-                color: var(--popup-background-color);
+                background: color-mix(in lab, var(--tag-background-color-dark) 30%, var(--tag-background-color));
+                color: var(--tag-background-color);
                 &:hover {
-                    background: color-mix(in lab, var(--popup-background-color-dark) 10%, var(--popup-background-color));
+                    background: color-mix(in lab, var(--tag-background-color-dark) 10%, var(--tag-background-color));
                 }
             }
         }
@@ -156,6 +220,8 @@
         width: 100%;
         height: var(--image-height);
         overflow: hidden;
+        border: var(--image-border);
+        border-radius: var(--image-border-radius);
 
         & img {
             width: 100%;
@@ -203,12 +269,13 @@
 
     .caption {
         position: absolute;
-        padding: var(--padding);
+        padding: var(--caption-padding);
         bottom: 0rem;
         left: 0rem;
         opacity: 1;
         transition: all var(--animation-length) ease;
-        color: var(--popup-text-dark);
+        color: var(--caption-color);
+        font-size: var(--caption-font-size);
         /* top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -236,7 +303,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: var(--padding);
+        padding: var(--popup-padding);
         opacity: 0;
         transition: opacity var(--animation-length) ease;
         z-index: 2;
@@ -288,11 +355,11 @@
     /* styling of the popup */
 
     .modal-content {
-        width: 95svw;
+        width: 90svw;
         position: fixed;
         overflow-y: scroll;
         box-sizing: border-box;
-        padding: var(--padding);
+        padding: var(--popup-padding);
         max-width: var(--popup-width);
         max-height: var(--popup-height);
         box-shadow: var(--popup-box-shadow);
@@ -307,19 +374,19 @@
     @media (prefers-color-scheme: dark) {
         
         form label {
-            color: var(--popup-text-dark);
-            background-color: var(--popup-background-color-dark);
-            border: var(--popup-border-dark);
+            color: var(--tag-text-dark);
+            background-color: var(--tag-background-color-dark);
+            border: var(--tag-border-dark);
 
             &:hover {
-                background: color-mix(in lab, var(--popup-background-color-dark) 80%, var(--popup-background-color));
+                background: color-mix(in lab, var(--tag-background-color-dark) 80%, var(--tag-background-color));
             }
 
             &:has(:checked) {
-                background: color-mix(in lab, var(--popup-background-color) 50%, var(--popup-background-color-dark));
-                color: var(--popup-background-color-dark);
+                background: color-mix(in lab, var(--tag-background-color) 50%, var(--tag-background-color-dark));
+                color: var(--tag-background-color-dark);
                 &:hover {
-                    background: color-mix(in lab, var(--popup-background-color) 30%, var(--popup-background-color-dark));
+                    background: color-mix(in lab, var(--tag-background-color) 30%, var(--tag-background-color-dark));
                 }
             }
         }
@@ -334,7 +401,7 @@
 
     /* if you set var(--image-justify) to flex-start or flex-end, this section will make sure the image gallery is centered on the page when the viewport is smaller than the --container-width + page padding. this means that justify-content basically only applies to the last row of images.
 
-    if you do NOT want your image gallery to be centered, comment out or delete the following three media queries.
+    if you do NOT want your image gallery to be centered (you want justify-content to apply to all rows) comment out or delete the following three media queries. you can also delete them if you set var(--image-justify) to center.
 
     when the the viewport is smaller than the --container-width + page padding, the number of columns decreases. when this happens, the --container-width is 100% of its container. but then the images are not centered because justify-content is set to flex-start or flex-end. if you only want the flex-start or flex-end behavior to apply to the last row, we need to update the container width. 
     
@@ -345,7 +412,7 @@
     (var(--image-width) * (number of columns + 1)) + (var(--gap) * (number of columns)) 
     + (the space between your image gallery and the left and right edge of the screen)
 
-    for this demo page i have the page padding at 2rem on the left and right, so that adds 4rem. 1rem = 16px. if you put <div id="image-gallery"></div> inside of another container with it's own padding, you'll need to take that into account.
+    for this demo page i have the page padding at 2rem on the left and right, so that adds 4rem. 1rem = 16px. if you put <main> inside of another container with its own padding, you'll need to take that into account.
 
     my calculations for this demo page are:
 
