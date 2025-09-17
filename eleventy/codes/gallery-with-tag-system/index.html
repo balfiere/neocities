@@ -102,16 +102,10 @@
         }
     }
 
-    /* the buttons for the filter system. you must add a new one for each category you use! */
+    /* hide images that don't match the selected filters. must be updated every time a new filter is added */
 
-        form:has([name="day"]:checked)~#image-grid-container section:not([category~="day"]),
-    form:has([name="night"]:checked)~#image-grid-container section:not([category~="night"]),
-    form:has([name="indonesia"]:checked)~#image-grid-container section:not([category~="indonesia"]),
-    form:has([name="thailand"]:checked)~#image-grid-container section:not([category~="thailand"]),
-    form:has([name="vietnam"]:checked)~#image-grid-container section:not([category~="vietnam"]),
-    form:has([name="china"]:checked)~#image-grid-container section:not([category~="china"]),
-    form:has([name="japan"]:checked)~#image-grid-container section:not([category~="japan"]),
-    form:has([name="taiwan"]:checked)~#image-grid-container section:not([category~="taiwan"]) {
+    {% assign categoriesAlpha = collections.image-gallery | extractCategoriesWithCount: "alpha" %}{% for category in categoriesAlpha %}
+    form:has([name="{{ category.name }}"]:checked)~#image-grid-container section:not([category~="{{ category.name }}"]){% unless forloop.last %}, {% endunless %}{% endfor %} {
         display: none;
     }
 
@@ -500,15 +494,9 @@
 
         <!-- for every category you use, you must add a new checkbox -->
 
-        <form>
-            <label><input type="checkbox" name="day">#day</label>
-            <label><input type="checkbox" name="night">#night</label>
-            <label><input type="checkbox" name="indonesia">#indonesia</label>
-            <label><input type="checkbox" name="thailand">#thailand</label>
-            <label><input type="checkbox" name="vietnam">#vietnam</label>
-            <label><input type="checkbox" name="china">#china</label>
-            <label><input type="checkbox" name="japan">#japan</label>
-            <label><input type="checkbox" name="taiwan">#taiwan</label>
+            {% assign categoriesSorted = collections.image-gallery | extractCategoriesWithCount: "count" %}
+        <form>{% for category in categoriesSorted %}
+            <label><input type="checkbox" name="{{ category.name }}">#{{ category.name }} ({{ category.count }})</label>{% endfor %}
         </form>
 
         <!-- image gallery starts here -->

@@ -179,3 +179,40 @@ module.exports = async function (eleventyConfig) {
 //     return parsedFile.content;
 //   });
 // };
+
+
+
+  // Custom collection: gather all categories
+  eleventyConfig.addCollection("allCategories", function (collectionApi) {
+    let categories = [];
+
+    collectionApi.getFilteredByTag("image-gallery").forEach(item => {
+      if (item.data.categories) {
+        if (Array.isArray(item.data.categories)) {
+          categories.push(...item.data.categories);
+        } else {
+          categories.push(item.data.categories);
+        }
+      }
+    });
+
+    // optional: deduplicate
+    return [...new Set(categories)];
+  });
+
+  eleventyConfig.addFilter("extractCategories", function (collection) {
+    let categories = [];
+
+    collection.forEach(item => {
+      if (item.data.categories) {
+        if (Array.isArray(item.data.categories)) {
+          categories.push(...item.data.categories);
+        } else {
+          categories.push(item.data.categories);
+        }
+      }
+    });
+
+    // Return unique values (optional)
+    return [...new Set(categories)];
+  });

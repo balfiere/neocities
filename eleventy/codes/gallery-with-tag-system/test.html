@@ -1,0 +1,22 @@
+{% assign categories = collections.image-gallery | extractCategories %}
+<ul>
+  {% for category in categories %}
+    <li>{{ category }}</li>
+  {% endfor %}
+</ul>
+
+{# Sort by count (default) #}
+{% assign categories = collections.image-gallery | extractCategoriesWithCount: "count" %}
+<ul>
+  {% for category in categories %}
+    <li>{{ category.name }} ({{ category.count }})</li>
+  {% endfor %}
+</ul>
+
+{# Sort alphabetically #}
+{% assign categoriesAlpha = collections.image-gallery | extractCategoriesWithCount: "alpha" %}
+<ul>
+  {% for category in categoriesAlpha %}
+    <li>{{ category.name }} ({{ category.count }})</li>
+  {% endfor %}
+</ul>
