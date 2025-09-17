@@ -36,19 +36,19 @@ module.exports = function (eleventyConfig) {
   // shortcodes for my resources site
 
   eleventyConfig.addPairedShortcode("resourcesContainer", function (content, title) {
-    return `<article>
+    return `<section>
   <details>
     <summary class="subheader"><h3>${title}</h3></summary>
     <div class="mainboxescontent">${content}</div>
   </details>
-</article>`;
+</section>`;
   });
 
   eleventyConfig.addPairedShortcode("resourcesContainerOpen", function (content, title) {
-    return `<article>
+    return `<section>
     <div class="subheader"><h3>${title}</h3></div>
     <div class="mainboxescontent">${content}</div>
-</article>`;
+</section>`;
   });
 
   eleventyConfig.addPlugin(EleventyRenderPlugin);
