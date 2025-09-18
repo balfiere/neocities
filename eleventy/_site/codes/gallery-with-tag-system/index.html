@@ -735,7 +735,7 @@
 <p>the <code>category</code> attribute can take as many values as you want it to, just put a space between each tag. obviously this means your tags can’t have a space in them, but you can always put a space in the <code>&lt;label&gt;</code> element that shows your tag name.</p>
 <p>every time you use a new tag in your gallery, you must do the following:</p>
 <ul>
-<li>in the html, search for <code>&lt;form&gt;</code> and add a new <code>&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;tag&quot;&gt;#tag&lt;/label&gt;</code> inside of it, replacing <code>tag</code> with your new tag. this is adds a new button at the top of your page.</li>
+<li>in the html, search for <code>&lt;form&gt;</code> and add a new <code>&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;tag&quot;&gt;#tag&lt;/label&gt;</code> inside of it, replacing <code>tag</code> with your new tag. this adds a new button at the top of your page.</li>
 <li>in the css, search for <code>form:has([name</code>. add a new <code>form:has([name=&quot;tag&quot;]:checked)~#image-grid-container section:not([category~=&quot;tag&quot;])</code> but replace <code>tag</code> with your new tag. this is how clicking a button closes <code>&lt;section&gt;</code>s that don’t have the corresponding tag. if you forget this, the button you added in the last step won’t do anything.</li>
 </ul>
 <p>Photo by <a href="https://unsplash.com/@billow926?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">billow926</a> on <a href="https://unsplash.com/photos/man-in-white-t-shirt-riding-on-black-motorcycle-during-daytime-YTJDGgCTREc?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" target="'_blank'">Unsplash</a></p>
