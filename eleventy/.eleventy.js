@@ -4,6 +4,7 @@ const matter = require("gray-matter");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItDeflist = require("markdown-it-deflist");
+const markdownItDetails = require("markdown-it-expandable");
 
 module.exports = function (eleventyConfig) {
 
@@ -20,7 +21,9 @@ module.exports = function (eleventyConfig) {
     linkify: true,
     typographer: true
   }).use(markdownItAttrs)
-    .use(markdownItDeflist);
+    .use(markdownItDeflist)
+    .use(markdownItDetails)
+  ;
 
   eleventyConfig.setLibrary("md", md);
 

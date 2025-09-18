@@ -3,6 +3,7 @@ title: credit
 layout: resources.liquid
 staus: valid
 ---
+
 {% resourcesContainerOpen "credit" %}
 
 [Eleventy](https://www.11ty.dev/){target='_blank'}

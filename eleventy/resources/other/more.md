@@ -2,6 +2,7 @@
 title: more links
 layout: resources.liquid
 ---
+
 {% resourcesContainer "general" %}
 [freemediaheckyeah](https://fmhy.net/){target='_blank'}
 : website with links to just about any free or pirated material you could think of. if you're looking for something not on this site i recommend starting here.
@@ -17,7 +18,6 @@ layout: resources.liquid
 
 [Cross Stitch Saga](https://forum.mobilism.org/viewtopic.php?f=443&t=5257262&hilit=Cross+Stitch+Saga){target='_blank'}
 : another android app that helps keep track of cross stitch patterns. i find it much harder to get used to after using pattern keeper but supports special stitch types like backstitching and french knots. if ur cross stitch pattern comes in .xsp, .xsd, or .pat, i recommend using this. link is unlocked version. [my mirror.](https://drive.google.com/file/d/1abiMhDCNb-1sy431V4hQJ1MCJIcwn26u/view?usp=sharing){target='_blank'}
-
 
 {% endresourcesContainer %}
 {% resourcesContainer "media" %}
@@ -137,6 +137,6 @@ layout: resources.liquid
 : a search engine that only searches user-submitted sites from the small indie web.
 
 [Bypass All Shortlinks](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated){target='_blank'}
-: shortens the waiting time of shortlinks, and automatically progresses to the next page. indespensible if you download a lot from direct download sites.
+: shortens the waiting time of shortlinks, and automatically progresses to the next page. indispensable if you download a lot from direct download sites.
 
 {% endresourcesContainer %}

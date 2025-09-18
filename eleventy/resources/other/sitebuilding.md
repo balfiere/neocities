@@ -52,7 +52,7 @@ static site generators are applications that can create full html files by inser
 {% resourcesContainer "css frameworks" %}
 
 css frameworks are premade, ready to use stylesheets that can speed up the development of your website by doing a lot of the styling for you. you can sometimes download them to host on your website, but many will have a link that you can put right into the head of your html file without needing to download them.
-              
+			  
 [dropin-minimal-css](https://github.com/dohliam/dropin-minimal-css){target='_blank'}
 : see how a webpage looks with different minimal stylesheets. good for people looking to quickly publish long-form written content on their site (like a blog, essay, tutorial, etc), want it to look nice without writing their own CSS, and want to preview many different options.
 
@@ -136,7 +136,7 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 
 {% endresourcesContainer %}
 {% resourcesContainer "online tools" %}
-            
+			
 [ezgif](https://ezgif.com/){target='_blank'}
 : create, crop, resize, reverse, split and convert between animated image files like gifs, webp, apng, avif, and mp4 online.
 

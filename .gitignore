@@ -13,3 +13,5 @@ old/
 /public/**/*.cur
 */.git
 *.xcf
+*/oblivion
+*/yakuza
