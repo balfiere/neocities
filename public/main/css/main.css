@@ -686,10 +686,6 @@ nav strike {
     aside textarea {
         width: 80%
     }
-
-    .window_container {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 700px) {
@@ -1070,8 +1066,8 @@ button:focus {
 /*----- window section size and initial locations -----*/
 
 .buttons {
-    top: 33vh;
-    left: 3vh;
+    top: 45vh;
+    left: 0.2vw;
     width: 394px;
 }
 
@@ -1097,8 +1093,8 @@ button:focus {
 }
 
 .chatbox {
-    top: 3vh;
-    right: 2vh;
+    top: 2vh;
+    right: 1vw;
     width: 393px;
 }
 
@@ -1108,7 +1104,7 @@ button:focus {
 
 .currently {
     top: 54vh;
-    right: 13vw;
+    right: 9vw;
     width: 250px;
 }
 
@@ -1120,7 +1116,7 @@ button:focus {
 
 .todo {
     top: 2vh;
-    left: 2vw;
+    left: 0.5vw;
     width: 210px;
 }
 
@@ -1132,8 +1128,8 @@ button:focus {
 
 .webrings {
     /* top:calc(5vh + 500px); */
-    top: 68vh;
-    right: 5vh;
+    top: 72vh;
+    right: 2vw;
     width: 240px;
 }
 

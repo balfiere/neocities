@@ -12,7 +12,7 @@ loader.style.display = "flex";
 
 
 function toggleWindowsDisplay() {
-  var displayStyle = window.innerWidth > 840 ? "unset" : "none";
+  var displayStyle = window.innerWidth > 1200 ? "unset" : "none";
   for (var i = 0; i < windows.length; i++) {
     windows[i].style.display = displayStyle;
   }
