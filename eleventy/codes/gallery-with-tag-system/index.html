@@ -168,7 +168,7 @@
 
     /* hide images that don't match the selected filters. must be updated every time a new filter is added */
 
-    {% assign categoriesAlpha = collections.image-gallery | extractCategoriesWithCount: "alpha" %}{% for category in categoriesAlpha %}
+    {% assign categoriesAlpha = collections.image-gallery | extractKeyWithCount: "categories", "alpha" %}{% for category in categoriesAlpha %}
     form:has([name="{{ category.name }}"]:checked)~#image-grid-container section:not([category~="{{ category.name }}"]){% unless forloop.last %}, {% endunless %}{% endfor %} {
         display: none;
     }
@@ -561,7 +561,7 @@
 
         <!-- for every category you use, you must add a new checkbox -->
 
-            {% assign categoriesSorted = collections.image-gallery | extractCategoriesWithCount: "count" %}
+        {% assign categoriesSorted = collections.image-gallery | extractKeyWithCount: "categories", "count" %}
         <form>{% for category in categoriesSorted %}
             <label><input type="checkbox" name="{{ category.name }}">#{{ category.name }} ({{ category.count }})</label>{% endfor %}
         </form>
