@@ -13,6 +13,6 @@ the gallery is designed to display images in a grid, where the width and height 
 
 you don't need to use images of the same size or aspect ratio, `object-fit: cover` will take care of that.
 
-weird things may happen if `--image-height` is set to auto and manually tweaking the rest of the code may be necessary.
+even though i didn't design for it, you can set `--image-height` to auto if you don't want each image to have the same dimensions. weird things may happen though and manually tweaking the rest of the code may be necessary.
 
 Photo by [Golden Antelope](https://unsplash.com/@goldenantelope?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'} on [Unsplash](https://unsplash.com/photos/a-couple-of-motorcycles-parked-outside-a-building-8kdDgQvHUz8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash){target='_blank'}
