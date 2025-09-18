@@ -97,8 +97,14 @@ layout: resources.liquid
 [Upscayl](https://github.com/upscayl/upscayl){target='_blank'}
 : FOSS image upscaler.
 
+[fooyin](https://fooyin.org/){target='_blank'}
+: a music player for linux. i use it because it supports closing to tray and auto-playlists.
+
 [Nicotine+](https://nicotine-plus.org/){target='_blank'}
 : GUI application for downloading from the soulseek network. mostly used for sharing music files, but some users share videos, games, and other media.
+
+[MusicBrainz Picard](https://picard.musicbrainz.org/){target='_blank'}
+: open a file or folder of audio files and the program will add the correct metadata to it, then sort it into folders based on the album and artist. useful for automatically managing a library of music.
 
 {% endresourcesContainer %}
 {% resourcesContainer "browser tools and extensions" %}

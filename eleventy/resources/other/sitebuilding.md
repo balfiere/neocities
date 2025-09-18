@@ -198,5 +198,6 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 {% resourcesContainer "other" %}
 
 - [scripted](https://scripted.neocities.org/){target='_blank'}
+- [Skye Journey](https://luvrksknskyejourney.org/filesystem/resources/index.html){target='_blank'}
 
 {% endresourcesContainer %}
