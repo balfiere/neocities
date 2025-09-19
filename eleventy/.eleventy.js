@@ -6,6 +6,7 @@ const markdownItAttrs = require("markdown-it-attrs");
 const markdownItDeflist = require("markdown-it-deflist");
 const markdownItDetails = require("markdown-it-expandable");
 const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
+const htmlmin = require("html-minifier-terser");
 
 module.exports = function (eleventyConfig) {
 
@@ -111,6 +112,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("**/*.min.js");
 
   eleventyConfig.addPlugin(eleventyAutoCacheBuster);
+
+  eleventyConfig.addTransform("htmlmin", function (content) {
+    if ((this.page.outputPath || "").endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+      });
+      return minified;
+    }
+    return content;
+  });
 
   return {
     htmlTemplateEngine: 'liquid'
