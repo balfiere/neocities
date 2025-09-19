@@ -4,7 +4,6 @@ const matter = require("gray-matter");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItDeflist = require("markdown-it-deflist");
-const markdownItDetails = require("markdown-it-expandable");
 const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 const htmlmin = require("html-minifier-terser");
 
@@ -24,8 +23,7 @@ module.exports = function (eleventyConfig) {
     typographer: true
   }).use(markdownItAttrs)
     .use(markdownItDeflist)
-    .use(markdownItDetails)
-  ;
+    ;
 
   eleventyConfig.setLibrary("md", md);
 
@@ -108,13 +106,22 @@ module.exports = function (eleventyConfig) {
     return result;
   });
 
-  eleventyConfig.addPassthroughCopy("**/*.min.css");
-  eleventyConfig.addPassthroughCopy("**/*.min.js");
+  // eleventyConfig.addPassthroughCopy("resources/resources.min.css");
+
+  if (process.env.ELVENTY_INPUT === "resources") {
+    eleventyConfig.addPassthroughCopy("resources/resources.min.css");
+  }
 
   eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
   eleventyConfig.addTransform("htmlmin", function (content) {
+    // Only process HTML output
     if ((this.page.outputPath || "").endsWith(".html")) {
+      // Skip if the input file lives in "codes/"
+      if (this.page.inputPath.includes("/codes/")) {
+        return content;
+      }
+
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
@@ -122,8 +129,10 @@ module.exports = function (eleventyConfig) {
         minifyCSS: true,
         minifyJS: true,
       });
+
       return minified;
     }
+
     return content;
   });
 
