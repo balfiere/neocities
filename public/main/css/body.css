@@ -199,56 +199,56 @@ table {
 }
 
 @font-face {
-    font-family: 'NDS true bios';
-    src: url('/fonts/NDStruebios.woff2') format('woff2'), url('/fonts/NDStruebios.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'NDS true bios';
+  src: url('/fonts/NDStruebios.woff2') format('woff2'), url('/fonts/NDStruebios.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* ibm-plex-sans-thai-300 - latin_latin-ext_thai */
 @font-face {
-	font-display: swap;
-	font-family: 'IBM Plex Sans Thai';
-	font-style: normal;
-	font-weight: 300;
-	src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-300.woff2') format('woff2');
+  font-display: swap;
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-300.woff2') format('woff2');
 }
 
 /* ibm-plex-sans-thai-regular - latin_latin-ext_thai */
 @font-face {
-	font-display: swap;
-	font-family: 'IBM Plex Sans Thai';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-regular.woff2') format('woff2');
+  font-display: swap;
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-regular.woff2') format('woff2');
 }
 
 /* ibm-plex-sans-thai-500 - latin_latin-ext_thai */
 @font-face {
-	font-display: swap;
-	font-family: 'IBM Plex Sans Thai';
-	font-style: normal;
-	font-weight: 500;
-	src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-500.woff2') format('woff2');
+  font-display: swap;
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-500.woff2') format('woff2');
 }
 
 /* ibm-plex-sans-thai-600 - latin_latin-ext_thai */
 @font-face {
-	font-display: swap;
-	font-family: 'IBM Plex Sans Thai';
-	font-style: normal;
-	font-weight: 600;
-	src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-600.woff2') format('woff2');
+  font-display: swap;
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-600.woff2') format('woff2');
 }
 
 /* ibm-plex-sans-thai-700 - latin_latin-ext_thai */
 @font-face {
-	font-display: swap;
-	font-family: 'IBM Plex Sans Thai';
-	font-style: normal;
-	font-weight: 700;
-	src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-700.woff2') format('woff2');
+  font-display: swap;
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-700.woff2') format('woff2');
 }
 
 /*----- text highlight -----*/
@@ -356,33 +356,22 @@ h3,
   padding-bottom: 0.3em;
 }
 
-h2,
-.h2 {
-  font-family: nineteen93, maru;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 2em;
-  text-align: right;
-  vertical-align: middle;
-  padding: 2px 10px;
-  color: var(--h2-color);
-  background-color: var(--h2-background);
-  margin: 4px 0;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
+h3 {
+  font-size: 32px;
 }
 
 p {
-  text-indent: 1em;
-}
+  margin: 0.5em 0;
 
-p:first-of-type {
-  margin-top: 0.5em;
-}
+  &:not(:has(span)) {
+    text-indent: 1em;
+  }
 
-p:last-of-type {
-  margin-bottom: 0.5em;
+  &:is(.img) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 p>code {
@@ -469,14 +458,31 @@ summary {
   cursor: pointer;
   display: flex;
   align-items: center;
-}
 
-summary::before {
-  content: '';
-  width: 9px;
-  height: 10px;
-  background: url('/resources/images/plus.png') no-repeat;
-  filter: invert(1);
+  &::before {
+    content: '';
+    width: 9px;
+    height: 10px;
+    background: url('/resources/images/plus.png') no-repeat;
+    filter: invert(1);
+  }
+
+  &:has(h2) {
+    display: flex;
+    justify-content: space-between;
+    
+    font-family: nineteen93, maru;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 2em;
+    padding: 2px 10px;
+    color: var(--h2-color);
+    background-color: var(--h2-background);
+    margin: 4px 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+  }
 }
 
 details[open]>summary::before {
@@ -487,15 +493,15 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-summary:is(.h2) {
+summary:has(.h2) {
   justify-content: flex-end;
 }
 
-summary:is(.h2)::before {
+summary:has(.h2)::before {
   margin-right: 6px;
 }
 
-summary:is(.h3)::before {
+summary:has(.h3)::before {
   margin-right: 4px;
 }
 

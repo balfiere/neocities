@@ -1,0 +1,733 @@
+{
+    "pixels": {
+        "ff": {
+            "4": [
+                "ff41",
+                "ff42",
+                "ff43",
+                "ff44",
+                "ff45"
+            ],
+            "5": [
+                "airship",
+                "archer",
+                "bchoco",
+                "berserker",
+                "black",
+                "blue",
+                "bluemage",
+                "boat",
+                "butsconfused",
+                "carajobs",
+                "chemist",
+                "chocobye",
+                "chocowalk",
+                "crash",
+                "crystal",
+                "deathclaw",
+                "dragonc",
+                "dragon",
+                "dragonyawn",
+                "farisfight",
+                "farishorray",
+                "farisjobs",
+                "fariswind",
+                "ff51",
+                "ff52",
+                "ff53",
+                "ff54",
+                "ffvtitle",
+                "flydragon",
+                "galufjobs",
+                "holysword",
+                "jobs",
+                "knight",
+                "lancer",
+                "lennahorray",
+                "lennajobs",
+                "monk",
+                "ninja",
+                "piano",
+                "pubdancer",
+                "redmage",
+                "samarai",
+                "savepoint",
+                "showoff",
+                "summon1",
+                "summona",
+                "summoner",
+                "sworddance2",
+                "sworddance3",
+                "sworddance",
+                "syldradies",
+                "syldrahead",
+                "thief",
+                "time",
+                "trainer",
+                "warp",
+                "white"
+            ],
+            "6": [
+                "avion",
+                "edgarg",
+                "ff61",
+                "ff62",
+                "ff63",
+                "ff64",
+                "ff65",
+                "mog"
+            ],
+            "7": [
+                [
+                    "356153b0"
+                ],
+                [
+                    "35c19340"
+                ],
+                [
+                    "aeris9"
+                ],
+                [
+                    "areith"
+                ],
+                [
+                    "Barretani"
+                ],
+                [
+                    "caitsithani"
+                ],
+                [
+                    "cait_sith"
+                ],
+                [
+                    "CaitSithgif"
+                ],
+                [
+                    "cidanimation"
+                ],
+                [
+                    "Cloudani"
+                ],
+                [
+                    "dolls-aerith",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "elena"
+                ],
+                [
+                    "ff71"
+                ],
+                [
+                    "ff74"
+                ],
+                [
+                    "ff75"
+                ],
+                [
+                    "ff76"
+                ],
+                [
+                    "ff77"
+                ],
+                [
+                    "ff78"
+                ],
+                [
+                    "ff7-aerith02",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-aerithbig",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-aerith",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-barret",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7BarretWallace"
+                ],
+                [
+                    "ff7-biggs",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-bugenhagen",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-caitsith",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-cid",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-cloud02",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-cloud",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7cloud"
+                ],
+                [
+                    "ff7-elena",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-hojo",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-honeybee",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-ifalna",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-jessie",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-marlene",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-redxiii",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-reno",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-rude",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-rufus",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-scarlet",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-sephiroth02",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-shera",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-tifa02",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-tifa03",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-tifabig",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-tifa",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-tseng",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-vincent",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-yuffiebig",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-yuffie",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "ff7-zack",
+                    "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"
+                ],
+                [
+                    "lucretia"
+                ],
+                [
+                    "onewinge"
+                ],
+                [
+                    "redxiiiani2"
+                ],
+                [
+                    "Redxiiiani"
+                ],
+                [
+                    "reno"
+                ],
+                [
+                    "swmaeris"
+                ],
+                [
+                    "swmtifa"
+                ],
+                [
+                    "swmyiffie"
+                ],
+                [
+                    "tifa1"
+                ],
+                [
+                    "tlove"
+                ],
+                [
+                    "Yuffie_Anim1"
+                ],
+                [
+                    "Yuffiebunnysuitani"
+                ]
+            ],
+            "8": [
+                ["0567"],
+                ["0872"],
+                ["ball-squall"],
+                ["bigrinoa1r"],
+                ["chibimomba"],
+                ["cutelaguna12"],
+                ["dolls-edea", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["ff810"],
+                ["ff811"],
+                ["ff812"],
+                ["ff813"],
+                ["ff814"],
+                ["ff815"],
+                ["ff816"],
+                ["ff817"],
+                ["ff819"],
+                ["ff81"],
+                ["ff82"],
+                ["ff83"],
+                ["ff84"],
+                ["ff86"],
+                ["ff87"],
+                ["ff88"],
+                ["ff89"],
+                ["ff8bigsquall12"],
+                ["fudress"],
+                ["gifqui1"],
+                ["rinoa_alas"],
+                ["rinoakiss"],
+                ["saifulove"],
+                ["selphyff8"],
+                ["squall2d"],
+                ["squallcar38"]
+            ],
+            "9": [
+                ["10"],
+                ["1"],
+                ["5"],
+                ["6"],
+                ["7"],
+                ["8"],
+                ["dagger"],
+                ["eiko2"],
+                ["ff913"],
+                ["ff914"],
+                ["ff915"],
+                ["ff916"],
+                ["ff917"],
+                ["ff92"],
+                ["ff93"],
+                ["ff94"],
+                ["ff95"],
+                ["vivi"],
+                ["Zidane"]
+            ],
+            "10": [
+                ["Auron2"],
+                ["dolls-lulu", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["ffx02"],
+                ["ffx12"],
+                ["ffx14"],
+                ["ffx15"],
+                ["ffx1"],
+                ["ffx-22"],
+                ["ffx-23"],
+                ["ffx-24"],
+                ["ffx-25"],
+                ["ffx-26"],
+                ["ffx-27"],
+                ["ffx-28"],
+                ["ffx-29"],
+                ["ffx-30"],
+                ["ffx9"],
+                ["finalfantasyxyuna12"],
+                ["mini-bad2"],
+                ["mini-k2"],
+                ["mini-lola"],
+                ["mini-rikku"],
+                ["rikku", "https://web.archive.org/web/20020405132932/http://magical-dreamer.nu:80/blog/rikku.gif"],
+                ["tidi2"],
+                ["tidus"],
+                ["wakka"],
+                ["yuna"]
+            ],
+            "general": [
+                ["bchoco"],
+                ["black_choco"],
+                ["blue_choco"],
+                ["cactuar"],
+                ["choco1"],
+                ["choco2"],
+                ["choco4"],
+                ["chocowalk"],
+                ["ffxmog"],
+                ["ffxmoogle2"],
+                ["gf-ifrit"],
+                ["gf-karban"],
+                ["gf-levia"],
+                ["gif_25_1_"],
+                ["green_choco"],
+                ["mog"],
+                ["moggu"],
+                ["otherff054"],
+                ["pupuwave"],
+                ["purp_choco"],
+                ["quezacotl"],
+                ["readingchocobo"],
+                ["red_choco"],
+                ["shiva"],
+                ["siren01"],
+                ["tonberri"],
+                ["white_choco"]  
+            ]
+        },
+        "megaten": {
+            "p1": [
+                ["per-mainj", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-mainj3", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-main", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-maryj", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-mary", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-natej3", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-natej", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-nate", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-markj", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-mark", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-brad", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-brad3", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-ellenj", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-ellen", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-alana", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-chris", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-chris3", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["per-yuki", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"]
+            ],
+            "p2": [
+                ["kat-pp", "https://web.archive.org/web/20091026005711/http://geocities.com/flower_s_angel/persona/art/index.html"],
+                ["tatsuyalookingweirdagain", "images/pixels/megami%20tensei/p2/tatsuyalookingweirdagain.png"],
+                ["Baofu", "https://web.archive.org/web/20020617081224/http://firecrackersweet.com:80/candy4/jelly/Baofu.gif"],
+                ["Ulala", "https://web.archive.org/web/20020615140005/http://firecrackersweet.com:80/candy4/jelly/Ulala.gif"],
+                ["Katsuya_k", "https://web.archive.org/web/20020617102057/http://firecrackersweet.com:80/candy4/jelly/Katsuya.gif"],
+                ["Tatsuya_k", "https://web.archive.org/web/20091027140730/http://www.geocities.com/flower_s_angel/persona/links/GOOD-links"]
+            ]
+        },
+        "othergaming": {
+            "bof": [
+                ["bofdragon"],
+                ["bof-kattshaman", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["bof-momo", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["bof-nina2", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["bof-nina2shaman", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-momo", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"]
+            ],
+            "ct": [
+                ["Alkaline_sit1"],
+                ["Bit_float1"],
+                ["cc-harle", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["cc-irenes", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["cc-kid", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["cc-leena", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["cc-miki", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["cc-poshul", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["cc-razzly"],
+                ["cc-riddel", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["cc-serge", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["cc-starky", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["Crono_run_left1"],
+                ["Crono_run_right1"],
+                ["ct-ayla", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["ct-crono", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["ct-frog", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["ct-lucca", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["ct-magus", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["ct-marle", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["ct-robo", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["Cyrusanim"],
+                ["dolls-harle", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["giscro89"],
+                ["Lucca_walk_left1"],
+                ["mon-schala", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["Nu4"],
+                ["Robo_run_right1"],
+                ["RRU_magusrunning1"],
+                ["RRU_queenzeallaughing1"],
+                ["Spekkio_run_down1"]
+            ],
+            "trails": [
+                ["estelle"]
+            ]
+        },
+        "animanga": {
+            "ccs": [
+                ["anicardcaptor04"],
+                ["csakura"],
+                ["anim2", "https://web.archive.org/web/20091027131805/http://geocities.com/cardcaptorbr/gifd.html"],
+                ["anim3", "https://web.archive.org/web/20091027131805/http://geocities.com/cardcaptorbr/gifd.html"],
+                ["anim", "https://web.archive.org/web/20091027131805/http://geocities.com/cardcaptorbr/gifd.html"],
+                ["SakuraCostume"],
+                ["YueWings"],
+                ["AniJesterSakura"],
+                ["anisakura2"],
+                ["b10"],
+                ["b9"],
+                ["SakuraPiscando1", "https://web.archive.org/web/20091027035946/http://br.geocities.com/shaoranhp/Fotos.html"],
+                ["ccs1"],
+                ["collegesakura6", "https://web.archive.org/web/20091022130132/http://geocities.com/sakuraandlisdreamcloud/sakuragallery.html"],
+                ["ccs2"],
+                ["ccs3"],
+                ["sakura8"],
+                ["ccsakura08"],
+                ["ccsakura09"],
+                ["ccsakura31"],
+                ["anikero", "https://web.archive.org/web/20091026153504/http://es.geocities.com/paisccsakura/galerias/animaciones/animaciones.htm"],
+                ["adopt-kero", "https://web.archive.org/web/20091026183838/http://geocities.com/sakuradreamerkawaii/AnimatedGifs.html?1037992070720"],
+                ["ccsakura68", "https://web.archive.org/web/20091027025847/http://mx.geocities.com/el_mundo_de_card_captor/ccsakura68.gif"],
+                ["giff_c3"],
+                ["serenity"],
+                ["kero"],
+                ["kerocry2"],
+                ["kerocry", "https://web.archive.org/web/20090902142924/http://geocities.com/little_angel30306/Adoption.html"],
+                ["suppi", "https://web.archive.org/web/20090902142924/http://geocities.com/little_angel30306/Adoption.html"],
+                ["sakuralittleangel", "https://web.archive.org/web/20090902142924/http://geocities.com/little_angel30306/Adoption.html"],
+                ["syaoran", "https://web.archive.org/web/20090902142924/http://geocities.com/little_angel30306/Adoption.html"],
+                ["meiling", "https://web.archive.org/web/20090902142924/http://geocities.com/little_angel30306/Adoption.html"],
+                ["tomoyolittleangel", "https://web.archive.org/web/20090902142924/http://geocities.com/little_angel30306/Adoption.html"],
+                ["saku-meiling2", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-meiling", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["sakura5", "https://web.archive.org/web/20091027043104/http://hk.geocities.com/cardcaptor2100/sakura5.gif"],
+                ["sakura6_"],
+                ["sakura7"],
+                ["saku-sakura2", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-sakura3", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-sakura4", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-sakura5", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-sakura6b", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-sakura6", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-sakura7", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-sakura8", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-sakura", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-tomoyo2", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["saku-tomoyo", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["syao_g_01_", "https://web.archive.org/web/20091020031801/http://hk.geocities.com/cardcaptor2100/syao_g_01_.gif"],
+                ["Tomo_"],
+                ["Tomoyohehe"],   
+                ["tomoyo"],
+                ["tomoyo2"],
+                ["release"],
+                ["sakurafly"],
+                ["eriol-icon", "https://web.archive.org/web/20091026235903/http://geocities.com/billycoenlover/index.html"],
+                ["KittySakuraicon", "https://web.archive.org/web/20091026235903/http://geocities.com/billycoenlover/index.html"],
+                ["Yue-icon", "https://web.archive.org/web/20091026235903/http://geocities.com/billycoenlover/index.html"],
+                ["big1", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["big2", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["big3", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["card1", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["card2", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["cheer1", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["cheer2", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["cheer4", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["cheer5", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["kero2", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["kero3", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["sakura1", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["sakura3", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["sakura4", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["sakura6", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["small1", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["ss2", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["ss", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],
+                ["syaoran1", "https://web.archive.org/web/20081212203650/http://www.flora-fleur.net/sakura/adopt.html"],        
+                ["wandgr", "https://web.archive.org/web/20090902025721/http://geocities.com/sdreamstars/AniGifs"],
+                ["vaculo2"],
+                ["0013", "https://web.archive.org/web/20090724222208/http://hk.geocities.com/cardcaptorsakuraw/cardcaprorsakura.html"]
+            ],
+            "inuyasha": [
+                ["animationmirokuwindtunnel"],
+                ["animationshippowalking"],
+                ["inu13"],
+                ["inu1"],
+                ["inu2"],
+                ["inu8"],
+                ["Inuyasha"],
+                ["inuyasha_walkin"],
+                ["IYgif02"],
+                ["IYGIF5"],
+                ["kagome_walkin"],
+                ["scratchin"],
+                ["Sesshoumaru"]  
+            ],
+            "nana": [
+                ["n-utau"]
+            ],
+            "nge": [
+                ["evangelion4"],
+                ["rei"],     
+                ["asuka", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["rei2", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"]
+            ],
+            "sm": [
+                ["6", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["7", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["allrotate", "https://web.archive.org/web/20091027180031/http://mx.geocities.com/izzy_gif2/allrotate.gif"],
+                ["AmiAni10", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["amyrun", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["AnimeME", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["AnimeSailorMercury", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["an-mercury", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["aquamirage", "https://web.archive.org/web/20091027181253/http://mx.geocities.com/izzy_gif2/aquamirage.gif"],
+                ["artemisblink", "https://web.archive.org/web/20091027180737/http://mx.geocities.com/izzy_gif2/artemisblink.gif"],
+                ["berylfront", "https://web.archive.org/web/20091027181323/http://mx.geocities.com/izzy_gif2/berylfront.gif"],
+                ["bubblespray", "https://web.archive.org/web/20091027181235/http://mx.geocities.com/izzy_gif2/bubblespray.gif"],
+                ["burnmandala", "https://web.archive.org/web/20091027180658/http://mx.geocities.com/izzy_gif2/burnmandala.gif"],
+                ["chubcmoontrans", "https://web.archive.org/web/20091027180442/http://mx.geocities.com/izzy_gif2/chubcmoontrans.gif"],
+                ["chubdeepsubmerge", "https://web.archive.org/web/20091027180815/http://mx.geocities.com/izzy_gif2/chubdeepsubmerge.gif"],
+                ["chubjupitrans", "https://web.archive.org/web/20091027180747/http://mx.geocities.com/izzy_gif2/chubjupitrans.gif"],
+                ["chubmarstrans", "https://web.archive.org/web/20091027180658/http://mx.geocities.com/izzy_gif2/chubmarstrans.gif"],
+                ["chuboakevol1", "https://web.archive.org/web/20091027180759/http://mx.geocities.com/izzy_gif2/chuboakevol1.gif"],
+                ["chubsilentglaive", "https://web.archive.org/web/20091027180501/http://mx.geocities.com/izzy_gif2/chubsilentglaive.gif"],
+                ["chubtwinkleyell2", "https://web.archive.org/web/20091027180432/http://mx.geocities.com/izzy_gif2/chubtwinkleyell2.gif"],
+                ["chuburantrans", "https://web.archive.org/web/20091027180239/http://mx.geocities.com/izzy_gif2/chuburantrans.gif"],
+                ["chubworldshake", "https://web.archive.org/web/20091027180048/http://mx.geocities.com/izzy_gif2/chubworldshake.gif"],
+                ["cmoonnah", "https://web.archive.org/web/20091027180451/http://mx.geocities.com/izzy_gif2/cmoonnah.gif"],
+                ["cmoontired", "https://web.archive.org/web/20091027180432/http://mx.geocities.com/izzy_gif2/cmoontired.gif"],
+                ["darien"],
+                ["deepsubmerge", "https://web.archive.org/web/20091027180808/http://mx.geocities.com/izzy_gif2/deepsubmerge.gif"],
+                ["dolls-sailorchibimoon", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-sailorheavymetalpapillon", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-sailorironmouse", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-sailorjupiter", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-sailormars", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-sailormercury", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-sailormoon", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-sailorpluto", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-sailorvenus", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-snowkaguya", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-supersailorchibimoon", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["dolls-supersailormoon", "https://web.archive.org/web/20031002125259/http://primadonna.fiyaa.com/ulala.html"],
+                ["etern-neptune2", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["fab-oyasumiusagi", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["fab-prinnep", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["grandpafront", "https://web.archive.org/web/20091027180715/http://mx.geocities.com/izzy_gif2/grandpafront.gif"],
+                ["harfront", "https://web.archive.org/web/20091027180048/http://mx.geocities.com/izzy_gif2/harfront.gif"],
+                ["ikukoside", "https://web.archive.org/web/20091027180725/http://mx.geocities.com/izzy_gif2/ikukoside.gif"],
+                ["importd23", "https://web.archive.org/web/20091027181326/http://mx.geocities.com/izzy_gif2/importd23.gif"],
+                ["item-brooch1", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["item-brooch2", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["item-brooch3", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["item-brooch4", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["item-brooch5", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["item-eternaltier", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["item-kaliedomoonscope", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["item-moonpen", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["item-penneptune", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["jeditefront", "https://web.archive.org/web/20091027181323/http://mx.geocities.com/izzy_gif2/jeditefront.gif"],
+                ["jupidragon", "https://web.archive.org/web/20091027180805/http://mx.geocities.com/izzy_gif2/jupidragon.gif"],
+                ["jupifront", "https://web.archive.org/web/20091027180747/http://mx.geocities.com/izzy_gif2/jupifront.gif"],
+                ["jupioops", "https://web.archive.org/web/20091027180805/http://mx.geocities.com/izzy_gif2/jupioops.gif"],
+                ["jupiyay", "https://web.archive.org/web/20091027180747/http://mx.geocities.com/izzy_gif2/jupiyay.gif"],
+                ["lovechain", "https://web.archive.org/web/20091027181232/http://mx.geocities.com/izzy_gif2/lovechain.gif"],
+                ["lunapspin", "https://web.archive.org/web/20091027180734/http://mx.geocities.com/izzy_gif2/lunapspin.gif"],
+                ["makoconfused", "https://web.archive.org/web/20091027180740/http://mx.geocities.com/izzy_gif2/makoconfused.gif"],
+                ["mamofront", "https://web.archive.org/web/20091027180501/http://mx.geocities.com/izzy_gif2/mamofront.gif"],
+                ["manga8"],
+                ["marsfirebird", "https://web.archive.org/web/20091027180658/http://mx.geocities.com/izzy_gif2/marsfirebird.gif"],
+                ["marsfront", "https://web.archive.org/web/20091027180658/http://mx.geocities.com/izzy_gif2/marsfront.gif"],
+                ["mars", "https://web.archive.org/web/20020212075411/http://www.geocities.com:80/shallow3000/adopt"],
+                ["marstired", "https://web.archive.org/web/20091027180658/http://mx.geocities.com/izzy_gif2/marstired.gif"],
+                ["mepooped", "https://web.archive.org/web/20091027181256/http://mx.geocities.com/izzy_gif2/merctired.gif"],
+                ["meranimeline", "https://web.archive.org/web/20091027181244/http://mx.geocities.com/izzy_gif2/mercaquatornado.gif"],
+                ["mercfidjit", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["mercfront", "https://web.archive.org/web/20091027181300/http://mx.geocities.com/izzy_gif2/mercfront.gif"],
+                ["mercknees", "https://web.archive.org/web/20091027181323/http://mx.geocities.com/izzy_gif2/mercknees.gif"],
+                ["mercpunch", "https://web.archive.org/web/20091027181253/http://mx.geocities.com/izzy_gif2/mercpunch.gif"],
+                ["mercstone", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["MercuryAquaRhapsody", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["mercurybackpunch", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["mercury_scared", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["mercuryspin", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["mercurystand", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["mercurywin", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["mer", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["mon-supersailormoon", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["nepdeepsub", "https://web.archive.org/web/20091027180805/http://mx.geocities.com/izzy_gif2/nepdeepsub.gif"],
+                ["nepkick", "https://web.archive.org/web/20091027180805/http://mx.geocities.com/izzy_gif2/nepkick.gif"],
+                ["neppunish", "https://web.archive.org/web/20091027180805/http://mx.geocities.com/izzy_gif2/neppunish.gif"],
+                ["neptired", "https://web.archive.org/web/20091027180808/http://mx.geocities.com/izzy_gif2/neptired.gif"],
+                ["nepyay", "https://web.archive.org/web/20091027180808/http://mx.geocities.com/izzy_gif2/nepyay.gif"],
+                ["qserenfront", "https://web.archive.org/web/20091027180734/http://mx.geocities.com/izzy_gif2/qserenfront.gif"],
+                ["reimail", "https://web.archive.org/web/20091027141721/http://mx.geocities.com/izzy_gif2/reimail.gif"],
+                ["req-supermoon", "https://web.archive.org/web/20091022181014/http://geocities.com/zeros_gurl02/adopt.html"],
+                ["rinidribble", "https://web.archive.org/web/20091027180242/http://mx.geocities.com/izzy_gif2/rinidribble.gif"],
+                ["riniumbrella", "https://web.archive.org/web/20091027180438/http://mx.geocities.com/izzy_gif2/riniumbrella.gif"],
+                ["sailor1321"],
+                ["SailorMercury4", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["SailorMercury9", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["SailorMercuryTransform", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["satfront", "https://web.archive.org/web/20091027180454/http://mx.geocities.com/izzy_gif2/satfront.gif"],
+                ["satsilentblast", "https://web.archive.org/web/20091027180451/http://mx.geocities.com/izzy_gif2/satsilentblast.gif"],
+                ["satslash", "https://web.archive.org/web/20091027180501/http://mx.geocities.com/izzy_gif2/satslash.gif"],
+                ["sattired", "https://web.archive.org/web/20091027180454/http://mx.geocities.com/izzy_gif2/sattired.gif"],
+                ["saturniru"],
+                ["satwon", "https://web.archive.org/web/20091027180451/http://mx.geocities.com/izzy_gif2/satwon.gif"],
+                ["Shini_aqua_illution", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["SM24"],
+                ["sparkwidepressure", "https://web.archive.org/web/20091027180740/http://mx.geocities.com/izzy_gif2/sparkwidepressure.gif"],
+                ["sprayanime", "https://web.archive.org/web/20021212185505/http://www.geocities.com:80/shallow3000/animated"],
+                ["transchiviusa"],
+                ["transmic"],
+                ["transmi"],
+                ["tuxjump", "https://web.archive.org/web/20091027180657/http://mx.geocities.com/izzy_gif2/tuxjump.gif"],
+                ["uranoops", "https://web.archive.org/web/20091027180044/http://mx.geocities.com/izzy_gif2/uranoops.gif"],
+                ["uranswordblast", "https://web.archive.org/web/20091027180242/http://mx.geocities.com/izzy_gif2/uranswordblast.gif"],
+                ["urantired", "https://web.archive.org/web/20091027180044/http://mx.geocities.com/izzy_gif2/urantired.gif"],
+                ["uranusadopt", "https://web.archive.org/web/20020405133252/http://magical-dreamer.nu:80/blog/uranusadopt.gif"],
+                ["uranustv", "https://web.archive.org/web/20091027180048/http://mx.geocities.com/izzy_gif2/uranustv.gif"],
+                ["venuskick", "https://web.archive.org/web/20091027181023/http://mx.geocities.com/izzy_gif2/venuskick.gif"],
+                ["venuslovechain1", "https://web.archive.org/web/20091027181039/http://mx.geocities.com/izzy_gif2/venuslovechain1.gif"],
+                ["venusmeteorshower", "https://web.archive.org/web/20091027181030/http://mx.geocities.com/izzy_gif2/venusmeteorshower.gif"],
+                ["venuspunish", "https://web.archive.org/web/20091027181039/http://mx.geocities.com/izzy_gif2/venuspunish.gif"],
+                ["venusspin", "https://web.archive.org/web/20091027181023/http://mx.geocities.com/izzy_gif2/venusspin.gif"],
+                ["venusstatue", "https://web.archive.org/web/20091027181039/http://mx.geocities.com/izzy_gif2/venusstatue.gif"],
+                ["venuswon", "https://web.archive.org/web/20091027181023/http://mx.geocities.com/izzy_gif2/venuswon.gif"]
+            ]
+        }
+    }
+}

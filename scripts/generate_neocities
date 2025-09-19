@@ -26,7 +26,11 @@ eleventy_to_neocities() {
 
 # copy css from public folder, needed to make cache busting function work
 copy_css() {
-    cp $public/$1/$1.min.css $eleventy/neocities/$1/
+    if [ -f $public/$1/$1.min.css ]; then
+        cp $public/$1/$1.min.css $eleventy/neocities/$1/
+    else
+        cp $public/$1/$2 $eleventy/neocities/$1/$2
+    fi
 }
 
 # case based on first argument
@@ -67,6 +71,11 @@ case "$1" in
         copy_css "resources"
         echo "building resources site"
         eleventy_to_neocities "resources" "false"
+        ;;
+    "main")
+        copy_css "main" "css/body.min.css"
+        echo "building main site"
+        eleventy_to_neocities "main" "false"
         ;;
     "notebook")
         echo "building notebook"
