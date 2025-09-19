@@ -5,6 +5,7 @@ const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItDeflist = require("markdown-it-deflist");
 const markdownItDetails = require("markdown-it-expandable");
+const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 
 module.exports = function (eleventyConfig) {
 
@@ -105,6 +106,11 @@ module.exports = function (eleventyConfig) {
 
     return result;
   });
+
+  eleventyConfig.addPassthroughCopy("**/*.min.css");
+  eleventyConfig.addPassthroughCopy("**/*.min.js");
+
+  eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
   return {
     htmlTemplateEngine: 'liquid'
