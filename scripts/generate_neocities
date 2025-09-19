@@ -13,7 +13,7 @@ eleventy_to_neocities() {
     if [ -f ".eleventy.$page.js" ]; then
         npx @11ty/eleventy --config=.eleventy.$page.js
     else
-        npx @11ty/eleventy --input=$page --output=_site/$page
+        npx @11ty/eleventy --input=neocities/$page --output=_site/$page
     fi
 
     # if index, copy index.html, else copy everything
@@ -24,13 +24,17 @@ eleventy_to_neocities() {
     fi
 }
 
+# copy css from public folder, needed to make cache busting function work
+copy_css() {
+    cp $public/$1/$1.min.css $eleventy/neocities/$1/
+}
 
 # case based on first argument
 case "$1" in
     "about")
         echo "building about page"
         $HOME/Documents/neocities/scripts/about_image_update
-        cp $public/$1/$1.min.css $eleventy/$1/
+        copy_css "about"
         eleventy_to_neocities "about" "true"
         ;;
     "articles")
@@ -47,11 +51,11 @@ case "$1" in
         ;;
     "crafts")
         echo "building craft page"
-        cp $public/$1/$1.min.css $eleventy/$1/
+        copy_css "crafts"
         eleventy_to_neocities "crafts" "true"
         ;;
     "language")
-        cp $public/$1/$1.min.css $eleventy/$1/
+        copy_css "language"
         echo "building language page"
         eleventy_to_neocities "language" "true"
         ;;
@@ -60,7 +64,7 @@ case "$1" in
         eleventy_to_neocities "places" "true"
         ;;
     "resources")
-        cp $public/$1/$1.min.css $eleventy/$1/
+        copy_css "resources"
         echo "building resources site"
         eleventy_to_neocities "resources" "false"
         ;;
@@ -93,9 +97,13 @@ case "$1" in
         ;;
 esac
 
-# ask user if they want to serve site
-echo "do you want to preview the site? (y/n)"
-read answer
-if [ $answer == "y" ]; then
-    npx http-server $HOME/Documents/neocities/public
+# if previous command was successful
+if [ $? -eq 0 ]; then
+
+    # ask user if they want to serve site
+    echo "do you want to preview the site? (y/n)"
+    read answer
+    if [ $answer == "y" ]; then
+        npx http-server $HOME/Documents/neocities/public
+    fi
 fi

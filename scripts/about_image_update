@@ -4,7 +4,7 @@
 cd "$HOME/Documents/neocities/public/about/images/blinkies/"
 
 # get the json file with the names of the blinkies
-aboutJson="$HOME/Documents/neocities/eleventy/about/about.json"
+aboutJson="$HOME/Documents/neocities/eleventy/neocities/about/about.json"
 
 # loop through the animated blinkies
 shopt -s nocaseglob
