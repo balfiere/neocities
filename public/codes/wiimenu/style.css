@@ -88,9 +88,9 @@ body {
   background: repeating-linear-gradient(
     360deg,
     #e5e5e5,
-    #e5e5e5 0.25vw,
-    #f5f5f5 0.5vw,
-    #f5f5f5 0.5vw
+    #e5e5e5 0.25svh,
+    #f5f5f5 0.5svh,
+    #f5f5f5 0.5svh
   );
   font-size: 20px;
 }
@@ -283,7 +283,7 @@ div.vbox-close, div.vbox-close img,
   line-height: 43px;
   vertical-align:sub;
   display: inline-block;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 /*-- mobile --*/
