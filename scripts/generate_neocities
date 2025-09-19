@@ -5,7 +5,14 @@ eleventy_to_neocities() {
     page=$1
     index=$2
     cd $HOME/Documents/neocities/eleventy
-    npx @11ty/eleventy --input=$page --output=_site/$page
+    
+    # if .eleventy.$page.js exists, use it
+    if [ -f ".eleventy.$page.js" ]; then
+        npx @11ty/eleventy --config=.eleventy.$page.js
+    else
+        npx @11ty/eleventy --input=$page --output=_site/$page
+    fi
+
     # if index, copy index.html, else copy everything
     if [ $index == "true" ]; then
         cp -a _site/$page/index.html ../public/$page/
@@ -29,6 +36,10 @@ case "$1" in
     "changelog")
         echo "building changelog"
         eleventy_to_neocities "changelog" "true"
+        ;;
+    "codes")
+        echo "building codes folder"
+        eleventy_to_neocities "codes" "false"
         ;;
     "crafts")
         echo "building craft page"
