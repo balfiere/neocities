@@ -11,8 +11,4 @@ module.exports = function(eleventyConfig) {
   transforms.forEach(fn => fn(eleventyConfig));
 
   eleventyConfig.addPlugin(eleventyAutoCacheBuster);
-
-  return {
-    HTMLTemplateElement: "liquid",
-  }
 };
