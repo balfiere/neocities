@@ -1,10 +1,13 @@
 #!/bin/bash
 
+eleventy="$HOME/Documents/neocities/eleventy"
+public="$HOME/Documents/neocities/public"
+
 # build eleventy folder and copy to relevant public folder
 eleventy_to_neocities() {
     page=$1
     index=$2
-    cd $HOME/Documents/neocities/eleventy
+    cd $eleventy
     
     # if .eleventy.$page.js exists, use it
     if [ -f ".eleventy.$page.js" ]; then
@@ -27,6 +30,7 @@ case "$1" in
     "about")
         echo "building about page"
         $HOME/Documents/neocities/scripts/about_image_update
+        cp $public/$1/$1.min.css $eleventy/$1/
         eleventy_to_neocities "about" "true"
         ;;
     "articles")
@@ -43,9 +47,11 @@ case "$1" in
         ;;
     "crafts")
         echo "building craft page"
+        cp $public/$1/$1.min.css $eleventy/$1/
         eleventy_to_neocities "crafts" "true"
         ;;
     "language")
+        cp $public/$1/$1.min.css $eleventy/$1/
         echo "building language page"
         eleventy_to_neocities "language" "true"
         ;;
@@ -54,6 +60,7 @@ case "$1" in
         eleventy_to_neocities "places" "true"
         ;;
     "resources")
+        cp $public/$1/$1.min.css $eleventy/$1/
         echo "building resources site"
         eleventy_to_neocities "resources" "false"
         ;;

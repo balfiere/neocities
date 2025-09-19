@@ -56,8 +56,13 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
+  
+  eleventyConfig.addPassthroughCopy("about/about.min.css");
 
   return {
-    htmlTemplateEngine: 'liquid'
+    dir: { 
+      input: "about", 
+      output: "_site/about" 
+    } 
   };
 };

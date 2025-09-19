@@ -1,3 +1,5 @@
+const fs = require("fs");
+const matter = require("gray-matter");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItDeflist = require("markdown-it-deflist");
@@ -33,6 +35,17 @@ module.exports = function (eleventyConfig) {
     return md.renderInline(content);
   });
 
+  // shortcode to render to body of a specific external markdown file
+  eleventyConfig.addShortcode("renderExternalMarkdown", function (filePath) {
+
+    // read the file and parse with gray-matter
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const parsedFile = matter(fileContent);
+
+    // return the content without the front matter as html
+    return md.render(parsedFile.content);
+  });
+
   eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
   eleventyConfig.addTransform("htmlmin", function (content) {
@@ -57,7 +70,12 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addPassthroughCopy("language/language.min.css");
+
   return {
-    htmlTemplateEngine: 'liquid'
+    dir: {
+      input: "language",
+      output: "_site/language"
+    }
   };
 };
