@@ -5,6 +5,12 @@ module.exports = function (eleventyConfig) {
 
   extractKeyWithCount(eleventyConfig);
   markdownify(eleventyConfig);
+  
+	eleventyConfig.addCollection("image-gallery-sort", function (collectionsApi) {
+		return collectionsApi.getFilteredByTag("image-gallery").sort(function (a, b) {
+			return a.inputPath.localeCompare(b.inputPath);
+		});
+	});
 
   return {
     dir: { 

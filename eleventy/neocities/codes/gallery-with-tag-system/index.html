@@ -570,7 +570,7 @@
 
         <div id="image-grid-container">
 
-            {% for entry in collections.image-gallery %}
+            {% for entry in collections.image-gallery-sort | sortBy: "data.sort", "asc", "numeric" %}
 
             <section category="{% for category in entry.data.categories %}{{ category }} {% endfor %}">
                 <input class="modal-toggle" id="modal-{{ entry.page.fileSlug | slugify }}" type="checkbox" />
