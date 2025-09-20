@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs-extra");
 const matter = require("gray-matter");
 const markdownIt = require("markdown-it");
 
