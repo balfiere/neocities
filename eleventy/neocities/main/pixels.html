@@ -101,7 +101,7 @@ permalink: "/pixels.html"
         <p>
             {% for gif in pixels.ff.general %}
             {% if gif[1] %}<a target="_blank" href="{{ gif[1] }}">{% endif %}
-                <picture><source srcSet="images/pixels/final%20fantasy/gen/{{ gif[0] }}.png" media="(prefers-reduced-motion)" /><img src="images/pixels/final fantasy/gen/{{ gif[0] }}.gif" /></picture>
+                <picture><source srcSet="images/pixels/final%20fantasy/{{ gif[0] }}.png" media="(prefers-reduced-motion)" /><img src="images/pixels/final fantasy/{{ gif[0] }}.gif" /></picture>
                 {% if gif[1] %}</a>{% endif %}
             {% endfor %}
         </p></details>

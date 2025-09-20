@@ -454,6 +454,24 @@ blockquote {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
+h2 {
+  font-family: nineteen93, maru;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 2em;
+  color: var(--h2-color);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+article > h2 {
+  padding: 2px 10px;
+  margin: 4px 0;
+  text-align: right;
+  background-color: var(--h2-background);
+}
+
 summary {
   cursor: pointer;
   display: flex;
@@ -465,23 +483,15 @@ summary {
     height: 10px;
     background: url('/resources/images/plus.png') no-repeat;
     filter: invert(1);
+    margin-right: 5px;
   }
 
   &:has(h2) {
     display: flex;
     justify-content: space-between;
-    
-    font-family: nineteen93, maru;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 2em;
-    padding: 2px 10px;
-    color: var(--h2-color);
     background-color: var(--h2-background);
+    padding: 2px 10px;
     margin: 4px 0;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: geometricPrecision;
   }
 }
 
