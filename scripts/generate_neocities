@@ -5,114 +5,119 @@ public="$HOME/Documents/neocities/public"
 
 # build eleventy folder and copy to relevant public folder
 eleventy_to_neocities() {
-    page=$1
-    index=$2
-    cd $eleventy
-    
-    # if .eleventy.$page.js exists, use it
-    if [ -f ".eleventy.$page.js" ]; then
-        npx @11ty/eleventy --config=.eleventy.$page.js
-    else
-        npx @11ty/eleventy --input=neocities/$page --output=_site/$page
-    fi
+  page=$1
+  index=$2
+  cd $eleventy
 
-    # if index, copy index.html, else copy everything
-    if [ $index == "true" ]; then
-        cp -a _site/$page/index.html ../public/$page/
-    else
-        cp -a _site/$page/. ../public/$page
-    fi
+  # if .eleventy.$page.js exists, use it
+  if [ -f ".eleventy.$page.js" ]; then
+    npx @11ty/eleventy --config=.eleventy.$page.js
+  else
+    npx @11ty/eleventy --input=neocities/$page --output=_site/$page
+  fi
+
+  # if index, copy index.html, else copy everything
+  if [ $index == "true" ]; then
+    cp -a _site/$page/index.html ../public/$page/
+  else
+    cp -a _site/$page/. ../public/$page
+  fi
 }
 
 # copy css from public folder, needed to make cache busting function work
 copy_css() {
-    if [ -f $public/$1/$1.min.css ]; then
-        cp $public/$1/$1.min.css $eleventy/neocities/$1/
-    else
-        cp $public/$1/$2 $eleventy/neocities/$1/$2
-    fi
+  if [ -f $public/$1/$1.min.css ]; then
+    cp $public/$1/$1.min.css $eleventy/neocities/$1/
+  else
+    cp $public/$1/$2 $eleventy/neocities/$1/$2
+  fi
 }
 
 # case based on first argument
 case "$1" in
-    "about")
-        echo "building about page"
-        $HOME/Documents/neocities/scripts/about_image_update
-        copy_css "about"
-        eleventy_to_neocities "about" "true"
-        ;;
-    "articles")
-        echo "building articles page"
-        eleventy_to_neocities "articles" "true"
-        ;;
-    "changelog")
-        echo "building changelog"
-        eleventy_to_neocities "changelog" "true"
-        ;;
-    "codes")
-        echo "building codes folder"
-        eleventy_to_neocities "codes" "false"
-        ;;
-    "crafts")
-        echo "building craft page"
-        copy_css "crafts"
-        eleventy_to_neocities "crafts" "true"
-        ;;
-    "language")
-        copy_css "language"
-        echo "building language page"
-        eleventy_to_neocities "language" "true"
-        ;;
-    "places")
-        echo "building places page"
-        eleventy_to_neocities "places" "true"
-        ;;
-    "resources")
-        copy_css "resources"
-        echo "building resources site"
-        eleventy_to_neocities "resources" "false"
-        ;;
-    "main")
-        copy_css "main" "css/body.min.css"
-        echo "building main site"
-        eleventy_to_neocities "main" "false"
-        ;;
-    "notebook")
-        echo "building notebook"
-        cd $HOME/Documents/neocities/quartz/
-        npx quartz build
-        cp -a public/. ../public/notes/
-        ;;
-    "microblog")
-        # ask user if they want to build today's post from obsidian
-        echo "do you want to build today's post from obsidian? (y/n)"
-        read answer
-        if [ $answer == "y" ]; then
-            echo "building $(date '+%Y-%m-%d').md"
-            $HOME/Documents/neocities/scripts/obsidian_to_microblog
-        fi
-        echo "do you want to build the microblog? (y/n)"
-        read answer
-        if [ $answer == "y" ]; then
-            echo "running microblog.py"
-            cd $HOME/Documents/neocities/microblog
-            pipenv run python microblog.py ./template.tpl ./content.txt > $HOME/Documents/neocities/public/microblog/index.html
-            mv tags ../public/microblog
-            mv pages ../public/microblog
-        fi
-        ;;
-    *)
-        echo "not a page"
-        ;;
+"about")
+  echo "building about page"
+  $HOME/Documents/neocities/scripts/about_image_update
+  copy_css "about"
+  eleventy_to_neocities "about" "true"
+  ;;
+"articles")
+  echo "building articles page"
+  eleventy_to_neocities "articles" "true"
+  ;;
+"changelog")
+  echo "building changelog"
+  eleventy_to_neocities "changelog" "true"
+  ;;
+"codes")
+  echo "building codes folder"
+  eleventy_to_neocities "codes" "false"
+  ;;
+"crafts")
+  echo "building craft page"
+  copy_css "crafts"
+  eleventy_to_neocities "crafts" "true"
+  ;;
+"language")
+  copy_css "language"
+  echo "building language page"
+  eleventy_to_neocities "language" "true"
+  ;;
+"places")
+  echo "building places page"
+  eleventy_to_neocities "places" "true"
+  ;;
+"resources")
+  copy_css "resources"
+  echo "building resources site"
+  eleventy_to_neocities "resources" "false"
+  ;;
+"main")
+  copy_css "main" "css/body.min.css"
+  echo "building main site"
+  eleventy_to_neocities "main" "false"
+  ;;
+"vegan")
+  copy_css "vegan"
+  echo "building vegan page"
+  eleventy_to_neocities "vegan" "true"
+  ;;
+"notebook")
+  echo "building notebook"
+  cd $HOME/Documents/neocities/quartz/
+  npx quartz build
+  cp -a public/. ../public/notes/
+  ;;
+"microblog")
+  # ask user if they want to build today's post from obsidian
+  echo "do you want to build today's post from obsidian? (y/n)"
+  read answer
+  if [ $answer == "y" ]; then
+    echo "building $(date '+%Y-%m-%d').md"
+    $HOME/Documents/neocities/scripts/obsidian_to_microblog
+  fi
+  echo "do you want to build the microblog? (y/n)"
+  read answer
+  if [ $answer == "y" ]; then
+    echo "running microblog.py"
+    cd $HOME/Documents/neocities/microblog
+    pipenv run python microblog.py ./template.tpl ./content.txt >$HOME/Documents/neocities/public/microblog/index.html
+    mv tags ../public/microblog
+    mv pages ../public/microblog
+  fi
+  ;;
+*)
+  echo "not a page"
+  ;;
 esac
 
 # if previous command was successful
 if [ $? -eq 0 ]; then
 
-    # ask user if they want to serve site
-    echo "do you want to preview the site? (y/n)"
-    read answer
-    if [ $answer == "y" ]; then
-        npx http-server $HOME/Documents/neocities/public
-    fi
+  # ask user if they want to serve site
+  echo "do you want to preview the site? (y/n)"
+  read answer
+  if [ $answer == "y" ]; then
+    npx http-server $HOME/Documents/neocities/public
+  fi
 fi

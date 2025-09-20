@@ -1,0 +1,71 @@
+{
+    "toybox": {
+        "cows": [
+            ["cow01"],
+            ["cow03"],
+            ["cow04"],
+            ["cow05"],
+            ["cow06"],
+            ["cow07"],
+            ["cow08"],
+            ["cow09"],
+            ["cow10"],
+            ["cow11"],
+            ["cow12"],
+            ["cow13"],
+            ["cow14"]
+        ],
+        "other": [
+            ["alpaca01"]
+        ]
+    },
+    "recipes": {
+        "savory": [
+            ["chashu", "https://youtu.be/RkRfbeX7GNE"],
+            ["shredded chicken", "https://seitansociety.com/recipes/shredded-vegan-chicken-potatoes/"],
+            ["bone broth", "https://www.reddit.com/r/VeganRamen/comments/14594b9/vegan_bone_broth_recipe/"],
+            ["pepperoni", "https://veganhuggs.com/vegan-pepperoni-recipe/"],
+            ["mozzarella", "https://thebananadiaries.com/vegan-mozzarella-recipe/"],
+            ["tempeh", "https://www.youtube.com/watch?v=wDsit1oiv0A", "🠔 if ur serious about making ur own tempeh i highly recommend this guy's whole youtube channel"]
+        ],
+        "sweet": [
+            ["new york cheesecake", "https://www.spabettie.com/new-york-cheesecake/"],
+            ["boston cream donuts", "https://aegeandelight.com/vegan-boston-cream-donuts/"],
+            ["single serving chocolate roll", "https://minibatchbaker.com/single-serving-chocolate-roll/"],
+            ["lemon blueberry bread", "https://www.noracooks.com/lemon-blueberry-bread/"]
+        ], 
+        "drinks": [
+            ["ponche navideño", "https://www.liquor.com/recipes/ponche-navideno/"],
+            [ "butterfly pea flower cocktail", "https://nerdswithknives.com/butterfly-pea-flower-cocktail-social-butterfly/", " 🠔 for the bisexuals" ],
+            [ "thai iced tea with cheese foam", "https://thevietvegan.com/vegan-thai-iced-tea-with-cheese-foam/", " but i recommend pantai brand thai tea over chatramue" ]
+        ]
+    },
+    "ideas": {
+        "simple and cheap meal ideas": [
+            "soft tofu topped with a sauce (i prefer vegan mushroom oyster sauce) microwaved for 5 minutes. top w fried garlic, ginger, and/or green onions if ur feeling extra fancy",
+            "pasta + canned chickpeas, drained + vegan mayo or pesto",
+            "add tvp crumbles to vegan ramen. make sure it's the small kind so it can cook thoroughly"
+        ],
+        "other random tips": [
+            "carmelize onions and fry garlic in big batches and keep for later. they can be added to roasted veggies, stir fry, pan fried tofu, soups, even plain canned beans or microwave vegetables",
+            "tofu keeps its shape better in soups and stews if it's either frozen or deep fried first",
+            "add a dash of baking soda when soaking dried beans so they cook faster",
+            "canned jackfruit can be shredded and added to seitan recipes for a hacky way of adding some flaky texture if ur like me and too lazy to knead it as long as most recipes suggest"
+        ]
+    },
+    "cookbooks": [
+        ["Veganomicon : the ultimate vegan cookbook", "https://search.worldcat.org/title/971512344", "Isa Chandra Moskowitz and Terry Hope Romero"],
+        ["Big vegan flavor : techniques and 150 recipes to master vegan cooking", "https://search.worldcat.org/title/1412171008", "Nisha Vora"],
+        ["Vegan soul kitchen : fresh, healthy, and creative African American cuisine", "https://search.worldcat.org/title/436045797", "Bryant Terry"],
+        ["Sushi modoki : the Japanese art of crafting vegan sushi", "https://search.worldcat.org/title/1104916169", "Iina Sawabatake"],
+        ["The homemade vegan pantry : the art of making your own staples", "https://search.worldcat.org/title/891609193", "Miyoko Nishimoto Schinner"],
+        ["Vegan cupcakes take over the world : 75 dairy-free recipes for cupcakes that rule", "https://search.worldcat.org/title/192027764", "Isa Chandra Moskowitz, Terry Hope Romero, and Rebecca Bent"],
+        ["The Korean vegan cookbook : reflections and recipes from Omma's kitchen", "https://search.worldcat.org/title/1112793511", "Joanne Lee Molinaro"],
+        ["Vegetable kingdom : the abundant world of vegan recipes", "https://search.worldcat.org/title/1345614526", "Bryant Terry"],
+        ["La vida verde : plant-based Mexican cooking with authentic flavor", "https://search.worldcat.org/title/791680246", "Jocelyn Ramirez"],
+        ["Artisan vegan cheese : from everyday to gourmet", "https://search.worldcat.org/title/1280405751", "Miyoko Nishimoto Schinner"],
+        ["The vegan Chinese kitchen : recipes and modern stories from a thousand-year-old tradition", "https://search.worldcat.org/title/1351566706", "Hannah Che"],
+        ["Fermenter : DIY fermentation for vegan fare", "https://search.worldcat.org/title/826294092", "Aaron Adams and Liz Crain"],
+        ["Vegan chocolate : unapologetically luscious and decadent dairy-free desserts", "https://search.worldcat.org/title/826294092", "Fran Costigan"]
+    ]
+}

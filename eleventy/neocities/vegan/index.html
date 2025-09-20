@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vegan page</title>
+  <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml"
+    href="https://kwaamfan.neocities.org/atom.xml" />
+  <link rel="shortcut icon" href="images/favicon.gif">
+
+  <!-- styling -->
+  <link rel="stylesheet" href="https://unpkg.com/7.css@0.21.1/dist/7.css">
+  <link rel="stylesheet" href="vegan.min.css">
+
+</head>
+
+<body>
+
+  <main>
+    <div class="window active glass">
+      <div class="title-bar">
+        <div class="title-bar-text">kwaamfan's vegan page</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <a label="Close" title="go back to homepage" href="/main/"></a>
+          <!-- <button aria-label="Close"></button> -->
+        </div>
+      </div>
+
+      <div class="window-body">
+        <ul role="menubar" class="can-hover">
+          <li role="menuitem" tabindex="0" aria-haspopup="true">
+            File
+            <ul role="menu">
+              <li role="menuitem">
+                <a href="#menubar">
+                  Open <span>Ctrl+O</span>
+                </a>
+              </li>
+              <li role="menuitem">
+                <a href="#menubar">
+                  Save <span>Ctrl+S</span>
+                </a>
+              </li>
+              <li role="menuitem" class="has-divider">
+                <a href="#menubar">
+                  Save As... <span>Ctrl+Shift+S</span>
+                </a>
+              </li>
+              <li role="menuitem"><a href="#menubar">Exit</a></li>
+            </ul>
+          </li>
+          <li role="menuitem" tabindex="0" aria-haspopup="true">
+            Edit
+            <ul role="menu">
+              <li role="menuitem"><a href="#menubar">Undo</a></li>
+              <li role="menuitem"><a href="#menubar">Copy</a></li>
+              <li role="menuitem"><a href="#menubar">Cut</a></li>
+              <li role="menuitem" class="has-divider"><a href="#menubar">Paste</a></li>
+              <li role="menuitem"><a href="#menubar">Delete</a></li>
+              <li role="menuitem"><a href="#menubar">Find...</a></li>
+              <li role="menuitem"><a href="#menubar">Replace...</a></li>
+              <li role="menuitem"><a href="#menubar">Go to...</a></li>
+            </ul>
+          </li>
+          <li role="menuitem" tabindex="0" aria-haspopup="true">
+            View
+            <ul role="menu">
+              <li role="menuitem" tabindex="0" aria-haspopup="true">
+                Zoom
+                <ul role="menu">
+                  <li role="menuitem"><button>Zoom In</button></li>
+                  <li role="menuitem"><button>Zoom Out</button></li>
+                </ul>
+              </li>
+              <li role="menuitem"><a href="#menubar">Status Bar</a></li>
+            </ul>
+          </li>
+          <li role="menuitem" tabindex="0" aria-haspopup="true">
+            Help
+            <ul role="menu">
+              <li role="menuitem"><a href="#menubar">View Help</a></li>
+              <li role="menuitem"><a href="#menubar">About</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="inside">
+          <input type="radio" id="tabToggle01" name="tabs" value="1" aria-controls="home" role="tab" checked />
+          <label for="tabToggle01" checked="checked">home</label>
+          <input type="radio" id="tabToggle02" name="tabs" value="2" aria-controls="toybox" role="tab" />
+          <label for="tabToggle02">toybox</label>
+          <input type="radio" id="tabToggle03" name="tabs" value="3" aria-controls="recipes" role="tab" />
+          <label for="tabToggle03">recipes</label>
+          <input type="radio" id="tabToggle04" name="tabs" value="4" aria-controls="resources" role="tab" disabled />
+          <label for="tabToggle04">resources</label>
+
+          <!-- landing -->
+          <article role="tabpanel" id="home">
+
+            {% renderFile "./neocities/vegan/_includes/home.md" %}
+
+          </article>
+
+          <!-- toybox -->
+          <article role="tabpanel" id="toybox">
+            {% for section in toybox %}
+            <h2 class="instruction instruction-primary">{{ section[0] }}</h2>
+            {% for gif in section[1] %}
+            {% if gif[1] %}<a target="_blank" href="{{ gif[1] }}">{% endif %}
+              <picture><source srcSet="images/toybox/{{ gif[0] }}.png" media="(prefers-reduced-motion)" /><img
+                  src="images/toybox/{{ gif[0] }}.gif" /></picture>
+              {% if gif[1] %}</a>{% endif %}
+            {% endfor %}{% endfor %}
+          </article>
+
+          <!-- recipes -->
+          <article role="tabpanel" id="recipes">
+            <h2 class="instruction instruction-primary">my recipes</h2>
+            <ul>
+              {% for recipe in collections.recipes %}
+              <li><a href="#{{ recipe.fileSlug | slugify }}">{{ recipe.data.title }}</a></li>
+              {% endfor %}
+            </ul>
+
+            <img src="images/medium-divider.gif" class="divider">
+
+            <h2 class="instruction instruction-primary">other recipes</h2>
+            <ul class="tree-view has-collapse-button has-connector">
+              {% for category in recipes %}
+              <details>
+                <summary>{{ category[0] }}</summary>
+                <ul>{% for recipe in category[1] %}
+                  <li><a target="_blank" href="{{ recipe[1] }}">{{ recipe[0] }}</a>{{ recipe[2] }}</li>
+                {% endfor %}</ul>
+              </details>
+              {% endfor %}
+              {% for category in ideas %}
+              <details>
+                <summary>{{ category[0] }}</summary>
+                <ul>{% for idea in category[1] %}
+                  <li>{{ idea }}</li>
+                {% endfor %}</ul>
+              </details>
+              {% endfor %}
+            </ul>
+
+            <img src="images/medium-divider.gif" class="divider">
+
+            <h2 class="instruction instruction-primary">favorite cookbooks</h2>
+            <ul>
+              {% for cookbook in cookbooks %}
+              <li><a target="_blank" href="{{ cookbook[1] }}">{{ cookbook[0] }}</a> by {{ cookbook[2] }}</li>
+              {% endfor %}
+            </ul>
+          </article>
+
+          <article role="tabpanel" id="resources">
+            <p>
+              You create the content for each tab by using an <code>article</code> tag.
+            </p>
+          </article>
+
+          <section class="field-row" style="justify-content: flex-end">
+            <a href="/main/" title="go back to homepage"><button class="default">OK</button></a>
+            <a href="/main/" title="go back to homepage"><button>Cancel</button></a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% for recipe in collections.recipes %}
+  <div class="window active is-bright glass popup" id="{{ recipe.fileSlug | slugify }}" role="dialog"
+    aria-labelledby="dialog-title">
+    <div class="title-bar">
+      <div class="title-bar-text" id="dialog-title">{{ recipe.data.title }}</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <a label="Close" title="close recipe" href="#"></a>
+      </div>
+    </div>
+    <div class="window-body has-space">
+      <div class="inside recipe">
+        {{ recipe.content }}
+      </div>
+    </div>
+    <footer style="text-align: right">
+      <a href="#" title="close"><button>Cancel</button></a>
+    </footer>
+  </div>
+  {% endfor %}
+
+</body>
+
+</html>
