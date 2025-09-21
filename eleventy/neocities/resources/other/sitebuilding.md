@@ -6,22 +6,28 @@ staus: valid
 
 {% resourcesContainer "premade themes and layouts" %}
 
+my personal recommendations of people who make (mostly) responsive themes:
+
+- [kalechips' layout thrift store](https://kalechips.net/projects/layouts/){target='_blank'}
+- [ribo.zone's layouts](https://ribo.zone/free/layouts/){target='_blank'}
+- [SCUMSUCK's Resources](https://scumsuck.com/resources){target='_blank'}
 - [cepheus's themes](https://cepheus.neocities.org/content/layouts){target='_blank'}
-- [cinni's themes](https://cinni.net/?z=/theme/layouts){target='_blank'}
 - [EGGRAMEN's CSS Test Pages](https://eggramen.neocities.org/code/css_testpages){target='_blank'}
 - [fool lovers' themes](https://foollovers.com/te/index.html){target='_blank'}
-- [kalechips' layout thrift store](https://kalechips.net/projects/layouts/){target='_blank'}
 - [REPTH themes](https://repth.neocities.org/theme){target='_blank'}
-- [ribo.zone's layouts](https://ribo.zone/free/layouts/){target='_blank'}
 - sadgrl.online's [premade layouts](https://codepen.io/sadness97/full/XJbLxZM) and [layout builder](https://codepen.io/sadness97/full/XJbLxNj){target='_blank'}
+- [Templates | Wasp Nest](https://punkwasp.neocities.org/creations/templates/){target='_blank'}
+- [5493's themes](https://5493.neocities.org/themes){target='_blank'}
+- [petrapixel's layout generator](https://petrapixel.neocities.org/coding/layout-generator){target='_blank'}
+
+other themes:
+
+- [cinni's themes](https://cinni.net/?z=/theme/layouts){target='_blank'}
 - [teppy's layouts & tips](https://teppyslayouts.neocities.org/){target='_blank'}
 - [tentacool's directory](https://codesharing.neocities.org/){target='_blank'}
 - [ThemeKing's Retro HTML Web Templates](https://themekings.net/retro-html-templates.html#free){target='_blank'}
-- [Templates | Wasp Nest](https://punkwasp.neocities.org/creations/templates/){target='_blank'}
 - [xandra's layouts](https://xandra.cc/foryou#layouts){target='_blank'}
-- [petrapixel's layout generator](https://petrapixel.neocities.org/coding/layout-generator){target='_blank'}
 - [Wish Glows' layouts](https://wishglows.neocities.org/layouts){target='_blank'}
-- [5493's themes](https://5493.neocities.org/themes){target='_blank'}
 - [Almost Sweet's themes](https://almostsweet.neocities.org/design){target='_blank'}
 
 {% endresourcesContainer %}
@@ -136,7 +142,7 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 
 {% endresourcesContainer %}
 {% resourcesContainer "online tools" %}
-			
+
 [ezgif](https://ezgif.com/){target='_blank'}
 : create, crop, resize, reverse, split and convert between animated image files like gifs, webp, apng, avif, and mp4 online.
 
@@ -197,6 +203,7 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 {% endresourcesContainer %}
 {% resourcesContainer "other" %}
 
+- [xandra](https://xandra.cc/){target='_blank'}’s [Resources List for the Personal Web](https://discourse.32bit.cafe/t/resources-list-for-the-personal-web/49){target='_blank'} on 32 bit cafe
 - [scripted](https://scripted.neocities.org/){target='_blank'}
 - [Skye Journey](https://luvrksknskyejourney.org/filesystem/resources/index.html){target='_blank'}
 
