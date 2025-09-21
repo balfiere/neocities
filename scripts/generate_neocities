@@ -45,6 +45,10 @@ case "$1" in
   echo "building articles page"
   eleventy_to_neocities "articles" "true"
   ;;
+"atom")
+  echo "building main atom feed"
+  $HOME/Documents/neocities/scripts/obsidian_to_atom
+  ;;
 "changelog")
   echo "building changelog"
   eleventy_to_neocities "changelog" "true"
