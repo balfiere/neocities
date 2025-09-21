@@ -7,7 +7,7 @@ microblog="$HOME/Documents/neocities/public/microblog/content.txt"
 microblogTemplate="$HOME/.pandoc/templates/microblog.html"
 
 atom="$HOME/Documents/neocities/public/microblog/atom.xml"
-atomTemplate="$HOME/.pandoc/templates/atom.html"
+atomTemplate="$HOME/.pandoc/templates/atom-microblog.html"
 title=$(date --date="$date" "+%A, %B %e %Y" | tr "[:upper:]" "[:lower:]")
 lastPost=$(sed -n '16p' "$atom" | sed 's/.*#\([0-9]\+\)".*/\1/')
 newPost=$(expr $lastPost + 1)
