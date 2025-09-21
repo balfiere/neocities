@@ -1,14 +1,13 @@
 #!/bin/bash
 
-date="${1:-$(date +%Y-%m-%d)}" # set the date to the first argument. if not provided, use today's date in yyyy-mm-dd format
+date="${1:-$(date -I)}" # set the date to the first argument. if not provided, use today's date in yyyy-mm-dd format
 input="$HOME/Documents/Obsidian/040 projects/neocities/atom/$date.md"
-
 atom="$HOME/Documents/neocities/public/atom.xml"
 atomTemplate="$HOME/.pandoc/templates/atom-main.html"
 
 # if the input file does not exist, see if there is a file for yesterday
 if [ ! -f "$input" ]; then
-    input="$HOME/Documents/Obsidian/040 projects/neocities/microblog/$(date --date="yesterday" +%Y-%m-%d).md"
+    input="$HOME/Documents/Obsidian/040 projects/neocities/microblog/$(date --date="yesterday" -I).md"
 
     # if there is no file for yesterday, exit
     if [ ! -f "$input" ]; then
