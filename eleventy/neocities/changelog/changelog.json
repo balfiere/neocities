@@ -1,6 +1,10 @@
 {
     "logs": [
         [
+            "09.20.25",
+            "updated the [crafts](/crafts/){target=_top} page with three older projects and one recently finished project."
+        ],
+        [
             "09.17.25",
             "published a new theme for a [responsive image gallery with popups and tag filtering system](/codes/gallery-with-tag-system){target=_top}."
         ],
