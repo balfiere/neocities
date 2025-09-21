@@ -8,7 +8,7 @@ permalink: "/codes.html"
 
 when viewing a demo page on my site, press Ctrl+U to view the source code then save it as an .html file.
 
-for tutorials i\'ve written see the [site building tag](https://kwaamfan.neocities.org/notes/tags/site_building){target="_top"} of my notebook area.
+for tutorials i\'ve written see the [site building tag](https://kwaamfan.neocities.org/notes/tags/site_building.html){target="_top"} of my notebook area.
 
 all code here is shared under the [unlicense](https://unlicense.org/){target="_blank"}, except for the stardew valley theme which is shared under the [MIT license](https://opensource.org/license/MIT){target='_blank'} due to its derivation from an existing codepen. all i ask is if you learn anything at all from looking at my code, please consider being cool about people learning from looking at your own code too :)
 

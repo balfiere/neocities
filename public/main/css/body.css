@@ -311,7 +311,7 @@ body {
   grid-template-columns: auto 0px;
   padding: 10px;
   color: var(--text);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans Thai", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;

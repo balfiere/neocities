@@ -18,7 +18,7 @@ if [ ! -f "$input" ]; then
 fi
 
 # remove the first 13 lines of the atom.xml file
-tail -n +14 "$atom" > "$atom".tmp
+tail -n +13 "$atom" > "$atom".tmp
 mv "$atom".tmp "$atom"
 
 # update the atom feed

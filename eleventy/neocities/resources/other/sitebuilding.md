@@ -19,6 +19,7 @@ my personal recommendations of people who make (mostly) responsive themes:
 - [Templates | Wasp Nest](https://punkwasp.neocities.org/creations/templates/){target='_blank'}
 - [5493's themes](https://5493.neocities.org/themes){target='_blank'}
 - [petrapixel's layout generator](https://petrapixel.neocities.org/coding/layout-generator){target='_blank'}
+- [Neothemes - Layouts and Themes for Neocities](https://neothemes.neocities.org/){target='_blank'}
 
 other themes:
 
@@ -120,7 +121,7 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 : a css animation library.
 
 [my code snippets](https://kwaamfan.neocities.org/main/?z=/main/codes){target='_blank'}
-: i have some of my own code snippets on my personal site. includes a wii menu style media gallery, pictochat style microblog/changelog, draggable and collapsible windows, and more.
+: i have some of my own code snippets and tutorials on my personal site. includes a responsive image gallery with tag/filter system, wii menu style media gallery, pictochat style microblog/changelog, draggable and collapsible windows, and more.
 
 {% endresourcesContainer %}
 {% resourcesContainer "javascript libraries" %}
@@ -201,8 +202,9 @@ css frameworks are premade, ready to use stylesheets that can speed up the devel
 : beginner webdev tutorials aimed at indie web users looking to code websites from scratch.
 
 {% endresourcesContainer %}
-{% resourcesContainer "other" %}
+{% resourcesContainer "other resources lists" %}
 
+- doqmeat’s [notebook](https://doqmeat.com/notebook/) (also has code snippets)
 - [xandra](https://xandra.cc/){target='_blank'}’s [Resources List for the Personal Web](https://discourse.32bit.cafe/t/resources-list-for-the-personal-web/49){target='_blank'} on 32 bit cafe
 - [scripted](https://scripted.neocities.org/){target='_blank'}
 - [Skye Journey](https://luvrksknskyejourney.org/filesystem/resources/index.html){target='_blank'}
