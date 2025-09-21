@@ -10,13 +10,19 @@
   --colorMagenta: magenta;
 }
 
+@font-face {
+    font-family: 'IBM Plex Sans Thai';
+    src: url('/fonts/ibm-plex-sans-thai-v10-latin_latin-ext_thai-300.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: black;
-  font-size: 1.2rem;
 }
 
 *::selection {
@@ -26,6 +32,8 @@
 body {
   background-image: linear-gradient(rgba(228, 228, 228, 0.4) 2px, transparent 1px), linear-gradient(90deg, rgba(228, 228, 228, 0.4) 2px, transparent 2px);
   background-size: 12px 12px;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.75rem;
 }
 
 main {
@@ -125,22 +133,19 @@ h1,
 h2 {
   font-family: "Beth Ellen", cursive;
   font-weight: 400;
-  font-size: 1.5em;
   line-height: 1.5em;
   padding: 0;
   margin: 0;
 }
 
 h1 {
-  font-size: 1.75em;
+  font-size: 1.25em;
   line-height: 2.5em;
 }
 
 p,
 .popup li {
-  font-family: "Reenie Beanie", cursive;
   font-weight: 400;
-  font-size: 1.5rem;
   line-height: 2rem;
   margin-top: 0.5rem;
 }
@@ -178,6 +183,24 @@ li:before {
   left: 0.6rem;
   right: 0.6rem;
   top: 0;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  background-color: rgb(219, 138, 138);
+  color: black;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-weight: 300;
+  border: 1px solid rgb(173, 104, 104);
+  border-radius: 0.2rem;
+  transition: .3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(173, 104, 104);
+    color: white;
+  }
 }
 
 /*----- modal -----*/
@@ -341,4 +364,8 @@ body::before {
   .popup {
     max-height: 85svh;
   }
+}
+
+.font {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important;
 }

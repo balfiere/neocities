@@ -42,9 +42,14 @@ document.onkeydown = function(event) {
   }
 }
 
-// add event listener (on change) to all toggles
-// Array.prototype.slice.call(document.querySelectorAll('.modal-toggle')).forEach(function(toggle) { toggle.addEventListener('change', function(event) {
-  // allow only one checked toggle
-//   Array.prototype.slice.call(document.querySelectorAll('.modal-toggle:not(#' + event.target.id + ')')).forEach(function(diff) { diff.checked = false })
-  // when modal is opened, add class to the body
-//   document.body.className = event.target.checked ? 'modal-opened' : '' }) })
+// font switcher function
+const fontSwitcher = document.getElementById("font-switcher");
+fontSwitcher.addEventListener("click", () => {
+    if (fontSwitcher.toggleAttribute("checked")) {
+        document.body.style.fontFamily = "IBM Plex Sans Thai";
+        document.body.style.fontSize = "1.15rem";
+    } else {
+        document.body.style.fontFamily = "Reenie Beanie";
+        document.body.style.fontSize = "1.75rem";
+    }
+})
