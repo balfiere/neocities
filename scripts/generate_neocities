@@ -18,7 +18,12 @@ eleventy_to_neocities() {
 
   # if index, copy index.html, else copy everything
   if [ $index == "true" ]; then
-    cp -a _site/$page/index.html ../public/$page/
+    # if index.html exists, copy
+    if [ -f _site/$page/index.html ]; then
+      cp -a _site/$page/index.html ../public/$page/
+    else
+      cp -a _site/$page/$3.html ../public/$page/
+    fi
   else
     cp -a _site/$page/. ../public/$page
   fi
@@ -67,6 +72,11 @@ case "$1" in
   echo "building language page"
   eleventy_to_neocities "language" "true"
   ;;
+"main")
+  copy_css "main" "css/body.min.css"
+  echo "building main site"
+  eleventy_to_neocities "main" "false"
+  ;;
 "places")
   echo "building places page"
   eleventy_to_neocities "places" "true"
@@ -76,10 +86,10 @@ case "$1" in
   echo "building resources site"
   eleventy_to_neocities "resources" "false"
   ;;
-"main")
-  copy_css "main" "css/body.min.css"
-  echo "building main site"
-  eleventy_to_neocities "main" "false"
+"room")
+  copy_css "room" "stuff.min.css"
+  echo "building my things page"
+  eleventy_to_neocities "room" "true" "my-things"
   ;;
 "vegan")
   copy_css "vegan"

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my things</title>
+  <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  
+  <!-- styling -->
+  <link rel="stylesheet" href="stuff.min.css" type="text/css">
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+
+<!-- mobile button -->
+<label for="menu-toggle">
+<div id="open" tabindex="0">
+  <svg class="ham hamRotate" id="ham4" viewBox="0 0 100 100" width="65">
+    <path
+          class="line top"
+          d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+    <path
+          class="line middle"
+          d="m 70,50 h -40" />
+    <path
+          class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+  </svg>
+</div>
+</label>
+</header><!-- end header -->  
+
+<div id="container">
+
+<!-- sidebar -->
+<input id="menu-toggle" type="checkbox" />
+<nav id="TOC">
+<ul>
+  <a href="#computer-games"><li>computer games</li></a>
+  <a href="#playstation-one"><li>playstation one</li></a>
+  <a href="#playstation-two"><li>playstation two</li></a>
+  <a href="#ds"><li>ds</li></a>
+  <a href="#wii"><li>wii</li></a>
+  <a href="#mobile"><li>computer games pt. 2 and mobile</li></a>
+  <a href="#playstation-four"><li>playstation four</li></a>
+  <a href="#n3ds"><li>3ds</li></a>
+  <a href="#switch"><li>switch</li></a>
+  <a href="#stuff-ive-made"><li>stuff i made</li></a>
+  <a href="index.html"><li>go back to my room</li></a>
+  <a href="/main/index.html"><li>go back to my main site</li></a>
+</ul>
+</nav>
+
+<!-- main content-->
+<main>
+{{content}}
+</main>
+
+</div>
+
+<script>
+
+///////////////////////////////////////////////
+//
+// mobile sidebar
+//
+///////////////////////////////////////////////
+
+let burger = document.getElementById("open");
+
+var toggleSidebar = function (event) {
+    document.getElementById('ham4').classList.toggle('active')
+};
+
+burger.addEventListener('click', toggleSidebar, false);
+burger.addEventListener('keydown', (event) => {
+  let key = event.code;
+  if (key == "Escape" || key == "Enter") {
+      toggleSidebar(event);
+      document.getElementById('menu-toggle').checked = !document.getElementById('menu-toggle').checked
+  }
+});
+
+</script>
+</body>
+</html>
