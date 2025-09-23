@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yakuza character sheet</title>
+    <link rel="stylesheet" href="style/characters.css">
+    <noscript>
+        <style>
+            section {
+                * {
+                    transition: transform 1s ease, opacity 1s ease;
+                }
+
+                .desc {
+                    opacity: 0;
+                }
+
+                &:hover {
+                    .quote {
+                        opacity: 0;
+                    }
+
+                    .desc {
+                        opacity: 1;
+                    }
+
+                    .name {
+                        transform: translateX(-110%);
+                    }
+                }
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <section class="container" data-parallax-mouse>
+        <div class="backdrop"></div>
+        <div class="card"></div>
+        <div class="img"></div>
+        <div class="textbox">
+            <div class="quote">character quote here</div>
+            <div class="desc">A CSS class that should be applied to the new text via a tag. This makes it easy to have
+                the new text differentiated visually from the old text, like maybe it should be red or bold or something
+                - just create a class in your CSS and pass the name in here like </div>
+        </div>
+        <div class="name" replace="澤村 遥">haruka sawamura</div>
+    </section>
+    <section class="container" data-parallax-mouse>
+        <div class="backdrop"></div>
+        <div class="card"></div>
+        <div class="img"></div>
+        <div class="textbox">
+            <div class="quote">character quote here</div>
+            <div class="desc">character description here</div>
+        </div>
+        <div class="name" replace="test">character name here</div>
+    </section>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+<script src="scripts/characters.js"></script>
+
+</html>
