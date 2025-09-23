@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text moving on hover</title>
+    <style>
+        :root {
+            --padding: 20px;
+            --transition: all 0.5s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: calc(var(--padding) * 2) 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: calc(var(--padding) * 2) calc(var(--padding) * 10);
+            justify-content: center;
+            align-content: center;
+            background-color: silver;
+        }
+
+        section {
+            display: grid;
+            width: 80%;
+            max-width: 600px;
+            height: 400px;
+            grid-template-columns: var(--padding) 1fr 3fr 6fr var(--padding);
+            grid-template-rows: var(--padding) 0.5fr 6fr 2fr var(--padding) var(--padding);
+            grid-auto-flow: row;
+            transition: var(--transition);
+            &:hover {
+                .backdrop {
+                    transform: translate3d(calc(-1 * var(--padding)), calc(0.5 * var(--padding)), 0);
+                }
+
+                .card {
+                    transform: translate3d(calc(0.5 * var(--padding)), 0px, 0);
+                    background-color: rgb(47, 47, 47);
+                }
+
+                .quote {
+                    opacity: 0;
+                }
+
+                .desc {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .backdrop {
+            grid-area: 3 / 1 / 7 / 5;
+            background-color: rgb(31, 31, 31);
+            transition: var(--transition);
+        }
+
+        .card {
+            grid-area: 2 / 3 / 5 / 6;
+            background-color:white;
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .img {
+            grid-area: 1 / 2 / 6 / 4;
+            background-color: rgba(136, 223, 214, 0.493);
+            z-index: 2;
+        }
+
+        .textbox {
+            grid-area: 2 / 4 / 5 / 6;
+            z-index: 3;
+            padding: var(--padding);
+            display: grid;
+
+            & > * {
+                grid-area: 1/1;
+            }
+
+            .quote {
+                opacity: 1;
+                transition: var(--transition);
+                padding: var(--padding);
+                font-size: 1.3rem;
+            }
+
+            .desc {
+                opacity: 0;
+                transition: var(--transition);
+                color: white;
+            }
+        }
+
+        .name {
+            grid-area: 4 / 4 / 5 / 6;
+            margin: var(--padding);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            z-index: 4;
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            font-weight: bold;
+            text-align: right;
+            mix-blend-mode: exclusion;
+            color: transparent;
+            letter-spacing: 0.5rem;
+            -webkit-text-stroke: 2px white;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container" data-parallax-mouse>
+        <div class="backdrop"></div>
+        <div class="card"></div>
+        <div class="img"></div>
+        <div class="textbox">
+            <div class="quote">character quote here</div>
+            <div class="desc">character description here</div>
+        </div>
+        <div class="name">character name here</div>
+    </section>
+    <section class="container" data-parallax-mouse>
+        <div class="backdrop"></div>
+        <div class="card"></div>
+        <div class="img"></div>
+        <div class="textbox">
+            <div class="quote">character quote here</div>
+            <div class="desc">character description here</div>
+        </div>
+        <div class="name">character name here</div>
+    </section>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+  document.querySelectorAll("section").forEach(section => {
+
+  const nameEl = section.querySelector(".name");
+
+  let parallaxEnabled = false;
+
+  let strength = { v: 0 }; // start at 0
+
+  // Timeline for the slide + enable tilt
+  const hoverTl = gsap.timeline({ paused: true })
+    .to(nameEl, {
+      xPercent: -110,
+      duration: 0.5,
+      ease: "power2.inOut",
+      onComplete: () => {
+        parallaxEnabled = true
+        gsap.to(strength, {
+        v: 1,
+        duration: 0.5,
+        ease: "power2.out"
+        });
+    }
+    });
+
+  // Mouse move → only if enabled
+  section.addEventListener("mousemove", (e) => {
+    if (!parallaxEnabled) return;
+
+    const rect = section.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const nameRect = nameEl.getBoundingClientRect();
+    const nameX = e.clientX - nameRect.left;
+    const nameY = e.clientY - nameRect.top;
+    const nameCenterX = nameRect.width / 2;
+    const nameCenterY = nameRect.height / 2;
+
+    const offsetX = (nameX - nameCenterX) / nameCenterX;
+    // const offsetY = (nameY - nameCenterY) / nameCenterY;
+    // const offsetX = (x - centerX) / centerX;
+    const offsetY = (y - centerY) / centerY;
+
+    gsap.to(nameEl, {
+      rotationY: offsetX * 7 * strength.v,
+      rotationX: -offsetY * 20 * strength.v,
+      transformPerspective: 600,
+      ease: "power2.out",
+      duration: 0.3
+    });
+  });
+
+  // Reset timeline
+  const leaveTl = gsap.timeline({ paused: true })
+    .to(nameEl, {
+      xPercent: 0,
+      rotationX: 0,
+      rotationY: 0,
+      duration: 0.5,
+      ease: "power3.out",
+      onStart: () => {
+        parallaxEnabled = false
+        gsap.to(strength, {
+        v: 0,
+        duration: 0.5,
+        ease: "power2.out"
+        });
+      }
+    });
+
+  // Hover → play slide out
+  section.addEventListener("mouseenter", () => {
+    hoverTl.restart();
+  });
+
+  // Leave → reset everything
+  section.addEventListener("mouseleave", () => {
+    leaveTl.restart();
+  });
+
+});
+</script>
+
+</html>
