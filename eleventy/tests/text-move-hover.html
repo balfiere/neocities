@@ -186,15 +186,15 @@
     const nameCenterX = nameRect.width / 2;
     const nameCenterY = nameRect.height / 2;
 
-    const offsetX = (nameX - nameCenterX) / nameCenterX;
-    // const offsetY = (nameY - nameCenterY) / nameCenterY;
+    const offsetX = (nameX - nameCenterX + centerX) / nameCenterX;
+    const offsetY = (nameY - nameCenterY ) / nameCenterY;
     // const offsetX = (x - centerX) / centerX;
-    const offsetY = (y - centerY) / centerY;
+    // const offsetY = (y - centerY) / centerY;
 
     gsap.to(nameEl, {
-      rotationY: offsetX * 7 * strength.v,
-      rotationX: -offsetY * 20 * strength.v,
-      transformPerspective: 600,
+      rotationY: offsetX * 10 * strength.v,
+      rotationX: -offsetY * 5 * strength.v,
+      transformPerspective: 700,
       ease: "power2.out",
       duration: 0.3
     });
