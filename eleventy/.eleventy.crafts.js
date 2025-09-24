@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
   extractKeyWithCount(eleventyConfig);
 
   eleventyConfig.addPassthroughCopy("neocities/crafts/crafts.min.css");
+  eleventyConfig.addPassthroughCopy("neocities/crafts/script.min.js");
 
   return {
     dir: { 
