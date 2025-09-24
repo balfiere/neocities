@@ -116,8 +116,15 @@ case "$1" in
     echo "running microblog.py"
     cd $HOME/Documents/neocities/microblog
     pipenv run python microblog.py ./template.tpl ./content.txt >$HOME/Documents/neocities/public/microblog/index.html
-    mv tags ../public/microblog
-    mv pages ../public/microblog
+    # mv tags ../public/microblog
+    # mv pages ../public/microblog
+    rsync -avhn tags ../public/microblog && rsync -avhn pages ../public/microblog
+    echo "does this look good? (y/n)"
+    read answer
+    if [ $answer == "y" ]; then
+      echo "copying to public folder"
+      rsync -avh tags ../public/microblog && rsync -avh pages ../public/microblog
+    fi
   fi
   ;;
 *)

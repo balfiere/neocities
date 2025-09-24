@@ -8,12 +8,7 @@
     <link rel="alternate" title="kwaamfan's diary" type="application/atom+xml" href="https://kwaamfan.neocities.org/microblog/atom.xml"/>
 
     <!-- styling -->
-    <link href="/microblog/timeline.min.css" rel="stylesheet" type="text/css" media="all">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://api.fonts.coollabs.io">
-    <link href="https://api.fonts.coollabs.io/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
-    <link href="https://api.fonts.coollabs.io/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+    <link href="/microblog/timeline.min.css?v=2" rel="stylesheet" type="text/css" media="all">
     
 </head>
 <body>
