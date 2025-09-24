@@ -318,6 +318,9 @@ section {
         transform: translateX(-15%);
         width: auto;
     }
+    .gif {
+        display: none;
+    }
     .textbox {
         .quote {
             margin-left: 0;

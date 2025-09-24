@@ -1,4 +1,7 @@
 gsap.registerPlugin(TextPlugin);
+let mql = window.matchMedia("(width <= 580px)");
+
+// to do: reduced motion support
 
 document.querySelectorAll("section").forEach(section => {
     // name animation variables
@@ -17,9 +20,11 @@ document.querySelectorAll("section").forEach(section => {
     const cardEl = section.querySelector(".card");
     const cardColor = getComputedStyle(document.querySelector(":root")).getPropertyValue("--card-background-color-hover");
 
+    // need to loop through all elements in the character description because each child must be animated separately!
     const descEl = section.querySelector(".desc");
     const descChildren = descEl.querySelectorAll("p, span");
     descChildren.forEach(el => {
+        // add character's color to bold elements in the description
         const strongEls = el.querySelectorAll("strong");
         strongEls.forEach(el => {
             el.style.color = nameColor === "white" ? getComputedStyle(document.querySelector(":root")).getPropertyValue("--backdrop-background-color-hover") : nameColor;
@@ -28,6 +33,7 @@ document.querySelectorAll("section").forEach(section => {
         el.innerHTML = "";
     });
 
+    // add character's color to the quote
     if (nameColor === "white") {
         quoteEl.style.setProperty('--card-background-color', "var(--backdrop-background-color-hover)");
     } else {
@@ -68,9 +74,9 @@ document.querySelectorAll("section").forEach(section => {
             duration: 1.2,
         })
         .to(nameEl, {
-            xPercent: -160,
-            yPercent: -10,
-            scale: 1.5,
+            scale: 1.8,
+            xPercent: -36, //mql.matches ? -27 : -160,
+            yPercent: -430, //mql.matches ? -419 : -10,
             duration: 0,
             color: nameColor,
         })
