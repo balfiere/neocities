@@ -30,7 +30,7 @@ eleventy_to_neocities() {
 }
 
 # copy css from public folder, needed to make cache busting function work
-copy_css() {
+copy_assets() {
   if [ -f $public/$1/$1.min.css ]; then
     cp $public/$1/$1.min.css $eleventy/neocities/$1/
   else
@@ -43,7 +43,7 @@ case "$1" in
 "about")
   echo "building about page"
   $HOME/Documents/neocities/scripts/about_image_update
-  copy_css "about"
+  # copy_assets "about"
   eleventy_to_neocities "about" "true"
   ;;
 "articles")
@@ -64,16 +64,16 @@ case "$1" in
   ;;
 "crafts")
   echo "building craft page"
-  copy_css "crafts"
+  # copy_assets "crafts"
   eleventy_to_neocities "crafts" "true"
   ;;
 "language")
-  copy_css "language"
+  # copy_assets "language"
   echo "building language page"
   eleventy_to_neocities "language" "true"
   ;;
 "main")
-  copy_css "main" "css/body.min.css"
+  # copy_assets "main" "css/body.min.css"
   echo "building main site"
   eleventy_to_neocities "main" "false"
   ;;
@@ -82,19 +82,29 @@ case "$1" in
   eleventy_to_neocities "places" "true"
   ;;
 "resources")
-  copy_css "resources"
+  # copy_assets "resources"
   echo "building resources site"
   eleventy_to_neocities "resources" "false"
   ;;
 "room")
-  copy_css "room" "stuff.min.css"
+  # copy_assets "room" "stuff.min.css"
   echo "building my things page"
   eleventy_to_neocities "room" "true" "my-things"
   ;;
 "vegan")
-  copy_css "vegan"
+  # copy_assets "vegan"
   echo "building vegan page"
   eleventy_to_neocities "vegan" "true"
+  ;;
+"yakuza")
+  echo "this folder is not currently being built with eleventy. copying yakuza folder"
+  rsync -avh -n $eleventy/neocities/yakuza $public --exclude private --exclude "characters/*.xcf" --exclude "**/grain.png"
+  echo "does this look right? (y/n)"
+  read answer
+  if [ $answer == "y" ]; then
+    echo "copying yakuza folder"
+    rsync -ah $eleventy/neocities/yakuza $public --exclude private --exclude "characters/*.xcf" --exclude "**/grain.png"
+  fi
   ;;
 "notebook")
   echo "building notebook"
