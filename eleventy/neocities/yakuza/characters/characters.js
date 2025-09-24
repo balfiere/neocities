@@ -74,9 +74,10 @@ document.querySelectorAll("section").forEach(section => {
             duration: 1.2,
         })
         .to(nameEl, {
-            scale: 1.8,
-            xPercent: -36, //mql.matches ? -27 : -160,
-            yPercent: -430, //mql.matches ? -419 : -10,
+            // scale: 1.8,
+            fontSize: 72,
+            //xPercent: 0, //mql.matches ? -27 : -160,
+            yPercent: -410, //mql.matches ? -419 : -10,
             duration: 0,
             color: nameColor,
         })
