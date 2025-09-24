@@ -16,12 +16,12 @@ eleventy_to_neocities() {
     npx @11ty/eleventy --input=neocities/$page --output=_site/$page
   fi
 
-  rsync -avhn _site/$page/ ../public/$page
+  rsync -avhn _site/$page/ ../public/$page --exclude="*.css" --exclude="*.js" --exclude="**/*.css" --exclude="**/*.js"
   echo "does this look good? (y/n)"
   read answer
   if [ $answer == "y" ]; then
     echo "copying to public folder"
-    rsync -avh _site/$page/ ../public/$page
+    rsync -avh _site/$page/ ../public/$page --exclude="*.css" --exclude="*.js" --exclude="**/*.css" --exclude="**/*.js"
   fi
 }
 
