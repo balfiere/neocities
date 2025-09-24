@@ -28,6 +28,12 @@ document.querySelectorAll("section").forEach(section => {
         el.innerHTML = "";
     });
 
+    if (nameColor === "white") {
+        quoteEl.style.setProperty('--card-background-color', "var(--backdrop-background-color-hover)");
+    } else {
+        quoteEl.style.setProperty('--card-background-color', backdropColor);
+    }
+
     const cardTl = gsap.timeline({ paused: true });
 
     const reverseTween = gsap

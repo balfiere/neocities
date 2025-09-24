@@ -58,6 +58,7 @@ body {
 
 b, strong {
     font-weight: 800;
+    color: var(--backdrop-background-color-hover);
 }
 
 body::after {
@@ -173,6 +174,7 @@ section {
     object-fit: cover;
     object-position: top;
     place-self: end center;
+    overflow: visible;
     transition: var(--transition);
     filter: contrast(1) blur(0px) grayscale(0) drop-shadow(10px 10px 0px rgba(0, 0, 0, 1));
     transform: translateX(-5%);
@@ -184,9 +186,8 @@ section {
     padding: var(--padding);
     display: grid;
     overflow-x: visible;
-    mix-blend-mode: difference;
     position: relative;
-
+    mix-blend-mode: exclusion;
     &>* {
         grid-area: 1/1;
         color: white;
@@ -204,7 +205,7 @@ section {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         -webkit-font-smoothing: subpixel-antialiased;
-        height: 200px;
+        height: calc(var(--section-height) - 200px);
         overflow-y: hidden;
         /* width: 110%; */
         /* overflow-x: visible; */
@@ -222,7 +223,8 @@ section {
             right: 0;
             height: 1px;
             width: 100%;
-            background: white;
+            background: var(--card-background-color);
+            filter: invert(1);
             transition: width .5s ease, background-color .5s ease;
         }
 
@@ -233,7 +235,8 @@ section {
             font-weight: 800;
             font-style: normal;
             content: "”";
-            color: rgba(255, 255, 255, 1);
+            color: var(--card-background-color);
+            filter: invert(1);
             font-size: 8rem;
             line-height: 0;
             bottom: 6.6rem;
@@ -245,7 +248,6 @@ section {
     .desc {
         padding: 0;
         overflow-y: scroll;
-
         *+* {
             margin-top: 1rem;
         }
@@ -291,5 +293,35 @@ section {
     img,
     picture {
         opacity: 0.9
+    }
+
+    .quote:before, .quote:after {
+        filter: hue-rotate(199deg) invert(0.9) saturate(10)!important;
+    }
+}
+
+@media (max-width: 580px) {
+    :root {
+        --section-height: 480px;
+    }
+
+    section {
+    grid-template-columns: var(--padding) 1fr 1fr 6fr var(--padding);
+    grid-template-rows: var(--padding) 0.5fr 6fr 2fr var(--padding) var(--padding);
+        &:hover {
+            .doll {
+                width: auto;
+            }
+        }
+    }
+    .doll {
+        transform: translateX(-15%);
+        width: auto;
+    }
+    .textbox {
+        .quote {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }
