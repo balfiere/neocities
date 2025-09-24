@@ -56,151 +56,50 @@
     --color-marker-dark: #a0a07133;
 }
 
-/* zen-kaku-gothic-antique-latin-300-normal */
+/* neonderthaw-regular - latin */
 @font-face {
-  font-family: 'Zen Kaku Gothic Antique';
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Neonderthaw';
   font-style: normal;
-  font-display: swap;
-  font-weight: 300;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-300-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-300-normal.woff) format('woff');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-/* zen-kaku-gothic-antique-latin-400-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
   font-weight: 400;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-400-normal.woff) format('woff');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  src: url('/fonts/neonderthaw-v8-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* zen-kaku-gothic-antique-latin-500-normal */
+/* zen-antique-soft-regular - japanese_latin */
 @font-face {
-  font-family: 'Zen Kaku Gothic Antique';
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Zen Antique Soft';
   font-style: normal;
-  font-display: swap;
-  font-weight: 500;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-500-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-500-normal.woff) format('woff');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-/* zen-kaku-gothic-antique-latin-700-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-700-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-700-normal.woff) format('woff');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-/* zen-kaku-gothic-antique-latin-900-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 900;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-900-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-900-normal.woff) format('woff');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-/* zen-kaku-gothic-antique-japanese-300-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 300;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-300-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-300-normal.woff) format('woff');
-}
-
-/* zen-kaku-gothic-antique-japanese-400-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
   font-weight: 400;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-400-normal.woff) format('woff');
+  src: url('/fonts/zen-antique-soft-v14-japanese_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* zen-kaku-gothic-antique-japanese-500-normal */
+/* zen-kaku-gothic-antique-regular - japanese_latin */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Zen Kaku Gothic Antique';
   font-style: normal;
-  font-display: swap;
-  font-weight: 500;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-500-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-500-normal.woff) format('woff');
-}
-
-/* zen-kaku-gothic-antique-japanese-700-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-700-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-700-normal.woff) format('woff');
-}
-
-/* zen-kaku-gothic-antique-japanese-900-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 900;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-900-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/japanese-900-normal.woff) format('woff');
-}
-
-/* zen-kaku-gothic-antique-latin-ext-300-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 300;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-300-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-300-normal.woff) format('woff');
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-/* zen-kaku-gothic-antique-latin-ext-400-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
   font-weight: 400;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-400-normal.woff) format('woff');
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  src: url('/fonts/zen-kaku-gothic-antique-v18-japanese_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* zen-kaku-gothic-antique-latin-ext-500-normal */
+/* zen-kaku-gothic-antique-500 - japanese_latin */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Zen Kaku Gothic Antique';
   font-style: normal;
-  font-display: swap;
   font-weight: 500;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-500-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-500-normal.woff) format('woff');
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  src: url('/fonts/zen-kaku-gothic-antique-v18-japanese_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* zen-kaku-gothic-antique-latin-ext-700-normal */
+/* zen-kaku-gothic-antique-900 - japanese_latin */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Zen Kaku Gothic Antique';
   font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-700-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-700-normal.woff) format('woff');
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-/* zen-kaku-gothic-antique-latin-ext-900-normal */
-@font-face {
-  font-family: 'Zen Kaku Gothic Antique';
-  font-style: normal;
-  font-display: swap;
   font-weight: 900;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-900-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zen-kaku-gothic-antique@latest/latin-ext-900-normal.woff) format('woff');
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  src: url('/fonts/zen-kaku-gothic-antique-v18-japanese_latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
 
 @font-face {
   font-family: 'Libre Franklin';
