@@ -98,12 +98,12 @@ case "$1" in
   ;;
 "yakuza")
   echo "this folder is not currently being built with eleventy. copying yakuza folder"
-  rsync -avh -n $eleventy/neocities/yakuza $public --exclude private --exclude "characters/*.xcf" --exclude "**/grain.png"
+  rsync -avh -n $eleventy/neocities/yakuza $public --exclude private --exclude "characters/*.xcf" --exclude "**/grain.png" --no-links
   echo "does this look right? (y/n)"
   read answer
   if [ $answer == "y" ]; then
     echo "copying yakuza folder"
-    rsync -ah $eleventy/neocities/yakuza $public --exclude private --exclude "characters/*.xcf" --exclude "**/grain.png"
+    rsync -ah $eleventy/neocities/yakuza $public --exclude private --exclude "characters/*.xcf" --exclude "**/grain.png" --no-links
   fi
   ;;
 "notebook")
