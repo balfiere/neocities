@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yakuza character sheet</title>
+    <link rel="stylesheet" href="characters.css">
+    <noscript>
+        <style>
+            section {
+                * {
+                    transition: transform 1s ease, opacity 1s ease, background-color 1s ease;
+                }
+
+                .desc {
+                    opacity: 0;
+                }
+
+                &:hover {
+                    .backdrop {
+                        transform: translate3d(calc(-1 * var(--padding)), calc(0.5 * var(--padding)), 0);
+                        background-color: var(--backdrop-background-color-hover);
+                        transition: var(--transition);
+                    }
+
+                    .card {
+                        background-color: var(--card-background-color-hover);
+                        transition: var(--transition);
+                    }
+
+                    .quote {
+                        opacity: 0;
+                    }
+
+                    .desc {
+                        opacity: 1;
+                    }
+
+                    .name {
+                        transform: translateX(-110%);
+                    }
+                }
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <section class="container">
+        <div class="backdrop" color="#d91862"></div>
+        <picture class="gif">
+            <source srcSet="images/image.png" media="(prefers-reduced-motion)" />
+            <img
+                src="haruka.webp" />
+        </picture>
+        <div class="card"></div>
+        <img class="doll" src="haruka.png" alt="haruka sawamura" />
+        <div class="textbox">
+            <blockquote class="quote">But I’m not scared. You’ve been there to keep me safe. If you leave me here, I’ll find you on my own. I’ll go all the way to Kamurocho if I have to.</blockquote>
+            <div class="desc">
+                <span class="label"><strong>birthday</strong> 1996/4/20 <strong>height</strong> 120cm (2005) 165cm (2012) <strong>blood type</strong> O</span>
+                <p>Paragraph one.</p>
+                <p>Paragraph two.</p>
+            </div>
+        </div>
+        <div class="name" replace="澤村 遥" color="pink">Sawamura Haruka</div>
+    </section>
+
+    <section class="container">
+        <div class="backdrop" color="white"></div>
+        <picture class="gif">
+            <source srcSet="images/image.png" media="(prefers-reduced-motion)" />
+            <img src="nishiki.webp" />
+        </picture>
+        <div class="card"></div>
+        <img class="doll" src="nishiki.png" alt="nishiki" />
+        <div class="textbox">
+            <div class="quote">After the incident ten years ago… I lost what felt like a piece of my life. And then I decided… that I’d sacrifice everything to change the fates.</div>
+            <div class="desc">
+                <span class="label"><strong>birthday</strong> 1968/10/8 <strong>height</strong> 180cm <strong>weight</strong> 79kg <strong>blood type</strong> AB</span>
+                <p>Paragraph one.</p>
+                <p>Paragraph two.</p>
+                <p>Paragraph one.</p>
+            </div>
+        </div>
+        <div class="name" replace="錦山 彰" color="white">Nishikiyama Akira</div>
+    </section>
+<svg>
+  <filter id='noiseFilter'>
+    <feTurbulence 
+      type='fractalNoise' 
+      baseFrequency='0.6' 
+      stitchTiles='stitch'/>
+     <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+  </filter>
+  
+</svg>
+
+<svg width="0" height="0" aria-hidden="true">
+  <filter id="grainy" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".537"></feTurbulence>
+    <feColorMatrix type="saturate" values="0"></feColorMatrix>
+    <feBlend mode="multiply" in="SourceGraphic"></feBlend>
+  </filter>
+</svg>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+<script src="characters.js"></script>
+
+</html>
