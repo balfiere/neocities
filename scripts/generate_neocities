@@ -16,16 +16,12 @@ eleventy_to_neocities() {
     npx @11ty/eleventy --input=neocities/$page --output=_site/$page
   fi
 
-  # if index, copy index.html, else copy everything
-  if [ $index == "true" ]; then
-    # if index.html exists, copy
-    if [ -f _site/$page/index.html ]; then
-      cp -a _site/$page/index.html ../public/$page/
-    else
-      cp -a _site/$page/$3.html ../public/$page/
-    fi
-  else
-    cp -a _site/$page/. ../public/$page
+  rsync -avhn _site/$page/ ../public/$page
+  echo "does this look good? (y/n)"
+  read answer
+  if [ $answer == "y" ]; then
+    echo "copying to public folder"
+    rsync -avh _site/$page/ ../public/$page
   fi
 }
 
@@ -97,14 +93,8 @@ case "$1" in
   eleventy_to_neocities "vegan" "true"
   ;;
 "yakuza")
-  echo "this folder is not currently being built with eleventy. copying yakuza folder"
-  rsync -avh -n $eleventy/neocities/yakuza $public --exclude private --exclude "characters/*.xcf" --exclude "**/grain.png" --no-links
-  echo "does this look right? (y/n)"
-  read answer
-  if [ $answer == "y" ]; then
-    echo "copying yakuza folder"
-    rsync -ah $eleventy/neocities/yakuza $public --exclude private --exclude "characters/*.xcf" --exclude "**/grain.png" --no-links
-  fi
+  echo "building yakuza page"
+  eleventy_to_neocities "yakuza" "false"
   ;;
 "notebook")
   echo "building notebook"

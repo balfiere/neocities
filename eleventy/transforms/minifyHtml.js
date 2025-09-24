@@ -10,7 +10,7 @@ module.exports = function (eleventyConfig) {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
-        minifyCSS: true,
+        minifyCSS: false,
         minifyJS: true,
       });
 

@@ -1,117 +1,119 @@
 gsap.registerPlugin(TextPlugin);
 let mql = window.matchMedia("(width <= 580px)");
+let prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// to do: reduced motion support
+if (!prefersReducedMotion) {
 
-document.querySelectorAll("section").forEach(section => {
-    // name animation variables
-    const nameEl = section.querySelector(".name");
-    const nameReplace = nameEl.getAttribute("replace");
-    const nameColor = nameEl.getAttribute("color");
+    document.querySelectorAll("section").forEach(section => {
+        // name animation variables
+        const nameEl = section.querySelector(".name");
+        const nameReplace = nameEl.getAttribute("replace");
+        const nameColor = nameEl.getAttribute("color");
 
-    // backdrop animation variables
-    const backdropEl = section.querySelector(".backdrop");
-    const backdropColor = backdropEl.getAttribute("color") || "var(--backdrop-background-color-hover)";
+        // backdrop animation variables
+        const backdropEl = section.querySelector(".backdrop");
+        const backdropColor = backdropEl.getAttribute("color") || "var(--backdrop-background-color-hover)";
 
-    // card animation variables
-    const quoteEl = section.querySelector(".quote");
-    const quoteOriginal = quoteEl.innerHTML;
-    quoteEl.innerHTML = "";
-    const cardEl = section.querySelector(".card");
-    const cardColor = getComputedStyle(document.querySelector(":root")).getPropertyValue("--card-background-color-hover");
+        // card animation variables
+        const quoteEl = section.querySelector(".quote");
+        const quoteOriginal = quoteEl.innerHTML;
+        quoteEl.innerHTML = "";
+        const cardEl = section.querySelector(".card");
+        const cardColor = getComputedStyle(document.querySelector(":root")).getPropertyValue("--card-background-color-hover");
 
-    // need to loop through all elements in the character description because each child must be animated separately!
-    const descEl = section.querySelector(".desc");
-    const descChildren = descEl.querySelectorAll("p, span");
-    descChildren.forEach(el => {
-        // add character's color to bold elements in the description
-        const strongEls = el.querySelectorAll("strong");
-        strongEls.forEach(el => {
-            el.style.color = nameColor === "white" ? getComputedStyle(document.querySelector(":root")).getPropertyValue("--backdrop-background-color-hover") : nameColor;
+        // need to loop through all elements in the character description because each child must be animated separately!
+        const descEl = section.querySelector(".desc");
+        const descChildren = descEl.querySelectorAll("p, span");
+        descChildren.forEach(el => {
+            // add character's color to bold elements in the description
+            const strongEls = el.querySelectorAll("strong");
+            strongEls.forEach(el => {
+                el.style.color = nameColor === "white" ? getComputedStyle(document.querySelector(":root")).getPropertyValue("--backdrop-background-color-hover") : nameColor;
+            });
+            el.dataset.original = el.innerHTML;
+            el.innerHTML = "";
         });
-        el.dataset.original = el.innerHTML;
-        el.innerHTML = "";
-    });
 
-    // add character's color to the quote
-    if (nameColor === "white") {
-        quoteEl.style.setProperty('--card-background-color', "var(--backdrop-background-color-hover)");
-    } else {
-        quoteEl.style.setProperty('--card-background-color', backdropColor);
-    }
+        // add character's color to the quote
+        if (nameColor === "white") {
+            quoteEl.style.setProperty('--card-background-color', "var(--backdrop-background-color-hover)");
+        } else {
+            quoteEl.style.setProperty('--card-background-color', backdropColor);
+        }
 
-    const cardTl = gsap.timeline({ paused: true });
+        const cardTl = gsap.timeline({ paused: true });
 
-    const reverseTween = gsap
-        .to(quoteEl, {
-            text: {
-                value: quoteOriginal
-            },
-            ease: "power2.in",
+        const reverseTween = gsap
+            .to(quoteEl, {
+                text: {
+                    value: quoteOriginal
+                },
+                ease: "power2.in",
+                duration: 0.5,
+            })
+            .reverse(0);
+        cardTl.add(reverseTween);
+        cardTl.to(cardEl, {
+            backgroundColor: cardColor,
             duration: 0.5,
-        })
-        .reverse(0);
-    cardTl.add(reverseTween);
-    cardTl.to(cardEl, {
-        backgroundColor: cardColor,
-        duration: 0.5,
-        ease: "power2.out",
-    });
-
-    descChildren.forEach((el, i) => {
-        cardTl.to(el, {
-            text: { value: el.dataset.original, speed: 9 },
-            ease: "power2.inOut",
-        }, "<0.3");
-    });
-
-    // name animation
-
-    const nameTl = gsap.timeline({ paused: true })
-        .to(nameEl, {
-            text: "",
-            ease: "power2.in",
-            duration: 1.2,
-        })
-        .to(nameEl, {
-            // scale: 1.8,
-            fontSize: 72,
-            //xPercent: 0, //mql.matches ? -27 : -160,
-            yPercent: -410, //mql.matches ? -419 : -10,
-            duration: 0,
-            color: nameColor,
-        })
-        .to(nameEl, {
-            text: {
-                value: nameReplace,
-                preserveSpaces: false
-            },
-            duration: 0.4,
             ease: "power2.out",
         });
 
-    // backdrop animation
-
-    const backdropTl = gsap.timeline({ paused: true })
-        .to(backdropEl, {
-            x: -10,
-            y: 10,
-            backgroundColor: backdropColor,
-            duration: 0.3,
-            ease: "none"
+        descChildren.forEach((el, i) => {
+            cardTl.to(el, {
+                text: { value: el.dataset.original, speed: 9 },
+                ease: "power2.inOut",
+            }, "<0.3");
         });
 
-    // animations run on hover
+        // name animation
 
-    section.addEventListener("mouseenter", () => {
-        nameTl.restart();
-        backdropTl.restart();
-        cardTl.restart();
-    });
+        const nameTl = gsap.timeline({ paused: true })
+            .to(nameEl, {
+                text: "",
+                ease: "power2.in",
+                duration: 1.2,
+            })
+            .to(nameEl, {
+                // scale: 1.8,
+                fontSize: 72,
+                //xPercent: 0, //mql.matches ? -27 : -160,
+                yPercent: -410, //mql.matches ? -419 : -10,
+                duration: 0,
+                color: nameColor,
+            })
+            .to(nameEl, {
+                text: {
+                    value: nameReplace,
+                    preserveSpaces: false
+                },
+                duration: 0.4,
+                ease: "power2.out",
+            });
 
-    section.addEventListener("mouseleave", () => {
-        nameTl.reverse();
-        backdropTl.reverse();
-        cardTl.reverse();
+        // backdrop animation
+
+        const backdropTl = gsap.timeline({ paused: true })
+            .to(backdropEl, {
+                x: -10,
+                y: 10,
+                backgroundColor: backdropColor,
+                duration: 0.3,
+                ease: "none"
+            });
+
+        // animations run on hover
+
+        section.addEventListener("mouseenter", () => {
+            backdropTl.restart();
+            nameTl.restart();
+            cardTl.restart();
+        });
+
+        section.addEventListener("mouseleave", () => {
+            backdropTl.reverse();
+            nameTl.reverse();
+            cardTl.reverse();
+        });
     });
-});
+}
