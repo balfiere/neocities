@@ -6,7 +6,7 @@
 
 	/*-- text size --*/
 	--body-text-line-height: 1.7;
-	--body-text-font-size: 1.2em;
+	--body-text-font-size: 1.2rem;
 
 	/*-- text colors --*/
 	--color-main-text: #222;
@@ -29,7 +29,7 @@
 
 	/*-- page --*/
 	--color-page-background: #a4afdf;
-    --gutter:3em;
+    --gutter:3rem;
 
 	/*-- boxes --*/
 	--color-container-background: rgb(255, 255, 253);
@@ -175,7 +175,7 @@ h1, h2, h3 {
 	font-family: var(--font-heading);
 }
 h1 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
     font-weight: 600;
     background-image: var(--sunset-gradient);
     color: transparent;
@@ -183,22 +183,22 @@ h1 {
     -webkit-background-clip: text;
 }
 h2 {
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	display: flex;
 	align-items: center;
-    padding-top: 0.3em;
+    padding-top: 0.3rem;
 }
 
 h2::after {
 	content: "";
 	flex: 1;
-	margin-top: 0.35em;
+	margin-top: 0.35rem;
 	margin-inline-start: 1rem;
 	height: 2px;
 	background: var(--sunset-gradient);
 }
 h3 {
-	font-size: 1.3em;
+	font-size: 1.3rem;
     font-weight: 600;
     background-image: var(--dusk-gradient);
     color: transparent;
@@ -213,7 +213,7 @@ ul {
 }
 
 li {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   line-height: unset;
 }
 
@@ -224,11 +224,11 @@ li {
   }
 
   blockquote{
-    font-size: 1.1em;
+    font-size: 1.1rem;
     width:90%;
     max-width: fit-content;
-    margin:1em auto;
-    padding:1em 1em 1em 2em;
+    margin:1rem auto;
+    padding:1rem 1rem 1rem 2rem;
     border-left:8px solid var(--color-blockquote-border);
     line-height:2;
     position: relative;
@@ -239,9 +239,9 @@ li {
     font-family:Arial;
     content: "\201C";
     color:var(--color-blockquote-border);
-    font-size:4em;
+    font-size:4rem;
     position: absolute;
-    left: 0.2em;
+    left: 0.2rem;
     top:-10px;
   }
   
@@ -251,7 +251,7 @@ li {
 
   blockquote span {
 	font-family: var(--font-heading);
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   blockquote q{
@@ -278,8 +278,8 @@ li {
 
 kbd,
 code {
-	border-radius: 0.2em;
-	border-width: 0.15em;
+	border-radius: 0.2rem;
+	border-width: 0.15rem;
 	border-style: solid;
 	border-color: var(--color-code);
 	background-color: var(--color-code);
@@ -287,7 +287,7 @@ code {
 }
 
 .code-block {
-	padding: 1em;
+	padding: 1rem;
 	background-color: var(--color-code);
 	overflow-x: auto;
 	tab-size: 4;
@@ -304,7 +304,10 @@ figure {
   &:not(.large) {
     font-style: italic;
     font-size: smaller;
-    line-height: 1.3em;
+    line-height: 1.3rem;
+  }
+  &:has(+ figure) {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -314,13 +317,13 @@ audio {
 
 .right {
   float: right;
-  margin-left: 1em;
+  margin-left: 1rem;
   max-width: 40%;
 }
 
 .left {
   float: left;
-  margin-right: 1em;
+  margin-right: 1rem;
   max-width: 40%;
 }
 
@@ -366,17 +369,17 @@ audio {
     vertical-align: middle;
     background-color: var(--color-container-background);
     box-shadow: var(--pink-box-shadow);
-    padding: 1em;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
 .bio {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     vertical-align: middle;
 }
 
 .goback {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
 }
 
 .goback img{
@@ -397,12 +400,12 @@ article {
     background-color: var(--color-container-background);
     text-align: left;
     margin-bottom: var(--gutter);
-    padding: 2em;
+    padding: 2rem;
     box-sizing: border-box;
 }
 
 .post-header {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 	font-family: var(--font-heading);
 }
 
@@ -422,14 +425,14 @@ time {
 .message {
     white-space: pre-wrap;
     word-wrap: break-word;
-    margin-top: 1em;
+    margin-top: 1rem;
     position: relative;
 }
 .message p {
-    text-indent: 2em;
+    text-indent: 2rem;
     padding: 0;
     line-height: 1.9;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .buttons {
@@ -444,7 +447,7 @@ article .wrapper {
 }
 article .wrapper .last-updated,
 article .wrapper .post-count {
-    font-size: 1em;
+    font-size: 1rem;
     color:grey;
 }
 article .short-bio{
@@ -471,7 +474,7 @@ header {
     font-family: "Neonderthaw", cursive;
     font-weight: 400;
     text-align: center;
-    font-size: 5em;
+    font-size: 5rem;
     margin: calc(var(--gutter) / 15) calc(var(--gutter) / 5);
     text-shadow: var(--header-text-shadow);
     animation: text-flicker 7s linear infinite;
@@ -566,7 +569,7 @@ header {
 
 footer {
 	background-image:var(--sunset-gradient-transparent);
-    padding: 0.8em;
+    padding: 0.8rem;
     margin: 0 var(--gutter)var(--gutter)var(--gutter);
 	font-family: var(--font-heading);
     box-shadow: var(--purple-box-shadow);
@@ -593,7 +596,7 @@ footer a:hover, footer a:active{
         width: 100%;
         box-sizing: border-box;
         background-image:var(--sunset-gradient);
-        padding: .2em;
+        padding: .2rem;
     }
 
     #mobilenav a {
@@ -614,7 +617,7 @@ footer a:hover, footer a:active{
         position: relative;
         top: 0;
         margin-bottom: 0;
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
 
     html {
@@ -626,7 +629,7 @@ footer a:hover, footer a:active{
     }
 
     article {
-        padding: 1em;
+        padding: 1rem;
     }
 
     .gallery li {
