@@ -3,7 +3,7 @@
 date="${1:-$(date -I)}" # set the date to the first argument. if not provided, use today's date in yyyy-mm-dd format
 input="$HOME/Documents/Obsidian/040 projects/neocities/microblog/$date.md"
 
-microblog="$HOME/Documents/neocities/public/microblog/content.txt"
+microblog="$HOME/Documents/neocities/microblog/content.txt"
 microblogTemplate="$HOME/.pandoc/templates/microblog.html"
 
 atom="$HOME/Documents/neocities/public/microblog/atom.xml"
@@ -46,7 +46,7 @@ remove_old_post() {
             # while the first line is not empty, remove the first line
             perl -0777 -i -pe '
             @lines = split /\n/, $_, -1;
-            while (@lines > 1 && $lines[0] =$HOME /\S/) {
+            while (@lines > 1 && $lines[0] =~ /\S/) {
                 shift @lines;
             }
             $_ = join "\n", @lines;
@@ -64,17 +64,25 @@ remove_old_post() {
                 mv "$out".tmp "$out"
             fi
         fi
+    else
+
+        # if the output file is the atom feed, we still need to remove the header
+        if [ "$1" = "atom" ]; then
+            # remove the first 12 lines of out
+            tail -n +13 "$out" > "$out".tmp
+            mv "$out".tmp "$out"
+        fi
     fi
 }
 
 remove_old_post "microblog" "$microblog" "$date" "2p" "+2"
 
 # convert markdown to html, removing microblog/ prefix from tags and adding target="_blank" to links
-cat "$input" | sed 's/microblog\///g' | pandoc --template="$microblogTemplate" --wrap=none | sed 's/a href/a target="_blank" href/g' | cat - "$microblog" | sponge "$microblog"
+cat "$input" | sed 's/microblog\///g' | pandoc --template="$microblogTemplate" --wrap=none | sed 's/a href/a target="_blank" href/g' | sed 's/img src=\"202/img src=\"\/microblog\/images\/202/g' | sed 's/<figure>/<figure class="large">/g' | sed 's/<p><img/<p class="gallery"><img/g' | sed 's/<img src="\(.*\).avif"\(.*\)\/>/<picture><source srcSet="\1.jpg" media="(prefers-reduced-motion)" \/><img src="\1.avif"\2\/><\/picture>/g' | cat - "$microblog" | sponge "$microblog"
 
 remove_old_post "atom" "$atom" "$title" "15p" "+21"
 
 echo "new post number: $newPost"
 
 # update the atom feed
-pandoc --template="$atomTemplate" -V "title:$title" --wrap=none "$input" | sed 's/a href/a target="_blank" href/g' | sed "16,17s/#/#$newPost/g" | cat - "$atom" | sponge "$atom"
+pandoc --template="$atomTemplate" -V "title:$title" --wrap=none "$input" | sed 's/a href/a target="_blank" href/g' | sed "16,17s/#/#$newPost/g" | sed 's/img src=\"202/img src=\"https:\/\/kwaamfan.neocities.org\/microblog\/images\/202/g' | cat - "$atom" | sponge "$atom"
