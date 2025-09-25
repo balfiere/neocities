@@ -18,16 +18,23 @@ the fonts used on this site include:
 - [Rodin](https://archive.org/download/Fontworks/Fonts/){target="_blank"}
 - [BitCasual](https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=353){target="_blank"}
 - [Nineteen Ninety Three](https://www.fontspace.com/nineteen-ninety-three-font-f29544){target="_blank"}
-- [Pixel Sans](https://fontstruct.com/fontstructions/show/1844233/pixel-sans-13){target="_blank"}
 - [Press Start Regular](https://www.1001fonts.com/press-start-font.html){target="_blank"}
 - [SeeD Computer](https://fontstruct.com/fontstructions/show/904880/seed_computer){target="_blank"}
 - [X12y16pxMaruMonica](https://fontmeme.com/fonts/x12y16pxmarumonica-font/){target="_blank"}
+- [Nintendo DS Bios](https://fontmeme.com/fonts/nintendo-ds-bios-font/){target="_blank"}
 - [VNPxCopperplate](https://www.dafont.com/vnpxcopperplate.font){target="_blank"}
 - [FFF Galaxy](https://www.dafont.com/fff-galaxy.font){target="_blank"}
 - [Reenie Beanie](https://fonts.google.com/specimen/Reenie+Beanie){target="_blank"}
 - [Beth Ellen](https://fonts.google.com/specimen/Beth+Ellen){target="_blank"}
 - [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display){target="_blank"}
 - [Space Mono](https://fonts.google.com/specimen/Space+Mono){target="_blank"}
+- [Montserrat](https://fonts.google.com/specimen/Montserrat){target="_blank"}
+- [Noto Serif Japanese](https://fonts.google.com/noto/specimen/Noto+Serif+JP?query=Noto+Serif+JP){target="_blank"}
+- [Playfair Display](https://fonts.google.com/specimen/Playfair+Display){target="_blank"}
+- [Work Sans](https://fonts.google.com/specimen/Work+Sans){target="_blank"}
+- [Neonderthaw](https://fonts.google.com/specimen/Neonderthaw){target="_blank"}
+- [Zen Antique Soft](https://fonts.google.com/specimen/Zen+Antique+Soft){target="_blank"}
+- [Zen Kaku Gothic Antique](https://fonts.google.com/specimen/Zen+Kaku+Gothic+Antique){target="_blank"}
 
 ### images
 
@@ -43,6 +50,7 @@ the falling petals is from [Sakura.js](https://github.com/jhammann/sakura){targe
 
 this site could not have been built without the help of the many, many people who give up their time and knowledge by writing tutorials and sharing open source code online. i would like to share the source of some of the most helpful or ones used with minimal modifications:
 
+- the crosswalk on the landing page is from [here](https://codepen.io/manz/pen/LOyrMp){target="_blank"}
 - the popup modals on the landing and crafts pages were built using [this tutorial](https://matemarschalko.medium.com/lets-build-a-html-and-css-only-popup-modal-5bf26ec62c7a){target="_blank"}
 - the hamburger icon animation used for all my mobile sidebars is from [here](https://codepen.io/ainalem/pen/LJYRxz){target="_blank"}
 - the code for sliding vertical tabs on my about page is from [here](https://codepen.io/itsabhaybal/pen/bGQLOWP){target="_blank"}
