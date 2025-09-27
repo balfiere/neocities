@@ -131,7 +131,7 @@ function copyText() {
 
 async function fetchJsonData() {
   try {
-    const response = await fetch('./scripts/windows.json'); 
+    const response = await fetch('./scripts/windows.json?v=2'); 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
