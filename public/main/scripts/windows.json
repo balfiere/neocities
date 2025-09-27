@@ -8,15 +8,15 @@
     ],
     "reading": [
       "diary of a lonely girl, or the battle against free love by miriam karpilove",
-      "of all things, i became a crow",
-      "the apothecary diaries manga"
+      "of all things, i became a crow"
     ],
     "watching": ["the empress of ayodhaya"],
     "listening": ["the rising sun: the decline of and fall of the japanese empire, 1936 - 1945 by john toland"],
-    "making": [ ],
+    "making": [ "a tote bag embroidered with nishiki's tattoo" ],
     "other": [
-      "trying to play a fully modded oblivion without crashing every 30 minutes",
-      "figuring out why my kindle 3 keeps randomly freezing"
+      "learning real javascript to use GSAP more easily",
+      "figuring out how to install and use vapoursynth plugins on a fedora-based distro",
+      "learning how to color grade in davinci resolve"
     ]
   },
   "tasks": {
@@ -25,7 +25,7 @@
       "write a tutorial on using eleventy to generate a page from multiple markdown files",
       "add methodology section to language learning tools page of resources site",
       "add resources to vegan page",
-      "create yakuza shrine"
+      "publish yakuza character sheet"
     ],
     "done": [
       "share javascript-less modal popup code snippet",
@@ -106,7 +106,7 @@
       ["kkbutton", "kkb online", 1, "https://kkb.online/"],
       ["ublock_now", "uBlock Origin now!", 0, "https://ublockorigin.com/"],
       ["petra", "petra pixel", 1, "https://petrapixel.neocities.org/"],
-	  ["loleahbutton", "loleah", 1, "https://loleah.neocities.org/"],
+	    ["loleahbutton", "loleah", 1, "https://loleah.neocities.org/"],
       ["deletetiktok", "delete tiktok", 1],
       ["strawberrygashes", "strawberry gashes ♥", 1, "https://strawberry-gashes.neocities.org"],
       ["lazybones", "lazy bones", 1, "https://lazybones.neocities.org/"],
