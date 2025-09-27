@@ -194,8 +194,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const sections = document.querySelectorAll("section");
 
-const playlist = document.getElementsByClassName('song');
-
 const customLoopPlaylist = document.querySelectorAll('[data-custom-loop="true"]');
 customLoopPlaylist.forEach((song) => {
   song.addEventListener('timeupdate', () => {
@@ -205,6 +203,10 @@ customLoopPlaylist.forEach((song) => {
     }
   })
 });
+
+// the goToSection function is written by OSUblake on the GSAP forum
+// https://gsap.com/community/forums/topic/31575-scrolltrigger-using-pin-with-scrollto-to-handle-snap-behaviour-pinning-issue/
+// THANK YOU 😭😭😭😭😭😭
 
 // this scrolling object just allows us to conveniently call scrolling.enable(), scrolling.disable(), and check if scrolling.enabled is true. 
 // some browsers (like iOS Safari) handle scrolling on a separate thread and can cause things to get out of sync (jitter/jumpy), so when we're animating the scroll position, force an update of GSAP tweens when there's a scroll event in order to maintain synchronization)
@@ -246,6 +248,8 @@ sections.forEach((section, i) => {
 
   const lines = section.querySelectorAll("span");
 
+  const song = section.querySelector('audio');
+
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: section,
@@ -274,20 +278,18 @@ sections.forEach((section, i) => {
       start: 'top center',
       end: 'bottom center',
       
-      onEnter() { playlist[i-1].play() },
-      onLeave() { playlist[i-1].pause() },
-      onEnterBack() { playlist[i-1].play() },
-      onLeaveBack() { playlist[i-1].pause() }
+      onEnter() { song.play() },
+      onLeave() { song.pause() },
+      onEnterBack() { song.play() },
+      onLeaveBack() { song.pause() }
     });
   }
   
  
 });
 
-</script>
+// loader from https://github.com/amarinediary/Vanilla-JS-Pages-Transition-Loader
 
-<!-- loader from https://github.com/amarinediary/Vanilla-JS-Pages-Transition-Loader -->
-<script>
 let e = { backgroundColor: "#00000073", filterBrightness: 1, strokeWidth: 10, timeOnScreen: 100 },
     t = document.querySelector("*"),
     r = document.createElement("style"),
