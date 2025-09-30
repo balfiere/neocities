@@ -2,95 +2,95 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yakuza character sheet</title>
-    <link rel="stylesheet" href="characters.css">
-    <noscript>
-        <style>
-            @media (prefers-reduced-motion: no-preference) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yakuza character sheet</title>
+  <link rel="stylesheet" href="characters.css">
+  <noscript>
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
 
-                section {
-                    * {
-                        transition: transform 1s ease, opacity 1s ease, background-color 1s ease;
-                    }
+        section {
+          * {
+            transition: transform 1s ease, opacity 1s ease, background-color 1s ease;
+          }
 
-                    .desc {
-                        opacity: 0;
-                    }
+          .desc {
+            opacity: 0;
+          }
 
-                    .name {
-                        transition: transform 1s ease;
-                    }
+          .name {
+            transition: transform 1s ease;
+          }
 
-                    &:hover {
-                        .backdrop {
-                            transform: translate3d(calc(-1 * var(--padding)), calc(0.5 * var(--padding)), 0);
-                            background-color: var(--backdrop-background-color-hover);
-                            transition: var(--transition);
-                        }
-
-                        .card {
-                            background-color: var(--card-background-color-hover);
-                            transition: var(--transition);
-                        }
-
-                        .quote {
-                            opacity: 0;
-                        }
-
-                        .desc {
-                            opacity: 1;
-                        }
-
-                        .name {
-                            transform: translateX(20%) translateY(71%);
-                            transition: transform 1s ease;
-                        }
-                    }
-                }
+          &:hover {
+            .backdrop {
+              transform: translate3d(calc(-1 * var(--padding)), calc(0.5 * var(--padding)), 0);
+              background-color: var(--backdrop-background-color-hover);
+              transition: var(--transition);
             }
-        </style>
-    </noscript>
+
+            .card {
+              background-color: var(--card-background-color-hover);
+              transition: var(--transition);
+            }
+
+            .quote {
+              opacity: 0;
+            }
+
+            .desc {
+              opacity: 1;
+            }
+
+            .name {
+              transform: translateX(20%) translateY(71%);
+              transition: transform 1s ease;
+            }
+          }
+        }
+      }
+    </style>
+  </noscript>
 </head>
 
 <body>
 
-    {% for character in collections.yakuza-characters %}
+  {% for character in collections.yakuza-characters %}
 
-    <section class="container">
-        <div class="backdrop" color="{{ character.data.colorBackdrop }}"></div>
-        <picture class="gif">
-            <source srcSet="images/image.png" media="(prefers-reduced-motion)" />
-            <img src="{{ character.page.fileSlug | slugify }}.webp" />
-        </picture>
-        <div class="card"></div>
-        <img class="doll" src="{{ character.page.fileSlug | slugify }}.png" alt="{{ character.data.name }}" />
-        <div class="textbox">
-            <blockquote class="quote">{{ character.data.quote }}</blockquote>
-            <div class="desc">
-                <span class="label">{% if character.data.birthday %}<strong>birthday</strong> {{ character.data.birthday
-                    }} {% endif %}{% if character.data.height %}<strong>height</strong> {{ character.data.height }} {%
-                    endif %}{% if character.data.weight %}<strong>weight</strong> {{ character.data.weight }} {% endif
-                    %}{% if character.data.bloodType %}<strong>blood type</strong> {{ character.data.bloodType }}{%
-                    endif %}</span>
-                {{ character.content }}
-            </div>
-        </div>
-        <div class="name" replace="{{ character.data.jpName }}" color="{{ character.data.colorName }}">{{
-            character.data.name }}</div>
-    </section>
+  <section class="container">
+    <div class="backdrop" color="{{ character.data.colorBackdrop }}"></div>
+    <picture class="gif">
+      <source srcSet="images/image.png" media="(prefers-reduced-motion)" />
+      <img src="{{ character.page.fileSlug | slugify }}.avif" />
+    </picture>
+    <div class="card"></div>
+    <img class="doll" src="{{ character.page.fileSlug | slugify }}.png" alt="{{ character.data.name }}" />
+    <div class="textbox">
+      <blockquote class="quote">{{ character.data.quote }}</blockquote>
+      <div class="desc">
+        <span class="label">{% if character.data.birthday %}<strong>birthday</strong> {{ character.data.birthday
+          }} {% endif %}{% if character.data.height %}<strong>height</strong> {{ character.data.height }} {%
+          endif %}{% if character.data.weight %}<strong>weight</strong> {{ character.data.weight }} {% endif
+          %}{% if character.data.bloodType %}<strong>blood type</strong> {{ character.data.bloodType }}{%
+          endif %}</span>
+        {{ character.content }}
+      </div>
+    </div>
+    <div class="name" replace="{{ character.data.jpName }}" color="{{ character.data.colorName }}">{{
+      character.data.name }}</div>
+  </section>
 
-    {% endfor %}
+  {% endfor %}
 
-    <svg>
-        <filter id='noiseFilter'>
-            <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
-            <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-            <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
-            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
-        </filter>
-    </svg>
+  <svg>
+    <filter id='noiseFilter'>
+      <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+      <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+      <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
+      <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>
+  </svg>
 
 </body>
 
