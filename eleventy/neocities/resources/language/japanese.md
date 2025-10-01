@@ -98,6 +98,7 @@ and at ~N3 level:
 - [Japanese Podcast with Hana](https://www.youtube.com/@japanesepodcasthana){target='_blank'}
 - [Onomappu](https://www.youtube.com/@Onomappu){target='_blank'}
 - [Ryusei Poddo Casto](https://www.youtube.com/@poddocasto){target='_blank'}
+- [OkkeiJapanese](https://www.youtube.com/@OkkeiJapanese){target='_blank'}
 
 {% endresourcesContainer %}
 
