@@ -47,34 +47,17 @@
                 <div class="content">
                     <p>like 80% of my language learning time consists of watching youtube but on the rare occasion i
                         feel up to tackling something longer, here's what i've watched or read:</p>
-                    <h3>currently working on</h3>
+                    
+                    {% for section in language %}
+                    <h3>{{ section[0] }}</h3>
                     <p>
                     <ul>
-                        {% for media in currently %}
-                        <li>{% if media[2] == "th" %}🇹🇭{% elsif media[2] =="jp" %}🇯🇵{% endif %} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em></li>
+                        {% for media in section[1] %}
+                        <li>{% if media[4] %}<details><summary>{% endif %}{% if media[2] == "th" %}🇹🇭{% elsif media[2] =="jp" %}🇯🇵{% endif %} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3][0] | prettyDate }}{% if media[3][1] %} – {{ media[3][1] | prettyDate }}{% endif %}</em>{% if media[4] %}</summary><ul><li>{{ media[4] | markdownify-inline }}</li></ul></details>{% endif %}</li>
                         {% endfor %}
                     </ul>
                     </p>
-
-                    <h3>finished</h3>
-                    <p>
-                    <ul>
-                        {% for media in done %}
-                        <li>{% if media[2] == "th" %}🇹🇭{% elsif media[2] =="jp" %}🇯🇵{% endif %} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em></li>
-                        {% endfor %}
-                    </ul>
-                    </p>
-
-                    <h3>paused</h3>
-                    <p>
-                    <ul>
-                        {% for media in paused %}
-                        <li>{% if media[2] == "th" %}🇹🇭{% elsif media[2] =="jp" %}🇯🇵{% endif %} <strong>{{ media[0] }}</strong> ({{ media[1] }}) <em>{{ media[3] }}</em>
-                            <ul><li>{{ media[4] }}</li></ul>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    </p>
+                    {% endfor %}
 
                 </div>
             </tab-content>

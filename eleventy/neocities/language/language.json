@@ -1,197 +1,280 @@
 {
-    "currently": [
+  "language": {
+    "currently working on": [
+      [
+        "The Empress of Ayodhaya",
+        "TV",
+        "th",
         [
-            "The Empress of Ayodhaya",
-            "TV",
-            "th",
-            "September 4th, 2025 -"
-        ],
-        [
-            "The Crow's Prince",
-            "manhwa",
-            "th",
-            "June 17th, 2025 -"
-        ],
-        [
-            "Ayakashi Gohan",
-            "VN",
-            "jp",
-            "June 15th, 2025 -"
-        ],
-        [
-            "Re:Fragment ~Absolute Ambition~",
-            "VN",
-            "th",
-            "May 25th, 2025 -"
-        ],
-        [
-            "The Apothecary Diaries",
-            "manga",
-            "th",
-            "May 15th, 2025 -"
+          "2025-09-04"
         ]
+      ],
+      [
+        "The Crow's Prince",
+        "manhwa",
+        "th",
+        [
+          "2025-06-17"
+        ]
+      ],
+      [
+        "Ayakashi Gohan",
+        "VN",
+        "jp",
+        [
+          "2025-06-15"
+        ]
+      ],
+      [
+        "Re:Fragment ~Absolute Ambition~",
+        "VN",
+        "th",
+        [
+          "2025-05-25"
+        ]
+      ],
+      [
+        "The Apothecary Diaries",
+        "manga",
+        "th",
+        [
+          "2025-05-15"
+        ]
+      ]
     ],
     "done": [
+      [
+        "Non Non Biyori Nonstop",
+        "anime",
+        "jp",
         [
-            "Non Non Biyori Nonstop",
-            "anime",
-            "jp",
-            "May 29th, 2025 - June 15th, 2025"
-        ],
-        [
-            "The Reason Why Raeliana Ended Up at the Duke's Mansion",
-            "manhwa",
-            "th",
-            "April 15th, 2025 - June 9th, 2025"
-        ],
-        [
-            "Letters From a Rainy Day -Oceans and Lace-",
-            "VN",
-            "jp",
-            "April 7th, 2025 - June 1st, 2025"
-        ],
-        [
-            "Bangkok Blossom",
-            "TV",
-            "th",
-            "May 19th, 2025 - May 30th, 2025"
-        ],
-        [
-            "Non Non Biyori Repeat",
-            "anime",
-            "jp",
-            "May 19th, 2025 - May 22nd, 2025"
-        ],
-        [
-            "Non Non Biyori",
-            "anime",
-            "jp",
-            "May 12th, 2025 - May 18th, 2025"
-        ],
-        [
-            "Celestial Method",
-            "anime",
-            "jp",
-            "May 5th, 2025 - May 9th, 2025"
-        ],
-        [
-            "My Happy Marriage",
-            "anime",
-            "th",
-            "April 24th, 2025 - May 4th, 2025"
-        ],
-        [
-            "Citrus",
-            "anime",
-            "jp",
-            "April 17th, 2025 - May 3rd, 2025"
-        ],
-        [
-            "The Cheese Sisters",
-            "movie",
-            "th",
-            "April 26th, 2025"
-        ],
-        [
-            "Love in the Rain",
-            "movie",
-            "th",
-            "April 7th, 2025"
-        ],
-        [
-            "NEKOPARA Vol. 0",
-            "VN",
-            "jp",
-            "April 2nd, 2025 - April 3rd, 2025"
-        ],
-        [
-            "Tada Never Falls in Love",
-            "anime",
-            "jp",
-            "March 16th, 2025 - March 23rd, 2025"
-        ],
-        [
-            "How to Make Millions before Grandma Dies",
-            "movie",
-            "th",
-            "March 11th, 2025"
-        ],
-        [
-            "Mekhong Full Moon Party",
-            "movie",
-            "th",
-            "June 16th, 2024"
-        ],
-        [
-            "Cardcaptor Sakura: Clear Card",
-            "anime",
-            "jp",
-            "June 1st, 2024 - June 9th, 2024"
-        ],
-        [
-            "Happy Old Year",
-            "movie",
-            "th",
-            "June 8th, 2024"
-        ],
-        [
-            "AI Love You",
-            "movie",
-            "th",
-            "June 6th, 2024 - June 7th, 2024"
-        ],
-        [
-            "Sea You Soon",
-            "TV",
-            "th",
-            "June 5th, 2024"
-        ],
-        [
-            "I Feel You Linger in the Air",
-            "TV",
-            "th",
-            "April 25th, 2024 - June 4th, 2024"
-        ],
-        [
-            "Cardcaptor Sakura",
-            "anime",
-            "jp",
-            "May 11th, 2024 - May 28th, 2024"
-        ],
-        [
-            "The Sign",
-            "TV",
-            "th",
-            "January 4th, 2024 - April 21st, 2024"
-        ],
-        [
-            "GAP",
-            "TV",
-            "th",
-            "October 28th, 2023 - December 27th, 2023"
+          "2025-05-29",
+          "2025-06-15"
         ]
-    ], 
+      ],
+      [
+        "The Reason Why Raeliana Ended Up at the Duke's Mansion",
+        "manhwa",
+        "th",
+        [
+          "2025-04-15",
+          "2025-06-09"
+        ]
+      ],
+      [
+        "Letters From a Rainy Day -Oceans and Lace-",
+        "VN",
+        "jp",
+        [
+          "2025-04-07",
+          "2025-06-01"
+        ],
+        "good first choice VN bc jesus it was repetitive... basically every scene gets repeated twice, once from each main character's POV. the 'mystery' is also so obvious... i don't regret reading this but i would have a hard time recommending this one to non language learners"
+      ],
+      [
+        "Bangkok Blossom",
+        "TV",
+        "th",
+        [
+          "2025-05-19",
+          "2025-05-30"
+        ],
+        "i really enjoyed this show's set design and costuming. also this show made me realize every other thai show has 1) a useless father/father figure/uncle; 2) an antagonist mother figure who isn't evil or hates her kids despite being portrayed that way at first, but was compelled into going against the protagonist either by societal expectation or by 3) the actual antagonist, a man who is just an irredeemable piece of shit"
+      ],
+      [
+        "Non Non Biyori Repeat",
+        "anime",
+        "jp",
+        [
+          "2025-05-19",
+          "2025-05-22"
+        ]
+      ],
+      [
+        "Non Non Biyori",
+        "anime",
+        "jp",
+        [
+          "2025-05-12",
+          "2025-05-18"
+        ]
+      ],
+      [
+        "Celestial Method",
+        "anime",
+        "jp",
+        [
+          "2025-05-05",
+          "2025-05-09"
+        ]
+      ],
+      [
+        "My Happy Marriage",
+        "anime",
+        "th",
+        [
+          "2025-04-24",
+          "2025-05-04"
+        ]
+      ],
+      [
+        "Citrus",
+        "anime",
+        "jp",
+        [
+          "2025-04-17",
+          "2025-05-03"
+        ]
+      ],
+      [
+        "The Cheese Sisters",
+        "movie",
+        "th",
+        [
+          "2025-04-26"
+        ]
+      ],
+      [
+        "Love in the Rain",
+        "movie",
+        "th",
+        [
+          "2025-04-07"
+        ]
+      ],
+      [
+        "NEKOPARA Vol. 0",
+        "VN",
+        "jp",
+        [
+          "2025-04-02",
+          "2025-04-03"
+        ]
+      ],
+      [
+        "Tada Never Falls in Love",
+        "anime",
+        "jp",
+        [
+          "2025-03-16",
+          "2025-03-23"
+        ]
+      ],
+      [
+        "How to Make Millions before Grandma Dies",
+        "movie",
+        "th",
+        [
+          "2025-03-11"
+        ]
+      ],
+      [
+        "Mekhong Full Moon Party",
+        "movie",
+        "th",
+        [
+          "2024-06-16"
+        ]
+      ],
+      [
+        "Cardcaptor Sakura: Clear Card",
+        "anime",
+        "jp",
+        [
+          "2024-06-01",
+          "2024-06-09"
+        ]
+      ],
+      [
+        "Happy Old Year",
+        "movie",
+        "th",
+        [
+          "2024-06-08"
+        ]
+      ],
+      [
+        "AI Love You",
+        "movie",
+        "th",
+        [
+          "2024-06-06",
+          "2024-06-07"
+        ]
+      ],
+      [
+        "Sea You Soon",
+        "TV",
+        "th",
+        [
+          "2024-06-05"
+        ]
+      ],
+      [
+        "I Feel You Linger in the Air",
+        "TV",
+        "th",
+        [
+          "2024-04-25",
+          "2024-06-04"
+        ]
+      ],
+      [
+        "Cardcaptor Sakura",
+        "anime",
+        "jp",
+        [
+          "2024-05-11",
+          "2024-05-28"
+        ]
+      ],
+      [
+        "The Sign",
+        "TV",
+        "th",
+        [
+          "2024-01-04",
+          "2024-04-21"
+        ]
+      ],
+      [
+        "GAP",
+        "TV",
+        "th",
+        [
+          "2023-10-28",
+          "2023-12-27"
+        ]
+      ]
+    ],
     "paused": [
+      [
+        "Midori no Umi",
+        "VN",
+        "jp",
         [
-            "Midori no Umi",
-            "VN",
-            "jp",
-            "June 3rd, 2025 -",
-            "i find the mystery decently intruiging but the mc is wayyyyyy too much of a yapper. girl idc about ur internal monologue anymore stfu and let me get to the plot 😭"
+          "2025-06-03"
         ],
+        "i find the mystery decently intruiging but the mc is wayyyyyy too much of a yapper. girl idc about ur internal monologue more stfu and let me get to the plot 😭"
+      ],
+      [
+        "In the Clear Moonlit Dusk",
+        "manga",
+        "th",
         [
-            "In the Clear Moonlit Dusk",
-            "manga",
-            "th",
-            "April 22nd, 2025 -",
-            "cute manga but hasn't hooked me enough to buy the rest of the series"
+          "2025-04-22"
         ],
+        "cute manga but hasn't hooked me enough to buy the rest of the series"
+      ],
+      [
+        "Girl's Last Tour",
+        "manga",
+        "th",
         [
-            "Girl's Last Tour",
-            "manga",
-            "th",
-            "August 11th 2024 -",
-            "this was the first manga i attempted to read in thai since the japanese version is generally rated as being friendly towards beginners and i've read it in english before, but the thai fantranslation i was reading has such a hard to read font that i'm putting this on hold until my ability to read cursive thai fonts is better"
-        ]
+          "2024-08-11"
+        ],
+        "this was the first manga i attempted to read in thai since the japanese version is generally rated as being friendly towards beginners and i've read it in english before, but the thai fantranslation i was reading has such a hard to read font that i'm putting this on hold until my ability to read cursive thai fonts is better"
+      ]
     ]
+  }
 }
