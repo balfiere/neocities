@@ -1,0 +1,172 @@
+#!/bin/bash
+
+languageJson="$HOME/Documents/neocities/eleventy/neocities/language/language.json"
+
+function print_currently_working_on() {
+    length=$(jq -r '.language."currently working on" | length' "$languageJson")
+    for ((i = 0; i < length; i++)); do
+        echo "$i. $(jq -r ".language.\"currently working on\" | .[$i] | .[0]" "$languageJson")"
+    done
+}
+
+function add_done_date() {
+    local index=$((10#$1))
+    local date="${2:-$(date -I)}"
+
+    # append date to jq -r ".language.\"currently working on\" | .[$index] | .[3]" "$languageJson"
+    jq --arg date "$date" --argjson index $index '
+  .language."currently working on"[$index][3] |=
+    (if type == "array" then . + [$date] else [.] + [$date] end)
+    ' "$languageJson" > "$languageJson.tmp" && mv "$languageJson.tmp" "$languageJson"
+}
+
+function add_comment() {
+    local index="$1"
+    local section="$2"
+    echo "would you like to add some commentary to this media? (y/n)"
+    read comment
+    if [ "$comment" = "y" ]; then
+        echo "what do you have to say? markdown is supported"
+        read comment
+        jq --arg comment "$comment" --argjson index $index --arg section "$section" '
+        .language[$section][$index][4] |= $comment
+        ' "$languageJson" > "$languageJson.tmp" && mv "$languageJson.tmp" "$languageJson"
+
+    else
+        exit
+    fi
+}
+
+function move_media() {
+    local index="$1"
+    local section="$2"
+    
+    jq --arg index "$index" --arg section "$section" '
+    .language[$section] = [ .language."currently working on"[($index | tonumber)] ] + .language[$section]
+    | .language."currently working on" = (.language."currently working on" | del(.[($index | tonumber)]))
+    ' "$languageJson" > "$languageJson.tmp" && mv "$languageJson.tmp" "$languageJson"
+}
+
+function sort_all_properties_by_date() {
+    jq '
+    .language.done = (.language.done | sort_by(.[3][-1]) | reverse)
+    | .language.paused = (.language.paused | sort_by(.[3][-1]) | reverse)
+    | .language."currently working on" = (.language."currently working on" | sort_by(.[3][0]) | reverse)
+    ' "$languageJson" > "$languageJson.tmp" && mv "$languageJson.tmp" "$languageJson"
+}
+
+echo "what do you want to do?"
+echo "1. move an item from currently working on to done"
+echo "2. move an item from currently working on to paused"
+echo "3. add a new item"
+echo "4. sort all properties by date"
+
+read choice
+
+case $choice in
+    1)
+        print_currently_working_on
+        echo "which one?"
+        read index
+        add_done_date $index
+        add_comment $index "currently working on"
+        move_media $index "done"
+    ;;
+    2)
+        print_currently_working_on
+        echo "which one?"
+        read index
+        add_done_date $index
+        add_comment $index "currently working on"
+        move_media $index "paused"
+    ;;
+    3)
+        echo "1. currently working on, 2. done, or 3. paused?"
+        read section
+        case $section in
+            1)
+                section="currently working on"
+            ;;
+            2)
+                section="done"
+            ;;
+            3)
+                section="paused"
+            ;;
+            *)
+                echo "invalid choice"
+                exit 1
+            ;;
+        esac
+        echo "what is the title?"
+        read title
+        echo "what is the type? 1. TV, 2. movie, 3. anime, 4. VN, 5. manga, 6. manhwa. if type is not listed, type it in manually"
+        read type
+        case $type in
+            1)
+                type="TV"
+            ;;
+            2)
+                type="movie"
+            ;;
+            3)
+                type="anime"
+            ;;
+            4)
+                type="VN"
+            ;;
+            5)
+                type="manga"
+            ;;
+            6)
+                type="manhwa"
+            ;;
+            *)
+                echo "using new type $type"
+            ;;
+        esac
+        echo "what is the language? 1. th, 2. jp"
+        read language
+        case $language in
+            1)
+                language="th"
+            ;;
+            2)
+                language="jp"
+            ;;
+            *)
+                echo "unknown language $language"
+                exit 1
+            ;;
+        esac
+        echo "what is the start date? (yyyy-mm-dd) or leave blank for today"
+        read date
+        if [ -z "$date" ]; then
+            date=$(date -I)
+        fi
+        if [ "$section" != "currently working on" ]; then
+            echo "what is the end date? (yyyy-mm-dd) or leave blank for today"
+            read end_date
+            if [ -z "$end_date" ]; then
+                end_date=$(date -I)
+            fi
+        jq --arg title "$title" --arg type "$type" --arg language "$language" --arg date "$date" --arg end_date "$end_date" --arg section "$section" '
+        .language[$section] = [[$title, $type, $language, [$date, $end_date]]] + .language[$section]
+        ' "$languageJson" > "$languageJson.tmp"
+        else
+            jq --arg title "$title" --arg type "$type" --arg language "$language" --arg date "$date" --arg section "$section" '
+            .language[$section] = [[$title, $type, $language, [$date]]] + .language[$section]
+            ' "$languageJson" > "$languageJson.tmp"
+        fi
+        mv "$languageJson.tmp" "$languageJson"
+        add_comment 0 $section
+        sort_all_properties_by_date
+    ;;
+4)
+    sort_all_properties_by_date
+;;
+    *)
+        echo "invalid choice"
+        exit 1
+    ;;
+esac

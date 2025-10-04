@@ -64,7 +64,11 @@ case "$1" in
   eleventy_to_neocities "crafts" "true"
   ;;
 "language")
-  # copy_assets "language"
+  echo "update the language page json file? (y/n)"
+  read answer
+  if [ $answer == "y" ]; then
+    $HOME/Documents/neocities/scripts/update_language
+  fi
   echo "building language page"
   eleventy_to_neocities "language" "true"
   ;;
