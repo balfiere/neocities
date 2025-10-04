@@ -1,139 +1,139 @@
 {
     "logs": [
         [
-            "09.20.25",
+            "2025-09-20",
             "updated the [crafts](/crafts/){target=_top} page with three older projects and one recently finished project."
         ],
         [
-            "09.17.25",
+            "2025-09-17",
             "published a new theme for a [responsive image gallery with popups and tag filtering system](/codes/gallery-with-tag-system){target=_top}."
         ],
         [
-            "09.14.25",
+            "2025-09-14",
             "published tutorials for two methods of adding data to a webpage from a [json file](/notes/030-my-notes/json){target=_top}: using [eleventy](/notes/030-my-notes/building-a-web-page-from-json-data-using-11ty){target=_top} and [javascript](/notes/030-my-notes/using-javascript-to-load-data-from-a-json-file){target=_top}."
         ],
         [
-            "09.09.25",
+            "2025-09-09",
             "changed mobile sidebars to work without javascript, added two new buttons, updated the [credits](/main/credit.html) page, added four new [articles](/articles/){target=_top}, and added a uses list to my [about](/about/#lists){target=_top} page."
         ],
         [
-            "09.03.25",
+            "2025-09-03",
             "published [vegan](/vegan/){target=_top} page which currently has links to my favorite recipes and a toybox for farm animals. added four new notes to the [notebook](/notes/){target=_top} section: [preventing gif autoplay](/notes/030-my-notes/preventing-gif-autoplay.html){target=_top}, [batch printing images in a folder to html](/notes/030-my-notes/batch-print-images-in-a-folder-to-html.html){target=_top}, [my most used imagemagick commands](/notes/030-my-notes/most-used-imageMagick-commands.html){target=_top}, and how i use [the details html tag](/notes/030-my-notes/details-tag.html){target=_top}."
         ],
         [
-            "07.31.25",
+            "2025-07-31",
             "updated the [language learning](/language/){target=_top} page and added a media log."
         ],
         [
-            "07.30.25",
+            "2025-07-30",
             "added a currently playing, reading, etc box to the main page, made the main page more navigable for users with javascript disabled, and reinstated a chat box."
         ],
         [
-            "07.28.25",
+            "2025-07-28",
             "added a new page for [my crafts](/crafts/){target=_top}."
         ],
         [
-            "07.24.25",
+            "2025-07-24",
             "added taito, da'at and paulownia mall to [my favorite places](/places/){target=_top}."
         ],
         [
-            "07.19.25",
+            "2025-07-19",
             "added a new section for miscellaneous [notes](/notes/){target=_top} ive written."
         ],
         [
-            "07.31.24",
+            "2024-07-31",
             "added a new page for my favorite [articles](/articles/index.html){target=_top} that ive read."
         ],
         [
-            "07.25.24",
+            "2024-07-25",
             "made redesigned about page mobile friendly."
         ],
         [
-            "07.23.24",
+            "2024-07-23",
             "chatbox removed due to the service being no longer available, and a toggle button for the falling leaves animation has been added."
         ],
         [
-            "07.17.24",
+            "2024-07-17",
             "released redesigned [about page](/about/index.html){target=_top}."
         ],
         [
-            "06.12.24",
+            "2024-06-12",
             "added more cardcaptor sakura pixels to the [toybox](/main/pixels.html) page."
         ],
         [
-            "06.10.24",
+            "2024-06-10",
             "gif and animation autoplay is now disabled when users have prefer reduced motion enabled in their operating system."
         ],
         [
-            "05.17.24",
+            "2024-05-17",
             "added another button for my site."
         ],
         [
-            "05.16.24",
+            "2024-05-16",
             "added a [sitemap](/sitemap/index.html){target=_top}."
         ],
         [
-            "05.02.24",
+            "2024-05-02",
             "added a page for [my favorite video game locations](/places/index.html){target=_top}."
         ],
         [
-            "04.27.24",
+            "2024-04-27",
             "overhauled a bunch of code under the hood (change some divs to semantic html tags, redid all tooltips, convert all jquery to css or vanilla js, reorganize file structure)."
         ],
         [
-            "04.25.24",
+            "2024-04-25",
             "released this [pictochat theme](/codes/pictochat/index.html){target=_top}."
         ],
         [
-            "04.24.24",
+            "2024-04-24",
             "released a premade [wii menu image gallery](/codes/wiimenu/index.html){target=_top}."
         ],
         [
-            "04.22.24",
+            "2024-04-22",
             "released a premade [stardew valley theme](/codes/stardewvalleytheme/index.html){target=_top}."
         ],
         [
-            "04.17.24",
+            "2024-04-17",
             "embedded my status.cafe feed onto my main page."
         ],
         [
-            "04.15.24",
+            "2024-04-15",
             "added a [code snippets](/main/codes.html) page. created demo pages for collapsible and draggable windows using the css i have on my site as well as a version compatible with [98.css](https://jdan.github.io/98.css/){target=_blank} and its forks."
         ],
         [
-            "04.10.24",
+            "2024-04-10",
             "made about page mobile friendly."
         ],
         [
-            "04.09.24",
+            "2024-04-09",
             "released [my room](/room/index.html){target=_top} to the public."
         ],
         [
-            "04.05.24",
+            "2024-04-05",
             "added image gallery for favorite characters and non-video game media. released microblog to the public."
         ],
         [
-            "04.03.24",
+            "2024-04-03",
             "added more images to toybox page - some megaten, inuyasha, and cardcaptor sakura; a lot of sailor moon."
         ],
         [
-            "04.02.24",
+            "2024-04-02",
             "joined some webrings."
         ],
         [
-            "04.01.24",
+            "2024-04-01",
             "added toybox page. changed as many google fonts as possible to [coolLab fonts](https://fonts.coollabs.io/){target=_top} (doesnt seem to work with all fonts). added dark mode support to main, about, and language pages."
         ],
         [
-            "03.30.24",
+            "2024-03-30",
             "added japanese info to language page."
         ],
         [
-            "03.29.24",
+            "2024-03-29",
             "added favorite video games photo gallery to about page."
         ],
         [
-            "03.28.24",
+            "2024-03-28",
             "created diary page, then released personal page to the public. created changelog page."
         ]
     ]
