@@ -11,9 +11,15 @@
       "underground asia: global revolutionaries and the assault on empire by tim harper",
       "of all things, i became a crow"
     ],
-    "watching": ["the empress of ayodhaya"],
-    "listening": ["the rising sun: the decline of and fall of the japanese empire, 1936 - 1945 by john toland"],
-    "making": [ "a tote bag embroidered with nishiki's tattoo" ],
+    "watching": [
+      "the empress of ayodhaya"
+    ],
+    "listening": [
+      "the rising sun: the decline of and fall of the japanese empire, 1936 - 1945 by john toland"
+    ],
+    "making": [
+      "a tote bag embroidered with nishiki's tattoo"
+    ],
     "other": [
       "learning real javascript to use GSAP more easily",
       "learning how to color grade in davinci resolve"
@@ -55,114 +61,631 @@
       "add diary section"
     ]
   },
-  "buttons": [ 
-      ["pennyspinkbutton","penny loves pandas", 1, "https://pennylovespandas.neocities.org/"],
-      ["angeleyebutton", "angel eye springs", 0, "https://angeleyesprings.neocities.org/"],
-      ["3ds", "3ds", 0],
-      ["miela_button", "miela", 1, "https://miela583.neocities.org/"],
-      ["js-warning", "warning: this page contains javascript", 0],
-      ["velvetblue", "Velvet Blue", 0, "https://velvetblue.neocities.org"],
-      ["lazerbunny", "lazer bunny", 1, "https://lazer-bunny.neocities.org/"],
-      ["sc", "Saikyo Central", 1, "https://saikyocentral.com/"],
-      ["serenitysrest", "serenity's rest", 1, "https://serenitysrest.neocities.org/"],
-      ["vampi", "vampi", 0, "https://vamp1.neocities.org/"],
-      ["visitjennie", "you must visit jennie", 1, "https://justjennie.neocities.org/"],
-      ["dollybutton", "dolly aegisu", 1, "https://dollyaegisu.neocities.org/"],
-      ["linux", "linux powered", 1],
-      ["daughterofbilitis", "daughter of bilitis", 0, "https://daughterofbilitis.neocities.org/"],
-      ["mossypawprints", "mossy pawprints", 0, "https://mossypawprints.neocities.org/"],
-      ["havensbutton", "havens", 0, "https://havens.neocities.org/"],
-      ["alcedonia", "alcedonia", 1, "https://alcedonia.neocities.org/"],
-      ["annaxangel", "anna angel", 1, "https://annaxangel.neocities.org/"],
-      ["planetaryinfluence", "planetary influence", 1, "https://planetaryinfluence.neocities.org/"],
-      ["oyasumimi", "oyasumimi", 1, "https://oyasumimi.neocities.org/"],
-      ["hanaxsongs", "hana cake", 0, "https://hanaxsongs.neocities.org/"],
-      ["frajola", "frajola", 1, "https://frajola.neocities.org/"],
-      ["joroki", "joroki cute + nerdy", 0, "https://joroki.neocities.org/"],
-      ["jaggiescrapper", "Jaggie Scrapper", 0, "https://jaggiescrapper.neocities.org/"],
-      ["debtdeath-mobilefriendly", "mobile friendly", 0, "https://debtdeath.neocities.org/buttons"],
-      ["digibun", "digibun", 0, "https://digibun.neocities.org"],
-      ["plasticlove", "plastic love now!", 0],
-      ["puredrek", "pure drek", 0, "https://what-meworry.neocities.org/"],
-      ["gelseylandbanner", "gelsey land", 0, "https://gelseyland.neocities.org/"],
-      ["fedora", "powered by fedora", 0, "https://fedoraproject.org/"],
-      ["xandra", "the museum of alexandra", 0, "https://xandra.cc/"],
-      ["starlost", "blissfully", 0, "https://blissfully.neocities.org"],
-      ["kubikill", "kubikill", 1, "https://kubikill.neocities.org/"],
-      ["jeith", "jeith", 1, "https://jeith.com/"],
-      ["valid-atom", "Validate my Atom 1.0 feed", 0, "http://validator.w3.org/feed/check.cgi?url=https%3A//kwaamfan.neocities.org/atom.xml"],
-      ["cabbagesorter2", "cabbage sorter", 0, "https://cabbagesorter.neocities.org/"],
-      ["amriel", "amriel", 0, "https://amriel.neocities.org/"],
-      ["angelnetcast", "angel netcast", 1, "https://angelnetcast.com/"],
-      ["apple_fatal_error", "apple fatal error", 0],
-      ["vencake", "VenCake", 0, "https://vencake.neocities.org/"],
-      ["cloudcover", "cloud cover", 0, "https://cloudcover.neocities.org/"],
-      ["piracy", "piracy now!", 0],
-      ["doqmeat", "doqmeat", 0, "https://doqmeat.com"],
-      ["neovim", "Made with neovim", 0, "https://neovim.io/"],
-      ["saintimages", "saint images", 0, "https://saint-images.neocities.org/"],
-      ["cloveratelier", "clover atelier", 0, "https://cloveratelier.neocities.org"],
-      ["brainmade", "brain made", 0, "https://brainmade.org/"],
-      ["kkbutton", "kkb online", 1, "https://kkb.online/"],
-      ["ublock_now", "uBlock Origin now!", 0, "https://ublockorigin.com/"],
-      ["petra", "petra pixel", 1, "https://petrapixel.neocities.org/"],
-	    ["loleahbutton", "loleah", 1, "https://loleah.neocities.org/"],
-      ["deletetiktok", "delete tiktok", 1],
-      ["strawberrygashes", "strawberry gashes ♥", 1, "https://strawberry-gashes.neocities.org"],
-      ["lazybones", "lazy bones", 1, "https://lazybones.neocities.org/"],
-      ["cutearchive-88x31", "cutie archive", 1, "https://archive.cinni.net/index.php"],
-      ["button262", "forever online", 1],
-      ["bestlandscape", "best viewed in landscape!", 0],
-      ["lavenderbluesbutton", "lavender blues", 1, "https://lavenderblues.neocities.org/"],
-      ["ravelry", "ravelry - where my stitches at?", 1, "https://www.ravelry.com/"],
-      ["itmbutton", "in the margins", 0, "https://mikegrindle.com/"],
-      ["philia95", "philia95", 0, "https://philia995.neocities.org/"],
-      ["lulu", "lulu", 1, "http://lu.tiny-universes.net/index2.html"],
-      ["ia_preserve", "preserve internet archive now!", 0, "https://archive.org/"],
-      ["firefox4", "tested on firefox", 1],
-      ["cinnamonapproved", "cinnamon approved", 1],
-      ["nekonokuni", "neko no kuni", 1, "https://nekonokuni.neocities.org/"],
-      ["shishka-welcome", "shishka", 1, "https://shishka.neocities.org/"],
-      ["emulatenow", "emulate now!", 0],
-      ["neocities-pink", "neocities", 0, "https://neocities.org/"],
-      ["syntheticfruits2", "synthetic fruits", 1, "https://syntheticfruits.neocities.org/"],
-      ["falcom", "nihon falcom", 0],
-      ["sailormoon", "sailor moon", 1],
-      ["jeansNOW", "jeansgurl98", 1, "https://jeansgurl98.neocities.org/"],
-      ["pastelhell", "pastel hell", 1, "https://pastelhello.com/"],
-      ["gaywomen", "gay women", 0],
-      ["4disease", "4disease", 1, "https://4disease.neocities.org"],
-      ["opensubtitles", "open subtitles", 1, "https://www.opensubtitles.org/"],
-      ["playstation", "playstation", 0],
-      ["ffmpeg", "FFmpeg Now!", 0, "https://ffmpeg.org/"],
-      ["cinni", "cinni", 1, "https://cinni.net/"],
-      ["steam", "play with steam", 1],
-      ["irony-machine2", "irony machine", 1, "https://irony-machine.neocities.org/"],
-      ["sega_online", "sega online", 1],
-      ["foollovers", "fool lovers", 1, "https://foollovers.com/"],
-      ["mullvad", "mullvad - free the internet!", 0, "https://mullvad.net/"],
-      ["diagnosedwgay", "you were diagnosed with gay", 0],
-      ["repth", "repth", 0, "https://repth.neocities.org/"],
-      ["cloverbell", "cloverbell", 1, "https://cloverbell.neocities.org/"],
-      ["sharingiscaring", "sharing is caring... seed your torrents!", 1],
-      ["faelink", "faeraphim", 0, "https://faeraphim.net/"],
-      ["ribozone", "ribozone", 1, "https://ribo.zone/"],
-      ["pictochat", "i miss using pictochat", 1],
-      ["kalechips", "kale chips", 0, "https://kalechips.net/"],
-      ["brothings", "it's okay to give your bros some love", 0],
-      ["linuxtoday", "linux today!", 1],
-      ["cherie", "cherie", 1, "https://cherie.pink/"],
-      ["virus", "kuromi virus!!!", 1],
-      ["noodlebutton", "noodle desk", 1, "https://noodledesk.net/"],
-      ["vscodium", "made with vscodium", 0, "https://vscodium.com/"],
-      ["go2hell", "go to hell now!", 0],
-      ["pixeldreams", "pixel dreams", 1, "https://pixel-dreams.neocities.org/"],
-      ["magick88x31", "Made using ImageMagick", 0, "https://imagemagick.org/"],
-      ["segagendevring", "sega genesis dev ring", 1],
-      ["rss", "implement rss now!", 0],
-      ["new-tab", "please do not force this img to be lonely", 0],
-      ["ffwarpzone", "final fantasy warp zone", 1],
-      ["ezgif_now", "ezgif.com now!", 1, "https://ezgif.com/"],
-      ["grlbutton", "grl rot", 1, "https://grlrot.neocities.org/"]
+  "buttons": [
+    [
+      "pennyspinkbutton",
+      "penny loves pandas",
+      1,
+      "https://pennylovespandas.neocities.org/"
+    ],
+    [
+      "angeleyebutton",
+      "angel eye springs",
+      0,
+      "https://angeleyesprings.neocities.org/"
+    ],
+    [
+      "3ds",
+      "3ds",
+      0
+    ],
+    [
+      "miela_button",
+      "miela",
+      1,
+      "https://miela583.neocities.org/"
+    ],
+    [
+      "js-warning",
+      "warning: this page contains javascript",
+      0
+    ],
+    [
+      "velvetblue",
+      "Velvet Blue",
+      0,
+      "https://velvetblue.neocities.org"
+    ],
+    [
+      "lazerbunny",
+      "lazer bunny",
+      1,
+      "https://lazer-bunny.neocities.org/"
+    ],
+    [
+      "sc",
+      "Saikyo Central",
+      1,
+      "https://saikyocentral.com/"
+    ],
+    [
+      "serenitysrest",
+      "serenity's rest",
+      1,
+      "https://serenitysrest.neocities.org/"
+    ],
+    [
+      "vampi",
+      "vampi",
+      0,
+      "https://vamp1.neocities.org/"
+    ],
+    [
+      "visitjennie",
+      "you must visit jennie",
+      1,
+      "https://justjennie.neocities.org/"
+    ],
+    [
+      "dollybutton",
+      "dolly aegisu",
+      1,
+      "https://dollyaegisu.neocities.org/"
+    ],
+    [
+      "linux",
+      "linux powered",
+      1
+    ],
+    [
+      "daughterofbilitis",
+      "daughter of bilitis",
+      0,
+      "https://daughterofbilitis.neocities.org/"
+    ],
+    [
+      "mossypawprints",
+      "mossy pawprints",
+      0,
+      "https://mossypawprints.neocities.org/"
+    ],
+    [
+      "havensbutton",
+      "havens",
+      0,
+      "https://havens.neocities.org/"
+    ],
+    [
+      "alcedonia",
+      "alcedonia",
+      1,
+      "https://alcedonia.neocities.org/"
+    ],
+    [
+      "annaxangel",
+      "anna angel",
+      1,
+      "https://annaxangel.neocities.org/"
+    ],
+    [
+      "planetaryinfluence",
+      "planetary influence",
+      1,
+      "https://planetaryinfluence.neocities.org/"
+    ],
+    [
+      "oyasumimi",
+      "oyasumimi",
+      1,
+      "https://oyasumimi.neocities.org/"
+    ],
+    [
+      "hanaxsongs",
+      "hana cake",
+      0,
+      "https://hanaxsongs.neocities.org/"
+    ],
+    [
+      "frajola",
+      "frajola",
+      1,
+      "https://frajola.neocities.org/"
+    ],
+    [
+      "joroki",
+      "joroki cute + nerdy",
+      0,
+      "https://joroki.neocities.org/"
+    ],
+    [
+      "crotovane",
+      "crotovane",
+      0,
+      "https://crotovane.neocities.org/"
+    ],
+    [
+      "jaggiescrapper",
+      "Jaggie Scrapper",
+      0,
+      "https://jaggiescrapper.neocities.org/"
+    ],
+    [
+      "debtdeath-mobilefriendly",
+      "mobile friendly",
+      0,
+      "https://debtdeath.neocities.org/buttons"
+    ],
+    [
+      "digibun",
+      "digibun",
+      0,
+      "https://digibun.neocities.org"
+    ],
+    [
+      "plasticlove",
+      "plastic love now!",
+      0
+    ],
+    [
+      "puredrek",
+      "pure drek",
+      0,
+      "https://what-meworry.neocities.org/"
+    ],
+    [
+      "gelseylandbanner",
+      "gelsey land",
+      0,
+      "https://gelseyland.neocities.org/"
+    ],
+    [
+      "fedora",
+      "powered by fedora",
+      0,
+      "https://fedoraproject.org/"
+    ],
+    [
+      "xandra",
+      "the museum of alexandra",
+      0,
+      "https://xandra.cc/"
+    ],
+    [
+      "starlost",
+      "blissfully",
+      0,
+      "https://blissfully.neocities.org"
+    ],
+    [
+      "kubikill",
+      "kubikill",
+      1,
+      "https://kubikill.neocities.org/"
+    ],
+    [
+      "jeith",
+      "jeith",
+      1,
+      "https://jeith.com/"
+    ],
+    [
+      "valid-atom",
+      "Validate my Atom 1.0 feed",
+      0,
+      "http://validator.w3.org/feed/check.cgi?url=https%3A//kwaamfan.neocities.org/atom.xml"
+    ],
+    [
+      "cabbagesorter2",
+      "cabbage sorter",
+      0,
+      "https://cabbagesorter.neocities.org/"
+    ],
+    [
+      "amriel",
+      "amriel",
+      0,
+      "https://amriel.neocities.org/"
+    ],
+    [
+      "angelnetcast",
+      "angel netcast",
+      1,
+      "https://angelnetcast.com/"
+    ],
+    [
+      "apple_fatal_error",
+      "apple fatal error",
+      0
+    ],
+    [
+      "vencake",
+      "VenCake",
+      0,
+      "https://vencake.neocities.org/"
+    ],
+    [
+      "cloudcover",
+      "cloud cover",
+      0,
+      "https://cloudcover.neocities.org/"
+    ],
+    [
+      "piracy",
+      "piracy now!",
+      0
+    ],
+    [
+      "doqmeat",
+      "doqmeat",
+      0,
+      "https://doqmeat.com"
+    ],
+    [
+      "neovim",
+      "Made with neovim",
+      0,
+      "https://neovim.io/"
+    ],
+    [
+      "saintimages",
+      "saint images",
+      0,
+      "https://saint-images.neocities.org/"
+    ],
+    [
+      "cloveratelier",
+      "clover atelier",
+      0,
+      "https://cloveratelier.neocities.org"
+    ],
+    [
+      "brainmade",
+      "brain made",
+      0,
+      "https://brainmade.org/"
+    ],
+    [
+      "kkbutton",
+      "kkb online",
+      1,
+      "https://kkb.online/"
+    ],
+    [
+      "ublock_now",
+      "uBlock Origin now!",
+      0,
+      "https://ublockorigin.com/"
+    ],
+    [
+      "petra",
+      "petra pixel",
+      1,
+      "https://petrapixel.neocities.org/"
+    ],
+    [
+      "loleahbutton",
+      "loleah",
+      1,
+      "https://loleah.neocities.org/"
+    ],
+    [
+      "deletetiktok",
+      "delete tiktok",
+      1
+    ],
+    [
+      "strawberrygashes",
+      "strawberry gashes ♥",
+      1,
+      "https://strawberry-gashes.neocities.org"
+    ],
+    [
+      "lazybones",
+      "lazy bones",
+      1,
+      "https://lazybones.neocities.org/"
+    ],
+    [
+      "cutearchive-88x31",
+      "cutie archive",
+      1,
+      "https://archive.cinni.net/index.php"
+    ],
+    [
+      "button262",
+      "forever online",
+      1
+    ],
+    [
+      "bestlandscape",
+      "best viewed in landscape!",
+      0
+    ],
+    [
+      "lavenderbluesbutton",
+      "lavender blues",
+      1,
+      "https://lavenderblues.neocities.org/"
+    ],
+    [
+      "ravelry",
+      "ravelry - where my stitches at?",
+      1,
+      "https://www.ravelry.com/"
+    ],
+    [
+      "itmbutton",
+      "in the margins",
+      0,
+      "https://mikegrindle.com/"
+    ],
+    [
+      "philia95",
+      "philia95",
+      0,
+      "https://philia995.neocities.org/"
+    ],
+    [
+      "lulu",
+      "lulu",
+      1,
+      "http://lu.tiny-universes.net/index2.html"
+    ],
+    [
+      "ia_preserve",
+      "preserve internet archive now!",
+      0,
+      "https://archive.org/"
+    ],
+    [
+      "firefox4",
+      "tested on firefox",
+      1
+    ],
+    [
+      "cinnamonapproved",
+      "cinnamon approved",
+      1
+    ],
+    [
+      "nekonokuni",
+      "neko no kuni",
+      1,
+      "https://nekonokuni.neocities.org/"
+    ],
+    [
+      "shishka-welcome",
+      "shishka",
+      1,
+      "https://shishka.neocities.org/"
+    ],
+    [
+      "emulatenow",
+      "emulate now!",
+      0
+    ],
+    [
+      "neocities-pink",
+      "neocities",
+      0,
+      "https://neocities.org/"
+    ],
+    [
+      "syntheticfruits2",
+      "synthetic fruits",
+      1,
+      "https://syntheticfruits.neocities.org/"
+    ],
+    [
+      "falcom",
+      "nihon falcom",
+      0
+    ],
+    [
+      "sailormoon",
+      "sailor moon",
+      1
+    ],
+    [
+      "jeansNOW",
+      "jeansgurl98",
+      1,
+      "https://jeansgurl98.neocities.org/"
+    ],
+    [
+      "pastelhell",
+      "pastel hell",
+      1,
+      "https://pastelhello.com/"
+    ],
+    [
+      "gaywomen",
+      "gay women",
+      0
+    ],
+    [
+      "4disease",
+      "4disease",
+      1,
+      "https://4disease.neocities.org"
+    ],
+    [
+      "opensubtitles",
+      "open subtitles",
+      1,
+      "https://www.opensubtitles.org/"
+    ],
+    [
+      "playstation",
+      "playstation",
+      0
+    ],
+    [
+      "ffmpeg",
+      "FFmpeg Now!",
+      0,
+      "https://ffmpeg.org/"
+    ],
+    [
+      "cinni",
+      "cinni",
+      1,
+      "https://cinni.net/"
+    ],
+    [
+      "steam",
+      "play with steam",
+      1
+    ],
+    [
+      "irony-machine2",
+      "irony machine",
+      1,
+      "https://irony-machine.neocities.org/"
+    ],
+    [
+      "sega_online",
+      "sega online",
+      1
+    ],
+    [
+      "foollovers",
+      "fool lovers",
+      1,
+      "https://foollovers.com/"
+    ],
+    [
+      "mullvad",
+      "mullvad - free the internet!",
+      0,
+      "https://mullvad.net/"
+    ],
+    [
+      "diagnosedwgay",
+      "you were diagnosed with gay",
+      0
+    ],
+    [
+      "repth",
+      "repth",
+      0,
+      "https://repth.neocities.org/"
+    ],
+    [
+      "cloverbell",
+      "cloverbell",
+      1,
+      "https://cloverbell.neocities.org/"
+    ],
+    [
+      "sharingiscaring",
+      "sharing is caring... seed your torrents!",
+      1
+    ],
+    [
+      "faelink",
+      "faeraphim",
+      0,
+      "https://faeraphim.net/"
+    ],
+    [
+      "ribozone",
+      "ribozone",
+      1,
+      "https://ribo.zone/"
+    ],
+    [
+      "pictochat",
+      "i miss using pictochat",
+      1
+    ],
+    [
+      "kalechips",
+      "kale chips",
+      0,
+      "https://kalechips.net/"
+    ],
+    [
+      "brothings",
+      "it's okay to give your bros some love",
+      0
+    ],
+    [
+      "linuxtoday",
+      "linux today!",
+      1
+    ],
+    [
+      "cherie",
+      "cherie",
+      1,
+      "https://cherie.pink/"
+    ],
+    [
+      "virus",
+      "kuromi virus!!!",
+      1
+    ],
+    [
+      "noodlebutton",
+      "noodle desk",
+      1,
+      "https://noodledesk.net/"
+    ],
+    [
+      "vscodium",
+      "made with vscodium",
+      0,
+      "https://vscodium.com/"
+    ],
+    [
+      "go2hell",
+      "go to hell now!",
+      0
+    ],
+    [
+      "pixeldreams",
+      "pixel dreams",
+      1,
+      "https://pixel-dreams.neocities.org/"
+    ],
+    [
+      "magick88x31",
+      "Made using ImageMagick",
+      0,
+      "https://imagemagick.org/"
+    ],
+    [
+      "segagendevring",
+      "sega genesis dev ring",
+      1
+    ],
+    [
+      "rss",
+      "implement rss now!",
+      0
+    ],
+    [
+      "new-tab",
+      "please do not force this img to be lonely",
+      0
+    ],
+    [
+      "ffwarpzone",
+      "final fantasy warp zone",
+      1
+    ],
+    [
+      "ezgif_now",
+      "ezgif.com now!",
+      1,
+      "https://ezgif.com/"
+    ],
+    [
+      "grlbutton",
+      "grl rot",
+      1,
+      "https://grlrot.neocities.org/"
+    ]
   ]
 }
