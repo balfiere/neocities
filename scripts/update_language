@@ -11,7 +11,12 @@ function print_currently_working_on() {
 
 function add_done_date() {
     local index=$((10#$1))
-    local date="${2:-$(date -I)}"
+
+    echo "what date did you finish this media? (yyyy-mm-dd) or leave blank for today"
+    read date
+    if [ -z "$date" ]; then
+        local date=$(date -I)
+    fi
 
     # append date to jq -r ".language.\"currently working on\" | .[$index] | .[3]" "$languageJson"
     jq --arg date "$date" --argjson index $index '
@@ -31,19 +36,16 @@ function add_comment() {
         jq --arg comment "$comment" --argjson index $index --arg section "$section" '
         .language[$section][$index][4] |= $comment
         ' "$languageJson" > "$languageJson.tmp" && mv "$languageJson.tmp" "$languageJson"
-
-    else
-        exit
     fi
 }
 
 function move_media() {
-    local index="$1"
+    local index=$((10#$1))
     local section="$2"
     
-    jq --arg index "$index" --arg section "$section" '
-    .language[$section] = [ .language."currently working on"[($index | tonumber)] ] + .language[$section]
-    | .language."currently working on" = (.language."currently working on" | del(.[($index | tonumber)]))
+    jq --argjson index "$index" --arg section "$section" '
+    .language[$section] = [ .language."currently working on"[$index] ] + .language[$section]
+    | del(.language."currently working on"[$index])
     ' "$languageJson" > "$languageJson.tmp" && mv "$languageJson.tmp" "$languageJson"
 }
 
@@ -77,6 +79,7 @@ case $choice in
         echo "which one?"
         read index
         add_done_date $index
+
         add_comment $index "currently working on"
         move_media $index "paused"
     ;;
