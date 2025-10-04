@@ -1,45 +1,83 @@
 #!/bin/bash
 
+# get the json file with the names of the blinkies/stamps
+aboutJson="$HOME/Documents/neocities/eleventy/neocities/about/about.json"
+
+convert_to_png() {
+
+    # loop through animated image files
+    shopt -s nocaseglob
+    shopt -s nullglob
+    for i in *.{gif,webp,avif}; do
+
+        # get the name of the file without the extension
+        name="${i%.*}"
+        
+        # if there's no png version, convert
+        if [ ! -f "$name.png" ]; then
+            echo "converting $i"
+            gm mogrify -format png "$i""[0]"
+        fi
+    done
+}
+
+
+################# blinkies #################
+
+
 # set the working directory to blinkies image folder
 cd "$HOME/Documents/neocities/public/about/images/blinkies/"
 
-# get the json file with the names of the blinkies
-aboutJson="$HOME/Documents/neocities/eleventy/neocities/about/about.json"
-
-# loop through the animated blinkies
-shopt -s nocaseglob
-shopt -s nullglob
-for i in *.{gif,webp,avif}; do
-
-    # get the name of the file without the extension
-    name="${i%.*}"
-    
-    # if there's no png version, convert
-    if [ ! -f "$name.png" ]; then
-        echo "converting $i"
-        mogrify -format png "$i""[0]"
-    fi
-done
+convert_to_png
 
 # replace the blinkies array in aboutJson with array of non-png files in the blinkies directory
 jq --argjson arr "$(find . -maxdepth 1 -type f ! -iname '*.png' -printf '%f\n' | jq -R . | jq -s .)" '.blinkies = $arr' "$aboutJson" > "$aboutJson.tmp" && mv "$aboutJson.tmp" "$aboutJson"
 
+
+################# stamps ################
+
+
 # set the working directory to stamps image folder
 cd "$HOME/Documents/neocities/public/about/images/stamps"
 
-# get the names of the stamps without the extension
-find . -maxdepth 1 -type f -printf '%f\n' | sed 's/\(.*\)\..*/\1/g' | sort > /tmp/stamps.txt
+convert_to_png
 
-# for every line in /tmp/stamps.txt, check if it's in the aboutJson.stamps array
-while read -r line; do
-    if ! jq -r '.stamps[]' "$aboutJson" | grep -q "$line"; then
+# get the names of the stamps. if a stamp has two versions, the one that isn't a png gets added.
+find . -maxdepth 1 -type f ! -iname '*.png' -printf '%f\n' | sort > /tmp/stamps_no_png.txt
+find . -maxdepth 1 -type f -iname '*.png' -printf '%f\n' | sort > /tmp/stamps_png.txt
+comm -23 /tmp/stamps_no_png.txt /tmp/stamps_png.txt | sort > /tmp/stamps.txt
+
+# for every line in /tmp/stamps.txt, strip the extension and check if it's in the aboutJson.stamps array
+while read -u 3 -r line; do
+    image_without_extension=$(echo "$line" | sed 's/\(.*\)\..*/\1/g')
+    if ! jq -r '.stamps[]' "$aboutJson" | grep -q "$image_without_extension"; then
         
-        # print the stamps that are in the stamp folder but not in the stamp array
-        echo "$line"
-    fi
-done < "/tmp/stamps.txt"
+        echo "$line is not in aboutJson.stamps array. would you like to add it? (y/n)"
 
-# to do: add the missing stamps to aboutJson.stamps array
+        read answer
+
+        if [ $answer == "y" ]; then
+            echo "adding $line to aboutJson.stamps array"
+            kitten icat "$line"
+            echo "is this image animated? (y/n)"
+            read answer2
+            if [ $answer2 == "y" ]; then
+                animated=1
+            else
+                animated=0
+            fi
+            echo "enter the source of the image. if unknown, leave blank"
+            read source
+            # create a new array of [line, animated, source] if source is not empty. if source is empty, create a new array of [line, animated]
+            if [ -n "$source" ]; then
+                jq --argjson arr "$(echo "[\"$line\", $animated, \"$source\"]")" '.stamps += [$arr]' "$aboutJson" > "$aboutJson.tmp" && mv "$aboutJson.tmp" "$aboutJson"
+            else
+                jq --argjson arr "$(echo "[\"$line\", $animated]")" '.stamps += [$arr]' "$aboutJson" > "$aboutJson.tmp" && mv "$aboutJson.tmp" "$aboutJson"
+            fi
+        fi
+
+    fi
+done 3< "/tmp/stamps.txt"
 
 # remove temporary stamp list
 rm "/tmp/stamps.txt"
