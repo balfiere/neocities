@@ -2,6 +2,7 @@
   "general": {
     "drink": "thai tea",
     "fruit": "dragon fruit",
+    "food": "braised five spice tofu",
     "color": "lavender",
     "animal": "koi fish",
     "flower": "gladiolus",
@@ -10,6 +11,8 @@
     "perfume": "floraiku one umbrella for two",
     "season": "autumn",
     "game": "final fantasy xii",
+    "movie": "happy old year",
+    "show": "girl from nowhere",
     "manga": "nana",
     "book": "journey under the midnight sun by keigo higashino",
     "band": "tricot"
@@ -37,7 +40,10 @@
       "aseprite",
       "photoshop cc 2017"
     ],
-    "video editor": "avidemux",
+    "video editor": [
+      "avidemux",
+      "davinci resolve"
+    ],
     "music player": "fooyin",
     "video player": [
       "mpv",
@@ -622,14 +628,14 @@
       "https://www.deviantart.com/cutesight/art/Stamp-Dreamer-492924549"
     ],
     [
-      "clefairykid.gif",
-      0,
-      "https://www.deviantart.com/clefairykid/art/Remove-USB-Safely-211017337"
-    ],
-    [
       "pantone.gif",
       1,
       "https://www.deviantart.com/king-lulu-deer/art/PANTONE-2562-C-Stardust-736610336"
+    ],
+    [
+      "clefairykid.gif",
+      0,
+      "https://www.deviantart.com/clefairykid/art/Remove-USB-Safely-211017337"
     ],
     [
       "utena.gif",
