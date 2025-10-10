@@ -71,7 +71,7 @@
 <li>the script takes a single argument, the name of the video file it will cut. this file is located in the folder above the script (aka the Video folder)</li>
 <li><code>cut.mkv</code> and <code>cut_resizer.mp4</code> will be outputted to the same folder the script is located in. in addition, <code>resizer.html</code> is also located in this folder</li>
 <li><code>thorium-browser</code> is used to open the html page that will help us resize and crop our video. you can change this to whatever browser you use or simply <code>xdg-open</code> if your system defaults to opening html files in a browser.</li>
-<li>vapoursynth edit can be opened using <code>vsedit</code> (aka you’ve put it in your $PATH)</li>
+<li>vapoursynth editor can be opened using <code>vsedit</code> (aka you’ve put it in your $PATH)</li>
 </ul>
 <p><code>cut.mkv</code> is a lossless snippet of the video that we’ll be applying the vapoursynth script to. <code>cut_resizer.mp4</code> is the same portion of the video, but encoded in such a way that it can be opened and previewed by <code>resizer.html</code>.</p>
 <p>to run the script:</p>
@@ -81,12 +81,12 @@
 <h3 id="the-resizer">the resizer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-resizer" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <p>the resizing tool used in this setup was made by <a href="https://brandinator.sexy/" class="external" target="_blank">brandinator<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. i’ve modified it very slightly to output the code following vapoursynth’s current syntax (ex. use <code>core.descale.Debilinear</code> instead of <code>descale.Debilinear</code>) and to use the downscaling/denoising/sharpening methods we previously installed.</p>
 <p>when it opens, it looks like this:</p>
-<p><img src="../assets/Pasted-image-20250928142438.png" alt loading="lazy"/></p>
+<p><img src="../000-assets/neocities/Pasted-image-20250928142438.png" alt loading="lazy"/></p>
 <p>the top left is where you can set the desired dimensions of your clip, as well as the downscaling method, the level of denoising, and sharpening method and level. note that the downscaling/denoising/sharpening methods won’t affect the preview here, but can be previewed at the next step. you can resize the video by dragging the bottom right corner of the video (framed by the white outline), and crop it at the desired place by clicking and dragging the video around.</p>
 <p>once you’re done adjusting the settings, copy the output in the top right.</p>
 <h3 id="the-vapoursynth-script">the vapoursynth script<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-vapoursynth-script" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <p>when vapoursynth editor opens, it should look like this:</p>
-<p><img src="../assets/Pasted-image-20250928143709.png" alt loading="lazy"/></p>
+<p><img src="../000-assets/neocities/Pasted-image-20250928143709.png" alt loading="lazy"/></p>
 <p>delete the stuff between <code>############## Whatever you copied from the resizer goes here</code> and <code>##############</code> and paste the code copied from <code>resizer.html</code>.</p>
 <p>to see what the clip will look like with the chosen filters, click on “Script > Preview” or hit F5. if you want to tweak your settings, simply close the preview, edit the script, and open the preview again.</p>
 <blockquote class="callout note" data-callout="note">
@@ -97,7 +97,7 @@
                 </div>
 <div class="callout-content">
 <div class="callout-content-inner">
-<p><img src="../assets/vapoursyntheditorpreview.png" alt="vapoursynth editor preview" loading="lazy"/>
+<p><img src="../000-assets/neocities/vapoursyntheditorpreview.png" alt="vapoursynth editor preview" loading="lazy"/>
 on the bottom, there’s a timeline you can use to step through each frame in order to determine the the precise start and end frames. note down the start and end frames. then close the preview and go back to the script. then change the line <code>#video = core.std.Trim(video, a, b)</code> to your desired frames. for this clip, i’ve set it to <code>video = core.std.Trim(video, 38, 271)</code></p>
 </div>
 </div>
@@ -108,21 +108,21 @@ on the bottom, there’s a timeline you can use to step through each frame in or
 <h2 id="the-final-clip-comparing-to-ffmpeg">the final clip, comparing to ffmpeg<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-final-clip-comparing-to-ffmpeg" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>at this point <code>output.mov</code> is ready to be colored using photoshop, davinci resolve, etc or converted straight into gif/avif format.</p>
 <p>here’s what my clip looks like scaled using ffmpeg (<code>ffmpeg -y -i cut.mkv -f yuv4mpegpipe -vcodec rawvideo -vf &quot;scale=629:354,crop=268:350:131:3,select=between(n\,38\,271),setpts=PTS-STARTPTS&quot; test.mov</code>):</p>
-<p><picture><source srcset="../assets/output_ffmpeg.jpg" media="(prefers-reduced-motion)"/><img src="../assets/output_ffmpeg.avif" loading="lazy"/></picture></p>
+<p><picture><source srcset="../000 assets/neocities/output_ffmpeg.jpg" media="(prefers-reduced-motion)"/><img src="../000-assets/neocities/output_ffmpeg.avif" loading="lazy"/></picture></p>
 <p>here are three versions where it was first processed using vapoursynth:</p>
 <figure>
 	<div style="display:flex;flex-wrap:wrap;gap:0 0.5rem;align-content:center;justify-content:center;">
 		<picture>
-			<source srcset="../assets/output_blackmanminlobe_KNLM1_CAS1.jpg" media="(prefers-reduced-motion)"/>
-			<img src="../assets/output_blackmanminlobe_KNLM1_CAS1.avif" loading="lazy"/>
+			<source srcset="../000 assets/neocities/output_blackmanminlobe_KNLM1_CAS1.jpg" media="(prefers-reduced-motion)"/>
+			<img src="../000-assets/neocities/output_blackmanminlobe_KNLM1_CAS1.avif" loading="lazy"/>
 		</picture>
 		<picture>
-			<source srcset="../assets/output_despline36_LSFmod313.jpg" media="(prefers-reduced-motion)"/>
-			<img src="../assets/output_despline36_LSFmod313.avif" loading="lazy"/>
+			<source srcset="../000 assets/neocities/output_despline36_LSFmod313.jpg" media="(prefers-reduced-motion)"/>
+			<img src="../000-assets/neocities/output_despline36_LSFmod313.avif" loading="lazy"/>
 		</picture>
 		<picture>
-			<source srcset="../assets/output_resamplehq_finesharp3.jpg" media="(prefers-reduced-motion)"/>
-			<img src="../assets/output_resamplehq_finesharp3.avif" loading="lazy"/>
+			<source srcset="../000 assets/neocities/output_resamplehq_finesharp3.jpg" media="(prefers-reduced-motion)"/>
+			<img src="../000-assets/neocities/output_resamplehq_finesharp3.avif" loading="lazy"/>
 		</picture>
 	</div>
 	<figcaption>1: blackmanminlobe downscaling, KNLM denoise = 1, CAS sharpening = 1; 2: despline36 downscaling, LSFmod = 313; 3: resample_hq downscaling, FineSharp = 3</figcaption>
