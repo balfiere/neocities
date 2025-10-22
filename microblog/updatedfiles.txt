@@ -1,6 +1,7 @@
 pages/0.html
 pages/1.html
 pages/2.html
+tags/tech/index.html
 tags/read/index.html
 tags/read/0.html
 tags/social-media/index.html
@@ -12,7 +13,6 @@ tags/languagelearning/index.html
 tags/japanese/index.html
 tags/knitted/index.html
 tags/thrifted/index.html
-tags/tech/index.html
 tags/watched/index.html
 tags/my-site/index.html
 tags/cross-stitched/index.html
