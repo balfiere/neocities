@@ -26,9 +26,10 @@
 <aside class="sidebar">
     <div class="bio">a place for me to catalogue my thoughts that don't fit elsewhere on my site. will probably consist mainly of updates on what i've been reading, watching, or playing recently. written by an adult but will not include anything overtly explicit and content warnings for sensitive subjects will be given when necessary.
     <div class="goback"><a href="/microblog/index.html">microblog home</a> / <a href="/main/index.html">personal site home</a> / <a href="/microblog/atom.xml" style="all: unset;cursor:pointer;"><img src="/microblog/images/rss-icon.png"></a></div>
-        <h2>1 total posts</h2>
+        <h2>2 total posts</h2>
         <h3>tags</h3>
-        <p><span class="hashtag"><a href="../read/index.html">#read(6)</a></span>
+        <p><span class="hashtag"><a href="../tech/index.html">#tech(2)</a></span>
+<span class="hashtag"><a href="../read/index.html">#read(6)</a></span>
 <span class="hashtag"><a href="../social-media/index.html">#social-media(5)</a></span>
 <span class="hashtag"><a href="../plants/index.html">#plants(6)</a></span>
 <span class="hashtag"><a href="../played/index.html">#played(8)</a></span>
@@ -36,7 +37,6 @@
 <span class="hashtag"><a href="../japanese/index.html">#japanese(3)</a></span>
 <span class="hashtag"><a href="../knitted/index.html">#knitted(1)</a></span>
 <span class="hashtag"><a href="../thrifted/index.html">#thrifted(2)</a></span>
-<span class="hashtag"><a href="../tech/index.html">#tech(1)</a></span>
 <span class="hashtag"><a href="../watched/index.html">#watched(1)</a></span>
 <span class="hashtag"><a href="../my-site/index.html">#my-site(2)</a></span>
 <span class="hashtag"><a href="../cross-stitched/index.html">#cross-stitched(1)</a></span>
@@ -49,7 +49,17 @@
 </aside>
 
 <main>
-    <article id="13">
+    <article id="20">
+    <div class="post-header">
+        <time>Tuesday, October 21 2025</time>
+        <div class="post-number"><a href=#20>#20</a></div>
+    </div>
+    <div class="message"><p style="text-indent:0;"> <span class="hashtag">#tech</span> </p><p>recently i’ve been messing around with <strong>self-hosting</strong>. i think i mentioned that last year i installed ubuntu 24 server edition on an old 2010 macbook pro with the intention of turning it into a home server, but that ended up going nowhere. at the time i was very new to linux, having only used it on my main computer for about two months, and couldn’t figure why the wifi worked but was prone to random bouts of slowness and disconnecting, which basically meant it was useless at being a server.</p><p>fast forward to two months ago, when i was looking for an alternative to <a target="_blank" href="https://nodetics.com/feedbro/">feedbro</a>, a browser extension for subscribing to and reading rss/atom feeds. as much as i liked it, i wanted something that i could access from my phone. after looking for alternatives, i couldn’t find a service that seemed to fit my needs that was free, and i wasn’t convinced that i use my rss reader enough to justify paying for a subscription. what i did find though were numerous self-hostable rss aggregators – <a target="_blank" href="https://freshrss.org/">freshrss</a>, <a target="_blank" href="https://miniflux.app/index.html">miniflux</a>, <a target="_blank" href="https://tt-rss.org/">tiny tiny rss</a>, <a target="_blank" href="https://github.com/Athou/commafeed">commafeed</a>, <a target="_blank" href="https://github.com/nextcloud/news">nextcloud news</a> – which i decided to try installing on my primary computer. after figuring out how the whole installing stuff with docker thing worked and trying some containers, it got me thinking about my old macbook again. i hoped maybe an extra year and a half of linux experience would help me troubleshoot my issue more easily.… well low and behold all i had to do was install a single package, edit one file, reboot the computer and connect to the wifi again 🙃. so now that i’ve finally got the wifi working on it then set up tailscale on all my devices so i can connect to my server when i’m not at home, this fifteen year old laptop is finally getting a second chance at life.</p><figure class="large"><img src="/microblog/images/20251021_server.jpg" alt="currently propped up by the box i use to ferment tempeh. maybe i can ditch the heating pad i use in the winter and just use the bottom of the macbook?" /><figcaption aria-hidden="true">currently propped up by the box i use to ferment tempeh. maybe i can ditch the heating pad i use in the winter and just use the bottom of the macbook?</figcaption></figure><p>one of the most commonly recommended self hosted apps is <a target="_blank" href="https://immich.app/">immich</a>, a photo/video backup and organizer commonly used as a FOSS alternative to google or apple photos. like those services, it has an automatic facial recognition feature, but unlike those services it can be disabled, and you can choose to host the machine learning algorithm on the same computer or connect it to another, more powerful one. i’ve always liked that feature on my phone despite knowing how much of a privacy concern it poses, even if apple <em>says</em> it all happens locally and doesn’t connect to apple’s servers…. needless to say i was very eager to set immich up and see how well it works. after uploading all my phone’s photos to the server and letting it process overnight, i opened immich up the next morning to see how well it worked. it never dawned on me that it would work on <em>all</em> the faces in my photos, since apple photos usually only shows me people i know irl, but when i opened the “people” section this is what i was greeted with:</p><p class="gallery"><img src="/microblog/images/20251021immich.jpg" /></p><p>somebody explain to me why i have more photos of goro majima on my phone than i do of my own mother 😭</p></div>
+    <div class="buttons"></div>
+</article>
+
+
+<article id="13">
     <div class="post-header">
         <time>Friday, June 21 2024</time>
         <div class="post-number"><a href=#13>#13</a></div>
