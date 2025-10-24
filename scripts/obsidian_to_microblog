@@ -40,6 +40,8 @@ remove_old_post() {
         if [ "$REPLY" = "y" ]; then
             echo "removing old $1 post"
 
+			newPost=$lastPost
+
             # remove number of lines specified by linesToRemove
             tail -n "$linesToRemove" "$out" > "$out".tmp
             
