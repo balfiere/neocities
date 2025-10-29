@@ -1,7 +1,4 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://kwaamfan.neocities.org/notes/030-my-notes/Templater</loc>
-    <lastmod>2024-05-20T17:20:00.000Z</lastmod>
-  </url><url>
     <loc>https://kwaamfan.neocities.org/notes/030-my-notes/automatically-updating-an-atom-or-rss-feed-from-a-markdown-file-with-bash</loc>
     <lastmod>2025-09-21T20:10:34.000Z</lastmod>
   </url><url>
@@ -19,6 +16,9 @@
   </url><url>
     <loc>https://kwaamfan.neocities.org/notes/030-my-notes/goldendict</loc>
     <lastmod>2024-05-23T08:08:00.000Z</lastmod>
+  </url><url>
+    <loc>https://kwaamfan.neocities.org/notes/030-my-notes/heatmap-tracker-plugin</loc>
+    <lastmod>2025-10-28T23:38:43.000Z</lastmod>
   </url><url>
     <loc>https://kwaamfan.neocities.org/notes/030-my-notes/hiding-hard-subtitles</loc>
     <lastmod>2025-07-18T19:04:00.000Z</lastmod>
@@ -38,6 +38,9 @@
     <loc>https://kwaamfan.neocities.org/notes/030-my-notes/most-used-imageMagick-commands</loc>
     <lastmod>2024-05-20T04:15:00.000Z</lastmod>
   </url><url>
+    <loc>https://kwaamfan.neocities.org/notes/030-my-notes/neovim-notes</loc>
+    <lastmod>2025-09-11T21:04:00.000Z</lastmod>
+  </url><url>
     <loc>https://kwaamfan.neocities.org/notes/030-my-notes/normalizing-audio</loc>
     <lastmod>2024-05-30T06:43:00.000Z</lastmod>
   </url><url>
@@ -46,6 +49,12 @@
   </url><url>
     <loc>https://kwaamfan.neocities.org/notes/030-my-notes/preventing-gif-autoplay</loc>
     <lastmod>2024-05-30T20:41:00.000Z</lastmod>
+  </url><url>
+    <loc>https://kwaamfan.neocities.org/notes/030-my-notes/quick-add-tags-to-obsidian-note-front-matter</loc>
+    <lastmod>2025-10-29T16:32:35.000Z</lastmod>
+  </url><url>
+    <loc>https://kwaamfan.neocities.org/notes/030-my-notes/templater</loc>
+    <lastmod>2024-05-20T17:20:00.000Z</lastmod>
   </url><url>
     <loc>https://kwaamfan.neocities.org/notes/030-my-notes/texthooking-games-in-linux</loc>
     <lastmod>2025-05-28T01:01:00.000Z</lastmod>
