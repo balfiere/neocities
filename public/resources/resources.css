@@ -186,6 +186,11 @@ p {
     }
 }
 
+.new::after {
+    content: url('/resources/images/new.gif');
+    margin-left: 8px;
+}
+
 .subheader {
     background-image: linear-gradient(to right, #a1a1ff, #a8a4fe, #aea7fd, #b3aafd, #b9adfc, #c2b1fc, #cbb5fc, #d3b9fc, #e0c0fc, #ebc7fd, #f6cefe, #ffd6ff);
     border-bottom: var(--border-thickness) solid var(--border-color);
