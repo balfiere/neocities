@@ -3,14 +3,36 @@
 
   <title>ราวเหมือนดั่งความฝัน</title>
   <subtitle>it's like a dream...</subtitle>
-  <link rel="alternate" type="text/html" href="https://kwaamfan.neocities.org/"/>
-  <link rel="self" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
-  <updated>2025-09-20T19:07:33-05:00</updated>
-  <link href="https://kwaamfan.neocities.org/"/>
+  <link rel="alternate" type="text/html" href="https://kwaamfan.neocities.org/" />
+  <link rel="self" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml" />
+  <updated>2025-11-02T19:15:59-06:00</updated>
+  <link href="https://kwaamfan.neocities.org/" />
   <author>
     <name>kwaamfan</name>
   </author>
   <id>https://kwaamfan.neocities.org/atom.xml</id>
+
+  <entry>
+    <title>mobile apps, obsidian scripts</title>
+    <link href="https://kwaamfan.neocities.org/notes/030-my-notes/quick-add-tags-to-obsidian-note-front-matter" />
+    <id>https://kwaamfan.neocities.org/?2025-11-02T19:15:59-06:00</id>
+    <updated>2025-11-02T19:15:59-06:00</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>some small updates to my site this week. on my resources site, i:</p>
+        <ul>
+        <li>added a mobile applications section to the <a href="https://kwaamfan.neocities.org/resources/other/more/">more links</a> page, currently focused on modifying or sideloading apps mainly for the purpose of getting rid of ads</li>
+        <li>implemented a “new” pixel to indicate which specific links were recently added</li>
+        </ul>
+        <p>in my <a href="https://kwaamfan.neocities.org/notes/">notebook</a>, i published:</p>
+        <ul>
+        <li><a href="https://kwaamfan.neocities.org/notes/030-my-notes/neovim-notes">my neovim notes</a></li>
+        <li>my obsidian templater script to <a href="https://kwaamfan.neocities.org/notes/030-my-notes/quick-add-tags-to-obsidian-note-front-matter">quickly add tags to the active note’s front matter</a></li>
+        <li>the javascript code i use to <a href="https://kwaamfan.neocities.org/notes/030-my-notes/heatmap-tracker-plugin">batch print heat maps</a> of the habits i track in my obsidian daily notes using the <a href="https://github.com/mokkiebear/heatmap-tracker">heatmap tracker plugin</a></li>
+        </ul>
+      </div>
+    </content>
+  </entry>  <id>https://kwaamfan.neocities.org/atom.xml</id>
 
   <entry>
     <title>responsive image gallery theme, notes on how to use json files on a website</title>
