@@ -77,6 +77,10 @@ case "$1" in
   echo "building main site"
   eleventy_to_neocities "main" "false"
   ;;
+"media")
+  echo "building media site"
+  eleventy_to_neocities "media" "false"
+  ;;
 "places")
   echo "building places page"
   eleventy_to_neocities "places" "true"

@@ -1,0 +1,58 @@
+{% assign coll = collections[collection] %}{% assign collsort = collections[collectionSort] %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <link rel="stylesheet" href="/media/media.css">
+    <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
+
+    <style>
+        {% assign categoriesAlpha = coll | extractKeyWithCount: "categories", "alpha" %}{% for category in categoriesAlpha %}
+        form:has([name="{{ category.name | slugify }}"]:checked)~#image-grid-container section:not([category~="{{ category.name | slugify }}"]){% unless forloop.last %}, {% endunless %}{% endfor %} {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <!-- for every category you use, you must add a new checkbox -->
+
+        {% assign categoriesSorted = coll | extractKeyWithCount: "categories", "count" %}
+        <form>{% for category in categoriesSorted %}
+            <label><input type="checkbox" name="{{ category.name | slugify }}">#{{ category.name }} ({{ category.count }})</label>{% endfor %}
+        </form>
+
+        <!-- image gallery starts here -->
+
+        <div id="image-grid-container">
+
+            {% for entry in collsort %}
+
+            <section category="{% for category in entry.data.categories %}{{ category | slugify }} {% endfor %}">
+                    <div class="img-box">
+                        <img src="images/{{ entry.data.cover | basename }}" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h2>{{ entry.data.englishTitle }}</h2>
+                                <h3>{% for author in entry.data.author %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endfor %}</h3>
+                                <p>{{ entry.data.year }}</p>
+                            </span>
+                        </div>
+                    </div>
+            </section>
+
+            {% endfor %}
+
+        </div>
+    </main>
+    <footer>
+        <h1>{{ title }}</h1>
+    </footer>
+</body>
+
+</html>

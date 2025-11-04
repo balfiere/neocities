@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>books</title>
+    <meta name="generator" content="Eleventy v3.1.2">
+    <link rel="stylesheet" href="/media/media.css">
+    <link rel="alternate" title="ราวเหมือนดั่งความฝัน: updates" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml"/>
+
+    <style>
+        
+        form:has([name="asia"]:checked)~#image-grid-container section:not([category~="asia"]), 
+        form:has([name="female-author"]:checked)~#image-grid-container section:not([category~="female-author"]), 
+        form:has([name="fiction"]:checked)~#image-grid-container section:not([category~="fiction"]), 
+        form:has([name="history"]:checked)~#image-grid-container section:not([category~="history"]), 
+        form:has([name="in-translation"]:checked)~#image-grid-container section:not([category~="in-translation"]), 
+        form:has([name="non-fiction"]:checked)~#image-grid-container section:not([category~="non-fiction"]), 
+        form:has([name="politics"]:checked)~#image-grid-container section:not([category~="politics"]) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <!-- for every category you use, you must add a new checkbox -->
+
+        
+        <form>
+            <label><input type="checkbox" name="asia">#asia (3)</label>
+            <label><input type="checkbox" name="history">#history (3)</label>
+            <label><input type="checkbox" name="non-fiction">#non-fiction (3)</label>
+            <label><input type="checkbox" name="in-translation">#in translation (1)</label>
+            <label><input type="checkbox" name="fiction">#fiction (1)</label>
+            <label><input type="checkbox" name="female-author">#female author (1)</label>
+            <label><input type="checkbox" name="politics">#politics (1)</label>
+        </form>
+
+        <!-- image gallery starts here -->
+
+        <div id="image-grid-container">
+
+            
+
+            <section category="in-translation fiction female-author ">
+                    <div class="img-box">
+                        <img src="images/diaryofalonelygirl.jpg" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h2>Diary of a Lonely Girl, or the Battle Against Free Love</h2>
+                                <h3>Jessica Kirzane, Miriam Karpilove</h3>
+                                <p>2019</p>
+                            </span>
+                        </div>
+                    </div>
+            </section>
+
+            
+
+            <section category="asia history non-fiction politics ">
+                    <div class="img-box">
+                        <img src="images/asiascauldron.jpg" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h2>Asia's Cauldron</h2>
+                                <h3>Robert D. Kaplan</h3>
+                                <p>2014</p>
+                            </span>
+                        </div>
+                    </div>
+            </section>
+
+            
+
+            <section category="asia history non-fiction ">
+                    <div class="img-box">
+                        <img src="images/therisingsun.jpg" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h2>The Rising Sun</h2>
+                                <h3>John Toland</h3>
+                                <p>2003</p>
+                            </span>
+                        </div>
+                    </div>
+            </section>
+
+            
+
+            <section category="asia history non-fiction ">
+                    <div class="img-box">
+                        <img src="images/undergroundasia.avif" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h2>Underground Asia</h2>
+                                <h3>Tim Harper</h3>
+                                <p>2020</p>
+                            </span>
+                        </div>
+                    </div>
+            </section>
+
+            
+
+        </div>
+    </main>
+    <footer>
+        <h1>books</h1>
+    </footer>
+</body>
+
+</html>
