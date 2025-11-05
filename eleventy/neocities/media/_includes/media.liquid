@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <header>
+        <h1>/<a href="/main">home</a> /<a href="/media/books">books</a></h1>
+    </header>
     <main>
 
         <!-- for every category you use, you must add a new checkbox -->
@@ -38,9 +41,9 @@
                         <img src="images/{{ entry.data.cover | basename }}" />
                         <div class="transparent-box">
                             <span class="caption">
-                                <h2>{{ entry.data.englishTitle }}</h2>
-                                <h3>{% for author in entry.data.author %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endfor %}</h3>
-                                <p>{{ entry.data.year }}</p>
+                                <h2><span>{{ entry.data.englishTitle }}</span></h2>
+                                <h3><span>{% for author in entry.data.author %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span></h3>
+                                <p><span>{{ entry.data.year }}</span></p>
                             </span>
                         </div>
                     </div>
@@ -50,9 +53,6 @@
 
         </div>
     </main>
-    <footer>
-        <h1>{{ title }}</h1>
-    </footer>
 </body>
 
 </html>
