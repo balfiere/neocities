@@ -36,7 +36,7 @@
 
             {% for entry in collsort %}
 
-            <section category="{% for category in entry.data.categories %}{{ category | slugify }} {% endfor %}">
+            <section category="{% for category in entry.data.categories %}{{ category | slugify }} {% endfor %}"{% if entry.data.notes %} data-tippy-content="{{ entry.data.notes | markdownify-inline }}"{% endif %}>
                     <div class="img-box">
                         <img src="images/{{ entry.data.cover | basename }}" />
                         <div class="transparent-box">
@@ -53,6 +53,23 @@
 
         </div>
     </main>
+
+<!--- tooltips -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    tippy('[data-tippy-content]',{
+        followCursor: true,
+        animateFill: false,
+        animation: 'scale-subtle',
+        placement: 'right',
+        arrow: true,
+        offset: [0, 20],
+        allowHTML: true,
+        theme: 'mine'
+    } );
+</script>
+
 </body>
 
 </html>

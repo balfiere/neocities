@@ -12,12 +12,14 @@
     <style>
         
         form:has([name="asia"]:checked)~#image-grid-container section:not([category~="asia"]), 
-        form:has([name="female-author"]:checked)~#image-grid-container section:not([category~="female-author"]), 
         form:has([name="fiction"]:checked)~#image-grid-container section:not([category~="fiction"]), 
         form:has([name="history"]:checked)~#image-grid-container section:not([category~="history"]), 
         form:has([name="in-translation"]:checked)~#image-grid-container section:not([category~="in-translation"]), 
         form:has([name="non-fiction"]:checked)~#image-grid-container section:not([category~="non-fiction"]), 
-        form:has([name="politics"]:checked)~#image-grid-container section:not([category~="politics"]) {
+        form:has([name="politics"]:checked)~#image-grid-container section:not([category~="politics"]), 
+        form:has([name="sociology"]:checked)~#image-grid-container section:not([category~="sociology"]), 
+        form:has([name="technology"]:checked)~#image-grid-container section:not([category~="technology"]), 
+        form:has([name="thriller"]:checked)~#image-grid-container section:not([category~="thriller"]) {
             display: none;
         }
     </style>
@@ -36,30 +38,17 @@
             <label><input type="checkbox" name="asia">#asia (3)</label>
             <label><input type="checkbox" name="history">#history (3)</label>
             <label><input type="checkbox" name="non-fiction">#non-fiction (3)</label>
-            <label><input type="checkbox" name="in-translation">#in translation (1)</label>
+            <label><input type="checkbox" name="politics">#politics (2)</label>
             <label><input type="checkbox" name="fiction">#fiction (1)</label>
-            <label><input type="checkbox" name="female-author">#female author (1)</label>
-            <label><input type="checkbox" name="politics">#politics (1)</label>
+            <label><input type="checkbox" name="in-translation">#in translation (1)</label>
+            <label><input type="checkbox" name="thriller">#thriller (1)</label>
+            <label><input type="checkbox" name="sociology">#sociology (1)</label>
+            <label><input type="checkbox" name="technology">#technology (1)</label>
         </form>
 
         <!-- image gallery starts here -->
 
         <div id="image-grid-container">
-
-            
-
-            <section category="in-translation fiction female-author ">
-                    <div class="img-box">
-                        <img src="images/diaryofalonelygirl.jpg" />
-                        <div class="transparent-box">
-                            <span class="caption">
-                                <h2><span>Diary of a Lonely Girl, or the Battle Against Free Love</span></h2>
-                                <h3><span>Jessica Kirzane, Miriam Karpilove</span></h3>
-                                <p><span>2019</span></p>
-                            </span>
-                        </div>
-                    </div>
-            </section>
 
             
 
@@ -93,14 +82,44 @@
 
             
 
-            <section category="asia history non-fiction ">
+            <section category="history politics asia ">
                     <div class="img-box">
-                        <img src="images/undergroundasia.avif" />
+                        <img src="images/judgmentattokyo.jpg" />
                         <div class="transparent-box">
                             <span class="caption">
-                                <h2><span>Underground Asia</span></h2>
-                                <h3><span>Tim Harper</span></h3>
-                                <p><span>2020</span></p>
+                                <h2><span>Judgment at Tokyo</span></h2>
+                                <h3><span>Gary J. Bass</span></h3>
+                                <p><span>2023</span></p>
+                            </span>
+                        </div>
+                    </div>
+            </section>
+
+            
+
+            <section category="fiction in-translation thriller " data-tippy-content="this is a book i feel like most people would find too meandering in its storytelling and unrelenting in its grimness to be worth the rather anticlimactic ending. for me, this book is higashino at his best – the way he leaves hints of the bigger picture throughout every scene, how he manages to tell 20 years worth of the main characters’ lives without me ever getting bored, his willingness to let the reader sit with the ambiguity of the main characters’ relationships with each other, their actions and motivations, and how much we should pity or condemn them. if you’ve never read higashino, i would suggest starting with <em>the devotion of suspect x</em> or <em>malice</em>, but if you know you like his style, i personally consider this to be his magnum opus">
+                    <div class="img-box">
+                        <img src="images/journeyunderthemidnightsun.jpg" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h2><span>Journey Under the Midnight Sun</span></h2>
+                                <h3><span>Keigo Higashino</span></h3>
+                                <p><span>1999</span></p>
+                            </span>
+                        </div>
+                    </div>
+            </section>
+
+            
+
+            <section category="non-fiction sociology technology " data-tippy-content="before reading this book i thought that facebook and google were merely bad… now i’m convinced that these companies are like. genuinely evil. of the various books on social media that i’ve read, this is by far the best one at providing a structural critique of these companies’ ethos and business models that have lead to the modern internet landscape becoming what it is today instead of just being like ‘yeah social media is toxic and addictive… just quit using them &lt;3’">
+                    <div class="img-box">
+                        <img src="images/c0b67de5d3e75e06b4d4c3598693dd22.jpg" />
+                        <div class="transparent-box">
+                            <span class="caption">
+                                <h2><span>The Chaos Machine</span></h2>
+                                <h3><span>Max Fisher</span></h3>
+                                <p><span>2022</span></p>
                             </span>
                         </div>
                     </div>
@@ -110,6 +129,23 @@
 
         </div>
     </main>
+
+<!--- tooltips -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    tippy('[data-tippy-content]',{
+        followCursor: true,
+        animateFill: false,
+        animation: 'scale-subtle',
+        placement: 'right',
+        arrow: true,
+        offset: [0, 20],
+        allowHTML: true,
+        theme: 'mine'
+    } );
+</script>
+
 </body>
 
 </html>

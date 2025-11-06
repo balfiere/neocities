@@ -11,14 +11,20 @@ layout: resources.liquid
 [Piracy Index](https://piracy.vercel.app/){target=_blank class=new}
 : another website for sharing links to pirated material. no longer updated so some links are down, but still a good resource.
 
+[r/Piracy megathread](https://www.reddit.com/r/Piracy/wiki/megathread/){target=_blank class=new}
+: yet another huge collection of links for finding pirated material.
+
 [mobilism](https://forum.mobilism.org/index.php){target=_blank class=new}
 : forum for sharing apps and books. a good source for finding android apps pre-patched to remove ads or enable premium features for free.
 
+[Privacy Guides](https://www.privacyguides.org/en/){target=_blank class=new}
+: learn about digital privacy and security best practices, plus links to recommended tools and software.
+
 {% endresourcesContainer %}
-{% resourcesContainer "knitting, crochet, and cross stitch" %}
+{% resourcesContainer "fiber arts" %}
 
 [PinDIY](https://www.pindiy.com/){target=_blank}
-: download knitting, crochet, and cross stitch patterns for free. downloading requires coins, which u can earn by doing "tasks" after signing up (hover on "my center" on the top right and click on "tasks") which mainly consists of clicking on a button every hour and watching a video once a week. read more about earning coins [here](https://www.pindiy.com/thread-482705-1-1.html){target=_blank}. has a huge collection of older, hard to find cross stitch patterns. usually as .pdfs but has "repaints" in .xsd or .pcs file formats too, which i prefer for backstitch patterns for use in cross stitch saga. has a good selection of knitting and crochet patterns as well. all patterns are user uploaded, so you can share patterns you've purchased too.
+: download knitting, crochet, and cross stitch patterns for free. downloading requires coins, which u can earn by doing "tasks" after signing up (hover on "my center" on the top right and click on "tasks") which mainly consists of clicking on a button every hour and watching a video once a week. read more about earning coins [here](https://www.pindiy.com/thread-482705-1-1.html){target=_blank}. has a huge collection of older, hard to find cross stitch patterns. usually as .pdfs but has "repaints" in .xsd or .pcs file formats too, which i prefer for backstitch patterns for use in cross stitch saga. has a good selection of knitting and crochet patterns as well, including old and out of print books and magazines. all patterns are user uploaded, so you can share patterns you've purchased too.
 
 [Pattern Keeper](https://forum.mobilism.org/viewtopic.php?f=432&t=5258766&hilit=pattern+keeper&sid=3dd30163b6116ec63b53e0a3417a1f5e){target=_blank}
 : android app that helps keep track of cross stitch patterns. i find the interface the most intuitive of all the cross stitch pattern trackers i've tried, but doesn't support backstitches and fractional stitches. link is unlocked version. [my mirror.](https://drive.google.com/file/d/1l8dZ-RHxhgZX-A_YiZPVyyNkMBYNuJgp/view?usp=sharing){target=_blank}
@@ -71,6 +77,9 @@ layout: resources.liquid
 [The Value of Knowledge: A Miniature Library of Philosophy](https://www.marxists.org/reference/subject/philosophy/index.htm){target=_blank}
 : a curated collection of texts on philosophy from the last 400 years.
 
+[rarefilmm](https://rarefilmm.com/){target=_blank class=new}
+: direct downloads of old or uncommon films from across the world.
+
 {% endresourcesContainer %}
 {% resourcesContainer "chill" %}
 
@@ -102,7 +111,7 @@ layout: resources.liquid
 : batch convert, resize, and compress images. i highly recommend using this or a similar tool to make your image file sizes smaller so your pages load faster.
 
 [LocalSend](https://localsend.org/){target=_blank}
-: FOSS cross-platform file sharing tool that allows you to share files to nearby devices. i use this to send files between my windows computer and iphone.
+: FOSS cross-platform file sharing tool that allows you to share files to nearby devices. i use this to send files between my computer and iphone. for a terminal interface that can be used on headless servers, check out [JocalSend](https://git.kittencollective.com/nebkor/joecalsend){target=_blank class=new}.
 
 [Upscayl](https://github.com/upscayl/upscayl){target=_blank}
 : FOSS image upscaler.
@@ -115,6 +124,9 @@ layout: resources.liquid
 
 [sldl](https://github.com/fiso64/slsk-batchdl){target=_blank class=new}
 : CLI for batch downloading music from the soulseek network. can search normally by passing a song or album name, but it also supports passing urls to spotify and youtube playlists.
+
+[spotDL](https://github.com/spotDL/spotify-downloader){target=_blank class=new}
+: another CLI for batch downloading music, but downloads from youtube music. since the bitrate is limited to 128 kbps for non-premium users, i generally prefer to download using sldl, but i'll use spotDL when what i'm looking for isn't available on soulseek.
 
 [MusicBrainz Picard](https://picard.musicbrainz.org/){target=_blank}
 : open a file or folder of audio files and the program will add the correct metadata to it, then sort it into folders based on the album and artist. useful for automatically managing a library of music.
