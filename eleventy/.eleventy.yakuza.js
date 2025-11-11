@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("neocities/yakuza/characters/*.js");
   
 	eleventyConfig.addCollection("yakuza-characters", function (collectionsApi) {
-		return collectionsApi.getFilteredByTag("yakuza-profiles").sort(function (a, b) {
+		return collectionsApi.getFilteredByTag("neocities/yakuza-profiles").sort(function (a, b) {
       return new Date(b.data.updated) - new Date(a.data.updated);
 		});
 	});
