@@ -138,36 +138,36 @@ async function fetchJsonData() {
     const json = await response.json();
 
     // to do list
-    const todoList = document.getElementById('todo');
-    for (const [key, value] of Object.entries(json.tasks)) {
-      value.forEach(item => {
-        const todoItem = document.createElement('li');
-        if (key == "done") {
-          const strikedItem = document.createElement('del');
-          strikedItem.textContent = item;
-          todoItem.appendChild(strikedItem);
-        } else {
-          todoItem.textContent = item;
-        }
-        todoList.appendChild(todoItem);
-      })
-    }
+    // const todoList = document.getElementById('todo');
+    // for (const [key, value] of Object.entries(json.tasks)) {
+    //   value.forEach(item => {
+    //     const todoItem = document.createElement('li');
+    //     if (key == "done") {
+    //       const strikedItem = document.createElement('del');
+    //       strikedItem.textContent = item;
+    //       todoItem.appendChild(strikedItem);
+    //     } else {
+    //       todoItem.textContent = item;
+    //     }
+    //     todoList.appendChild(todoItem);
+    //   })
+    // }
 
     // currently
-    for (const [key, value] of Object.entries(json.currently)) {
-      const currentlyList = document.getElementById(key);
-      if (value.length == 0) {
-        const currentlyItem = document.createElement('li');
-        currentlyItem.textContent = "nothing </3";
-        currentlyList.appendChild(currentlyItem);
-      } else {
-        value.forEach(item => {
-          const currentlyItem = document.createElement('li');
-          currentlyItem.textContent = item;
-          currentlyList.appendChild(currentlyItem);
-        });
-      }
-    }
+    // for (const [key, value] of Object.entries(json.currently)) {
+    //   const currentlyList = document.getElementById(key);
+    //   if (value.length == 0) {
+    //     const currentlyItem = document.createElement('li');
+    //     currentlyItem.textContent = "nothing </3";
+    //     currentlyList.appendChild(currentlyItem);
+    //   } else {
+    //     value.forEach(item => {
+    //       const currentlyItem = document.createElement('li');
+    //       currentlyItem.textContent = item;
+    //       currentlyList.appendChild(currentlyItem);
+    //     });
+    //   }
+    // }
 
     // button wall
     function pictureOrImg(container, array, picture, img) {

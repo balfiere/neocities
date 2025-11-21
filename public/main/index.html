@@ -11,7 +11,7 @@
     href="https://kwaamfan.neocities.org/atom.xml" />
 
   <!-- styling -->
-  <link rel="stylesheet" href="css/main.min.css" type="text/css">
+  <link rel="stylesheet" href="css/main.min.css?v=1" type="text/css">
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" />
 
   <!-- scripts -->
@@ -237,64 +237,6 @@
 
   <!-- windows -->
 
-  <!-- todo -->
-  <div class="window_container draggable todo">
-    <div class="window_interior">
-      <div class="window_top window-header">
-        <div class="window_title">todo.txt</div>
-        <div class="window_control">
-
-          <button class="smallbox minimize"
-            onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img
-              src="images/min.png"></button>
-
-          <button class="smallbox maximize"
-            onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img
-              src="images/max.png"></button>
-
-        </div><!--end window_control-->
-      </div><!--window_top-->
-      <div class="window_description">
-        <ul id="todo">
-        </ul>
-      </div>
-    </div><!--window_interior-->
-  </div><!--window_container-->
-
-  <!-- currently -->
-  <div class="window_container draggable currently">
-    <div class="window_interior">
-      <div class="window_top window-header">
-        <div class="window_title">currently.txt</div>
-        <div class="window_control">
-
-          <button class="smallbox minimize"
-            onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img
-              src="images/min.png"></button>
-
-          <button class="smallbox maximize"
-            onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img
-              src="images/max.png"></button>
-
-        </div><!--end window_control-->
-      </div><!--window_top-->
-      <div class="window_description" id="currently">
-        playing:
-        <ul id="playing"></ul>
-        reading:
-        <ul id="reading"></ul>
-        watching:
-        <ul id="watching"></ul>
-        listening:
-        <ul id="listening"></ul>
-        making:
-        <ul id="making"></ul>
-        other:
-        <ul id="other"></ul>
-      </div>
-    </div><!--window_interior-->
-  </div><!--window_container-->
-
   <!-- webrings -->
   <div class="window_container draggable webrings">
     <div class="window_interior">
@@ -346,7 +288,7 @@
         <div id='dsring'>
           <script type="text/javascript"
             src="https://ikaroll.neocities.org/dsring/onion/onionring-variables.js"></script>
-          <script type="text/javascript" src="scripts/onionring-widget.js"></script>
+          <script type="text/javascript" src="onionring-widget.js"></script>
         </div>
       </div>
     </div><!--window_interior-->
@@ -373,40 +315,9 @@
     </div><!--window_interior-->
   </div><!--window_container-->
 
-  <!-- chatbox -->
-  <div class="window_container draggable chatbox">
-    <div class="window_interior">
-      <div class="window_top window-header">
-        <div class="window_title">https://chat.box</div>
-        <div class="window_control">
-
-          <button class="smallbox minimize"
-            onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'none'"><img
-              src="images/min.png"></button>
-
-          <button class="smallbox maximize"
-            onclick="this.parentNode.parentNode.parentNode.querySelector('.window_description').style.display = 'block'"><img
-              src="images/max.png"></button>
-
-        </div><!--end window_control-->
-      </div><!--window_top-->
-      <div class="window_description">
-        <iframe src='https://iframe.chat/embed/?chat=kwaamfan' id='chattable' frameborder='none'
-          style="width: 350px; height: 350px;"></iframe>
-        <script>
-          chattable.initialize({
-            stylesheet: "/main/css/chattable.css"
-          });
-        </script>
-      </div>
-    </div><!--window_interior-->
-  </div><!--window_container-->
-
-
-
   <!-- more scripts -->
   <!-- <script src="scripts/sakura.js"></script> -->
-  <script src="scripts/script.min.js?v=1"></script>
+  <script src="scripts/script.min.js?v=2"></script>
 
   <!--- tooltips -->
   <script src="https://unpkg.com/@popperjs/core@2"></script>

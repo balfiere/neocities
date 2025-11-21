@@ -1144,7 +1144,7 @@ button:focus {
     position: relative;
 }
 
-.chatbox {
+/* .chatbox {
     top: 2vh;
     right: 1vw;
     width: 393px;
@@ -1152,9 +1152,9 @@ button:focus {
 
 .chatbox .window_description {
     height: 380px;
-}
+} */
 
-.currently {
+/* .currently {
     top: 54vh;
     right: 9vw;
     width: 250px;
@@ -1176,11 +1176,11 @@ button:focus {
     height: 138px;
     font-family: nineteen93, maru;
     font-size: 9px;
-}
+} */
 
 .webrings {
     /* top:calc(5vh + 500px); */
-    top: 72vh;
+    top: 12vh;
     right: 2vw;
     width: 240px;
 }
