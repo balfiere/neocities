@@ -5,12 +5,31 @@
   <subtitle>it's like a dream...</subtitle>
   <link rel="alternate" type="text/html" href="https://kwaamfan.neocities.org/" />
   <link rel="self" type="application/atom+xml" href="https://kwaamfan.neocities.org/atom.xml" />
-  <updated>2025-11-10T23:33:54-06:00</updated>
+  <updated>2025-11-25T12:46:35-06:00</updated>
   <link href="https://kwaamfan.neocities.org/" />
   <author>
     <name>kwaamfan</name>
   </author>
   <id>https://kwaamfan.neocities.org/atom.xml</id>
+
+  <entry>
+    <title>moved hosts</title>
+    <link href="https://kwaamfan.neocities.org/" />
+    <id>https://kwaamfan.neocities.org/?2025-11-25T12:46:35-06:00</id>
+    <updated>2025-11-25T12:46:35-06:00</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>i’ve moved hosts! my site can now be found at <a href="https://kwaamfan.haliya.net/">kwaamfan.haliya.net</a>. with it comes the following changes:</p>
+        <ul>
+        <li>the main section of my site has been completely redesigned</li>
+        <li>a guestbook has been implemented</li>
+        <li>the toybox now uses drop down filters</li>
+        <li>the blog now has a like and comment system</li>
+        </ul>
+        <p>if you’re reading this through an rss reader, please update the feed url to <a href="https://kwaamfan.haliya.net/atom.xml">https://kwaamfan.haliya.net/atom.xml</a> (and if you subscribe to my blog’s rss as well, update that feed url to <a href="https://kwaamfan.haliya.net/blog/atom.xml">https://kwaamfan.haliya.net/blog/atom.xml</a>) as i don’t plan on updating my atom feeds on neocities in the future.</p>
+      </div>
+    </content>
+  </entry>
 
   <entry>
     <title>knitting tutorials, review for Battles Without Honor and Humanity (1973)</title>
@@ -25,7 +44,7 @@
         </ul>
       </div>
     </content>
-  </entry>  <id>https://kwaamfan.neocities.org/atom.xml</id>
+  </entry>  
 
   <entry>
     <title>mobile apps, obsidian scripts</title>
@@ -47,7 +66,7 @@
         </ul>
       </div>
     </content>
-  </entry>  <id>https://kwaamfan.neocities.org/atom.xml</id>
+  </entry>  
 
   <entry>
     <title>responsive image gallery theme, notes on how to use json files on a website</title>

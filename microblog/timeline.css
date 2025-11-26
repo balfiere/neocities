@@ -462,6 +462,11 @@ article img, p img {
     image-rendering: initial;
 }
 
+[data-attribute-style*="inline"] {
+  display: inline !important;
+  width: auto !important;
+}
+
 .primary:after {
     display: table;
     clear: both;
@@ -701,6 +706,10 @@ footer a:hover, footer a:active{
     img:hover, img:active{
         opacity: 1;
     }
+  
+  [data-attribute-style*="invert"] {
+    filter: invert(1);
+  }
 
     .marker {
         background: var(--color-marker-dark);

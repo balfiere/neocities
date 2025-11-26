@@ -8,7 +8,7 @@
     <link rel="alternate" title="kwaamfan's diary" type="application/atom+xml" href="https://kwaamfan.haliya.net/blog/atom.xml"/>
 
     <!-- styling -->
-    <link href="/microblog/timeline.min.css?v=2" rel="stylesheet" type="text/css" media="all">
+    <link href="/microblog/timeline.min.css?v=3" rel="stylesheet" type="text/css" media="all">
     
 </head>
 <body>
@@ -26,12 +26,12 @@
 <aside class="sidebar">
     <div class="bio">a place for me to catalogue my thoughts that don't fit elsewhere on my site. will probably consist mainly of updates on what i've been reading, watching, or playing recently. written by an adult but will not include anything overtly explicit and content warnings for sensitive subjects will be given when necessary.
     <div class="goback"><a href="/microblog/index.html">microblog home</a> / <a href="/main/index.html">personal site home</a> / <a href="/microblog/atom.xml" style="all: unset;cursor:pointer;"><img src="/microblog/images/rss-icon.png"></a></div>
-        <h2>3 total posts</h2>
+        <h2>4 total posts</h2>
         <h3>tags</h3>
-        <p><span class="hashtag"><a href="../tech/index.html">#tech(3)</a></span>
-<span class="hashtag"><a href="../my-site/index.html">#my-site(3)</a></span>
+        <p><span class="hashtag"><a href="../my-site/index.html">#my-site(4)</a></span>
+<span class="hashtag"><a href="../social-media/index.html">#social-media(6)</a></span>
+<span class="hashtag"><a href="../tech/index.html">#tech(3)</a></span>
 <span class="hashtag"><a href="../read/index.html">#read(6)</a></span>
-<span class="hashtag"><a href="../social-media/index.html">#social-media(5)</a></span>
 <span class="hashtag"><a href="../plants/index.html">#plants(6)</a></span>
 <span class="hashtag"><a href="../played/index.html">#played(8)</a></span>
 <span class="hashtag"><a href="../languagelearning/index.html">#languagelearning(1)</a></span>
@@ -49,7 +49,17 @@
 </aside>
 
 <main>
-    <article id="21">
+    <article id="22">
+    <div class="post-header">
+        <time>Tuesday, November 25 2025</time>
+        <div class="post-number"><a href=#22>#22</a></div>
+    </div>
+    <div class="message"><p style="text-indent:0;"> <span class="hashtag">#my-site</span> </p><p>today i published the second version of my <a target="_blank" href="https://kwaamfan.haliya.net/home">home page</a> <img src="https://kwaamfan.haliya.net/blog/images/20251125_celebrate.gif" data-attribute-style='inline invert' /> it’s sort of the opposite of the first in terms of aesthetic… i still like the pastel, pixel-art-everywhere look but idk, maybe i’m just having a bit of a minimalist era? recently i’ve noticed that i’ve become more and more sensitive to eye strain when looking at websites with lots of moving elements, bright colors with low contrast between the text and background, and busy designs in general, and while i think people should design their personal website however they like i definitely think there’s a problem if the site’s own webmaster has a hard time looking at it for long lol. i also really did not like maintaining it, the code was sooooo messy and clearly originally written by someone who last touched html/css in 2014 and was not up-to-date on all the new specifications that had come out since then. rewriting it from scratch gave me the opportunity to make it as clean as possible, so hopefully the thought of modifying things in the future doesn’t have me breaking out in a cold sweat like it used to…</p><p>rewriting the main page also gave me the opportunity to implement something i’ve wanted to try for a while now – <strong>php</strong>! earlier this year i had to learn some sql for my job, so when i learned that dynamic web hosting is basically a server that can serve html/css/js as usual plus run an sql database + php to interact with it i was like damn, i could really use a proper database for some of the stuff on my site (*cough cough my <a target="_blank" href="https://kwaamfan.haliya.net/pixels">toybox</a> with 500+ pixels… when i tell you i finally figured out the php script for my new toybox page and got the old json file i was using imported into a real database i nearly cried from joy*) so about a month or two ago i spun up an apache web server on my computer, installed php and mariadb, then got to work learning how it all works. luckily learning php wasn’t too bad… networking and server stuff like <code>.htaccess</code>, loading different mariadb credentials depending on if i’m using my local development server or the public one, and absolute file paths in php not being the same as in html/css/js was a completely different story though ^^; but think i finally managed to figure out enough stuff to make the move to my new site official. of course that means a static web host like neocities is no longer suitable for my needs, so from now on you can find me at <a target="_blank" href="https://kwaamfan.haliya.net/">kwaamfan.haliya.net</a> (and if you’re reading this in an rss reader, please update the feed url to <a target="_blank" href="https://kwaamfan.haliya.net/blog/atom.xml">https://kwaamfan.haliya.net/blog/atom.xml</a>) which is hosted by <a target="_blank" href="https://leprd.space/">leprd.space</a>. in addition to the toybox, i’ve also added some other dynamic elements like a native <a target="_blank" href="https://kwaamfan.haliya.net/guestbook">guestbook</a> and likes/comments on the <a target="_blank" href="https://kwaamfan.haliya.net/blog/">blog</a>. still thinking of other fun stuff i could do now that i can use php… <del>like starting a yakuza fanlisting? hmmm…</del></p><p>another reason i wanted to move hosts is that i’ve grown to dislike managing my neocities feed. i realize that not everyone uses an rss reader (even though they should 🤧) and thus rely on their feed to see when a site has updated, so i don’t want to disable my site profile. but needing to be mindful of the order in which things get updated to control which page gets the main thumbnail, having to log in to delete an update after pushing it from vscode or the terminal where i was just doing some bug fixes and no real content changes, not getting notified of replies so needing to log back in later to check… all these things were making me cognizant of my online presence in a way that felt like every other <span class="hashtag">#social-media</span> platform that wants you to worry about your likes and follower counts, who follows you back and who doesn’t. i was seriously questioning if i was just running a public website for some subconscious desire for validation or something. but when i thought about it some more, i realized that i genuinely find that writing for a public audience, even if literally 0 people actually read it, can help me clarify my own feelings and ideas on things in a way that private journaling doesn’t always give me. so i’ve come to the conclusion that, even though i’m grateful that platforms like neocities exist to lower the barrier to entry to the indie web, it’s time for me to move to a different host and just use neocities to browse new sites and keep up-to-date on sites i like that don’t have an rss feed (yet… i’ll be waiting). for the time being i plan on keeping the <a target="_blank" href="https://kwaamfan.neocities.org/changelog/">changelog</a> page updated for people who don’t use rss (yet… *cough*) since it’s trivial for me to update <del>also i really like the design of it and want to keep using it but haven’t thought of a page idea to recycle it with…</del></p></div>
+    <div class="buttons"></div>
+</article>
+
+
+<article id="21">
     <div class="post-header">
         <time>Tuesday, November 04 2025</time>
         <div class="post-number"><a href=#21>#21</a></div>

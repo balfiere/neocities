@@ -8,7 +8,7 @@
     <link rel="alternate" title="kwaamfan's diary" type="application/atom+xml" href="https://kwaamfan.haliya.net/blog/atom.xml"/>
 
     <!-- styling -->
-    <link href="/microblog/timeline.min.css?v=2" rel="stylesheet" type="text/css" media="all">
+    <link href="/microblog/timeline.min.css?v=3" rel="stylesheet" type="text/css" media="all">
     
 </head>
 <body>
